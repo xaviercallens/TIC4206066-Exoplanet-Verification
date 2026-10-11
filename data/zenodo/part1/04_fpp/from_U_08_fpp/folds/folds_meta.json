@@ -1,0 +1,266 @@
+{
+ "ephemerides": {
+  "A": {
+   "P": 3.1827856,
+   "T0": 3998.7375,
+   "T14": 0.07791666666666668
+  },
+  "B": {
+   "P": 11.13274,
+   "T0": 4000.865,
+   "T14": 0.06874999999999999
+  }
+ },
+ "inputs": {
+  "S32": {
+   "file": "tess2020324010417-s0032-0000000004206066-0200-s_lc.fits",
+   "sha256": "764dad34b3bbd467eef973a1d09f640a97321824e6739ac6a0c69cf40c31b0e7",
+   "n_good": 17094,
+   "sigma_point": 0.0008519265118784134
+  },
+  "S98": {
+   "file": "hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01_llc.fits",
+   "sha256": "a034136697b4f75765a91503107f55a455b365d19cd270ed633845efcdcb188e",
+   "n_good": 12067,
+   "sigma_point": 0.0006239354178888712
+  }
+ },
+ "folds": {
+  "fold_A_S32+S98_6min": {
+   "signal": "A",
+   "sectors": [
+    "S32",
+    "S98"
+   ],
+   "bin_min": 6.0,
+   "T0shift_d": 0.0,
+   "n_raw": 4523,
+   "n_rows": 120,
+   "sigma_empirical_oot": 0.000113257481260139,
+   "sigma_formal_mean": 0.00012018334268412837,
+   "depth_core_ppm": 486.6182090962345,
+   "file": "fold_A_S32+S98_6min.csv"
+  },
+  "fold_A_S32_6min": {
+   "signal": "A",
+   "sectors": [
+    "S32"
+   ],
+   "bin_min": 6.0,
+   "T0shift_d": 0.0,
+   "n_raw": 2682,
+   "n_rows": 120,
+   "sigma_empirical_oot": 0.00018976623513363428,
+   "sigma_formal_mean": 0.00018121120889598604,
+   "depth_core_ppm": 471.13560082956417,
+   "file": "fold_A_S32_6min.csv"
+  },
+  "fold_A_S98_6min": {
+   "signal": "A",
+   "sectors": [
+    "S98"
+   ],
+   "bin_min": 6.0,
+   "T0shift_d": 0.0,
+   "n_raw": 1841,
+   "n_rows": 120,
+   "sigma_empirical_oot": 0.00017290122602276319,
+   "sigma_formal_mean": 0.00016119674459972845,
+   "depth_core_ppm": 498.6882604555154,
+   "file": "fold_A_S98_6min.csv"
+  },
+  "fold_A_S32+S98_2min": {
+   "signal": "A",
+   "sectors": [
+    "S32",
+    "S98"
+   ],
+   "bin_min": 2.0,
+   "T0shift_d": 0.0,
+   "n_raw": 4523,
+   "n_rows": 360,
+   "sigma_empirical_oot": 0.00022111764995811207,
+   "sigma_formal_mean": 0.00020951058407860592,
+   "depth_core_ppm": 498.0538991495864,
+   "file": "fold_A_S32+S98_2min.csv"
+  },
+  "fold_A_S32+S98_10min": {
+   "signal": "A",
+   "sectors": [
+    "S32",
+    "S98"
+   ],
+   "bin_min": 10.0,
+   "T0shift_d": 0.0,
+   "n_raw": 4523,
+   "n_rows": 72,
+   "sigma_empirical_oot": 8.556132109720548e-05,
+   "sigma_formal_mean": 9.301201534872364e-05,
+   "depth_core_ppm": 486.6182090964566,
+   "file": "fold_A_S32+S98_10min.csv"
+  },
+  "fold_A_S32+S98_unb": {
+   "signal": "A",
+   "sectors": [
+    "S32",
+    "S98"
+   ],
+   "bin_min": null,
+   "T0shift_d": 0.0,
+   "n_raw": 4523,
+   "n_rows": 4523,
+   "sigma_empirical_oot": 0.0007735208117875304,
+   "sigma_formal_mean": 0.0007591271300445093,
+   "depth_core_ppm": 496.0392361239574,
+   "file": "fold_A_S32+S98_unb.csv"
+  },
+  "fold_A_S32+S98_6min_T0p": {
+   "signal": "A",
+   "sectors": [
+    "S32",
+    "S98"
+   ],
+   "bin_min": 6.0,
+   "T0shift_d": 0.0005,
+   "n_raw": 4523,
+   "n_rows": 120,
+   "sigma_empirical_oot": 0.00011856407661523343,
+   "sigma_formal_mean": 0.00012031035609883894,
+   "depth_core_ppm": 485.2734078949483,
+   "file": "fold_A_S32+S98_6min_T0p.csv"
+  },
+  "fold_A_S32+S98_6min_T0m": {
+   "signal": "A",
+   "sectors": [
+    "S32",
+    "S98"
+   ],
+   "bin_min": 6.0,
+   "T0shift_d": -0.0005,
+   "n_raw": 4524,
+   "n_rows": 120,
+   "sigma_empirical_oot": 0.00011360318521411064,
+   "sigma_formal_mean": 0.0001201528625163772,
+   "depth_core_ppm": 487.33662740707564,
+   "file": "fold_A_S32+S98_6min_T0m.csv"
+  },
+  "fold_B_S32+S98_6min": {
+   "signal": "B",
+   "sectors": [
+    "S32",
+    "S98"
+   ],
+   "bin_min": 6.0,
+   "T0shift_d": 0.0,
+   "n_raw": 1038,
+   "n_rows": 120,
+   "sigma_empirical_oot": 0.00023243203475776844,
+   "sigma_formal_mean": 0.0002469711964397257,
+   "depth_core_ppm": 1037.2566345656642,
+   "file": "fold_B_S32+S98_6min.csv"
+  },
+  "fold_B_S32_6min": {
+   "signal": "B",
+   "sectors": [
+    "S32"
+   ],
+   "bin_min": 6.0,
+   "T0shift_d": 0.0,
+   "n_raw": 496,
+   "n_rows": 86,
+   "sigma_empirical_oot": 0.0003761057556709838,
+   "sigma_formal_mean": 0.0003586204014488416,
+   "depth_core_ppm": 1022.2093035850977,
+   "file": "fold_B_S32_6min.csv"
+  },
+  "fold_B_S98_6min": {
+   "signal": "B",
+   "sectors": [
+    "S98"
+   ],
+   "bin_min": 6.0,
+   "T0shift_d": 0.0,
+   "n_raw": 542,
+   "n_rows": 120,
+   "sigma_empirical_oot": 0.0002903345690531647,
+   "sigma_formal_mean": 0.00029777728101843123,
+   "depth_core_ppm": 1045.7761634701246,
+   "file": "fold_B_S98_6min.csv"
+  },
+  "fold_B_S32+S98_2min": {
+   "signal": "B",
+   "sectors": [
+    "S32",
+    "S98"
+   ],
+   "bin_min": 2.0,
+   "T0shift_d": 0.0,
+   "n_raw": 1038,
+   "n_rows": 235,
+   "sigma_empirical_oot": 0.00039008189347072717,
+   "sigma_formal_mean": 0.00038413753267470046,
+   "depth_core_ppm": 1052.8612885816192,
+   "file": "fold_B_S32+S98_2min.csv"
+  },
+  "fold_B_S32+S98_10min": {
+   "signal": "B",
+   "sectors": [
+    "S32",
+    "S98"
+   ],
+   "bin_min": 10.0,
+   "T0shift_d": 0.0,
+   "n_raw": 1038,
+   "n_rows": 72,
+   "sigma_empirical_oot": 0.0001705151417197991,
+   "sigma_formal_mean": 0.00019020996807618646,
+   "depth_core_ppm": 993.9233322939778,
+   "file": "fold_B_S32+S98_10min.csv"
+  },
+  "fold_B_S32+S98_unb": {
+   "signal": "B",
+   "sectors": [
+    "S32",
+    "S98"
+   ],
+   "bin_min": null,
+   "T0shift_d": 0.0,
+   "n_raw": 1038,
+   "n_rows": 1038,
+   "sigma_empirical_oot": 0.0007453310878515632,
+   "sigma_formal_mean": 0.0007328791391016005,
+   "depth_core_ppm": 1014.6487194890863,
+   "file": "fold_B_S32+S98_unb.csv"
+  },
+  "fold_B_S32+S98_6min_T0p": {
+   "signal": "B",
+   "sectors": [
+    "S32",
+    "S98"
+   ],
+   "bin_min": 6.0,
+   "T0shift_d": 0.003,
+   "n_raw": 1037,
+   "n_rows": 120,
+   "sigma_empirical_oot": 0.00025166259395315304,
+   "sigma_formal_mean": 0.00024709648099237736,
+   "depth_core_ppm": 1063.9228550621826,
+   "file": "fold_B_S32+S98_6min_T0p.csv"
+  },
+  "fold_B_S32+S98_6min_T0m": {
+   "signal": "B",
+   "sectors": [
+    "S32",
+    "S98"
+   ],
+   "bin_min": 6.0,
+   "T0shift_d": -0.003,
+   "n_raw": 1037,
+   "n_rows": 120,
+   "sigma_empirical_oot": 0.00022808556182504875,
+   "sigma_formal_mean": 0.0002470255161629151,
+   "depth_core_ppm": 1005.6333294166109,
+   "file": "fold_B_S32+S98_6min_T0m.csv"
+  }
+ }
+}

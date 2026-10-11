@@ -1,0 +1,6 @@
+total 40
+drwxr-xr-x@  5 paulsmith  staff    160 Sep 25 07:40 .
+drwxr-xr-x@ 19 paulsmith  staff    608 Sep 25 07:54 ..
+-rw-r--r--@  1 paulsmith  staff   3895 Sep 25 07:31 fetch.cpython-312.pyc
+-rw-r--r--@  1 paulsmith  staff  10330 Sep 25 07:35 lcio.cpython-312.pyc
+-rw-r--r--@  1 paulsmith  staff   2374 Sep 25 07:40 t2_helpers.cpython-312.pyc

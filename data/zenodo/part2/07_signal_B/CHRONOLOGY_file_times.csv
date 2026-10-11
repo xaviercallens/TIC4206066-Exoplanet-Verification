@@ -1,0 +1,16 @@
+file,birth_utc,mtime_utc,in_package
+config/amendments_registry.jsonl,2026-09-25T00:19:47.251971+00:00,2026-09-25T03:17:54.877035+00:00,no
+data/harmonic/qlp_downloads.jsonl,2026-09-25T02:45:46.252460+00:00,2026-09-25T02:48:42.463032+00:00,no
+addenda/pool_multisector/multisector_results_pass1.json,2026-09-25T02:50:27.656548+00:00,2026-09-25T02:50:27.661285+00:00,no
+addenda/pool_multisector/multisector_results.json,2026-09-25T02:54:49.247233+00:00,2026-09-25T02:54:49.252775+00:00,no
+logs/harmonic_run.log,2026-09-25T03:00:44.121546+00:00,2026-09-25T03:08:23.200066+00:00,no
+addenda/pool_multisector/SUMMARY.md,2026-09-25T03:07:17.221992+00:00,2026-09-25T03:07:17.222307+00:00,no
+data/harmonic/per_candidate/tic4206066_p11.132976.json,2026-09-25T03:08:22.735545+00:00,2026-09-25T03:08:22.737700+00:00,no
+data/harmonic/harmonic_audit.csv,2026-09-25T03:08:23.167354+00:00,2026-09-25T03:08:23.169227+00:00,no
+addenda/deep_followup_tic4206066/out,2026-09-25T03:09:42.108174+00:00,2026-09-25T03:31:30.449697+00:00,07_signal_B/from_deep_followup_original_posthoc_test/
+addenda/deep_followup_tic4206066/signal_11d.py,2026-09-25T03:26:34.953613+00:00,2026-09-25T03:26:34.956964+00:00,07_signal_B/from_deep_followup_original_posthoc_test/signal_11d.py
+addenda/deep_followup_tic4206066/out/signal_11d.json,2026-09-25T03:26:46.463351+00:00,2026-09-25T03:26:46.464178+00:00,07_signal_B/from_deep_followup_original_posthoc_test/signal_11d.json
+addenda/deep_followup_tic4206066/signal_11d_null.py,2026-09-25T03:27:11.319944+00:00,2026-09-25T03:27:11.323175+00:00,07_signal_B/from_deep_followup_original_posthoc_test/signal_11d_null.py
+addenda/deep_followup_tic4206066/out/signal_11d_null.json,2026-09-25T03:29:42.110201+00:00,2026-09-25T03:29:42.110647+00:00,07_signal_B/from_deep_followup_original_posthoc_test/signal_11d_null.json
+addenda/deep_followup_tic4206066/deep_followup_report.md,2026-09-25T03:34:32.752914+00:00,2026-09-25T03:34:32.753328+00:00,no
+candidates/tic4206066_p11.132976/harmonic.json,2026-09-25T03:42:41.575026+00:00,2026-09-25T03:42:41.576626+00:00,no

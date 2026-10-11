@@ -1,0 +1,7 @@
+set,depth_ppm,err_ppm,n_events,fact_id,printed
+S6 (TESS-SPOC 30 min),521.4159285281053,52.88552660080425,6,A.depth_S6,(not printed; Fig. 1a template)
+S32 (SPOC 2 min),476.30464837451996,52.467283767850354,8,A.depth_S32,(not printed; Fig. 1a template)
+"S98 (QLP 200 s), edge event E-1 excluded",495.92692522314945,47.71838069462953,8,A.depth_S98,(Fig. 1a template)
+"combined, E-1 excluded",497.63843188271085,29.361369261296257,22,A.depth_combined,~500 ppm
+"combined, all 23 events",503.3665858136733,29.165020779350414,23,A.depth_combined,~500 ppm
+chi2 of constant depth across sectors (E-1 excluded),0.3687620169610512,,dof=2,A.depth_sector_consistency,'Per-sector ... depths agree'

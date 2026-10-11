@@ -1,0 +1,50 @@
+{
+ "n": 471,
+ "target": [
+  {
+   "source_id": 3220388198192519424,
+   "phot_g_mean_mag": 10.51297378540039,
+   "bp_rp": 1.7394800186157227,
+   "parallax": 28.075018139930098,
+   "ruwe": 1.2142984867095947,
+   "non_single_star": 0,
+   "ipd_frac_multi_peak": 0,
+   "duplicated_source": false,
+   "rv_renormalised_gof": 2.9986419677734375,
+   "rv_chisq_pvalue": 4.0627175621921197e-05,
+   "rv_nb_transits": 33,
+   "rv_nb_deblended_transits": 8,
+   "rv_amplitude_robust": 3.224654197692871,
+   "rv_template_teff": 4250.0,
+   "radial_velocity_error": 0.2206730842590332,
+   "grvs_mag": 9.235343933105469
+  }
+ ],
+ "no_deblend": {
+  "n": 17,
+  "frac_p_le_target": 0.0,
+  "frac_p_lt_0p01": 0.0,
+  "median_gof": -0.15077385306358337,
+  "frac_gof_ge_3": 0.0,
+  "median_amp": 2.076326370239258,
+  "frac_amp_ge_target": 0.17647058823529413
+ },
+ "some_deblend": {
+  "n": 454,
+  "frac_p_le_target": 0.037444933920704845,
+  "frac_p_lt_0p01": 0.07929515418502203,
+  "median_gof": NaN,
+  "frac_gof_ge_3": 0.037444933920704845,
+  "median_amp": NaN,
+  "frac_amp_ge_target": 0.21585903083700442
+ },
+ "deblend_ge_15pct": {
+  "n": 336,
+  "frac_p_le_target": 0.03869047619047619,
+  "frac_p_lt_0p01": 0.08928571428571429,
+  "median_gof": NaN,
+  "frac_gof_ge_3": 0.03869047619047619,
+  "median_amp": NaN,
+  "frac_amp_ge_target": 0.2113095238095238
+ }
+}

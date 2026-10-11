@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/fU8hzoNYwbnsmOKzLpbtx5mPwd8</id>
+  <title>arXiv Query: search_query=abs:"3.18 days"&amp;id_list=&amp;start=0&amp;max_results=50</title>
+  <updated>2026-09-25T11:44:47Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%223.18+days%22&amp;start=0&amp;max_results=50&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>50</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2306.09758v1</id>
+    <title>TOI-908: a planet at the edge of the Neptune desert transiting a G-type star</title>
+    <updated>2023-06-16T10:42:34Z</updated>
+    <link href="https://arxiv.org/abs/2306.09758v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.09758v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present the discovery of an exoplanet transiting TOI-908 (TIC-350153977) using data from TESS sectors 1, 12, 13, 27, 28 and 39. TOI-908 is a T = 10.7 mag G-dwarf ($T_{eff}$ = 5626 $\pm$ 61 K) solar-like star with a mass of 0.950 $\pm$ 0.010 $M_{\odot}$ and a radius of 1.028 $\pm$ 0.030 $R_{\odot}$. The planet, TOI-908 b, is a 3.18 $\pm$ 0.16 $R_{\oplus}$ planet in a 3.18 day orbit. Radial velocity measurements from HARPS reveal TOI-908 b has a mass of approximately 16.1 $\pm$ 4.1 $M_{\oplus}$ , resulting in a bulk planetary density of 2.7+0.2-0.4 g cm-3. TOI-908 b lies in a sparsely-populated region of parameter space known as the Neptune desert. The planet likely began its life as a sub-Saturn planet before it experienced significant photoevaporation due to X-rays and extreme ultraviolet radiation from its host star, and is likely to continue evaporating, losing a significant fraction of its residual envelope mass.</summary>
+    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-16T10:42:34Z</published>
+    <arxiv:comment>17 pages, 17 figures</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.EP"/>
+    <author>
+      <name>Faith Hawthorn</name>
+    </author>
+    <author>
+      <name>Daniel Bayliss</name>
+    </author>
+    <author>
+      <name>David J. Armstrong</name>
+    </author>
+    <author>
+      <name>Jorge Fernández Fernández</name>
+    </author>
+    <author>
+      <name>Ares Osborn</name>
+    </author>
+    <author>
+      <name>Sérgio G. Sousa</name>
+    </author>
+    <author>
+      <name>Vardan Adibekyan</name>
+    </author>
+    <author>
+      <name>Jeanne Davoult</name>
+    </author>
+    <author>
+      <name>Karen A. Collins</name>
+    </author>
+    <author>
+      <name>Yann Alibert</name>
+    </author>
+    <author>
+      <name>Susana C. C. Barros</name>
+    </author>
+    <author>
+      <name>François Bouchy</name>
+    </author>
+    <author>
+      <name>Matteo Brogi</name>
+    </author>
+    <author>
+      <name>David R. Ciardi</name>
+    </author>
+    <author>
+      <name>Tansu Daylan</name>
+    </author>
+    <author>
+      <name>Elisa Delgado Mena</name>
+    </author>
+    <author>
+      <name>Olivier D. S. Demangeon</name>
+    </author>
+    <author>
+      <name>Rodrigo F. Díaz</name>
+    </author>
+    <author>
+      <name>Tianjun Gan</name>
+    </author>
+    <author>
+      <name>Keith Horne</name>
+    </author>
+    <author>
+      <name>Sergio Hoyer</name>
+    </author>
+    <author>
+      <name>Alan M. Levine</name>
+    </author>
+    <author>
+      <name>Jorge Lillo-Box</name>
+    </author>
+    <author>
+      <name>Louise D. Nielsen</name>
+    </author>
+    <author>
+      <name>Hugh P. Osborn</name>
+    </author>
+    <author>
+      <name>George R. Ricker</name>
+    </author>
+    <author>
+      <name>José Rodrigues</name>
+    </author>
+    <author>
+      <name>Nuno C. Santos</name>
+    </author>
+    <author>
+      <name>Richard P. Schwarz</name>
+    </author>
+    <author>
+      <name>Sara Seager</name>
+    </author>
+    <author>
+      <name>Juan Serrano Bell</name>
+    </author>
+    <author>
+      <name>Avi Shporer</name>
+    </author>
+    <author>
+      <name>Chris Stockdale</name>
+    </author>
+    <author>
+      <name>Paul A. Strøm</name>
+    </author>
+    <author>
+      <name>Peter Tenenbaum</name>
+    </author>
+    <author>
+      <name>Stéphane Udry</name>
+    </author>
+    <author>
+      <name>Peter J. Wheatley</name>
+    </author>
+    <author>
+      <name>Joshua N. Winn</name>
+    </author>
+    <author>
+      <name>Carl Ziegler</name>
+    </author>
+    <arxiv:doi>10.1093/mnras/stad1840</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1093/mnras/stad1840" title="doi"/>
+  </entry>
+</feed>

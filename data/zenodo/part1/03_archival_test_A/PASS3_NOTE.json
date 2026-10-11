@@ -1,0 +1,6 @@
+{
+ "pass3_reviewer_finding": "F1: per-sector bound <0.7% rested on a heuristic N_eff; measured N_eff gives S6 1.0-1.3%, joint 0.006-0.06%.",
+ "printed_now": "<~1% per sector, <~0.1% jointly",
+ "sigma": "~2.3-2.6 per sector, ~3.2-3.8 joint",
+ "evidence": "_reviews/pass3_new_changes/copy_A/x_neff2_*.json"
+}

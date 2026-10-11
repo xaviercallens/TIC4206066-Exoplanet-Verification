@@ -1,0 +1,28 @@
+{
+  "target_thread": "https://www.reddit.com/r/ClaudeAI/comments/1wzw8zd/comment/pezn08h/",
+  "target_subreddit": "r/ClaudeAI",
+  "candidate_title": "How to audit agent-written analysis when a result can look completely convincing and still be wrong?",
+  "submission_statement": "Context: Response to r/ClaudeAI exoplanet discovery thread detailing falsification harnesses, negative controls, and zero-trust verification.",
+  "audit_metrics": {
+    "total_reward": 0.85,
+    "hook_score": 0.6,
+    "grounding_score": 1.0,
+    "modesty_score": 1.0,
+    "compliance_score": 0.85,
+    "resonance_score": 0.8,
+    "hype_violations": [],
+    "moderation_risk": 0.0,
+    "moderation_warnings": [],
+    "is_recommended": true
+  },
+  "leveraged_repositories": [
+    "https://github.com/xaviercallens/SocrateAI-Scientific-Elenchus",
+    "https://github.com/xaviercallens/OpenAI-NSE-Epistemic-Audit",
+    "https://github.com/xaviercallens/AutoevolveAI"
+  ],
+  "leveraged_zenodo_dois": [
+    "https://doi.org/10.5281/zenodo.22108301",
+    "https://doi.org/10.5281/zenodo.22696718"
+  ],
+  "status": "APPROVED_READY_FOR_PUBLICATION"
+}

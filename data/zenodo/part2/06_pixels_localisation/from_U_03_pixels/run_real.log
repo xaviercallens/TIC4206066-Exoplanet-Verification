@@ -1,0 +1,68 @@
+S32_tpf          A nev= 8 off=( +9.12, -8.31)" depth_t=   288ppm S/N_t=  3.5 dchi2_t= 17.77 chi2=116.9/106 infl=1.00
+S32_tpf          B nev= 2 off=( +2.82,-18.48)" depth_t=   330ppm S/N_t=  1.9 dchi2_t= 18.30 chi2=93.9/106 infl=1.00
+   S32_tpf done in 1.7s; scene shift (+0.016,+0.032) px
+S32_tpf_clean    A nev= 8 off=( +9.12, -8.31)" depth_t=   288ppm S/N_t=  3.5 dchi2_t= 17.77 chi2=116.9/106 infl=1.00
+S32_tpf_clean    B nev= 2 off=( +2.82,-18.48)" depth_t=   330ppm S/N_t=  1.9 dchi2_t= 18.30 chi2=93.9/106 infl=1.00
+   S32_tpf_clean done in 0.9s; scene shift (+0.016,+0.032) px
+S32_ffi          A nev= 8 off=( +9.01, -8.24)" depth_t=   267ppm S/N_t=  4.0 dchi2_t= 23.54 chi2=129.0/117 infl=1.00
+S32_ffi          B nev= 2 off=( +6.54,-10.47)" depth_t=   303ppm S/N_t=  2.2 dchi2_t=  8.50 chi2=128.7/117 infl=1.00
+   S32_ffi done in 1.0s; scene shift (+0.043,-0.001) px
+S98_clean        A nev=14 off=( +5.98, -2.27)" depth_t=   365ppm S/N_t=  6.2 dchi2_t=  6.62 chi2=105.2/117 infl=1.00
+S98_clean        B nev= 4 off=( +3.08, -0.18)" depth_t=  1045ppm S/N_t=  9.6 dchi2_t=  3.15 chi2=112.2/117 infl=1.00
+   S98_clean done in 2.0s; scene shift (+0.010,-0.023) px
+S98_clean29      A nev= 9 off=( +5.65, -0.32)" depth_t=   381ppm S/N_t=  5.2 dchi2_t=  5.64 chi2=98.8/117 infl=1.14
+S98_clean29      B nev= 3 off=( +1.19, -1.02)" depth_t=  1126ppm S/N_t=  9.7 dchi2_t=  0.96 chi2=120.7/117 infl=1.00
+   S98_clean29 done in 1.1s; scene shift (+0.014,-0.010) px
+S98_clean29_W3   A nev= 9 off=( +6.39, -2.52)" depth_t=   348ppm S/N_t=  4.6 dchi2_t=  6.66 chi2=107.6/117 infl=1.15
+S98_clean29_W3   B nev= 3 off=( +1.04, -0.86)" depth_t=  1144ppm S/N_t=  9.6 dchi2_t=  0.65 chi2=120.7/117 infl=1.00
+   S98_clean29_W3 done in 0.9s; scene shift (+0.014,-0.010) px
+S98_clean29_W6   A nev= 8 off=( +6.23, +2.04)" depth_t=   409ppm S/N_t=  6.1 dchi2_t=  8.46 chi2=107.8/117 infl=1.00
+S98_clean29_W6   B nev= 3 off=( +1.16, -1.30)" depth_t=  1116ppm S/N_t=  9.9 dchi2_t=  1.25 chi2=124.2/117 infl=1.00
+   S98_clean29_W6 done in 0.9s; scene shift (+0.014,-0.010) px
+S98_clean29_deg2 A nev= 9 off=(+32.88,-16.45)" depth_t=   268ppm S/N_t=  3.0 dchi2_t=  7.47 chi2=121.4/117 infl=1.21
+S98_clean29_deg2 B nev= 3 off=( +1.20, -0.45)" depth_t=  1124ppm S/N_t=  8.4 dchi2_t=  0.41 chi2=119.9/117 infl=1.00
+   S98_clean29_deg2 done in 1.0s; scene shift (+0.014,-0.010) px
+S98_clean29_fit7 A nev= 9 off=( +5.58, +0.06)" depth_t=   413ppm S/N_t=  5.0 dchi2_t=  5.42 chi2=45.1/45 infl=1.25
+S98_clean29_fit7 B nev= 3 off=( +1.11, -1.01)" depth_t=  1144ppm S/N_t=  9.2 dchi2_t=  0.86 chi2=43.9/45 infl=1.00
+   S98_clean29_fit7 done in 1.2s; scene shift (+0.014,-0.010) px
+S98_all          A nev=17 off=( +5.53, -1.75)" depth_t=   339ppm S/N_t=  5.8 dchi2_t=  5.30 chi2=104.5/117 infl=1.00
+S98_all          B nev= 6 off=( +3.11, -0.01)" depth_t=  1013ppm S/N_t=  9.7 dchi2_t=  3.21 chi2=112.1/117 infl=1.00
+   S98_all done in 1.2s; scene shift (+0.009,-0.033) px
+S98_clean_q30    A nev=12 off=( +4.70, +0.27)" depth_t=   409ppm S/N_t=  6.9 dchi2_t=  4.79 chi2=112.5/117 infl=1.00
+S98_clean_q30    B nev= 3 off=( +3.97, +0.81)" depth_t=  1006ppm S/N_t=  8.7 dchi2_t=  4.93 chi2=126.0/117 infl=1.00
+   S98_clean_q30 done in 1.1s; scene shift (+0.009,-0.032) px
+S6_ffi           A nev= 6 off=( -8.68,-34.71)" depth_t=   422ppm S/N_t=  4.2 dchi2_t= 10.86 chi2=182.2/117 infl=1.02
+S6_ffi           B nev= 2 off=( -5.32, +0.93)" depth_t=   836ppm S/N_t=  7.6 dchi2_t=  6.34 chi2=151.1/117 infl=1.00
+   S6_ffi done in 0.9s; scene shift (-0.054,-0.031) px
+S6_step          A nev= 6 off=( +3.65, +9.93)" depth_t=   475ppm S/N_t=  4.8 dchi2_t= 16.04 chi2=136.6/117 infl=1.00
+S6_step          B nev= 2 off=( -5.32, +0.93)" depth_t=   836ppm S/N_t=  7.6 dchi2_t=  6.34 chi2=151.1/117 infl=1.00
+   S6_step done in 0.8s; scene shift (-0.054,-0.031) px
+S6_dumpx0.5h     A nev= 5 off=( +6.28, -1.25)" depth_t=   511ppm S/N_t=  4.7 dchi2_t=  4.89 chi2=163.8/117 infl=1.07
+S6_dumpx0.5h     B nev= 2 off=( -5.32, +0.94)" depth_t=   836ppm S/N_t=  7.6 dchi2_t=  6.35 chi2=151.1/117 infl=1.00
+   S6_dumpx0.5h done in 0.7s; scene shift (-0.054,-0.031) px
+S6_dumpx1h       A nev= 3 off=( +5.71, -1.23)" depth_t=   589ppm S/N_t=  4.2 dchi2_t=  2.83 chi2=183.0/117 infl=1.00
+S6_dumpx1h       B nev= 2 off=( -5.32, +0.94)" depth_t=   836ppm S/N_t=  7.6 dchi2_t=  6.34 chi2=151.1/117 infl=1.00
+   S6_dumpx1h done in 0.8s; scene shift (-0.054,-0.031) px
+S32_tpf_W3       A nev= 6 off=( +5.52, -1.95)" depth_t=   375ppm S/N_t=  3.8 dchi2_t=  3.10 chi2=94.4/106 infl=1.00
+   S32_tpf_W3 done in 0.7s; scene shift (+0.016,+0.032) px
+S32_tpf_W6       A nev= 8 off=( +9.89,-10.99)" depth_t=   267ppm S/N_t=  3.4 dchi2_t= 42.30 chi2=125.6/106 infl=1.00
+S32_tpf_W6       B nev= 2 off=( +5.02,-18.33)" depth_t=   279ppm S/N_t=  1.7 dchi2_t= 41.91 chi2=120.1/106 infl=1.00
+   S32_tpf_W6 done in 0.8s; scene shift (+0.016,+0.032) px
+S32_tpf_deg2     A nev= 8 off=( +5.33, -0.62)" depth_t=   341ppm S/N_t=  3.4 dchi2_t=  1.96 chi2=109.6/106 infl=1.00
+S32_tpf_deg2     B nev= 2 off=(-16.11,-54.25)" depth_t=   413ppm S/N_t=  1.9 dchi2_t=  2.91 chi2=92.7/106 infl=1.00
+   S32_tpf_deg2 done in 0.8s; scene shift (+0.016,+0.032) px
+S98_clean_W3     A nev=14 off=( +5.96, -4.44)" depth_t=   353ppm S/N_t=  5.8 dchi2_t=  8.50 chi2=99.3/117 infl=1.05
+S98_clean_W3     B nev= 4 off=( +3.06, +0.15)" depth_t=  1051ppm S/N_t=  9.5 dchi2_t=  3.07 chi2=110.1/117 infl=1.00
+   S98_clean_W3 done in 0.9s; scene shift (+0.010,-0.023) px
+S98_clean_W6     A nev=11 off=( +7.36, +0.62)" depth_t=   358ppm S/N_t=  5.8 dchi2_t=  7.11 chi2=107.4/117 infl=1.00
+S98_clean_W6     B nev= 4 off=( +2.60, -0.68)" depth_t=  1057ppm S/N_t= 10.0 dchi2_t=  2.68 chi2=118.4/117 infl=1.00
+   S98_clean_W6 done in 0.9s; scene shift (+0.010,-0.023) px
+S98_clean_deg2   A nev=14 off=( +7.31, -7.22)" depth_t=   294ppm S/N_t=  4.3 dchi2_t=  9.41 chi2=114.5/117 infl=1.04
+S98_clean_deg2   B nev= 4 off=( +2.72, +0.22)" depth_t=  1039ppm S/N_t=  8.3 dchi2_t=  2.18 chi2=110.7/117 infl=1.00
+   S98_clean_deg2 done in 0.9s; scene shift (+0.010,-0.023) px
+S98_clean_fit7   A nev=14 off=( +5.88, -2.02)" depth_t=   389ppm S/N_t=  6.1 dchi2_t=  6.76 chi2=51.5/45 infl=1.00
+S98_clean_fit7   B nev= 4 off=( +2.98, -0.11)" depth_t=  1066ppm S/N_t=  9.1 dchi2_t=  2.99 chi2=41.1/45 infl=1.00
+   S98_clean_fit7 done in 1.0s; scene shift (+0.010,-0.023) px
+S32_ffi_fit7     A nev= 8 off=( +8.79, -8.33)" depth_t=   282ppm S/N_t=  4.0 dchi2_t= 24.82 chi2=44.3/45 infl=1.00
+S32_ffi_fit7     B nev= 2 off=( +6.78, -9.46)" depth_t=   280ppm S/N_t=  1.9 dchi2_t=  7.77 chi2=56.5/45 infl=1.00
+   S32_ffi_fit7 done in 0.8s; scene shift (+0.043,-0.001) px

@@ -1,0 +1,29 @@
+{
+ "variant": "gaiaonly",
+ "signal": "B",
+ "fold": "v_B_S32+S98_5min",
+ "molusc_file": "/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/a08_cache/molusc_run/fresh5_kept.csv",
+ "runs": [
+  {
+   "seed": 700,
+   "FPP": 0.2317298006981312,
+   "NFPP": 0.0,
+   "STP": 0.22867538787856054,
+   "PTP": 0.24657604550175116,
+   "TP": 0.5196616893616637,
+   "n_q": 429797,
+   "sec": 13.584820985794067
+  },
+  {
+   "seed": 701,
+   "FPP": 0.24155304938297428,
+   "NFPP": 0.0,
+   "STP": 0.23720960627242574,
+   "PTP": 0.23837515141928084,
+   "TP": 0.5177858475857394,
+   "n_q": 429797,
+   "sec": 9.47851014137268
+  }
+ ],
+ "FPP_mean": 0.23664142504055274
+}

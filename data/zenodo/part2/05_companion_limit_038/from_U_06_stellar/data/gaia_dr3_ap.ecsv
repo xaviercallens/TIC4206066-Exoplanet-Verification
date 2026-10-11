@@ -1,0 +1,1374 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - name: solution_id
+#   datatype: int64
+#   description: Solution Identifier
+#   meta: !!omap
+#   - {ucd: meta.version}
+# - name: source_id
+#   datatype: int64
+#   description: Source Identifier
+#   meta: !!omap
+#   - {ucd: meta.id;meta.main}
+# - name: classprob_dsc_combmod_quasar
+#   datatype: float32
+#   description: 'Probability from DSC-Combmod of being a quasar (data used: BP/RP spectrum, photometry, astrometry)'
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: classprob_dsc_combmod_galaxy
+#   datatype: float32
+#   description: 'Probability from DSC-Combmod of being a galaxy (data used: BP/RP spectrum, photometry, astrometry)'
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: classprob_dsc_combmod_star
+#   datatype: float32
+#   description: 'Probability from DSC-Combmod of being a single star (but not a white dwarf) (data used: BP/RP spectrum, photometry,
+#     astrometry)'
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: classprob_dsc_combmod_whitedwarf
+#   datatype: float32
+#   description: 'Probability from DSC-Combmod of being a white dwarf (data used: BP/RP spectrum, photometry, astrometry)'
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: classprob_dsc_combmod_binarystar
+#   datatype: float32
+#   description: 'Probability from DSC-Combmod of being a binary star (data used: BP/RP spectrum, photometry, astrometry)'
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: classprob_dsc_specmod_quasar
+#   datatype: float32
+#   description: 'Probability from DSC-Specmod of being a quasar (data used: BP/RP spectrum)'
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: classprob_dsc_specmod_galaxy
+#   datatype: float32
+#   description: 'Probability from DSC-Specmod of being a galaxy (data used: BP/RP spectrum)'
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: classprob_dsc_specmod_star
+#   datatype: float32
+#   description: 'Probability from DSC-Specmod of being a single star (but not a white dwarf) (data used: BP/RP spectrum)'
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: classprob_dsc_specmod_whitedwarf
+#   datatype: float32
+#   description: 'Probability from DSC-Specmod of being a white dwarf (data used: BP/RP spectrum)'
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: classprob_dsc_specmod_binarystar
+#   datatype: float32
+#   description: 'Probability from DSC-Specmod of being a binary star (data used: BP/RP spectrum)'
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: classprob_dsc_allosmod_quasar
+#   datatype: float32
+#   description: 'Probability from DSC-Allosmod of being a quasar (data used: photometry, astrometry)'
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: classprob_dsc_allosmod_galaxy
+#   datatype: float32
+#   description: 'Probability from DSC-Allosmod of being a galaxy (data used: photometry, astrometry)'
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: classprob_dsc_allosmod_star
+#   datatype: float32
+#   description: 'Probability from DSC-Allosmod of being a star (data used: photometry, astrometry)'
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: teff_gspphot
+#   unit: K
+#   datatype: float32
+#   description: Effective temperature from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: phys.temperature.effective}
+# - name: teff_gspphot_lower
+#   unit: K
+#   datatype: float32
+#   description: Lower confidence level (16%) of effective temperature from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phys.temperature.effective}
+# - name: teff_gspphot_upper
+#   unit: K
+#   datatype: float32
+#   description: Upper confidence level (84%) of effective temperature from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phys.temperature.effective}
+# - name: logg_gspphot
+#   unit: log(cm.s**-2)
+#   datatype: float32
+#   description: Surface gravity from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: phys.gravity}
+# - name: logg_gspphot_lower
+#   unit: log(cm.s**-2)
+#   datatype: float32
+#   description: Lower confidence level (16%) of surface gravity from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phys.gravity}
+# - name: logg_gspphot_upper
+#   unit: log(cm.s**-2)
+#   datatype: float32
+#   description: Upper confidence level (84%) of surface gravity from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phys.gravity}
+# - name: mh_gspphot
+#   unit: dex
+#   datatype: float32
+#   description: Iron abundance from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: phys.abund.Fe}
+# - name: mh_gspphot_lower
+#   unit: dex
+#   datatype: float32
+#   description: Lower confidence level (16%) of iron abundance from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Fe}
+# - name: mh_gspphot_upper
+#   unit: dex
+#   datatype: float32
+#   description: Upper confidence level (84%) of iron abundance from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Fe}
+# - name: distance_gspphot
+#   unit: pc
+#   datatype: float32
+#   description: Distance from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: pos.distance}
+# - name: distance_gspphot_lower
+#   unit: pc
+#   datatype: float32
+#   description: Lower confidence level (16%) of distance from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: stat.value;pos.distance}
+# - name: distance_gspphot_upper
+#   unit: pc
+#   datatype: float32
+#   description: Upper confidence level (84%) of distance from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: stat.value;pos.distance}
+# - name: azero_gspphot
+#   unit: mag
+#   datatype: float32
+#   description: Monochromatic extinction $A_0$ at 547.7nm from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: phys.absorption;em.opt.V}
+# - name: azero_gspphot_lower
+#   unit: mag
+#   datatype: float32
+#   description: Lower confidence level (16%) of monochromatic extinction $A_0$ at 547.7nm from GSP-Phot Aeneas best library using BP/RP
+#     spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phys.absorption;em.opt.V}
+# - name: azero_gspphot_upper
+#   unit: mag
+#   datatype: float32
+#   description: Upper confidence level (84%) of monochromatic extinction $A_0$ at 547.7nm from GSP-Phot Aeneas best library using BP/RP
+#     spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phys.absorption;em.opt.V}
+# - name: ag_gspphot
+#   unit: mag
+#   datatype: float32
+#   description: Extinction in G band from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: phys.absorption;em.opt}
+# - name: ag_gspphot_lower
+#   unit: mag
+#   datatype: float32
+#   description: Lower confidence level (16%) of extinction in G band from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phys.absorption;em.opt}
+# - name: ag_gspphot_upper
+#   unit: mag
+#   datatype: float32
+#   description: Upper confidence level (84%) of extinction in G band from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phys.absorption;em.opt}
+# - name: abp_gspphot
+#   unit: mag
+#   datatype: float32
+#   description: Extinction in $G_{\rm BP}$ band from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: phys.absorption;em.opt.B}
+# - name: abp_gspphot_lower
+#   unit: mag
+#   datatype: float32
+#   description: Lower confidence level (16%) of extinction in $G_{\rm BP}$ band from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phys.absorption;em.opt.B}
+# - name: abp_gspphot_upper
+#   unit: mag
+#   datatype: float32
+#   description: Upper confidence level (84%) of extinction in $G_{\rm BP}$ band from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phys.absorption;em.opt.B}
+# - name: arp_gspphot
+#   unit: mag
+#   datatype: float32
+#   description: Extinction in $G_{\rm RP}$ band from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: phys.absorption;em.opt.R}
+# - name: arp_gspphot_lower
+#   unit: mag
+#   datatype: float32
+#   description: Lower confidence level (16%) of extinction in $G_{\rm RP}$ band from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phys.absorption;em.opt.R}
+# - name: arp_gspphot_upper
+#   unit: mag
+#   datatype: float32
+#   description: Upper confidence level (84%) of extinction in $G_{\rm RP}$ band from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phys.absorption;em.opt.R}
+# - name: ebpminrp_gspphot
+#   unit: mag
+#   datatype: float32
+#   description: Reddening $E(G_{\rm BP} - G_{\rm RP})$ from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: phot.color.excess;em.opt}
+# - name: ebpminrp_gspphot_lower
+#   unit: mag
+#   datatype: float32
+#   description: Lower confidence level (16%) of reddening  $E(G_{\rm BP} - G_{\rm RP})$ from GSP-Phot Aeneas best library using BP/RP
+#     spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phot.color.excess;em.opt}
+# - name: ebpminrp_gspphot_upper
+#   unit: mag
+#   datatype: float32
+#   description: Upper confidence level (84%) of reddening  $E(G_{\rm BP} - G_{\rm RP})$ from GSP-Phot Aeneas best library using BP/RP
+#     spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phot.color.excess;em.opt}
+# - name: mg_gspphot
+#   unit: mag
+#   datatype: float32
+#   description: Absolute magnitude $M_{\rm G}$ from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: phys.magAbs;em.opt}
+# - name: mg_gspphot_lower
+#   unit: mag
+#   datatype: float32
+#   description: Lower confidence level (16%) of absolute magnitude $M_{\rm G}$ from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phys.magAbs;em.opt}
+# - name: mg_gspphot_upper
+#   unit: mag
+#   datatype: float32
+#   description: Upper confidence level (84%) of absolute magnitude $M_{\rm G}$ from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phys.magAbs;em.opt}
+# - name: radius_gspphot
+#   unit: solRad
+#   datatype: float32
+#   description: Radius from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: phys.size.radius}
+# - name: radius_gspphot_lower
+#   unit: solRad
+#   datatype: float32
+#   description: Lower confidence level (16%) of radius from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phys.size.radius}
+# - name: radius_gspphot_upper
+#   unit: solRad
+#   datatype: float32
+#   description: Upper confidence level (84%) of radius from GSP-Phot Aeneas best library using BP/RP spectra
+#   meta: !!omap
+#   - {ucd: stat.value;phys.size.radius}
+# - name: logposterior_gspphot
+#   datatype: float32
+#   description: Goodness-of-fit score (mean log-posterior of MCMC) of GSP-Phot Aeneas MCMC best library
+#   meta: !!omap
+#   - {ucd: stat.fit.goodness}
+# - name: mcmcaccept_gspphot
+#   datatype: float32
+#   description: MCMC acceptance rate of GSP-Phot Aeneas MCMC best library
+#   meta: !!omap
+#   - {ucd: stat.value}
+# - name: libname_gspphot
+#   datatype: string
+#   description: Name of library that achieves the highest mean log-posterior in MCMC samples and was used to derive GSP-Phot parameters
+#     in this table
+#   meta: !!omap
+#   - {ucd: meta.record}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: '*'}
+#   subtype: json
+# - name: teff_gspspec
+#   unit: K
+#   datatype: float32
+#   description: Effective temperature from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: phys.temperature.effective;stat.median}
+# - name: teff_gspspec_lower
+#   unit: K
+#   datatype: float32
+#   description: 16th percentile of effective temperature from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.temperature.effective}
+# - name: teff_gspspec_upper
+#   unit: K
+#   datatype: float32
+#   description: 84th percentile of effective temperature from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.temperature.effective}
+# - name: logg_gspspec
+#   unit: log(cm.s**-2)
+#   datatype: float32
+#   description: Logarithm of the stellar surface gravity from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: phys.gravity;stat.median}
+# - name: logg_gspspec_lower
+#   unit: log(cm.s**-2)
+#   datatype: float32
+#   description: 16th percentile of the logarithm of the stellar surface gravity from GSP-Spec MatisseGauguin using RVS spectra and Monte
+#     Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.gravity}
+# - name: logg_gspspec_upper
+#   unit: log(cm.s**-2)
+#   datatype: float32
+#   description: 84th percentile of the logarithm of the stellar surface gravity from GSP-Spec MatisseGauguin using RVS spectra and Monte
+#     Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.gravity}
+# - name: mh_gspspec
+#   unit: dex
+#   datatype: float32
+#   description: Global metallicity [M/H] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: phys.abund.Fe;stat.median}
+# - name: mh_gspspec_lower
+#   unit: dex
+#   datatype: float32
+#   description: 16th percentile of global metallicity [M/H] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Fe}
+# - name: mh_gspspec_upper
+#   unit: dex
+#   datatype: float32
+#   description: 84th percentile of global metallicity [M/H] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Fe}
+# - name: alphafe_gspspec
+#   unit: dex
+#   datatype: float32
+#   description: Abundance of alpha-elements [alpha/Fe] with respect to iron from GSP-Spec MatisseGauguin using RVS spectra and Monte
+#     Carlo realisations
+#   meta: !!omap
+#   - {ucd: phys.abund;stat.median}
+# - name: alphafe_gspspec_lower
+#   unit: dex
+#   datatype: float32
+#   description: 16th percentile of the abundance of alpha-elements [alpha/Fe] with respect to iron from GSP-Spec MatisseGauguin using
+#     RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund}
+# - name: alphafe_gspspec_upper
+#   unit: dex
+#   datatype: float32
+#   description: 84th percentile of the abundance of alpha-elements [alpha/Fe] with respect to iron from GSP-Spec MatisseGauguin using
+#     RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund}
+# - name: fem_gspspec
+#   unit: dex
+#   datatype: float32
+#   description: Abundance of neutral iron [Fe/M] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations, applied
+#     to the individual N lines of the element, given in {\tt femGspspecNlines}
+#   meta: !!omap
+#   - {ucd: phys.abund.Fe;stat.median}
+# - name: fem_gspspec_lower
+#   unit: dex
+#   datatype: float32
+#   description: 16th percentile of the abundance of neutral iron [Fe/M] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo
+#     realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Fe}
+# - name: fem_gspspec_upper
+#   unit: dex
+#   datatype: float32
+#   description: 84th percentile of the abundance of neutral iron [Fe/M] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo
+#     realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Fe}
+# - name: fem_gspspec_nlines
+#   datatype: int32
+#   description: Number of lines used for [Fe/M] abundance estimation
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - name: fem_gspspec_linescatter
+#   unit: dex
+#   datatype: float32
+#   description: Uncertainty estimation of [Fe/M] abundance using N lines of the element, given in {\tt femGspspecNlines}
+#   meta: !!omap
+#   - {ucd: stat.error;phys.abund.Z}
+# - name: sife_gspspec
+#   unit: dex
+#   datatype: float32
+#   description: Abundance of Silicon [Si/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations, applied to
+#     the individual N lines of the element, given in {\tt sifeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: phys.abund.Z;stat.median}
+# - name: sife_gspspec_lower
+#   unit: dex
+#   datatype: float32
+#   description: 16th percentile of the abundance of silicon [Si/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: sife_gspspec_upper
+#   unit: dex
+#   datatype: float32
+#   description: 84th percentile of the abundance of silicon [Si/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: sife_gspspec_nlines
+#   datatype: int32
+#   description: Number of lines used for [Si/Fe] abundance estimation
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - name: sife_gspspec_linescatter
+#   unit: dex
+#   datatype: float32
+#   description: Uncertainty estimation of [Si/Fe] abundance using N lines of the element, given in {\tt sifeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: phys.abund.Z;stat.median}
+# - name: cafe_gspspec
+#   unit: dex
+#   datatype: float32
+#   description: Abundance of Calcium [Ca/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations, applied to
+#     the individual N lines of the element, given in {\tt cafeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: phys.abund.Z;stat.median}
+# - name: cafe_gspspec_lower
+#   unit: dex
+#   datatype: float32
+#   description: 16th percentile of the abundance of Calcium [Ca/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: cafe_gspspec_upper
+#   unit: dex
+#   datatype: float32
+#   description: 84th percentile of the abundance of Calcium [Ca/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: cafe_gspspec_nlines
+#   datatype: int32
+#   description: Number of lines used for [Ca/Fe] abundance estimation
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - name: cafe_gspspec_linescatter
+#   unit: dex
+#   datatype: float32
+#   description: Uncertainty estimation of [Ca/Fe] abundance using N lines of the element, given in {\tt cafeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: stat.error;phys.abund.Z}
+# - name: tife_gspspec
+#   unit: dex
+#   datatype: float32
+#   description: Abundance of Titanium [Ti/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations, applied to
+#     the individual N lines of the element, given in {\tt tifeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: phys.abund.Z;stat.median}
+# - name: tife_gspspec_lower
+#   unit: dex
+#   datatype: float32
+#   description: 16th percentile of the abundance of Titanium [Ti/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: tife_gspspec_upper
+#   unit: dex
+#   datatype: float32
+#   description: 84th percentile of the abundance of Titanium [Ti/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: tife_gspspec_nlines
+#   datatype: int32
+#   description: Number of lines used for [Ti/Fe] abundance estimation
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - name: tife_gspspec_linescatter
+#   unit: dex
+#   datatype: float32
+#   description: Uncertainty estimation of [Ti/Fe] abundance using N lines of the element, given in {\tt tifeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: stat.error;phys.abund.Z}
+# - name: mgfe_gspspec
+#   unit: dex
+#   datatype: float32
+#   description: Abundance of Magnesium [Mg/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations, applied to
+#     the individual N lines of the element, given in {\tt mgfeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: phys.abund.Z;stat.median}
+# - name: mgfe_gspspec_lower
+#   unit: dex
+#   datatype: float32
+#   description: 16th percentile of the abundance of Magnesium [Mg/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo
+#     realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: mgfe_gspspec_upper
+#   unit: dex
+#   datatype: float32
+#   description: 84th percentile of the abundance of Magnesium [Mg/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo
+#     realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: mgfe_gspspec_nlines
+#   datatype: int32
+#   description: Number of lines used for [Mg/Fe] abundance estimation
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - name: mgfe_gspspec_linescatter
+#   unit: dex
+#   datatype: float32
+#   description: Uncertainty estimation of [Mg/Fe] abundance using N lines of the element, given in {\tt mgfeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: stat.error;phys.abund.Z}
+# - name: ndfe_gspspec
+#   unit: dex
+#   datatype: float32
+#   description: Abundance of neodymium [Nd/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations, applied to
+#     the individual N lines of the element, given in {\tt ndfeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: phys.abund.Z;stat.median}
+# - name: ndfe_gspspec_lower
+#   unit: dex
+#   datatype: float32
+#   description: 16th percentile of the abundance of neodymium [Nd/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo
+#     realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: ndfe_gspspec_upper
+#   unit: dex
+#   datatype: float32
+#   description: 84th percentile of the abundance of neodymium [Nd/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo
+#     realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: ndfe_gspspec_nlines
+#   datatype: int32
+#   description: Number of lines used for [Nd/Fe] abundance estimation
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - name: ndfe_gspspec_linescatter
+#   unit: dex
+#   datatype: float32
+#   description: Uncertainty estimation of [Nd/Fe] abundance using N lines of the element, given in {\tt ndfeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: stat.error;phys.abund.Z}
+# - name: feiim_gspspec
+#   unit: dex
+#   datatype: float32
+#   description: Abundance of ionised iron [FeII/M] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations, applied
+#     to the individual N lines of the element, given in {\tt feiimGspspecNlines}
+#   meta: !!omap
+#   - {ucd: phys.abund.Fe;stat.median}
+# - name: feiim_gspspec_lower
+#   unit: dex
+#   datatype: float32
+#   description: 16th percentile of the abundance of ionised iron [FeII/M] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo
+#     realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Fe}
+# - name: feiim_gspspec_upper
+#   unit: dex
+#   datatype: float32
+#   description: 84th percentile of the abundance of ionised iron [FeII/M] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo
+#     realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Fe}
+# - name: feiim_gspspec_nlines
+#   datatype: int32
+#   description: Number of lines used for [FeII/M] abundance estimation
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - name: feiim_gspspec_linescatter
+#   unit: dex
+#   datatype: float32
+#   description: Uncertainty estimation of [FeII/M] abundance using N lines of the element, given in {\tt feiimGspspecNlines}
+#   meta: !!omap
+#   - {ucd: stat.error;phys.abund.Z}
+# - name: sfe_gspspec
+#   unit: dex
+#   datatype: float32
+#   description: Abundance of Sulphur [S/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations, applied to the
+#     individual N lines of the element, given in {\tt sfeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: phys.abund.Z;stat.median}
+# - name: sfe_gspspec_lower
+#   unit: dex
+#   datatype: float32
+#   description: 16th percentile of the abundance of Sulphur [S/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: sfe_gspspec_upper
+#   unit: dex
+#   datatype: float32
+#   description: 84th percentile of the abundance of Sulphur [S/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: sfe_gspspec_nlines
+#   datatype: int32
+#   description: Number of lines used for [S/Fe] abundance estimation
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - name: sfe_gspspec_linescatter
+#   unit: dex
+#   datatype: float32
+#   description: Uncertainty estimation of [S/Fe] abundance using N lines of the element, given in {\tt sfeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: stat.error;phys.abund.Z}
+# - name: zrfe_gspspec
+#   unit: dex
+#   datatype: float32
+#   description: Abundance of Zirconium [Zr/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations, applied to
+#     the individual N lines of the element, given in {\tt zrfeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: phys.abund.Z;stat.median}
+# - name: zrfe_gspspec_lower
+#   unit: dex
+#   datatype: float32
+#   description: 16th percentile of the abundance of Zirconium [Zr/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo
+#     realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: zrfe_gspspec_upper
+#   unit: dex
+#   datatype: float32
+#   description: 84th percentile of the abundance of Zirconium [Zr/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo
+#     realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: zrfe_gspspec_nlines
+#   datatype: int32
+#   description: Number of lines used for [Zr/Fe] abundance estimation
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - name: zrfe_gspspec_linescatter
+#   unit: dex
+#   datatype: float32
+#   description: Uncertainty estimation of [Zr/Fe] abundance using N lines of the element, given in {\tt zrfeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: stat.error;phys.abund.Z}
+# - name: nfe_gspspec
+#   unit: dex
+#   datatype: float32
+#   description: Abundance of Nitrogen [N/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations, applied to
+#     the individual N lines of the element, given in {\tt nfeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: phys.abund.Z;stat.median}
+# - name: nfe_gspspec_lower
+#   unit: dex
+#   datatype: float32
+#   description: 16th percentile of the abundance of Nitrogen [N/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: nfe_gspspec_upper
+#   unit: dex
+#   datatype: float32
+#   description: 84th percentile of the abundance of Nitrogen [N/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: nfe_gspspec_nlines
+#   datatype: int32
+#   description: Number of lines used for [N/Fe] abundance estimation
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - name: nfe_gspspec_linescatter
+#   unit: dex
+#   datatype: float32
+#   description: Uncertainty estimation of [N/Fe] abundance using N lines of the element, given in {\tt nfeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: stat.error;phys.abund.Z}
+# - name: crfe_gspspec
+#   unit: dex
+#   datatype: float32
+#   description: Abundance of Chromium [Cr/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations, applied to
+#     the individual N lines of the element, given in {\tt crfeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: phys.abund.Z;stat.median}
+# - name: crfe_gspspec_lower
+#   unit: dex
+#   datatype: float32
+#   description: 16th percentile of the abundance of Chromium [Cr/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: crfe_gspspec_upper
+#   unit: dex
+#   datatype: float32
+#   description: 84th percentile of the abundance of Chromium [Cr/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: crfe_gspspec_nlines
+#   datatype: int32
+#   description: Number of lines used for [Cr/Fe] abundance estimation
+#   meta: !!omap
+#   - {ucd: meta.record}
+# - name: crfe_gspspec_linescatter
+#   unit: dex
+#   datatype: float32
+#   description: Uncertainty estimation of [Cr/Fe] abundance using N lines of the element, given in {\tt crfeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: stat.error;phys.abund.Z}
+# - name: cefe_gspspec
+#   unit: dex
+#   datatype: float32
+#   description: Abundance of Cerium [Ce/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations, applied to the
+#     individual N lines of the element, given in {\tt cefeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: phys.abund.Z;stat.median}
+# - name: cefe_gspspec_lower
+#   unit: dex
+#   datatype: float32
+#   description: 16th percentile of the abundance of Cerium [Ce/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: cefe_gspspec_upper
+#   unit: dex
+#   datatype: float32
+#   description: 84th percentile of the abundance of Cerium [Ce/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: cefe_gspspec_nlines
+#   datatype: int32
+#   description: Number of lines used for [Ce/Fe] abundance estimation
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - name: cefe_gspspec_linescatter
+#   unit: dex
+#   datatype: float32
+#   description: Uncertainty estimation of [Ce/Fe] abundance using N lines of the element, given in {\tt cefeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: stat.error;phys.abund.Z}
+# - name: nife_gspspec
+#   unit: dex
+#   datatype: float32
+#   description: Abundance of Nickel [Ni/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations, applied to the
+#     individual N lines of the element, given in {\tt nifeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: phys.abund.Z;stat.median}
+# - name: nife_gspspec_lower
+#   unit: dex
+#   datatype: float32
+#   description: 16th percentile of the abundance of Nickel [Ni/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: nife_gspspec_upper
+#   unit: dex
+#   datatype: float32
+#   description: 84th percentile of the abundance of Nickel [Ni/Fe] from GSP-Spec MatisseGauguin using RVS spectra and Monte Carlo realisations
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: nife_gspspec_nlines
+#   datatype: int32
+#   description: Number of lines used for [Ni/Fe] abundance estimation
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - name: nife_gspspec_linescatter
+#   unit: dex
+#   datatype: float32
+#   description: Uncertainty estimation of [Ni/Fe] abundance using N lines of the element, given in {\tt nifeGspspecNlines}
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund.Z}
+# - name: cn0ew_gspspec
+#   unit: nm
+#   datatype: float32
+#   description: Equivalent witdh of cyanogen absorption line, derived from RVS spectra
+#   meta: !!omap
+#   - {ucd: spect.line.eqWidth}
+# - name: cn0ew_gspspec_uncertainty
+#   unit: nm
+#   datatype: float32
+#   description: Uncertainty of equivalent witdh of cyanogen absorption line, derived from RVS spectra
+#   meta: !!omap
+#   - {ucd: stat.error;spect.line.eqWidth}
+# - name: cn0_gspspec_centralline
+#   unit: nm
+#   datatype: float32
+#   description: Central wavelength of cyanogen line, derived from RVS spectra using DIB algorithm
+#   meta: !!omap
+#   - {ucd: spect.line.eqWidth}
+# - name: cn0_gspspec_width
+#   unit: nm
+#   datatype: float32
+#   description: Width of cyoanogen line, derived from RVS spectra using DIB algorithm
+#   meta: !!omap
+#   - {ucd: stat.error;spect.line.eqWidth}
+# - name: dib_gspspec_lambda
+#   unit: nm
+#   datatype: float32
+#   description: DIB central wavelength from GSP-Spec MatisseGauguin using RVS spectra
+#   meta: !!omap
+#   - {ucd: em.wl.central}
+# - name: dib_gspspec_lambda_uncertainty
+#   unit: nm
+#   datatype: float32
+#   description: Uncertainty on DIB central wavelength from GSP-Spec MatisseGauguin using RVS spectra
+#   meta: !!omap
+#   - {ucd: stat.error;em.wl.central}
+# - name: dibew_gspspec
+#   unit: Angstrom
+#   datatype: float32
+#   description: Equivalent width of the DIB from GSP-Spec MatisseGauguin using RVS spectra
+#   meta: !!omap
+#   - {ucd: spect.line.eqWidth}
+# - name: dibew_gspspec_uncertainty
+#   unit: Angstrom
+#   datatype: float32
+#   description: Global uncertainty on DIB equivalent width value using DIB algorithm
+#   meta: !!omap
+#   - {ucd: stat.value;spect.line.eqWidth}
+# - name: dibewnoise_gspspec_uncertainty
+#   unit: Angstrom
+#   datatype: float32
+#   description: Uncertainty on DIB equivalent width value occuring from noise part
+#   meta: !!omap
+#   - {ucd: stat.value;spect.line.eqWidth}
+# - name: dibp0_gspspec
+#   datatype: float32
+#   description: Depth ($p_0$ parameter) of the DIB derived from a Gaussian model fit
+#   meta: !!omap
+#   - {ucd: stat.fit.param}
+# - name: dibp2_gspspec
+#   unit: Angstrom
+#   datatype: float32
+#   description: Width ($p_2$ parameter) of the DIB derived from a Gaussian model fit
+#   meta: !!omap
+#   - {ucd: stat.fit.param}
+# - name: dibp2_gspspec_uncertainty
+#   unit: Angstrom
+#   datatype: float32
+#   description: Uncertainty on the {\tt dibp2Gspspec} parameter
+#   meta: !!omap
+#   - {ucd: stat.fit.param}
+# - name: dibqf_gspspec
+#   datatype: int32
+#   description: Quality flag of the DIB computation
+#   meta: !!omap
+#   - {ucd: meta.code.qual}
+# - name: flags_gspspec
+#   datatype: string
+#   description: Catalogue flags for GSP-Spec MatisseGauguin
+#   meta: !!omap
+#   - {ucd: meta.code.status}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: '*'}
+#   subtype: json
+# - name: logchisq_gspspec
+#   datatype: float32
+#   description: Logarithm of the goodness-of-fit for the GSP-Spec MatisseGauguin parameters
+#   meta: !!omap
+#   - {ucd: stat.fit.chi2}
+# - name: ew_espels_halpha
+#   unit: nm
+#   datatype: float32
+#   description: Halpha pseudo-equivalent width from ESP-ELS
+#   meta: !!omap
+#   - {ucd: spect.line.eqWidth}
+# - name: ew_espels_halpha_uncertainty
+#   unit: nm
+#   datatype: float32
+#   description: Uncertainty of the Halpha pseudo-equivalent width from ESP-ELS
+#   meta: !!omap
+#   - {ucd: stat.error;spect.line.eqWidth}
+# - name: ew_espels_halpha_flag
+#   datatype: string
+#   description: Quality flag of the Halpha pseudo-equivalent width from ESP-ELS
+#   meta: !!omap
+#   - {ucd: meta.code.qual}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: '*'}
+#   subtype: json
+# - name: ew_espels_halpha_model
+#   unit: nm
+#   datatype: float32
+#   description: Halpha pseudo-equivalent width from ESP-ELS measured on the synthetic spectrum
+#   meta: !!omap
+#   - {ucd: spect.line.eqWidth}
+# - name: classlabel_espels
+#   datatype: string
+#   description: Adopted ELS class label from ESP-ELS
+#   meta: !!omap
+#   - {ucd: meta.code.class}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: '*'}
+#   subtype: json
+# - name: classlabel_espels_flag
+#   datatype: string
+#   description: Quality flag of the adopted ELS class label from ESP-ELS
+#   meta: !!omap
+#   - {ucd: meta.code.class}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: '*'}
+#   subtype: json
+# - name: classprob_espels_wcstar
+#   datatype: float32
+#   description: Probability from ESP-ELS of being a Wolf-Rayet star of type WC
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: classprob_espels_wnstar
+#   datatype: float32
+#   description: Probability from ESP-ELS of being a Wolf-Rayet star of type WN
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: classprob_espels_bestar
+#   datatype: float32
+#   description: Probability from ESP-ELS of being a Be Star
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: classprob_espels_ttauristar
+#   datatype: float32
+#   description: Probability from ESP-ELS of being a T Tauri Star
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: classprob_espels_herbigstar
+#   datatype: float32
+#   description: Probability from ESP-ELS of being a Herbig Ae/Be Star
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: classprob_espels_dmestar
+#   datatype: float32
+#   description: Probability from ESP-ELS of being an active M dwarf Star
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: classprob_espels_pne
+#   datatype: float32
+#   description: Probability from ESP-ELS of being a planetary nebula
+#   meta: !!omap
+#   - {ucd: stat.probability}
+# - name: azero_esphs
+#   unit: mag
+#   datatype: float32
+#   description: Monochromatic interstellar extinction, A$_\mathrm{0}$, from ESP-HS
+#   meta: !!omap
+#   - {ucd: phys.absorption;em.opt.V}
+# - name: azero_esphs_uncertainty
+#   unit: mag
+#   datatype: float32
+#   description: Uncertainty at a 68% confidence level on A$_\mathrm{0}$ from ESP-HS
+#   meta: !!omap
+#   - {ucd: stat.error;phys.absorption;em.opt.V}
+# - name: ag_esphs
+#   unit: mag
+#   datatype: float32
+#   description: Intersterstellar extinction in G band from ESP-HS
+#   meta: !!omap
+#   - {ucd: phys.absorption;em.opt}
+# - name: ag_esphs_uncertainty
+#   unit: mag
+#   datatype: float32
+#   description: Uncertainty on $A_{\rm G}$ from ESP-HS
+#   meta: !!omap
+#   - {ucd: stat.error;phys.absorption;em.opt}
+# - name: ebpminrp_esphs
+#   unit: mag
+#   datatype: float32
+#   description: Reddening $E(G_{\rm BP} - G_{\rm RP})$ from ESP-HS
+#   meta: !!omap
+#   - {ucd: phot.color.excess;em.opt}
+# - name: ebpminrp_esphs_uncertainty
+#   unit: mag
+#   datatype: float32
+#   description: Uncertainty on $E(G_{\rm BP} - G_{\rm RP})$ from ESP-HS
+#   meta: !!omap
+#   - {ucd: stat.error;phot.color.excess;em.opt}
+# - name: teff_esphs
+#   unit: K
+#   datatype: float32
+#   description: Effective temperature from ESP-HS
+#   meta: !!omap
+#   - {ucd: phys.temperature.effective}
+# - name: teff_esphs_uncertainty
+#   unit: K
+#   datatype: float32
+#   description: Uncertainty at a 68% confidence level on the effective temperature from ESP-HS
+#   meta: !!omap
+#   - {ucd: stat.error;phys.temperature.effective}
+# - name: logg_esphs
+#   unit: log(cm.s**-2)
+#   datatype: float32
+#   description: Surface gravity from ESP-HS
+#   meta: !!omap
+#   - {ucd: phys.gravity}
+# - name: logg_esphs_uncertainty
+#   unit: log(cm.s**-2)
+#   datatype: float32
+#   description: Uncertainty at a 68% confidence level on the surface gravity from ESP-HS
+#   meta: !!omap
+#   - {ucd: stat.error;phys.gravity}
+# - name: vsini_esphs
+#   unit: km / s
+#   datatype: float32
+#   description: Projected rotational velocity from ESP-HS
+#   meta: !!omap
+#   - {ucd: phys.veloc.rotat}
+# - name: vsini_esphs_uncertainty
+#   unit: km / s
+#   datatype: float32
+#   description: Uncertainty on the projected rotational velocity from ESP-HS
+#   meta: !!omap
+#   - {ucd: stat.error;phys.veloc.rotat}
+# - name: flags_esphs
+#   datatype: string
+#   description: Quality flag of the ESP-HS parametrisation
+#   meta: !!omap
+#   - {ucd: meta.code.qual}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: '*'}
+#   subtype: json
+# - name: spectraltype_esphs
+#   datatype: string
+#   description: Spectral type from ESP-ELS
+#   meta: !!omap
+#   - {ucd: src.spType}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: '*'}
+#   subtype: json
+# - name: activityindex_espcs
+#   unit: nm
+#   datatype: float32
+#   description: Chromospheric activity index from ESP-CS, measured on the calcium triplet using RVS spectra
+#   meta: !!omap
+#   - {ucd: spect.index}
+# - name: activityindex_espcs_uncertainty
+#   unit: nm
+#   datatype: float32
+#   description: Uncertainty in the chromospheric activity index from ESP-CS
+#   meta: !!omap
+#   - {ucd: stat.error;spect.index}
+# - name: activityindex_espcs_input
+#   datatype: string
+#   description: Source of input stellar parameters for the computation of the activity index by ESP-CS
+#   meta: !!omap
+#   - {ucd: meta.code}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: '*'}
+#   subtype: json
+# - name: teff_espucd
+#   unit: K
+#   datatype: float32
+#   description: Effective temperature estimate from ESP-UCD based on the RP spectrum
+#   meta: !!omap
+#   - {ucd: phys.temperature.effective}
+# - name: teff_espucd_uncertainty
+#   unit: K
+#   datatype: float32
+#   description: Uncertainty of the effective temperature estimate produced by ESP-UCD
+#   meta: !!omap
+#   - {ucd: stat.error;phys.temperature.effective}
+# - name: flags_espucd
+#   datatype: string
+#   description: Quality flags of the ESP-UCD parameter estimates
+#   meta: !!omap
+#   - {ucd: meta.code.status}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: '*'}
+#   subtype: json
+# - name: radius_flame
+#   unit: solRad
+#   datatype: float32
+#   description: Radius of the star from FLAME using {\tt teffGspphot} and {\tt lumFlame}
+#   meta: !!omap
+#   - {ucd: phys.size.radius}
+# - name: radius_flame_lower
+#   unit: solRad
+#   datatype: float32
+#   description: Lower confidence level (16%) of {\tt radiusFlame}
+#   meta: !!omap
+#   - {ucd: stat.value;phys.size.radius}
+# - name: radius_flame_upper
+#   unit: solRad
+#   datatype: float32
+#   description: Upper confidence level (84%) of {\tt radiusFlame}
+#   meta: !!omap
+#   - {ucd: stat.value;phys.size.radius}
+# - name: lum_flame
+#   unit: solLum
+#   datatype: float32
+#   description: Luminosity of the star from FLAME using G band magnitude, extinction ({\tt agGspphot}),  parallax or distance, and a
+#     bolometric correction {\tt bcFlame}
+#   meta: !!omap
+#   - {ucd: phys.luminosity}
+# - name: lum_flame_lower
+#   unit: solLum
+#   datatype: float32
+#   description: Lower confidence level (16%) of {\tt lumFlame}
+#   meta: !!omap
+#   - {ucd: stat.value;phys.luminosity}
+# - name: lum_flame_upper
+#   unit: solLum
+#   datatype: float32
+#   description: Upper confidence level (84%) of {\tt lumFlame}
+#   meta: !!omap
+#   - {ucd: stat.value;phys.luminosity}
+# - name: mass_flame
+#   unit: solMass
+#   datatype: float32
+#   description: Mass of the star from FLAME using stellar models, {\tt lumFlame}, and {\tt teffGspphot}
+#   meta: !!omap
+#   - {ucd: phys.mass}
+# - name: mass_flame_lower
+#   unit: solMass
+#   datatype: float32
+#   description: Lower confidence level (16%) of {\tt massFlame}
+#   meta: !!omap
+#   - {ucd: stat.value;phys.mass}
+# - name: mass_flame_upper
+#   unit: solMass
+#   datatype: float32
+#   description: Upper confidence level (84%) of {\tt massFlame}
+#   meta: !!omap
+#   - {ucd: stat.value;phys.mass}
+# - name: age_flame
+#   unit: Gyr
+#   datatype: float32
+#   description: Age of the star from FLAME using stellar models, see {\tt massFlame} for details
+#   meta: !!omap
+#   - {ucd: time.age}
+# - name: age_flame_lower
+#   unit: Gyr
+#   datatype: float32
+#   description: Lower confidence level (16%) of {\tt ageFlame}
+#   meta: !!omap
+#   - {ucd: stat.value;time.age}
+# - name: age_flame_upper
+#   unit: Gyr
+#   datatype: float32
+#   description: Upper confidence level (84%) of {\tt ageFlame}
+#   meta: !!omap
+#   - {ucd: stat.value;time.age}
+# - name: flags_flame
+#   datatype: string
+#   description: Flags indicating quality and processing information from FLAME
+#   meta: !!omap
+#   - {ucd: meta.code.qual}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: '*'}
+#   subtype: json
+# - name: evolstage_flame
+#   datatype: int32
+#   description: Evolutionary stage of the star from FLAME using stellar models, see {\tt massFlame} for details
+#   meta: !!omap
+#   - {ucd: src.class}
+# - name: gravredshift_flame
+#   unit: km / s
+#   datatype: float32
+#   description: Gravitational redshift from FLAME using {\tt radiusFlame} and {\tt loggGspphot}
+#   meta: !!omap
+#   - {ucd: src.redshift}
+# - name: gravredshift_flame_lower
+#   unit: km / s
+#   datatype: float32
+#   description: Lower confidence level (16%) of {\tt gravredshiftFlame}
+#   meta: !!omap
+#   - {ucd: stat.value;src.redshift}
+# - name: gravredshift_flame_upper
+#   unit: km / s
+#   datatype: float32
+#   description: Upper confidence level (84%) of {\tt gravredshiftFlame}
+#   meta: !!omap
+#   - {ucd: stat.value;src.redshift}
+# - name: bc_flame
+#   unit: mag
+#   datatype: float32
+#   description: Bolometric correction used to derive {\tt lumFlame}
+#   meta: !!omap
+#   - {ucd: phot.mag.bc}
+# - name: mh_msc
+#   unit: dex
+#   datatype: float32
+#   description: Metallicity of the source treated as a binary system from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: phys.abund}
+# - name: mh_msc_upper
+#   unit: dex
+#   datatype: float32
+#   description: Upper confidence level (84%) of the metallicity from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund}
+# - name: mh_msc_lower
+#   unit: dex
+#   datatype: float32
+#   description: Lower confidence level (16%) of the metallicity from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: stat.value;phys.abund}
+# - name: azero_msc
+#   unit: mag
+#   datatype: float32
+#   description: Monochromatic extinction $A_0$ at 547.7nm of the source treated as a binary system from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: phys.absorption;em.opt.V}
+# - name: azero_msc_upper
+#   unit: mag
+#   datatype: float32
+#   description: Upper confidence level (84%) of monochromatic extinction $A_0$ at 547.7nm from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: stat.value;phys.absorption;em.opt.V}
+# - name: azero_msc_lower
+#   unit: mag
+#   datatype: float32
+#   description: Lower confidence level (16%) of monochromatic extinction $A_0$ at 547.7nm from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: stat.value;phys.absorption;em.opt.V}
+# - name: distance_msc
+#   unit: pc
+#   datatype: float32
+#   description: Distance from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: pos.distance}
+# - name: distance_msc_upper
+#   unit: pc
+#   datatype: float32
+#   description: Upper confidence level (84%) of distance from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: stat.value;pos.distance}
+# - name: distance_msc_lower
+#   unit: pc
+#   datatype: float32
+#   description: Lower confidence level (16%) of distance from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: stat.value;pos.distance}
+# - name: teff_msc1
+#   unit: K
+#   datatype: float32
+#   description: Effective temperature of the primary from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: phys.temperature.effective}
+# - name: teff_msc1_upper
+#   unit: K
+#   datatype: float32
+#   description: Upper confidence level (84%) of effective temperature of the primary from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: stat.value;phys.temperature.effective}
+# - name: teff_msc1_lower
+#   unit: K
+#   datatype: float32
+#   description: Lower confidence level (16%) of effective temperature of the primary from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: stat.value;phys.temperature.effective}
+# - name: teff_msc2
+#   unit: K
+#   datatype: float32
+#   description: Effective temperature of the secondary from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: phys.temperature.effective}
+# - name: teff_msc2_upper
+#   unit: K
+#   datatype: float32
+#   description: Upper confidence level (84%) of effective temperature of the secondary from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: stat.value;phys.temperature.effective}
+# - name: teff_msc2_lower
+#   unit: K
+#   datatype: float32
+#   description: Lower confidence level (16%) of effective temperature of the secondary from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: stat.value;phys.temperature.effective}
+# - name: logg_msc1
+#   unit: log(cm.s**-2)
+#   datatype: float32
+#   description: Surface gravity of the primary from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: phys.gravity}
+# - name: logg_msc1_upper
+#   unit: log(cm.s**-2)
+#   datatype: float32
+#   description: Upper confidence level (84%) of surface gravity of the primary from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: stat.value;phys.gravity}
+# - name: logg_msc1_lower
+#   unit: log(cm.s**-2)
+#   datatype: float32
+#   description: Lower confidence level (16%) of surface gravity of the primary from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: stat.value;phys.gravity}
+# - name: logg_msc2
+#   unit: log(cm.s**-2)
+#   datatype: float32
+#   description: Surface gravity of the secondary from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: phys.gravity}
+# - name: logg_msc2_upper
+#   unit: log(cm.s**-2)
+#   datatype: float32
+#   description: Upper confidence level (84%) of surface gravity of the secondary from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: stat.value;phys.gravity}
+# - name: logg_msc2_lower
+#   unit: log(cm.s**-2)
+#   datatype: float32
+#   description: Lower confidence level (16%) of surface gravity of the secondary from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: stat.value;phys.gravity}
+# - name: ag_msc
+#   unit: mag
+#   datatype: float32
+#   description: Extinction in G band of the source treated as a binary system from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: phys.absorption;em.opt}
+# - name: ag_msc_upper
+#   unit: mag
+#   datatype: float32
+#   description: Upper confidence level (84%) of extinction in G band from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: stat.value;phys.absorption}
+# - name: ag_msc_lower
+#   unit: mag
+#   datatype: float32
+#   description: Lower confidence level (16%) of extinction in G band from MSC using BP/RP spectra and parallax
+#   meta: !!omap
+#   - {ucd: stat.value;phys.absorption}
+# - name: logposterior_msc
+#   datatype: float32
+#   description: Goodness-of-fit score (normalised log-posterior) of MSC MCMC
+#   meta: !!omap
+#   - {ucd: stat.fit.goodness}
+# - name: mcmcaccept_msc
+#   datatype: float32
+#   description: Mean MCMC acceptance rate of MSC MCMC
+#   meta: !!omap
+#   - {ucd: stat.fit.param}
+# - name: mcmcdrift_msc
+#   datatype: float32
+#   description: Mean drift of the MSC MCMC chain in units of parameter standard deviation
+#   meta: !!omap
+#   - {ucd: stat.fit.param}
+# - name: flags_msc
+#   datatype: string
+#   description: Flag indicating quality information from MSC
+#   meta: !!omap
+#   - {ucd: meta.code.qual}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: '*'}
+#   subtype: json
+# - name: neuron_oa_id
+#   datatype: int64
+#   description: Identifier of the OA SOM map neuron that represents the source
+#   meta: !!omap
+#   - {ucd: stat.fit.param}
+# - name: neuron_oa_dist
+#   datatype: float32
+#   description: Distance between the source XP spectra and the OA neuron XP prototype that represents the source
+#   meta: !!omap
+#   - {ucd: stat.fit.param}
+# - name: neuron_oa_dist_percentile_rank
+#   datatype: int32
+#   description: Percentile rank according to the distance distribution of the OA neuron that represents the source
+#   meta: !!omap
+#   - {ucd: stat.fit.param}
+# - name: flags_oa
+#   datatype: string
+#   description: Flags indicating quality and processing information from OA
+#   meta: !!omap
+#   - {ucd: meta.code.qual}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: '*'}
+#   subtype: json
+# schema: astropy-2.0
+solution_id source_id classprob_dsc_combmod_quasar classprob_dsc_combmod_galaxy classprob_dsc_combmod_star classprob_dsc_combmod_whitedwarf classprob_dsc_combmod_binarystar classprob_dsc_specmod_quasar classprob_dsc_specmod_galaxy classprob_dsc_specmod_star classprob_dsc_specmod_whitedwarf classprob_dsc_specmod_binarystar classprob_dsc_allosmod_quasar classprob_dsc_allosmod_galaxy classprob_dsc_allosmod_star teff_gspphot teff_gspphot_lower teff_gspphot_upper logg_gspphot logg_gspphot_lower logg_gspphot_upper mh_gspphot mh_gspphot_lower mh_gspphot_upper distance_gspphot distance_gspphot_lower distance_gspphot_upper azero_gspphot azero_gspphot_lower azero_gspphot_upper ag_gspphot ag_gspphot_lower ag_gspphot_upper abp_gspphot abp_gspphot_lower abp_gspphot_upper arp_gspphot arp_gspphot_lower arp_gspphot_upper ebpminrp_gspphot ebpminrp_gspphot_lower ebpminrp_gspphot_upper mg_gspphot mg_gspphot_lower mg_gspphot_upper radius_gspphot radius_gspphot_lower radius_gspphot_upper logposterior_gspphot mcmcaccept_gspphot libname_gspphot teff_gspspec teff_gspspec_lower teff_gspspec_upper logg_gspspec logg_gspspec_lower logg_gspspec_upper mh_gspspec mh_gspspec_lower mh_gspspec_upper alphafe_gspspec alphafe_gspspec_lower alphafe_gspspec_upper fem_gspspec fem_gspspec_lower fem_gspspec_upper fem_gspspec_nlines fem_gspspec_linescatter sife_gspspec sife_gspspec_lower sife_gspspec_upper sife_gspspec_nlines sife_gspspec_linescatter cafe_gspspec cafe_gspspec_lower cafe_gspspec_upper cafe_gspspec_nlines cafe_gspspec_linescatter tife_gspspec tife_gspspec_lower tife_gspspec_upper tife_gspspec_nlines tife_gspspec_linescatter mgfe_gspspec mgfe_gspspec_lower mgfe_gspspec_upper mgfe_gspspec_nlines mgfe_gspspec_linescatter ndfe_gspspec ndfe_gspspec_lower ndfe_gspspec_upper ndfe_gspspec_nlines ndfe_gspspec_linescatter feiim_gspspec feiim_gspspec_lower feiim_gspspec_upper feiim_gspspec_nlines feiim_gspspec_linescatter sfe_gspspec sfe_gspspec_lower sfe_gspspec_upper sfe_gspspec_nlines sfe_gspspec_linescatter zrfe_gspspec zrfe_gspspec_lower zrfe_gspspec_upper zrfe_gspspec_nlines zrfe_gspspec_linescatter nfe_gspspec nfe_gspspec_lower nfe_gspspec_upper nfe_gspspec_nlines nfe_gspspec_linescatter crfe_gspspec crfe_gspspec_lower crfe_gspspec_upper crfe_gspspec_nlines crfe_gspspec_linescatter cefe_gspspec cefe_gspspec_lower cefe_gspspec_upper cefe_gspspec_nlines cefe_gspspec_linescatter nife_gspspec nife_gspspec_lower nife_gspspec_upper nife_gspspec_nlines nife_gspspec_linescatter cn0ew_gspspec cn0ew_gspspec_uncertainty cn0_gspspec_centralline cn0_gspspec_width dib_gspspec_lambda dib_gspspec_lambda_uncertainty dibew_gspspec dibew_gspspec_uncertainty dibewnoise_gspspec_uncertainty dibp0_gspspec dibp2_gspspec dibp2_gspspec_uncertainty dibqf_gspspec flags_gspspec logchisq_gspspec ew_espels_halpha ew_espels_halpha_uncertainty ew_espels_halpha_flag ew_espels_halpha_model classlabel_espels classlabel_espels_flag classprob_espels_wcstar classprob_espels_wnstar classprob_espels_bestar classprob_espels_ttauristar classprob_espels_herbigstar classprob_espels_dmestar classprob_espels_pne azero_esphs azero_esphs_uncertainty ag_esphs ag_esphs_uncertainty ebpminrp_esphs ebpminrp_esphs_uncertainty teff_esphs teff_esphs_uncertainty logg_esphs logg_esphs_uncertainty vsini_esphs vsini_esphs_uncertainty flags_esphs spectraltype_esphs activityindex_espcs activityindex_espcs_uncertainty activityindex_espcs_input teff_espucd teff_espucd_uncertainty flags_espucd radius_flame radius_flame_lower radius_flame_upper lum_flame lum_flame_lower lum_flame_upper mass_flame mass_flame_lower mass_flame_upper age_flame age_flame_lower age_flame_upper flags_flame evolstage_flame gravredshift_flame gravredshift_flame_lower gravredshift_flame_upper bc_flame mh_msc mh_msc_upper mh_msc_lower azero_msc azero_msc_upper azero_msc_lower distance_msc distance_msc_upper distance_msc_lower teff_msc1 teff_msc1_upper teff_msc1_lower teff_msc2 teff_msc2_upper teff_msc2_lower logg_msc1 logg_msc1_upper logg_msc1_lower logg_msc2 logg_msc2_upper logg_msc2_lower ag_msc ag_msc_upper ag_msc_lower logposterior_msc mcmcaccept_msc mcmcdrift_msc flags_msc neuron_oa_id neuron_oa_dist neuron_oa_dist_percentile_rank flags_oa
+1636148068921376768 3220388198192519424 1.05447355e-13 5.267042e-13 0.9996609 2.069802e-12 0.00033909405 0.0 0.0 0.96719104 0.0 0.032808915 0.0 0.0 1.0 "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" """""" 4182.0 4175.0 4189.0 5.01 4.99 5.04 -0.27 -0.3 -0.25 0.17 0.16 0.18 "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" -2 """00000001000009999999999999999999999999999""" -2.797111 -0.084121026 0.0068317614 """1""" -0.185936 """""" """""" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" """93""" """K""" "" "" """M2""" "" "" """""" "" "" "" "" "" "" "" "" "" "" "" "" """""" "" "" "" "" "" -0.59240174 -0.4698516 -0.6875087 0.49557287 0.519595 0.45891064 38.843 39.705807 37.642742 4122.5527 4175.1553 4067.8848 3702.6562 3722.2974 3685.647 4.7034545 4.741039 4.674248 5.0916176 5.102895 5.049885 0.35956398 0.37721887 0.33211216 -25898.043 0.25386634 0.9794982 """1""" "" "" "" """"""

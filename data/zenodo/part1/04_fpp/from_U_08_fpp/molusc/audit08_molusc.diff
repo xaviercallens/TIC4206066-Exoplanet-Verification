@@ -1,0 +1,12 @@
+diff --git a/code/BinaryStarGUI.py b/code/BinaryStarGUI.py
+index 6ec127e..b79ffa0 100644
+--- a/code/BinaryStarGUI.py
++++ b/code/BinaryStarGUI.py
+@@ -1911,6 +1911,7 @@ class Application:
+ 		self.star_age = args.age
+ 		self.added_jitter = float(args.jitter)
+ 		self.rv_floor = args.rv_floor
++		if not hasattr(self, 'star_jitter'): self.star_jitter = -1  # audit08: CLI path never sets star_jitter (AttributeError otherwise)
+ 		# Limits
+ 		self.limits = [None]*21
+ 		if args.transit:

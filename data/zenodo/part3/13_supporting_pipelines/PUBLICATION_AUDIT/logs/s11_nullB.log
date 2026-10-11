@@ -1,0 +1,8 @@
+pipe S6+S32 (reproduces original)        dur=1.6h obs max S/N 10.38 at P=11.132736 (local 0.70); null median 3.46 p99 7.48 p99.9 7.57 max 7.59; N>=obs 0/20000 -> FAP 5.00e-05 (~3.9 sigma one-sided)
+pipe S6 only                             dur=1.6h obs max S/N 7.56 at P=11.132701 (local -0.80); null median 2.41 p99 3.01 p99.9 3.01 max 3.01; N>=obs 0/20000 -> FAP 5.00e-05 (~3.9 sigma one-sided)
+pipe S32 only                            dur=1.6h obs max S/N 7.98 at P=11.132811 (local 4.26); null median 3.77 p99 8.18 p99.9 8.18 max 8.23; N>=obs 984/20000 -> FAP 4.92e-02 (~1.7 sigma one-sided)
+own S6+S32                               dur=1.6h obs max S/N 10.08 at P=11.132736 (local 0.32); null median 2.99 p99 19.04 p99.9 20.49 max 20.49; N>=obs 829/20000 -> FAP 4.15e-02 (~1.7 sigma one-sided)
+own S6 only                              dur=1.6h obs max S/N 8.79 at P=11.132701 (local -0.52); null median 2.74 p99 3.61 p99.9 3.61 max 3.61; N>=obs 0/20000 -> FAP 5.00e-05 (~3.9 sigma one-sided)
+pipe S6+S32 dur 1.3h                     dur=1.3h obs max S/N 10.95 at P=11.132761 (local 0.30); null median 3.47 p99 7.27 p99.9 7.69 max 7.69; N>=obs 0/5000 -> FAP 2.00e-04 (~3.5 sigma one-sided)
+pipe S6+S32 dur 2.0h                     dur=2.0h obs max S/N 9.51 at P=11.132791 (local 2.96); null median 3.41 p99 7.57 p99.9 7.83 max 7.88; N>=obs 0/5000 -> FAP 2.00e-04 (~3.5 sigma one-sided)
+pipe S6+S32 LEO epoch                    dur=1.6h obs max S/N 10.42 at P=11.132726 (local 0.37); null median 3.46 p99 7.48 p99.9 7.57 max 7.57; N>=obs 0/5000 -> FAP 2.00e-04 (~3.5 sigma one-sided)

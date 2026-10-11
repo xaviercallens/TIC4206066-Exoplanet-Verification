@@ -1,0 +1,26 @@
+In preparation for Gaia DR4, the Gaia archive is in evolution. Unfortunately, it may be unstable at times and particular types of queries may time out. Please consider registering for a user account (https://www.cosmos.esa.int/web/gaia-users/register). For questions or advice, please contact the Gaia helpdesk (https://www.cosmos.esa.int/web/gaia/gaia-helpdesk).
+Getting TessCut for sector 6
+Getting TessCut for sector 32
+Getting TessCut for sector 98
+Estimated missing stellar parameters for 70 of 121 stars from photometry. See the 'params_estimated' column of the .stars dataframe. 2 appear evolved and were assigned a nominal 1 M_Sun.
+A_base_S6only 0 FPP=0.02387 NFPP=3.17e-07 (14s)
+A_base_S6only 1 FPP=0.02344 NFPP=3.62e-07 (10s)
+A_base_S6only 2 FPP=0.02436 NFPP=3.61e-07 (10s)
+A_base_S6only 3 FPP=0.02383 NFPP=3.36e-07 (10s)
+A_base_S6only 4 FPP=0.02648 NFPP=3.33e-07 (10s)
+A_base_S6only 5 FPP=0.02826 NFPP=3.71e-07 (10s)
+A_base_S6only 6 FPP=0.03111 NFPP=3.62e-07 (10s)
+A_base_S6only 7 FPP=0.02498 NFPP=3.22e-07 (10s)
+A_base_S6only 8 FPP=0.02956 NFPP=3.68e-07 (10s)
+A_base_S6only 9 FPP=0.02562 NFPP=3.43e-07 (10s)
+A_base_S6only 10 FPP=0.02768 NFPP=3.32e-07 (10s)
+A_base_S6only 11 FPP=0.02633 NFPP=3.42e-07 (10s)
+A_base_S6only 12 FPP=0.02703 NFPP=3.6e-07 (10s)
+A_base_S6only 13 FPP=0.02375 NFPP=3.22e-07 (10s)
+A_base_S6only 14 FPP=0.02957 NFPP=3.46e-07 (10s)
+A_base_S6only 15 FPP=0.0235 NFPP=3.22e-07 (10s)
+A_base_S6only 16 FPP=0.02514 NFPP=3.51e-07 (10s)
+A_base_S6only 17 FPP=0.02755 NFPP=3.58e-07 (10s)
+A_base_S6only 18 FPP=0.02304 NFPP=3.43e-07 (10s)
+A_base_S6only 19 FPP=0.02604 NFPP=3.31e-07 (10s)
+DONE A_base_S6only FPP 0.02606 ± 0.0023 (sd), sem 0.00052; range 0.023-0.0311; NFPP mean 3.4e-07

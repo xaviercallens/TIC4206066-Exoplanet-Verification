@@ -1,0 +1,49 @@
+=== s01_inputs
+{"python": "3.12.13", "platform": "macOS-26.3.1-arm64-arm-64bit", "numpy": "2.5.3", "astropy": "8.0.1", "scipy": "1.18.1", "matplotlib": "3.11.2", "interpreter": "/Users/paulsmith/space <3/tess-jev/.venv/bin/python"}
+real 0.59
+user 0.38
+sys 0.13
+=== s02_before_global_detrend
+S6_ffi {'0.5': (1075, 1299), '1.0': (811, 1175), '1.5': (690, 994), '2.0': (600, 1026), '2.5': (545, 1003), '3.0': (508, 929)}
+S32_ffi {'0.5': (1514, -1801), '1.0': (709, 187), '1.5': (554, 505), '2.0': (473, 564), '2.5': (445, 727), '3.0': (382, 801)}
+S32_tpf2min {'0.5': (1412, -1619), '1.0': (671, 336), '1.5': (607, 675), '2.0': (549, 740), '2.5': (497, 961), '3.0': (471, 1075)}
+S98_ffi {'0.5': (-3041, 760), '1.0': (-6394, 948), '1.5': (-8611, 1079), '2.0': (-10968, 999), '2.5': (-14568, 936), '3.0': (-17602, 898)}
+real 12.61
+user 12.27
+sys 0.26
+=== s03_after_decorrelated
+combined single-pixel excess: {'raw': {'diff_1.0-2.0': {'ppm': -52.35063499623995, 'err': 65.12449964979905, 'sets': ['S32_tpf2min', 'S98_ffi']}, 'diff_0.5-2.0': {'ppm': 61.375804132143756, 'err': 278.63103216199164, 'sets': ['S32_tpf2min', 'S98_ffi']}}, 'corrected': {'diff_1.0-2.0': {'ppm': -12.394477331969789, 'err': 37.868444676188076, 'sets': ['S32_tpf2min', 'S98_ffi']}, 'diff_0.5-2.0': {'ppm': 139.14465106978938, 'err': 107.98284105078369, 'sets': ['S32_tpf2min', 'S98_ffi']}}}
+A S32_tpf2min 8 {'diff_1.0-2.0': (-62, 60), 'diff_0.5-2.0': (176, 284), 'diff_1.0-3.0': (-56, 90), 'diff_2.0-3.0': (6, 50)}
+A S32_ffi 8 {'diff_1.0-2.0': (-36, 65), 'diff_0.5-2.0': (308, 390), 'diff_1.0-3.0': (-27, 102), 'diff_2.0-3.0': (9, 54)}
+A S98_ffi 8 {'diff_1.0-2.0': (20, 49), 'diff_0.5-2.0': (133, 117), 'diff_1.0-3.0': (31, 68), 'diff_2.0-3.0': (11, 29)}
+A S6_ffi 0 events - too few
+B S32_tpf2min 2 {'diff_1.0-2.0': (100, 64), 'diff_0.5-2.0': (45, 418), 'diff_1.0-3.0': (18, 44), 'diff_2.0-3.0': (-82, 21)}
+A_sensitivity_no_dump_rule S32_tpf2min 8 {'diff_1.0-2.0': (-62, 60), 'diff_0.5-2.0': (176, 284), 'diff_1.0-3.0': (-56, 90), 'diff_2.0-3.0': (6, 50)}
+A_sensitivity_no_dump_rule S32_ffi 8 {'diff_1.0-2.0': (-36, 65), 'diff_0.5-2.0': (308, 390), 'diff_1.0-3.0': (-27, 102), 'diff_2.0-3.0': (9, 54)}
+A_sensitivity_no_dump_rule S98_ffi 8 {'diff_1.0-2.0': (20, 49), 'diff_0.5-2.0': (133, 117), 'diff_1.0-3.0': (31, 68), 'diff_2.0-3.0': (11, 29)}
+A_sensitivity_no_dump_rule S6_ffi 4 {'diff_1.0-2.0': (102, 127), 'diff_0.5-2.0': (339, 576), 'diff_1.0-3.0': (185, 177), 'diff_2.0-3.0': (83, 55)}
+real 1.05
+user 0.89
+sys 0.11
+=== s03b_t9_method_replay
+S98_ffi_T9_selection A r1-r2: 227 ± 66 (3.44 sigma)
+S98_ffi_clean_selection A r1-r2: 200 ± 73 (2.72 sigma)
+S6_ffi_T9_selection A r1-r2: 232 ± 52 (4.43 sigma)
+S6_ffi_clean_selection A r1-r2: 229 ± 50 (4.55 sigma)
+S98 T9 own 11x11 cut-out A r1-r2: 226.6 ± 60.1
+S06 T9 own 11x11 cut-out A r1-r2: 149.5 ± 64.8
+real 4.32
+user 4.06
+sys 0.17
+=== s04_b_s32_events
+-164 {'0.5': -3132, '1.0': -164, '1.5': 679, '2.0': 754, '3.0': 921} dump h 105.5
+-162 {'0.5': 793, '1.0': 957, '1.5': 1012, '2.0': 952, '3.0': 1052} dump h 92.9
+real 0.26
+user 0.21
+sys 0.04
+=== s05_plots
+Matplotlib is building the font cache; this may take a moment.
+plots written
+real 13.80
+user 12.43
+sys 0.65

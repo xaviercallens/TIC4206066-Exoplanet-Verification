@@ -1,0 +1,12 @@
+Fri Sep 25 12:40:58 UTC 2026
+Star RA: 05h23m26.36s
+Star DEC: -01d19m38.2s
+Star Mass: 0.606
+Generation Mass Ratio Exponent:  0.0
+Number of companions: 1000000
+The star has ln(ruwe) of 0.194167.
+Calculated distance to star: 36 pc
+Star Model Mag 7.9691519463439375
+Total number of surviving binaries: 429797
+Fri Sep 25 12:45:15 UTC 2026
+63cdae3625723da694d6ecb1d654e1bdaf9ab7d56008a4660bb2b85db2990998  /private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/a08_cache/molusc_run/fresh5_kept.csv

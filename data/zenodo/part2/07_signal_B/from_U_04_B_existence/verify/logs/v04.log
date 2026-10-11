@@ -1,0 +1,6 @@
+{'sector': 'S6', 'epoch': -227, 'tc': np.float64(1473.7370130555553), 'dt_min': np.float64(5.75), 'D_ppm': np.float64(910.2889021109423), 'e_inj_sd_min': 6.090443005233691, 'e_inj_rstd_min': 5.1891, 'n_inj': 250}
+{'sector': 'S6', 'epoch': -226, 'tc': np.float64(1484.862982222222), 'dt_min': np.float64(-4.0), 'D_ppm': np.float64(1302.619929751299), 'e_inj_sd_min': 3.969773293275071, 'e_inj_rstd_min': 3.3358499999999998, 'n_inj': 250}
+{'sector': 'S98', 'epoch': 0, 'tc': np.float64(4000.8662152777774), 'dt_min': np.float64(1.75), 'D_ppm': np.float64(1089.7446759593124), 'e_inj_sd_min': 3.260026993753273, 'e_inj_rstd_min': 2.9652, 'n_inj': 250}
+{'sector': 'S98', 'epoch': 1, 'tc': np.float64(4011.998260833333), 'dt_min': np.float64(0.75), 'D_ppm': np.float64(1200.294617381792), 'e_inj_sd_min': 2.8849720969187898, 'e_inj_rstd_min': 2.59455, 'n_inj': 250}
+e_inj_sd_min P = 11.132747 +- 0.000012  T0 = 4000.8658 +- 0.0015  chi2 1.86/2
+e_inj_rstd_min P = 11.132747 +- 0.000010  T0 = 4000.8658 +- 0.0014  chi2 2.57/2

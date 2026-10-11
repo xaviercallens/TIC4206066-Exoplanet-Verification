@@ -1,0 +1,45 @@
+{
+ "sep0.2-2.0_dI<=2.0": {
+  "n": 38,
+  "n_ruwe_le_target": 3,
+  "n_ruwe_le_1p4": 9,
+  "ruwe_min": 0.999,
+  "seps_with_ruwe_le_target": [
+   1.42,
+   1.51,
+   1.62
+  ],
+  "n_Cstar_flag": 38
+ },
+ "sep0.2-2.0_dI<=1.76": {
+  "n": 32,
+  "n_ruwe_le_target": 2,
+  "n_ruwe_le_1p4": 7,
+  "ruwe_min": 0.999,
+  "seps_with_ruwe_le_target": [
+   1.42,
+   1.51
+  ],
+  "n_Cstar_flag": 32
+ },
+ "sep0.2-0.7_dI<=2.0": {
+  "n": 24,
+  "n_ruwe_le_target": 0,
+  "n_ruwe_le_1p4": 1,
+  "ruwe_min": 1.355,
+  "seps_with_ruwe_le_target": [],
+  "n_Cstar_flag": 24
+ },
+ "sep0.7-2.0_dI<=2.0": {
+  "n": 14,
+  "n_ruwe_le_target": 3,
+  "n_ruwe_le_1p4": 8,
+  "ruwe_min": 0.999,
+  "seps_with_ruwe_le_target": [
+   1.42,
+   1.51,
+   1.62
+  ],
+  "n_Cstar_flag": 14
+ }
+}

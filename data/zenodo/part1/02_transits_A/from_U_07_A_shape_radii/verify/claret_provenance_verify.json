@@ -1,0 +1,28 @@
+{
+ "provenance": {
+  "J/A+A/600/A30/tableab": {
+   "file": "claret_tableab.ecsv",
+   "n": 8,
+   "sha256": "900ebba39755e83addfc416c5428b23e1f3a03f5eebaf10bbe472d6d5236a72a",
+   "utc": "2026-09-25T12:29:46.610401Z",
+   "constraints": {
+    "Teff": "4000..4100",
+    "logg": "4.5..5.0"
+   }
+  },
+  "J/A+A/600/A30/table25": {
+   "file": "claret_table25.ecsv",
+   "n": 20,
+   "sha256": "d3d430ee66b57946939c1500b2c2d2fb222ca16910961ebec3238bd3dab008cd",
+   "utc": "2026-09-25T12:30:19.042706Z",
+   "constraints": {
+    "Teff": "4000..4250",
+    "logg": "4.5..5.0",
+    "Z": "0",
+    "xi": "2"
+   }
+  }
+ },
+ "teff": 4012.0,
+ "logg": 4.631496530847946
+}

@@ -1,0 +1,15 @@
+{
+ "filters": [
+  "GaiaDR2v2_G",
+  "2MASS_Ks"
+ ],
+ "resid_G": 0.0025054870156165773,
+ "resid_Ks": -0.03821422923750233,
+ "obs_minus_model_GmKs": 0.04071971625311891,
+ "meaning": "positive = observed redder than single-star model",
+ "n_sigma_pred_minus_obs_err0p03": {
+  "M2V_0.44": 2.48,
+  "M4V_0.23": 0.88,
+  "M5V_0.16": -0.09
+ }
+}

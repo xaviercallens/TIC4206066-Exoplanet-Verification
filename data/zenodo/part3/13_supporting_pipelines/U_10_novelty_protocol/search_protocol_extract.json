@@ -1,0 +1,74 @@
+{
+ "note": "Extract of opus55_final_audit_tic4206066/10_novelty_protocol/protocol_recount.json (sha256 in 12_facts/EXCLUDED_FILES.csv). Only the shortlist rule, the MES ladder counts at 10/12/15 (quoted in FINAL_FACTS DATA.search.shortlist) and the two target rows.",
+ "subset_rule": {
+  "rule": "tmag_limited",
+  "tmag_max": 11.5,
+  "expected_count": 126246
+ },
+ "detrend": "wotan time-windowed biweight (Hippke et al. 2019, AJ 158, 143)",
+ "search": "astropy.timeseries.BoxLeastSquares (Kovacs et al. 2002), objective=likelihood, method=fast",
+ "detection_statistic": "MES = signal-to-pink-noise ratio, identical definition to leo_vetter get_SES_MES (Hartman & Bakos 2016 red noise, Pont et al. 2006)",
+ "vetting": "leo-vetter 1.2.0 flux-level metrics (Kunimoto et al. 2025, AJ; https://github.com/mkunimoto/LEO-vetter), default thresholds",
+ "shortlist_rule": "hard rejects always apply. Only if survivors > target_max: tier_A = keep signals passing all 13 LEO false-alarm (signal-quality) tests; then, if still > target_max, the lowest MES threshold from mes_ladder giving <= target_max. Never lowered when < target_min. No scientific-value or visual ranking.",
+ "mes_ladder": [
+  10,
+  12,
+  15,
+  20,
+  25,
+  30,
+  40,
+  50,
+  75,
+  100
+ ],
+ "target_max": 80,
+ "ladder_counts_tierA": [
+  {
+   "threshold": 10,
+   "n_tierA_mes_ge": 125,
+   "le_target_max": false
+  },
+  {
+   "threshold": 12,
+   "n_tierA_mes_ge": 95,
+   "le_target_max": false
+  },
+  {
+   "threshold": 15,
+   "n_tierA_mes_ge": 70,
+   "le_target_max": true
+  }
+ ],
+ "amendment_01_frozen_utc": "2026-09-25T00:19:47.251346Z",
+ "target_signals": [
+  {
+   "candidate_id": "tic4206066_p11.132976",
+   "period_d": 11.132975671662091,
+   "duration_hr": 1.6,
+   "depth_ppm": 936.9287356000287,
+   "mes": 10.982276674992583,
+   "snr_white": 12.51447180007612,
+   "N_transit": 3,
+   "leo_ok": true,
+   "leo_FA_fail": false,
+   "leo_FP_fail": false,
+   "in_tierA": true,
+   "mes_ge_T_star": false
+  },
+  {
+   "candidate_id": "tic4206066_p3.182945",
+   "period_d": 3.182945191903069,
+   "duration_hr": 1.8000000000000005,
+   "depth_ppm": 448.4017373802551,
+   "mes": 10.597236796216867,
+   "snr_white": 11.380187840103254,
+   "N_transit": 8,
+   "leo_ok": true,
+   "leo_FA_fail": false,
+   "leo_FP_fail": false,
+   "in_tierA": true,
+   "mes_ge_T_star": false
+  }
+ ]
+}

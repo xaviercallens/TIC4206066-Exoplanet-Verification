@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/MCjSHGSLUmk6fgvl7HKvCHct3B4</id>
+  <title>arXiv Query: search_query=abs:"11.1" AND abs:"3.18"&amp;id_list=&amp;start=0&amp;max_results=50</title>
+  <updated>2026-09-25T11:45:09Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%2211.1%22+AND+abs:%223.18%22&amp;start=0&amp;max_results=50&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>50</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.15189v1</id>
+    <title>Broadband phonon-velocity suppression and a finite anisotropic crossover in twisted bilayer SnSe</title>
+    <updated>2026-08-15T12:12:21Z</updated>
+    <link href="https://arxiv.org/abs/2608.15189v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.15189v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Moiré superlattices reshape lattice dynamics without altering chemical composition, yet how crystal anisotropy modifies this control remains unclear. We combine density-functional-theory (DFT)-calibrated lattice-dynamical calculations with angle-matched untwisted controls to study puckered bilayer SnSe across seven commensurate twist angles ($3.18^\circ$--$8.77^\circ$). At 300 K, twisting suppresses the band-path heat-capacity-weighted mean-square group velocity to 2.6--8.4\% of the control values; the suppression spans a broad frequency range rather than a few soft branches. The velocity response crosses over between $4.78^\circ$ and $3.82^\circ$ into a regime where the relaxed stacking textures and frequency-resolved velocity profiles become self-similar, with the normalized mean-square velocity ratio spanning only 11.1\% of its mean across the three smallest angles---a finite anisotropic crossover, not a singular-angle condition. Direct DFT--MACE force-constant agreement ($r=0.996$), uniform $4\times4\times1$ stability scans, and acoustic-sum-rule and path-density tests support the trend. The equilibrium trend is defined by six structures after excluding one relaxation-sensitive case. These results extend phonon twistronics to low-symmetry layered materials and identify crystal anisotropy as a key determinant of finite-angle phonon crossover behavior.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-15T12:12:21Z</published>
+    <arxiv:comment>15 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Peng Kang</name>
+    </author>
+    <author>
+      <name>Wei Yin</name>
+    </author>
+    <author>
+      <name>Da Wan</name>
+    </author>
+    <author>
+      <name>Shulin Bai</name>
+    </author>
+    <author>
+      <name>Sirui Fan</name>
+    </author>
+    <author>
+      <name>Qi Zou</name>
+    </author>
+    <author>
+      <name>Hongfeng Li</name>
+    </author>
+    <author>
+      <name>Xiao Xiang</name>
+    </author>
+    <author>
+      <name>Zhen Li</name>
+    </author>
+    <author>
+      <name>Yu Liu</name>
+    </author>
+    <author>
+      <name>Lei Zheng</name>
+    </author>
+    <author>
+      <name>Li-Dong Zhao</name>
+    </author>
+  </entry>
+</feed>

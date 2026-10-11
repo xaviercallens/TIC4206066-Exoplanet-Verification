@@ -1,0 +1,27 @@
+Software versions recorded 2026-09-25 (UTC 2026-09-25T18:06:24Z) on the author's machine
+
+OS:
+  ProductName:		macOS
+  ProductVersion:		26.3.1
+  BuildVersion:		25D2128
+  Darwin 25.3.0 arm64
+
+Python environments:
+  main project env (.venv):      Python 3.12.13  -> pip_freeze_main_venv.txt (pip freeze)
+  TRICERATOPS env (trice_env):   Python 3.11.15  -> pip_freeze_trice_env.txt (importlib.metadata; pip not installed)
+  audit env (audit_env):         Python 3.12.13  -> pip_freeze_audit_env.txt (importlib.metadata; pip not installed)
+  (audit_env is the env named in 01_inputs/from_U_00_data/README.md for the opus55 audit; each REPORT.md states which env a step used.
+   trice_env ran the TRICERATOPS 1.1.0 FPP runs.)
+
+Key packages:
+  [main_venv] astropy==8.0.1 astroquery==0.4.11 batman-package==2.5.3 emcee==3.1.6 matplotlib==3.11.2 numpy==2.5.3 pandas==3.0.6 scipy==1.18.1 TESS_PRF==0.1.3 wotan==1.10 
+  [trice_env] astropy==7.2.2 astroquery==0.4.11 emcee==3.1.6 lightkurve==2.5.1 matplotlib==3.11.2 numpy==1.26.4 pandas==3.0.6 scipy==1.13.1 triceratops==1.1.0 
+  [audit_env] astropy==8.0.1 astroquery==0.4.11 batman-package==2.5.3 dynesty==3.1.0 emcee==3.1.6 lightkurve==2.6.0 matplotlib==3.11.2 numpy==2.5.3 pandas==2.3.3 scipy==1.18.1 tess-point==0.9.5.post1 TESS_PRF==0.1.3 wotan==1.10 
+
+LaTeX / counting tools (manuscript build, not needed to reproduce the science):
+  Tectonic 0.17.0 (/opt/homebrew/bin/tectonic); AASTeX v7.0.2 (aastex702.cls, aasjournalv7.bst)
+  TeXcount 3.1.1 (texcount.pl, version date 2018 Oct 28), run with perl v5.34.1
+  pdftotext version 26.08.0 (poppler; used by count_printed.py)
+
+Not captured: the astroARIADNE 1.5.0 environment used for the SED fit in 05_companion_limit_038/from_companion_check
+(recorded there: astroARIADNE 1.5.0, numpy 2.4.6, pandas 3.0.6); its full package list was not kept.

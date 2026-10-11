@@ -1,0 +1,59 @@
+{
+ "target_row": [
+  {
+   "source_id": 3220388198192519424,
+   "phot_g_mean_mag": 10.512974,
+   "bp_rp": 1.73948,
+   "parallax": 28.075018139930098,
+   "ruwe": 1.2142985,
+   "astrometric_params_solved": 31,
+   "non_single_star": 0,
+   "ipd_frac_multi_peak": 0,
+   "ipd_gof_harmonic_amplitude": 0.022242952,
+   "duplicated_source": false,
+   "rv_renormalised_gof": 2.998642,
+   "rv_chisq_pvalue": 4.0627176e-05,
+   "rv_nb_transits": 33.0
+  }
+ ],
+ "all": {
+  "n": 988,
+  "ruwe_pct_below": 61.53846153846154,
+  "ruwe_median": 1.1287463999999998,
+  "n_rv": 772,
+  "gof_pct_below": 84.19689119170984,
+  "frac_p_le_target": 0.15155440414507773,
+  "frac_variable_rule": 0.13860103626943004,
+  "gof_median": 0.17213389499999998
+ },
+ "single": {
+  "n": 626,
+  "ruwe_pct_below": 74.4408945686901,
+  "ruwe_median": 1.0770605500000001,
+  "n_rv": 543,
+  "gof_pct_below": 91.34438305709024,
+  "frac_p_le_target": 0.0865561694290976,
+  "frac_variable_rule": 0.07734806629834254,
+  "gof_median": 0.011800649
+ },
+ "single_ruwe_lt1p4": {
+  "n": 535,
+  "ruwe_pct_below": 87.10280373831776,
+  "ruwe_median": 1.0559883,
+  "n_rv": 470,
+  "gof_pct_below": 96.38297872340425,
+  "frac_p_le_target": 0.036170212765957444,
+  "frac_variable_rule": 0.036170212765957444,
+  "gof_median": -0.13478496499999998
+ },
+ "all_ruwe_lt1p4": {
+  "n": 703,
+  "ruwe_pct_below": 86.48648648648648,
+  "ruwe_median": 1.0571936,
+  "n_rv": 589,
+  "gof_pct_below": 96.60441426146011,
+  "frac_p_le_target": 0.03395585738539898,
+  "frac_variable_rule": 0.03395585738539898,
+  "gof_median": -0.107471585
+ }
+}

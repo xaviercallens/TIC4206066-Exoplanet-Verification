@@ -1,0 +1,11 @@
+T1 pipe S6+S32 : obs 10.03 at P 11.132736; null median 3.19 p99 7.38 max 10.77; FAP 2.00e-03 (19/10000); distinct windows 9528
+T1 pipe S6     : obs 7.08 at P 11.132701; null median 2.48 p99 3.72 max 4.92; FAP 1.00e-04 (0/10000); distinct windows 1745
+T1 pipe S32    : obs 8.00 at P 11.132811; null median 3.53 p99 10.77 max 10.95; FAP 3.19e-02 (318/10000); distinct windows 3173
+T1 own S6+S32  : obs 8.50 at P 11.132736; null median 2.92 p99 6.47 max 10.17; FAP 1.20e-03 (11/10000); distinct windows 9484
+T1 own S6      : obs 8.19 at P 11.132701; null median 2.59 p99 4.02 max 4.33; FAP 1.00e-04 (0/10000); distinct windows 1741
+T2 pipe S6: B boxes 5.833396730179835 (rank 1), 4.050162825404424 (rank 1); top others 3.0@1479.6, 2.9@1489.3, 2.8@1479.0, 2.7@1470.2; N=325 K=27 p_rank=0.0015521367521367522
+T2 own S6: B boxes 5.240983183292246 (rank 1), 6.3346200136489355 (rank 1); top others 3.5@1481.1, 3.1@1481.3, 3.1@1478.6, 3.0@1474.9; N=326 K=27 p_rank=0.00154261444077395
+T2 pipe S32: B boxes 5.7825397890646 (rank 3), None (rank None), 5.397543326477569 (rank 4); top others 10.4@2200.0, 6.2@2187.2, 5.6@2193.3, 4.6@2193.4; N=387 K=27 p_rank=None
+T3 QLP S98 frozen mask: B SDE 6.07 at 11.1368 d (global max 6.07 at 11.137 d); null median 5.47 p95 6.93 max 7.32; FAP 0.346
+T3 own S98 (straylight removed): B SDE 4.25 at 11.1329 d (global max 8.87 at 14.314 d); null median 6.10 p95 8.87 max 10.76; FAP 1.000
+done

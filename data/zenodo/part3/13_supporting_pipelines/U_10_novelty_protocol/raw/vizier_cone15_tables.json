@@ -1,0 +1,1114 @@
+[
+ {
+  "table": "I/154/f1",
+  "description": "Algiers zone (-02,-01,+00,+01,+02,+03,+04)",
+  "nrows": 2,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/197A/tic",
+  "description": "The catalogue, zones 0/37.5deg",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/243/out",
+  "description": "* output (out of 526,280,881 stars)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/252/out",
+  "description": "* output (out of 526,280,881 stars)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/254/out",
+  "description": "output (out of 25,258,765 positions)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/255/out",
+  "description": "output (out of 25,258,765 positions)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/256/stars",
+  "description": "Star catalogue",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/259/tyc2",
+  "description": "*The Tycho-2 main catalogue",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/261/fonac",
+  "description": "The FONAC Catalogue",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/267/out",
+  "description": "Output",
+  "nrows": 2,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/275/ac2002",
+  "description": "Combined table from original tables",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/280B/ascc",
+  "description": "ASCC-2.5 V3: All-sky Compiled Catalogue of 2.5 million stars, 3rd version",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/284/out",
+  "description": "data (around 0+0)",
+  "nrows": 3,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/297/out",
+  "description": "Example of the an output of NOMAD-1",
+  "nrows": 3,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/304/out",
+  "description": "catalog output (6'x6' centered on 0+0)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/305/out",
+  "description": "records of GSC2.3.2 (near 0+0)",
+  "nrows": 3,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/306A/stars",
+  "description": "Stars with FONAK1, AC2000, UCAC2, GSC numbers",
+  "nrows": 2,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/312/sample",
+  "description": "PPMX Sample",
+  "nrows": 1,
+  "period_like_columns": [
+   "P"
+  ],
+  "period_values": [
+   [
+    ""
+   ]
+  ]
+ },
+ {
+  "table": "I/317/sample",
+  "description": "Example of formatted output",
+  "nrows": 2,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/319/xpm",
+  "description": "formatted catalog (on a total of 313,610,083 sources)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/322A/out",
+  "description": "UCAC4 output (out of 113780093 stars)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/324/igsl3",
+  "description": "the IGSL3 data release",
+  "nrows": 4,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/327/cmc15",
+  "description": "catalog output",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/329/urat1",
+  "description": "URAT1 catalog",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/337/gaia",
+  "description": "GaiaSource data",
+  "nrows": 3,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/339/hsoy",
+  "description": "The HSOY catalogue (583001653 sources)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/340/ucac5",
+  "description": "UCAC5 catalog (107,758,513 sources)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/342/f3",
+  "description": "Star data file",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/345/gaia2",
+  "description": "GaiaSource DR2 data",
+  "nrows": 3,
+  "period_like_columns": [
+   "Nper"
+  ],
+  "period_values": [
+   [
+    "10",
+    "12",
+    "12"
+   ]
+  ]
+ },
+ {
+  "table": "I/346/fs",
+  "description": "Star data (from +02.0 to -20.9 degrees)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/347/gaia2dis",
+  "description": "Estimating distances from parallaxes (1331909727 sources)",
+  "nrows": 3,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/348/catalog",
+  "description": "Catalog",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/349/starhorse",
+  "description": "Starhorse catalog",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/350/gaiaedr3",
+  "description": "GaiaSource EDR3 data",
+  "nrows": 3,
+  "period_like_columns": [
+   "Nper"
+  ],
+  "period_values": [
+   [
+    "21",
+    "19",
+    "21"
+   ]
+  ]
+ },
+ {
+  "table": "I/350/tyc2tdsc",
+  "description": "Tycho-2 merged with the TDSC catalog and TDSC supplement",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/351/gps1_p",
+  "description": "The extended Gaia-PS1-SDSS (GPS1+) proper motion catalog, output (on a total of 390,405,023 sources)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/352/gedr3dis",
+  "description": "Estimating distances from parallaxes (1467744818 sources)",
+  "nrows": 3,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/353/gsc242",
+  "description": "records of GSC 2.4.2",
+  "nrows": 26,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/354/starhorse2021",
+  "description": "First 1000 lines as an example, Starhorse 2021",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/355/gaiadr3",
+  "description": "Gaia DR3 source catalog (1811709771 sources)",
+  "nrows": 3,
+  "period_like_columns": [
+   "Nper",
+   "RVNper"
+  ],
+  "period_values": [
+   [
+    "21",
+    "19",
+    "21"
+   ],
+   [
+    "15",
+    "--",
+    "--"
+   ]
+  ]
+ },
+ {
+  "table": "I/355/paramp",
+  "description": "1D astrophysical parameters produced by the Apsis processing chain developed in Gaia DPAC CU8 (1590932717 sources) (astrophysical_parameters)",
+  "nrows": 3,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/355/paramsup",
+  "description": "Additional parameters from the Apsis processing chain, compared to the main table astrophysical parameters, from modules that produce more than one result for a parameter (473020612 sources) (astrophysical_parameters_supp)",
+  "nrows": 2,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/355/xpsummary",
+  "description": "Auxiliary information about the mean BP/RP spectrum (219197643 sources) (xp_summary)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/355/xpsample",
+  "description": "BP/RP externally calibrated sampled mean spectrum (11822651939 rows) (xp_sampled_mean_spectrum)",
+  "nrows": 343,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/355/xpcont",
+  "description": "Mean BP and RP spectra based on the continuous representation in basis functions (219197643 rows) (gaia_dr3_xpcont)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/355/spectra",
+  "description": "Gaia DR3 spectra view (34468373 sources)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/360/syntphot",
+  "description": "Synthetic photometry generated from the Gaia BP/RP mean spectra (218936915 sources) (synthetic_photometry_gspc)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "I/363/gaia_rv_dr3",
+  "description": "the catalog, as in VizieR version",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/230/catalog",
+  "description": "TASS tenxcat catalog",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/246/out",
+  "description": "2MASS Point Source Catalogue, output (on a total of 470,992,970 sources)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/271A/patch2",
+  "description": "*Properties of objects detected repeatedly during the Mark IV survey of northern sky (V.2)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/287/skydot",
+  "description": "Skydot catalog",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/311/wise",
+  "description": "the WISE All-Sky release (among 563,921,584 sources)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/328/allwise",
+  "description": "*the AllWISE data release (among 747,634,026 sources) (updated version, 16-Feb-2021)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/336/apass9",
+  "description": "The APASS catalog, output (on a total of 62 million sources)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/346/jsdc_v2",
+  "description": "Stellar diameters catalogue, version 2",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/349/ps1",
+  "description": "Pan-STARRS DR1 catalogue, output (on a total of 1,919,106,885 sources)",
+  "nrows": 7,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/358/smss",
+  "description": "SkyMapper DR1.1",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/359/vhs_dr4",
+  "description": "VISTA Hemisphere Survey band-merged multi-waveband catalogues (VHS) DR4.1; output (on a total of 1,155,634,198 sources)",
+  "nrows": 17,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/360/catalog",
+  "description": "Gaia DR2 X AllWise catalog",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/361/mdfc-v10",
+  "description": "Mid-infrared stellar Diameters and Fluxes compilation Catalogue (MDF), version 10",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/363/unwise",
+  "description": "the band-merged unWISE catalog (among 2,214,734,224 sources)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/365/catwise",
+  "description": "the CatWISE2020 catalog (among 1,890,715,640 sources)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/367/vhs_dr5",
+  "description": "VISTA Hemisphere Survey band-merged multi-waveband catalogues (VHS) DR5 (version 3); output (on a total of 1,374,207,485 sources)",
+  "nrows": 17,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/369/vexassm",
+  "description": "VEXAS-SMW catalogue",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/374/table2",
+  "description": "Catalogue with RGB magnitudes for Gaia DR3 objects",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/379/smssdr4",
+  "description": "SkyMapper DR4",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/381/hlsp_ps1_tm",
+  "description": "Probabilistic Classifications of Unresolved Point Sources in PanSTARRS1 from Tachibana & Miller, 2018PASP..130l8001T (1467097937 sources)",
+  "nrows": 2,
+  "period_like_columns": []
+ },
+ {
+  "table": "II/389/ps1_dr2",
+  "description": "Pan-STARRS DR2 catalog, output (on a total of 1,868,236,315 sources)",
+  "nrows": 7,
+  "period_like_columns": []
+ },
+ {
+  "table": "III/123B/stkm1",
+  "description": "The catalog revisited (B. Skiff, May 2006; see the \"Revision\" section below)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "III/123B/catalog",
+  "description": "The original catalogue of 2201 stars",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "IV/30/stars",
+  "description": "Stars with Cross-identifications",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "IV/38/tic",
+  "description": "Transiting Exoplanet Survey Satellite (TESS) Input Catalog - v8.0 (TIC-8), outpout (on a total of 1,727,987,580 sources)",
+  "nrows": 3,
+  "period_like_columns": []
+ },
+ {
+  "table": "IV/39/tic82",
+  "description": "Transiting Exoplanet Survey Satellite (TESS) Input Catalog - v8.2 (TIC-8.2), outpout (on a total of 1,727,987,580 sources)",
+  "nrows": 3,
+  "period_like_columns": []
+ },
+ {
+  "table": "V/136/tycall",
+  "description": "Photometry and derived parameters for all Tycho 2 stars, including giants",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "V/139/sdss9",
+  "description": "* output of the SDSS photometric catalog",
+  "nrows": 9,
+  "period_like_columns": []
+ },
+ {
+  "table": "V/147/sdss12",
+  "description": "* output of the SDSS photometric catalog",
+  "nrows": 9,
+  "period_like_columns": []
+ },
+ {
+  "table": "V/153/dr4",
+  "description": "LAMOST DR4 catalog (09/08/2018 version)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "V/154/sdss16",
+  "description": "* output of the SDSS photometric catalog",
+  "nrows": 14,
+  "period_like_columns": []
+ },
+ {
+  "table": "V/156/dr7lrs",
+  "description": "LAMOST LRS General Catalog",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "V/156/dr7mslrs",
+  "description": "LAMOST LRS M Star Catalog",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "V/156/dr7mrs",
+  "description": "LAMOST MRS General Catalog",
+  "nrows": 8,
+  "period_like_columns": []
+ },
+ {
+  "table": "V/156/dr7smrs",
+  "description": "LAMOST MRS A Star Catalog",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "V/160/shboost",
+  "description": "Data model of the Gaia DR3 SHBoost catalogue",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "V/162/dr11l",
+  "description": "LAMOST LRS General Catalog",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "V/162/dr11ml",
+  "description": "LAMOST LRS Catalog of gM, dM, and sdM Stars",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "V/162/dr11il",
+  "description": "LAMOST LRS Input Catalog",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "V/162/dr11m",
+  "description": "LAMOST MRS General Catalog",
+  "nrows": 8,
+  "period_like_columns": []
+ },
+ {
+  "table": "V/162/dr11sm",
+  "description": "LAMOST MRS Parameter Catalogue",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "V/162/dr11im",
+  "description": "LAMOST MRS Input Catalog",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "V/164/dr5",
+  "description": "LAMOST DR5 catalog (04/07/2019 version)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "VI/42/out",
+  "description": "Compute constellation name from position",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "VI/135/table15",
+  "description": "[Tycho2Fit.dat] Tycho2 catalog fit",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "VI/135/table16",
+  "description": "[DR7Fit.dat] DR7 stars to g<16 from http://www.sdss.org/dr7/",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "VI/145/attitude",
+  "description": "Gaia Attitude Star Catalog (ASC)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "VI/156/mdwarfp",
+  "description": "Input data and fitted properties for stars in our (updated version, 16-Oct-2020)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "B/denis/denis",
+  "description": "DENIS output",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "B/mk/mktypes",
+  "description": "The catalog of MK Spectral Types",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "B/assocdata/obscore",
+  "description": "VizieR Spectra, images gathered in a table",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/ApJ/867/105/refcat2",
+  "description": "ATLAS all-sky stellar reference catalog, ATLAS-REFCAT2",
+  "nrows": 3,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/ApJ/891/23/catalog",
+  "description": "LAMOST MRS Stellar Parameters and Chemical Abundances catalog",
+  "nrows": 3,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/ApJ/925/164/catalog",
+  "description": "Final sample",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/ApJ/984/58/table1",
+  "description": "Stellar Parameters Derived from XP Spectra",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/ApJS/235/16/targets",
+  "description": "List of targets; table added by CDS",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/ApJS/244/8/table1",
+  "description": "The M giant and M dwarf catalog",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/ApJS/244/27/lamostMRS",
+  "description": "The LAMOST medium-resolution radial velocities catalog (LAMOST MRS RV)",
+  "nrows": 3,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/ApJS/245/34/catalog",
+  "description": "The recommended catalog created by combining the result from the LAMOST-GALAH and the LAMOST-APOGEE training sets",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/ApJS/256/14/table4",
+  "description": "The 3.8 million RVs (v_obs_) obtained from LAMOST MRS DR7 (v1.1)",
+  "nrows": 3,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/ApJS/258/26/table4",
+  "description": "The 5 million binary probabilities and RVs obtained from the LAMOST MRS DR8 (v1.0)",
+  "nrows": 3,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/ApJS/260/45/tableb1",
+  "description": "Stellar parameters",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/ApJS/261/36/rrnetcat",
+  "description": "The LAMOST-RRNet catalog",
+  "nrows": 4,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/ApJS/266/40/catalog",
+  "description": "The LAMOST DR8 MRS stellar parameters and chemical abundances catalog",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/ApJS/274/36/mdwarfs",
+  "description": "Stellar parameters of M dwarf stars from LAMOST DR9 spectra (Table 1) and calculation parameters (Table 2)",
+  "nrows": 1,
+  "period_like_columns": [
+   "Per"
+  ],
+  "period_values": [
+   [
+    "--"
+   ]
+  ]
+ },
+ {
+  "table": "J/ApJS/276/44/table1",
+  "description": "Parameters of stellar atmospheres and chromospheric activity quantified based on medium-resolution spectra from LAMOST DR10 for 51451 sources",
+  "nrows": 4,
+  "period_like_columns": [
+   "Prot"
+  ],
+  "period_values": [
+   [
+    "--",
+    "--",
+    "--",
+    "--"
+   ]
+  ]
+ },
+ {
+  "table": "J/ApJS/276/57/table5",
+  "description": "TESS periodic variable star catalog",
+  "nrows": 1,
+  "period_like_columns": [
+   "Per"
+  ],
+  "period_values": [
+   [
+    "8.183827"
+   ]
+  ]
+ },
+ {
+  "table": "J/ApJS/281/52/table1",
+  "description": "Star parameters of TESS objects",
+  "nrows": 1,
+  "period_like_columns": [
+   "Period"
+  ],
+  "period_values": [
+   [
+    "7.97639"
+   ]
+  ]
+ },
+ {
+  "table": "J/ApJS/281/58/table9",
+  "description": "Catalog",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/ApJS/282/29/table1",
+  "description": "LAMOST DR11 low-resolution M-type star catalog",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/608/A148/origaia",
+  "description": "Gaia DR1 sources in the Orion field",
+  "nrows": 3,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/608/A148/x2mass",
+  "description": "Gaia DR1 sources cross-matched with the 2MASS catalogue, with separation < 1\"",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/629/A139/table3",
+  "description": "Catalogue of closest stars to the Sun within 50pc",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/638/A76/lamost",
+  "description": "LAMOST DR5 StarHorse",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/645/A100/40pclist",
+  "description": "Parameters and photometric classification for ultracool dwarfs and brown dwarfs within a 40pc sample",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/649/A6/table1c",
+  "description": "Selected objects",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/653/A98/aspic1_1",
+  "description": "All-sky PLATO input catalog (2675539 sources)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/657/A7/tablea3",
+  "description": "CPM candidate companions for Gaia stars within 100 pc",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/659/A95/sos",
+  "description": "The SoS I radial velocities",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/661/A29/tables",
+  "description": "Stellar parameters and distances (table 2), X-ray parameters (table 3) and X-ray activity and rotation (table 5) (updated version, 23/12/2024)",
+  "nrows": 1,
+  "period_like_columns": [
+   "Prot",
+   "f_Prot"
+  ],
+  "period_values": [
+   [
+    "--"
+   ],
+   [
+    "--"
+   ]
+  ]
+ },
+ {
+  "table": "J/A+A/665/A78/bkgev",
+  "description": "Events generated by the simulated background (eRASS1_mock_events_BKG.fits)",
+  "nrows": 2,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/669/A104/catalog",
+  "description": "Catalog (table A1)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/673/A155/lamostm7",
+  "description": "LAMOSTMRS DR7 StarHorse (corrected version)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/677/A137/catalog",
+  "description": "Gaia DR3 three-band photometric dispersions catalog",
+  "nrows": 1,
+  "period_like_columns": [
+   "SimPer"
+  ],
+  "period_values": [
+   [
+    ""
+   ]
+  ]
+ },
+ {
+  "table": "J/A+A/682/A34/erass1-m",
+  "description": "All extended X-ray sources and all point-like X-ray sources with detection likelihood >6, detected over a broad 0.2-2.3keV band",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/684/A29/extend",
+  "description": "Extended Catalogue",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/684/A121/like_ctp",
+  "description": "Likely coronal identifications of the eRASS1 main sources",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/692/A115/pristine_ca",
+  "description": "Photometry catalogue that includes both the synthetic CaHKsyn and the Pristine CaHK photometric information (table 1) (219194028 sources)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/692/A150/allskytg",
+  "description": "Entire sample, classified into thin disk, thick disk candidate, thick disk, halo candidate, and halo",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/704/A237/80pcbpok",
+  "description": "Data for the initial 99416 stars within 80 pc of beta Pictoris",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/704/A274/table1",
+  "description": "Stellar parameters of M dwarf stars from LAMOST DR10",
+  "nrows": 8,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/704/A344/dr1ls10",
+  "description": "Identification and characterization of the counterparts to the X-ray point sources in the eROSITA/DR1 main catalogue using the Legacy Survey DR10",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/704/A344/dr1ge3",
+  "description": "Identification and characterization of the counterparts to the X-ray point sources in the eROSITA/DR1 main catalogue using the Gaia DR3 survey",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/704/A344/dr1cw2020",
+  "description": "Identification and characterization of the counterparts to the X-ray point sources in the eROSITA/DR1 main catalogue using the CatWISE2020 survey",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/709/A180/table1",
+  "description": "Successful period determinations",
+  "nrows": 1,
+  "period_like_columns": [
+   "Period",
+   "e_Period"
+  ],
+  "period_values": [
+   [
+    "8.11056"
+   ],
+   [
+    "--"
+   ]
+  ]
+ },
+ {
+  "table": "J/A+A/711/A54/table1",
+  "description": "Gaia GSP-Spec catalogue of interstellar extinctions, and stellar luminosities, radii and masses",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/712/A171/erass3-m",
+  "description": "eROSITA/eRASS:3 main catalogue. X-ray sources detected in the 0.2>2.3keV band using eSASS adopting a detection likelihood threshold of 5",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/712/A171/dr2mc",
+  "description": "eROSITA/eRASS:3 main catalogue of identified counterparts using CatWISE2020 survey",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/712/A171/dr2mg",
+  "description": "eROSITA/eRASS:3 main catalogue of identified counterparts using GAIA DR3",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/A+A/712/A171/dr2ml",
+  "description": "eRASS:3 Main LS10 Counterparts catalogue",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/AJ/142/138/Mdwarfs",
+  "description": "Bright M dwarfs: designations, astrometry, photometry, photometric distances, and estimated subtypes (tables 1 and 2 of paper)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/AJ/155/39/table5",
+  "description": "Variability Upper Limits for Non-Variable Sources in the TESS Input Catalog",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/AJ/158/93/table2",
+  "description": "Results of our regression in Gaia DR2 (Cat. I/345)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/AJ/159/84/table2",
+  "description": "Results of our regression for Gaia DR2 (Cat. I/345) (1000 sources among 132,739,322)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/AJ/161/234/table2",
+  "description": "Best matches found in this study with a Bayesian probability greater than 95% for all cross matches in this study",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/AJ/161/234/table3",
+  "description": "All of the possible matches for the cross match between Gaia and 2MASS",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/AJ/161/234/table4",
+  "description": "All of the possible matches for the cross match between Gaia and AllWISE",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/AJ/161/234/table7",
+  "description": "All of the possible matches for the cross match between Gaia and SDSS DR12",
+  "nrows": 8,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/AJ/165/267/table1",
+  "description": "Photo-astrometric properties of main sequence stars within 120pc",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/AJ/167/139/t_hpic",
+  "description": "Habitable worlds observatory Preliminary Input Catalog (HPIC)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/AJ/171/17/mdw_dr1",
+  "description": "MDW catalog sources",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/PASP/137/J4402/list2025",
+  "description": "HWO Target Stars and Systems 2025 list (TSS25)",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/MNRAS/435/2161/table3",
+  "description": "The final bright M dwarf catalogue",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/MNRAS/463/4210/ucac4rpm",
+  "description": "UCAC4-RPM catalog v1.0",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/MNRAS/495/1252/table2",
+  "description": "The EWs of H{alpha} line for LAMOST DR6/DR7 medium-resolution spectra",
+  "nrows": 3,
+  "period_like_columns": [
+   "Prot"
+  ],
+  "period_values": [
+   [
+    "--",
+    "--",
+    "--"
+   ]
+  ]
+ },
+ {
+  "table": "J/MNRAS/495/1252/table3",
+  "description": "The EWs of the H{alpha} line for LAMOST DR5 low-resolution spectra",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/MNRAS/507/318/table2",
+  "description": "Catalogue with RGB magnitudes for ~15 million stars",
+  "nrows": 1,
+  "period_like_columns": []
+ },
+ {
+  "table": "J/MNRAS/522/29/table2",
+  "description": "Results for all TESS input targets",
+  "nrows": 1,
+  "period_like_columns": [
+   "Porb"
+  ],
+  "period_values": [
+   [
+    "4.570882"
+   ]
+  ]
+ }
+]

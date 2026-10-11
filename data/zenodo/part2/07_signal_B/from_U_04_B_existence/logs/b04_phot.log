@@ -1,0 +1,16 @@
+qlp       6+32     W1_manuscript        kept     obs 8.48 at P 11.132730  null med 2.97 p99 5.20 max 6.82  n>=obs 0/20000  FAP 5.00e-05  windows 8  beta [1.1 1. ]  (13s)
+    events: [(6, 1473.738, 813, 153), (6, 1484.871, 925, 157), (32, 2175.1, 628, 194), (32, 2186.233, None, None), (32, 2197.366, None, None)]
+qlp       6        W1_manuscript        kept     obs 8.00 at P 11.132698  null med 2.81 p99 6.08 max 6.19  n>=obs 0/20000  FAP 5.00e-05  windows 8  beta [1.1]  (6s)
+    events: [(6, 1473.746, 820, 157), (6, 1484.878, 932, 153)]
+sap       6+32     W1_manuscript        kept     obs 8.95 at P 11.132767  null med 2.99 p99 5.10 max 7.20  n>=obs 0/20000  FAP 5.00e-05  windows 8  beta [1.15 1.1 ]  (12s)
+    events: [(6, 1473.73, 657, 161), (6, 1484.863, 990, 161), (32, 2175.094, 810, 219), (32, 2186.227, None, None), (32, 2197.36, 912, 243)]
+sap       6        W1_manuscript        kept     obs 7.65 at P 11.132698  null med 3.05 p99 6.17 max 6.30  n>=obs 0/20000  FAP 5.00e-05  windows 8  beta [1.15]  (7s)
+    events: [(6, 1473.746, 763, 165), (6, 1484.878, 990, 161)]
+own05     6+32     W1_manuscript        kept     obs 7.86 at P 11.132698  null med 3.01 p99 4.99 max 6.71  n>=obs 0/20000  FAP 5.00e-05  windows 8  beta [1.12 1.04]  (14s)
+    events: [(6, 1473.746, 812, 186), (6, 1484.878, 957, 182), (32, 2175.106, 511, 208), (32, 2186.238, None, None), (32, 2197.371, 775, 227)]
+own05     6        W1_manuscript        kept     obs 6.81 at P 11.132698  null med 3.34 p99 5.90 max 6.15  n>=obs 0/20000  FAP 5.00e-05  windows 8  beta [1.12]  (6s)
+    events: [(6, 1473.746, 812, 186), (6, 1484.878, 957, 182)]
+eleanor   6        W1_manuscript        kept     obs 6.64 at P 11.132698  null med 2.77 p99 5.17 max 6.01  n>=obs 0/20000  FAP 5.00e-05  windows 8  beta [1.]  (7s)
+    events: [(6, 1473.746, 948, 192), (6, 1484.878, 835, 187)]
+tglc_aper 6        W1_manuscript        kept     obs 6.73 at P 11.132698  null med 3.22 p99 5.15 max 6.03  n>=obs 0/20000  FAP 5.00e-05  windows 8  beta [1.05]  (7s)
+    events: [(6, 1473.746, 949, 212), (6, 1484.878, 1043, 207)]

@@ -1,0 +1,79 @@
+{
+ "method": "R-S6 (a): is the S32 <-> S98 cycle count unique without Sector 6?  Light-curve level test.\n\nFor each cycle-count alias j (P_j = (T98 - T32)/(N0 + j) from s1), search T0 (+-40 min) and P (+-4e-5 d) around the alias\nand record the best detection statistic Delta-chi2 = chi2(no transit) - chi2(transit) of the fixed-shape, cadence-integrated\ntemplate on S32 (SPOC 2-min PDCSAP) + S98 (QLP SYS_RM_FLUX, scattered light removed), B cadences removed, one linear\nbaseline per +-0.3 d window (profiled), common depth > 0, per-sector sigma fixed (point-to-point MAD / sqrt 2).\n",
+ "sigma_ppm": {
+  "32": 842.283274819551,
+  "98": 630.7724397358984
+ },
+ "aliases": [
+  {
+   "j": -3,
+   "N": 574,
+   "P_alias": 3.1994172193142734,
+   "best_dchi2": 22.13981418254297,
+   "best_T0": 3998.636247210796,
+   "best_P": 3.1994472193142736,
+   "depth_ppm": 156.85604262206854,
+   "dchi2_below_true": 212.5207411087935
+  },
+  {
+   "j": -2,
+   "N": 575,
+   "P_alias": 3.1938530154545965,
+   "best_dchi2": 48.41827387572198,
+   "best_T0": 3998.6800577489244,
+   "best_P": 3.1938920154545967,
+   "depth_ppm": 231.69172799859774,
+   "dchi2_below_true": 186.24228141561449
+  },
+  {
+   "j": -1,
+   "N": 576,
+   "P_alias": 3.18830813174721,
+   "best_dchi2": 107.37237263538515,
+   "best_T0": 3998.691094157098,
+   "best_P": 3.18829513174721,
+   "depth_ppm": 341.4107979953293,
+   "dchi2_below_true": 127.28818265595132
+  },
+  {
+   "j": 0,
+   "N": 577,
+   "P_alias": 3.182782467740716,
+   "best_dchi2": 234.66055529133646,
+   "best_T0": 3998.736718249588,
+   "best_P": 3.1827844677407158,
+   "depth_ppm": 501.2868832304363,
+   "dchi2_below_true": 0.0
+  },
+  {
+   "j": 1,
+   "N": 578,
+   "P_alias": 3.177275923678881,
+   "best_dchi2": 173.64986876061292,
+   "best_T0": 3998.7613751691324,
+   "best_P": 3.1772459236788806,
+   "depth_ppm": 431.550784365088,
+   "dchi2_below_true": 61.01068653072355
+  },
+  {
+   "j": 2,
+   "N": 579,
+   "P_alias": 3.1717884004946337,
+   "best_dchi2": 68.05874615239284,
+   "best_T0": 3998.788676720311,
+   "best_P": 3.171748400494634,
+   "depth_ppm": 277.0910134657275,
+   "dchi2_below_true": 166.60180913894362
+  },
+  {
+   "j": 3,
+   "N": 580,
+   "P_alias": 3.1663197998041257,
+   "best_dchi2": 37.1699038199822,
+   "best_T0": 3998.8783458140333,
+   "best_P": 3.166355799804126,
+   "depth_ppm": 212.62055256355728,
+   "dchi2_below_true": 197.49065147135425
+  }
+ ]
+}

@@ -1,0 +1,129 @@
+{
+ "wotan_mask_test": {
+  "true_depth_ppm": 500,
+  "depth_masked_ppm": 548.9417962381004,
+  "depth_unmasked_ppm": 468.2808514548942
+ },
+ "variants": {
+  "S6_w0.5": {
+   "n": 975,
+   "sig_pp_ppm": 199.6,
+   "rms_oot_ppm": 200.1
+  },
+  "S6_w0.75": {
+   "n": 975,
+   "sig_pp_ppm": 199.5,
+   "rms_oot_ppm": 204.1
+  },
+  "S6_w1.0": {
+   "n": 975,
+   "sig_pp_ppm": 201.3,
+   "rms_oot_ppm": 207.4
+  },
+  "S32_w0.5": {
+   "n": 17094,
+   "sig_pp_ppm": 846.7,
+   "rms_oot_ppm": 845.4
+  },
+  "S32_w0.75": {
+   "n": 17094,
+   "sig_pp_ppm": 846.6,
+   "rms_oot_ppm": 851.9
+  },
+  "S32_w1.0": {
+   "n": 17094,
+   "sig_pp_ppm": 847.6,
+   "rms_oot_ppm": 857.8
+  },
+  "S32ffi_w0.5": {
+   "n": 3423,
+   "sig_pp_ppm": 404.4,
+   "rms_oot_ppm": 407.2
+  },
+  "S32ffi_w0.75": {
+   "n": 3423,
+   "sig_pp_ppm": 406.2,
+   "rms_oot_ppm": 410.9
+  },
+  "S32ffi_w1.0": {
+   "n": 3423,
+   "sig_pp_ppm": 404.3,
+   "rms_oot_ppm": 411.1
+  },
+  "S98_w0.5_clean_SYS_RM_FLUX": {
+   "n": 12067,
+   "sig_pp_ppm": 632.5,
+   "rms_oot_ppm": 615.7
+  },
+  "S98_w0.5_keepSL_SYS_RM_FLUX": {
+   "n": 18688,
+   "sig_pp_ppm": 661.0,
+   "rms_oot_ppm": 651.6
+  },
+  "S98_w0.5_no30_SYS_RM_FLUX": {
+   "n": 13467,
+   "sig_pp_ppm": 657.0,
+   "rms_oot_ppm": 639.3
+  },
+  "S98_w0.5_clean_SAP_FLUX": {
+   "n": 12067,
+   "sig_pp_ppm": 625.1,
+   "rms_oot_ppm": 618.4
+  },
+  "S98_w0.5_clean_DET_FLUX": {
+   "n": 12067,
+   "sig_pp_ppm": 631.9,
+   "rms_oot_ppm": 608.5
+  },
+  "S98_w0.75_clean_SYS_RM_FLUX": {
+   "n": 12067,
+   "sig_pp_ppm": 632.9,
+   "rms_oot_ppm": 621.3
+  },
+  "S98_w0.75_keepSL_SYS_RM_FLUX": {
+   "n": 18688,
+   "sig_pp_ppm": 660.0,
+   "rms_oot_ppm": 667.6
+  },
+  "S98_w0.75_no30_SYS_RM_FLUX": {
+   "n": 13467,
+   "sig_pp_ppm": 657.5,
+   "rms_oot_ppm": 651.9
+  },
+  "S98_w0.75_clean_SAP_FLUX": {
+   "n": 12067,
+   "sig_pp_ppm": 624.5,
+   "rms_oot_ppm": 624.6
+  },
+  "S98_w0.75_clean_DET_FLUX": {
+   "n": 12067,
+   "sig_pp_ppm": 632.9,
+   "rms_oot_ppm": 613.1
+  },
+  "S98_w1.0_clean_SYS_RM_FLUX": {
+   "n": 12067,
+   "sig_pp_ppm": 632.9,
+   "rms_oot_ppm": 622.4
+  },
+  "S98_w1.0_keepSL_SYS_RM_FLUX": {
+   "n": 18688,
+   "sig_pp_ppm": 661.2,
+   "rms_oot_ppm": 688.7
+  },
+  "S98_w1.0_no30_SYS_RM_FLUX": {
+   "n": 13467,
+   "sig_pp_ppm": 658.5,
+   "rms_oot_ppm": 654.9
+  },
+  "S98_w1.0_clean_SAP_FLUX": {
+   "n": 12067,
+   "sig_pp_ppm": 625.2,
+   "rms_oot_ppm": 627.7
+  },
+  "S98_w1.0_clean_DET_FLUX": {
+   "n": 12067,
+   "sig_pp_ppm": 631.9,
+   "rms_oot_ppm": 608.5
+  }
+ }
+}

@@ -1,0 +1,25 @@
+Fri Sep 25 13:44:21 UTC 2026
+b26efbf3bfed43df8ebb722d12a09ef871bb06e5
+In preparation for Gaia DR4, the Gaia archive is in evolution. Unfortunately, it may be unstable at times and particular types of queries may time out. Please consider registering for a user account (https://www.cosmos.esa.int/web/gaia-users/register). For questions or advice, please contact the Gaia helpdesk (https://www.cosmos.esa.int/web/gaia/gaia-helpdesk).
+Star RA: 05h23m26.36s
+Star DEC: -01d19m38.2s
+Star Mass: 0.606
+Generating Companions..
+Generation Mass Ratio Exponent:  0.0
+Companions Generated
+Number of companions: 1000000
+Analyzing RUWE...
+The star has ln(ruwe) of 0.194167.
+Analyzing Gaia Contrast...
+LOADING STELLAR MODEL...
+Calculated distance to star: 36 pc
+Gaia Contrast Loaded
+Star Model Mag 7.9691519463439375
+Total number of surviving binaries: 429363
+Surviving binary parameters saved to: /private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/r5_cache/r5_kept.csv
+Generated binary parameters saved to: /private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/r5_cache/r5_all.csv
+Fri Sep 25 13:48:36 UTC 2026
+a5b68afa8c60e4279941107d7030b736f5106ac972fec33a741089d77eefe843  /private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/r5_cache/r5_kept.csv
+f5146af53c0d64432ab12016d75ed0c6b9a8d73ca0544121e0856909525056bb  /private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/r5_cache/r5_all.csv
+R5_MOLUSC_DONE
+# trimmed: removed  2022233-line scipy interp2d deprecation spam (lines matching legacy/scattered/details see/pred_*)

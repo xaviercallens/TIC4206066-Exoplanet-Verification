@@ -1,0 +1,8 @@
+S32_tpf A raw 8 [ 9.3 -8.4] bootSD [11.9 11.2] ref-wcs px [0.015 0.031]
+S32_tpf A pc 8 [5.1 0.2] bootSD [3.1 4.4] ref-wcs px [0.015 0.031]
+S32_tpf B raw 1 [ 10.1 -63.7] bootSD [0. 0.] ref-wcs px [0.015 0.031]
+S32_tpf B pc 1 [-2.9  0.6] bootSD [0. 0.] ref-wcs px [0.015 0.031]
+S98_ffi A raw 9 [ 5.4 -0.2] bootSD [11.9  4. ] ref-wcs px [ 0.019 -0.018]
+S98_ffi A pc 9 [ 5.4 -0.2] bootSD [11.9  4. ] ref-wcs px [ 0.019 -0.018]
+S98_ffi B raw 3 [ 1.2 -0.8] bootSD [3.1 2.9] ref-wcs px [ 0.019 -0.018]
+S98 A drop3995.555 9 [ 5.4 -0.2] [11.9  4. ]

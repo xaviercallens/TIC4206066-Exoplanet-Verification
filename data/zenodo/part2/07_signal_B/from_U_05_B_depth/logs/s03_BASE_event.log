@@ -1,0 +1,4 @@
+S6 S6_tessspoc_pdc: n=400 bias=-7 sdD=161 med eD=146 kappa=1.09 (robust 1.11, bs 0.04) kappa_ev=1.09 sd_ev_full=158.9940609996137 nev={'1': 400} t=2s
+S32 S32_spoc2m_pdc: n=400 bias=-24 sdD=268 med eD=153 kappa=1.64 (robust 1.49, bs 0.09) kappa_ev=1.64 sd_ev_full=246.71668724807054 nev={'1': 400} t=131s
+S98 S98_qlp_sysrm: n=400 bias=-8 sdD=166 med eD=144 kappa=1.07 (robust 1.02, bs 0.04) kappa_ev=1.07 sd_ev_full=154.3258192127427 nev={'1': 400} t=186s
+done 186.24921488761902

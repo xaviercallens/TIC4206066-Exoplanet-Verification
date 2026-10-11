@@ -1,0 +1,5 @@
+/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/06_stellar/q01_fetch.py:27: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  rec = dict(file=str(Path(fn).name), service=service, query=query, utc=dt.datetime.utcnow().isoformat() + "Z",
+WARNING: UnitsWarning: The unit 'angstrom' has been deprecated in the VOUnit standard. Suggested: 0.1nm. [astropy.units.format.base]
+/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/06_stellar/q01_fetch.py:27: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  rec = dict(file=str(Path(fn).name), service=service, query=query, utc=dt.datetime.utcnow().isoformat() + "Z",

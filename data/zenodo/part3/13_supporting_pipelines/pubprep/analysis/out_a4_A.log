@@ -1,0 +1,16 @@
+In preparation for Gaia DR4, the Gaia archive is in evolution. Unfortunately, it may be unstable at times and particular types of queries may time out. Please consider registering for a user account (https://www.cosmos.esa.int/web/gaia-users/register). For questions or advice, please contact the Gaia helpdesk (https://www.cosmos.esa.int/web/gaia/gaia-helpdesk).
+Getting TessCut for sector 6
+Getting TessCut for sector 32
+Getting TessCut for sector 98
+Estimated missing stellar parameters for 70 of 121 stars from photometry. See the 'params_estimated' column of the .stars dataframe. 2 appear evolved and were assigned a nominal 1 M_Sun.
+A 0 FPP=0.03414 NFPP=2.6e-13
+A 1 FPP=0.0293 NFPP=2.21e-13
+A 2 FPP=0.04076 NFPP=2.43e-13
+A 3 FPP=0.04473 NFPP=2.45e-13
+A 4 FPP=0.03165 NFPP=2.53e-13
+A 5 FPP=0.0286 NFPP=2.51e-13
+A 6 FPP=0.03305 NFPP=2.27e-13
+A 7 FPP=0.03818 NFPP=2.29e-13
+A 8 FPP=0.02935 NFPP=2.11e-13
+A 9 FPP=0.033 NFPP=2.26e-13
+DONE A 0.03427650270867494 0.005352611653089429

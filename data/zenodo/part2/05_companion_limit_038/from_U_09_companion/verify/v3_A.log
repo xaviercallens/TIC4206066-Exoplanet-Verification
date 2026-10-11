@@ -1,0 +1,20 @@
+6 180 sigma ppm 208
+32 3831 sigma ppm 814
+98 2530 sigma ppm 615
+{'signal': 'A', 'target_free': {'chi2': np.float64(6903.932579640612), 'k': 0.01984516977358517, 'b': 1.7069823740591528e-05, 'rho': 3.1824895594140155}, 'target_rho_max_dchi2_4': 3.604226232807329}
+{'M': 0.1, 'R': 0.124, 'rho': 51.877, 'fh': 0.008, 'dchi2_circ': np.float64(184.123), 'b_circ': 0.0, 'k_circ': 0.239, 'dchi2_free': np.float64(8.563), 'rho_app': 3.199}
+{'M': 0.14, 'R': 0.169, 'rho': 28.76, 'fh': 0.02, 'dchi2_circ': np.float64(157.629), 'b_circ': 0.0, 'k_circ': 0.147, 'dchi2_free': np.float64(3.771), 'rho_app': 3.241}
+{'M': 0.17, 'R': 0.201, 'rho': 20.965, 'fh': 0.034, 'dchi2_circ': np.float64(142.484), 'b_circ': 0.0, 'k_circ': 0.111, 'dchi2_free': np.float64(1.851), 'rho_app': 3.241}
+{'M': 0.2, 'R': 0.23, 'rho': 16.368, 'fh': 0.052, 'dchi2_circ': np.float64(127.866), 'b_circ': 0.0, 'k_circ': 0.089, 'dchi2_free': np.float64(0.95), 'rho_app': 3.26}
+{'M': 0.26, 'R': 0.285, 'rho': 11.2, 'fh': 0.095, 'dchi2_circ': np.float64(100.107), 'b_circ': 0.0, 'k_circ': 0.066, 'dchi2_free': np.float64(-0.041), 'rho_app': 3.278}
+{'M': 0.3, 'R': 0.32, 'rho': 9.128, 'fh': 0.125, 'dchi2_circ': np.float64(81.158), 'b_circ': 0.0, 'k_circ': 0.058, 'dchi2_free': np.float64(-0.363), 'rho_app': 3.261}
+{'M': 0.37, 'R': 0.381, 'rho': 6.687, 'fh': 0.176, 'dchi2_circ': np.float64(53.487), 'b_circ': 0.0, 'k_circ': 0.049, 'dchi2_free': np.float64(-0.629), 'rho_app': 3.233}
+{'M': 0.38, 'R': 0.39, 'rho': 6.414, 'fh': 0.183, 'dchi2_circ': np.float64(49.883), 'b_circ': 0.0, 'k_circ': 0.048, 'dchi2_free': np.float64(-0.653), 'rho_app': 3.232}
+{'M': 0.44, 'R': 0.444, 'rho': 5.03, 'fh': 0.233, 'dchi2_circ': np.float64(30.476), 'b_circ': 0.0, 'k_circ': 0.042, 'dchi2_free': np.float64(-0.775), 'rho_app': 3.213}
+{'M': 0.48, 'R': 0.482, 'rho': 4.285, 'fh': 0.276, 'dchi2_circ': np.float64(14.665), 'b_circ': 0.0, 'k_circ': 0.039, 'dchi2_free': np.float64(-0.859), 'rho_app': 3.199}
+{'M': 0.5, 'R': 0.502, 'rho': 3.952, 'fh': 0.301, 'dchi2_circ': np.float64(8.259), 'b_circ': 0.0, 'k_circ': 0.037, 'dchi2_free': np.float64(-0.493), 'rho_app': 3.186}
+{'M': 0.52, 'R': 0.523, 'rho': 3.64, 'fh': 0.329, 'dchi2_circ': np.float64(3.181), 'b_circ': 0.0, 'k_circ': 0.035, 'dchi2_free': np.float64(-0.537), 'rho_app': 3.183}
+{'M': 0.53, 'R': 0.533, 'rho': 3.492, 'fh': 0.345, 'dchi2_circ': np.float64(1.314), 'b_circ': 0.0, 'k_circ': 0.034, 'dchi2_free': np.float64(-0.557), 'rho_app': 3.185}
+{'M': 0.54, 'R': 0.544, 'rho': 3.349, 'fh': 0.362, 'dchi2_circ': np.float64(0.023), 'b_circ': 0.0, 'k_circ': 0.033, 'dchi2_free': np.float64(-0.577), 'rho_app': 3.188}
+{'M': 0.56, 'R': 0.567, 'rho': 3.075, 'fh': 0.398, 'dchi2_circ': np.float64(-0.567), 'b_circ': 0.151, 'k_circ': 0.032, 'dchi2_free': np.float64(-0.617), 'rho_app': 3.191}
+{'M': 0.606, 'R': 0.623, 'rho': 2.51, 'fh': 0.5, 'dchi2_circ': np.float64(0.286), 'b_circ': 0.381, 'k_circ': 0.029, 'dchi2_free': np.float64(0.099), 'rho_app': 3.193}

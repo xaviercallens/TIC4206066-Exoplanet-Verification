@@ -1,0 +1,3112 @@
+{
+ "summary": {
+  "rows": 135,
+  "not_a_fact": 20,
+  "meta": 2,
+  "literature": 1,
+  "threshold": 1,
+  "placeholder": 1,
+  "bound_rows": 8,
+  "ok": 108,
+  "wording_only": 2,
+  "gaps": 0,
+  "ok_via_mapped_evidence": 104,
+  "method": "Coverage check: does every number printed in the Note have a package file that contains it?\n\nFor each row of MANUSCRIPT_NUMBER_AUDIT.csv (via 12_facts/NOTE_NUMBER_MAP.csv):\n  1. extract the numeric tokens of the printed text;\n  2. candidate files = package files mapped from the fact's evidence/rerun paths (files, directories, globs);\n  3. a token is 'found' in a file if the file contains a number that rounds to it at the printed precision\n     (integers with trailing zeros: tolerance 0.5*10^zeros; x.y: 0.5 in the last printed digit; a.bE-n: 0.5 in the\n     last mantissa digit; percentages also tried as fractions). BOUND: a printed upper limit ('<~1%', 'K<1.2',\n     'NFPP<1e-6') is accepted when the file holds the bounded value itself, in (x/10, 1.05 x] (e.g. 0.00606 for '<~1%');\n  4. if not found in the mapped evidence, search the other copied (non-curated) text files of the fact's own section folder;\n     META rows (acknowledgment) and the literature validation thresholds are classified, not searched;\n  5. curated tables / FINAL_FACTS are reported separately (they restate values; they do not count as evidence).\nWrites OUT/_work/zenodo_build/coverage_check.json."
+ },
+ "gaps": [],
+ "rows": [
+  {
+   "row": 1,
+   "location": "Title",
+   "printed_text": "TIC 4206066",
+   "fact_id": "STAR.identifiers",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "05_companion_limit_038/from_U_06_stellar/data/simbad_ids_StKM1-561.ecsv",
+   "key": "(8 ids)",
+   "numbers": [
+    {
+     "number": "4206066",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_06_stellar/data/simbad_ids_StKM1-561.ecsv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 2,
+   "location": "Title",
+   "printed_text": "Two Transit-like Signals",
+   "fact_id": "DATA.search.MES_A",
+   "match": "EXACT",
+   "status": "NO_NUMBER (wording)",
+   "package_file": "13_supporting_pipelines/U_10_novelty_protocol/leo_rerun.json",
+   "key": "",
+   "numbers": [],
+   "n_mapped_evidence_files": 1
+  },
+  {
+   "row": 3,
+   "location": "Abstract",
+   "printed_text": "TIC 4206066 (StKM 1-561)",
+   "fact_id": "STAR.identifiers",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "05_companion_limit_038/from_U_06_stellar/data/simbad_ids_StKM1-561.ecsv",
+   "key": "(8 ids)",
+   "numbers": [
+    {
+     "number": "4206066",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_06_stellar/data/simbad_ids_StKM1-561.ecsv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "1",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_06_stellar/data/simbad_ids_StKM1-561.ecsv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "561",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_06_stellar/data/simbad_ids_StKM1-561.ecsv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 4,
+   "location": "Abstract",
+   "printed_text": "two transit-like signals",
+   "fact_id": "DATA.search.MES_A",
+   "match": "EXACT",
+   "status": "NO_NUMBER (wording)",
+   "package_file": "13_supporting_pipelines/U_10_novelty_protocol/leo_rerun.json",
+   "key": "",
+   "numbers": [],
+   "n_mapped_evidence_files": 1
+  },
+  {
+   "row": 5,
+   "location": "Abstract",
+   "printed_text": "Sector 98",
+   "fact_id": "DATA.sectors",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "02_transits_A/from_U_01_ephemeris_A/out_s13_s110.json",
+   "key": "tesspoint_internal",
+   "numbers": [
+    {
+     "number": "98",
+     "in_mapped_evidence": "02_transits_A/from_U_01_ephemeris_A/out_s13_s110.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 6,
+   "location": "Abstract",
+   "printed_text": "Sectors 6 and 32",
+   "fact_id": "DATA.sectors",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "02_transits_A/from_U_01_ephemeris_A/out_s13_s110.json",
+   "key": "tesspoint_internal",
+   "numbers": [
+    {
+     "number": "6",
+     "in_mapped_evidence": "02_transits_A/from_U_01_ephemeris_A/out_s13_s110.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "32",
+     "in_mapped_evidence": "02_transits_A/from_U_01_ephemeris_A/out_s13_s110.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 7,
+   "location": "Abstract",
+   "printed_text": "3.18 d",
+   "fact_id": "A.P",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+   "key": "ephem.drop_onesided_573_and_m1_R60 (P 3.18278495, eP 5.66e-6",
+   "numbers": [
+    {
+     "number": "3.18",
+     "in_mapped_evidence": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 8,
+   "location": "Abstract",
+   "printed_text": "23 transits",
+   "fact_id": "A.N_all",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "02_transits_A/from_U_01_ephemeris_A/out_s03_epochs.csv",
+   "key": "rows 2-34",
+   "numbers": [
+    {
+     "number": "23",
+     "in_mapped_evidence": "02_transits_A/from_U_01_ephemeris_A/out_s11_cycle_count.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 4
+  },
+  {
+   "row": 9,
+   "location": "Abstract",
+   "printed_text": "~500 ppm",
+   "fact_id": "A.depth_combined",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "02_transits_A/from_T2_A_shape/out/r01_depths.json",
+   "key": "audit_s09_beta_excl98e-1.combined_all_events = 497.6 +- 29.4",
+   "numbers": [
+    {
+     "number": "500",
+     "in_mapped_evidence": "02_transits_A/from_T2_A_shape/out/r01_depths.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 10,
+   "location": "Abstract",
+   "printed_text": "1.4 +- 0.1 R_E",
+   "fact_id": "A.Rp",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "02_transits_A/from_T2_A_shape/out/r03_derived.json",
+   "key": "Rp_k0.0204_0.0010 = [1.385, 0.080], Rp_k0.0195 = 1.324, Rp_k0.02116 = 1.437",
+   "numbers": [
+    {
+     "number": "1.4",
+     "in_mapped_evidence": "02_transits_A/from_T2_A_shape/out/r03_derived.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "0.1",
+     "in_mapped_evidence": "02_transits_A/from_T2_A_shape/out/r03_derived.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 1
+  },
+  {
+   "row": 11,
+   "location": "Abstract",
+   "printed_text": "0.15-0.38 Msun",
+   "fact_id": "FP.remaining_scenario_A",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "04_fpp/from_T4_fpp_companion/t4_06_eb_totals.json",
+   "key": "",
+   "numbers": [
+    {
+     "number": "0.15",
+     "in_mapped_evidence": "04_fpp/from_T4_fpp_companion/t4_06_eb_totals.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "0.38",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_referee_resolve_R4/out/r4_summary.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 4
+  },
+  {
+   "row": 12,
+   "location": "Abstract",
+   "printed_text": "FPP = 0.03-0.04",
+   "fact_id": "FPP.A_default",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "04_fpp/from_T4_fpp_companion/t4_01_fpp_run_census.csv",
+   "key": "",
+   "numbers": [
+    {
+     "number": "0.03",
+     "in_mapped_evidence": "04_fpp/from_T4_fpp_companion/t4_01_fpp_run_census.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "0.04",
+     "in_mapped_evidence": "04_fpp/from_T4_fpp_companion/t4_01_fpp_run_census.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 10
+  },
+  {
+   "row": 13,
+   "location": "Abstract",
+   "printed_text": "11.13 d",
+   "fact_id": "B.P",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "07_signal_B/from_U_04_B_existence/out/b08_ephem.json",
+   "key": "ephemerides['S6x2 + S98(0,1) [manuscript-like, 4 events]'].P=11.1327392+-1.49e-5 and ['S6x2 + S32x2 + S98(0,1,4)'].P=11.1327506+-1.67e-5",
+   "numbers": [
+    {
+     "number": "11.13",
+     "in_mapped_evidence": "07_signal_B/from_U_04_B_existence/out/b08_ephem.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 5
+  },
+  {
+   "row": 14,
+   "location": "Abstract",
+   "printed_text": "~2.2 R_E",
+   "fact_id": "B.Rp_on_target",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "13_supporting_pipelines/PUBLICATION_AUDIT/FINAL_PARAMETERS.json",
+   "key": "signal_B.shape_mann_prior.Rp_Rearth",
+   "numbers": [
+    {
+     "number": "2.2",
+     "in_mapped_evidence": "13_supporting_pipelines/PUBLICATION_AUDIT/FINAL_PARAMETERS.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 15,
+   "location": "Abstract",
+   "printed_text": "~3 sigma",
+   "fact_id": "B.significance",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "13_supporting_pipelines/pubprep/analysis/out/a3_signalB.json",
+   "key": "T1_link[0] (obs 10.03, n_null_ge_obs 19, fap 0.0019998, null_max 10.77)",
+   "numbers": [
+    {
+     "number": "3",
+     "in_mapped_evidence": "13_supporting_pipelines/pubprep/analysis/out/a3_signalB.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 6
+  },
+  {
+   "row": 16,
+   "location": "Sec1",
+   "printed_text": "TIC 4206066 (Gaia DR3 3220388198192519424",
+   "fact_id": "STAR.identifiers",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "05_companion_limit_038/from_U_06_stellar/data/simbad_ids_StKM1-561.ecsv",
+   "key": "(8 ids)",
+   "numbers": [
+    {
+     "number": "4206066",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_06_stellar/data/simbad_ids_StKM1-561.ecsv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "3",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_06_stellar/data/tic82.ecsv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "3220388198192519424",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_06_stellar/data/simbad_ids_StKM1-561.ecsv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 17,
+   "location": "Sec1",
+   "printed_text": "T = 9.68",
+   "fact_id": "STAR.Tmag",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "05_companion_limit_038/from_U_06_stellar/data/tic82.ecsv",
+   "key": "Tmag, e_Tmag",
+   "numbers": [
+    {
+     "number": "9.68",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_06_stellar/data/tic82.ecsv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 18,
+   "location": "Sec1",
+   "printed_text": "35.6 pc",
+   "fact_id": "STAR.distance",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "09_star/from_T6_star/out/t6_05_parallax_zp.json",
+   "key": "d_corrected_pc, d_err_stat",
+   "numbers": [
+    {
+     "number": "35.6",
+     "in_mapped_evidence": "09_star/from_T6_star/out/t6_05_parallax_zp.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 19,
+   "location": "Sec1",
+   "printed_text": "(Gaia Collaboration et al. 2016; 2023)",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 20,
+   "location": "Sec1",
+   "printed_text": "M_Ks = 4.94",
+   "fact_id": "STAR.M_Ks",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "05_companion_limit_038/from_U_06_stellar/out/s01_relations.json",
+   "key": "MK.MK_zpcorr_plx=4.93817, MK.sigma_total=0.02906",
+   "numbers": [
+    {
+     "number": "4.94",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_06_stellar/out/s01_relations.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 21,
+   "location": "Sec1",
+   "printed_text": "Mann et al. (2015, 2019)",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 22,
+   "location": "Sec1",
+   "printed_text": "R* = 0.623 +- 0.019 Rsun",
+   "fact_id": "STAR.R",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "05_companion_limit_038/from_U_06_stellar/out/s01_relations.json",
+   "key": "radius_mann2015.MC_scatter_plus_inputs (0.62292 +0.01881/-0.01878)",
+   "numbers": [
+    {
+     "number": "0.623",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_06_stellar/out/s01_relations.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "0.019",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_06_stellar/out/s01_relations.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 23,
+   "location": "Sec1",
+   "printed_text": "M* = 0.606 +- 0.015 Msun",
+   "fact_id": "STAR.M",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "05_companion_limit_038/from_U_06_stellar/out/s01_relations.json",
+   "key": "mass_mann2019.table6_plus_table7_2.4pct_MC (0.60621 +- 0.01514)",
+   "numbers": [
+    {
+     "number": "0.606",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_06_stellar/out/s01_relations.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "0.015",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_06_stellar/out/s01_relations.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 24,
+   "location": "Sec1",
+   "printed_text": "rho* = 2.51 +0.25/-0.22 rho_sun",
+   "fact_id": "STAR.rho",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "09_star/from_T6_star/out/t6_04_density_mc.json",
+   "key": "",
+   "numbers": [
+    {
+     "number": "2.51",
+     "in_mapped_evidence": "09_star/from_T6_star/out/t6_04_density_mc.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "0.25",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_06_stellar/out/s01_relations.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "0.22",
+     "in_mapped_evidence": "09_star/from_T6_star/out/t6_04_density_mc.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 25,
+   "location": "Sec1",
+   "printed_text": "(Vines & Jenkins 2022)",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 26,
+   "location": "Sec1",
+   "printed_text": "Sector 98",
+   "fact_id": "DATA.sectors",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "02_transits_A/from_U_01_ephemeris_A/out_s13_s110.json",
+   "key": "tesspoint_internal",
+   "numbers": [
+    {
+     "number": "98",
+     "in_mapped_evidence": "02_transits_A/from_U_01_ephemeris_A/out_s13_s110.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 27,
+   "location": "Sec1",
+   "printed_text": "(Huang et al. 2020)",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 28,
+   "location": "Sec1",
+   "printed_text": "126,246 stars",
+   "fact_id": "DATA.search.n_stars",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "13_supporting_pipelines/U_10_novelty_protocol/tic_recount.json",
+   "key": "n_tmag_le_11p5",
+   "numbers": [
+    {
+     "number": "126246",
+     "in_mapped_evidence": "13_supporting_pipelines/U_10_novelty_protocol/tic_recount.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 29,
+   "location": "Sec1",
+   "printed_text": "(T <= 11.5)",
+   "fact_id": "DATA.search.n_stars",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "13_supporting_pipelines/U_10_novelty_protocol/tic_recount.json",
+   "key": "n_tmag_le_11p5",
+   "numbers": [
+    {
+     "number": "11.5",
+     "in_mapped_evidence": "13_supporting_pipelines/U_10_novelty_protocol/tic_recount.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "bound",
+     "check_type": "BOUND"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 30,
+   "location": "Sec1",
+   "printed_text": "(Kovacs et al. 2002)",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 31,
+   "location": "Sec1",
+   "printed_text": "(Kunimoto et al. 2025)",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 32,
+   "location": "Sec1",
+   "printed_text": "10.6, 11.0",
+   "fact_id": "DATA.search.MES_A",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "13_supporting_pipelines/U_10_novelty_protocol/leo_rerun.json",
+   "key": "",
+   "numbers": [
+    {
+     "number": "10.6",
+     "in_mapped_evidence": "13_supporting_pipelines/U_10_novelty_protocol/leo_rerun.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "11.0",
+     "in_mapped_evidence": "13_supporting_pipelines/U_10_novelty_protocol/leo_rerun.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 1
+  },
+  {
+   "row": 33,
+   "location": "Sec1",
+   "printed_text": "15",
+   "fact_id": "DATA.search.shortlist",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "13_supporting_pipelines/U_10_novelty_protocol/search_protocol_extract.json",
+   "key": "(shortlist_v1.1, amendment_01)",
+   "numbers": [
+    {
+     "number": "15",
+     "in_mapped_evidence": "13_supporting_pipelines/U_10_novelty_protocol/search_protocol_extract.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 1
+  },
+  {
+   "row": 34,
+   "location": "Sec1",
+   "printed_text": "(Ricker et al. 2015)",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 35,
+   "location": "Sec1",
+   "printed_text": "Sector 6, 30 min PDCSAP",
+   "fact_id": "DATA.products.S6",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "01_inputs/from_U_00_data/README.md",
+   "key": "section 2 table",
+   "numbers": [
+    {
+     "number": "6",
+     "in_mapped_evidence": "01_inputs/from_U_00_data/README.md",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "30",
+     "in_mapped_evidence": "01_inputs/from_U_00_data/README.md",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 36,
+   "location": "Sec1",
+   "printed_text": "Caldwell et al. 2020",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 37,
+   "location": "Sec1",
+   "printed_text": "Sector 32, 2 min",
+   "fact_id": "DATA.products.S32",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "01_inputs/from_U_00_data/README.md",
+   "key": "section 2 table",
+   "numbers": [
+    {
+     "number": "32",
+     "in_mapped_evidence": "01_inputs/from_U_00_data/README.md",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "2",
+     "in_mapped_evidence": "01_inputs/from_U_00_data/README.md",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 38,
+   "location": "Sec1",
+   "printed_text": "Jenkins et al. 2016",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 39,
+   "location": "Sec1",
+   "printed_text": "Sector 98, 200 s",
+   "fact_id": "DATA.products.S98_cadence",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "07_signal_B/from_T7_data_future/s98_quality_bits.json",
+   "key": "TIMEDEL_s, median_dt_s",
+   "numbers": [
+    {
+     "number": "98",
+     "in_mapped_evidence": "01_inputs/retrieval_logs/fits_headers.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "200",
+     "in_mapped_evidence": "07_signal_B/from_T7_data_future/s98_quality_bits.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 40,
+   "location": "Sec1",
+   "printed_text": "Han & Brandt 2023; Petitpas et al. 2026",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 41,
+   "location": "Sec1",
+   "printed_text": "Sector 98",
+   "fact_id": "DATA.products.S98_quality",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "07_signal_B/from_T7_data_future/s98_quality_bits.json",
+   "key": "",
+   "numbers": [
+    {
+     "number": "98",
+     "in_mapped_evidence": "02_transits_A/from_U_01_ephemeris_A/a_common.py",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 42,
+   "location": "Sec2",
+   "printed_text": "3.18 Day",
+   "fact_id": "A.P",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+   "key": "ephem.drop_onesided_573_and_m1_R60 (P 3.18278495, eP 5.66e-6",
+   "numbers": [
+    {
+     "number": "3.18",
+     "in_mapped_evidence": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 43,
+   "location": "Sec2",
+   "printed_text": "(Kreidberg 2015)",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 44,
+   "location": "Sec2",
+   "printed_text": "P = 3.182785 +- 0.000006 d",
+   "fact_id": "A.P",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+   "key": "ephem.drop_onesided_573_and_m1_R60 (P 3.18278495, eP 5.66e-6",
+   "numbers": [
+    {
+     "number": "3.182785",
+     "in_mapped_evidence": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "0.000006",
+     "in_mapped_evidence": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 45,
+   "location": "Sec2",
+   "printed_text": "T0 = 2460998.736 +- 0.003 BJD_TDB",
+   "fact_id": "A.T0",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+   "key": "ephem.drop_onesided_573_and_m1_R60 (T0 2460998.735992, eT0 0.002883)",
+   "numbers": [
+    {
+     "number": "0",
+     "in_mapped_evidence": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "2460998.736",
+     "in_mapped_evidence": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "0.003",
+     "in_mapped_evidence": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 46,
+   "location": "Sec2",
+   "printed_text": "19 transits",
+   "fact_id": "A.N_timing",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "02_transits_A/from_U_02_timing_A/verify/v4_ephem.py",
+   "key": "L33-36 (set 'two')",
+   "numbers": [
+    {
+     "number": "19",
+     "in_mapped_evidence": "02_transits_A/from_T1_A_timing/r1_ephemerides.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 47,
+   "location": "Sec2",
+   "printed_text": ">=70% coverage",
+   "fact_id": "A.N_timing",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "02_transits_A/from_U_02_timing_A/verify/v4_ephem.py",
+   "key": "L33-36 (set 'two')",
+   "numbers": [
+    {
+     "number": "70%",
+     "in_mapped_evidence": "02_transits_A/from_U_02_timing_A/verify/v4_ephem.py",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "label",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 48,
+   "location": "Sec2",
+   "printed_text": "S/N >= 2",
+   "fact_id": "A.N_timing",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "02_transits_A/from_U_02_timing_A/verify/v4_ephem.py",
+   "key": "L33-36 (set 'two')",
+   "numbers": [
+    {
+     "number": "2",
+     "in_mapped_evidence": "02_transits_A/from_U_02_timing_A/verify/v4_ephem.py",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 49,
+   "location": "Sec2",
+   "printed_text": ">=15 min of post-egress data",
+   "fact_id": "A.N_timing",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "02_transits_A/from_U_02_timing_A/verify/v4_ephem.py",
+   "key": "L33-36 (set 'two')",
+   "numbers": [
+    {
+     "number": "15",
+     "in_mapped_evidence": "02_transits_A/from_T1_A_timing/r1_ephemerides.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 50,
+   "location": "Sec2",
+   "printed_text": "chi2/dof ~ 9.5/17",
+   "fact_id": "A.timing_chi2",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+   "key": "ephem.drop_onesided_573_and_m1_R60.chi2=9.51, _R144.chi2=8.51",
+   "numbers": [
+    {
+     "number": "2",
+     "in_mapped_evidence": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "9.5",
+     "in_mapped_evidence": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "17",
+     "in_mapped_evidence": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 51,
+   "location": "Sec2",
+   "printed_text": "(Foreman-Mackey et al. 2013)",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 52,
+   "location": "Sec2",
+   "printed_text": "23 transits",
+   "fact_id": "A.N_all",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "02_transits_A/from_U_01_ephemeris_A/out_s03_epochs.csv",
+   "key": "rows 2-34",
+   "numbers": [
+    {
+     "number": "23",
+     "in_mapped_evidence": "02_transits_A/from_U_01_ephemeris_A/out_s11_cycle_count.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 4
+  },
+  {
+   "row": 53,
+   "location": "Sec2",
+   "printed_text": "Claret 2017",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 54,
+   "location": "Sec2",
+   "printed_text": "b = 0.35 +0.10/-0.14",
+   "fact_id": "A.b",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "13_supporting_pipelines/PUBLICATION_AUDIT/FINAL_PARAMETERS.json",
+   "key": "signal_A.shape_mann_prior.b (0.346 +0.096/-0.139)",
+   "numbers": [
+    {
+     "number": "0.35",
+     "in_mapped_evidence": "13_supporting_pipelines/PUBLICATION_AUDIT/FINAL_PARAMETERS.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "0.10",
+     "in_mapped_evidence": "13_supporting_pipelines/PUBLICATION_AUDIT/FINAL_PARAMETERS.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "0.14",
+     "in_mapped_evidence": "13_supporting_pipelines/PUBLICATION_AUDIT/FINAL_PARAMETERS.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 55,
+   "location": "Sec2",
+   "printed_text": "T14 = 1.87 +- 0.05 h",
+   "fact_id": "A.T14",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "13_supporting_pipelines/PUBLICATION_AUDIT/FINAL_PARAMETERS.json",
+   "key": "signal_A.shape_mann_prior.T14_h 1.874 +0.048/-0.047",
+   "numbers": [
+    {
+     "number": "14",
+     "in_mapped_evidence": "13_supporting_pipelines/PUBLICATION_AUDIT/FINAL_PARAMETERS.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "1.87",
+     "in_mapped_evidence": "13_supporting_pipelines/PUBLICATION_AUDIT/FINAL_PARAMETERS.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "0.05",
+     "in_mapped_evidence": "13_supporting_pipelines/PUBLICATION_AUDIT/FINAL_PARAMETERS.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 56,
+   "location": "Sec2",
+   "printed_text": "Rp/R* = 0.0204 +- 0.0010",
+   "fact_id": "A.k",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "02_transits_A/from_U_07_A_shape_radii/out/summary_fits.csv",
+   "key": "rows mann_claret_jit_raw_excl-1_8 (0.02062), mann_claret_jit_base_excl-1_8 (0.02034)",
+   "numbers": [
+    {
+     "number": "0.0204",
+     "in_mapped_evidence": "02_transits_A/from_U_07_A_shape_radii/verify/out/summary_verify_fits.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "0.0010",
+     "in_mapped_evidence": "02_transits_A/from_U_07_A_shape_radii/verify/out/summary_verify_fits.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 5
+  },
+  {
+   "row": 57,
+   "location": "Sec2",
+   "printed_text": "Rp = 1.4 +- 0.1 R_E",
+   "fact_id": "A.Rp",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "02_transits_A/from_T2_A_shape/out/r03_derived.json",
+   "key": "Rp_k0.0204_0.0010 = [1.385, 0.080], Rp_k0.0195 = 1.324, Rp_k0.02116 = 1.437",
+   "numbers": [
+    {
+     "number": "1.4",
+     "in_mapped_evidence": "02_transits_A/from_T2_A_shape/out/r03_derived.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "0.1",
+     "in_mapped_evidence": "02_transits_A/from_T2_A_shape/out/r03_derived.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 1
+  },
+  {
+   "row": 58,
+   "location": "Sec2",
+   "printed_text": "rho* <~ 3.6 rho_sun (97.7%)",
+   "fact_id": "A.rho_free",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "13_supporting_pipelines/PUBLICATION_AUDIT/FINAL_PARAMETERS.json",
+   "key": "signal_A.free_density.rho_logprior.p97_7=3.472, rho_uniformprior.p97_7=3.553",
+   "numbers": [
+    {
+     "number": "3.6",
+     "in_mapped_evidence": "13_supporting_pipelines/PUBLICATION_AUDIT/FINAL_PARAMETERS.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "bound",
+     "check_type": "BOUND"
+    },
+    {
+     "number": "97.7%",
+     "in_mapped_evidence": "13_supporting_pipelines/PUBLICATION_AUDIT/FINAL_PARAMETERS.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "label",
+     "check_type": "BOUND"
+    }
+   ],
+   "n_mapped_evidence_files": 5
+  },
+  {
+   "row": 59,
+   "location": "Sec2",
+   "printed_text": "phase 0.5",
+   "fact_id": "A.phase05",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "13_supporting_pipelines/PUBLICATION_AUDIT/scripts/s10_eb_tests.py",
+   "key": "L37-42 (box returns 1 - sum(w f)/sum(w)), L95-97 (d5 = box(...,0.5,T14)",
+   "numbers": [
+    {
+     "number": "0.5",
+     "in_mapped_evidence": "13_supporting_pipelines/PUBLICATION_AUDIT/scripts/s10_eb_tests.py",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "label",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 60,
+   "location": "Sec2",
+   "printed_text": "-20 +- 32 ppm",
+   "fact_id": "A.phase05",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "13_supporting_pipelines/PUBLICATION_AUDIT/scripts/s10_eb_tests.py",
+   "key": "L37-42 (box returns 1 - sum(w f)/sum(w)), L95-97 (d5 = box(...,0.5,T14)",
+   "numbers": [
+    {
+     "number": "20",
+     "in_mapped_evidence": "13_supporting_pipelines/PUBLICATION_AUDIT/scripts/s10_eb_tests.py",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "32",
+     "in_mapped_evidence": "13_supporting_pipelines/PUBLICATION_AUDIT/out/s10_eb_tests.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 61,
+   "location": "Sec2",
+   "printed_text": "Delta chi2 = 32",
+   "fact_id": "A.Vshape",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "13_supporting_pipelines/PUBLICATION_AUDIT/scripts/s10_eb_tests.py",
+   "key": "L141-161",
+   "numbers": [
+    {
+     "number": "2",
+     "in_mapped_evidence": "13_supporting_pipelines/PUBLICATION_AUDIT/scripts/s10_eb_tests.py",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "32",
+     "in_mapped_evidence": "13_supporting_pipelines/PUBLICATION_AUDIT/out/s10_eb_tests.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 31
+  },
+  {
+   "row": 62,
+   "location": "Sec2",
+   "printed_text": ">=21 with red noise",
+   "fact_id": "A.Vshape",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "13_supporting_pipelines/PUBLICATION_AUDIT/scripts/s10_eb_tests.py",
+   "key": "L141-161",
+   "numbers": [
+    {
+     "number": "21",
+     "in_mapped_evidence": "13_supporting_pipelines/PUBLICATION_AUDIT/out/s10_eb_tests.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 31
+  },
+  {
+   "row": 63,
+   "location": "Sec2",
+   "printed_text": "Without Sector 6 ... <~1 sigma",
+   "fact_id": "A.S6_effect",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "02_transits_A/from_T1_A_timing/r1_ephemerides.json",
+   "key": "extra.dropS6:*",
+   "numbers": [
+    {
+     "number": "6",
+     "in_mapped_evidence": "02_transits_A/from_T1_A_timing/r1_ephemerides.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "BOUND"
+    },
+    {
+     "number": "1",
+     "in_mapped_evidence": "02_transits_A/from_T1_A_timing/r1_ephemerides.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "bound",
+     "check_type": "BOUND"
+    }
+   ],
+   "n_mapped_evidence_files": 5
+  },
+  {
+   "row": 64,
+   "location": "Sec3",
+   "printed_text": "11.13 Day",
+   "fact_id": "B.P",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "07_signal_B/from_U_04_B_existence/out/b08_ephem.json",
+   "key": "ephemerides['S6x2 + S98(0,1) [manuscript-like, 4 events]'].P=11.1327392+-1.49e-5 and ['S6x2 + S32x2 + S98(0,1,4)'].P=11.1327506+-1.67e-5",
+   "numbers": [
+    {
+     "number": "11.13",
+     "in_mapped_evidence": "07_signal_B/from_U_04_B_existence/out/b08_ephem.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 5
+  },
+  {
+   "row": 65,
+   "location": "Sec3",
+   "printed_text": "11.13 d",
+   "fact_id": "B.P",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "07_signal_B/from_U_04_B_existence/out/b08_ephem.json",
+   "key": "ephemerides['S6x2 + S98(0,1) [manuscript-like, 4 events]'].P=11.1327392+-1.49e-5 and ['S6x2 + S32x2 + S98(0,1,4)'].P=11.1327506+-1.67e-5",
+   "numbers": [
+    {
+     "number": "11.13",
+     "in_mapped_evidence": "07_signal_B/from_U_04_B_existence/out/b08_ephem.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 5
+  },
+  {
+   "row": 66,
+   "location": "Sec3",
+   "printed_text": "~1000 ppm",
+   "fact_id": "B.depth_common",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "07_signal_B/from_U_05_B_depth/out/s04_grid.csv",
+   "key": "(BASE row",
+   "numbers": [
+    {
+     "number": "1000",
+     "in_mapped_evidence": "07_signal_B/from_U_05_B_depth/out/s04_grid.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 67,
+   "location": "Sec3",
+   "printed_text": "Rp ~ 2.2 R_E",
+   "fact_id": "B.Rp_on_target",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "13_supporting_pipelines/PUBLICATION_AUDIT/FINAL_PARAMETERS.json",
+   "key": "signal_B.shape_mann_prior.Rp_Rearth",
+   "numbers": [
+    {
+     "number": "2.2",
+     "in_mapped_evidence": "13_supporting_pipelines/PUBLICATION_AUDIT/FINAL_PARAMETERS.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 68,
+   "location": "Sec3",
+   "printed_text": "offset (+1 +- 3, -1 +- 3)''",
+   "fact_id": "B.offset",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "06_pixels_localisation/from_U_referee_resolve_R3/logs/r2_combine.log",
+   "key": "'B_S32PC+S98_auditor', 'B_S98only_auditor'",
+   "numbers": [
+    {
+     "number": "1",
+     "in_mapped_evidence": "06_pixels_localisation/from_U_referee_resolve_R3/logs/r2_combine.log",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "3",
+     "in_mapped_evidence": "06_pixels_localisation/from_U_referee_resolve_R3/logs/r2_combine.log",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "1",
+     "in_mapped_evidence": "06_pixels_localisation/from_U_referee_resolve_R3/logs/r2_combine.log",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "3",
+     "in_mapped_evidence": "06_pixels_localisation/from_U_referee_resolve_R3/logs/r2_combine.log",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 4
+  },
+  {
+   "row": 69,
+   "location": "Sec3",
+   "printed_text": "two clean Sector 98 transits",
+   "fact_id": "B.S98_transits",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "07_signal_B/from_U_04_B_existence/logs/b01.log",
+   "key": "L46 (epoch 2: b29 1.0, bkg 40166) and epoch-4 line (frac_b30 0.55)",
+   "numbers": [
+    {
+     "number": "98",
+     "in_mapped_evidence": "07_signal_B/from_U_05_B_depth/verify/v01_info.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 4
+  },
+  {
+   "row": 70,
+   "location": "Sec3",
+   "printed_text": "Sector 6",
+   "fact_id": "B.significance_S6only",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "13_supporting_pipelines/pubprep/analysis/out/a3_signalB.json",
+   "key": "T2_rank[0].p_rank=0.0015521",
+   "numbers": [
+    {
+     "number": "6",
+     "in_mapped_evidence": "13_supporting_pipelines/pubprep/analysis/out/a3_signalB.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 4
+  },
+  {
+   "row": 71,
+   "location": "Sec3",
+   "printed_text": "(marginally in Sector 32)",
+   "fact_id": "B.significance_S32only",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "13_supporting_pipelines/pubprep/analysis/out/a3_signalB.json",
+   "key": "T1_link[2].fap=0.0319",
+   "numbers": [
+    {
+     "number": "32",
+     "in_mapped_evidence": "13_supporting_pipelines/PUBLICATION_AUDIT/FINAL_PARAMETERS.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 4
+  },
+  {
+   "row": 72,
+   "location": "Sec3",
+   "printed_text": "~3 sigma",
+   "fact_id": "B.significance",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "13_supporting_pipelines/pubprep/analysis/out/a3_signalB.json",
+   "key": "T1_link[0] (obs 10.03, n_null_ge_obs 19, fap 0.0019998, null_max 10.77)",
+   "numbers": [
+    {
+     "number": "3",
+     "in_mapped_evidence": "13_supporting_pipelines/pubprep/analysis/out/a3_signalB.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 6
+  },
+  {
+   "row": 73,
+   "location": "Sec3",
+   "printed_text": "~2e-3",
+   "fact_id": "B.significance",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "13_supporting_pipelines/pubprep/analysis/out/a3_signalB.json",
+   "key": "T1_link[0] (obs 10.03, n_null_ge_obs 19, fap 0.0019998, null_max 10.77)",
+   "numbers": [
+    {
+     "number": "2e-3",
+     "in_mapped_evidence": "13_supporting_pipelines/pubprep/analysis/out/a3_signalB.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 6
+  },
+  {
+   "row": 74,
+   "location": "Sec3",
+   "printed_text": "Sector 32 ... 3.18 d",
+   "fact_id": "B.archival_recovery",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "07_signal_B/from_U_05_B_depth/verify/v01_info.json",
+   "key": "(bit-512 cadence 1484.870",
+   "numbers": [
+    {
+     "number": "32",
+     "in_mapped_evidence": "07_signal_B/from_U_05_B_depth/verify/v01_info.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "3.18",
+     "in_mapped_evidence": "13_supporting_pipelines/pubprep/METHOD_AUDIT.md",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 5
+  },
+  {
+   "row": 75,
+   "location": "Sec3",
+   "printed_text": "P = 11.13274 +- 0.00003 d",
+   "fact_id": "B.P",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "07_signal_B/from_U_04_B_existence/out/b08_ephem.json",
+   "key": "ephemerides['S6x2 + S98(0,1) [manuscript-like, 4 events]'].P=11.1327392+-1.49e-5 and ['S6x2 + S32x2 + S98(0,1,4)'].P=11.1327506+-1.67e-5",
+   "numbers": [
+    {
+     "number": "11.13274",
+     "in_mapped_evidence": "07_signal_B/from_U_04_B_existence/out/b08_ephem.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "0.00003",
+     "in_mapped_evidence": "07_signal_B/from_U_04_B_existence/verify/out/v04_ephem.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 5
+  },
+  {
+   "row": 76,
+   "location": "Sec3",
+   "printed_text": "T0 = 2461000.865 +- 0.003 BJD_TDB",
+   "fact_id": "B.T0",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "07_signal_B/from_U_04_B_existence/out/b08_ephem.json",
+   "key": "ephemerides[...4 events].T0=4000.86552+-0.00158",
+   "numbers": [
+    {
+     "number": "0",
+     "in_mapped_evidence": "07_signal_B/from_U_04_B_existence/out/b08_ephem.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "2461000.865",
+     "in_mapped_evidence": "07_signal_B/from_U_04_B_existence/out/b08_ephem.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "0.003",
+     "in_mapped_evidence": "07_signal_B/from_U_04_B_existence/verify/out/v04_ephem.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 5
+  },
+  {
+   "row": 77,
+   "location": "Sec4",
+   "printed_text": "Sector 32",
+   "fact_id": "PRF.method",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "06_pixels_localisation/from_U_03_pixels/g1_prf_check.json",
+   "key": "",
+   "numbers": [
+    {
+     "number": "32",
+     "in_mapped_evidence": null,
+     "elsewhere_in_package": "06_pixels_localisation/from_T3_pixels_localisation/result.json",
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 1
+  },
+  {
+   "row": 78,
+   "location": "Sec4",
+   "printed_text": "(Sector 98; Brasseur et al. 2019)",
+   "fact_id": "PRF.method",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "06_pixels_localisation/from_U_03_pixels/g1_prf_check.json",
+   "key": "",
+   "numbers": [
+    {
+     "number": "98",
+     "in_mapped_evidence": null,
+     "elsewhere_in_package": "06_pixels_localisation/from_T3_pixels_localisation/result.json",
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "2019",
+     "in_mapped_evidence": null,
+     "elsewhere_in_package": "06_pixels_localisation/from_T3_pixels_localisation/result.json",
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 1
+  },
+  {
+   "row": 79,
+   "location": "Sec4",
+   "printed_text": "(Bell & Higgins 2022)",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 80,
+   "location": "Sec4",
+   "printed_text": "3.18 d",
+   "fact_id": "A.P",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+   "key": "ephem.drop_onesided_573_and_m1_R60 (P 3.18278495, eP 5.66e-6",
+   "numbers": [
+    {
+     "number": "3.18",
+     "in_mapped_evidence": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 81,
+   "location": "Sec4",
+   "printed_text": "(+5 +- 3, 0 +- 3)''",
+   "fact_id": "A.offset",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "06_pixels_localisation/from_U_referee_resolve_R3/logs/r2_combine.log",
+   "key": "line 'A_eventscatter_auditor_pos'",
+   "numbers": [
+    {
+     "number": "5",
+     "in_mapped_evidence": "06_pixels_localisation/from_U_referee_resolve_R3/logs/r2_combine.log",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "3",
+     "in_mapped_evidence": "06_pixels_localisation/from_U_referee_resolve_R3/logs/r2_combine.log",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "0",
+     "in_mapped_evidence": "06_pixels_localisation/from_U_referee_resolve_R3/logs/r2_combine.log",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "3",
+     "in_mapped_evidence": "06_pixels_localisation/from_U_referee_resolve_R3/logs/r2_combine.log",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 4
+  },
+  {
+   "row": 82,
+   "location": "Sec4",
+   "printed_text": "consistent within ~2 sigma",
+   "fact_id": "A.offset_significance",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "08_figure/original_U_proposed_revision_figure_src/figure_values_v2.json",
+   "key": "key panel_b.combined.A.exact (z_E 1.999663721290341, p 0.1349557197582979)",
+   "numbers": [
+    {
+     "number": "2",
+     "in_mapped_evidence": "08_figure/original_U_proposed_revision_figure_src/figure_values_v2.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 83,
+   "location": "Sec4",
+   "printed_text": "<=2.6 sigma across Sector 98 reductions",
+   "fact_id": "A.offset_significance",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "08_figure/original_U_proposed_revision_figure_src/figure_values_v2.json",
+   "key": "key panel_b.combined.A.exact (z_E 1.999663721290341, p 0.1349557197582979)",
+   "numbers": [
+    {
+     "number": "2.6",
+     "in_mapped_evidence": "08_figure/original_U_proposed_revision_figure_src/figure_values_v2.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "bound",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "98",
+     "in_mapped_evidence": "08_figure/original_U_proposed_revision_figure_src/figure_values_v2.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 84,
+   "location": "Sec4",
+   "printed_text": "Sector 6",
+   "fact_id": "A.S6_diffimg",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "06_pixels_localisation/from_U_03_pixels/s6_dumps.json",
+   "key": "S6_ffi.transits",
+   "numbers": [
+    {
+     "number": "6",
+     "in_mapped_evidence": "06_pixels_localisation/from_U_03_pixels/verify/v3_s6.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 4
+  },
+  {
+   "row": 85,
+   "location": "Sec4",
+   "printed_text": "0.4-3.5 h",
+   "fact_id": "A.S6_diffimg",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "06_pixels_localisation/from_U_03_pixels/s6_dumps.json",
+   "key": "S6_ffi.transits",
+   "numbers": [
+    {
+     "number": "0.4",
+     "in_mapped_evidence": "06_pixels_localisation/from_U_03_pixels/s6_dumps.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "3.5",
+     "in_mapped_evidence": "06_pixels_localisation/from_U_03_pixels/s6_dumps.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 4
+  },
+  {
+   "row": 86,
+   "location": "Sec4",
+   "printed_text": "Gaia DR3",
+   "fact_id": "A.capable_stars",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "06_pixels_localisation/from_U_03_pixels/neighbours_vs_fitted_position.csv",
+   "key": "rows with dreqA_min<=1",
+   "numbers": [
+    {
+     "number": "3",
+     "in_mapped_evidence": "06_pixels_localisation/from_U_03_pixels/neighbours_vs_fitted_position.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 87,
+   "location": "Sec4",
+   "printed_text": ">~43''",
+   "fact_id": "A.capable_stars",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "06_pixels_localisation/from_U_03_pixels/neighbours_vs_fitted_position.csv",
+   "key": "rows with dreqA_min<=1",
+   "numbers": [
+    {
+     "number": "43",
+     "in_mapped_evidence": "06_pixels_localisation/from_U_03_pixels/neighbours_vs_fitted_position.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 88,
+   "location": "Sec4",
+   "printed_text": "(>10 sigma)",
+   "fact_id": "A.capable_sigma",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "06_pixels_localisation/from_U_referee_resolve_R3/logs/r2_combine.log",
+   "key": "'capable-star distance corrected_rounded(+5+-3,0+-3)'",
+   "numbers": [
+    {
+     "number": "10",
+     "in_mapped_evidence": "06_pixels_localisation/from_U_referee_resolve_R3/logs/r2_combine.log",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 89,
+   "location": "Sec4",
+   "printed_text": "Gaia DR3",
+   "fact_id": "STAR.RUWE",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "05_companion_limit_038/from_U_06_stellar/data/gaia_dr3_source.ecsv",
+   "key": "ruwe",
+   "numbers": [
+    {
+     "number": "3",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_06_stellar/data/gaia_dr3_source.ecsv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 6
+  },
+  {
+   "row": 90,
+   "location": "Sec4",
+   "printed_text": "RUWE = 1.21",
+   "fact_id": "STAR.RUWE",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "05_companion_limit_038/from_U_06_stellar/data/gaia_dr3_source.ecsv",
+   "key": "ruwe",
+   "numbers": [
+    {
+     "number": "1.21",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_06_stellar/data/gaia_dr3_source.ecsv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 6
+  },
+  {
+   "row": 91,
+   "location": "Sec4",
+   "printed_text": "radial-velocity scatter (p = 4e-5)",
+   "fact_id": "STAR.Gaia_RV",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "05_companion_limit_038/from_U_06_stellar/data/gaia_dr3_source.ecsv",
+   "key": "(radial_velocity, rv_*)",
+   "numbers": [
+    {
+     "number": "4e-5",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_06_stellar/data/gaia_dr3_source.ecsv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 92,
+   "location": "Sec4",
+   "printed_text": "within 10''",
+   "fact_id": "A.nearest_gaia_neighbour",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "06_pixels_localisation/from_U_referee_resolve_R3/logs/r4_panel_d_spec.log",
+   "key": "nearest_other_source",
+   "numbers": [
+    {
+     "number": "10",
+     "in_mapped_evidence": "06_pixels_localisation/from_U_referee_resolve_R3/logs/r4_panel_d_spec.log",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 5
+  },
+  {
+   "row": 93,
+   "location": "Sec4",
+   "printed_text": "Way et al. (2026)",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 94,
+   "location": "Sec4",
+   "printed_text": "0.05-0.07 mag",
+   "fact_id": "COMP.XP_overluminosity",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "05_companion_limit_038/from_companion_check/out/overluminosity.json",
+   "key": "keys O_obs_mag, local_bin.robust_sigma, limits",
+   "numbers": [
+    {
+     "number": "0.05",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_06_stellar/out/s03_overluminosity.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "0.07",
+     "in_mapped_evidence": "05_companion_limit_038/from_companion_check/out/overluminosity.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 4
+  },
+  {
+   "row": 95,
+   "location": "Sec4",
+   "printed_text": "+0.003 mag",
+   "fact_id": "STAR.overluminosity",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "05_companion_limit_038/from_U_06_stellar/out/way2026_target_row.csv",
+   "key": "absG_dr, pabsG_dr, ol",
+   "numbers": [
+    {
+     "number": "0.003",
+     "in_mapped_evidence": "05_companion_limit_038/from_companion_check/out/overluminosity.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 96,
+   "location": "Sec4",
+   "printed_text": "(<~0.2'')",
+   "fact_id": "COMP.XP_overluminosity",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "05_companion_limit_038/from_companion_check/out/overluminosity.json",
+   "key": "keys O_obs_mag, local_bin.robust_sigma, limits",
+   "numbers": [
+    {
+     "number": "0.2",
+     "in_mapped_evidence": "05_companion_limit_038/from_companion_check/out/overluminosity.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "bound",
+     "check_type": "BOUND"
+    }
+   ],
+   "n_mapped_evidence_files": 4
+  },
+  {
+   "row": 97,
+   "location": "Sec4",
+   "printed_text": "~0.38 Msun (2 sigma",
+   "fact_id": "COMP.XP_overluminosity",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "05_companion_limit_038/from_companion_check/out/overluminosity.json",
+   "key": "keys O_obs_mag, local_bin.robust_sigma, limits",
+   "numbers": [
+    {
+     "number": "0.38",
+     "in_mapped_evidence": "05_companion_limit_038/from_companion_check/out/overluminosity.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "2",
+     "in_mapped_evidence": "05_companion_limit_038/from_companion_check/out/overluminosity.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 4
+  },
+  {
+   "row": 98,
+   "location": "Sec4",
+   "printed_text": "Pecaut & Mamajek 2013",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 99,
+   "location": "Sec4",
+   "printed_text": "at 0.2-2''",
+   "fact_id": "COMP.BPRP_excess",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "05_companion_limit_038/from_U_referee_resolve_R4/out/r4_02_speckle_calib.json",
+   "key": "keys target, single_companion_sep0.2-2.0_dI_le1.76, single_companion_sep0.15-2.5_dI_le1.76",
+   "numbers": [
+    {
+     "number": "0.2",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_referee_resolve_R4/out/r4_02_speckle_calib.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "2",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_referee_resolve_R4/out/r4_02_speckle_calib.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 100,
+   "location": "Sec4",
+   "printed_text": "(Riello et al. 2021)",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 101,
+   "location": "Sec4",
+   "printed_text": "3.18 d",
+   "fact_id": "A.P",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+   "key": "ephem.drop_onesided_573_and_m1_R60 (P 3.18278495, eP 5.66e-6",
+   "numbers": [
+    {
+     "number": "3.18",
+     "in_mapped_evidence": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 102,
+   "location": "Sec4",
+   "printed_text": "~0.52 Msun",
+   "fact_id": "COMP.host_mass_circular",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "05_companion_limit_038/from_U_09_companion/out/companion_space.json",
+   "key": "",
+   "numbers": [
+    {
+     "number": "0.52",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_09_companion/out/companion_space.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 4
+  },
+  {
+   "row": 103,
+   "location": "Sec4",
+   "printed_text": "0.15-0.38 Msun",
+   "fact_id": "COMP.host_lower_bound_and_ecc",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "05_companion_limit_038/from_U_referee_resolve_R4/out/r4_summary.json",
+   "key": "key e_ecc",
+   "numbers": [
+    {
+     "number": "0.15",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_09_companion/out/profile_A.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "0.38",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_referee_resolve_R4/out/r4_summary.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 104,
+   "location": "Sec4",
+   "printed_text": "e >~ 0.2-0.6",
+   "fact_id": "COMP.host_lower_bound_and_ecc",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "05_companion_limit_038/from_U_referee_resolve_R4/out/r4_summary.json",
+   "key": "key e_ecc",
+   "numbers": [
+    {
+     "number": "0.2",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_referee_resolve_R4/out/r4_summary.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "0.6",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_referee_resolve_R4/out/r4_summary.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 105,
+   "location": "Sec4",
+   "printed_text": "TRICERATOPS 1.1.0",
+   "fact_id": "FPP.A_default",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "04_fpp/from_T4_fpp_companion/t4_01_fpp_run_census.csv",
+   "key": "",
+   "numbers": [
+    {
+     "number": "1.1",
+     "in_mapped_evidence": "13_supporting_pipelines/PUBLICATION_AUDIT/out/fpp/runs/A_base_S32+S98/summary.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "0",
+     "in_mapped_evidence": "04_fpp/from_T4_fpp_companion/t4_01_fpp_run_census.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 10
+  },
+  {
+   "row": 106,
+   "location": "Sec4",
+   "printed_text": "(Giacalone et al. 2021)",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 107,
+   "location": "Sec4",
+   "printed_text": "Sector 32+98 folds",
+   "fact_id": "FPP.A_default",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "04_fpp/from_T4_fpp_companion/t4_01_fpp_run_census.csv",
+   "key": "",
+   "numbers": [
+    {
+     "number": "32",
+     "in_mapped_evidence": "04_fpp/from_U_08_fpp/runs/A_base/runs.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "98",
+     "in_mapped_evidence": "04_fpp/from_U_08_fpp/runs/A_base/runs.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 10
+  },
+  {
+   "row": 108,
+   "location": "Sec4",
+   "printed_text": "(5-10 min bins)",
+   "fact_id": "FPP.A_default",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "04_fpp/from_T4_fpp_companion/t4_01_fpp_run_census.csv",
+   "key": "",
+   "numbers": [
+    {
+     "number": "5",
+     "in_mapped_evidence": "04_fpp/from_T4_fpp_companion/t4_01_fpp_run_census.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "10",
+     "in_mapped_evidence": "04_fpp/from_T4_fpp_companion/t4_01_fpp_run_census.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 10
+  },
+  {
+   "row": 109,
+   "location": "Sec4",
+   "printed_text": "at 0.1-2.2''",
+   "fact_id": "FP.remaining_scenario_A",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "04_fpp/from_T4_fpp_companion/t4_06_eb_totals.json",
+   "key": "",
+   "numbers": [
+    {
+     "number": "0.1",
+     "in_mapped_evidence": "04_fpp/from_T4_fpp_companion/t4_06_eb_totals.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "2.2",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_09_companion/REPORT.md",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 4
+  },
+  {
+   "row": 110,
+   "location": "Sec4",
+   "printed_text": "FPP = 0.03-0.04",
+   "fact_id": "FPP.A_default",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "04_fpp/from_T4_fpp_companion/t4_01_fpp_run_census.csv",
+   "key": "",
+   "numbers": [
+    {
+     "number": "0.03",
+     "in_mapped_evidence": "04_fpp/from_T4_fpp_companion/t4_01_fpp_run_census.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "0.04",
+     "in_mapped_evidence": "04_fpp/from_T4_fpp_companion/t4_01_fpp_run_census.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 10
+  },
+  {
+   "row": 111,
+   "location": "Sec4",
+   "printed_text": "(4-20 runs of 10^6 draws)",
+   "fact_id": "FPP.A_runs",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "04_fpp/from_T4_fpp_companion/t4_01_fpp_run_census.csv",
+   "key": "(n_runs column counted from list lengths / probs_run files)",
+   "numbers": [
+    {
+     "number": "4",
+     "in_mapped_evidence": "04_fpp/from_T4_fpp_companion/t4_01_fpp_run_census.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "20",
+     "in_mapped_evidence": "04_fpp/from_T4_fpp_companion/t4_01_fpp_run_census.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "1e6",
+     "in_mapped_evidence": "04_fpp/from_T4_fpp_companion/t4_01_fpp_run_census.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 112,
+   "location": "Sec4",
+   "printed_text": "about 90%",
+   "fact_id": "FPP.A_share_above_0.38",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "04_fpp/from_T4_fpp_companion/t4_02_checks.json",
+   "key": "keys share_gt038_A_default, share_gt038_A_range",
+   "numbers": [
+    {
+     "number": "90%",
+     "in_mapped_evidence": "04_fpp/from_T4_fpp_companion/t4_02_checks.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "label",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 113,
+   "location": "Sec4",
+   "printed_text": "0.38 Msun",
+   "fact_id": "FPP.A_share_above_0.38",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "04_fpp/from_T4_fpp_companion/t4_02_checks.json",
+   "key": "keys share_gt038_A_default, share_gt038_A_range",
+   "numbers": [
+    {
+     "number": "0.38",
+     "in_mapped_evidence": "04_fpp/from_U_08_fpp/out_fpp_summary.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 114,
+   "location": "Sec4",
+   "printed_text": "FPP ~ 0.002-0.007",
+   "fact_id": "FPP.A_constrained",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "04_fpp/from_U_08_fpp/out_fpp_summary.csv",
+   "key": "column FPP_comp_mass_le_0.38_mean",
+   "numbers": [
+    {
+     "number": "0.002",
+     "in_mapped_evidence": "04_fpp/from_U_08_fpp/out_fpp_summary.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "0.007",
+     "in_mapped_evidence": "04_fpp/from_U_08_fpp/out_fpp_summary.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 4
+  },
+  {
+   "row": 115,
+   "location": "Sec4",
+   "printed_text": "(FPP < 0.015, NFPP < 1e-3",
+   "fact_id": "FPP.validation_rule",
+   "match": "EXACT",
+   "status": "LITERATURE (TRICERATOPS validation thresholds, Giacalone et al. 2021; paper not redistributed)",
+   "numbers": []
+  },
+  {
+   "row": 116,
+   "location": "Sec4",
+   "printed_text": "NFPP < 1e-6",
+   "fact_id": "FPP.A_NFPP",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "04_fpp/from_T4_fpp_companion/t4_02_checks.json",
+   "key": "keys NFPP_max_all_default_A, A_default_single_sector, A_default_S32S98_summary.NFPP_max",
+   "numbers": [
+    {
+     "number": "1e-6",
+     "in_mapped_evidence": "04_fpp/from_T4_fpp_companion/t4_02_checks.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "bound",
+     "check_type": "BOUND"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 117,
+   "location": "Sec5",
+   "printed_text": "3.18 d",
+   "fact_id": "A.P",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+   "key": "ephem.drop_onesided_573_and_m1_R60 (P 3.18278495, eP 5.66e-6",
+   "numbers": [
+    {
+     "number": "3.18",
+     "in_mapped_evidence": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 118,
+   "location": "Sec5",
+   "printed_text": "11.13 d ... ~3 sigma",
+   "fact_id": "B.status_wording",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "",
+   "key": "",
+   "numbers": [
+    {
+     "number": "11.13",
+     "in_mapped_evidence": null,
+     "elsewhere_in_package": "07_signal_B/from_T5_signal_B/audit_final_params_B_dump.txt",
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "3",
+     "in_mapped_evidence": null,
+     "elsewhere_in_package": "07_signal_B/from_T5_signal_B/audit_final_params_B_dump.txt",
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 0
+  },
+  {
+   "row": 119,
+   "location": "Sec5",
+   "printed_text": "Sector 110 (2026 October 31-November 26)",
+   "fact_id": "FUTURE.S110_dates",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "07_signal_B/from_T7_data_future/web/TESS_orbit_times.csv",
+   "key": "L334-L336",
+   "numbers": [
+    {
+     "number": "110",
+     "in_mapped_evidence": "07_signal_B/from_T7_data_future/web/TESS_orbit_times.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "2026",
+     "in_mapped_evidence": "07_signal_B/from_T7_data_future/web/TESS_orbit_times.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "31",
+     "in_mapped_evidence": "07_signal_B/from_T7_data_future/web/TESS_orbit_times.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "26",
+     "in_mapped_evidence": "07_signal_B/from_T7_data_future/web/TESS_orbit_times.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 120,
+   "location": "Sec5",
+   "printed_text": "eight or nine 3.18 d transit times (one in a scheduled data gap) and three 11.13 d ones",
+   "fact_id": "FUTURE.S110_counts",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "07_signal_B/from_T7_data_future/s110_predict.json",
+   "key": "ephemerides.*.counts and events[].status",
+   "numbers": [
+    {
+     "number": "3.18",
+     "in_mapped_evidence": "07_signal_B/from_T7_data_future/s110_predict.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "11.13",
+     "in_mapped_evidence": "07_signal_B/from_T7_data_future/s110_predict.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 121,
+   "location": "Sec5",
+   "printed_text": "As of 2026 September 25 (UTC)",
+   "fact_id": "NOVELTY.sources_queried",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "13_supporting_pipelines/U_10_novelty_protocol/queries.log",
+   "key": "",
+   "numbers": [
+    {
+     "number": "2026",
+     "in_mapped_evidence": "13_supporting_pipelines/U_10_novelty_protocol/queries.log",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "25",
+     "in_mapped_evidence": "13_supporting_pipelines/U_10_novelty_protocol/queries.log",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 122,
+   "location": "Caption",
+   "printed_text": "(a) 3.18 d",
+   "fact_id": "A.P",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+   "key": "ephem.drop_onesided_573_and_m1_R60 (P 3.18278495, eP 5.66e-6",
+   "numbers": [
+    {
+     "number": "3.18",
+     "in_mapped_evidence": "02_transits_A/from_U_02_timing_A/verify/v4_results.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 2
+  },
+  {
+   "row": 123,
+   "location": "Caption",
+   "printed_text": "11.13 d and one Sector 98 edge transit removed",
+   "fact_id": "A.depth_S98",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "02_transits_A/from_T2_A_shape/out/r01_depths.json",
+   "key": "audit_s09_beta_excl98e-1.per_sector.S98 = 495.9 +- 47.7 (8 events)",
+   "numbers": [
+    {
+     "number": "11.13",
+     "in_mapped_evidence": null,
+     "elsewhere_in_package": "02_transits_A/from_T1_A_timing/r4_write_result.py",
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "98",
+     "in_mapped_evidence": "02_transits_A/from_U_07_A_shape_radii/verify/out/tests_ms_template.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 4
+  },
+  {
+   "row": 124,
+   "location": "Caption",
+   "printed_text": "inset: central 22''",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 125,
+   "location": "Caption",
+   "printed_text": "1 sigma rings (3.18 d: Sectors 32+98; 11.13 d: Sector 98)",
+   "fact_id": "B.offset",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "06_pixels_localisation/from_U_referee_resolve_R3/logs/r2_combine.log",
+   "key": "'B_S32PC+S98_auditor', 'B_S98only_auditor'",
+   "numbers": [
+    {
+     "number": "1",
+     "in_mapped_evidence": "06_pixels_localisation/from_U_referee_resolve_R3/logs/r2_combine.log",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "3.18",
+     "in_mapped_evidence": "08_figure/original_U_proposed_revision_figure_src/figure_values_v2.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "32",
+     "in_mapped_evidence": "08_figure/original_U_proposed_revision_figure_src/figure_values_v2.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "98",
+     "in_mapped_evidence": "08_figure/original_U_proposed_revision_figure_src/figure_values_v2.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "11.13",
+     "in_mapped_evidence": "08_figure/original_U_proposed_revision_figure_src/figure_values_v2.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "98",
+     "in_mapped_evidence": "08_figure/original_U_proposed_revision_figure_src/figure_values_v2.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 4
+  },
+  {
+   "row": 126,
+   "location": "Caption",
+   "printed_text": "3.18 d depth (crosses; a fifth at 84'')",
+   "fact_id": "A.capable_stars",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "06_pixels_localisation/from_U_03_pixels/neighbours_vs_fitted_position.csv",
+   "key": "rows with dreqA_min<=1",
+   "numbers": [
+    {
+     "number": "3.18",
+     "in_mapped_evidence": "06_pixels_localisation/from_U_03_pixels/neighbour_census_per_product.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    },
+    {
+     "number": "84",
+     "in_mapped_evidence": "06_pixels_localisation/from_U_03_pixels/neighbours_vs_fitted_position.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "ROUNDING"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 127,
+   "location": "Caption",
+   "printed_text": "(c)",
+   "fact_id": "",
+   "match": "NOT_A_FACT",
+   "status": "NOT_A_FACT (citation / label)",
+   "numbers": []
+  },
+  {
+   "row": 128,
+   "location": "Caption",
+   "printed_text": "three 6-min-bin folds",
+   "fact_id": "FPP.A_default",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "04_fpp/from_T4_fpp_companion/t4_01_fpp_run_census.csv",
+   "key": "",
+   "numbers": [
+    {
+     "number": "6",
+     "in_mapped_evidence": "04_fpp/from_T4_fpp_companion/t4_01_fpp_run_census.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 10
+  },
+  {
+   "row": 129,
+   "location": "Caption",
+   "printed_text": "capped at 0.38 Msun (post hoc; 5-min fold)",
+   "fact_id": "FPP.A_constrained",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "04_fpp/from_U_08_fpp/out_fpp_summary.csv",
+   "key": "column FPP_comp_mass_le_0.38_mean",
+   "numbers": [
+    {
+     "number": "0.38",
+     "in_mapped_evidence": "04_fpp/from_U_08_fpp/out_fpp_summary.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    },
+    {
+     "number": "5",
+     "in_mapped_evidence": "04_fpp/from_U_08_fpp/out_fpp_summary.csv",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "number",
+     "check_type": "EXACT"
+    }
+   ],
+   "n_mapped_evidence_files": 4
+  },
+  {
+   "row": 130,
+   "location": "Ack",
+   "printed_text": "GPT-5.6 Sol and GPT-6 Pro",
+   "fact_id": "META.chatgpt_models",
+   "match": "EXACT",
+   "status": "META (acknowledgment text; not a data result)",
+   "numbers": []
+  },
+  {
+   "row": 131,
+   "location": "Sec2",
+   "printed_text": "false-alarm probability <~1% per sector, <~0.1% jointly",
+   "fact_id": "A.archival_FAP",
+   "match": "EXACT",
+   "status": "OK",
+   "package_file": "03_archival_test_A/a_fap_results.json",
+   "key": "keys OPTIMISED, nulls, printable",
+   "numbers": [
+    {
+     "number": "1%",
+     "in_mapped_evidence": "03_archival_test_A/a_fap_results.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "bound",
+     "check_type": "BOUND"
+    },
+    {
+     "number": "0.1%",
+     "in_mapped_evidence": "03_archival_test_A/a_fap_results.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "bound",
+     "check_type": "BOUND"
+    }
+   ],
+   "n_mapped_evidence_files": 22
+  },
+  {
+   "row": 132,
+   "location": "Sec4",
+   "printed_text": "RUWE (1.4) and gof (4) thresholds",
+   "fact_id": "STAR.Gaia_RV",
+   "match": "EXACT",
+   "status": "THRESHOLD (literature: RUWE 1.4, Lindegren et al. 2018; gof 4, Gaia DR3 datamodel RV-variability rule; the target's own RUWE 1.2143 and gof 2.999 are in 05_companion_limit_038/from_U_06_stellar/data/gaia_dr3_source.ecsv)",
+   "numbers": []
+  },
+  {
+   "row": 133,
+   "location": "Sec4",
+   "printed_text": "K<1.2 km/s",
+   "fact_id": "COMP.Gaia_RV",
+   "match": "ROUNDING",
+   "status": "OK",
+   "package_file": "05_companion_limit_038/from_U_09_companion/out/rv_limits.json",
+   "key": "",
+   "numbers": [
+    {
+     "number": "1.2",
+     "in_mapped_evidence": "05_companion_limit_038/from_U_09_companion/out/rv_limits.json",
+     "elsewhere_in_package": null,
+     "only_in_curated_or_facts": null,
+     "how": "bound",
+     "check_type": "BOUND"
+    }
+   ],
+   "n_mapped_evidence_files": 3
+  },
+  {
+   "row": 134,
+   "location": "Ack",
+   "printed_text": "doi:[PLACEHOLDER: Zenodo DOI]",
+   "fact_id": "META.zenodo",
+   "match": "NOT_A_FACT",
+   "status": "PLACEHOLDER (Zenodo DOI; inserted by the author after deposit)",
+   "numbers": []
+  },
+  {
+   "row": 135,
+   "location": "Ack",
+   "printed_text": "GPT-5.6 Sol, GPT-6 Pro",
+   "fact_id": "META.chatgpt_models",
+   "match": "EXACT",
+   "status": "META (acknowledgment text; not a data result)",
+   "numbers": []
+  }
+ ]
+}

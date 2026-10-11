@@ -1,0 +1,11 @@
+{
+ "N": 383,
+ "median_ruwe": 1.1380475,
+ "pct_ruwe_below_1p2143": 60.835509138381205,
+ "frac_ruwe_gt_1p4": 0.3133159268929504,
+ "median_aen": 0.10401085,
+ "pct_aen_below_0p0935": 42.03655352480418,
+ "median_aen_sig": 15.870397,
+ "pct_ipdgof_below_0p022": 63.44647519582245,
+ "pct_among_ruwe_lt_1p4": 88.59315589353612
+}

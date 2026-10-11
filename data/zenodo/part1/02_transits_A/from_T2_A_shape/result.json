@@ -1,0 +1,1003 @@
+{
+ "topic": "T2_A_shape - Signal A (3.18 d) depths, radius and shape tests",
+ "summary": "All Signal A shape numbers in the proposed revision are reproduced or bracketed, and no conclusion changes. The pubprep vs audit per-sector differences (C046-C049) come from pubprep's free-time-shift, equal-weight estimator and from S98 epoch -1, a segment-edge transit whose depth cannot be measured (-234 to +1285 ppm by detrending). Without it pubprep gives S98 509 +- 44 (not 574) and a combined 509 +- 35 (not 551) ppm (own recompute r01). Per-sector depths agree in every method (chi2 0.08-3.1 for 2 dof). 'About 500 ppm' is the template (mid-transit) depth; (Rp/R*)^2 is about 420 ppm. Edge-excluded fits give Rp/R* = 0.0204 +- 0.0008 and Rp = 1.39 +- 0.07 Re, so '1.4 +- 0.1' holds, but the adopted 0.021 is centred high. The phase-0.5 value is a box DEPTH (s10_eb_tests.py L42), so 'depth -20 +- 32 ppm' (flux +20) is correct as revised. V shape: own rerun gives delta-chi2 34-38 (white), 21-35 (beta), bootstrap 2.5% 17-23, so 32 is white-noise-only. 'Without Sector 6 <0.5 sigma' fails like-for-like for T14 (0.55 sigma) and the phase-0.5 depth (0.64-0.81); '<1 sigma' is true. Open, non-blocking: the S6 depth scale across photometries, and the epoch -1 depth.",
+ "facts": [
+  {
+   "id": "A.depth_S6",
+   "group": "SIGNAL_A",
+   "quantity": "S6 (TESS-SPOC 30-min PDCSAP) per-sector depth: fixed-shape batman template scaled to the data (mid-transit template depth), per-event fits at the fixed ephemeris, inverse-variance mean",
+   "value": "521",
+   "uncertainty": "53 (red-noise beta-inflated covariance errors); 52-61 empirical (shifted-ephemeris) errors in U reruns",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/out/s09_events.json A.pipe.summary.TESSSPOC_S6_PDC.mean_depth_ppm=521.42, err_ppm=52.89 (6 events) ; addenda/opus55_final_audit_tic4206066/07_A_shape_radii/out/depths_localbaseline_mann_claret_jit_raw.json S6 523+-52 (sig_emp) ; addenda/opus55_final_audit_tic4206066/07_A_shape_radii/verify/out/tests_ms_template.json S6 514+-61 ; addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json s6_checks.depths.S6 D=523+-58 ; OUT/_work/T2_A_shape/out/r01_depths.json audit_s09_beta.per_sector.S6",
+   "code": "tic4206066_PUBLICATION_AUDIT/scripts/s09_events.py fit_event (L49-79); U 07 s06_depths_localbaseline.py; U 07 verify v04_tests.py; resolve_R-S6 s3_s6_checks.py",
+   "rerun": "OUT/_work/T2_A_shape/out/r01_depths.json",
+   "supersedes": "pubprep 519 +- 70 ppm (a1_results.json signals.A.A__pipe.per_sector.6.e_D_inj; free-dt depth, 5 events, per-sector injection SD); deep/draft 508 +- 58",
+   "manuscript_form": "not in Note (only 'per-sector depths ... agree')",
+   "notes": "All five codes give 514-523 ppm. S6 depth depends on the photometry product (SAP 700, own TESScut 653/695, eleanor 857, TGLC 982 ppm); CROWDSAP = 0.995, so this is not dilution. See unknowns."
+  },
+  {
+   "id": "A.depth_S32",
+   "group": "SIGNAL_A",
+   "quantity": "S32 (SPOC 2-min PDCSAP) per-sector template depth, fixed ephemeris",
+   "value": "476",
+   "uncertainty": "75 (empirical, shifted-ephemeris boxes; the beta-covariance error 52 underestimates the S32 scatter)",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/out/s09_events.json A.pipe.summary.SPOC2min_S32_PDC.mean_depth_ppm=476.30, err_ppm=52.47 ; addenda/opus55_final_audit_tic4206066/07_A_shape_radii/out/depths_localbaseline_mann_claret_jit_raw.json S32 depth 475.3 sig_emp 77.2 ; addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json s6_checks.depths.S32 D=480.5 emp.sd=76.4 ; addenda/opus55_final_audit_tic4206066/07_A_shape_radii/verify/out/tests_ms_template.json S32 445+-74",
+   "code": "s09_events.py; U 07 s06; resolve_R-S6 s3_s6_checks.py; verify v04_tests.py",
+   "rerun": "OUT/_work/T2_A_shape/out/r01_depths.json",
+   "supersedes": "pubprep 484 +- 104 (free-dt, injection SD 295 ppm per event); audit error 52 replaced by the empirical 75",
+   "manuscript_form": "not in Note",
+   "notes": "Range across codes 445-484 ppm."
+  },
+  {
+   "id": "A.depth_S98",
+   "group": "SIGNAL_A",
+   "quantity": "S98 (QLP SYS_RM_FLUX, QLP-flagged cadences removed) per-sector template depth, fixed ephemeris, segment-edge epoch -1 excluded",
+   "value": "496",
+   "uncertainty": "48 (beta-covariance); empirical 44-47",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "OUT/_work/T2_A_shape/out/r01_depths.json audit_s09_beta_excl98e-1.per_sector.S98 = 495.9 +- 47.7 (8 events) ; same file pubprep_inj_excl98e-1.per_sector.S98 = 509.4 +- 44.4 ; addenda/opus55_final_audit_tic4206066/07_A_shape_radii/out/depths_localbaseline_mann_claret_jit_raw.json S98_excl_-1_8 484.5 ; addenda/opus55_final_audit_tic4206066/07_A_shape_radii/verify/out/tests_ms_template.json S98_excl-1 468.6+-46.6 ; addenda/opus55_final_audit_tic4206066/07_A_shape_radii/verify/out/s98_epoch_detrend_diag.json epoch -1 = 1285/-109/78/905 ppm by detrending",
+   "code": "r01_depths_from_stored_rows.py on stored per-event rows (pubprep analysis/out/a1_per_transit.csv; audit out/s09_events.json)",
+   "rerun": "OUT/_work/T2_A_shape/out/r01_depths.json",
+   "supersedes": "with epoch -1 included: pubprep 574 +- 42 (epoch -1 D = 1093 ppm at dt = +19.5 min, equal weight), audit 511 +- 47 (epoch -1 = 927 +- 253, beta 1.73), U07 biweight 403 (epoch -1 = -234)",
+   "manuscript_form": "not in Note",
+   "notes": "Epoch -1 (BTJD 3995.555) is at the end of a 0.45-d segment after the scattered-light interval, on a ~4000 ppm/d ramp, with no post-egress baseline; its depth ranges from -234 to +1285 ppm with the detrending, so it cannot be measured. Without it the codes give 469-509 ppm."
+  },
+  {
+   "id": "A.depth_combined",
+   "group": "SIGNAL_A",
+   "quantity": "combined mid-transit (limb-darkened template) depth, inverse-variance mean of per-event template depths, all sectors",
+   "value": "498 (edge transit excluded); 503 with all 23 events",
+   "uncertainty": "29 (beta errors); 31-35 empirical; method range 457-512",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "OUT/_work/T2_A_shape/out/r01_depths.json audit_s09_beta_excl98e-1.combined_all_events = 497.6 +- 29.4 ; audit_s09_beta.combined_all_events = 503.4 +- 29.2 ; pubprep_inj_excl98e-1.combined = 509.0 +- 35.3 ; chi2_* entries: U07 raw 510.8+-30.7, R-S6 512.1+-33.0, verify 477.1+-32.9, U07 biweight 465.2+-33.8 ; addenda/opus55_final_audit_tic4206066/07_A_shape_radii/out/summary_fits.csv depth_mid_ppm 440-501",
+   "code": "r01_depths_from_stored_rows.py",
+   "rerun": "OUT/_work/T2_A_shape/out/r01_depths.json",
+   "supersedes": "pubprep 551 +- 34 (METHOD_AUDIT.md L110; inflated by S98 epoch -1 and free-dt bias of about +4-5%, a1_results.json injections mean_D vs injected median)",
+   "manuscript_form": "$\\approx$500\\,ppm",
+   "notes": "Distinct quantities: (Rp/R*)^2 = k^2 = 416 ppm for k = 0.0204 (448 +- 30 for the audit's k = 0.02116); mean flux deficit in a 1.87-h box on the fold = 470 +- 32 ppm (s10_eb_tests.json A_pipe.primary). LD factor mid-depth/k^2 = 1.14 (r03)."
+  },
+  {
+   "id": "A.depth_sector_consistency",
+   "group": "SIGNAL_A",
+   "quantity": "chi2 of a constant depth across S6/S32/S98",
+   "value": "0.08-3.06 for 2 dof across six method sets (audit 0.41; pubprep 0.92, 0.08 without epoch -1; U07 raw 0.27; U07 biweight 3.06; verify 0.59; R-S6 0.22)",
+   "uncertainty": "p >= 0.22 in every set",
+   "units": "chi2 / dof",
+   "status": "FINAL",
+   "evidence": "OUT/_work/T2_A_shape/out/r01_depths.json chi2_* and *.chi2_const",
+   "code": "r01_depths_from_stored_rows.py",
+   "rerun": "OUT/_work/T2_A_shape/out/r01_depths.json",
+   "supersedes": "M CF 240 '1.6 for 2 dof' (pubprep MANUSCRIPT_NUMBER_AUDIT.csv L27, hard-coded note; the same values give 0.92 with a weighted mean)",
+   "manuscript_form": "Per-sector depths ... agree",
+   "notes": ""
+  },
+  {
+   "id": "A.depth_six_detrendings",
+   "group": "SIGNAL_A",
+   "quantity": "per-sector template depth range across six detrendings (audit s17: biweight 0.5/0.75/1.0/1.5 d, cosine 1.0, none)",
+   "value": "456.9-558.2 (S32 cosine to S98 cosine); all-sector means 490-511",
+   "uncertainty": "per-sector errors 43-53",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/out/s17_detrend_robust.json *.A.per_sector.*.depth",
+   "code": "tic4206066_PUBLICATION_AUDIT/scripts/s17_detrend_robust.py",
+   "rerun": "",
+   "supersedes": "'483-558 ppm' (audit PUBLICATION_TRUTH.md L124; wrong at the low end)",
+   "manuscript_form": "not in Note",
+   "notes": ""
+  },
+  {
+   "id": "A.depth_own_photometry",
+   "group": "SIGNAL_A",
+   "quantity": "own TESScut aperture-photometry template depths S6/S32/S98 (cross-check only)",
+   "value": "audit s09 (fixed-tc, beta errors): 653 +- 56 / 480 +- 52 / 468 +- 41; pubprep a1 (free-dt, injection errors, different aperture code): 695 +- 63 / 520 +- 74 / 568 +- 62",
+   "uncertainty": "as listed",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/out/s09_events.json A.own.summary.tesscut_s6_r2.5, tesscut_s32_r2.0, own_nostray.tesscut_s98_r2.0_nostray ; addenda/rnaas_tic4206066_pubprep/analysis/out/a1_results.json signals.A.A__own.per_sector.*.e_D_inj ; addenda/rnaas_tic4206066_pubprep/analysis/out_a1.log L2",
+   "code": "audit s09_events.py + s05_photometry.py; pubprep a1_timing_depths.py own_phot/analyse_event",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "Different photometry codes and different depth estimators (the free-dt estimator is biased high by about 5%); both are cross-checks and neither enters the Note."
+  },
+  {
+   "id": "A.k",
+   "group": "SIGNAL_A",
+   "quantity": "Rp/R* (joint batman+emcee, Mann density prior, Claret LD prior, exposure-integrated)",
+   "value": "0.0204",
+   "uncertainty": "0.0008 (0.0007 statistical + 0.0004 across detrending); full range over all reductions 0.0195-0.0212",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/07_A_shape_radii/out/summary_fits.csv rows mann_claret_jit_raw_excl-1_8 (0.02062), mann_claret_jit_base_excl-1_8 (0.02034) ; addenda/opus55_final_audit_tic4206066/07_A_shape_radii/verify/out/summary_verify_fits.csv rows o-1..98e-1 (0.02014), o1..98e-1 (0.02100), o2 SYS 98e-1 (0.01999), o2 DET 98e-1 (0.01991) ; addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json joint_fits.S6_32_98_raw_jit_ss615_excl98e-1.k median 0.02070 ; full range: verify o2_..._none 0.01952 to addenda/tic4206066_PUBLICATION_AUDIT/FINAL_PARAMETERS.json signal_A.shape_mann_prior.k.value 0.02116",
+   "code": "U 07 s03_jointfit.py; U 07 verify v03_fit.py; resolve_R-S6 s2_joint.py; audit s08_globalfit.py",
+   "rerun": "mean/SD of the seven stored edge-excluded fits computed here (no new MCMC)",
+   "supersedes": "0.0212 +- 0.0007 (pubprep/audit; includes epoch -1 at about 1285 ppm under the manuscript detrending); U 07 F1 0.02095 +- 0.0006 (includes epoch -1 at 898 ppm)",
+   "manuscript_form": "$0.0204\\pm0.0010$ (the revision's $0.021\\pm0.001$ is acceptable but centred high)",
+   "notes": "Excluding epoch -1 applies the Note's own timing criterion (baselines on both sides). Free LD adds about +0.0001-0.0004."
+  },
+  {
+   "id": "A.Rp",
+   "group": "SIGNAL_A",
+   "quantity": "planet radius if on target, Rp = k R* x 109.08 with R* = 0.623 +- 0.019 Rsun",
+   "value": "1.39",
+   "uncertainty": "0.07 (k 0.0204 +- 0.0008); 1.32-1.44 across all reductions",
+   "units": "R_earth",
+   "status": "FINAL",
+   "evidence": "OUT/_work/T2_A_shape/out/r03_derived.json Rp_k0.0204_0.0008 = [1.385, 0.069], Rp_k0.021_0.001 = [1.426, 0.081], Rp_k0.0195 = 1.324, Rp_k0.02116 = 1.437",
+   "code": "r03_derived.py (Monte Carlo, R_sun/R_earth = 109.08, IAU nominal)",
+   "rerun": "OUT/_work/T2_A_shape/out/r03_derived.json",
+   "supersedes": "1.44 +- 0.06 (pubprep); U 07 F1 1.42 +- 0.08; U verify 1.38 +- 0.08",
+   "manuscript_form": "$R_p=1.4\\pm0.1\\,R_\\oplus$",
+   "notes": "Printed value correct at its precision."
+  },
+  {
+   "id": "A.Rp_1.50",
+   "group": "SIGNAL_A",
+   "quantity": "'1.50 Re with free limb darkening' (pubprep)",
+   "value": "1.503 (+0.088/-0.079) from a dynesty run with free LD (Kipping q1,q2 ~ U(0,1)) AND free log-uniform density (0.1-50), biweight 1.0 d; b = 0.62, rho = 1.59",
+   "uncertainty": "+0.088/-0.079",
+   "units": "R_earth",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/out/fits/dynesty_A_pipe.json Rp_Rearth[2]=1.5034, b[2]=0.623, rho[2]=1.589 ; addenda/tic4206066_PUBLICATION_AUDIT/scripts/s08b_dynesty_fit.py L1-4, L40-41 ; free-LD emcee fits: addenda/opus55_final_audit_tic4206066/07_A_shape_radii/out/summary_fits.csv mann_free_jit_raw 1.446, mann_free_jit_base 1.349 ; verify summary_verify_fits.csv o2_..._mann_free_98e-1 1.367",
+   "code": "audit s08b_dynesty_fit.py",
+   "rerun": "",
+   "supersedes": "label 'free limb darkening' is wrong (LD and density both free)",
+   "manuscript_form": "not in Note (removed in the revision)",
+   "notes": "Freeing LD alone moves Rp by <= +0.02 Re."
+  },
+  {
+   "id": "A.b",
+   "group": "SIGNAL_A",
+   "quantity": "impact parameter (Mann density prior; prior-driven)",
+   "value": "0.35",
+   "uncertainty": "+0.10/-0.14; reruns 0.30-0.37",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/FINAL_PARAMETERS.json signal_A.shape_mann_prior.b (0.346 +0.096/-0.139) ; 07_A_shape_radii/out/summary_fits.csv b_med 0.30-0.37 (Mann rows) ; verify summary_verify_fits.csv 0.31 -0.17/+0.12",
+   "code": "audit s08_globalfit.py; U 07 s03; verify v03",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "$b=0.35^{+0.10}_{-0.14}$",
+   "notes": "With a uniform density prior b = 0.25-0.29 (+0.2/-0.17)."
+  },
+  {
+   "id": "A.T14",
+   "group": "SIGNAL_A",
+   "quantity": "total transit duration T14 (posterior median of derived T14, Mann prior)",
+   "value": "1.87",
+   "uncertainty": "0.05; reruns 1.84-1.91",
+   "units": "h",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/FINAL_PARAMETERS.json signal_A.shape_mann_prior.T14_h 1.874 +0.048/-0.047 ; 07_A_shape_radii/out/summary_fits.csv T14_med 1.84-1.90 ; verify summary 1.843-1.907",
+   "code": "audit s08_globalfit.py",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "$T_{14}=1.87\\pm0.05$\\,h",
+   "notes": ""
+  },
+  {
+   "id": "A.T14_template",
+   "group": "SIGNAL_A",
+   "quantity": "T14 of the pubprep timing/depth template (C058)",
+   "value": "1.888 = analytic T14 of the template parameters k 0.02116, b 0.35, rho 2.507 (prior mean, a/R* = 12.37)",
+   "uncertainty": "",
+   "units": "h",
+   "status": "FINAL",
+   "evidence": "OUT/_work/T2_A_shape/out/r03_derived.json C058_template_T14_h = 1.8883, C058_T14_of_posterior_medians_h = 1.8752, C058_audit_posterior_median_T14_h = 1.8741 ; addenda/rnaas_tic4206066_pubprep/analysis/a1_timing_depths.py L35",
+   "code": "r03_derived.py",
+   "rerun": "OUT/_work/T2_A_shape/out/r03_derived.json",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "The template uses the prior-mean density (a/R* 12.37) instead of the posterior a/R* 12.47; 0.8% effect, negligible for times and depths."
+  },
+  {
+   "id": "A.aRs",
+   "group": "SIGNAL_A",
+   "quantity": "a/R* (Mann density prior)",
+   "value": "12.47",
+   "uncertainty": "+0.37/-0.40",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/FINAL_PARAMETERS.json signal_A.shape_mann_prior.a_over_Rs ; Kepler a/R* with M*=0.606, R*=0.623: 12.37 (OUT/_work/T2_A_shape/out/r03_derived.json a_over_Rs_kepler)",
+   "code": "audit s08_globalfit.py; r03_derived.py",
+   "rerun": "OUT/_work/T2_A_shape/out/r03_derived.json",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "Prior-dominated."
+  },
+  {
+   "id": "A.inc",
+   "group": "SIGNAL_A",
+   "quantity": "orbital inclination (Mann density prior)",
+   "value": "88.41",
+   "uncertainty": "+0.66/-0.50",
+   "units": "deg",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/FINAL_PARAMETERS.json signal_A.shape_mann_prior.inc_deg",
+   "code": "audit s08_globalfit.py",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": ""
+  },
+  {
+   "id": "A.a_Teq_S",
+   "group": "SIGNAL_A",
+   "quantity": "semi-major axis, equilibrium temperature (A_B = 0, full redistribution), insolation",
+   "value": "a = 0.0358 AU; Teq = 808 K (Teff 4020) / 810 K (Teff 4030); S = 71-72 S_earth",
+   "uncertainty": "a +-0.0003; Teq +-22; S +8/-7",
+   "units": "AU; K; S_earth",
+   "status": "FINAL",
+   "evidence": "OUT/_work/T2_A_shape/out/r03_derived.json a_AU, Teq_A0_full_Teff4020, Teq_A0_full_Teff4030, S_Searth_Teff4020 ; addenda/tic4206066_PUBLICATION_AUDIT/PUBLICATION_TRUTH.md L114-L116",
+   "code": "r03_derived.py",
+   "rerun": "OUT/_work/T2_A_shape/out/r03_derived.json",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "LEO-vetter Teq 747 K uses Bond albedo 0.3 (leo_vetter/parameters.py L21-22, A=0.3) and TIC parameters (aRs 12.04); with A_B = 0.3 my value is 739-741 K."
+  },
+  {
+   "id": "A.rho_free",
+   "group": "SIGNAL_A",
+   "quantity": "97.7% upper limit on stellar density from the A transit with density free",
+   "value": "3.4-3.7 (audit ln-uniform 3.47, uniform 3.55; U07 3.40-3.72; verify 3.51-3.69; R-S6 3.48; dynesty free LD 3.51)",
+   "uncertainty": "prior/detrending/LD systematic +-0.15",
+   "units": "rho_sun",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/FINAL_PARAMETERS.json signal_A.free_density.rho_logprior.p97_7=3.472, rho_uniformprior.p97_7=3.553 ; 07_A_shape_radii/out/summary_fits.csv rho_q97_7 (uni/logu rows) ; verify summary_verify_fits.csv rho_q977 ; resolve_R-S6 R-S6_summary.json joint_fits.S6_32_98_raw_jit_ss615_rhouni.rho_q97_7=3.48 ; audit out/fits/dynesty_A_pipe.json rho[4]=3.509",
+   "code": "audit s08_globalfit.py; U 07 s03; verify v03",
+   "rerun": "",
+   "supersedes": "'< 3.5 for both priors' (audit PUBLICATION_TRUTH.md L120; stored uniform value is 3.55)",
+   "manuscript_form": "$\\rho_\\star\\lesssim3.6\\,\\rho_\\odot$ (97.7\\%)",
+   "notes": "3.6-3.7 maps to a host mass of about 0.52 Msun (Pecaut & Mamajek interpolation, as in the Sec. 4 wording)."
+  },
+  {
+   "id": "A.rho_prior",
+   "group": "SIGNAL_A",
+   "quantity": "density prior used in the Mann-prior shape fit (C062)",
+   "value": "audit fit: symmetric Gaussian 2.507 +- 0.232 (mean of +0.25/-0.22); U reruns: split-normal 2.51 +0.25/-0.22",
+   "uncertainty": "",
+   "units": "rho_sun",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/scripts/s08_globalfit.py L38-39, L90 ; FINAL_PARAMETERS.json signal_A.shape_mann_prior.rho_prior ; 07_A_shape_radii/s03_jointfit.py L4 ; verify/v03_fit.py L4",
+   "code": "as cited",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "not in Note ('Mann-relation density prior')",
+   "notes": "b, T14 and k agree between the two prior forms to within 0.1 sigma."
+  },
+  {
+   "id": "A.odd_even",
+   "group": "SIGNAL_A",
+   "quantity": "odd vs even transit depth (epoch parity n = round((t-T0)/P), T0 = S98 transit near BTJD 3998.74 is epoch 0; odd = n%2==1)",
+   "value": "per-event template, beta errors: 536 +- 40 vs 466 +- 43 (1.2 sigma; 1.0 sigma without epoch -1); empirical errors: 539 +- 47 vs 449 +- 51 (1.3 sigma), 488 +- 47 vs 446 +- 52 (0.6 sigma), 546 +- 46 vs 451 +- 51 (1.4 sigma); fold box: 534 +- 48 vs 388 +- 44 (2.2 sigma, reverses sign in own photometry)",
+   "uncertainty": "as listed",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "OUT/_work/T2_A_shape/out/r01_depths.json audit_s09_oddeven_beta (536.3+-40.1 / 466.3+-42.5, z 1.20), audit_s09_oddeven_beta_excl98e-1 (z 1.02) ; 07_A_shape_radii/out/depths_localbaseline_mann_claret_jit_raw.json odd/even ; verify/out/tests_ms_template.json odd/even ; resolve_R-S6 R-S6_summary.json s6_checks.odd_even.all3 ; addenda/tic4206066_PUBLICATION_AUDIT/out/s10_eb_tests.json A_pipe.odd_even_box",
+   "code": "s09_events.py; r01",
+   "rerun": "OUT/_work/T2_A_shape/out/r01_depths.json",
+   "supersedes": "",
+   "manuscript_form": "odd and even transits agree",
+   "notes": "The manuscript's 536/466 are the audit s09 per-event values (not pubprep's; pubprep's own rows give 612/476, 2.0 sigma, driven by epoch -1, which is odd)."
+  },
+  {
+   "id": "A.odd_even_parity",
+   "group": "SIGNAL_A",
+   "quantity": "parity labels LEO-vetter vs discovery box plot (C068)",
+   "value": "LEO 'odd' = epochs n%2==0 relative to its epo; pipeline 'odd' = n%2==1 relative to the same epo 3998.7348. Relabelled, LEO even 507 ppm = box odd 502 ppm, and LEO odd 386 ppm = box even 432 ppm; no disagreement",
+   "uncertainty": "LEO +-60 each; box +-56",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": ".venv/lib/python3.12/site-packages/leo_vetter/main.py L26-29 (phase2 = mod(t-epo, 2P); odd_tran = |phase2| small, i.e. epochs 0, +-2, ...) ; pipeline/bundles.py L221-223 (odd = epn % 2 == 1) ; candidates/tic4206066_p3.182945/candidate.json leo_vetter.epo = 3998.73484, odd_dep, even_dep, odd_even_box_plot_values",
+   "code": "leo_vetter oddeven.box; pipeline/bundles.py",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "All later analyses (audit, pubprep, U) use n%2==1 = odd with epoch 0 at BTJD ~3998.74, so their 'odd deeper' agrees with LEO's 'even deeper'."
+  },
+  {
+   "id": "A.phase05",
+   "group": "SIGNAL_A",
+   "quantity": "secondary eclipse at phase 0.5: box DEPTH of width T14 (depth = 1 - weighted mean flux; positive = dip)",
+   "value": "-20.4 (i.e. flux +20.4 ppm); 3-sigma upper limit on a secondary-eclipse depth 95 ppm",
+   "uncertainty": "31.7 (empirical, random same-width boxes)",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/scripts/s10_eb_tests.py L37-42 (box returns 1 - sum(w f)/sum(w)), L95-97 (d5 = box(...,0.5,T14); upper_3sigma = (max(d5,0)+3 s_rob)) ; addenda/tic4206066_PUBLICATION_AUDIT/out/s10_eb_tests.json A_pipe.secondary_0p5.depth_ppm = -20.43, err_emp_ppm = 31.65, upper_3sigma_ppm = 94.96 ; OUT/_work/T2_A_shape/out/r03_derived.json phase05_*",
+   "code": "audit s10_eb_tests.py",
+   "rerun": "OUT/_work/T2_A_shape/out/r03_derived.json (read-back of sign convention)",
+   "supersedes": "'flux at phase 0.5 is -20 +- 32 ppm' (pubprep manuscript; sign inverted); CF 309 label 'flux'",
+   "manuscript_form": "the phase-0.5 depth is $-20\\pm32$\\,ppm",
+   "notes": "Independent reruns: U07 flux +12 +- 31 (tests_results.json secondary.mask05), verify flux -9 +- 30, R-S6 depth -5 +- 31. All are consistent with zero."
+  },
+  {
+   "id": "A.P3_phases",
+   "group": "SIGNAL_A",
+   "quantity": "box depths at phases 1/3 and 2/3 (P/3 test)",
+   "value": "-41.5 and -6.8 (depths; i.e. flux +41 and +7 ppm)",
+   "uncertainty": "31.7 each",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/out/s10_eb_tests.json A_pipe.P_over_3_check ; s10_eb_tests.py L111-113",
+   "code": "audit s10_eb_tests.py",
+   "rerun": "",
+   "supersedes": "CF 313 / PUBLICATION_TRUTH.md L137 label 'flux'",
+   "manuscript_form": "not in Note",
+   "notes": "No dips at P/3 phases."
+  },
+  {
+   "id": "A.Vshape",
+   "group": "SIGNAL_A",
+   "quantity": "V (triangle, T12 = T14/2) minus U (trapezoid) delta-chi2; positive = V worse",
+   "value": "31.8 (audit fold, white errors, chi2 rescaled by chi2_red 1.062); own rerun: 34.3-37.9 white; 21.1-34.7 with time-averaging beta; event-bootstrap 2.5% quantile 17.2-23.1; leave-one-transit-out minimum 28.2-31.9",
+   "uncertainty": "range over detrending (local quadratic vs biweight) and noise treatment",
+   "units": "delta chi2",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/scripts/s10_eb_tests.py L141-161 ; addenda/tic4206066_PUBLICATION_AUDIT/out/s10_eb_tests.json A_pipe.shape.dchi2_V_minus_U = 31.84, chi2_scale 1.062 ; OUT/_work/T2_A_shape/out/r02_vshape.json (LC1_localquad_all: white 35.3, beta 31.8, boot p2.5 18.9; LC2_biweight_all: white 34.3, beta 21.1 with beta_S98 1.62, boot p2.5 17.2) ; 07_A_shape_radii/out/tests_results.json vshape (34.2 / 21.2) ; verify/out/vshape_*.json (35.4 / 31.5)",
+   "code": "OUT/_work/T2_A_shape/r02_vshape_rednoise.py (independent exposure-integrated trapezoid/triangle fit)",
+   "rerun": "OUT/_work/T2_A_shape/out/r02_vshape.json",
+   "supersedes": "",
+   "manuscript_form": "a V shape is disfavored ($\\Delta\\chi^2=32$; $\\geq21$ allowing for red noise)",
+   "notes": "The audit trapezoid was not exposure-integrated for the 30-min S6 data; this favours V slightly, so 31.8 is conservative in that respect. The lowest value (21) comes from the biweight light curve, where S98 beta = 1.62 is partly inflated by the badly detrended epoch -1 (1.35 without it)."
+  },
+  {
+   "id": "A.S6_effect",
+   "group": "SIGNAL_A",
+   "quantity": "change of Sec. 2 values when Sector 6 is dropped (like-for-like refit, same code)",
+   "value": "raw-flux fits: k -0.21 sigma, b +0.32 sigma, T14 -0.55 sigma, Rp -0.15 sigma; biweight fits: k -0.78 sigma, T14 -0.61 sigma, Rp -0.56 sigma; phase-0.5 depth -4.5 -> -29.9 ppm (0.64-0.81 sigma); odd-even 1.4 -> 0.8 sigma; V delta-chi2 37 -> 28; rho 97.7% limit 3.48 -> 3.63; P -0.28 sigma. Against the quoted manuscript values every no-S6 value is within 0.5 sigma.",
+   "uncertainty": "",
+   "units": "sigma",
+   "status": "FINAL",
+   "evidence": "OUT/_work/T2_A_shape/out/r03_derived.json S6_drop ; addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json joint_fits, s6_checks",
+   "code": "resolve_R-S6 s2_joint.py, s3_s6_checks.py; r03_derived.py",
+   "rerun": "OUT/_work/T2_A_shape/out/r03_derived.json",
+   "supersedes": "'all within 0.5 sigma' (resolve_R-S6; true only against the quoted values)",
+   "manuscript_form": "Without Sector 6 all these values change by $<1\\sigma$.",
+   "notes": ""
+  },
+  {
+   "id": "A.S6_use",
+   "group": "SIGNAL_A",
+   "quantity": "permitted use of Sector 6 in the depth/shape analysis",
+   "value": "Usable for photometric depth, timing and the joint shape fit if the 30-min exposure is integrated (x15 supersampling; done in every fit). Not usable for difference-image localization. S6 carries little ingress/egress information, so b, T14 and the V/U test are set by S32+S98.",
+   "uncertainty": "",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json s6_checks.depths.S6 (523 +- 58 vs S32+S98 500 +- 45, z 0.31), s6_checks.S6_dumps (mask +-0.5/1.0/1.5 h: 543/503/486 ppm; free steps 531 ppm; dump-locked dip S/N 2.4 vs 9.0), s6_checks.S6_integration (unintegrated 490 ppm) ; 07_A_shape_radii/common.py L38 SUPERSAMPLE",
+   "code": "resolve_R-S6 s3_s6_checks.py",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "Its Sector 6 difference images are unusable because every transit falls 0.4--3.5\\,h from a reaction-wheel desaturation.",
+   "notes": "S6 reduces sigma_k by about 1.15x and sigma_P by about 1.5x."
+  },
+  {
+   "id": "A.n_transits",
+   "group": "SIGNAL_A",
+   "quantity": "transits in the joint shape fit (>= 50% of T14 covered after QUALITY==0)",
+   "value": "23 (S6 6, S32 8, S98 9); 22 with the S98 segment-edge epoch -1 excluded",
+   "uncertainty": "",
+   "units": "count",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/07_A_shape_radii/out/coverage_base.json ; verify VERIFY_REPORT.md results table",
+   "code": "U 07 s02_coverage.py",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "all 23 transits",
+   "notes": ""
+  }
+ ],
+ "conflicts": [
+  {
+   "id": "X-A-01",
+   "quantity": "S6 per-sector template depth of A",
+   "master_ids": "C046",
+   "claims": [
+    {
+     "source": "pubprep",
+     "value": "519 +- 70 ppm (5 events)",
+     "evidence": "addenda/rnaas_tic4206066_pubprep/analysis/out/a1_results.json signals.A.A__pipe.per_sector.6.e_D_inj",
+     "method": "depth at the free-dt timing best fit, equal-weight injection SD errors"
+    },
+    {
+     "source": "audit",
+     "value": "521 +- 53 ppm (6 events)",
+     "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/out/s09_events.json A.pipe.summary.TESSSPOC_S6_PDC",
+     "method": "fixed-tc template fit, covariance x sqrt(chi2red) x beta errors"
+    },
+    {
+     "source": "U",
+     "value": "523 +- 52 / 514 +- 61 / 523 +- 58 ppm",
+     "evidence": "07 out/depths_localbaseline_mann_claret_jit_raw.json S6; verify tests_ms_template.json S6; resolve_R-S6 s6_checks.depths.S6",
+     "method": "template scaling with empirical errors"
+    }
+   ],
+   "trace": "pubprep a1_timing_depths.py analyse_event/sector_depth on its own biweight detrending; audit s09_events.py fit_event; U scripts on 00_data fresh files",
+   "diagnosis": "error-model and event-selection differences (E-795 missing in pubprep windows); central values agree within 9 ppm",
+   "rerun": "OUT/_work/T2_A_shape/out/r01_depths.json (reproduces both stored values from their per-event rows)",
+   "resolution": "S6 = 521 ppm; error 53 (beta) to 61 (empirical)",
+   "reason": "Fixed-tc estimator is unbiased; the free-dt estimator is biased high by about 4% (a1_results.json injections S6 mean_D 530 vs injected 511 ppm). All values agree.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-A-02",
+   "quantity": "S32 per-sector template depth of A",
+   "master_ids": "C047",
+   "claims": [
+    {
+     "source": "pubprep",
+     "value": "484 +- 104 ppm",
+     "evidence": "a1_results.json signals.A.A__pipe.per_sector.32.e_D_inj",
+     "method": "free-dt depth, injection SD 295 ppm/event"
+    },
+    {
+     "source": "audit",
+     "value": "476 +- 52 ppm",
+     "evidence": "s09_events.json A.pipe.summary.SPOC2min_S32_PDC",
+     "method": "fixed-tc, beta errors"
+    },
+    {
+     "source": "U",
+     "value": "475 +- 77 (U07 raw), 480 +- 76 (R-S6), 445 +- 74 (verify)",
+     "evidence": "07 depths_localbaseline...json S32; R-S6_summary.json s6_checks.depths.S32; verify tests_ms_template.json S32",
+     "method": "template scaling, empirical errors"
+    }
+   ],
+   "trace": "as X-A-01",
+   "diagnosis": "The error-model difference is real. The audit's beta-covariance error (52) underestimates the empirical scatter (74-77); pubprep's injection SD with a free time shift overestimates it (104).",
+   "rerun": "OUT/_work/T2_A_shape/out/r01_depths.json",
+   "resolution": "S32 = 476 +- 75 ppm (empirical error)",
+   "reason": "Empirical (shifted-ephemeris) errors capture red noise without the free-dt inflation; three independent codes agree on 74-77.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-A-03",
+   "quantity": "S98 per-sector template depth of A",
+   "master_ids": "C048",
+   "claims": [
+    {
+     "source": "pubprep",
+     "value": "574 +- 42 ppm",
+     "evidence": "a1_results.json signals.A.A__pipe.per_sector.98.e_D_inj; a1_per_transit.csv row A,A,pipe,S98,98,-1 D=0.001093",
+     "method": "free-dt, equal weights"
+    },
+    {
+     "source": "audit",
+     "value": "511 +- 47 ppm",
+     "evidence": "s09_events.json A.pipe.summary.QLP_S98_SYS; row epoch -1 927 +- 253 (beta 1.73)",
+     "method": "fixed-tc, beta errors"
+    },
+    {
+     "source": "U",
+     "value": "514 (U07 raw, epoch -1 = 898), 468 (verify local quadratic, epoch -1 = 78), 403 (U07 biweight, epoch -1 = -234), 517 (R-S6)",
+     "evidence": "07 depths_localbaseline...json S98; verify tests_ms_template.json S98; 07 tests_results.json depths.S98; detrend_variants.json s98_epochs; verify s98_epoch_detrend_diag.json",
+     "method": "template scaling"
+    }
+   ],
+   "trace": "The difference is set by how each code detrends and weights S98 epoch -1 (segment edge, no post-egress baseline).",
+   "diagnosis": "Flawed input event, not a code error. Epoch -1 cannot be measured (-234 to +1285 ppm depending on the detrending). pubprep gives it full weight at 1093 ppm.",
+   "rerun": "OUT/_work/T2_A_shape/out/r01_depths.json: without epoch -1, pubprep 509 +- 44 and audit 496 +- 48",
+   "resolution": "S98 = 496 +- 48 ppm (epoch -1 excluded); 469-509 across codes",
+   "reason": "Removing the one unmeasurable event makes pubprep and the audit agree within 13 ppm.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-A-04",
+   "quantity": "combined (weighted-mean) mid-transit depth of A",
+   "master_ids": "C049",
+   "claims": [
+    {
+     "source": "audit",
+     "value": "503 +- 29 ppm",
+     "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/PUBLICATION_TRUTH.md L108; s17_detrend_robust.json biweight_0.75 (503.37 +- 29.17)",
+     "method": "weighted mean of per-event fixed-tc template depths"
+    },
+    {
+     "source": "pubprep",
+     "value": "551 +- 34 ppm",
+     "evidence": "addenda/rnaas_tic4206066_pubprep/METHOD_AUDIT.md L110",
+     "method": "weighted mean of the three pubprep per-sector depths"
+    }
+   ],
+   "trace": "Both are template (mid-transit) depths. pubprep calls 503 'k^2 x LD factor', but it is the audit's per-event weighted mean (r01 reproduces 503.37 +- 29.17 exactly from s09 rows).",
+   "diagnosis": "pubprep is inflated by S98 epoch -1 (1093 ppm, equal weight) and by the free-dt estimator bias of +4-5%.",
+   "rerun": "OUT/_work/T2_A_shape/out/r01_depths.json pubprep_inj_excl98e-1.combined = 509.0 +- 35.3; audit_s09_beta_excl98e-1 = 497.6 +- 29.4",
+   "resolution": "about 500 ppm (498 +- 29 edge-excluded; 457-512 across all codes)",
+   "reason": "After the same event exclusion both codes agree within 12 ppm.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-A-05",
+   "quantity": "per-sector depth range across six detrendings",
+   "master_ids": "C050",
+   "claims": [
+    {
+     "source": "audit",
+     "value": "483-558 ppm",
+     "evidence": "PUBLICATION_TRUTH.md L124",
+     "method": "summary text"
+    },
+    {
+     "source": "audit",
+     "value": "456.9-558.2 ppm",
+     "evidence": "out/s17_detrend_robust.json cosine_1.0 S32 456.93, cosine_1.0 S98 558.17",
+     "method": "stored JSON"
+    }
+   ],
+   "trace": "s17_detrend_robust.py output vs hand-written summary",
+   "diagnosis": "transcription error in the summary text",
+   "rerun": "none needed: the JSON values were read directly",
+   "resolution": "456.9-558.2 ppm per sector; all-sector means 490-511 ppm",
+   "reason": "The JSON that produced the text outranks the text.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-A-06",
+   "quantity": "own TESScut photometry depth of A, S6",
+   "master_ids": "C051",
+   "claims": [
+    {
+     "source": "audit",
+     "value": "653 +- 56 ppm",
+     "evidence": "s09_events.json A.own.summary.tesscut_s6_r2.5",
+     "method": "own aperture r=2.5 px, fixed-tc, beta errors"
+    },
+    {
+     "source": "pubprep",
+     "value": "695 +- 63 ppm",
+     "evidence": "analysis/out_a1.log L2; a1_results.json signals.A.A__own.per_sector.6",
+     "method": "pubprep own_phot r=2.5, free-dt, injection errors"
+    }
+   ],
+   "trace": "two different aperture-photometry codes, two estimators",
+   "diagnosis": "both valid for their definitions; the gap (42 ppm, 0.5 sigma) is within the estimator bias plus the photometry differences",
+   "rerun": "none needed: a cross-check that does not enter the Note",
+   "resolution": "S6 own photometry 650-700 ppm, above PDCSAP 521; S6 depth scale is photometry-dependent (see unknowns)",
+   "reason": "No Note number uses it.",
+   "status": "NOT_A_CONFLICT"
+  },
+  {
+   "id": "X-A-07",
+   "quantity": "own TESScut photometry depth of A, S32",
+   "master_ids": "C052",
+   "claims": [
+    {
+     "source": "audit",
+     "value": "480 +- 52 ppm",
+     "evidence": "s09_events.json A.own.summary.tesscut_s32_r2.0",
+     "method": "fixed-tc"
+    },
+    {
+     "source": "pubprep",
+     "value": "520 +- 74 ppm",
+     "evidence": "analysis/out_a1.log L2",
+     "method": "free-dt, injection errors"
+    }
+   ],
+   "trace": "as X-A-06",
+   "diagnosis": "estimator and photometry-code difference; 0.4 sigma",
+   "rerun": "none needed",
+   "resolution": "480-520 ppm, consistent with the SPOC value",
+   "reason": "cross-check only",
+   "status": "NOT_A_CONFLICT"
+  },
+  {
+   "id": "X-A-08",
+   "quantity": "own TESScut photometry depth of A, S98",
+   "master_ids": "C053",
+   "claims": [
+    {
+     "source": "audit",
+     "value": "468 +- 41 ppm (15 events)",
+     "evidence": "s09_events.json A.own_nostray.summary.tesscut_s98_r2.0_nostray",
+     "method": "fixed-tc, beta errors"
+    },
+    {
+     "source": "pubprep",
+     "value": "568 +- 62 ppm (15 events)",
+     "evidence": "analysis/out_a1.log L2",
+     "method": "free-dt, equal-weight injection errors"
+    }
+   ],
+   "trace": "as X-A-06; the equal weighting gives edge/scattered-light-adjacent events full weight",
+   "diagnosis": "same mechanism as C048 (equal weights plus free-dt bias); photometry differs as well",
+   "rerun": "none needed",
+   "resolution": "cross-check only; 468-568 ppm",
+   "reason": "not used in the Note",
+   "status": "NOT_A_CONFLICT"
+  },
+  {
+   "id": "X-A-09",
+   "quantity": "T14 of the pubprep timing template vs the audit fitted T14",
+   "master_ids": "C058",
+   "claims": [
+    {
+     "source": "pubprep",
+     "value": "1.888 h",
+     "evidence": "a1_results.json signals.A.A__pipe.template_T14_h",
+     "method": "analytic T14 of template parameters (a1_timing_depths.py L35)"
+    },
+    {
+     "source": "audit",
+     "value": "1.874 +0.048/-0.047 h",
+     "evidence": "FINAL_PARAMETERS.json signal_A.shape_mann_prior.T14_h",
+     "method": "posterior median of derived T14"
+    }
+   ],
+   "trace": "The template uses rho = 2.507 (prior mean, a/R* = 12.37), not the posterior a/R* = 12.47.",
+   "diagnosis": "definition difference; T14 of posterior medians = 1.875 h",
+   "rerun": "OUT/_work/T2_A_shape/out/r03_derived.json C058_*",
+   "resolution": "T14 = 1.87 +- 0.05 h; template 1.888 h is a fixed-shape choice",
+   "reason": "The difference (0.8%) is fully explained, and U showed per-event times and depths do not depend on it.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-A-10",
+   "quantity": "density prior in the Mann-prior fit",
+   "master_ids": "C062",
+   "claims": [
+    {
+     "source": "audit",
+     "value": "N(2.507, 0.2316)",
+     "evidence": "out/fits/fit_A_pipe_mann_frozen_w0.75.json rho_mann; scripts/s08_globalfit.py L38-39",
+     "method": "symmetric Gaussian, sigma = mean of +0.245/-0.218"
+    },
+    {
+     "source": "pubprep",
+     "value": "'+0.25/-0.22'",
+     "evidence": "CHANGES_FROM_CURRENT_DRAFT.md L17",
+     "method": "description"
+    },
+    {
+     "source": "U",
+     "value": "split-normal 2.51 +0.25/-0.22",
+     "evidence": "07_A_shape_radii/s03_jointfit.py L4; verify/v03_fit.py L4",
+     "method": "reruns"
+    }
+   ],
+   "trace": "see claims",
+   "diagnosis": "description mismatch only",
+   "rerun": "none needed: the split-normal U fits give b 0.31-0.37, T14 1.85-1.89, the same as the symmetric fit",
+   "resolution": "The stored fit used a symmetric N(2.507, 0.232); the effect is negligible",
+   "reason": "Parameter posteriors agree within 0.1 sigma.",
+   "status": "COSMETIC"
+  },
+  {
+   "id": "X-A-11",
+   "quantity": "equilibrium temperature of A",
+   "master_ids": "C064",
+   "claims": [
+    {
+     "source": "other",
+     "value": "747 +- 46 K (LEO-vetter)",
+     "evidence": "candidates/tic4206066_p3.182945/candidate.json leo_vetter.Teq; .venv/.../leo_vetter/parameters.py L21-22 (A=0.3)",
+     "method": "Bond albedo 0.3, TIC parameters"
+    },
+    {
+     "source": "audit",
+     "value": "810 +- 22 K",
+     "evidence": "PUBLICATION_TRUTH.md L116",
+     "method": "A_B = 0, full redistribution"
+    }
+   ],
+   "trace": "leo_vetter.equilibrium_temp default A=0.3",
+   "diagnosis": "definition difference (albedo)",
+   "rerun": "OUT/_work/T2_A_shape/out/r03_derived.json Teq_A0.3_full_Teff4030 = 741 K, Teq_A0_full_Teff4020 = 808 K",
+   "resolution": "Teq = 810 +- 22 K (A_B = 0), or about 740 K for A_B = 0.3",
+   "reason": "Both are valid for their stated albedo; not in the Note.",
+   "status": "NOT_A_CONFLICT"
+  },
+  {
+   "id": "X-A-12",
+   "quantity": "odd/even parity labels",
+   "master_ids": "C068",
+   "claims": [
+    {
+     "source": "other",
+     "value": "LEO odd 386 < even 507 ppm",
+     "evidence": "candidate.json leo_vetter.odd_dep/even_dep",
+     "method": "LEO odd_tran = epochs 0, +-2, ... relative to epo (main.py L26-29)"
+    },
+    {
+     "source": "other",
+     "value": "box odd 502 > even 432 ppm",
+     "evidence": "candidate.json odd_even_box_plot_values; pipeline/bundles.py L223",
+     "method": "odd = epn % 2 == 1"
+    }
+   ],
+   "trace": "same epo 3998.7348 in both",
+   "diagnosis": "opposite parity convention; the physical transits agree",
+   "rerun": "none needed: the code definitions settle it",
+   "resolution": "Same transits deeper in both (n odd in the 0-indexed convention); no conflict",
+   "reason": "code-level definition",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-A-13",
+   "quantity": "S6 as confirmation of A (depth part)",
+   "master_ids": "C087",
+   "claims": [
+    {
+     "source": "verif",
+     "value": "'Sector 6 is not a clean confirmation'",
+     "evidence": "independent_verification_tic4206066_SEALED/verification_report.md L14",
+     "method": "narrative (dump proximity)"
+    },
+    {
+     "source": "audit",
+     "value": "'a dump systematic cannot fold coherently at P_A'",
+     "evidence": "PUBLICATION_TRUTH.md L420-421",
+     "method": "narrative"
+    },
+    {
+     "source": "U",
+     "value": "S6 depth 523 +- 58 vs S32+S98 500 +- 45 ppm (z 0.31); dump masks give 486-543 ppm; dump-locked dip S/N 2.4 vs 9.0",
+     "evidence": "referee/resolve_R-S6/out/R-S6_summary.json s6_checks.depths, S6_dumps",
+     "method": "reruns on fresh data"
+    }
+   ],
+   "trace": "U R-S6 s3_s6_checks.py",
+   "diagnosis": "The verification statement predates the dump tests. The S6 depth is consistent with S32+S98 and insensitive to dump masking.",
+   "rerun": "none needed: stored reruns settle the depth part",
+   "resolution": "Depth part: S6 photometry agrees with S32+S98 and is usable for depth and timing; S6 is unusable only for difference images. Whether to call it 'independent confirmation' is a wording choice for another topic.",
+   "reason": "Raw-data reruns outrank the narrative claims.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-A-14",
+   "quantity": "97.7% upper limit on rho* (density free)",
+   "master_ids": "C135",
+   "claims": [
+    {
+     "source": "audit",
+     "value": "'< 3.5 for both priors'",
+     "evidence": "PUBLICATION_TRUTH.md L120",
+     "method": "text"
+    },
+    {
+     "source": "audit",
+     "value": "3.472 (ln-uniform), 3.553 (uniform, importance-reweighted)",
+     "evidence": "FINAL_PARAMETERS.json signal_A.free_density.rho_logprior.p97_7 / rho_uniformprior.p97_7",
+     "method": "emcee"
+    },
+    {
+     "source": "U",
+     "value": "3.40-3.72 (07); 3.51-3.69 (verify); '<~3.6'",
+     "evidence": "07 out/summary_fits.csv; verify summary_verify_fits.csv; proposed_revision/manuscript.tex Sec. 2",
+     "method": "emcee, prior/detrending/LD variants"
+    }
+   ],
+   "trace": "see claims",
+   "diagnosis": "the audit text was wrong for the uniform prior; the limit is prior- and detrending-dependent at +-0.15",
+   "rerun": "none needed: 16+ stored chains",
+   "resolution": "rho* <~ 3.6 rho_sun (97.7%; 3.4-3.7)",
+   "reason": "The stored chains outrank the text; the range covers every variant.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-U-01",
+   "quantity": "V-shape delta-chi2 with red noise",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "U",
+     "value": "21.2 (beta-rescaled) - U 07 F5",
+     "evidence": "07_A_shape_radii/out/tests_results.json vshape.beta_scaled.dchi2",
+     "method": "biweight LC, beta_S98 1.62"
+    },
+    {
+     "source": "U",
+     "value": "31.5-35.0 - verify",
+     "evidence": "07_A_shape_radii/verify/out/vshape_*.json beta.dchi2",
+     "method": "local baselines, beta 1.0-1.17"
+    },
+    {
+     "source": "U",
+     "value": "32 CONFIRMED",
+     "evidence": "NUMERIC_RECHECK.csv L29; REQUIRED_CHANGES.md L58-59",
+     "method": "summary"
+    }
+   ],
+   "trace": "The same model is fitted to two detrendings; beta differs because the biweight S98 residuals include epoch -1.",
+   "diagnosis": "both valid; the value depends on the red-noise treatment",
+   "rerun": "OUT/_work/T2_A_shape/out/r02_vshape.json: white 34-38, beta 21-35, bootstrap 2.5% 17-23, LOO min 28-32",
+   "resolution": "V disfavoured by delta-chi2 >= 21 under every red-noise treatment (32 with white errors)",
+   "reason": "independent rerun with three noise treatments",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-U-02",
+   "quantity": "adopted Rp/R* and Rp",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "U",
+     "value": "k 0.02095, Rp 1.42 +- 0.08 (07 F1)",
+     "evidence": "07 REPORT.md F1",
+     "method": "includes epoch -1 at 898 ppm"
+    },
+    {
+     "source": "U",
+     "value": "k 0.0203 +- 0.0010, Rp 1.38 +- 0.08 (verify)",
+     "evidence": "07 verify/VERIFY_REPORT.md F1 verdict",
+     "method": "epoch -1 excluded"
+    },
+    {
+     "source": "U",
+     "value": "k 0.021 +- 0.001, Rp 1.4 +- 0.1 (proposed revision, REQUIRED_CHANGES B4)",
+     "evidence": "proposed_revision/manuscript.tex Sec. 2; REQUIRED_CHANGES.md L29",
+     "method": "adopted across reductions"
+    }
+   ],
+   "trace": "summary_fits.csv / summary_verify_fits.csv / R-S6 joint fits",
+   "diagnosis": "the high end is driven by epoch -1; the proposed revision centres on the high side",
+   "rerun": "mean of seven edge-excluded stored fits: 0.0204 +- 0.0008 (OUT/_work/T2_A_shape/out/r03_derived.json Rp_k0.0204_0.0008)",
+   "resolution": "k = 0.0204 +- 0.0008 (print 0.0204 +- 0.0010); Rp = 1.39 +- 0.07 (print 1.4 +- 0.1)",
+   "reason": "Excluding the unmeasurable event applies the Note's own two-sided-baseline criterion.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-U-03",
+   "quantity": "'Without Sector 6 all these values change by <0.5 sigma'",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "U",
+     "value": "all within 0.5 sigma",
+     "evidence": "referee/resolve_R-S6 (_structured/resolve__R-S6.json); NUMERIC_RECHECK.csv L80",
+     "method": "no-S6 values vs quoted manuscript values"
+    },
+    {
+     "source": "U",
+     "value": "like-for-like T14 -0.55 sigma; phase-0.5 depth 0.64-0.81 sigma; biweight k -0.78 sigma",
+     "evidence": "R-S6_summary.json joint_fits, s6_checks.phase05 (derived in OUT/_work/T2_A_shape/out/r03_derived.json S6_drop)",
+     "method": "same-code refit with/without S6"
+    }
+   ],
+   "trace": "R-S6 fits",
+   "diagnosis": "The <0.5 sigma claim holds only against the quoted values, not like-for-like.",
+   "rerun": "OUT/_work/T2_A_shape/out/r03_derived.json S6_drop",
+   "resolution": "'<1 sigma' is true in both comparisons",
+   "reason": "The same-code comparison is the relevant test of what Sector 6 contributes.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-UP-01",
+   "quantity": "usability of Sector 6 events",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "P",
+     "value": "S6: no usable events (every transit has a momentum dump within +-0.35 d)",
+     "evidence": "addenda/tic4206066_pixel_recheck/SUMMARY.md 'Results - Signal A' table and s03 rule",
+     "method": "pixel-level per-event decorrelation, dump rule"
+    },
+    {
+     "source": "U",
+     "value": "S6 photometric depth and timing unaffected by the dumps",
+     "evidence": "referee/resolve_R-S6/out/R-S6_summary.json s6_checks.S6_dumps",
+     "method": "dump masking / free steps"
+    }
+   ],
+   "trace": "different questions: P tests the aperture-dependent depth with centroid decorrelation; U tests the pipeline-aperture depth",
+   "diagnosis": "definition difference",
+   "rerun": "none needed",
+   "resolution": "S6 is usable for pipeline-aperture depth, timing and shape; it is not usable for pixel-level tests (difference images, aperture-differential depths)",
+   "reason": "The two statements do not contradict each other.",
+   "status": "NOT_A_CONFLICT"
+  },
+  {
+   "id": "X-M-01",
+   "quantity": "CF 240 chi2 of constant across sectors",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "M",
+     "value": "1.6 for 2 dof",
+     "evidence": "tic4206066_MASTER_EVIDENCE/CURRENT_FACTS.csv L240 <- pubprep MANUSCRIPT_NUMBER_AUDIT.csv L27 (hard-coded note, pubprep audit/number_audit.py L47)",
+     "method": "not recomputed"
+    },
+    {
+     "source": "other",
+     "value": "0.92 for 2 dof (same inputs, weighted mean); 0.08-3.06 across methods",
+     "evidence": "OUT/_work/T2_A_shape/out/r01_depths.json",
+     "method": "recomputed"
+    }
+   ],
+   "trace": "hard-coded string",
+   "diagnosis": "unsupported number (the unweighted mean gives 1.5)",
+   "rerun": "OUT/_work/T2_A_shape/out/r01_depths.json",
+   "resolution": "chi2 = 0.92/2 for pubprep's own values; 0.08-3.06/2 across methods",
+   "reason": "recomputed from stored per-sector values",
+   "status": "COSMETIC"
+  }
+ ],
+ "manuscript_findings": [
+  {
+   "quote": "across reduction choices $R_p/R_\\star=0.0195$--0.0212, so I adopt $0.021\\pm0.001$ and $R_p=1.4\\pm0.1\\,R_\\oplus$",
+   "problem": "The adopted centre sits at the upper end of the stated range, because the upper end comes from reductions that include the unmeasurable S98 segment-edge transit. Edge-excluded reductions give 0.0204 +- 0.0008. Rp = 1.4 +- 0.1 is correct.",
+   "fix": "across reduction choices $R_p/R_\\star=0.0195$--0.0212, so I adopt $0.0204\\pm0.0010$ and $R_p=1.4\\pm0.1\\,R_\\oplus$",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "and a V shape is disfavored ($\\Delta\\chi^2=32$)",
+   "problem": "32 is the white-noise value (chi2 rescaled to chi2_red = 1). With red-noise (beta) rescaling it drops to 21-35 depending on the detrending (own rerun r02; U 07 F5). The conclusion holds, but the number overstates the significance under red noise.",
+   "fix": "and a V shape is disfavored ($\\Delta\\chi^2=32$; $\\geq21$ allowing for red noise)",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "Without Sector 6 all these values change by $<0.5\\sigma$.",
+   "problem": "In a like-for-like refit without S6, T14 moves by 0.55 sigma, the phase-0.5 depth by 0.64-0.81 sigma, and k in the biweight reduction by 0.78 sigma. The <0.5 sigma claim holds only when comparing no-S6 values with the quoted numbers.",
+   "fix": "Without Sector 6 all these values change by $<1\\sigma$.",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "the phase-0.5 depth is $-20\\pm32$\\,ppm",
+   "problem": "None. The stored value is a box depth (s10_eb_tests.py L42), so the sign is correct as written (flux +20 ppm). An optional clarification is '(no dip; $3\\sigma<95$\\,ppm)'.",
+   "fix": "the phase-0.5 depth is $-20\\pm32$\\,ppm",
+   "severity": "NONE"
+  },
+  {
+   "quote": "The 3.18\\,d signal (23 transits, $\\approx$500\\,ppm) corresponds to a $1.4\\pm0.1\\,R_\\oplus$ planet",
+   "problem": "None. The combined template depth is 498-503 ppm (457-512 across codes); Rp = 1.39 +- 0.07.",
+   "fix": "The 3.18\\,d signal (23 transits, $\\approx$500\\,ppm) corresponds to a $1.4\\pm0.1\\,R_\\oplus$ planet",
+   "severity": "NONE"
+  },
+  {
+   "quote": "gives $b=0.35^{+0.10}_{-0.14}$ and $T_{14}=1.87\\pm0.05$\\,h",
+   "problem": "None. Reruns give b 0.30-0.37 and T14 1.84-1.91 h.",
+   "fix": "gives $b=0.35^{+0.10}_{-0.14}$ and $T_{14}=1.87\\pm0.05$\\,h",
+   "severity": "NONE"
+  },
+  {
+   "quote": "With the density free, $\\rho_\\star\\lesssim3.6\\,\\rho_\\odot$ (97.7\\%).",
+   "problem": "None. Stored chains give 3.40-3.72; '<~' covers this, and 3.6-3.7 matches the Sec. 4 host limit of about 0.52 Msun.",
+   "fix": "With the density free, $\\rho_\\star\\lesssim3.6\\,\\rho_\\odot$ (97.7\\%).",
+   "severity": "NONE"
+  },
+  {
+   "quote": "Per-sector depths and odd and even transits agree",
+   "problem": "None. Chi2 of a constant across sectors is 0.08-3.1 for 2 dof; odd-even differs by 0.6-1.4 sigma in the per-event template methods (2.2 sigma only in the fold-box method, whose sign reverses in the independent photometry).",
+   "fix": "Per-sector depths and odd and even transits agree",
+   "severity": "NONE"
+  }
+ ],
+ "unknowns": [
+  {
+   "item": "True depth of S98 epoch -1 (BTJD 3995.555)",
+   "why": "It sits at a scattered-light segment edge on a ~4000 ppm/d ramp with no post-egress baseline; four detrendings give -109 to +1285 ppm.",
+   "would_resolve": "Nothing in existing data; exclude it (22-transit fit) or state the spread.",
+   "blocks_submission": false
+  },
+  {
+   "item": "S6 depth scale across photometry products (PDCSAP 521, SAP 700, own TESScut 653/695, eleanor 857, TGLC 982 ppm)",
+   "why": "CROWDSAP = 0.995, so dilution correction is not the cause; detrending of 30-min SAP/FFI photometry near momentum dumps probably is, but no source demonstrates it.",
+   "would_resolve": "A same-baseline, per-event comparison of S6 SAP vs PDCSAP (local linear baselines, dump cadences masked).",
+   "blocks_submission": false
+  },
+  {
+   "item": "Aperture dependence of the S98 depth (T9 global-detrend method 200 +- 73 ppm deeper in r<=1 px vs per-event local correction +20 +- 49 ppm)",
+   "why": "The two methods disagree by about 2 sigma in P and the cause is not identified; the Note makes no aperture claim.",
+   "would_resolve": "Pixel-level decorrelated per-event fit with both apertures (pixel topic).",
+   "blocks_submission": false
+  }
+ ],
+ "files_written": [
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T2_A_shape/r01_depths_from_stored_rows.py",
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T2_A_shape/r02_vshape_rednoise.py",
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T2_A_shape/r03_derived.py",
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T2_A_shape/out/r01_depths.json",
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T2_A_shape/out/r01.log",
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T2_A_shape/out/r02_vshape.json",
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T2_A_shape/out/r02.log",
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T2_A_shape/out/r03_derived.json",
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T2_A_shape/out/r03.log",
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T2_A_shape/result.json"
+ ]
+}

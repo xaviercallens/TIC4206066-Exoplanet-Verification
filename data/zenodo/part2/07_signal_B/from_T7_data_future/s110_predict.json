@@ -1,0 +1,696 @@
+{
+ "segments_listed": [
+  {
+   "start": "2026-10-31 23:55:00.000",
+   "end": "2026-11-06 21:35:00.000",
+   "orbit": 231
+  },
+  {
+   "start": "2026-11-07 02:35:00.000",
+   "end": "2026-11-13 19:55:00.000",
+   "orbit": 231
+  },
+  {
+   "start": "2026-11-14 00:55:00.000",
+   "end": "2026-11-19 20:45:00.000",
+   "orbit": 232
+  }
+ ],
+ "sector_start_utc": "2026-10-31 23:55:00.000",
+ "listed_coverage_end_utc": "2026-11-19 20:45:00.000",
+ "last_segment_start_assumed_utc": "2026-11-20 01:45:00.000",
+ "ephemerides": {
+  "A_U": {
+   "P": 3.182785,
+   "eP": 6e-06,
+   "T0_bjd": 2460998.736,
+   "eT0": 0.003,
+   "source": "U/proposed_revision/manuscript.tex Sect.2",
+   "events": [
+    {
+     "n": 108,
+     "bjd_tdb": 2461342.47678,
+     "btjd": 4342.47678,
+     "utc_naive": "2026-10-28 23:25:24",
+     "utc_obs": "2026-10-28 23:20:06",
+     "obs_minus_naive_min": -5.3,
+     "sigma_min": 4.42,
+     "ingress_obs": "2026-10-28 22:24",
+     "egress_obs": "2026-10-29 00:16",
+     "status": "before_sector"
+    },
+    {
+     "n": 109,
+     "bjd_tdb": 2461345.659565,
+     "btjd": 4345.659565,
+     "utc_naive": "2026-11-01 03:48:37",
+     "utc_obs": "2026-11-01 03:43:02",
+     "obs_minus_naive_min": -5.58,
+     "sigma_min": 4.42,
+     "ingress_obs": "2026-11-01 02:46",
+     "egress_obs": "2026-11-01 04:39",
+     "status": "in_listed_segment_orbit231"
+    },
+    {
+     "n": 110,
+     "bjd_tdb": 2461348.84235,
+     "btjd": 4348.84235,
+     "utc_naive": "2026-11-04 08:11:49",
+     "utc_obs": "2026-11-04 08:05:59",
+     "obs_minus_naive_min": -5.85,
+     "sigma_min": 4.42,
+     "ingress_obs": "2026-11-04 07:09",
+     "egress_obs": "2026-11-04 09:02",
+     "status": "in_listed_segment_orbit231"
+    },
+    {
+     "n": 111,
+     "bjd_tdb": 2461352.025135,
+     "btjd": 4352.025135,
+     "utc_naive": "2026-11-07 12:35:02",
+     "utc_obs": "2026-11-07 12:28:57",
+     "obs_minus_naive_min": -6.09,
+     "sigma_min": 4.43,
+     "ingress_obs": "2026-11-07 11:32",
+     "egress_obs": "2026-11-07 13:25",
+     "status": "in_listed_segment_orbit231"
+    },
+    {
+     "n": 112,
+     "bjd_tdb": 2461355.20792,
+     "btjd": 4355.20792,
+     "utc_naive": "2026-11-10 16:58:15",
+     "utc_obs": "2026-11-10 16:51:56",
+     "obs_minus_naive_min": -6.32,
+     "sigma_min": 4.43,
+     "ingress_obs": "2026-11-10 15:55",
+     "egress_obs": "2026-11-10 17:48",
+     "status": "in_listed_segment_orbit231"
+    },
+    {
+     "n": 113,
+     "bjd_tdb": 2461358.390705,
+     "btjd": 4358.390705,
+     "utc_naive": "2026-11-13 21:21:27",
+     "utc_obs": "2026-11-13 21:14:56",
+     "obs_minus_naive_min": -6.53,
+     "sigma_min": 4.43,
+     "ingress_obs": "2026-11-13 20:18",
+     "egress_obs": "2026-11-13 22:11",
+     "status": "in_gap_2026-11-13 19:55_2026-11-14 00:55"
+    },
+    {
+     "n": 114,
+     "bjd_tdb": 2461361.57349,
+     "btjd": 4361.57349,
+     "utc_naive": "2026-11-17 01:44:40",
+     "utc_obs": "2026-11-17 01:37:57",
+     "obs_minus_naive_min": -6.71,
+     "sigma_min": 4.43,
+     "ingress_obs": "2026-11-17 00:41",
+     "egress_obs": "2026-11-17 02:34",
+     "status": "in_listed_segment_orbit232"
+    },
+    {
+     "n": 115,
+     "bjd_tdb": 2461364.756275,
+     "btjd": 4364.756275,
+     "utc_naive": "2026-11-20 06:07:52",
+     "utc_obs": "2026-11-20 06:01:00",
+     "obs_minus_naive_min": -6.88,
+     "sigma_min": 4.43,
+     "ingress_obs": "2026-11-20 05:04",
+     "egress_obs": "2026-11-20 06:57",
+     "status": "after_listed_coverage (final segment unpublished)"
+    },
+    {
+     "n": 116,
+     "bjd_tdb": 2461367.93906,
+     "btjd": 4367.93906,
+     "utc_naive": "2026-11-23 10:31:05",
+     "utc_obs": "2026-11-23 10:24:04",
+     "obs_minus_naive_min": -7.02,
+     "sigma_min": 4.43,
+     "ingress_obs": "2026-11-23 09:27",
+     "egress_obs": "2026-11-23 11:20",
+     "status": "after_listed_coverage (final segment unpublished)"
+    },
+    {
+     "n": 117,
+     "bjd_tdb": 2461371.121845,
+     "btjd": 4371.121845,
+     "utc_naive": "2026-11-26 14:54:18",
+     "utc_obs": "2026-11-26 14:47:09",
+     "obs_minus_naive_min": -7.15,
+     "sigma_min": 4.44,
+     "ingress_obs": "2026-11-26 13:51",
+     "egress_obs": "2026-11-26 15:43",
+     "status": "after_listed_coverage (final segment unpublished)"
+    },
+    {
+     "n": 118,
+     "bjd_tdb": 2461374.30463,
+     "btjd": 4374.30463,
+     "utc_naive": "2026-11-29 19:17:30",
+     "utc_obs": "2026-11-29 19:10:16",
+     "obs_minus_naive_min": -7.25,
+     "sigma_min": 4.44,
+     "ingress_obs": "2026-11-29 18:14",
+     "egress_obs": "2026-11-29 20:06",
+     "status": "after_listed_coverage (final segment unpublished)"
+    }
+   ],
+   "counts": {
+    "Oct31_00_Nov26_00_obs": 8,
+    "Oct31_00_Nov27_00_obs": 9,
+    "Oct31_2355_Nov26_24_obs": 9,
+    "in_listed_segments_full": 5,
+    "in_listed_gaps": 1
+   }
+  },
+  "A_pubprep": {
+   "P": 3.1827856,
+   "eP": 5.8e-06,
+   "T0_bjd": 2460998.7375,
+   "eT0": 0.0023,
+   "source": "U/01_ephemeris_A/a_common.py MS_PA/MS_T0A = pubprep manuscript",
+   "events": [
+    {
+     "n": 108,
+     "bjd_tdb": 2461342.478345,
+     "btjd": 4342.478345,
+     "utc_naive": "2026-10-28 23:27:39",
+     "utc_obs": "2026-10-28 23:22:21",
+     "obs_minus_naive_min": -5.3,
+     "sigma_min": 3.43,
+     "ingress_obs": "2026-10-28 22:26",
+     "egress_obs": "2026-10-29 00:18",
+     "status": "before_sector"
+    },
+    {
+     "n": 109,
+     "bjd_tdb": 2461345.66113,
+     "btjd": 4345.66113,
+     "utc_naive": "2026-11-01 03:50:52",
+     "utc_obs": "2026-11-01 03:45:17",
+     "obs_minus_naive_min": -5.58,
+     "sigma_min": 3.43,
+     "ingress_obs": "2026-11-01 02:49",
+     "egress_obs": "2026-11-01 04:41",
+     "status": "in_listed_segment_orbit231"
+    },
+    {
+     "n": 110,
+     "bjd_tdb": 2461348.843916,
+     "btjd": 4348.843916,
+     "utc_naive": "2026-11-04 08:14:05",
+     "utc_obs": "2026-11-04 08:08:14",
+     "obs_minus_naive_min": -5.85,
+     "sigma_min": 3.44,
+     "ingress_obs": "2026-11-04 07:12",
+     "egress_obs": "2026-11-04 09:04",
+     "status": "in_listed_segment_orbit231"
+    },
+    {
+     "n": 111,
+     "bjd_tdb": 2461352.026702,
+     "btjd": 4352.026702,
+     "utc_naive": "2026-11-07 12:37:17",
+     "utc_obs": "2026-11-07 12:31:12",
+     "obs_minus_naive_min": -6.09,
+     "sigma_min": 3.44,
+     "ingress_obs": "2026-11-07 11:35",
+     "egress_obs": "2026-11-07 13:27",
+     "status": "in_listed_segment_orbit231"
+    },
+    {
+     "n": 112,
+     "bjd_tdb": 2461355.209487,
+     "btjd": 4355.209487,
+     "utc_naive": "2026-11-10 17:00:30",
+     "utc_obs": "2026-11-10 16:54:11",
+     "obs_minus_naive_min": -6.32,
+     "sigma_min": 3.44,
+     "ingress_obs": "2026-11-10 15:58",
+     "egress_obs": "2026-11-10 17:50",
+     "status": "in_listed_segment_orbit231"
+    },
+    {
+     "n": 113,
+     "bjd_tdb": 2461358.392273,
+     "btjd": 4358.392273,
+     "utc_naive": "2026-11-13 21:23:43",
+     "utc_obs": "2026-11-13 21:17:11",
+     "obs_minus_naive_min": -6.53,
+     "sigma_min": 3.44,
+     "ingress_obs": "2026-11-13 20:21",
+     "egress_obs": "2026-11-13 22:13",
+     "status": "in_gap_2026-11-13 19:55_2026-11-14 00:55"
+    },
+    {
+     "n": 114,
+     "bjd_tdb": 2461361.575058,
+     "btjd": 4361.575058,
+     "utc_naive": "2026-11-17 01:46:55",
+     "utc_obs": "2026-11-17 01:40:13",
+     "obs_minus_naive_min": -6.71,
+     "sigma_min": 3.45,
+     "ingress_obs": "2026-11-17 00:44",
+     "egress_obs": "2026-11-17 02:36",
+     "status": "in_listed_segment_orbit232"
+    },
+    {
+     "n": 115,
+     "bjd_tdb": 2461364.757844,
+     "btjd": 4364.757844,
+     "utc_naive": "2026-11-20 06:10:08",
+     "utc_obs": "2026-11-20 06:03:15",
+     "obs_minus_naive_min": -6.88,
+     "sigma_min": 3.45,
+     "ingress_obs": "2026-11-20 05:07",
+     "egress_obs": "2026-11-20 06:59",
+     "status": "after_listed_coverage (final segment unpublished)"
+    },
+    {
+     "n": 116,
+     "bjd_tdb": 2461367.94063,
+     "btjd": 4367.94063,
+     "utc_naive": "2026-11-23 10:33:21",
+     "utc_obs": "2026-11-23 10:26:19",
+     "obs_minus_naive_min": -7.02,
+     "sigma_min": 3.45,
+     "ingress_obs": "2026-11-23 09:30",
+     "egress_obs": "2026-11-23 11:22",
+     "status": "after_listed_coverage (final segment unpublished)"
+    },
+    {
+     "n": 117,
+     "bjd_tdb": 2461371.123415,
+     "btjd": 4371.123415,
+     "utc_naive": "2026-11-26 14:56:33",
+     "utc_obs": "2026-11-26 14:49:25",
+     "obs_minus_naive_min": -7.15,
+     "sigma_min": 3.45,
+     "ingress_obs": "2026-11-26 13:53",
+     "egress_obs": "2026-11-26 15:45",
+     "status": "after_listed_coverage (final segment unpublished)"
+    },
+    {
+     "n": 118,
+     "bjd_tdb": 2461374.306201,
+     "btjd": 4374.306201,
+     "utc_naive": "2026-11-29 19:19:46",
+     "utc_obs": "2026-11-29 19:12:31",
+     "obs_minus_naive_min": -7.25,
+     "sigma_min": 3.46,
+     "ingress_obs": "2026-11-29 18:16",
+     "egress_obs": "2026-11-29 20:08",
+     "status": "after_listed_coverage (final segment unpublished)"
+    }
+   ],
+   "counts": {
+    "Oct31_00_Nov26_00_obs": 8,
+    "Oct31_00_Nov27_00_obs": 9,
+    "Oct31_2355_Nov26_24_obs": 9,
+    "in_listed_segments_full": 5,
+    "in_listed_gaps": 1
+   }
+  },
+  "A_audit": {
+   "P": 3.182785293657263,
+   "eP": null,
+   "T0_bjd": 2460998.7367930333,
+   "eT0": null,
+   "source": "audit/out/ephem_current.json A (sigma from audit/out/s16_s110.json)",
+   "events": [
+    {
+     "n": 108,
+     "bjd_tdb": 2461342.477605,
+     "btjd": 4342.477605,
+     "utc_naive": "2026-10-28 23:26:35",
+     "utc_obs": "2026-10-28 23:21:17",
+     "obs_minus_naive_min": -5.3,
+     "sigma_min": null,
+     "ingress_obs": "2026-10-28 22:25",
+     "egress_obs": "2026-10-29 00:17",
+     "status": "before_sector"
+    },
+    {
+     "n": 109,
+     "bjd_tdb": 2461345.66039,
+     "btjd": 4345.66039,
+     "utc_naive": "2026-11-01 03:49:48",
+     "utc_obs": "2026-11-01 03:44:13",
+     "obs_minus_naive_min": -5.58,
+     "sigma_min": null,
+     "ingress_obs": "2026-11-01 02:48",
+     "egress_obs": "2026-11-01 04:40",
+     "status": "in_listed_segment_orbit231"
+    },
+    {
+     "n": 110,
+     "bjd_tdb": 2461348.843175,
+     "btjd": 4348.843175,
+     "utc_naive": "2026-11-04 08:13:01",
+     "utc_obs": "2026-11-04 08:07:10",
+     "obs_minus_naive_min": -5.85,
+     "sigma_min": null,
+     "ingress_obs": "2026-11-04 07:11",
+     "egress_obs": "2026-11-04 09:03",
+     "status": "in_listed_segment_orbit231"
+    },
+    {
+     "n": 111,
+     "bjd_tdb": 2461352.025961,
+     "btjd": 4352.025961,
+     "utc_naive": "2026-11-07 12:36:13",
+     "utc_obs": "2026-11-07 12:30:08",
+     "obs_minus_naive_min": -6.09,
+     "sigma_min": null,
+     "ingress_obs": "2026-11-07 11:34",
+     "egress_obs": "2026-11-07 13:26",
+     "status": "in_listed_segment_orbit231"
+    },
+    {
+     "n": 112,
+     "bjd_tdb": 2461355.208746,
+     "btjd": 4355.208746,
+     "utc_naive": "2026-11-10 16:59:26",
+     "utc_obs": "2026-11-10 16:53:07",
+     "obs_minus_naive_min": -6.32,
+     "sigma_min": null,
+     "ingress_obs": "2026-11-10 15:57",
+     "egress_obs": "2026-11-10 17:49",
+     "status": "in_listed_segment_orbit231"
+    },
+    {
+     "n": 113,
+     "bjd_tdb": 2461358.391531,
+     "btjd": 4358.391531,
+     "utc_naive": "2026-11-13 21:22:39",
+     "utc_obs": "2026-11-13 21:16:07",
+     "obs_minus_naive_min": -6.53,
+     "sigma_min": null,
+     "ingress_obs": "2026-11-13 20:20",
+     "egress_obs": "2026-11-13 22:12",
+     "status": "in_gap_2026-11-13 19:55_2026-11-14 00:55"
+    },
+    {
+     "n": 114,
+     "bjd_tdb": 2461361.574317,
+     "btjd": 4361.574317,
+     "utc_naive": "2026-11-17 01:45:51",
+     "utc_obs": "2026-11-17 01:39:09",
+     "obs_minus_naive_min": -6.71,
+     "sigma_min": null,
+     "ingress_obs": "2026-11-17 00:43",
+     "egress_obs": "2026-11-17 02:35",
+     "status": "in_listed_segment_orbit232"
+    },
+    {
+     "n": 115,
+     "bjd_tdb": 2461364.757102,
+     "btjd": 4364.757102,
+     "utc_naive": "2026-11-20 06:09:04",
+     "utc_obs": "2026-11-20 06:02:11",
+     "obs_minus_naive_min": -6.88,
+     "sigma_min": null,
+     "ingress_obs": "2026-11-20 05:06",
+     "egress_obs": "2026-11-20 06:58",
+     "status": "after_listed_coverage (final segment unpublished)"
+    },
+    {
+     "n": 116,
+     "bjd_tdb": 2461367.939887,
+     "btjd": 4367.939887,
+     "utc_naive": "2026-11-23 10:32:17",
+     "utc_obs": "2026-11-23 10:25:15",
+     "obs_minus_naive_min": -7.02,
+     "sigma_min": null,
+     "ingress_obs": "2026-11-23 09:29",
+     "egress_obs": "2026-11-23 11:21",
+     "status": "after_listed_coverage (final segment unpublished)"
+    },
+    {
+     "n": 117,
+     "bjd_tdb": 2461371.122672,
+     "btjd": 4371.122672,
+     "utc_naive": "2026-11-26 14:55:29",
+     "utc_obs": "2026-11-26 14:48:21",
+     "obs_minus_naive_min": -7.15,
+     "sigma_min": null,
+     "ingress_obs": "2026-11-26 13:52",
+     "egress_obs": "2026-11-26 15:44",
+     "status": "after_listed_coverage (final segment unpublished)"
+    },
+    {
+     "n": 118,
+     "bjd_tdb": 2461374.305458,
+     "btjd": 4374.305458,
+     "utc_naive": "2026-11-29 19:18:42",
+     "utc_obs": "2026-11-29 19:11:27",
+     "obs_minus_naive_min": -7.25,
+     "sigma_min": null,
+     "ingress_obs": "2026-11-29 18:15",
+     "egress_obs": "2026-11-29 20:07",
+     "status": "after_listed_coverage (final segment unpublished)"
+    }
+   ],
+   "counts": {
+    "Oct31_00_Nov26_00_obs": 8,
+    "Oct31_00_Nov27_00_obs": 9,
+    "Oct31_2355_Nov26_24_obs": 9,
+    "in_listed_segments_full": 5,
+    "in_listed_gaps": 1
+   }
+  },
+  "B_U": {
+   "P": 11.13274,
+   "eP": 3e-05,
+   "T0_bjd": 2461000.865,
+   "eT0": 0.003,
+   "source": "U/proposed_revision/manuscript.tex Sect.3",
+   "events": [
+    {
+     "n": 30,
+     "bjd_tdb": 2461334.8472,
+     "btjd": 4334.8472,
+     "utc_naive": "2026-10-21 08:18:48",
+     "utc_obs": "2026-10-21 08:14:15",
+     "obs_minus_naive_min": -4.56,
+     "sigma_min": 4.51,
+     "ingress_obs": "2026-10-21 07:24",
+     "egress_obs": "2026-10-21 09:04",
+     "status": "before_sector"
+    },
+    {
+     "n": 31,
+     "bjd_tdb": 2461345.97994,
+     "btjd": 4345.97994,
+     "utc_naive": "2026-11-01 11:29:57",
+     "utc_obs": "2026-11-01 11:24:21",
+     "obs_minus_naive_min": -5.61,
+     "sigma_min": 4.52,
+     "ingress_obs": "2026-11-01 10:34",
+     "egress_obs": "2026-11-01 12:14",
+     "status": "in_listed_segment_orbit231"
+    },
+    {
+     "n": 32,
+     "bjd_tdb": 2461357.11268,
+     "btjd": 4357.11268,
+     "utc_naive": "2026-11-12 14:41:06",
+     "utc_obs": "2026-11-12 14:34:39",
+     "obs_minus_naive_min": -6.44,
+     "sigma_min": 4.54,
+     "ingress_obs": "2026-11-12 13:44",
+     "egress_obs": "2026-11-12 15:24",
+     "status": "in_listed_segment_orbit231"
+    },
+    {
+     "n": 33,
+     "bjd_tdb": 2461368.24542,
+     "btjd": 4368.24542,
+     "utc_naive": "2026-11-23 17:52:15",
+     "utc_obs": "2026-11-23 17:45:12",
+     "obs_minus_naive_min": -7.04,
+     "sigma_min": 4.55,
+     "ingress_obs": "2026-11-23 16:55",
+     "egress_obs": "2026-11-23 18:35",
+     "status": "after_listed_coverage (final segment unpublished)"
+    },
+    {
+     "n": 34,
+     "bjd_tdb": 2461379.37816,
+     "btjd": 4379.37816,
+     "utc_naive": "2026-12-04 21:03:23",
+     "utc_obs": "2026-12-04 20:56:02",
+     "obs_minus_naive_min": -7.36,
+     "sigma_min": 4.56,
+     "ingress_obs": "2026-12-04 20:06",
+     "egress_obs": "2026-12-04 21:45",
+     "status": "after_listed_coverage (final segment unpublished)"
+    }
+   ],
+   "counts": {
+    "Oct31_00_Nov26_00_obs": 3,
+    "Oct31_00_Nov27_00_obs": 3,
+    "Oct31_2355_Nov26_24_obs": 3,
+    "in_listed_segments_full": 2,
+    "in_listed_gaps": 0
+   }
+  },
+  "B_audit": {
+   "P": 11.132745380039134,
+   "eP": null,
+   "T0_bjd": 2461000.8658739612,
+   "eT0": null,
+   "source": "audit/out/ephem_current.json B (sigma from audit/out/s16_s110.json)",
+   "events": [
+    {
+     "n": 30,
+     "bjd_tdb": 2461334.848235,
+     "btjd": 4334.848235,
+     "utc_naive": "2026-10-21 08:20:18",
+     "utc_obs": "2026-10-21 08:15:44",
+     "obs_minus_naive_min": -4.56,
+     "sigma_min": null,
+     "ingress_obs": "2026-10-21 07:25",
+     "egress_obs": "2026-10-21 09:05",
+     "status": "before_sector"
+    },
+    {
+     "n": 31,
+     "bjd_tdb": 2461345.980981,
+     "btjd": 4345.980981,
+     "utc_naive": "2026-11-01 11:31:27",
+     "utc_obs": "2026-11-01 11:25:51",
+     "obs_minus_naive_min": -5.61,
+     "sigma_min": null,
+     "ingress_obs": "2026-11-01 10:36",
+     "egress_obs": "2026-11-01 12:15",
+     "status": "in_listed_segment_orbit231"
+    },
+    {
+     "n": 32,
+     "bjd_tdb": 2461357.113726,
+     "btjd": 4357.113726,
+     "utc_naive": "2026-11-12 14:42:36",
+     "utc_obs": "2026-11-12 14:36:10",
+     "obs_minus_naive_min": -6.44,
+     "sigma_min": null,
+     "ingress_obs": "2026-11-12 13:46",
+     "egress_obs": "2026-11-12 15:25",
+     "status": "in_listed_segment_orbit231"
+    },
+    {
+     "n": 33,
+     "bjd_tdb": 2461368.246472,
+     "btjd": 4368.246472,
+     "utc_naive": "2026-11-23 17:53:45",
+     "utc_obs": "2026-11-23 17:46:43",
+     "obs_minus_naive_min": -7.04,
+     "sigma_min": null,
+     "ingress_obs": "2026-11-23 16:56",
+     "egress_obs": "2026-11-23 18:36",
+     "status": "after_listed_coverage (final segment unpublished)"
+    },
+    {
+     "n": 34,
+     "bjd_tdb": 2461379.379217,
+     "btjd": 4379.379217,
+     "utc_naive": "2026-12-04 21:04:55",
+     "utc_obs": "2026-12-04 20:57:33",
+     "obs_minus_naive_min": -7.36,
+     "sigma_min": null,
+     "ingress_obs": "2026-12-04 20:07",
+     "egress_obs": "2026-12-04 21:47",
+     "status": "after_listed_coverage (final segment unpublished)"
+    }
+   ],
+   "counts": {
+    "Oct31_00_Nov26_00_obs": 3,
+    "Oct31_00_Nov27_00_obs": 3,
+    "Oct31_2355_Nov26_24_obs": 3,
+    "in_listed_segments_full": 2,
+    "in_listed_gaps": 0
+   }
+  },
+  "B_pubprep": {
+   "P": 11.132738735768573,
+   "eP": 3.068946752541719e-05,
+   "T0_bjd": 2461000.865000048,
+   "eT0": 0.0030752564161342496,
+   "source": "pubprep/analysis/out/a1_results.json signals.B.B_mann__pipe.ephemeris.e_dt_inj_min (scaled errors)",
+   "events": [
+    {
+     "n": 30,
+     "bjd_tdb": 2461334.847162,
+     "btjd": 4334.847162,
+     "utc_naive": "2026-10-21 08:18:45",
+     "utc_obs": "2026-10-21 08:14:11",
+     "obs_minus_naive_min": -4.56,
+     "sigma_min": 4.62,
+     "ingress_obs": "2026-10-21 07:24",
+     "egress_obs": "2026-10-21 09:03",
+     "status": "before_sector"
+    },
+    {
+     "n": 31,
+     "bjd_tdb": 2461345.979901,
+     "btjd": 4345.979901,
+     "utc_naive": "2026-11-01 11:29:54",
+     "utc_obs": "2026-11-01 11:24:17",
+     "obs_minus_naive_min": -5.61,
+     "sigma_min": 4.64,
+     "ingress_obs": "2026-11-01 10:34",
+     "egress_obs": "2026-11-01 12:14",
+     "status": "in_listed_segment_orbit231"
+    },
+    {
+     "n": 32,
+     "bjd_tdb": 2461357.11264,
+     "btjd": 4357.11264,
+     "utc_naive": "2026-11-12 14:41:02",
+     "utc_obs": "2026-11-12 14:34:36",
+     "obs_minus_naive_min": -6.44,
+     "sigma_min": 4.65,
+     "ingress_obs": "2026-11-12 13:44",
+     "egress_obs": "2026-11-12 15:24",
+     "status": "in_listed_segment_orbit231"
+    },
+    {
+     "n": 33,
+     "bjd_tdb": 2461368.245378,
+     "btjd": 4368.245378,
+     "utc_naive": "2026-11-23 17:52:11",
+     "utc_obs": "2026-11-23 17:45:09",
+     "obs_minus_naive_min": -7.04,
+     "sigma_min": 4.66,
+     "ingress_obs": "2026-11-23 16:55",
+     "egress_obs": "2026-11-23 18:34",
+     "status": "after_listed_coverage (final segment unpublished)"
+    },
+    {
+     "n": 34,
+     "bjd_tdb": 2461379.378117,
+     "btjd": 4379.378117,
+     "utc_naive": "2026-12-04 21:03:20",
+     "utc_obs": "2026-12-04 20:55:58",
+     "obs_minus_naive_min": -7.36,
+     "sigma_min": 4.68,
+     "ingress_obs": "2026-12-04 20:06",
+     "egress_obs": "2026-12-04 21:45",
+     "status": "after_listed_coverage (final segment unpublished)"
+    }
+   ],
+   "counts": {
+    "Oct31_00_Nov26_00_obs": 3,
+    "Oct31_00_Nov27_00_obs": 3,
+    "Oct31_2355_Nov26_24_obs": 3,
+    "in_listed_segments_full": 2,
+    "in_listed_gaps": 0
+   }
+  }
+ }
+}

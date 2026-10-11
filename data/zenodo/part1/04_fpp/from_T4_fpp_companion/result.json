@@ -1,0 +1,957 @@
+{
+ "topic": "T4_fpp_companion - False-positive probability and companion constraints",
+ "summary": "FINAL: default TRICERATOPS FPP of the 3.18 d signal is 0.03-0.04 (means 0.030-0.044 over 15 S32+S98 configurations, 4-20 runs of 1e6 draws each; per-run 0.026-0.048); '0.031 +- 0.003 (0.031-0.034, three folds)' is superseded (one of those 'folds' is an input variant, C082). 10-min bins raise FPP_A by 20-26% (not symmetric). NFPP < 1e-6 everywhere (<= 7e-10 for S32+S98). STP is >= 99.7% of FPP; 84-96% (about 90%) comes from companions > 0.38 Msun; removing them at all separations gives 0.002-0.007. MOLUSC-mode values (~0.005) scale as 1/N and must not be quoted; the properly normalised Gaia-RUWE-constrained value is 0.0030 +- 0.0008 (20 runs). B: 0.13-0.21 (not in the revision). No validation: G21 requires FPP < 0.015 and NFPP < 1e-3, calibrated for circular orbits. Companion limits: O = +0.003 mag excludes Gaia-blended (<~0.2 arcsec) companions > ~0.38 Msun at 2 sigma (0.35-0.42 depending on scatter); C* normal (SOAR 0/38); RUWE 1.214 at the 61st percentile; Gaia RVs give 95% K < 1.16 km/s, excluding an eclipsing stellar companion of the target (the low p-value is not RV variability). Circular orbit needs a host >= ~0.52 Msun, leaving 0.15-0.38 Msun hosts with e >~ 0.2-0.6 as the main open scenario. Manuscript: one MINOR scope fix ('of the target') and one optional clarification. Open (non-blocking): the companion scenario and chance-aligned sources need speckle/AO imaging.",
+ "facts": [
+  {
+   "id": "FPP.A_default",
+   "group": "FALSE_POSITIVE",
+   "quantity": "TRICERATOPS 1.1.0 FPP of the 3.18 d signal, default priors (Moe & Di Stefano companions unresolved within 2.2 arcsec, Gaia DR3 background), Sector 32+98 folds",
+   "value": "0.03-0.04",
+   "uncertainty": "variant means 0.030-0.044 over 15 S32+S98 configurations (5-10 min bins, Mann or TIC stellar parameters, Teff 4012-4080 K); per-run values 0.026-0.048; adopted audit fold 0.0312 +- 0.0031 (20 runs); U own fold 0.0342 +- 0.0035 (20 runs); pubprep own fold 0.0343 +- 0.0054 (10 runs). Single-sector folds 0.026 (S6, 30 min) to 0.041 (S32).",
+   "units": "probability",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_01_fpp_run_census.csv ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.json key A_default_S32S98 ; addenda/tic4206066_PUBLICATION_AUDIT/out/fpp/runs/A_base_S32+S98/summary.json ; addenda/opus55_final_audit_tic4206066/08_fpp/runs/A_base/runs.json ; addenda/rnaas_tic4206066_pubprep/analysis/out/fpp/fpp_ownfold_A.json ; addenda/opus55_final_audit_tic4206066/08_fpp/verify/runs_v/default_A_v_A_S32+S98_10min.json",
+   "code": "addenda/tic4206066_PUBLICATION_AUDIT/scripts/s13_fpp_run.py ; addenda/opus55_final_audit_tic4206066/08_fpp/f02_trice_run.py ; addenda/opus55_final_audit_tic4206066/08_fpp/verify/v03_runs.py ; addenda/rnaas_tic4206066_pubprep/analysis/a4_fpp_ownfold.py ; addenda/opus55_final_audit_tic4206066/referee/resolve_R5/r05_direct_runs.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_01_count_fpp_runs.py -> t4_01_fpp_run_census.csv; addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.py -> t4_02_checks.json",
+   "supersedes": "M/pubprep '0.031 +- 0.003 (0.031-0.034 across three folds)' (pubprep/manuscript.tex L41; M CF 333-334): 0.031 is one fold of several and 0.0304 is not a separate fold (C082), so the range is too narrow; U08 '0.0342 +- 0.0035, variants 0.032-0.043' is correct but omits the verifier's 0.0437 (10 min, 4 runs).",
+   "manuscript_form": "FPP $=0.03$--0.04 for the 3.18\\,d signal (4--20 runs of $10^6$ draws)",
+   "notes": "Largest means: verifier 10-min fold 0.0437 (4 runs), U08 A_10min 0.0431 (5 runs); smallest: audit A_repro 0.0304 (same binned fold, Teff 4080 K, exptime 200 s), R5 teff4012 0.0307 (5 runs), audit A_base 0.0312 (20). The R5 2-seed reproduction (0.0283) only checks seeds and is not a variant. Teff 4012 vs 4030 K changes FPP by a factor 0.9997 in paired seeds (resolve__R5.json). Neighbour-dilution flag changes FPP_A by < 0.0003 (resolve__R-DIL.json)."
+  },
+  {
+   "id": "FPP.A_runs",
+   "group": "FALSE_POSITIVE",
+   "quantity": "number of TRICERATOPS runs (each 1e6 draws) behind each default-prior FPP_A value",
+   "value": "4-20 runs per configuration",
+   "uncertainty": "exact counts: audit (PUBLICATION_AUDIT) 20 per variant (A_base, A_repro, A_loc, A_tic, A_base_S32only, A_base_S6only, A_base_S98only, A_molusc1, A_molusc5; 20 probs_run*.csv files each); pubprep own fold 10; U08 A_base 20, every other U08 variant 5 (A_10min, A_S32only, A_S98only, A_T0m, A_T0p, A_ap5x5, A_sigformal, A_teff4012, A_tic), A_moluscFresh5 10, A_moluscFresh5_N5e5 3, A_moluscFresh5_N2e6 2; U08 verifier default 5-min 8, default 10-min 4, trunc0.38 8, trunc0.45 4, molusc_coded 3, molusc_gaiaonly 3; R5 default_teff4012 5, default 2, ol0.38_all 5, ol0.38_bl0.2 5, gaia_only 20, gaia_ol0.38_bl0.2 8.",
+   "units": "runs",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_01_fpp_run_census.csv (n_runs column counted from list lengths / probs_run files) ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.json key A_default_S32S98_summary.run_counts",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_01_count_fpp_runs.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_01_fpp_run_census.csv",
+   "supersedes": "'20 runs x 1e6' for every value (pubprep manuscript L41; M MASTER_TRUTH FPP table); '10-20 runs' (addenda/opus55_final_audit_tic4206066/REQUIRED_CHANGES.md L35, stale); 'baseline 20, sensitivity 5' (U08 REPORT) is correct for U08 only.",
+   "manuscript_form": "(4--20 runs of $10^6$ draws)",
+   "notes": "The 0.04 end of the range rests on 4-5-run variants (10-min bins); the 0.03 end on 20-run folds."
+  },
+  {
+   "id": "FPP.A_binwidth",
+   "group": "FALSE_POSITIVE",
+   "quantity": "bin-width sensitivity of FPP_A (fold binned to 10 min vs 5-6 min, same data and code)",
+   "value": "+20% to +26% (one-directional: longer bins raise FPP_A)",
+   "uncertainty": "U08: 0.0431/0.0342 = 1.26 (5 vs 20 runs); verifier: 0.0437/0.0364 = 1.20 (4 vs 8 runs); run-to-run sd 0.002-0.005 per variant, so the shift is ~2-3 sd of a single run and larger than the SE of the means. For B the same change is -1.5% (0.1965/0.1995).",
+   "units": "ratio",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.json key binwidth ; addenda/opus55_final_audit_tic4206066/08_fpp/out_fpp_summary.csv rows A_10min, A_base ; addenda/opus55_final_audit_tic4206066/08_fpp/verify/runs_v/default_A_v_A_S32+S98_5min.json, default_A_v_A_S32+S98_10min.json",
+   "code": "addenda/opus55_final_audit_tic4206066/08_fpp/f01_build_folds.py, f02_trice_run.py; addenda/opus55_final_audit_tic4206066/08_fpp/verify/v01_fold.py, v03_runs.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.py",
+   "supersedes": "the task's '+-25%?' guess: the effect is not symmetric; there is no run with bins shorter than 5 min except the 3.33-min 'earlier configuration' (0.0304, audit A_repro) which also differs in Teff.",
+   "manuscript_form": "not in Note (covered by '5--10 min bins' and the 0.03-0.04 range)",
+   "notes": "Cause not diagnosed (likely smearing of ingress/egress weakening the shape constraint on diluted STP hosts)."
+  },
+  {
+   "id": "FPP.A_NFPP",
+   "group": "FALSE_POSITIVE",
+   "quantity": "TRICERATOPS nearby-star false-positive probability NFPP of the 3.18 d signal",
+   "value": "< 1e-6 in every stored run",
+   "uncertainty": "max 4.6e-7 (audit A_base_S32only), 3.7e-7 (audit S6only); S32+S98 folds <= 7.1e-10 (U08 A_ap5x5), baseline 1.5e-16 (U08) and 2.7e-12 (audit)",
+   "units": "probability",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.json keys NFPP_max_all_default_A, A_default_single_sector, A_default_S32S98_summary.NFPP_max ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_01_fpp_run_census.csv column NFPP_max",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_01_count_fpp_runs.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.json",
+   "supersedes": "U08 'NFPP <= 1e-7 in every variant' holds only for U08's own runs (max 6.6e-8); the audit single-sector folds reach 4.6e-7.",
+   "manuscript_form": "here NFPP $<10^{-6}$",
+   "notes": "NFPP does not cover the T = 13.06 star at 83.8 arcsec (Gaussian PSF in TRICERATOPS; M FALSE_POSITIVE_MATRIX row 15); the Note does not use NFPP as evidence against it."
+  },
+  {
+   "id": "FPP.A_constrained",
+   "group": "FALSE_POSITIVE",
+   "quantity": "FPP_A with companions above 0.38 Msun removed at all separations <= 2.2 arcsec (post hoc prior cut; prior mass removed, not renormalised)",
+   "value": "0.002-0.007",
+   "uncertainty": "U08 same-draw re-weighting per variant 0.0020-0.0067 (A_base 0.0021, 20 runs; A_S32only 0.0067, 5 runs); verifier direct runs with the companion-mass prior truncated at 0.38 Msun 0.0043 +- 0.0006 (8 runs, 5-min fold); R5 direct runs ol0.38_all 0.0024 +- 0.0006 (5 runs, adopted fold). Cut at 0.45 Msun: 0.005-0.012.",
+   "units": "probability",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/08_fpp/out_fpp_summary.csv column FPP_comp_mass_le_0.38_mean ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.json key share_gt038_A_range.FPP_le038 ; addenda/opus55_final_audit_tic4206066/08_fpp/verify/runs_v/trunc0.38_A_v_A_S32+S98_5min.json ; addenda/opus55_final_audit_tic4206066/referee/resolve_R5/runs/ol0.38_all_A_adoptedfold.json",
+   "code": "addenda/opus55_final_audit_tic4206066/08_fpp/f02_trice_run.py (evidence recording hooks), f04_summarize.py; addenda/opus55_final_audit_tic4206066/08_fpp/verify/v03_runs.py; addenda/opus55_final_audit_tic4206066/referee/resolve_R5/r05_direct_runs.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.json",
+   "supersedes": "the MOLUSC-mode values (audit 0.0047 +- 0.0027 at 5 Gyr, 0.0054 +- 0.0032 at 1 Gyr, 20 runs each; U 0.0055 +- 0.0036, 10 runs; pubprep '0.005 +- 0.003') are superseded as the constrained number because they scale as 1/N (see FPP.A_molusc_mode). The blended-only cut (<0.2 arcsec) alone gives 0.024 +- 0.004 (R5, 5 runs) and must not be called 'constrained FPP ~0.002'.",
+   "manuscript_form": "About 90\\% of the FPP comes from companions above $0.38\\,M_\\odot$: excluding them (a post hoc prior cut) gives FPP $\\approx0.002$--0.007.",
+   "notes": "The cut at all separations is supported by overluminosity (<~0.2 arcsec, 2 sigma), the BP/RP excess C* (0.2-2 arcsec, empirical 95% UL 7.6% miss rate) and resolved Gaia sources (>~1.2 arcsec). Keeping the 7.6% miss rate at 0.2-2 arcsec would raise it by at most ~0.003 (0.076 x 0.034); for the MOLUSC-mode analogue R4 found 0.0010 -> 0.0018-0.0020."
+  },
+  {
+   "id": "FPP.A_gaia_constrained",
+   "group": "FALSE_POSITIVE",
+   "quantity": "FPP_A with MOLUSC (Wood et al. 2021) Gaia RUWE + contrast survival applied to the default TRICERATOPS companion prior (properly normalised, N-independent)",
+   "value": "0.0030 +- 0.0008 (20 runs; range 0.0019-0.0046)",
+   "uncertainty": "adding the blended-only overluminosity cut: 0.0026 +- 0.0008 (8 runs); with assumed observed RUWE 1.4/2/3: 0.004/0.005/0.007 (grid); contrast limits only 0.029",
+   "units": "probability",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/referee/resolve_R5/runs/gaia_only_A_adoptedfold.json ; addenda/opus55_final_audit_tic4206066/referee/resolve_R5/runs/gaia_ol0.38_bl0.2_A_adoptedfold.json ; addenda/opus55_final_audit_tic4206066/_structured/resolve__R5.json key_numbers ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_01_fpp_run_census.csv",
+   "code": "addenda/opus55_final_audit_tic4206066/referee/resolve_R5/r01_molusc_all.sh, r05_direct_runs.py, r07_ruwe_robustness.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_01_fpp_run_census.csv (run count and stats recomputed from the run file)",
+   "supersedes": "",
+   "manuscript_form": "not in Note (revision removed MOLUSC; the 0.002-0.007 cut sentence covers it)",
+   "notes": "Input MOLUSC --all file (r5_all.csv, 206 MB) exists only in a /private/tmp scratchpad, not in the package; archive it if this number is ever cited."
+  },
+  {
+   "id": "FPP.A_molusc_mode",
+   "group": "FALSE_POSITIVE",
+   "quantity": "TRICERATOPS 1.1.0 'molusc_file' mode FPP_A (as coded)",
+   "value": "~0.005 at N = 1e6, N-dependent (not a physical constraint)",
+   "uncertainty": "audit 0.0047 +- 0.0027 (5 Gyr) / 0.0054 +- 0.0032 (1 Gyr), 20 runs each; U fresh MOLUSC 0.0055 +- 0.0036 (10 runs); same file at N = 5e5: 0.0125 (3 runs), N = 2e6: 0.0022 (2 runs)",
+   "units": "probability",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/out/fpp/runs/A_molusc5_S32+S98/summary.json ; addenda/tic4206066_PUBLICATION_AUDIT/out/fpp/runs/A_molusc1_S32+S98/summary.json ; addenda/opus55_final_audit_tic4206066/08_fpp/runs/A_moluscFresh5*/runs.json ; trice_env site-packages/triceratops/marginal_likelihoods.py l.461-470 and l.520-521",
+   "code": "TRICERATOPS 1.1.0 marginal_likelihoods.py (read-only)",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_01_fpp_run_census.csv",
+   "supersedes": "pubprep manuscript L41 'MOLUSC 0.005 +- 0.003 / 0.06 +- 0.02' and its mechanism clause (removed in U revision).",
+   "manuscript_form": "not in Note",
+   "notes": "Mechanism: rows with a(1-e) > 10 AU are kept, q clamped at 0.1/M_s, zero-padded to N, lnprior_companion = 0; effective prior = n_kept/N = 0.1295 at N = 1e6 (default Moe & Di Stefano within 2.2 arcsec: 0.141). The FPP drop needs both the Gaia survival and the 10 AU cut (R5 decomposition: no Gaia + cut 0.106; Gaia, no cut 0.049; both 0.0064)."
+  },
+  {
+   "id": "FPP.A_share_above_0.38",
+   "group": "FALSE_POSITIVE",
+   "quantity": "share of the default FPP_A contributed by bound-companion hosts above 0.38 Msun",
+   "value": "about 90% (84-96% across variants)",
+   "uncertainty": "by FPP drop 1 - FPP(<=0.38)/FPP: 0.84-0.95 (A_base 0.94); by STP evidence weight: 0.85-0.96; R5 grid 0.90-0.94",
+   "units": "fraction",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.json keys share_gt038_A_default, share_gt038_A_range ; addenda/opus55_final_audit_tic4206066/08_fpp/out_fpp_summary.csv column STP_wfrac_mass_gt_0.38",
+   "code": "addenda/opus55_final_audit_tic4206066/08_fpp/f02_trice_run.py, f04_summarize.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.py",
+   "supersedes": "U08 recommended wording '~95%' (A_base only); REFEREE_PASS_2 '85-96%' agrees.",
+   "manuscript_form": "About 90\\% of the FPP comes from companions above $0.38\\,M_\\odot$",
+   "notes": "For B the share is 0.27-0.39, so the cut leaves FPP_B 0.10-0.17."
+  },
+  {
+   "id": "FPP.A_scenario_composition",
+   "group": "FALSE_POSITIVE",
+   "quantity": "what the default FPP_A consists of (scenario probabilities)",
+   "value": "STP (planet on unresolved bound companion) >= 99.66% of FPP in every A variant (>= 99.85% for S32+S98 folds); all EB scenarios <= 4.7e-5 in any variant and <= 1.5e-6 per run for S32+S98 folds; BTP <= 7.7e-5, BEB <= 4e-5; DTP ~0.0037 and PTP ~0.12-0.13 count as planet",
+   "uncertainty": "means over runs",
+   "units": "probability",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_06_eb_totals.json ; addenda/tic4206066_PUBLICATION_AUDIT/FINAL_PARAMETERS.json key signal_A['fpp_triceratops_1.1.0'][*].P_EB_all_mean",
+   "code": "addenda/opus55_final_audit_tic4206066/08_fpp/f02_trice_run.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_06_eb_totals.py -> t4_06_eb_totals.json",
+   "supersedes": "U08 'STP >= 99.8% in all runs' (true for S32+S98 folds; single-sector folds 99.66-99.69%); audit 'all EB <= 2e-6 in every variant' (C085).",
+   "manuscript_form": "nearly all from bound companions",
+   "notes": "TRICERATOPS 1.1.0 STP draws planet e from Beta(0.867, 3.03) with uniform omega, companion masses 0.10-0.606 Msun, and a companion prior restricted to P > 2500 d (3.6-78 au at 35.6 pc) out to 2.2 arcsec (U 09 REPORT F2; resolve__R5.json)."
+  },
+  {
+   "id": "FPP.B_default",
+   "group": "FALSE_POSITIVE",
+   "quantity": "TRICERATOPS 1.1.0 FPP of the 11.13 d signal, default priors",
+   "value": "0.13-0.21",
+   "uncertainty": "variant means 0.128 (audit TIC parameters) to 0.213 (U08 5x5 aperture, verifier 5-min); earlier fold 0.146-0.147 (superseded); Gaia-constrained (R5 gaia_only) 0.067 +- 0.008 (20 runs); MOLUSC mode 0.059-0.069 (N-dependent); cut <= 0.38 Msun 0.10-0.17",
+   "units": "probability",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.json key B_default_all ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_01_fpp_run_census.csv ; addenda/opus55_final_audit_tic4206066/08_fpp/out_fpp_summary.csv",
+   "code": "addenda/tic4206066_PUBLICATION_AUDIT/scripts/s13_fpp_run.py; addenda/opus55_final_audit_tic4206066/08_fpp/f02_trice_run.py; addenda/opus55_final_audit_tic4206066/referee/resolve_R5/r05_direct_runs.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.json",
+   "supersedes": "M/pubprep '0.13-0.20' (omits U's 0.20-0.21 values); MOLUSC '0.06 +- 0.02' (N-dependent).",
+   "manuscript_form": "not in Note (the U revision gives no FPP for the 11.13 d signal)",
+   "notes": "FPP presumes a real signal; B itself is ~3 sigma."
+  },
+  {
+   "id": "FPP.validation_rule",
+   "group": "FALSE_POSITIVE",
+   "quantity": "TRICERATOPS validation criterion and its applicability",
+   "value": "validated: FPP < 0.015 AND NFPP < 1e-3 (likely planet: FPP < 0.5 AND NFPP < 1e-3), calibrated with the 2021 code (fixed period, zero eccentricity, TRILEGAL background) -> no validation claimed",
+   "uncertainty": "n/a",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/08_fpp/docs/G21.txt l.79-81 (thresholds) and l.657-676 (zero eccentricity) ; addenda/opus55_final_audit_tic4206066/08_fpp/docs/triceratops_KNOWN_ISSUES.rst l.24-47 (Gaia DR3 background default not benchmarked) ; TRICERATOPS 1.1.0 priors.py l.148 (beta.rvs(0.867, 3.030))",
+   "code": "read of documents",
+   "rerun": "",
+   "supersedes": "pubprep 'FPP < 0.015' alone (incomplete).",
+   "manuscript_form": "(FPP $<0.015$, NFPP $<10^{-3}$; here NFPP $<10^{-6}$), calibrated for circular orbits, so I claim no validation",
+   "notes": "Default FPP_A 0.03-0.04 fails FPP < 0.015; the constrained 0.002-0.007 passes numerically but relies on a post hoc cut outside the calibrated configuration."
+  },
+  {
+   "id": "COMP.XP_overluminosity",
+   "group": "STAR",
+   "quantity": "Gaia XP overluminosity O (Way et al. 2026) and the implied unresolved-companion mass limit",
+   "value": "O = +0.003 mag; companions above ~0.38 Msun (G flux ratio > 0.137) excluded at 2 sigma for Gaia-blended separations (<~0.2 arcsec = ~7 au at 35.6 pc)",
+   "uncertainty": "scatter of O among comparable stars is the author's estimate, not Way et al.: 0.068 (1.4826 MAD, n = 5205), 0.052-0.054 (clipped core / clean astrometry / out-of-sample RUWE 1.2-1.3, n = 616), 0.098 (16-84% half-width). 2-sigma limit 0.35 (sigma 0.052), 0.355-0.364 (out-of-sample), 0.373-0.383 (sigma 0.068, Mann or Pecaut & Mamajek), 0.42 (sigma 0.10); 3 sigma 0.42-0.43. Way flag threshold 0.376 mag corresponds to 0.51 Msun.",
+   "units": "mag ; Msun",
+   "status": "FINAL",
+   "evidence": "addenda/companion_check_tic4206066/out/overluminosity.json keys O_obs_mag, local_bin.robust_sigma, limits ; addenda/opus55_final_audit_tic4206066/06_stellar/out/s03_overluminosity.json ; addenda/opus55_final_audit_tic4206066/referee/resolve_R4/out/r4_summary.json key a_attribution_and_mass_limit ; addenda/opus55_final_audit_tic4206066/12_references/papers/Way2026_2602.20096.txt l.651-653 ('most sensitive to close (<~20 AU), equal-mass systems because of the Gaia resolution limit of ~0.2 arcsec')",
+   "code": "addenda/companion_check_tic4206066/overluminosity.py; U 06 s03_overluminosity.py; U R4 r4_01_way_oos.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.json key overlum_fluxratio_2sig (flux-ratio arithmetic)",
+   "supersedes": "'+0.003 +- 0.07 mag (Way et al.)' (pubprep): the +-0.07 is not in Way et al.; U06 'blended <~20 au ~ 0.6 arcsec' superseded by 0.2 arcsec (Way's 20 au refers to 100 pc).",
+   "manuscript_form": "Against the 0.05--0.07\\,mag scatter of comparable stars, the XP overluminosity of \\citet{Way2026}, $+0.003$\\,mag, excludes Gaia-blended ($\\lesssim0.2''$) companions above $\\approx0.38\\,M_\\odot$ ($2\\sigma$; \\citealt{Pecaut2013})",
+   "notes": "Wording: 'excludes ... (2 sigma)' in Sec. 4 is acceptable because the confidence level is stated; 'disfavor' in the abstract. Target RUWE 1.214 is above Way's Regression Sample cut (ruwe < 1.2), so O is an out-of-sample prediction (R4). The limit of 0.38 is the conservative end of the 0.35-0.38 range implied by the quoted 0.05-0.07 scatter."
+  },
+  {
+   "id": "COMP.BPRP_excess",
+   "group": "STAR",
+   "quantity": "Gaia BP/RP corrected flux excess C* (Riello et al. 2021) as a test for companions at 0.2-2 arcsec",
+   "value": "target C* = -0.0025 (-0.39 sigma, Riello eq. 18 sigma 0.0065 at G = 10.51): normal",
+   "uncertainty": "SOAR speckle calibration (Ziegler et al. 2020, 2021 x Gaia DR3): 0 of 38 hosts with one companion at 0.2-2 arcsec and dI <= 2 look like the target (95% UL 7.6%), all 38 with C* > 3 sigma (min 7.4 sigma); 0 of 32 for dI <= 1.76 (>= 0.38 Msun; UL 8.9%); 48 of 48 flagged at 0.15-2.5 arcsec and dI <= 1.76 (C* > target + 2 sigma in all 48); base rate of target-like records without companions 38% (n = 647)",
+   "units": "sigma ; counts",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/referee/resolve_R4/out/r4_02_speckle_calib.json keys target, single_companion_sep0.2-2.0_dI_le1.76, single_companion_sep0.15-2.5_dI_le1.76 ; addenda/opus55_final_audit_tic4206066/referee/resolve_R4/out/r4_summary.json key b_gaia_indicator_calibration",
+   "code": "addenda/opus55_final_audit_tic4206066/referee/resolve_R4/r4_02_speckle_calib.py",
+   "rerun": "",
+   "supersedes": "Not a conflict: '0/38 target-like' (R4) and '48/48 flagged' (REFEREE_PASS_2 l.26) are different subsamples of the same calibration.",
+   "manuscript_form": "at 0.2--$2''$ such companions would raise the BP/RP flux excess \\citep{Riello2021}, which is normal",
+   "notes": "Calibrated only for companions with dI <= 2 (>= ~0.35-0.38 Msun); it says nothing about 0.15-0.38 Msun companions."
+  },
+  {
+   "id": "COMP.Gaia_RV",
+   "group": "STAR",
+   "quantity": "Gaia DR3 radial-velocity constraint on a stellar companion of the target",
+   "value": "eclipsing stellar companion of the target excluded: 95% K < 1.16 km/s (33 epochs) vs K = 14.9 km/s (3.18 d), 11.8 km/s (6.37 d), 9.8 km/s (11.13 d) for 0.08 Msun",
+   "uncertainty": "M sin i < 0.0058 (3.18 d), 0.0073 (6.37 d), 0.0088 (11.13 d) Msun at 95%; epoch scatter sigma(V_j) = 0.877 km/s from radial_velocity_error (Gaia DR3 datamodel, rv_method_used = 1); rv_chisq_pvalue 4.06e-5, rv_renormalised_gof 3.00 (< 4) -> not RV-variable under the Gaia DR3 criterion (p < 0.01 AND gof > 4 AND N >= 10); 7.8% of simulated constant stars scatter more",
+   "units": "km/s ; Msun",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/09_companion/out/rv_limits.json ; addenda/tic4206066_PUBLICATION_AUDIT/FINAL_PARAMETERS.json key star.binarity_and_companions.gaia_rv ; Gaia DR3 gaia_source datamodel https://gea.esac.esa.int/archive/documentation/GDR3/Gaia_archive/chap_datamodel/sec_dm_main_source_catalogue/ssec_dm_gaia_source.html (accessed 2026-09-25 ~15:31 UTC)",
+   "code": "addenda/opus55_final_audit_tic4206066/09_companion/c05_rv.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.json key rv (sigma_Vj, mass function, K for 0.08 Msun)",
+   "supersedes": "pubprep/M 'K < 3.2 km/s -> M sin i < 0.016 Msun (3.18 d), < 0.024 (11.13 d)' and audit 0.025: 3.2 km/s is rv_amplitude_robust (peak-to-peak noise), about 3x too loose; the resulting 0.0247 Msun rounds to 0.025, so '< 0.024' was also a rounding error (C022).",
+   "manuscript_form": "and radial velocities that exclude an eclipsing stellar companion of the target",
+   "notes": "The low p-value need not be in the Note: it reflects formal errors ~1.3x too small for this bin (excess scatter ~0.46 km/s), irrelevant against K >= 9.8 km/s; put it in the supporting package. Gaia RVs do not settle companions of 0.15-0.38 Msun at a ~1-3 au for arbitrary inclination (R4(f))."
+  },
+  {
+   "id": "COMP.RUWE",
+   "group": "STAR",
+   "quantity": "Gaia DR3 astrometric/image indicators",
+   "value": "RUWE 1.214 (61st percentile of 383 stars with G 10.3-10.7, BP-RP 1.6-1.9, parallax > 15 mas); non_single_star = 0, no NSS solution; ipd_frac_multi_peak = 0; ipd_gof_harmonic_amplitude 0.022 (63rd percentile); no other Gaia DR3 source within 11.07 arcsec (nearest G = 18.75, parallax 0.22 +- 0.21 mas)",
+   "uncertainty": "percentile from a finite sample (N = 383); 31% of that sample has RUWE > 1.4",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/09_companion/verify/v4_ruwe_pct.json ; addenda/opus55_final_audit_tic4206066/09_companion/verify/v4_ruwe_query.txt ; addenda/opus55_final_audit_tic4206066/09_companion/REPORT.md summary ; addenda/archival_extra_tic4206066/highres_imaging/raw/gaia_dr3_cone_60arcsec.json ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_04_gaia60_census.json",
+   "code": "addenda/opus55_final_audit_tic4206066/09_companion/verify (v4 query); addenda/opus55_final_audit_tic4206066/09_companion/c01_gaia_fetch.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_04_gaia60_census.py",
+   "supersedes": "M 'no other Gaia source within 10 arcsec' (true but less specific); U09 'percentile not computed' superseded by its verifier (v4).",
+   "manuscript_form": "Gaia DR3 gives RUWE\\,$=1.21$ (typical for such stars), no non-single-star solution or other source within $11''$",
+   "notes": "RUWE alone misses ~half of 0.2-2 arcsec companions (R4: RUWE > 1.4 flags 19/38), which is why C* is used."
+  },
+  {
+   "id": "COMP.host_mass_circular",
+   "group": "STAR",
+   "quantity": "minimum host mass for a planet on a bound companion in a circular orbit to match the 3.18 d transit duration/shape",
+   "value": "~0.52 Msun",
+   "uncertainty": "0.517 (verifier, diluted, dchi2 = 4) to 0.529 (undiluted Mann, rho_max 3.5); 0.523 (U09, diluted); 0.506 at dchi2 = 9",
+   "units": "Msun",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/09_companion/out/companion_space.json ; addenda/opus55_final_audit_tic4206066/09_companion/out/profile_A.json ; addenda/opus55_final_audit_tic4206066/09_companion/verify/v3_fit_A.json ; addenda/opus55_final_audit_tic4206066/referee/resolve_R4/out/r4_summary.json key d_threshold",
+   "code": "addenda/opus55_final_audit_tic4206066/09_companion/c04_profile.py; addenda/opus55_final_audit_tic4206066/09_companion/verify/v3_fit.py; addenda/opus55_final_audit_tic4206066/referee/resolve_R4/r4_04_host_ecc.py",
+   "rerun": "",
+   "supersedes": "pubprep/audit/M '>= 0.54 Msun' (Pecaut & Mamajek M0.5V at 3.35 rho_sun; pubprep MANUSCRIPT_NUMBER_AUDIT.csv L57): table-interpolation method, not a dilution effect (R4 undiluted Mann also gives 0.52-0.53).",
+   "manuscript_form": "a circular orbit needs a companion host above $\\approx0.52\\,M_\\odot$",
+   "notes": "Applies to the 3.18 d signal only; for 11.13 d a circular orbit fits any host >= 0.14 Msun."
+  },
+  {
+   "id": "COMP.host_lower_bound_and_ecc",
+   "group": "STAR",
+   "quantity": "lower host-mass bound (transit shape) and minimum eccentricity for 0.15-0.38 Msun companion hosts (3.18 d)",
+   "value": "hosts >= ~0.15 Msun; e >~ 0.2 (0.38 Msun) to ~0.6 (0.14-0.15 Msun)",
+   "uncertainty": "lower bound 0.168 (U09, dchi2 > 4) vs 0.13-0.14 (verifier) -> 0.15 (0.13-0.17, method dependent); e_min 0.61/0.53/0.47/0.31/0.20 at 0.14/0.17/0.20/0.30/0.38 Msun (omega = 270 deg); fraction of TRICERATOPS' Beta(0.867, 3.03) prior satisfying it 0.5-11%",
+   "units": "Msun ; e",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/referee/resolve_R4/out/r4_summary.json key e_ecc ; addenda/opus55_final_audit_tic4206066/09_companion/out/profile_A.json ; addenda/opus55_final_audit_tic4206066/09_companion/verify/v3_fit_A.json",
+   "code": "addenda/opus55_final_audit_tic4206066/referee/resolve_R4/r4_04_host_ecc.py; addenda/opus55_final_audit_tic4206066/09_companion/c04_profile.py",
+   "rerun": "",
+   "supersedes": "M/audit 'e >~ 0.6 near apoastron' (single value, lowest host only).",
+   "manuscript_form": "leaving 0.15--0.38\\,$M_\\odot$ hosts with $e\\gtrsim0.2$--0.6",
+   "notes": "Do not add a tidal-circularisation argument (damping time 0.5 Myr-1.8 Gyr for Q' 1e2-1e5; R4(e))."
+  },
+  {
+   "id": "FP.remaining_scenario_A",
+   "group": "FALSE_POSITIVE",
+   "quantity": "remaining (not excluded) false-positive scenario for the 3.18 d signal",
+   "value": "main: a planet on an eccentric orbit (e >~ 0.2-0.6) around an unresolved bound companion of 0.15-0.38 Msun at ~0.1-2.2 arcsec (3.6-78 au, TRICERATOPS' default window); secondary, statistically small: an eclipsing binary or transiting body on a chance-aligned background star unresolved by Gaia (<~2 arcsec at dG ~4-8)",
+   "uncertainty": "TRICERATOPS assigns the main channel FPP ~0.002-0.007 after the 0.38 Msun cut; BTP + BEB <= 1.2e-4 in any A variant (~2e-5 in S32+S98 folds)",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_06_eb_totals.json ; addenda/opus55_final_audit_tic4206066/referee/resolve_R4/out/r4_summary.json ; addenda/opus55_final_audit_tic4206066/09_companion/REPORT.md F1, F2, F6 ; addenda/archival_extra_tic4206066/highres_imaging/REPORT.md l.105-120",
+   "code": "TRICERATOPS 1.1.0 lnZ_STP/lnZ_BTP/lnZ_BEB/lnZ_DTP (read-only)",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_06_eb_totals.py",
+   "supersedes": "M FALSE_POSITIVE_MATRIX row 18 'planet on unresolved companion OPEN' (now restricted in mass and e) and row 20 'chance-aligned unresolved source OPEN' (statistically small, observationally open).",
+   "manuscript_form": "leave a planet on an eccentric orbit around a 0.15--0.38\\,$M_\\odot$ bound companion as the main false-positive scenario not yet excluded",
+   "notes": "TRICERATOPS already covers: STP (eccentric orbits included), SEB/SEBx2P (bound EB), DTP (planet on target diluted by a chance-aligned star, counted as planet), BTP/BEB/BEBx2P (background host), NTP/NEB (resolved neighbours). What it does not apply by default: the overluminosity/C* cut. Closure needs speckle/AO imaging (covers 0.02-2 arcsec) and RV monitoring for a <~1-3 au."
+  },
+  {
+   "id": "COMP.LAMOST_binary_prob",
+   "group": "STAR",
+   "quantity": "LAMOST MRS DR8 binary probability (Zhang et al. 2022, J/ApJS/258/26 table4) for three 20-min exposures on 2018-01-29",
+   "value": "<= 0.040 in every tabulated column; medians (-50 columns) <= 0.0035 (blue arm) and <= 2e-5 (red arm)",
+   "uncertainty": "only 67 min of baseline: sensitive to very short-period spectroscopic binaries only",
+   "units": "probability",
+   "status": "FINAL",
+   "evidence": "addenda/archival_extra_tic4206066/spectra_activity/raw/vizier_5as/J_ApJS_258_26_table4.csv ; addenda/archival_extra_tic4206066/spectra_activity/raw/vizier_5as_transposed.txt l.4111-4230 (max PbpB8-100 = 0.040436; max median PbpB16-50 = 0.003475)",
+   "code": "awk over the raw VizieR rows (command in this topic's log)",
+   "rerun": "",
+   "supersedes": "archival spectra_activity REPORT L12/L195 '< 0.001 in all bands' (true only for the red arm).",
+   "manuscript_form": "not in Note",
+   "notes": ""
+  }
+ ],
+ "conflicts": [
+  {
+   "id": "X-T4-C018",
+   "quantity": "LAMOST MRS binary probability (Zhang+2022)",
+   "master_ids": "C018",
+   "claims": [
+    {
+     "source": "other",
+     "value": "< 0.001 in all bands",
+     "evidence": "addenda/archival_extra_tic4206066/spectra_activity/REPORT.md L12, L195",
+     "method": "narrative"
+    },
+    {
+     "source": "other",
+     "value": "<= 0.04 for every band/prior",
+     "evidence": "addenda/archival_extra_tic4206066/spectra_activity/REPORT.md L65-L66",
+     "method": "narrative"
+    },
+    {
+     "source": "other",
+     "value": "max 0.040436 (PbpB8-100); medians <= 0.0035 blue, <= 2e-5 red",
+     "evidence": "addenda/archival_extra_tic4206066/spectra_activity/raw/vizier_5as/J_ApJS_258_26_table4.csv",
+     "method": "raw VizieR rows"
+    }
+   ],
+   "trace": "Both statements come from the same raw VizieR table J/ApJS/258/26 table4 (3 rows, 30 Pbp columns).",
+   "diagnosis": "'< 0.001' is true only for the red-arm columns; blue-arm medians reach 0.0035 and the 100th-percentile columns 0.040.",
+   "rerun": "awk over raw rows (this session): max 0.040436, max median 0.003475",
+   "resolution": "P_bp <= 0.04 in all bands and priors (medians <= 0.004).",
+   "reason": "raw table outranks the narrative",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T4-C019",
+   "quantity": "G magnitude of the variable 43.5 arcsec neighbour (Gaia DR3 3220388296975320448)",
+   "master_ids": "C019",
+   "claims": [
+    {
+     "source": "audit",
+     "value": "17.594 (phot_g_mean_mag)",
+     "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/data/gaia/gaia_dr3_neighbours_180as.csv L10",
+     "method": "Gaia DR3 gaia_source"
+    },
+    {
+     "source": "other",
+     "value": "17.37",
+     "evidence": "addenda/priority_recheck_tic4206066_SEALED/priority_recheck.md L108",
+     "method": "label"
+    },
+    {
+     "source": "other",
+     "value": "17.367 min_mag_g_fov; 17.580 mean_mag_g_fov",
+     "evidence": "addenda/priority_recheck_tic4206066_SEALED/downloads/gaia_cone3_vari_summary.csv L2",
+     "method": "Gaia DR3 vari_summary"
+    },
+    {
+     "source": "other",
+     "value": "17.498 (TIC GAIAmag, DR2-based)",
+     "evidence": "addenda/priority_recheck_tic4206066_SEALED/downloads/mast_tic_cone_5arcmin.json data[7].GAIAmag",
+     "method": "TIC 8"
+    }
+   ],
+   "trace": "All from Gaia products; 17.37 equals min_mag_g_fov (brightest epoch).",
+   "diagnosis": "definition difference (mean vs brightest-epoch vs DR2)",
+   "rerun": "none needed (values read from raw files)",
+   "resolution": "G = 17.59 (DR3 mean); 17.37 is its brightest FoV epoch.",
+   "reason": "phot_g_mean_mag is the catalogue mean magnitude",
+   "status": "COSMETIC"
+  },
+  {
+   "id": "X-T4-C020",
+   "quantity": "separation of the extra SDSS PhotoObjAll entry near the saturated star",
+   "master_ids": "C020",
+   "claims": [
+    {
+     "source": "other",
+     "value": "2.64 arcsec",
+     "evidence": "addenda/archival_extra_tic4206066/highres_imaging/REPORT.md L76",
+     "method": "SkyServer distance from query centre"
+    },
+    {
+     "source": "other",
+     "value": "1.8 arcsec",
+     "evidence": "addenda/archival_extra_tic4206066/spectra_activity/REPORT.md L85",
+     "method": "narrative"
+    },
+    {
+     "source": "other",
+     "value": "1.96 arcsec (object-to-star, same SDSS epoch)",
+     "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_03_sdss_sep.json",
+     "method": "own rerun from raw SkyServer JSON"
+    }
+   ],
+   "trace": "raw: addenda/archival_extra_tic4206066/spectra_activity/raw/sdss_dr1[7-9]_photo.json; the query centre (Gaia-epoch position) is 0.72 arcsec from the SDSS star position.",
+   "diagnosis": "2.64 is the distance from the query centre, not from the star; 1.8 is a rounded approximation.",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_03_sdss_sep.py -> 1.96 arcsec in DR17/18/19",
+   "resolution": "1.96 arcsec from the SDSS star position (psfMag r 18.92, i 17.54 in DR17); a deblending artefact of the saturated star, not a companion detection.",
+   "reason": "same-epoch positions give the physical separation",
+   "status": "COSMETIC"
+  },
+  {
+   "id": "X-T4-C021",
+   "quantity": "Gaia DR3 sources within 60 arcsec: 'all background by parallax/pm'",
+   "master_ids": "C021",
+   "claims": [
+    {
+     "source": "other",
+     "value": "all 16 background by parallax/pm",
+     "evidence": "addenda/archival_extra_tic4206066/highres_imaging/REPORT.md L110",
+     "method": "narrative"
+    },
+    {
+     "source": "M",
+     "value": "6 of 16 (G 20.70-21.20) have 2-parameter solutions",
+     "evidence": "addenda/tic4206066_MASTER_EVIDENCE/CONTRADICTIONS.md C021",
+     "method": "extraction"
+    },
+    {
+     "source": "other",
+     "value": "5 of 16 (G 20.88-21.20) 2-parameter; the other 11 differ from the target parallax by >= 14.7 sigma; 2-parameter sources could produce at most 68 ppm",
+     "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_04_gaia60_census.json",
+     "method": "own rerun from raw cone file"
+    }
+   ],
+   "trace": "raw: addenda/archival_extra_tic4206066/highres_imaging/raw/gaia_dr3_cone_60arcsec.json (17 rows incl. target).",
+   "diagnosis": "overstated wording; M's count of 6 includes the G = 20.70 source, which has a 5-parameter solution (parallax -1.18 +- 1.14 mas).",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_04_gaia60_census.py",
+   "resolution": "11 of 16 are background by parallax (>= 14.7 sigma from the target); 5 (G 20.9-21.2) have no parallax but are too faint (<= 68 ppm for a full eclipse) to produce either signal.",
+   "reason": "raw rerun outranks both narratives",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T4-C022",
+   "quantity": "Gaia RV M sin i limit at 11.13 d",
+   "master_ids": "C022",
+   "claims": [
+    {
+     "source": "audit",
+     "value": "0.025 Msun (K = 3.22 km/s)",
+     "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/FINAL_PARAMETERS.json star.binarity_and_companions.gaia_rv.min_companion_mass_Msun_sin_i_1['11.13']",
+     "method": "K = rv_amplitude_robust"
+    },
+    {
+     "source": "pubprep",
+     "value": "< 0.024 Msun (K < 3.2 km/s)",
+     "evidence": "addenda/rnaas_tic4206066_pubprep/MANUSCRIPT_NUMBER_AUDIT.csv L54",
+     "method": "K = 3.2"
+    },
+    {
+     "source": "U",
+     "value": "< 0.0088 Msun (95% K < 1.16 km/s)",
+     "evidence": "addenda/opus55_final_audit_tic4206066/09_companion/out/rv_limits.json limits_vs_period[P=11.13274]",
+     "method": "sigma(V_j) + Monte Carlo of Gaia sampling"
+    }
+   ],
+   "trace": "Own mass-function rerun: K 3.2 -> 0.0247, K 3.2247 -> 0.0249, K 1.16 -> 0.0088 Msun (M1 0.606/0.6062 identical).",
+   "diagnosis": "rounding (0.0247 -> '< 0.024' is wrong) and flawed method (3.2 km/s is peak-to-peak noise, not a K limit)",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.json key rv",
+   "resolution": "M sin i < 0.009 Msun at 11.13 d (95%); both 0.024 and 0.025 superseded.",
+   "reason": "U's calibrated K limit uses the documented Gaia error model",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T4-C024",
+   "quantity": "SED G-Ks residual sign and the SED-colour companion inference",
+   "master_ids": "C024",
+   "claims": [
+    {
+     "source": "other",
+     "value": "-0.041 +- 0.03 mag, 'bluer'; companions >~ M4V (0.23 Msun) disfavoured at ~2 sigma",
+     "evidence": "addenda/companion_check_tic4206066/SUMMARY.md L59-L62",
+     "method": "narrative"
+    },
+    {
+     "source": "other",
+     "value": "resid(G) +0.0025, resid(Ks) -0.0382 with resid = -2.5 log10(obs/model)",
+     "evidence": "addenda/companion_check_tic4206066/out/sed_residuals.json per_model.BMA.resid_mag[3], [7]",
+     "method": "stored residuals"
+    }
+   ],
+   "trace": "sed_residuals.py l.25: rmag = -2.5 log10(obs/model) = m_obs - m_model, so positive = too faint; its docstring ('positive (too bright)') is wrong.",
+   "diagnosis": "sign error in the narrative: observed G-Ks is 0.041 mag REDDER than the single-star model",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_05_sed_colour_sign.py -> obs-model(G-Ks) = +0.041; M5V (+0.038) fits, M4V (+0.067) 0.9 sigma, M2V (+0.115) 2.5 sigma",
+   "resolution": "The SED colour gives no useful limit below ~0.4 Msun; the 'M4V disfavoured' inference is withdrawn. Not carried forward (not in Note).",
+   "reason": "code definition outranks the narrative",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T4-C082",
+   "quantity": "label of the 0.0304 FPP_A run ('earlier fold' vs 'earlier configuration')",
+   "master_ids": "C082",
+   "claims": [
+    {
+     "source": "pubprep",
+     "value": "0.0304, 'earlier fold (deep follow-up, S98 BLS epoch for B)'",
+     "evidence": "addenda/rnaas_tic4206066_pubprep/METHOD_AUDIT.md L126",
+     "method": "label"
+    },
+    {
+     "source": "audit",
+     "value": "0.0304 +- 0.0031, 'earlier configuration (Teff 4080 K, uncorrected parallax), audit fold'",
+     "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/PUBLICATION_TRUTH.md L280 ; addenda/tic4206066_PUBLICATION_AUDIT/out/fpp/runs/A_repro_S32+S98/summary.json",
+     "method": "20 runs"
+    },
+    {
+     "source": "other",
+     "value": "0.03114 +- 0.0030 (deep follow-up own fold)",
+     "evidence": "addenda/deep_followup_tic4206066/fpp/fpp_summary.csv L6",
+     "method": "20 runs"
+    }
+   ],
+   "trace": "addenda/tic4206066_PUBLICATION_AUDIT/scripts/s13_fpp_run.py l.39-44, l.69: every variant loads {sig}_{fold}_binned.csv; 'repro' changes only star (M 0.6064, R 0.6230, Teff 4080, plx 28.075) and exptime (200 s).",
+   "diagnosis": "mislabel in pubprep; '0.031-0.034 across three folds' was two folds plus one input variant",
+   "rerun": "none needed (code read)",
+   "resolution": "0.0304 = audit fold with earlier inputs (Teff 4080 K, 200 s exptime). Final FPP_A is 0.03-0.04 across genuinely different folds (pubprep own, audit, U own, verifier 5/10 min).",
+   "reason": "code outranks labels",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T4-C085",
+   "quantity": "total probability of all EB scenarios for A",
+   "master_ids": "C085",
+   "claims": [
+    {
+     "source": "audit",
+     "value": "<= 2e-6 in every variant",
+     "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/PUBLICATION_TRUTH.md L167-168",
+     "method": "narrative"
+    },
+    {
+     "source": "audit",
+     "value": "single-sector folds 1.3e-5 to 4.6e-5",
+     "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/FINAL_PARAMETERS.json signal_A['fpp_triceratops_1.1.0'][*_S32only/S6only/S98only].P_EB_all_mean",
+     "method": "stored runs"
+    },
+    {
+     "source": "other",
+     "value": "< 2e-4 (deep)",
+     "evidence": "addenda/deep_followup_tic4206066/fpp/FPP_REPORT.md L26-27",
+     "method": "narrative"
+    },
+    {
+     "source": "U",
+     "value": "S32+S98 variants mean <= 5.6e-7, per-run max 1.5e-6; single-sector 3.7e-5 and 4.7e-5",
+     "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_06_eb_totals.json",
+     "method": "own recount from U runs"
+    }
+   ],
+   "trace": "sum of scenario probabilities containing 'EB' in stored TRICERATOPS outputs (audit s13_fpp_run.py L81; U runs.json probs).",
+   "diagnosis": "scope overstatement in the audit text",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_06_eb_totals.py",
+   "resolution": "All EB scenarios <= 2e-6 for S32+S98 folds; <= 5e-5 in every stored A variant including single-sector folds.",
+   "reason": "stored runs outrank the narrative",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T4-C132",
+   "quantity": "how TRICERATOPS MOLUSC mode sets the companion prior",
+   "master_ids": "C132",
+   "claims": [
+    {
+     "source": "pubprep",
+     "value": "'drops the companion-occurrence prior' / 'lnprior_companion = zeros(N)'",
+     "evidence": "addenda/rnaas_tic4206066_pubprep/manuscript.tex L41 ; addenda/rnaas_tic4206066_pubprep/METHOD_AUDIT.md L129-131",
+     "method": "code reading"
+    },
+    {
+     "source": "audit",
+     "value": "'sets the companion prior to the kept fraction (13%)'",
+     "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/PUBLICATION_TRUTH.md L321-323",
+     "method": "narrative"
+    },
+    {
+     "source": "U",
+     "value": "both are true: lnprior = 0 per kept row, zero-padding to N gives an effective prior n_kept/N = 0.1295 (N = 1e6) vs default 0.141; the FPP drop comes from the Gaia survival, and the value scales as 1/N",
+     "evidence": "addenda/opus55_final_audit_tic4206066/08_fpp/out_f03_priors.json ; addenda/opus55_final_audit_tic4206066/_structured/resolve__R5.json (decomposition)",
+     "method": "code + runs"
+    }
+   ],
+   "trace": "TRICERATOPS 1.1.0 marginal_likelihoods.py l.461-470 (a(1-e) > 10 AU filter, q clamp, np.pad to N) and l.520-521 (lnprior_companion = np.zeros(N)); U08 runs at N = 5e5/1e6/2e6 give 0.0125/0.0055/0.0022.",
+   "diagnosis": "both descriptions describe the same code; neither explains the FPP drop; the causal clause in pubprep is wrong",
+   "rerun": "none needed (source read this session; N-scaling from stored U runs)",
+   "resolution": "MOLUSC mode assumes every star has a MOLUSC-drawn companion (prior 0 in log per kept draw); padding makes the effective prior n_kept/N (0.13 at N = 1e6). Its FPP is N-dependent and not quoted; the revision removed it.",
+   "reason": "code outranks narrative",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T4-A01",
+   "quantity": "FPP_A default range and headline",
+   "master_ids": "C082",
+   "claims": [
+    {
+     "source": "M",
+     "value": "0.031 +- 0.003 (0.031-0.034 across three folds; 20 runs x 1e6)",
+     "evidence": "addenda/rnaas_tic4206066_pubprep/manuscript.tex L41 ; addenda/tic4206066_MASTER_EVIDENCE/MASTER_TRUTH.md FPP table",
+     "method": "copy of pubprep"
+    },
+    {
+     "source": "U",
+     "value": "0.0342 +- 0.0035 (20 runs, 0.029-0.040); variants 0.032-0.043 (5 runs)",
+     "evidence": "addenda/opus55_final_audit_tic4206066/08_fpp/out_fpp_summary.txt",
+     "method": "fresh rerun"
+    },
+    {
+     "source": "U",
+     "value": "0.03-0.04 (4-20 runs)",
+     "evidence": "addenda/opus55_final_audit_tic4206066/proposed_revision/manuscript.tex L43",
+     "method": "summary"
+    }
+   ],
+   "trace": "All stored runs recounted in t4_01_fpp_run_census.csv.",
+   "diagnosis": "M's range too narrow (one fold as headline, mislabelled variant); U08 omits the verifier's 10-min value",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_01_count_fpp_runs.py, t4_02_checks.py",
+   "resolution": "0.03-0.04 (means 0.030-0.044; 4-20 runs per configuration).",
+   "reason": "covers every independent fold and bin width",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T4-U01",
+   "quantity": "number of runs quoted with FPP_A",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "U",
+     "value": "'10-20 runs'",
+     "evidence": "addenda/opus55_final_audit_tic4206066/REQUIRED_CHANGES.md L35 (B10)",
+     "method": "summary table"
+    },
+    {
+     "source": "U",
+     "value": "'4-20 runs of 10^6 draws'",
+     "evidence": "addenda/opus55_final_audit_tic4206066/proposed_revision/manuscript.tex L43",
+     "method": "revision"
+    },
+    {
+     "source": "U",
+     "value": "MISMATCH found and fixed",
+     "evidence": "addenda/opus55_final_audit_tic4206066/REFEREE_PASS_2.md L86",
+     "method": "number provenance"
+    }
+   ],
+   "trace": "run counts from t4_01_fpp_run_census.csv",
+   "diagnosis": "stale entry in REQUIRED_CHANGES.md",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_01_fpp_run_census.csv",
+   "resolution": "4-20 (the 0.04 end rests on 4-5-run variants).",
+   "reason": "direct count",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T4-U02",
+   "quantity": "angular range covered by the XP overluminosity test",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "U",
+     "value": "Gaia-blended <~20 au ~ 0.6 arcsec",
+     "evidence": "addenda/opus55_final_audit_tic4206066/06_stellar/REPORT.md L43, L99",
+     "method": "Way's 20 au applied at 35.6 pc"
+    },
+    {
+     "source": "U",
+     "value": "<~0.2 arcsec (~7 au)",
+     "evidence": "addenda/opus55_final_audit_tic4206066/_structured/resolve__R4.json ; addenda/opus55_final_audit_tic4206066/proposed_revision/manuscript.tex L41",
+     "method": "Gaia resolution limit"
+    }
+   ],
+   "trace": "addenda/opus55_final_audit_tic4206066/12_references/papers/Way2026_2602.20096.txt l.651-653: 'most sensitive to close (<~20 AU) ... because of the Gaia resolution limit of ~0.2 arcsec' (20 au at their 100 pc).",
+   "diagnosis": "U06 converted a distance-specific au value; the physical limit is angular",
+   "rerun": "none needed (text read)",
+   "resolution": "<~0.2 arcsec; 0.2-2 arcsec covered by C*.",
+   "reason": "the angular resolution is what blends the companion into the G photometry",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T4-U03",
+   "quantity": "share of default FPP_A from >0.38 Msun companions and STP share",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "U",
+     "value": "~95% (recommended wording); STP >= 99.8% in all runs",
+     "evidence": "addenda/opus55_final_audit_tic4206066/08_fpp/REPORT.md",
+     "method": "A_base only"
+    },
+    {
+     "source": "U",
+     "value": "about 90% (90-94%)",
+     "evidence": "addenda/opus55_final_audit_tic4206066/_structured/resolve__R5.json",
+     "method": "grid"
+    },
+    {
+     "source": "U",
+     "value": "85-96%",
+     "evidence": "addenda/opus55_final_audit_tic4206066/REFEREE_PASS_2.md L68",
+     "method": "provenance"
+    }
+   ],
+   "trace": "U08 out_fpp_summary.csv per variant; t4_06 recount",
+   "diagnosis": "A_base-only value vs variant range; STP share 99.66% in single-sector folds",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.json ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_06_eb_totals.json",
+   "resolution": "about 90% (84-96%); STP >= 99.66% of FPP (>= 99.85% for S32+S98).",
+   "reason": "full variant set",
+   "status": "COSMETIC"
+  },
+  {
+   "id": "X-T4-U04",
+   "quantity": "FPP numbers after the dilution check",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "U",
+     "value": "no change: FPP 0.031 +- 0.003, 0.031-0.034, MOLUSC 0.005/0.06 stand",
+     "evidence": "addenda/opus55_final_audit_tic4206066/_structured/resolve__R-DIL.json recommended_manuscript_change",
+     "method": "flag-flip runs"
+    },
+    {
+     "source": "U",
+     "value": "0.03-0.04; MOLUSC removed",
+     "evidence": "addenda/opus55_final_audit_tic4206066/_structured/resolve__R5.json ; addenda/opus55_final_audit_tic4206066/proposed_revision/manuscript.tex L43",
+     "method": "later resolution"
+    }
+   ],
+   "trace": "R-DIL tested only the dilution flag (<= 0.001 effect), not the range or MOLUSC mechanism.",
+   "diagnosis": "different questions; R-DIL's 'numbers stand' only means the flag does not move them",
+   "rerun": "none needed",
+   "resolution": "Dilution handled once; effect <= 0.0003 on A. Range and MOLUSC removal from R5/pass2 stand.",
+   "reason": "R-DIL scope",
+   "status": "NOT_A_CONFLICT"
+  },
+  {
+   "id": "X-T4-U05",
+   "quantity": "Gaia RV reach for companions at small separation",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "U",
+     "value": "RVs rule out companions inside ~2-3 au",
+     "evidence": "addenda/opus55_final_audit_tic4206066/09_companion/REPORT.md summary",
+     "method": "K95 vs K(a) for sin i = 1"
+    },
+    {
+     "source": "U",
+     "value": "a <~ 1-2 au need RVs; Gaia RV epochs do not settle this",
+     "evidence": "addenda/opus55_final_audit_tic4206066/_structured/resolve__R4.json (f)",
+     "method": "imaging reach"
+    }
+   ],
+   "trace": "U09 rv_limits.json; R4 text",
+   "diagnosis": "U09 assumes favourable inclination and full-orbit coverage (baseline 923 d); for random inclination and P ~ 3-6 yr Gaia RVs are not decisive",
+   "rerun": "none needed",
+   "resolution": "State: Gaia RVs exclude an eclipsing stellar companion of the target; they do not close 0.15-0.38 Msun companions at ~1-3 au for arbitrary inclination. TRICERATOPS' default prior already excludes a < 3.6 au.",
+   "reason": "different claims",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T4-U06",
+   "quantity": "R5 'adopted fold direct runs' default FPP_A",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "U",
+     "value": "0.031 +- 0.003 (20 runs), labelled 'Adopted fold (direct TRICERATOPS 1.1.0 runs)'",
+     "evidence": "addenda/opus55_final_audit_tic4206066/_structured/resolve__R5.json key_numbers",
+     "method": "summary"
+    },
+    {
+     "source": "U",
+     "value": "2 runs, 0.0283 (seeds 1000-1001)",
+     "evidence": "addenda/opus55_final_audit_tic4206066/referee/resolve_R5/runs/default_A_adoptedfold.json",
+     "method": "run file"
+    }
+   ],
+   "trace": "t4_01 census",
+   "diagnosis": "the 20-run value is the audit package's A_base_S32+S98, not an R5 run",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_01_fpp_run_census.csv",
+   "resolution": "0.0312 +- 0.0031 (20 runs) belongs to addenda/tic4206066_PUBLICATION_AUDIT/out/fpp/runs/A_base_S32+S98; R5's direct default runs are a 2-seed reproduction.",
+   "reason": "run files outrank summaries",
+   "status": "COSMETIC"
+  },
+  {
+   "id": "X-T4-U07",
+   "quantity": "SOAR speckle calibration counts (0/38 vs 48/48)",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "U",
+     "value": "0/38 target-like at 0.2-2 arcsec, dI <= 2",
+     "evidence": "addenda/opus55_final_audit_tic4206066/referee/resolve_R4/out/r4_summary.json",
+     "method": "calibration"
+    },
+    {
+     "source": "U",
+     "value": "48/48 SOAR binaries flagged",
+     "evidence": "addenda/opus55_final_audit_tic4206066/REFEREE_PASS_2.md L26",
+     "method": "summary"
+    }
+   ],
+   "trace": "addenda/opus55_final_audit_tic4206066/referee/resolve_R4/out/r4_02_speckle_calib.json keys sep0.2-2.0 and sep0.15-2.5_dI_le1.76",
+   "diagnosis": "two subsamples of the same calibration",
+   "rerun": "none needed",
+   "resolution": "Both correct; the Note needs only 'normal BP/RP excess'.",
+   "reason": "",
+   "status": "NOT_A_CONFLICT"
+  },
+  {
+   "id": "X-T4-M01",
+   "quantity": "minimum circular-orbit host mass (A)",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "M",
+     "value": ">= 0.54 Msun",
+     "evidence": "addenda/rnaas_tic4206066_pubprep/MANUSCRIPT_NUMBER_AUDIT.csv L57 ; addenda/tic4206066_MASTER_EVIDENCE/MASTER_TRUTH.md 'Hidden companion constraints'",
+     "method": "Pecaut & Mamajek table"
+    },
+    {
+     "source": "U",
+     "value": "~0.52 (0.517-0.529)",
+     "evidence": "addenda/opus55_final_audit_tic4206066/referee/resolve_R4/out/r4_summary.json d_threshold ; addenda/opus55_final_audit_tic4206066/09_companion/out/companion_space.json",
+     "method": "profile fits and Mann relations"
+    }
+   ],
+   "trace": "see COMP.host_mass_circular",
+   "diagnosis": "method (table interpolation) difference, not dilution",
+   "rerun": "none needed",
+   "resolution": "~0.52 Msun.",
+   "reason": "two independent fits and the undiluted Mann calculation agree",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T4-M02",
+   "quantity": "FALSE_POSITIVE_MATRIX rows for A (9, 12, 17, 18, 19, 20)",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "M",
+     "value": "row 9 target EB DISFAVORED (K < 3.2 km/s); row 12 background EB DISFAVORED; row 17 EB on bound companion DISFAVORED; row 18 planet on companion OPEN; row 19 circular DISFAVORED (>= 0.54); row 20 chance-aligned OPEN",
+     "evidence": "addenda/tic4206066_MASTER_EVIDENCE/FALSE_POSITIVE_MATRIX.csv rows 9, 12, 17-20",
+     "method": "compiled"
+    },
+    {
+     "source": "U",
+     "value": "remaining: eccentric planet on 0.15-0.38 Msun companion",
+     "evidence": "addenda/opus55_final_audit_tic4206066/proposed_revision/manuscript.tex L22, L41",
+     "method": "audits"
+    }
+   ],
+   "trace": "t4_06 scenario probabilities; U09/R4 host and e analysis; U09 RV limits",
+   "diagnosis": "M statuses predate the RV recalibration, C* calibration and host-mass refit",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_06_eb_totals.json",
+   "resolution": "Row 9: EXCLUDED (K95 1.16 vs >= 14.9 km/s). Row 12: DISFAVORED (BEB <= 4e-5, EB total <= 2e-6 for S32+S98). Row 17: DISFAVORED (SEB+SEBx2P within EB total; V shape dchi2 = 32). Row 18: OPEN but restricted to 0.15-0.38 Msun hosts, e >~ 0.2-0.6, 0.1-2.2 arcsec. Row 19: DISFAVORED at 2 sigma (host >= 0.52 needed; >0.38 removed by overluminosity + C*). Row 20: OPEN observationally below ~2 arcsec, statistically small (BTP + BEB <= 1.2e-4).",
+   "reason": "newer, calibrated tests",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T4-P01",
+   "quantity": "pixel_recheck (P) vs FPP/companion topic",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "P",
+     "value": "S98 core-aperture depth excess ~200 ppm not excluded; B off-target S32 effect was a method artefact",
+     "evidence": "addenda/tic4206066_pixel_recheck/SUMMARY.md L80-L95",
+     "method": "aperture photometry"
+    }
+   ],
+   "trace": "P does not change FPP inputs (TRICERATOPS folds use SPOC/QLP light curves) or companion constraints.",
+   "diagnosis": "different quantity",
+   "rerun": "none needed",
+   "resolution": "No impact on FPP or companion constraints; an unresolved companion within 0.2 arcsec cannot be tested by aperture size.",
+   "reason": "",
+   "status": "NOT_A_CONFLICT"
+  }
+ ],
+ "manuscript_findings": [
+  {
+   "quote": "and radial velocities that exclude an eclipsing stellar companion.",
+   "problem": "Scope: Gaia RVs are of the target, so they exclude an eclipsing stellar companion OF THE TARGET (K >= 9.8 km/s vs 95% K < 1.16 km/s); they do not exclude an EB on an unresolved companion. As written the sentence can be read more broadly. R4 recommended '...of the target'.",
+   "fix": "and radial velocities that exclude an eclipsing stellar companion of the target.",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "The default FPP exceeds the threshold of \\citet{Giacalone2021} (FPP $<0.015$, NFPP $<10^{-3}$; here NFPP $<10^{-6}$), calibrated for circular orbits, so I claim no validation.",
+   "problem": "Correct, but the constrained value in the previous sentence (0.002-0.007) is below 0.015; the reason it cannot be used for validation (post hoc cut outside the calibrated configuration) is only implied. Optional clarification (+4 words; texcount 1452/1500).",
+   "fix": "The default FPP exceeds the threshold of \\citet{Giacalone2021} (FPP $<0.015$, NFPP $<10^{-3}$; here NFPP $<10^{-6}$), calibrated for circular orbits and default priors, so I claim no validation.",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "gives FPP $=0.03$--0.04 for the 3.18\\,d signal (4--20 runs of $10^6$ draws), nearly all from bound companions.",
+   "problem": "Checked: variant means 0.030-0.044, run counts 4-20, STP >= 99.7% of FPP. No change.",
+   "fix": "no change",
+   "severity": "NONE"
+  },
+  {
+   "quote": "About 90\\% of the FPP comes from companions above $0.38\\,M_\\odot$: excluding them (a post hoc prior cut) gives FPP $\\approx0.002$--0.007.",
+   "problem": "Checked: 84-96% share; constrained 0.0020-0.0067 (U08 re-weighting), 0.0043 (verifier, 8 runs), 0.0024 (R5, 5 runs). No change.",
+   "fix": "no change",
+   "severity": "NONE"
+  },
+  {
+   "quote": "excludes Gaia-blended ($\\lesssim0.2''$) companions above $\\approx0.38\\,M_\\odot$ ($2\\sigma$; \\citealt{Pecaut2013})",
+   "problem": "Checked: 0.38 is the conservative end for the quoted 0.05-0.07 mag scatter (0.35-0.38); 0.2 arcsec is Way et al.'s Gaia resolution limit. 'excludes' is acceptable because the 2 sigma level is stated. No change.",
+   "fix": "no change",
+   "severity": "NONE"
+  },
+  {
+   "quote": "For the 3.18\\,d transit duration, a circular orbit needs a companion host above $\\approx0.52\\,M_\\odot$, leaving 0.15--0.38\\,$M_\\odot$ hosts with $e\\gtrsim0.2$--0.6.",
+   "problem": "Checked: 0.517-0.529; lower bound 0.13-0.17; e_min 0.20-0.61. No change.",
+   "fix": "no change",
+   "severity": "NONE"
+  }
+ ],
+ "unknowns": [
+  {
+   "item": "Whether the 3.18 d signal is on an unresolved 0.15-0.38 Msun bound companion (eccentric orbit)",
+   "why": "no high-resolution imaging exists; Gaia constraints do not reach these masses at 0.1-2.2 arcsec",
+   "would_resolve": "one speckle/AO sequence (0.02-2 arcsec, ~5 mag contrast) plus RV monitoring for a <~1-3 au",
+   "blocks_submission": false
+  },
+  {
+   "item": "Chance-aligned background EB unresolved by Gaia within ~2 arcsec (dG ~4-8)",
+   "why": "Gaia completeness is population-level; TRICERATOPS gives BTP + BEB <= 1.2e-4 but this is prior-dependent (Gaia DR3 background default not benchmarked, KNOWN_ISSUES)",
+   "would_resolve": "same speckle/AO imaging",
+   "blocks_submission": false
+  },
+  {
+   "item": "True per-star uncertainty of the Way et al. (2026) overluminosity",
+   "why": "Way et al. publish no per-star error; 0.05-0.07 mag is the author's scatter estimate (0.052-0.098 depending on definition)",
+   "would_resolve": "a Way et al. error model or injection test; not needed for the 2 sigma wording with the scatter stated",
+   "blocks_submission": false
+  },
+  {
+   "item": "Cause of the +20-26% FPP_A increase with 10-min bins",
+   "why": "not diagnosed in any package",
+   "would_resolve": "a paired-seed run at 2, 6, 10 min bins on one fold",
+   "blocks_submission": false
+  },
+  {
+   "item": "Durable storage of the MOLUSC --all file behind the Gaia-constrained FPP 0.0030",
+   "why": "r5_all.csv (206 MB) exists only in a /private/tmp scratchpad",
+   "would_resolve": "archive it with the supporting package if that value is cited (it is not in the Note)",
+   "blocks_submission": false
+  }
+ ],
+ "files_written": [
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_01_count_fpp_runs.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_01_count_fpp_runs.log",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_01_fpp_run_census.csv",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.log",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_02_checks.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_03_sdss_sep.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_03_sdss_sep.log",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_03_sdss_sep.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_04_gaia60_census.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_04_gaia60_census.log",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_04_gaia60_census.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_05_sed_colour_sign.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_05_sed_colour_sign.log",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_05_sed_colour_sign.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_06_eb_totals.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_06_eb_totals.log",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_06_eb_totals.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/t4_07_build_result.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T4_fpp_companion/result.json"
+ ]
+}

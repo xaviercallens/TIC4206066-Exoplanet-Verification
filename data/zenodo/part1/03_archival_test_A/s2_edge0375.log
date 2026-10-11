@@ -1,0 +1,362 @@
+{
+ "observed": {
+  "adopted": {
+   "fixed_S6": -0.2950805151076331,
+   "opt_S6": 8.691277269418533,
+   "wpred_S6": 31.767151046276137,
+   "fixed_S32": 0.19862872863190592,
+   "opt_S32": 8.850098167720587,
+   "wpred_S32": 32.193865701063295,
+   "opt_joint": 12.317268349342555,
+   "wpred_joint": 67.88917115740078,
+   "fixed_joint": -0.05392826944689889
+  },
+  "likelihood": {
+   "fixed_S6": -0.2950805151076331,
+   "opt_S6": 8.691277269418533,
+   "wpred_S6": 32.03157314912224,
+   "fixed_S32": 0.19862872863190592,
+   "opt_S32": 8.8988697789284,
+   "wpred_S32": 32.5700993714711,
+   "opt_joint": 12.317268349342555,
+   "wpred_joint": 68.07201761633492,
+   "fixed_joint": -0.05392826944689889
+  }
+ },
+ "discovery_centre_fixed_snr": {
+  "S6": 0.4375911578250192,
+  "S32": 0.11197179687997043,
+  "joint": 0.354867079476491
+ },
+ "true_ephemeris_snr_reference_only": {
+  "S6": 8.292205828613149,
+  "depth_S6_ppm": 393.3069942687544,
+  "Nin_S6": 18,
+  "S32": 8.769085479884941,
+  "depth_S32_ppm": 349.0818587977308,
+  "Nin_S32": 449
+ },
+ "N1_fixed_period_phase_null": {
+  "S6_adopted_centre": {
+   "obs": -0.2950805151076331,
+   "k": 449,
+   "N_grid": 872,
+   "N_indep": 38,
+   "fap": 0.5154639175257731
+  },
+  "S6_discovery_centre": {
+   "obs": 0.4375911578250192,
+   "k": 220,
+   "N_grid": 872,
+   "N_indep": 38,
+   "fap": 0.2531500572737686
+  },
+  "S6_null_sd": 1.0211743860336706,
+  "S6_null_max": 2.827532360309944,
+  "S6_true_phase_snr": 8.691277269418533,
+  "S32_adopted_centre": {
+   "obs": 0.19862872863190592,
+   "k": 237,
+   "N_grid": 872,
+   "N_indep": 38,
+   "fap": 0.27262313860252
+  },
+  "S32_discovery_centre": {
+   "obs": 0.11197179687997043,
+   "k": 253,
+   "N_grid": 872,
+   "N_indep": 38,
+   "fap": 0.290950744558992
+  },
+  "S32_null_sd": 1.3824626161452132,
+  "S32_null_max": 2.8757698876539672,
+  "S32_true_phase_snr": 8.784907794945148
+ },
+ "recovered": {
+  "adopted": {
+   "dT_min": -24.50387029774894,
+   "dP": 0.0006458175222112169,
+   "dT_sigma": -2.142857142857143,
+   "dP_sigma": 0.49693251533742355,
+   "P_rec": 3.1827578175223294,
+   "tc_S6_mid": 1477.9749341881547,
+   "tc_S32_mid": 2187.729927495634,
+   "S6_offset_h": -12.777095023688162,
+   "S6_offset_sigma": -0.5146839194764669,
+   "S6_rec_minus_final_min": 6.716431004024344,
+   "S32_offset_h": -9.320679644817574,
+   "S32_offset_sigma": -0.5215860787989318,
+   "S32_rec_minus_final_min": -2.012406225767336,
+   "P_rec_minus_final_sigmaPpred": -0.02091590354450215
+  },
+  "likelihood": {
+   "dT_min": -9.094189318061106,
+   "dP": 0.0006607049769247718,
+   "dT_sigma": -2.142857142857143,
+   "dP_sigma": 1.16030534351145,
+   "P_rec": 3.182772704977043,
+   "tc_S6_mid": 1477.9737551666408,
+   "tc_S32_mid": 2187.732068376521,
+   "S6_offset_h": -12.805391540023265,
+   "S6_offset_sigma": -1.176809392313539,
+   "S6_rec_minus_final_min": 5.018640023918124,
+   "S32_offset_h": -9.269298503528262,
+   "S32_offset_sigma": -1.183217915517196,
+   "S32_rec_minus_final_min": 1.0704622515913798,
+   "P_rec_minus_final_sigmaPpred": -0.021592058988403502
+  }
+ },
+ "depths": {
+  "S98_ppm": 397.4205443201266,
+  "S98_err_ppm": 38.901542120544946,
+  "S6_ppm": 401.24039857367563,
+  "S6_err_white_ppm": 46.165872533545304,
+  "ratio_S6_to_S98": 1.0096116174871728,
+  "S32_ppm": 345.918858102046,
+  "S32_err_white_ppm": 39.80823993545004,
+  "ratio_S32_to_S98": 0.8704101059843664,
+  "note": "box depths, biweight 0.75 d, A unmasked in the trend in all sectors (same for all trials); white errors understate red noise. Reconciled fitted depths: S6 521+-53, S32 476+-75, S98 496+-48 ppm (ratios 1.05, 0.96).",
+  "ratio_reconciled": {
+   "S6": 1.0504032258064515,
+   "S32": 0.9596774193548387
+  },
+  "box_depth_variants_ppm_[value,empirical_err]": {
+   "A_unmasked": {
+    "S98": [
+     397.4205443201266,
+     52.730154269193854
+    ],
+    "S98_without_Em1": [
+     397.4205443201266,
+     54.94352603386471
+    ],
+    "ratio_S6_to_S98_without_Em1": [
+     1.0096116174871728,
+     0.18119593041781634
+    ],
+    "S6": [
+     401.24039857367563,
+     45.9182004749406
+    ],
+    "ratio_S6_to_S98": [
+     1.0096116174871728,
+     0.17690084741787335
+    ],
+    "ratio_S32_to_S98_without_Em1": [
+     0.8704101059843664,
+     0.2045896224673773
+    ],
+    "S32": [
+     345.918858102046,
+     65.75661652909572
+    ],
+    "ratio_S32_to_S98": [
+     0.8704101059843664,
+     0.20177646731683577
+    ],
+    "n_null_phases": 37
+   },
+   "A_masked": {
+    "S98": [
+     437.64529893267303,
+     50.78939206006445
+    ],
+    "S98_without_Em1": [
+     437.64529893267303,
+     53.22345765476512
+    ],
+    "ratio_S6_to_S98_without_Em1": [
+     0.9891994418918436,
+     0.15495303680484582
+    ],
+    "S6": [
+     432.9184854507892,
+     42.74254865285943
+    ],
+    "ratio_S6_to_S98": [
+     0.9891994418918436,
+     0.15072164743719382
+    ],
+    "ratio_S32_to_S98_without_Em1": [
+     0.8680464664879528,
+     0.18389866047997946
+    ],
+    "S32": [
+     379.89645531357064,
+     65.90094110511907
+    ],
+    "ratio_S32_to_S98": [
+     0.8680464664879528,
+     0.1811704011123845
+    ],
+    "n_null_phases": 37
+   }
+  }
+ },
+ "cycle_count": {
+  "S98+S6": {
+   "alias_spacing_dP": 0.003987609022556539,
+   "rows": [
+    {
+     "cycles": 796,
+     "P": 3.1907760740696163,
+     "z_adopted": 6.666682108103781,
+     "z_likelihood": 15.215522495696701,
+     "boot_frac_nearest": 0.0
+    },
+    {
+     "cycles": 797,
+     "P": 3.1867725909152003,
+     "z_adopted": 3.586151020586632,
+     "z_likelihood": 8.184755271347665,
+     "boot_frac_nearest": 0.0
+    },
+    {
+     "cycles": 798,
+     "P": 3.1827791415531514,
+     "z_adopted": 0.5133405623616865,
+     "z_likelihood": 1.1716090174861304,
+     "boot_frac_nearest": 0.832
+    },
+    {
+     "cycles": 799,
+     "P": 3.1787956883096555,
+     "z_adopted": -2.551778255167143,
+     "z_likelihood": -5.823982427230041,
+     "boot_frac_nearest": 0.168
+    },
+    {
+     "cycles": 800,
+     "P": 3.1748221936992684,
+     "z_adopted": -5.6092342756520885,
+     "z_likelihood": -12.80208489333428,
+     "boot_frac_nearest": 0.0
+    }
+   ],
+   "unique_selected_cycles": 798,
+   "final_ephemeris_cycles": 798
+  },
+  "S98+S32": {
+   "alias_spacing_dP": 0.005534107826087162,
+   "rows": [
+    {
+     "cycles": 573,
+     "P": 3.1938966171936047,
+     "z_adopted": 9.067823747173968,
+     "z_likelihood": 20.695703496110127,
+     "boot_frac_nearest": 0.0
+    },
+    {
+     "cycles": 574,
+     "P": 3.1883323373727097,
+     "z_adopted": 4.786317791790015,
+     "z_likelihood": 10.923923602718249,
+     "boot_frac_nearest": 0.0
+    },
+    {
+     "cycles": 575,
+     "P": 3.1827874115685835,
+     "z_adopted": 0.519704031033832,
+     "z_likelihood": 1.1861325089563473,
+     "boot_frac_nearest": 0.894
+    },
+    {
+     "cycles": 576,
+     "P": 3.1772617389790545,
+     "z_adopted": -3.7320950986089065,
+     "z_likelihood": -8.517846810175103,
+     "boot_frac_nearest": 0.106
+    },
+    {
+     "cycles": 577,
+     "P": 3.1717552195007546,
+     "z_adopted": -7.969156622949475,
+     "z_likelihood": -18.188190152463545,
+     "boot_frac_nearest": 0.0
+    }
+   ],
+   "unique_selected_cycles": 575,
+   "final_ephemeris_cycles": 575
+  }
+ },
+ "S6_dump_check": {
+  "n_dumps": 6,
+  "dump_spacing_d": 3.1249491496996598,
+  "single_box_snr_near_dumps_0p4_3p6h": {
+   "mean": -0.7037245162492971,
+   "sd": 0.9436993996486068,
+   "p95": 0.5473462359339294,
+   "n": 180
+  },
+  "single_box_snr_far_gt6h": {
+   "mean": -0.052754878431423055,
+   "sd": 1.047294250501992,
+   "p95": 1.7725987948447592,
+   "n": 4649
+  },
+  "note": "single T14 boxes on S6 data with true A transits removed; S/N in white-noise units"
+ },
+ "prediction_vs_final": {
+  "P_pred_minus_final": -0.0006729999998817959,
+  "in_sigma_adopted": -0.5178484188819644,
+  "in_sigma_likelihood": -1.1818974024997622
+ },
+ "runtime_s": 290.798709154129
+}
+N2 adopted fixed_S6 {'obs': -0.29508, 'k': 5441, 'N': 10000, 'fap': 0.54415, 'sigma': -0.11088}  {'mu': -0.1752270754615913, 'sd': 1.039302143363144, 'z': -0.11532107425296019, 'p': 0.5459046825195892}
+N2 adopted fixed_S32 {'obs': 0.19863, 'k': 2948, 'N': 10000, 'fap': 0.29487, 'sigma': 0.53921}  {'mu': -0.5749914915034833, 'sd': 1.4539848561205062, 'z': 0.5320689667975962, 'p': 0.29733911500504107}
+N2 adopted fixed_joint {'obs': -0.05393, 'k': 3497, 'N': 10000, 'fap': 0.34977, 'sigma': 0.38595}  {'mu': -0.5287849357088716, 'sd': 1.2622724494791338, 'z': 0.37619189617734144, 'p': 0.35338711980191917}
+N2 adopted opt_S6 {'obs': 8.69128, 'k': 0, 'N': 10000, 'fap': 0.0001, 'sigma': 3.71904} 0.006291516697411664 {'threshold': 3.7072201134973977, 'shape': -1.1164470983456938, 'scale': 0.75405523524916, 'n_exc': 493, 'endpoint': 4.38262626249137, 'p': 0.0, 'sigma': None, 'note': 'observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful'}
+N2 adopted opt_S32 {'obs': 8.8501, 'k': 0, 'N': 10000, 'fap': 0.0001, 'sigma': 3.71904} 0.005261845601650097 {'threshold': 4.625669473056796, 'shape': -0.5253373012600983, 'scale': 0.29515199642534723, 'n_exc': 500, 'endpoint': 5.187502786087076, 'p': 0.0, 'sigma': None, 'note': 'observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful'}
+N2 adopted opt_joint {'obs': 12.31727, 'k': 0, 'N': 10000, 'fap': 0.0001, 'sigma': 3.71904} 0.00028361879426878976 {'threshold': 4.17903816427679, 'shape': -0.16068011382437825, 'scale': 0.31131431190222236, 'n_exc': 500, 'endpoint': 6.116516950497254, 'p': 0.0, 'sigma': None, 'note': 'observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful'}
+N2 adopted wpred_S6 {'obs': 31.76715, 'k': 0, 'N': 10000, 'fap': 0.0001, 'sigma': 3.71904} 0.006291516697411664 {'threshold': 1.248450896472258, 'shape': 0.06083044932737308, 'scale': 0.4668130635480051, 'n_exc': 500, 'endpoint': inf, 'p': 1.7441186971823495e-13, 'sigma': 7.274066651349857, 'note': ''}
+N2 adopted wpred_S32 {'obs': 32.19387, 'k': 0, 'N': 10000, 'fap': 0.0001, 'sigma': 3.71904} 0.005261845601650097 {'threshold': 3.681187606789674, 'shape': -0.3237528135601261, 'scale': 1.335680974024225, 'n_exc': 500, 'endpoint': 7.806807271176521, 'p': 0.0, 'sigma': None, 'note': 'observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful'}
+N2 adopted wpred_joint {'obs': 67.88917, 'k': 0, 'N': 10000, 'fap': 0.0001, 'sigma': 3.71904} 0.00028361879426878976 {'threshold': 2.251098431950426, 'shape': -0.08712227121401342, 'scale': 1.0570616498947585, 'n_exc': 500, 'endpoint': 14.384180308318365, 'p': 0.0, 'sigma': None, 'note': 'observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful'}
+N2 adopted fixed_fisher_counting {'p': 0.45404, 'sigma': 0.11546}  
+N2 adopted opt_fisher_counting {'p': 0.0, 'sigma': 5.07459}  
+N2 adopted opt_fisher_conservative {'p': 0.00037, 'sigma': 3.3709}  
+N2 adopted wpred_fisher_counting {'p': 0.0, 'sigma': 5.07459}  
+N2 adopted wpred_fisher_conservative {'p': 0.00037, 'sigma': 3.3709}  
+N2 likelihood fixed_S6 {'obs': -0.29508, 'k': 5441, 'N': 10000, 'fap': 0.54415, 'sigma': -0.11088}  {'mu': -0.1752270754615913, 'sd': 1.039302143363144, 'z': -0.11532107425296019, 'p': 0.5459046825195892}
+N2 likelihood fixed_S32 {'obs': 0.19863, 'k': 2948, 'N': 10000, 'fap': 0.29487, 'sigma': 0.53921}  {'mu': -0.5749914915034833, 'sd': 1.4539848561205062, 'z': 0.5320689667975962, 'p': 0.29733911500504107}
+N2 likelihood fixed_joint {'obs': -0.05393, 'k': 3497, 'N': 10000, 'fap': 0.34977, 'sigma': 0.38595}  {'mu': -0.5287849357088716, 'sd': 1.2622724494791338, 'z': 0.37619189617734144, 'p': 0.35338711980191917}
+N2 likelihood opt_S6 {'obs': 8.69128, 'k': 0, 'N': 10000, 'fap': 0.0001, 'sigma': 3.71904} 0.006291516697411664 {'threshold': 3.611148402340797, 'shape': -0.13618427209379397, 'scale': 0.28262562374078065, 'n_exc': 499, 'endpoint': 5.686466053898448, 'p': 0.0, 'sigma': None, 'note': 'observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful'}
+N2 likelihood opt_S32 {'obs': 8.89887, 'k': 0, 'N': 10000, 'fap': 0.0001, 'sigma': 3.71904} 0.005261845601650097 {'threshold': 4.385835785047409, 'shape': -0.4944650662712748, 'scale': 0.39358716516996495, 'n_exc': 500, 'endpoint': 5.18182157255304, 'p': 0.0, 'sigma': None, 'note': 'observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful'}
+N2 likelihood opt_joint {'obs': 12.31727, 'k': 0, 'N': 10000, 'fap': 0.0001, 'sigma': 3.71904} 0.0006470743872665728 {'threshold': 3.8914704953290085, 'shape': -0.2163159417276222, 'scale': 0.3778959449868984, 'n_exc': 500, 'endpoint': 5.638433488295714, 'p': 0.0, 'sigma': None, 'note': 'observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful'}
+N2 likelihood wpred_S6 {'obs': 32.03157, 'k': 0, 'N': 10000, 'fap': 0.0001, 'sigma': 3.71904} 0.006291516697411664 {'threshold': 1.36667418288624, 'shape': 0.08340025438895313, 'scale': 0.48897675847411387, 'n_exc': 500, 'endpoint': inf, 'p': 1.48789459277676e-11, 'sigma': 6.647764005071961, 'note': ''}
+N2 likelihood wpred_S32 {'obs': 32.5701, 'k': 0, 'N': 10000, 'fap': 0.0001, 'sigma': 3.71904} 0.005261845601650097 {'threshold': 3.6520632985039034, 'shape': -0.022482844183056752, 'scale': 0.9968410992733983, 'n_exc': 500, 'endpoint': 47.98991891663898, 'p': 1.9813076836403408e-22, 'sigma': 9.672074820080057, 'note': ''}
+N2 likelihood wpred_joint {'obs': 68.07202, 'k': 0, 'N': 10000, 'fap': 0.0001, 'sigma': 3.71904} 0.0006470743872665728 {'threshold': 2.0859034203022055, 'shape': -0.08674352025397666, 'scale': 1.1345124251159475, 'n_exc': 500, 'endpoint': 15.164833371429443, 'p': 0.0, 'sigma': None, 'note': 'observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful'}
+N2 likelihood fixed_fisher_counting {'p': 0.45404, 'sigma': 0.11546}  
+N2 likelihood opt_fisher_counting {'p': 0.0, 'sigma': 5.07459}  
+N2 likelihood opt_fisher_conservative {'p': 0.00037, 'sigma': 3.3709}  
+N2 likelihood wpred_fisher_counting {'p': 0.0, 'sigma': 5.07459}  
+N2 likelihood wpred_fisher_conservative {'p': 0.00037, 'sigma': 3.3709}  
+N2 likelihood wpred_fisher_gpd {'p': 0.0, 'sigma': 11.59294}  
+N2r adopted fixed_S6 {'obs': -0.29508, 'k': 1085, 'N': 2000, 'fap': 0.54273, 'sigma': -0.10731}  {'mu': -0.17810970785797478, 'sd': 1.0529576308596476, 'z': -0.11108785749922523, 'p': 0.5442266612725687}
+N2r adopted fixed_S32 {'obs': 0.19863, 'k': 580, 'N': 2000, 'fap': 0.29035, 'sigma': 0.55235}  {'mu': -0.634206444475921, 'sd': 1.4873177893343525, 'z': 0.5599577837904847, 'p': 0.2877541166796794}
+N2r adopted fixed_joint {'obs': -0.05393, 'k': 682, 'N': 2000, 'fap': 0.34133, 'sigma': 0.40884}  {'mu': -0.5771629690786729, 'sd': 1.2882232205461246, 'z': 0.4061677287651715, 'p': 0.3423096819873918}
+N2r adopted opt_S6 {'obs': 8.69128, 'k': 0, 'N': 2000, 'fap': 0.0005, 'sigma': 3.29067} 0.06885697980452848 {'threshold': 3.6930255278578556, 'n_exc': 0, 'p': nan, 'sigma': nan}
+N2r adopted opt_S32 {'obs': 8.8501, 'k': 0, 'N': 2000, 'fap': 0.0005, 'sigma': 3.29067} 0.05818741138039438 {'threshold': 4.455926368989429, 'shape': -0.48129265340327676, 'scale': 0.1454757779279651, 'n_exc': 100, 'endpoint': 4.75818691026154, 'p': 0.0, 'sigma': None, 'note': 'observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful'}
+N2r adopted opt_joint {'obs': 12.31727, 'k': 0, 'N': 2000, 'fap': 0.0005, 'sigma': 3.29067} 0.0033026058230394085 {'threshold': 4.125006066789283, 'shape': -0.35967486398583826, 'scale': 0.46533031324722607, 'n_exc': 100, 'endpoint': 5.418758730210177, 'p': 0.0, 'sigma': None, 'note': 'observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful'}
+N2r adopted wpred_S6 {'obs': 31.76715, 'k': 0, 'N': 2000, 'fap': 0.0005, 'sigma': 3.29067} 0.06885697980452848 {'threshold': 0.9899185653584274, 'shape': -0.2837809103771186, 'scale': 0.18715077451474008, 'n_exc': 100, 'endpoint': 1.6494089245444417, 'p': 0.0, 'sigma': None, 'note': 'observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful'}
+N2r adopted wpred_S32 {'obs': 32.19387, 'k': 0, 'N': 2000, 'fap': 0.0005, 'sigma': 3.29067} 0.05818741138039438 {'threshold': 3.2432582726220622, 'shape': -0.5155508304321821, 'scale': 0.8549239248117061, 'n_exc': 100, 'endpoint': 4.9015310836560975, 'p': 0.0, 'sigma': None, 'note': 'observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful'}
+N2r adopted wpred_joint {'obs': 67.88917, 'k': 0, 'N': 2000, 'fap': 0.0005, 'sigma': 3.29067} 0.0033026058230394085 {'threshold': 2.038093336730278, 'shape': -0.01562712903922021, 'scale': 1.158987255515498, 'n_exc': 100, 'endpoint': 76.20317206659347, 'p': 7.626680361986292e-63, 'sigma': 16.690946368297322, 'note': ''}
+N2r adopted fixed_fisher_counting {'p': 0.44877, 'sigma': 0.12878}  
+N2r adopted opt_fisher_counting {'p': 0.0, 'sigma': 4.4627}  
+N2r adopted opt_fisher_conservative {'p': 0.02612, 'sigma': 1.94111}  
+N2r adopted wpred_fisher_counting {'p': 0.0, 'sigma': 4.4627}  
+N2r adopted wpred_fisher_conservative {'p': 0.02612, 'sigma': 1.94111}  
+N2r likelihood fixed_S6 {'obs': -0.29508, 'k': 1085, 'N': 2000, 'fap': 0.54273, 'sigma': -0.10731}  {'mu': -0.17810970785797478, 'sd': 1.0529576308596476, 'z': -0.11108785749922523, 'p': 0.5442266612725687}
+N2r likelihood fixed_S32 {'obs': 0.19863, 'k': 580, 'N': 2000, 'fap': 0.29035, 'sigma': 0.55235}  {'mu': -0.634206444475921, 'sd': 1.4873177893343525, 'z': 0.5599577837904847, 'p': 0.2877541166796794}
+N2r likelihood fixed_joint {'obs': -0.05393, 'k': 682, 'N': 2000, 'fap': 0.34133, 'sigma': 0.40884}  {'mu': -0.5771629690786729, 'sd': 1.2882232205461246, 'z': 0.4061677287651715, 'p': 0.3423096819873918}
+N2r likelihood opt_S6 {'obs': 8.69128, 'k': 0, 'N': 2000, 'fap': 0.0005, 'sigma': 3.29067} 0.06885697980452848 {'threshold': 3.610018077388845, 'shape': -1.9153923130040154, 'scale': 0.1589918325504049, 'n_exc': 78, 'endpoint': 3.6930255278578556, 'p': 0.0, 'sigma': None, 'note': 'observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful'}
+N2r likelihood opt_S32 {'obs': 8.89887, 'k': 0, 'N': 2000, 'fap': 0.0005, 'sigma': 3.29067} 0.05818741138039438 {'threshold': 4.363992811374527, 'shape': -0.44979635201808266, 'scale': 0.16179340902028258, 'n_exc': 100, 'endpoint': 4.723696504600074, 'p': 0.0, 'sigma': None, 'note': 'observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful'}
+N2r likelihood opt_joint {'obs': 12.31727, 'k': 0, 'N': 2000, 'fap': 0.0005, 'sigma': 3.29067} 0.007505826288386412 {'threshold': 3.7599836770778103, 'shape': -0.040860384715490354, 'scale': 0.370503385954965, 'n_exc': 100, 'endpoint': 12.827528893178176, 'p': 1.3013349531631807e-32, 'sigma': 11.834052162109673, 'note': ''}
+N2r likelihood wpred_S6 {'obs': 32.03157, 'k': 0, 'N': 2000, 'fap': 0.0005, 'sigma': 3.29067} 0.06885697980452848 {'threshold': 1.1482539429846637, 'shape': -0.11648540875124574, 'scale': 0.23800394278348092, 'n_exc': 100, 'endpoint': 3.1914621467841426, 'p': 0.0, 'sigma': None, 'note': 'observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful'}
+N2r likelihood wpred_S32 {'obs': 32.5701, 'k': 0, 'N': 2000, 'fap': 0.0005, 'sigma': 3.29067} 0.05818741138039438 {'threshold': 3.0541427828567977, 'shape': -0.5265685866356207, 'scale': 1.433407639330339, 'n_exc': 100, 'endpoint': 5.7763098010010845, 'p': 0.0, 'sigma': None, 'note': 'observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful'}
+N2r likelihood wpred_joint {'obs': 68.07202, 'k': 0, 'N': 2000, 'fap': 0.0005, 'sigma': 3.29067} 0.007505826288386412 {'threshold': 1.857654077744635, 'shape': 0.24096505890086162, 'scale': 0.8104980436200728, 'n_exc': 100, 'endpoint': inf, 'p': 1.7336133223332118e-07, 'sigma': 5.096099651581061, 'note': ''}
+N2r likelihood fixed_fisher_counting {'p': 0.44877, 'sigma': 0.12878}  
+N2r likelihood opt_fisher_counting {'p': 0.0, 'sigma': 4.4627}  
+N2r likelihood opt_fisher_conservative {'p': 0.02612, 'sigma': 1.94111}  
+N2r likelihood wpred_fisher_counting {'p': 0.0, 'sigma': 4.4627}  
+N2r likelihood wpred_fisher_conservative {'p': 0.02612, 'sigma': 1.94111}  

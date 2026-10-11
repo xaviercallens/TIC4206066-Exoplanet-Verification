@@ -1,0 +1,24 @@
+A capable (full inclusion): [('3220388296975320448', 43.5), ('3220385277614918912', 50.3), ('3220385273320363520', 50.9), ('3220388262615571968', 54.0), ('3220385243255181952', 56.0), ('3220388296975326336', 60.5), ('3220388266911997952', 67.8), ('3220386716427320320', 69.9)]
+A capable in actual apertures (source, sep, sector): [('3220388296975320448', 43.5, 32), ('3220388296975320448', 43.5, 6), ('3220385277614918912', 50.3, 6), ('3220388262615571968', 54.0, 32), ('3220385243255181952', 56.0, 6), ('3220385243255181184', 83.8, 98), ('3220385243255181184', 83.8, 32), ('3220385243255181184', 83.8, 6)]
+B capable (full inclusion): [('3220388296975320448', 43.5), ('3220385277614918912', 50.3), ('3220388262615571968', 54.0), ('3220385243255181952', 56.0), ('3220388266911997952', 67.8), ('3220385243255181184', 83.8), ('3220385376398235776', 90.3), ('3220385380694236672', 91.3)]
+B capable in actual apertures (source, sep, sector): [('3220385243255181184', 83.8, 32)]
+   ('3220388296975929984', 11.1, 18.15, 'ok', 1.17, 2.44)
+   ('3220388228256452864', 14.2, 19.22, 'ok', 3.13, 6.53)
+   ('3220388266910977280', 21.1, 20.86, 'ok', 14.2, 29.59)
+   ('3220388266910692096', 26.0, 19.12, 'ok', 2.85, 5.95)
+   ('3220388266910977408', 28.0, 20.51, 'ok', 10.24, 21.33)
+   ('3220388232551535744', 29.4, 20.77, 'ok', 13.06, 27.21)
+   ('3220388262617517184', 42.6, 20.07, 'ok', 6.85, 14.27)
+   ('3220388296975320448', 43.5, 17.11, 'ok', 0.45, 0.94)
+   ('3220386716429300864', 46.8, 20.72, 'ok', 12.48, 25.99)
+   ('3220386716429289984', 47.8, 20.4, 'ok', 9.27, 19.32)
+   ('3220385277614918912', 50.3, 16.98, 'ok', 0.4, 0.83)
+   ('3220385273320363520', 50.9, 17.26, 'ok', 0.51, 1.07)
+   ('3220388262615571968', 54.0, 17.05, 'ok', 0.42, 0.88)
+   ('3220385243255181952', 56.0, 16.33, 'ok', 0.22, 0.46)
+   ('3220388296977260544', 57.1, 20.09, 'ok', 6.95, 14.47)
+   ('3220388262615575936', 59.1, 19.33, 'ok', 3.46, 7.2)
+RUWE: {'target': 1.2142985, 'n_comparison': 828, 'percentile_of_target': 63.76811594202898, 'comparison_median': 1.11639545, 'comparison_p84': 5.591734687999995, 'comparison_p95': 19.618170999999997, 'frac_comparison_gt_1p4': 0.2644927536231884, 'query': 'SELECT ruwe, phot_g_mean_mag, bp_rp, parallax FROM gaiadr3.gaia_source WHERE phot_g_mean_mag BETWEEN 10.0 AND 11.0 AND bp_rp BETWEEN 1.60 AND 1.90 AND parallax > 15 AND astrometric_params_solved = 31 AND ruwe IS NOT NULL'}
+host density constraint A: allowed [] ... min mass None
+WISE: {'Ks_minus_W1': 0.08899999999999952, 'Ks_minus_W2': 0.06799999999999962, 'Ks_minus_W3': 0.13400000000000034, 'Ks_minus_W4': 0.24300000000000033, 'W4_err': 0.133, 'PM_K8V_Ks_minus_W1': 0.115, 'PM_M0V_Ks_minus_W1': 0.12, 'note': 'PM table gives W1-W3/W1-W4 only for earlier types; for K7-M0 dwarfs photospheric Ks-W3 ~0.1-0.2 and Ks-W4 ~0.2-0.3 mag'}
+Gaia RV: {'rv': 10.486375, 'rv_error': 0.22067308, 'n_transits': 33, 'rv_method_used': 1, 'epoch_scatter_kms_from_error': 0.8768341378887685, 'rv_amplitude_robust': 3.2246542, 'rv_chisq_pvalue': 4.0627176e-05, 'rv_renormalised_gof': 2.998642, 'katz2023_variability_criteria': 'rv_chisq_pvalue <= 0.01 AND rv_renormalised_gof > 4 AND rv_nb_transits >= 10 -> NOT met (gof 3.0)', 'Klim_kms_used': 3.2246542, 'min_companion_mass_Msun_sin_i_1': {'3.18': 0.016, '11.13': 0.025, '30': 0.035, '100': 0.053, '300': 0.079, '1000': 0.123}, 'note': 'K_lim = rv_amplitude_robust (peak-to-peak) is conservative; companions above these masses at these periods would produce larger RV spreads than observed (approximate, sin i = 1, circular)'}

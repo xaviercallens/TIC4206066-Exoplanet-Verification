@@ -1,0 +1,14 @@
+S32_ffi      A: n_ep=8 depth(PRF)=433 ppm; offset 7.4" (dRA +7.1, dDec +0.0); on-target injections sd 12.5", Mahalanobis 0.94, frac further 0.54; astro shift [0.04708691898923871, -0.003650026373225575]
+      neighbour 3220388296975320448 44.1": needs 84% eclipse; real dchi2(N-T) 9.0; neighbour-inj median -304.2 (frac>=real 0.000); target-inj median 9.450007820694283
+      neighbour 3220385277614918912 53.0": needs 98% eclipse; real dchi2(N-T) 9.4; neighbour-inj median -338.9 (frac>=real 0.000); target-inj median 9.425251962941008
+      neighbour 3220385273320363520 53.7": needs 128% eclipse; real dchi2(N-T) 9.5; neighbour-inj median -376.4 (frac>=real 0.000); target-inj median 9.466001923792248
+      neighbour 3220388262615571968 56.6": needs 250% eclipse; real dchi2(N-T) 9.0; neighbour-inj median -4378.6 (frac>=real 0.000); target-inj median 9.495157291478879
+      neighbour 3220385243255181952 58.8": needs 108% eclipse; real dchi2(N-T) 9.7; neighbour-inj median -3265.5 (frac>=real 0.000); target-inj median 9.079027584239793
+      neighbour 3220388296975326336 62.2": needs 729% eclipse; real dchi2(N-T) 9.8; neighbour-inj median -4012.2 (frac>=real 0.000); target-inj median 9.331824938432593
+S32_ffi      B: n_ep=1 depth(PRF)=873 ppm; offset 20.0" (dRA -1.1, dDec +19.4); on-target injections sd 13.0", Mahalanobis 1.42, frac further 0.09; astro shift [0.04708691898923871, -0.003650026373225575]
+      neighbour 3220388296975320448 44.1": needs 169% eclipse; real dchi2(N-T) 2.3; neighbour-inj median -159.0 (frac>=real 0.000); target-inj median 3.985430588582417
+      neighbour 3220385277614918912 53.0": needs 197% eclipse; real dchi2(N-T) 3.9; neighbour-inj median -155.2 (frac>=real 0.000); target-inj median 3.9969327212849857
+      neighbour 3220385273320363520 53.7": needs 259% eclipse; real dchi2(N-T) 3.8; neighbour-inj median -174.1 (frac>=real 0.000); target-inj median 4.035954684887136
+      neighbour 3220388262615571968 56.6": needs 503% eclipse; real dchi2(N-T) 4.3; neighbour-inj median -1813.6 (frac>=real 0.000); target-inj median 3.9981785599895048
+      neighbour 3220385243255181952 58.8": needs 217% eclipse; real dchi2(N-T) 3.4; neighbour-inj median -1653.0 (frac>=real 0.000); target-inj median 4.154210949226719
+      neighbour 3220388266911997952 70.8": needs 1438% eclipse; real dchi2(N-T) 4.2; neighbour-inj median -36739.7 (frac>=real 0.000); target-inj median 4.046305387998611

@@ -1,0 +1,29 @@
+{
+ "printed_in_Note": {
+  "P": "3.182785 +- 0.000006 d",
+  "T0": "2460998.736 +- 0.003 BJD_TDB",
+  "chi2_dof": "~9.5/17",
+  "n_transits": 19
+ },
+ "fit": {
+  "P_d": 3.1827849535823756,
+  "eP_d": 5.662484117234625e-06,
+  "T0_BJD_TDB": 2460998.735992321,
+  "eT0_d": 0.002883224411453203,
+  "chi2": 9.508708500702566,
+  "dof": 17,
+  "p_upper": 0.9229397398164408,
+  "n": 19,
+  "rms_oc_min": 9.038114955837749,
+  "mc_sdP": 5.774983613106826e-06
+ },
+ "method": "weighted linear least squares on 19 mid-times; per-sector errors = SD of injection-recovered timing offsets (+-60 min search window)",
+ "source_file": "02_transits_A/reproduce_ephemeris/v4_results.json key ephem.drop_onesided_573_and_m1_R60",
+ "script": "02_transits_A/reproduce_ephemeris/v4_ephem.py (runs standalone in that folder)",
+ "fact_ids": [
+  "A.P",
+  "A.T0",
+  "A.timing_chi2",
+  "A.N_timing"
+ ]
+}

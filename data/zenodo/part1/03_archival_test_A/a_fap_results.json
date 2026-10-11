@@ -1,0 +1,1009 @@
+{
+ "target": "TIC 4206066 (StKM 1-561), signal A (3.18 d)",
+ "question": "How often would noise produce a dip this significant where the S98-only prediction points, in the archival S6 (TESS-SPOC 30 min PDCSAP) and S32 (SPOC 2 min PDCSAP) data?",
+ "chronology": {
+  "discovery_record": "candidates/tic4206066_p3.182945/candidate.json, S98 QLP search at 2026-09-25 00:09 CEST: P = 3.182945191903069 d, T0 = BTJD 3998.73484, no period uncertainty stated (grid step ~2e-4 d)",
+  "first_archival_look": "04:45-04:50 CEST (A03 harmonic audit QLP downloads; pool multisector pass 1). Every S98-only fit other than the discovery record was made after this, by analysts who had seen archival data; the S98-only fit here (s1) is likewise post hoc in time but uses S98 data only and a rule written before it was run."
+ },
+ "prediction": {
+  "method": "QLP SYS_RM_FLUX QUALITY==0, biweight 0.75 d (A masked at the discovery ephemeris, B at the reconciled one), trapezoid fitted on S98 alone, (P, T_ref) profile likelihood with beta-inflated errors and a 9-event bootstrap; adopted sigma = larger of the two",
+  "P": 3.182112000000118,
+  "sigma_P_adopted_bootstrap": 0.0012996081002522013,
+  "sigma_P_likelihood": 0.0005694233682706916,
+  "T_ref_BTJD": 4017.8326891475695,
+  "T_ref_epoch": 6,
+  "sigma_T_ref_d": 0.007941069077974193,
+  "corr_P_T": 0.34425246509012164,
+  "beta_red_noise": 1.2652371529668052,
+  "S98_events": [
+   -1,
+   0,
+   1,
+   4,
+   5,
+   9,
+   10,
+   13,
+   14
+  ],
+  "S98_depth_trapezoid_ppm": 377.25273218419034,
+  "S98_T14_h": 1.7420984028880226,
+  "per_transit_linear_P": [
+   3.180994078965199,
+   0.0013413324435163501
+  ],
+  "per_transit_note": "E-1 (data-gap edge) has O-C +107 min; per-transit WLS not adopted",
+  "other_S98_only_estimates": {
+   "pertransit_T1": [
+    3.18164,
+    3.18206
+   ],
+   "LEO": [
+    3.1822,
+    0.00031
+   ],
+   "audit_template_s11": [
+    3.1827602,
+    0.000235
+   ],
+   "audit_BLS_s12": 3.1827078
+  },
+  "P_pred_minus_multisector": -0.0006729999998817959,
+  "in_sigma_adopted": -0.5178484188819644,
+  "in_sigma_likelihood": -1.1818974024997622,
+  "propagation": {
+   "adopted": {
+    "S6": {
+     "epochs": [
+      -795,
+      -789
+     ],
+     "mid_epoch": -792,
+     "t_pred_mid_BTJD": 1478.50731,
+     "sigma_h": 24.83,
+     "sigma_over_T14": 13.28,
+     "multisector_minus_pred_h": -12.89,
+     "multisector_minus_pred_sigma": -0.52,
+     "all_epochs": [
+      {
+       "epoch": -795,
+       "t_pred": 1468.96098
+      },
+      {
+       "epoch": -794,
+       "t_pred": 1472.14309
+      },
+      {
+       "epoch": -793,
+       "t_pred": 1475.3252
+      },
+      {
+       "epoch": -792,
+       "t_pred": 1478.50731
+      },
+      {
+       "epoch": -791,
+       "t_pred": 1481.68943
+      },
+      {
+       "epoch": -790,
+       "t_pred": 1484.87154
+      },
+      {
+       "epoch": -789,
+       "t_pred": 1488.05365
+      }
+     ]
+    },
+    "S32": {
+     "epochs": [
+      -573,
+      -566
+     ],
+     "mid_epoch": -569,
+     "t_pred_mid_BTJD": 2188.11829,
+     "sigma_h": 17.87,
+     "sigma_over_T14": 9.56,
+     "multisector_minus_pred_h": -9.29,
+     "multisector_minus_pred_sigma": -0.52,
+     "all_epochs": [
+      {
+       "epoch": -573,
+       "t_pred": 2175.38984
+      },
+      {
+       "epoch": -572,
+       "t_pred": 2178.57195
+      },
+      {
+       "epoch": -571,
+       "t_pred": 2181.75407
+      },
+      {
+       "epoch": -570,
+       "t_pred": 2184.93618
+      },
+      {
+       "epoch": -569,
+       "t_pred": 2188.11829
+      },
+      {
+       "epoch": -568,
+       "t_pred": 2191.3004
+      },
+      {
+       "epoch": -567,
+       "t_pred": 2194.48251
+      },
+      {
+       "epoch": -566,
+       "t_pred": 2197.66463
+      }
+     ]
+    }
+   },
+   "discovery_centre_adopted_sigma": {
+    "S6": {
+     "epochs": [
+      -795,
+      -789
+     ],
+     "mid_epoch": -792,
+     "t_pred_mid_BTJD": 1477.84225,
+     "sigma_h": 24.83,
+     "sigma_over_T14": 13.28,
+     "multisector_minus_pred_h": 3.07,
+     "multisector_minus_pred_sigma": 0.12,
+     "all_epochs": [
+      {
+       "epoch": -795,
+       "t_pred": 1468.29341
+      },
+      {
+       "epoch": -794,
+       "t_pred": 1471.47636
+      },
+      {
+       "epoch": -793,
+       "t_pred": 1474.6593
+      },
+      {
+       "epoch": -792,
+       "t_pred": 1477.84225
+      },
+      {
+       "epoch": -791,
+       "t_pred": 1481.02519
+      },
+      {
+       "epoch": -790,
+       "t_pred": 1484.20814
+      },
+      {
+       "epoch": -789,
+       "t_pred": 1487.39108
+      }
+     ]
+    },
+    "S32": {
+     "epochs": [
+      -573,
+      -566
+     ],
+     "mid_epoch": -569,
+     "t_pred_mid_BTJD": 2187.63902,
+     "sigma_h": 17.87,
+     "sigma_over_T14": 9.56,
+     "multisector_minus_pred_h": 2.22,
+     "multisector_minus_pred_sigma": 0.12,
+     "all_epochs": [
+      {
+       "epoch": -573,
+       "t_pred": 2174.90724
+      },
+      {
+       "epoch": -572,
+       "t_pred": 2178.09019
+      },
+      {
+       "epoch": -571,
+       "t_pred": 2181.27313
+      },
+      {
+       "epoch": -570,
+       "t_pred": 2184.45608
+      },
+      {
+       "epoch": -569,
+       "t_pred": 2187.63902
+      },
+      {
+       "epoch": -568,
+       "t_pred": 2190.82197
+      },
+      {
+       "epoch": -567,
+       "t_pred": 2194.00491
+      },
+      {
+       "epoch": -566,
+       "t_pred": 2197.18786
+      }
+     ]
+    }
+   }
+  },
+  "propagation_likelihood_sigma": {
+   "S6": {
+    "sigma_h": 10.88,
+    "sigma_over_T14": 5.82
+   },
+   "S32": {
+    "sigma_h": 7.83,
+    "sigma_over_T14": 4.19
+   }
+  },
+  "verdict": "YES: the propagated 1-sigma timing uncertainty (24.8 h in S6, 17.9 h in S32 with the adopted bootstrap sigma; 10.9 h and 7.8 h with the likelihood-only sigma) is 4-13 times the 1.87 h transit duration. The +-3 sigma window covers the whole 76 h orbit (adopted) or 62-86 % of it (likelihood). The prediction centre misses the archival transits by 12.9 h (S6) and 9.3 h (S32) = 0.5 sigma; the discovery-record centre misses by 3.1 h and 2.2 h (0.1 sigma); both misses exceed T14/2."
+ },
+ "statistic": "Step 2-5: false-alarm probability of the archival (S6, S32) recovery of signal A at the S98-only prediction.\n\nStatistic (identical for data and every null trial): box of full width T14 = 1.87 h at every predicted mid-time in the\nsector; S/N = mean(1 - flat in boxes) * sqrt(N_in) / sigma_pp (sigma_pp = robust point-to-point white scatter).\nThe detrending is the same for all trials: wotan biweight 0.75 d with ONLY signal B masked (A is not masked anywhere,\nbecause masking it would favour the true phase). B in-transit cadences (+-(T14B/2 + 15 min)) are dropped.\nJoint statistic S6+S32: inverse-variance-weighted box depth over both sectors, S/N = sum(r/s^2)/sqrt(sum(1/s^2)).\n\nPredictions (from s1_s98_prediction.json, S98 data alone): P_pred, T_ref (epoch NREF) and covariance; propagated with\nthe real cycle lever arms k_s = n_s - NREF (S6 mid epoch -792, S32 mid epoch -569).",
+ "nulls": {
+  "N1": "fixed period P_pred, same unmasked data, all 5-min phase offsets whose boxes stay >= T14 from the true transits (872 grid phases, ~38 independent); MAIN (fixed-epoch) test only",
+  "N2": "fake periods U(2.5, 4.5) d, true A transits removed (+-1.87 h), random anchors, identical machinery (same sigma, lever arms, dP grid, window, weights); 20 000 trials (~164 independent periods in S6, ~195 in S32; joint ~3 700 with random relative anchors)",
+  "N2r": "as N2 with P' in U(3.10, 3.26) d, which brackets the 3.125 d S6 momentum-dump cadence; 4 000 trials",
+  "conservative_rule": "fap_conservative = (k+1)/(N_eff+1) with N_eff the number of statistically independent null realisations (not the number of trials)"
+ },
+ "MAIN_fixed_epoch": {
+  "adopted_centre": {
+   "S6": {
+    "N2": {
+     "obs": -0.515,
+     "k": 12169,
+     "N": 20000,
+     "fap_counting": 0.608469576521174,
+     "sigma_counting": -0.28,
+     "null_median_p99_max": [
+      -0.22,
+      2.3,
+      4.06
+     ],
+     "gauss_extrapolation_p": 0.6147494655138193
+    },
+    "N1": {
+     "obs": -0.5145610438216167,
+     "k": 524,
+     "N_grid": 872,
+     "N_indep": 38,
+     "fap": 0.6013745704467354
+    }
+   },
+   "S32": {
+    "N2": {
+     "obs": 0.504,
+     "k": 4948,
+     "N": 20000,
+     "fap_counting": 0.24743762811859407,
+     "sigma_counting": 0.68,
+     "null_median_p99_max": [
+      -0.62,
+      3.89,
+      6.69
+     ],
+     "gauss_extrapolation_p": 0.26445595151872686
+    },
+    "N1": {
+     "obs": 0.5038373353910521,
+     "k": 184,
+     "N_grid": 872,
+     "N_indep": 38,
+     "fap": 0.21191294387170675
+    }
+   },
+   "joint": {
+    "N2": {
+     "obs": 0.011,
+     "k": 6702,
+     "N": 20000,
+     "fap_counting": 0.3351332433378331,
+     "sigma_counting": 0.43,
+     "null_median_p99_max": [
+      -0.57,
+      3.02,
+      5.7
+     ],
+     "gauss_extrapolation_p": 0.346329910843333
+    }
+   },
+   "fisher": {
+    "p6": 0.608469576521174,
+    "p32": 0.24743762811859407,
+    "X": 3.786810203277761,
+    "p": 0.4356260630303611,
+    "sigma": 0.16206822762947218
+   }
+  },
+  "discovery_centre": {
+   "snr": {
+    "S6": 0.30590536672698315,
+    "S32": 0.2499580824778773,
+    "joint": 0.38702339408747244
+   },
+   "S6_N1": {
+    "obs": 0.30590536672698315,
+    "k": 260,
+    "N_grid": 872,
+    "N_indep": 38,
+    "fap": 0.29896907216494845
+   },
+   "S32_N1": {
+    "obs": 0.2499580824778773,
+    "k": 242,
+    "N_grid": 872,
+    "N_indep": 38,
+    "fap": 0.27835051546391754
+   }
+  },
+  "verdict": "No dip at the predicted times: S/N -0.51 (S6), +0.50 (S32), joint +0.01; FAP 0.61 / 0.25 / 0.34. The pre-specified fixed-epoch test is uninformative because the prediction is far less precise than T14; it does NOT support a statement like \"FAP X at the S98-predicted times\"."
+ },
+ "OPTIMISED": {
+  "adopted_sigma": {
+   "opt_S6": {
+    "obs": 9.837,
+    "k": 0,
+    "N": 20000,
+    "fap_counting": 4.999750012499375e-05,
+    "sigma_counting": 3.89,
+    "null_median_p99_max": [
+     2.96,
+     4.41,
+     4.59
+    ],
+    "N_eff_independent": 164,
+    "fap_conservative": 0.0060636856546414965,
+    "sigma_conservative": 2.51,
+    "gpd_tail_extrapolation": {
+     "p": 0.0,
+     "shape": -0.7317848708368104,
+     "endpoint": 4.619216977457975,
+     "note": "observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful"
+    }
+   },
+   "opt_S32": {
+    "obs": 8.982,
+    "k": 0,
+    "N": 20000,
+    "fap_counting": 4.999750012499375e-05,
+    "sigma_counting": 3.89,
+    "null_median_p99_max": [
+     4.96,
+     7.78,
+     8.34
+    ],
+    "N_eff_independent": 195,
+    "fap_conservative": 0.005109450368434362,
+    "sigma_conservative": 2.57,
+    "gpd_tail_extrapolation": {
+     "p": 0.0,
+     "shape": -0.5781540217238241,
+     "endpoint": 8.387996186258441,
+     "note": "observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful"
+    }
+   },
+   "opt_joint": {
+    "obs": 13.218,
+    "k": 0,
+    "N": 20000,
+    "fap_counting": 4.999750012499375e-05,
+    "sigma_counting": 3.89,
+    "null_median_p99_max": [
+     3.85,
+     6.12,
+     7.37
+    ],
+    "N_eff_independent": 3658,
+    "fap_conservative": 0.0002732884382587158,
+    "sigma_conservative": 3.46,
+    "gpd_tail_extrapolation": {
+     "p": 0.0,
+     "shape": -0.20637042541652603,
+     "endpoint": 7.891607013001219,
+     "note": "observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful"
+    }
+   },
+   "wpred_S6": {
+    "obs": 42.414,
+    "k": 0,
+    "N": 20000,
+    "fap_counting": 4.999750012499375e-05,
+    "sigma_counting": 3.89,
+    "null_median_p99_max": [
+     0.43,
+     2.56,
+     4.12
+    ],
+    "N_eff_independent": 164,
+    "fap_conservative": 0.0060636856546414965,
+    "sigma_conservative": 2.51,
+    "gpd_tail_extrapolation": {
+     "p": 2.4304245305112933e-07,
+     "shape": 0.2575047840338713,
+     "endpoint": Infinity,
+     "note": ""
+    }
+   },
+   "wpred_S32": {
+    "obs": 33.367,
+    "k": 0,
+    "N": 20000,
+    "fap_counting": 4.999750012499375e-05,
+    "sigma_counting": 3.89,
+    "null_median_p99_max": [
+     4.28,
+     20.36,
+     28.22
+    ],
+    "N_eff_independent": 195,
+    "fap_conservative": 0.005109450368434362,
+    "sigma_conservative": 2.57,
+    "gpd_tail_extrapolation": {
+     "p": 3.572716444545315e-05,
+     "shape": -0.0800217525250931,
+     "endpoint": 56.52071482197345,
+     "note": ""
+    }
+   },
+   "wpred_joint": {
+    "obs": 79.358,
+    "k": 0,
+    "N": 20000,
+    "fap_counting": 4.999750012499375e-05,
+    "sigma_counting": 3.89,
+    "null_median_p99_max": [
+     1.41,
+     11.29,
+     19.9
+    ],
+    "N_eff_independent": 3658,
+    "fap_conservative": 0.0002732884382587158,
+    "sigma_conservative": 3.46,
+    "gpd_tail_extrapolation": {
+     "p": 0.0,
+     "shape": -0.11082970910185473,
+     "endpoint": 30.44591201963933,
+     "note": "observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful"
+    }
+   }
+  },
+  "adopted_sigma_fisher": {
+   "conservative": {
+    "p6": 0.0060636856546414965,
+    "p32": 0.005109450368434362,
+    "X": 20.764201820970776,
+    "p": 0.00035264139888743215,
+    "sigma": 3.3875172584134963
+   },
+   "counting_if_all_trials_independent": {
+    "p6": 4.999750012499375e-05,
+    "p32": 4.999750012499375e-05,
+    "X": 39.61415020514468,
+    "p": 5.2012486377761745e-08,
+    "sigma": 5.319548689029984
+   }
+  },
+  "likelihood_sigma": {
+   "opt_S6": {
+    "obs": 9.837,
+    "k": 0,
+    "N": 20000,
+    "fap_counting": 4.999750012499375e-05,
+    "sigma_counting": 3.89,
+    "null_median_p99_max": [
+     2.79,
+     4.2,
+     4.59
+    ],
+    "N_eff_independent": 164,
+    "fap_conservative": 0.0060636856546414965,
+    "sigma_conservative": 2.51,
+    "gpd_tail_extrapolation": {
+     "p": 6.974103859214161e-21,
+     "shape": -0.04142692855925083,
+     "endpoint": 11.070332228703089,
+     "note": ""
+    }
+   },
+   "opt_S32": {
+    "obs": 9.032,
+    "k": 0,
+    "N": 20000,
+    "fap_counting": 4.999750012499375e-05,
+    "sigma_counting": 3.89,
+    "null_median_p99_max": [
+     3.97,
+     7.26,
+     8.29
+    ],
+    "N_eff_independent": 195,
+    "fap_conservative": 0.005109450368434362,
+    "sigma_conservative": 2.57,
+    "gpd_tail_extrapolation": {
+     "p": 6.8015432566031995e-06,
+     "shape": -0.16529602137518207,
+     "endpoint": 9.802950555407996,
+     "note": ""
+    }
+   },
+   "opt_joint": {
+    "obs": 13.218,
+    "k": 0,
+    "N": 20000,
+    "fap_counting": 4.999750012499375e-05,
+    "sigma_counting": 3.89,
+    "null_median_p99_max": [
+     3.23,
+     5.76,
+     7.18
+    ],
+    "N_eff_independent": 1603,
+    "fap_conservative": 0.000623514005533607,
+    "sigma_conservative": 3.23,
+    "gpd_tail_extrapolation": {
+     "p": 0.0,
+     "shape": -0.21217576263615548,
+     "endpoint": 7.762239464523002,
+     "note": "observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful"
+    }
+   }
+  },
+  "likelihood_sigma_fisher_conservative": {
+   "p6": 0.0060636856546414965,
+   "p32": 0.005109450368434362,
+   "X": 20.764201820970776,
+   "p": 0.00035264139888743215,
+   "sigma": 3.3875172584134963
+  },
+  "N2r_dump_bracketing": {
+   "opt_S6": {
+    "obs": 9.837,
+    "k": 0,
+    "N": 4000,
+    "fap_counting": 0.00024993751562109475,
+    "sigma_counting": 3.48,
+    "null_median_p99_max": [
+     2.95,
+     3.62,
+     3.62
+    ],
+    "N_eff_independent": 14,
+    "fap_conservative": 0.06651515594131936,
+    "sigma_conservative": 1.5,
+    "gpd_tail_extrapolation": {
+     "p": 0.0,
+     "shape": -3.5969061697894142,
+     "endpoint": 3.623188559580721,
+     "note": "observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful"
+    }
+   },
+   "opt_S32": {
+    "obs": 8.982,
+    "k": 0,
+    "N": 4000,
+    "fap_counting": 0.00024993751562109475,
+    "sigma_counting": 3.48,
+    "null_median_p99_max": [
+     3.57,
+     4.98,
+     5.27
+    ],
+    "N_eff_independent": 17,
+    "fap_conservative": 0.05658937089107743,
+    "sigma_conservative": 1.58,
+    "gpd_tail_extrapolation": {
+     "p": 0.0,
+     "shape": -0.37089075008213207,
+     "endpoint": 5.347406325951111,
+     "note": "observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful"
+    }
+   },
+   "opt_joint": {
+    "obs": 13.218,
+    "k": 0,
+    "N": 4000,
+    "fap_counting": 0.00024993751562109475,
+    "sigma_counting": 3.48,
+    "null_median_p99_max": [
+     3.18,
+     4.46,
+     5.42
+    ],
+    "N_eff_independent": 313,
+    "fap_conservative": 0.0031826638162560667,
+    "sigma_conservative": 2.73,
+    "gpd_tail_extrapolation": {
+     "p": 0.0,
+     "shape": -0.15491619345804097,
+     "endpoint": 6.118211061125942,
+     "note": "observed beyond the fitted finite endpoint (shape < 0): extrapolated p = 0, not meaningful"
+    }
+   }
+  },
+  "fixed_period_phase_null_zscore": {
+   "S6": {
+    "true_phase_snr": 9.83670066785568,
+    "null_sd": 1.0620402919942298,
+    "null_max": 2.8312574999213367
+   },
+   "S32": {
+    "true_phase_snr": 8.918541731510103,
+    "null_sd": 1.408702358098315,
+    "null_max": 2.579055956843029
+   }
+  },
+  "verdict": "Optimising the epoch (and dP) inside the 3-sigma prediction window recovers the transits: S/N 9.8 (S6), 9.0 (S32), 13.2 joint, within 7 and 2 min of the multi-sector ephemeris. No null trial reaches these values (0 of 20 000 each). Because only ~160-195 null realisations per sector are independent, the empirical per-sector FAP is only bounded: <= 6.1e-3 (S6), <= 5.1e-3 (S32), ~2.5-2.6 sigma; joint < 3e-4 (~3.5 sigma, N_eff ~3 700); Fisher of the per-sector bounds < 3.5e-4 (3.4 sigma). S6 clears the null maximum by a factor 2.1 (9.8 vs 4.6); S32 only just (9.0 vs 8.3, the S32 null tail comes from segment-edge detrending artefacts; with a 0.375 d edge cut the S32 null maximum drops to 5.2 while the observed stays 8.85). Tail extrapolations (GPD) put the observed values beyond the fitted finite endpoint of the null, i.e. formally p ~ 0; not quoted."
+ },
+ "detrending_variants": {
+  "main": {
+   "window_d": 0.75,
+   "edge_cutoff_d": 0.0,
+   "obs_opt": [
+    9.84,
+    8.98,
+    13.22
+   ],
+   "obs_fixed": [
+    -0.51,
+    0.5,
+    0.01
+   ],
+   "null_max_opt": [
+    4.59,
+    8.34,
+    7.37
+   ],
+   "k_opt": [
+    0,
+    0,
+    0
+   ],
+   "N": 20000,
+   "fisher_conservative_p": 0.00035264139888743215
+  },
+  "edge0375": {
+   "window_d": 0.75,
+   "edge_cutoff_d": 0.375,
+   "obs_opt": [
+    8.69,
+    8.85,
+    12.32
+   ],
+   "obs_fixed": [
+    -0.3,
+    0.2,
+    -0.05
+   ],
+   "null_max_opt": [
+    4.38,
+    5.18,
+    5.43
+   ],
+   "k_opt": [
+    0,
+    0,
+    0
+   ],
+   "N": 10000,
+   "fisher_conservative_p": 0.00037461031862214635
+  },
+  "w050": {
+   "window_d": 0.5,
+   "edge_cutoff_d": 0.0,
+   "obs_opt": [
+    9.06,
+    8.13,
+    12.1
+   ],
+   "obs_fixed": [
+    -0.82,
+    0.2,
+    -0.42
+   ],
+   "null_max_opt": [
+    4.29,
+    7.15,
+    6.63
+   ],
+   "k_opt": [
+    0,
+    0,
+    0
+   ],
+   "N": 4000,
+   "fisher_conservative_p": 0.00035264139888743215
+  },
+  "w100": {
+   "window_d": 1.0,
+   "edge_cutoff_d": 0.0,
+   "obs_opt": [
+    10.11,
+    9.61,
+    13.87
+   ],
+   "obs_fixed": [
+    -0.88,
+    0.81,
+    -0.01
+   ],
+   "null_max_opt": [
+    4.87,
+    8.1,
+    7.2
+   ],
+   "k_opt": [
+    0,
+    0,
+    0
+   ],
+   "N": 4000,
+   "fisher_conservative_p": 0.00035264139888743215
+  }
+ },
+ "recovered": {
+  "adopted": {
+   "dT_min": -24.50387029774894,
+   "dP": 0.0006458175222112169,
+   "dT_sigma": -2.142857142857143,
+   "dP_sigma": 0.49693251533742355,
+   "P_rec": 3.1827578175223294,
+   "tc_S6_mid": 1477.9749341881547,
+   "tc_S32_mid": 2187.729927495634,
+   "S6_offset_h": -12.777095023688162,
+   "S6_offset_sigma": -0.5146839194764669,
+   "S6_rec_minus_final_min": 6.716431004024344,
+   "S32_offset_h": -9.320679644817574,
+   "S32_offset_sigma": -0.5215860787989318,
+   "S32_rec_minus_final_min": -2.012406225767336,
+   "P_rec_minus_final_sigmaPpred": -0.02091590354450215
+  },
+  "likelihood": {
+   "dT_min": -9.094189318061106,
+   "dP": 0.0006607049769247718,
+   "dT_sigma": -2.142857142857143,
+   "dP_sigma": 1.16030534351145,
+   "P_rec": 3.182772704977043,
+   "tc_S6_mid": 1477.9737551666408,
+   "tc_S32_mid": 2187.732068376521,
+   "S6_offset_h": -12.805391540023265,
+   "S6_offset_sigma": -1.176809392313539,
+   "S6_rec_minus_final_min": 5.018640023918124,
+   "S32_offset_h": -9.269298503528262,
+   "S32_offset_sigma": -1.183217915517196,
+   "S32_rec_minus_final_min": 1.0704622515913798,
+   "P_rec_minus_final_sigmaPpred": -0.021592058988403502
+  },
+  "note": "archival-only best (tau_S6, tau_S32) mapped to (dT, dP) at the S98 reference epoch; dT is poorly constrained by archival data alone (a 7 min error in tau_S6 moves dT by ~17 min), so the dT sigma is not a meaningful tension"
+ },
+ "depths": {
+  "S98_ppm": 287.4527839093799,
+  "S98_err_ppm": 36.49468604642585,
+  "S6_ppm": 422.0228481614468,
+  "S6_err_white_ppm": 42.90288608054639,
+  "ratio_S6_to_S98": 1.4681466723748635,
+  "S32_ppm": 351.410556872334,
+  "S32_err_white_ppm": 39.82752189489683,
+  "ratio_S32_to_S98": 1.2224983598806158,
+  "note": "box depths, biweight 0.75 d, A unmasked in the trend in all sectors (same for all trials); white errors understate red noise. Reconciled fitted depths: S6 521+-53, S32 476+-75, S98 496+-48 ppm (ratios 1.05, 0.96).",
+  "ratio_reconciled": {
+   "S6": 1.0504032258064515,
+   "S32": 0.9596774193548387
+  },
+  "box_depth_variants_ppm_[value,empirical_err]": {
+   "A_unmasked": {
+    "S98": [
+     298.5558329307749,
+     47.864546628012796
+    ],
+    "S98_without_Em1": [
+     389.2499078856919,
+     52.44630306757836
+    ],
+    "ratio_S6_to_S98_without_Em1": [
+     1.0841951137606411,
+     0.18658592031064836
+    ],
+    "S6": [
+     422.0228481614468,
+     45.1842523669758
+    ],
+    "ratio_S6_to_S98": [
+     1.4135474896559792,
+     0.2725094048342773
+    ],
+    "ratio_S32_to_S98_without_Em1": [
+     0.9027890559592119,
+     0.20292281063158324
+    ],
+    "S32": [
+     351.410556872334,
+     63.22362070746458
+    ],
+    "ratio_S32_to_S98": [
+     1.1770346384550936,
+     0.2836423221247966
+    ],
+    "n_null_phases": 37
+   },
+   "A_masked": {
+    "S98": [
+     318.91330750932497,
+     50.511981595326915
+    ],
+    "S98_without_Em1": [
+     434.7894560772526,
+     50.5149257675766
+    ],
+    "ratio_S6_to_S98_without_Em1": [
+     1.043854376332717,
+     0.15591322584367628
+    ],
+    "S6": [
+     453.85687650956186,
+     42.60199053775996
+    ],
+    "ratio_S6_to_S98": [
+     1.4231355851975263,
+     0.26201790391611374
+    ],
+    "ratio_S32_to_S98_without_Em1": [
+     0.8855676452895791,
+     0.1742615801053422
+    ],
+    "S32": [
+     385.0354748150695,
+     61.1513530795373
+    ],
+    "ratio_S32_to_S98": [
+     1.2073358676128971,
+     0.2708054825712008
+    ],
+    "n_null_phases": 37
+   }
+  }
+ },
+ "cycle_count": {
+  "S98+S6": {
+   "alias_spacing_dP": 0.003987609022556539,
+   "rows": [
+    {
+     "cycles": 796,
+     "P": 3.1907760740696163,
+     "z_adopted": 6.666682108103781,
+     "z_likelihood": 15.215522495696701,
+     "boot_frac_nearest": 0.0
+    },
+    {
+     "cycles": 797,
+     "P": 3.1867725909152003,
+     "z_adopted": 3.586151020586632,
+     "z_likelihood": 8.184755271347665,
+     "boot_frac_nearest": 0.0
+    },
+    {
+     "cycles": 798,
+     "P": 3.1827791415531514,
+     "z_adopted": 0.5133405623616865,
+     "z_likelihood": 1.1716090174861304,
+     "boot_frac_nearest": 0.832
+    },
+    {
+     "cycles": 799,
+     "P": 3.1787956883096555,
+     "z_adopted": -2.551778255167143,
+     "z_likelihood": -5.823982427230041,
+     "boot_frac_nearest": 0.168
+    },
+    {
+     "cycles": 800,
+     "P": 3.1748221936992684,
+     "z_adopted": -5.6092342756520885,
+     "z_likelihood": -12.80208489333428,
+     "boot_frac_nearest": 0.0
+    }
+   ],
+   "unique_selected_cycles": 798,
+   "final_ephemeris_cycles": 798
+  },
+  "S98+S32": {
+   "alias_spacing_dP": 0.005534107826087162,
+   "rows": [
+    {
+     "cycles": 573,
+     "P": 3.1938966171936047,
+     "z_adopted": 9.067823747173968,
+     "z_likelihood": 20.695703496110127,
+     "boot_frac_nearest": 0.0
+    },
+    {
+     "cycles": 574,
+     "P": 3.1883323373727097,
+     "z_adopted": 4.786317791790015,
+     "z_likelihood": 10.923923602718249,
+     "boot_frac_nearest": 0.0
+    },
+    {
+     "cycles": 575,
+     "P": 3.1827874115685835,
+     "z_adopted": 0.519704031033832,
+     "z_likelihood": 1.1861325089563473,
+     "boot_frac_nearest": 0.894
+    },
+    {
+     "cycles": 576,
+     "P": 3.1772617389790545,
+     "z_adopted": -3.7320950986089065,
+     "z_likelihood": -8.517846810175103,
+     "boot_frac_nearest": 0.106
+    },
+    {
+     "cycles": 577,
+     "P": 3.1717552195007546,
+     "z_adopted": -7.969156622949475,
+     "z_likelihood": -18.188190152463545,
+     "boot_frac_nearest": 0.0
+    }
+   ],
+   "unique_selected_cycles": 575,
+   "final_ephemeris_cycles": 575
+  },
+  "verdict": "S98 + S6: 798 cycles; next alias (799) at 2.6 sigma (adopted) / 5.8 sigma (likelihood); 16.8 % of the S98 event bootstrap lies nearer the 799 alias. S98 + S32: 575 cycles; 576 at 3.7 / 8.5 sigma; bootstrap 10.6 %. Unique under the likelihood error, not robustly unique under the heavy-tailed S98 bootstrap with one archival sector alone; S6+S32 together (223-cycle lever) fix it (reconciled A.cycle_count)."
+ },
+ "S6_dump_check": {
+  "n_dumps": 6,
+  "dump_spacing_d": 3.1249491496996598,
+  "single_box_snr_near_dumps_0p4_3p6h": {
+   "mean": -0.7073421248958182,
+   "sd": 0.9287394061920945,
+   "p95": 0.5486116029432181,
+   "n": 186
+  },
+  "single_box_snr_far_gt6h": {
+   "mean": -0.054972800410017564,
+   "sd": 1.058398386172441,
+   "p95": 1.7740599148116323,
+   "n": 5014
+  },
+  "note": "single T14 boxes on S6 data with true A transits removed; S/N in white-noise units"
+ },
+ "caveats": [
+  "The prediction is weak: S98-only P estimates range 3.18164-3.18276 d across methods (this fit 3.18211); propagated over ~800 cycles the uncertainty is 4-13 x T14, so \"at the predicted time\" really means \"at the predicted period, anywhere in most of the phase\".",
+  "All S98-only fits except the discovery record were made after the first archival look (04:45 CEST); this one too (rule fixed in the script before running, S98 data only).",
+  "Per-sector FAPs are upper bounds set by the ~160-195 independent null periods available in one sector; counting 0/20 000 as independent (5e-5, 3.9 sigma) would overstate the evidence.",
+  "S/N is in white-noise units; red noise is handled only through the empirical nulls (N1 null SD 1.06 in S6, 1.41 in S32).",
+  "S32 null tail is set by segment-edge detrending artefacts (single box S/N up to 11 at the sector end); the observed S32 value barely exceeds the null maximum without an edge cut.",
+  "S6 momentum dumps (every 3.125 d) lie 0.4-3.5 h from every S6 A transit. Boxes 0.4-3.6 h from dumps (true transits removed) show mean S/N -0.71 (brightening side), SD 0.93, vs -0.05 / 1.06 far from dumps, so dumps do not manufacture dips; only ~8 independent dump-adjacent boxes, so this check is weak. The N2r null (P' 3.10-3.26 d, including dump-aligned trains) has lower maxima than N2.",
+  "Detrending: biweight 0.5/0.75/1.0 d and a 0.375 d edge cut change the optimised S/N by -1.1/+0.7 (joint 12.1-13.9) and never produce a null exceedance.",
+  "A is never masked in the archival detrending (same for all trials); this shrinks box depths by ~7-9 % (S6 422 vs 454 ppm masked).",
+  "Depth ratio uses box depths; the S98 epoch -1 event (data-gap edge) drags the S98 box depth from 389 to 299 ppm; ratios quoted without it."
+ ],
+ "printable": {
+  "sentence": "(false-alarm probability <0.7% in each of S6 and S32, <0.03% jointly, at the S98-only period)",
+  "words": 15,
+  "do_not_print": "\"FAP X at the S98-predicted times\": at the predicted times there is no dip; the recovery needs an epoch search over most of the orbit (look-elsewhere included in the numbers above)."
+ },
+ "files": [
+  "s1_s98_prediction.py",
+  "s1_s98_prediction.json",
+  "s1_s98_prediction.log",
+  "s1_boot_P_Tref.npy",
+  "fap_common.py",
+  "s2_archival_fap.py",
+  "a_fap_main.json",
+  "a_fap_edge0375.json",
+  "a_fap_w050.json",
+  "a_fap_w100.json",
+  "s2_*.log",
+  "_diag_main.npz",
+  "s3_plot.py",
+  "a_fap_diagnostic.png",
+  "s4_results.py",
+  "a_fap_results.json"
+ ]
+}

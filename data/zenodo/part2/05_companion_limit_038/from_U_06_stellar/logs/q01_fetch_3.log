@@ -1,0 +1,13 @@
+saved /Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/06_stellar/data/gaia_dr3_neighbours_60as.ecsv 1b7811d17740
+TAP retry 0 Query Error: Cannot parse query 'SELECT source_id, parallax, parallax_error, phot_g_mean_mag, phot_bp_mean_mag, phot_rp_mean_mag, bp_rp, ruwe, phot_bp_rp_excess_factor, ipd_frac_multi_peak, ipd_gof_harmonic_amplitude, non_single_star, duplicated_source, radial_velocity, rv_error, rv_chisq_pvalue, rv_nb_transits, rv_renormalised_gof, has_xp_continuous FROM gaiadr3.gaia_source WHERE parallax > 10 AND parallax_over_error > 20 AND bp_rp BETWEEN 1.54 AND 1.94 AND phot_bp_mean_mag IS NOT NULL AND phot_rp_mean_mag IS NOT NULL' for job '343018d1-b8d6-11f1-924c-bc97e148b76b-O': 1 unresolved identifiers: rv_error [l.1 c.239 - l.1 c.247] !
+ - Unknown column "rv_error" !
+TAP retry 1 Query Error: Cannot parse query 'SELECT source_id, parallax, parallax_error, phot_g_mean_mag, phot_bp_mean_mag, phot_rp_mean_mag, bp_rp, ruwe, phot_bp_rp_excess_factor, ipd_frac_multi_peak, ipd_gof_harmonic_amplitude, non_single_star, duplicated_source, radial_velocity, rv_error, rv_chisq_pvalue, rv_nb_transits, rv_renormalised_gof, has_xp_continuous FROM gaiadr3.gaia_source WHERE parallax > 10 AND parallax_over_error > 20 AND bp_rp BETWEEN 1.54 AND 1.94 AND phot_bp_mean_mag IS NOT NULL AND phot_rp_mean_mag IS NOT NULL' for job '523249a7-b8d6-11f1-924c-bc97e148b76b-O': 1 unresolved identifiers: rv_error [l.1 c.239 - l.1 c.247] !
+ - Unknown column "rv_error" !
+TAP retry 2 Query Error: Cannot parse query 'SELECT source_id, parallax, parallax_error, phot_g_mean_mag, phot_bp_mean_mag, phot_rp_mean_mag, bp_rp, ruwe, phot_bp_rp_excess_factor, ipd_frac_multi_peak, ipd_gof_harmonic_amplitude, non_single_star, duplicated_source, radial_velocity, rv_error, rv_chisq_pvalue, rv_nb_transits, rv_renormalised_gof, has_xp_continuous FROM gaiadr3.gaia_source WHERE parallax > 10 AND parallax_over_error > 20 AND bp_rp BETWEEN 1.54 AND 1.94 AND phot_bp_mean_mag IS NOT NULL AND phot_rp_mean_mag IS NOT NULL' for job '6e2ee680-b8d6-11f1-924c-bc97e148b76b-O': 1 unresolved identifiers: rv_error [l.1 c.239 - l.1 c.247] !
+ - Unknown column "rv_error" !
+Traceback (most recent call last):
+  File "/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/06_stellar/q01_fetch.py", line 101, in <module>
+    tap(q, "gaia_100pc_bprp_1.54_1.94.ecsv", "local comparison sample for CMD overluminosity", asynch=True)
+  File "/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/06_stellar/q01_fetch.py", line 48, in tap
+    raise RuntimeError("TAP failed")
+RuntimeError: TAP failed

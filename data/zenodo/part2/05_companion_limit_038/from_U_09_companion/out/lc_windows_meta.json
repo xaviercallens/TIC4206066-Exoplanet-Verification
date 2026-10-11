@@ -1,0 +1,41 @@
+{
+ "6": {
+  "file": "hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_lc.fits",
+  "sha256": "ac7736ea403e33360c53f88b5f22bb4e41c8235fe17ff2cdb934ba474037882e",
+  "flux_col": "PDCSAP_FLUX",
+  "n_q0": 975,
+  "sigma_oot_ppm": 204.08454161482547,
+  "exptime_d": 0.020833333333333332,
+  "nA_windows": 7,
+  "nB_windows": 2,
+  "npts_A": 157,
+  "npts_B": 56,
+  "crowdsap": 0.99504185
+ },
+ "32": {
+  "file": "tess2020324010417-s0032-0000000004206066-0200-s_lc.fits",
+  "sha256": "764dad34b3bbd467eef973a1d09f640a97321824e6739ac6a0c69cf40c31b0e7",
+  "flux_col": "PDCSAP_FLUX",
+  "n_q0": 17094,
+  "sigma_oot_ppm": 851.9265118784134,
+  "exptime_d": 0.001388888888888889,
+  "nA_windows": 8,
+  "nB_windows": 2,
+  "npts_A": 3255,
+  "npts_B": 640,
+  "crowdsap": 0.99695194
+ },
+ "98": {
+  "file": "hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01_llc.fits",
+  "sha256": "a034136697b4f75765a91503107f55a455b365d19cd270ed633845efcdcb188e",
+  "flux_col": "SYS_RM_FLUX",
+  "n_q0": 12067,
+  "sigma_oot_ppm": 620.4786895049376,
+  "exptime_d": 0.002314814814814814,
+  "nA_windows": 11,
+  "nB_windows": 3,
+  "npts_A": 2233,
+  "npts_B": 652,
+  "crowdsap": null
+ }
+}

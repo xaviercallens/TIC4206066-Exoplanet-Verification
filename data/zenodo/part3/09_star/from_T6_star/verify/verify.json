@@ -1,0 +1,382 @@
+{
+ "topic": "T6_star - Host star parameters and activity (verification)",
+ "verdicts": [
+  {
+   "target_id": "STAR.identifiers",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "All 8 SIMBAD ids present; TIC 8.2 row gives the same Gaia/2MASS/Tycho ids.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/06_stellar/data/simbad_ids_StKM1-561.ecsv (8 rows); 06_stellar/data/tic82.ecsv GAIA, TWOMASS, TYC=4753-01591-1"
+  },
+  {
+   "target_id": "STAR.parallax_raw",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "parallax 28.075018, error 0.0175683 in gaia_dr3_source.ecsv; 21 U 08_fpp runs.json use plx 28.075 and 2 use 28.0487 (TIC/DR2).",
+   "evidence": "06_stellar/data/gaia_dr3_source.ecsv parallax; 08_fpp/f02_trice_run.py L22 --plx default 28.075; grep of 08_fpp/runs/*/runs.json"
+  },
+  {
+   "target_id": "STAR.parallax",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "ZP -0.033245 and corrected 28.10826 match s01_relations.json and audit FINAL_PARAMETERS; audit s04_stellar.py L63 uses hypot(eplx,0.010)=0.0202, so M CF 20's 0.019 is not reproduced.",
+   "evidence": "_work/T6_star/out/t6_05_parallax_zp.json; opus55 06_stellar/out/s01_relations.json distance.*; tic4206066_PUBLICATION_AUDIT/scripts/s04_stellar.py L63"
+  },
+  {
+   "target_id": "STAR.distance",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "1/corrected plx 35.5767 +- 0.0222; BJ21 geo 35.5787 [35.5569, 35.5958]; all round to 35.6 pc.",
+   "evidence": "opus55 06_stellar/out/s01_relations.json distance.d_1_over_plx_zpcorr_pc, bailer_jones2021_geo_pc"
+  },
+  {
+   "target_id": "STAR.Tmag",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "tic82.ecsv Tmag 9.6817, e 0.006; Stassun relation 9.68172.",
+   "evidence": "06_stellar/data/tic82.ecsv; 06_stellar/out/s04_misc.json Tmag"
+  },
+  {
+   "target_id": "STAR.Ks",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Ks 7.694 +- 0.029, qual AAA.",
+   "evidence": "06_stellar/out/s01_relations.json inputs.Ks_2MASS/e_Ks/Ks_qual"
+  },
+  {
+   "target_id": "STAR.M_Ks",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "MK_zpcorr_plx 4.93817, sigma_total 0.02906; uncorrected 4.9356.",
+   "evidence": "06_stellar/out/s01_relations.json MK.*"
+  },
+  {
+   "target_id": "STAR.R",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Mann+2015 coefficients (1.9515, -0.3520, 0.01680; 2.89%) reproduce 0.6229 +- 0.0188 in both U and reconciler MC.",
+   "evidence": "s01_relations.json radius_mann2015.MC_scatter_plus_inputs; _work/T6_star/out/t6_04_density_mc.json"
+  },
+  {
+   "target_id": "STAR.M",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Table 6 n=5 + 2.4% gives 0.6062 +- 0.0151; official posterior code 0.6109 +- 0.0153 (Mann+2019 call it more robust) is a legitimate alternative 0.3 sigma higher; manuscript choice acceptable.",
+   "evidence": "s01_relations.json mass_mann2019.table6_plus_table7_2.4pct_MC, official_posterior_MC"
+  },
+  {
+   "target_id": "STAR.rho",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "MC 2.507 +0.2446/-0.2178 (3 seeds); U 07 common.py L23 prior (2.51, 0.25, 0.22). +0.25 vs +0.24 is a rounding boundary.",
+   "evidence": "_work/T6_star/out/t6_04_density_mc.json; opus55 07_A_shape_radii/common.py L23"
+  },
+  {
+   "target_id": "STAR.logg",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "4.6317 +- 0.0276.",
+   "evidence": "s01_relations.json logg_cgs_MC; t6_04_density_mc.json"
+  },
+  {
+   "target_id": "STAR.L",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Direct F_bol L 0.08835 +0.00202/-0.00181; exact ARIADNE mixture 0.09011 +0.00198/-0.00175 (my weighted-percentile rerun). Audit BC_V/BC_K cubic terms have the wrong sign (s04_stellar.py L139-140); + sign gives BC_V -0.98 (Pecaut-Mamajek K8V -1.03) and L 0.088, matching F_bol. Extra point: ARIADNE .dat lum errors are also inflated because ARIADNE computes lum from separately averaged teff and rad arrays (corr(T,R) ~0 vs -0.91..-0.95 per grid).",
+   "evidence": "opus55 06_stellar/out/s02_sed.json fbol_integration.L_MC_Lsun, luminosity_Lsun; verify/v04_bma_exact_mixture.json; ARIADNE 1.5.0 fitter.py L1338-1341"
+  },
+  {
+   "target_id": "STAR.A_V",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "prior.dat 'Av fixed 0'; TIC ebv 0.0; Way+2026 absG_dr 7.755 = extinction-free M_G.",
+   "evidence": "companion_check_tic4206066/sed_out/prior.dat L7; 06_stellar/data/tic82.ecsv ebv; 06_stellar/out/way2026_target_row.csv"
+  },
+  {
+   "target_id": "STAR.Teff",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Exact weighted mixture of the four per-grid equal-weight dynesty posteriors (resample_equal, fitter.py L1664) gives 4017.0 +58.0/-64.0 K; weighted_average is sum_i w_i x independent draw (fitter.py L1634-1635); HDR mismatch (300-pt KDE vs 499-bin CDF, utils.py L25-55, L93-139) confirmed in code. Minor note error: U's joint fits interpolated limb darkening at Teff 4012 K (07_A_shape_radii/common.py L24), not 4030 K; 4030 K fed TRICERATOPS (f02_trice_run.py default) and the audit/pubprep LD prior. Effect negligible.",
+   "evidence": "verify/v04_bma_exact_mixture.json exact_mixture.teff; _work/T6_star/out/t6_01_ariadne_bma.json; ARIADNE fitter.py L1622-1642, utils.py L420-444"
+  },
+  {
+   "target_id": "STAR.R_ARIADNE",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Exact mixture 0.6204 +0.0200/-0.0181; .dat 0.6206 +0.0147/-0.0140 reproduced as artefact. out_filler writes lo/up (1 sigma) under the 3sig header (utils.py L444).",
+   "evidence": "verify/v04_bma_exact_mixture.json exact_mixture.rad; sed_out/best_fit_average.dat L6"
+  },
+  {
+   "target_id": "STAR.IR_excess",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Locus offsets as stated; 2-sigma limits are 6.9% (W1), 7.8% (W2), 6.2% (W3), 32% (W4). star_inputs.json bands stop at WISE W2.",
+   "evidence": "06_stellar/out/s02_sed.json ir_excess_empirical_locus.*.max_flux_excess_2sigma_pct; companion_check_tic4206066/sed_out/star_inputs.json mags_used"
+  },
+  {
+   "target_id": "STAR.SpT",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "BP-RP 1.739, M_G 7.755, M_Ks 4.938 all closest to PM K8V (1.73, 7.74, 4.95); Teff 4020 between K7V 4100 and K8V 3990. 'late-K dwarf' supported.",
+   "evidence": "06_stellar/out/s04_misc.json spt_bracket; 06_stellar/out/pecaut_mamajek_parsed.csv"
+  },
+  {
+   "target_id": "STAR.Mann_validity",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "MK 4.94 inside 4.6-9.8; Teff ranges 2700-4100 K; independent R routes agree (SB routes 0.602-0.623, i.e. within ~0.7 sigma).",
+   "evidence": "s01_relations.json validity; s02_sed.json radius_stefan_boltzmann"
+  },
+  {
+   "target_id": "STAR.V",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "APASS 11.126 +- 0.020; TIC 11.045 +- 0.094; V_T 11.241.",
+   "evidence": "s02_sed.json photometry.V_APASS; tic82.ecsv Vmag; sed_out/star_inputs.json TYCHO_V_MvB"
+  },
+  {
+   "target_id": "STAR.RUWE",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "DR3 1.2142985, DR2 1.0422616. Percentiles reproduced from the fresh sample: 61.5 (all, n=988), 74.4 (apparently single, n=626), 86.5 (RUWE<1.4). U's own v4 file already gives 88.6 among RUWE<1.4.",
+   "evidence": "verify/v01_ruwe_rv_check.json; tic4206066_PUBLICATION_AUDIT/data/gaia/gaia_dr2_ruwe.csv L2; opus55 09_companion/verify/v4_ruwe_pct.json pct_among_ruwe_lt_1p4"
+  },
+  {
+   "target_id": "STAR.NSS",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "All four NSS target CSVs have only a header line; nearest neighbour 11.075 arcsec.",
+   "evidence": "opus55 00_data/catalogs/gaiadr3_nss_*_target.csv (1 line each); 06_stellar/data/gaia_dr3_neighbours_60as.ecsv sep_arcsec"
+  },
+  {
+   "target_id": "STAR.Gaia_RV",
+   "verdict": "CORRECTED",
+   "corrected_value": "RV 10.486 +- 0.221 km/s; rv_nb_transits 33; rv_chisq_pvalue 4.06e-5; rv_renormalised_gof 2.999; rv_amplitude_robust 3.22 km/s; not RV-variable under the Gaia DR3 rule (p<0.01 AND gof>4 AND N>=10; fails gof only). Context: the gof is at the 84th percentile of all 772 comparable stars, but at the 91st percentile among apparently single stars (n=543) and the 96.6th among RUWE<1.4 stars (n=589); only 3.4% of RUWE<1.4 comparable stars have p <= 4.06e-5. The RV epoch scatter is therefore elevated relative to well-behaved single stars, not 'mildly above average'.",
+   "reason": "Values and the official rule are right (Gaia DR3 gaia_source data model, re-fetched 2026-09-25 ~15:55 UTC: 'rv_chisq_pvalue <0.01 and rv_renormalised_gof >4 and rv_nb_transits >=10'). But the reconciler's interpretation ('mildly above average, not anomalous') uses a binary-rich reference population, the very argument it rejected for RUWE. Against apparently single stars the scatter is in the top 4-9%.",
+   "evidence": "verify/v01_ruwe_rv_check.json single.gof_pct_below, all_ruwe_lt1p4.gof_pct_below, frac_p_le_target; 06_stellar/data/gaia_dr3_source.ecsv rv_*"
+  },
+  {
+   "target_id": "STAR.catalogue_RV",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Wang+2020 raw rows RV_blue 5.54/3.04/4.05, RV_red 4.97/5.19/5.18; Zhang+2022 red 9.195/9.523/9.250, blue 10.664/10.664/10.797; DR2 10.533 +- 0.488.",
+   "evidence": "archival_extra_tic4206066/spectra_activity/raw/vizier_5as/J_ApJ_891_23_catalog.csv; spectra_activity/REPORT.md L55-L64; MASTER CURRENT_FACTS.csv L101"
+  },
+  {
+   "target_id": "STAR.overluminosity",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "absG_dr 7.755, pabsG_dr 7.758, ol False, n_components 1; local robust sigma 0.0682 (n=5205). Note: the local-bin median O is +0.016, i.e. the target is 0.013 mag below the median (for the companion topic).",
+   "evidence": "06_stellar/out/way2026_target_row.csv; way2026_systems_row.csv; companion_check_tic4206066/out/overluminosity.json local_bin"
+  },
+  {
+   "target_id": "STAR.rotation",
+   "verdict": "CORRECTED",
+   "corrected_value": "No rotation period is established. In the project's own Sector 32 SPOC 2-min PDCSAP light curve (transits masked, 30-min bins), the strongest Lomb-Scargle peak (0.5-20 d) is at 7.97 d with semi-amplitude ~550 ppm (~1.1 mmag peak-to-peak; ~3 cycles in 25.8 d), matching the catalogue values (Gao+2025 8.18 d, Schmitt+2026 8.11 d, Wang+2025 7.98 d, TESS-SVC 7.98 +- 0.79 d). The same period is absent in Sector 6 TESS-SPOC PDCSAP (<~0.1-0.2 mmag; top peak 12.5 d, 170 ppm), and SAP/QLP light curves are dominated by systematics. Ground surveys (KELT/ASAS-3/ASAS-SN) are null but insensitive below ~1.8 mmag. The ~8 d signal is single-sector and unconfirmed (stellar rotation or PDC residual).",
+   "reason": "The reconciler's statement that the ~8 d signal is 'not recovered in the project photometry' is false: it is the dominant periodicity of S32 PDCSAP. The audit s15 check used SAP only, which is dominated by sector-length trends. The conclusion 'no rotation period' still holds because the signal is absent in S6 PDCSAP and covers only ~3 cycles.",
+   "evidence": "verify/v02_s32_rotation_ls.json PDCSAP_FLUX (top_period_d 7.970, top_semi_amp_ppm 554); verify/v03_other_sectors_ls.json (S6 PDCSAP top 12.51 d, 169 ppm; 7.5-8.7 d band 70 ppm); input deep_followup_tic4206066/lc/tess2020324010417-s0032-0000000004206066-0200-s_lc.fits"
+  },
+  {
+   "target_id": "STAR.xray",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Raw eRASS1 row: posErr 5.363, DetLike0 8.04, MLcts1 4.49, MLExp1 124.1 s, MLFlux1 3.3686e-14 (+2.02/-1.44e-14). Wright+2011 coefficients checked in the paper text (log RXsat -3.13, Ro_sat 0.13, beta -2.18 / -2.70, ~0.3 dex rms, Eq. 11, Table 2 V-Ks 3.36-3.68 log tau 1.67 / 1.49). L_X 5.10e27 recomputed by hand.",
+   "evidence": "archival_extra_tic4206066/spectra_activity/raw/vizier_5as/J_A+A_682_A34_erass1-m.csv; _work/T6_star/out/t6_03_xray_rossby.json; verify/wright2011_text.txt L370-374, L819-857, L968"
+  },
+  {
+   "target_id": "STAR.chromosphere",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Halpha absorption +0.606/+0.628/+0.587 A (own MRS measurement, S/N 59-85) and ESP-ELS -0.0841 +- 0.0068 nm with flag 1 (model -0.186 nm subtracted) confirmed; Gaia AP data model re-fetched (unit nm; flag 1 = model subtracted for Teff < 5000 K). Caveat: the saved Ren+2026 ReadMe does not document the EW sign; EW8542 -1.29 and EW8662 -1.83 A have photospheric-absorption magnitudes under a negative=absorption convention, but EW8498 is +0.50, so 'Ca II IRT in absorption' is an inference, not a documented fact.",
+   "evidence": "spectra_activity/REPORT.md L55-L57, L79-L80; opus55 00_data/catalogs/gaiadr3_astrophysical_parameters_target.ecsv (unit nm, flag 1, model -0.185936); spectra_activity/raw/vizier_5as/J_ApJS_282_29_table1.csv; raw/readme/J_ApJS_282_29.txt"
+  },
+  {
+   "target_id": "STAR.activity_status",
+   "verdict": "CORRECTED",
+   "corrected_value": "No rotation period is established (a 7.97 d, ~0.55 mmag semi-amplitude modulation appears only in Sector 32 PDCSAP and not in Sector 6). The star is chromospherically quiet (Halpha in absorption, no TESS flares) and has a marginal eRASS1 X-ray detection with log L_X/L_bol ~ -4.8 (unsaturated), which under Wright+2011 suggests P ~ 13-50 d.",
+   "reason": "'No rotation period is detected' and 'unconfirmed catalogue periodicity' understate that the project's own S32 PDCSAP light curve shows the ~8 d signal. The corrected wording keeps the conclusion (no established period).",
+   "evidence": "verify/v02_s32_rotation_ls.json; verify/v03_other_sectors_ls.json; _work/T6_star/out/t6_03_xray_rossby.json"
+  },
+  {
+   "target_id": "C003",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Installed ARIADNE fitter.py L587-591: _d_scale = 3*dist_e; 3 x 0.0217781 = 0.0653, printed as TN(35.58, 0.07) in sed_out.log.",
+   "evidence": "ARIADNE 1.5.0 fitter.py L587-591; companion_check_tic4206066/sed_out.log; sed_out/star_inputs.json dist_e"
+  },
+  {
+   "target_id": "C017",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Resolution correct. Small slip in the trace: the DR7/DR11 zero-point-corrected RVr1 values are 8.78/7.69/8.94 km/s (range 7.7-8.9), not 8.8-8.9.",
+   "evidence": "spectra_activity/REPORT.md L63-L64; raw/vizier_5as/J_ApJ_891_23_catalog.csv"
+  },
+  {
+   "target_id": "C025",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Wright+2011 numbers verified in the paper; with log R_X -4.82 and tau 28.7 d (Eq. 11) or 31-47 d (Table 2) the implied P is 16-36 d (13-50 d across flux range). An 8 d rotator is predicted at log R_X -3.4 to -4.0. Indicative only (band conversion not applied).",
+   "evidence": "_work/T6_star/out/t6_03_xray_rossby.json rossby.*; verify/wright2011_text.txt"
+  },
+  {
+   "target_id": "C033",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "ECSV header unit nm; official data model: unit nm, negative for emission, flag 1 = model value subtracted (Teff < 5000 K).",
+   "evidence": "opus55 00_data/catalogs/gaiadr3_astrophysical_parameters_target.ecsv L867-892; https://gea.esac.esa.int/archive/documentation/GDR3/Gaia_archive/chap_datamodel/sec_dm_astrophysical_parameter_tables/ssec_dm_astrophysical_parameters.html (accessed 2026-09-25 ~15:57 UTC)"
+  },
+  {
+   "target_id": "X-T6-01",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Independent exact weighted percentiles (no resampling) give 4017.0 +58.0/-64.0 K. Code read confirms weighted_average = sum of weighted independent draws and the HDR grid mismatch. Print 4020 +- 60 K (formal).",
+   "evidence": "verify/v04_bma_exact_mixture.json; ARIADNE fitter.py L1622-1642; utils.py L25-55, L93-139, L420-444"
+  },
+  {
+   "target_id": "X-T6-02",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Exact mixture R 0.6204 +0.0200/-0.0181.",
+   "evidence": "verify/v04_bma_exact_mixture.json exact_mixture.rad"
+  },
+  {
+   "target_id": "X-T6-03",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "utils.out_filler L444 writes lo and up (1-sigma HDR) in the columns headed 3sig_low/3sig_up; 4011.8405-40.3246 = 3971.5159.",
+   "evidence": "ARIADNE utils.py L429-444; sed_out/best_fit_average.dat L1-L2"
+  },
+  {
+   "target_id": "X-T6-04",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Percentiles reproduced from the fresh sample (61.5 / 63.8 / 74.4 / 86.5-90). c08_ruwe_pct.py L16 contains 'frac_lt_0.01=' (SyntaxError) and 09_companion/out has no RUWE output.",
+   "evidence": "verify/v01_ruwe_rv_check.json; opus55 09_companion/c08_ruwe_pct.py L14-16"
+  },
+  {
+   "target_id": "X-T6-07",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Sign of the cubic BC terms checked: + sign gives BC_V -0.98 at V-J 2.60 and L 0.088, matching F_bol; audit '-' gives 0.101/0.107. ARIADNE .dat L error additionally inflated by loss of T-R correlation.",
+   "evidence": "tic4206066_PUBLICATION_AUDIT/scripts/s04_stellar.py L139-140; opus55 06_stellar/s02_sed.py L117-119; s02_sed.json luminosity_Lsun; verify/v04_bma_exact_mixture.json"
+  },
+  {
+   "target_id": "X-T6-08",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "star_inputs.json GaiaDR2v2_G/BP/RP = 10.512974/11.353702/9.614222 = DR3 values; plx 28.112 = 28.075+0.037.",
+   "evidence": "companion_check_tic4206066/sed_out/star_inputs.json; 06_stellar/data/gaia_dr3_source.ecsv"
+  },
+  {
+   "target_id": "X-T6-09",
+   "verdict": "CORRECTED",
+   "corrected_value": "Several pipelines report a ~8 d, ~1 mmag signal that can only come from Sector 32 2-min data (the only 2-min sector). The project's own S32 SPOC PDCSAP light curve shows it as the strongest periodicity (7.97 d, semi-amplitude ~550 ppm, ~3 cycles). It is absent in Sector 6 TESS-SPOC PDCSAP (<~0.1-0.2 mmag), so it is a single-sector, unconfirmed signal, not independently confirmed.",
+   "reason": "The resolution's clause 'not recovered in the project photometry' is contradicted by a direct Lomb-Scargle of the S32 PDCSAP data; the provenance argument (same single-sector data) is correct.",
+   "evidence": "verify/v02_s32_rotation_ls.json; verify/v03_other_sectors_ls.json; priority_recheck_tic4206066_SEALED/priority_recheck.md L46"
+  },
+  {
+   "target_id": "X-T6-05",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "21 of 23 U 08_fpp runs.json use 28.075 (raw), 2 use 28.0487 (TIC/DR2); 0.12% distance change is negligible for FPP.",
+   "evidence": "grep of opus55 08_fpp/runs/*/runs.json plx"
+  },
+  {
+   "target_id": "X-T6-06",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "+0.2446 (MC) vs +0.2450 (audit, with parallax floor); either rounding acceptable.",
+   "evidence": "_work/T6_star/out/t6_04_density_mc.json; FINAL_PARAMETERS.json star.adopted.rho_rhosun"
+  },
+  {
+   "target_id": "C028",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "4.797 arcsec (J2016), 4.903 arcsec (eRASS1 epoch), VizieR _r 4.771; posErr 5.363.",
+   "evidence": "_work/T6_star/out/t6_03_xray_rossby.json sep"
+  }
+ ],
+ "missed": [
+  {
+   "what": "The ~8 d modulation is present in the project's own Sector 32 SPOC 2-min PDCSAP light curve (strongest LS peak 7.97 d, semi-amplitude ~550 ppm) and absent in Sector 6 TESS-SPOC PDCSAP.",
+   "why_it_matters": "The reconciler (and audit s15, which used SAP only) says the signal is not recovered in project photometry. A referee who runs a periodogram on the public S32 PDCSAP data will see it immediately; the activity wording must say 'single-sector, unconfirmed', not 'not detected'.",
+   "suggested_value": "No rotation period established; 7.97 d, ~0.55 mmag semi-amplitude in S32 PDCSAP only (~3 cycles); absent (<~0.1-0.2 mmag) in S6.",
+   "evidence": "OUT/_work/T6_star/verify/v02_s32_rotation_ls.json; OUT/_work/T6_star/verify/v03_other_sectors_ls.json (scripts v02_s32_rotation_ls.py, v03_other_sectors_ls.py)"
+  },
+  {
+   "what": "Gaia RV goodness-of-fit is elevated relative to apparently single stars: gof 3.0 is at the 91st percentile among apparently single comparable stars and the 96.6th among RUWE<1.4 stars; only 3.4% of RUWE<1.4 stars have p <= 4.06e-5.",
+   "why_it_matters": "The reconciler called the scatter 'mildly above average, not anomalous' using a binary-rich reference population, the reasoning it rejected for RUWE. The companion/RV-limit topic needs the single-star comparison, since RUWE 1.21 (74th-87th percentile of singles) and this RV excess point the same way.",
+   "suggested_value": "not RV-variable under the Gaia DR3 rule; RV epoch scatter in the top ~4-9% of comparable apparently single stars",
+   "evidence": "OUT/_work/T6_star/verify/v01_ruwe_rv_check.json (single, all_ruwe_lt1p4)"
+  },
+  {
+   "what": "ARIADNE .dat luminosity errors are inflated by a third artefact: ARIADNE computes lum from separately averaged teff and rad arrays whose correlation is destroyed (corr ~0 vs -0.91 to -0.95 within each grid).",
+   "why_it_matters": "Explains why .dat L errors (0.0055-0.0129 Lsun) are 3-7x the correct 0.0019; supports using the per-grid mixture only.",
+   "suggested_value": "ARIADNE L = 0.0901 +0.0020/-0.0018 Lsun (exact mixture)",
+   "evidence": "ARIADNE 1.5.0 fitter.py L1338-1341; OUT/_work/T6_star/verify/v04_bma_exact_mixture.json"
+  },
+  {
+   "what": "Teff used for limb darkening in U's joint fits is 4012 K (07_A_shape_radii/common.py L24), not the composite 4030 K the reconciler says fed the limb-darkening prior.",
+   "why_it_matters": "Provenance accuracy only; 8-18 K difference has no effect on LD coefficients at this level.",
+   "suggested_value": "U 07 LD at Teff 4012 K, logg 4.632; TRICERATOPS at 4030 K",
+   "evidence": "addenda/opus55_final_audit_tic4206066/07_A_shape_radii/common.py L24; 08_fpp/f02_trice_run.py L22"
+  },
+  {
+   "what": "STAR.FeH note says R* moves by 0.8-1.6% across [Fe/H] 0 to -0.27; the Mann+2015 [Fe/H] form gives 0.6206 at [Fe/H]=0 (-0.4%), 0.6183 at -0.08 (-0.7%) and 0.6131 at -0.27 (-1.6%).",
+   "why_it_matters": "Minor numerical slip in a non-printed note.",
+   "suggested_value": "0.4-1.6%",
+   "evidence": "opus55 06_stellar/out/s01_relations.json radius_mann2015.with_FeH_solar_0.0, with_FeH_ARIADNE_-0.08+-0.18, with_FeH_GaiaGSPSpec_-0.27_flagged"
+  },
+  {
+   "what": "Way+2026 local-bin median overluminosity is +0.016 mag; the target's +0.003 is 0.013 mag below the local median.",
+   "why_it_matters": "For the companion topic: the companion limit is computed from O=+0.003 against sigma 0.068 around zero; measuring from the local median would slightly tighten it. Value-level fact only.",
+   "suggested_value": "O = +0.003; local median +0.016; robust sigma 0.068 (n=5205)",
+   "evidence": "addenda/companion_check_tic4206066/out/overluminosity.json local_bin.median_O"
+  }
+ ],
+ "manuscript_findings": [
+  {
+   "quote": "an ARIADNE SED fit \\citep{Vines2022} gives $R_\\star=0.62\\pm0.02\\,R_\\odot$, $T_{\\rm eff}=4020\\pm60$\\,K, and no infrared excess.",
+   "problem": "Numbers are correct (exact mixture 0.620 +0.020/-0.018, 4017 +58/-64). The ARIADNE fit used bands only up to W2, so it cannot support 'no infrared excess' to 22 um; the W1-W4 colour comparison does. The errors are formal (no Tayar+2022 floors, which would give about +-0.03 Rsun and +-110 K).",
+   "fix": "an ARIADNE SED fit \\citep{Vines2022} gives $R_\\star=0.62\\pm0.02\\,R_\\odot$ and $T_{\\rm eff}=4020\\pm60$\\,K (formal errors), and the WISE W1--W4 colors show no infrared excess.",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "Gaia DR3 gives RUWE\\,$=1.21$ (typical for such stars),",
+   "problem": "Reproduced: 61st-64th percentile of all comparable stars (26-33% of which have RUWE > 1.4), 74th among apparently single stars, 86th-90th among RUWE < 1.4. 'Typical' only holds against a binary-rich population. In the same sentence, the Gaia RV scatter is also elevated for a single star (gof at the 91st-97th percentile of single / RUWE<1.4 stars).",
+   "fix": "Gaia DR3 gives RUWE\\,$=1.21$ (below the usual 1.4 binarity threshold),",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "$\\rho_\\star=2.51^{+0.25}_{-0.22}\\,\\rho_\\odot$",
+   "problem": "Upper error is on a rounding boundary (+0.2446 to +0.2450); +0.25 matches the prior actually used.",
+   "fix": "no change",
+   "severity": "NONE"
+  },
+  {
+   "quote": "TIC 4206066 (Gaia DR3 3220388198192519424; $T=9.68$) lies at 35.6\\,pc \\citepalias{GaiaMission,GaiaDR3}. From $M_{K_s}=4.94$, the relations of \\citet{Mann2015,Mann2019} give $R_\\star=0.623\\pm0.019\\,R_\\odot$, $M_\\star=0.606\\pm0.015\\,M_\\odot$,",
+   "problem": "Verified. M* uses the Table 6 fit; the official posterior code gives 0.611 +- 0.015 (0.3 sigma higher), which is an acceptable alternative.",
+   "fix": "no change",
+   "severity": "NONE"
+  },
+  {
+   "quote": "no non-single-star solution or other source within $11''$",
+   "problem": "Verified: non_single_star 0, four NSS tables empty, nearest DR3 source 11.08 arcsec.",
+   "fix": "no change",
+   "severity": "NONE"
+  }
+ ],
+ "files_written": [
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T6_star/verify/v01_ruwe_rv_check.py",
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T6_star/verify/v01_ruwe_rv_check.json",
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T6_star/verify/v02_s32_rotation_ls.py",
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T6_star/verify/v02_s32_rotation_ls.json",
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T6_star/verify/v03_other_sectors_ls.py",
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T6_star/verify/v03_other_sectors_ls.json",
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T6_star/verify/v04_bma_exact_mixture.py",
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T6_star/verify/v04_bma_exact_mixture.json",
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T6_star/verify/wright2011_text.txt",
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T6_star/verify/build_verify.py",
+  "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T6_star/verify/verify.json"
+ ]
+}

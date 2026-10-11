@@ -1,0 +1,730 @@
+{
+ "topic": "T8_pixel_recheck",
+ "summary": "P reproduces byte-identically; only inputs.json differs, in the interpreter path. The v3 fixes are correct. (a) Confirmed: the B/S32 first-pass off-target pattern (r1-r3 -739 +- 159, 4.6 sigma) comes from global detrending and a constant baseline during a ~38 mpix drift. Per-event fits, with or without centroid terms, give flat depths (924/949, 1061/999 ppm). (b) Stronger than stated: T9's 3.77 sigma S98 excess comes entirely from one event, epoch 8, next to a 5.4-h gap containing a momentum dump. Without it the value is +4 +- 71 ppm. On the same 8 clean events T9's method gives -74 and the per-event method +20 +- 49/75. A ~200 ppm excess is disfavoured at ~3.8 sigma by S98+S32; effects below ~100 ppm are untested. (c) Confirmed: S32 is <1.1 sigma under every method (T9-method S32 numbers reproduced exactly). (d) Refuted as a method effect: the ~180 ppm S98 difference is event selection (epoch 8). The paired difference on identical events is -93 +- 63. The error model matters only for the contaminated statistic: white 5.0, null 3.8, event scatter 0.8 sigma. S6 T9-method values (149.5/232) follow from annulus clipping and one dump-adjacent event; S6 is untestable. The PRF confirms that a 43'' source makes the core shallower (r1-r2 -268 to -364 ppm), so 'core deeper' is not an off-target signature. (e) Confirmed: no claim in U's manuscript changes. M C092 is resolved.",
+ "facts": [
+  {
+   "id": "PIX.reproduction",
+   "group": "DATA",
+   "quantity": "Reproducibility of the pixel re-check package P (v3) from its own scripts",
+   "value": "all 4 science JSONs and 3 PNGs byte-identical; inputs.json differs only in the recorded interpreter path",
+   "uncertainty": "",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/rerun_log.txt ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/out/*.json vs addenda/tic4206066_pixel_recheck/out/*.json (cmp) ; addenda/tic4206066_pixel_recheck/SHA256SUMS (verified OK before copy)",
+   "code": "addenda/tic4206066_pixel_recheck/scripts/s01..s05 (copy with absolute ROOT in addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/scripts/common.py)",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/out/",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "s06_hashes not run. The verif __pycache__ listing was unchanged after the s03b import."
+  },
+  {
+   "id": "PIX.v3_fixes_review",
+   "group": "PIXEL",
+   "quantity": "Re-review of the post-REVIEW_2 fixes (gap/dump event rule, epoch 8 removal, s04 A-masking caveat)",
+   "value": "Fixes correct and applied. S98: epoch 8 (BTJD 4024.199) is removed by the gap rule: a 5.44-h gap from +2.55 h to +7.99 h after mid-transit contains a momentum dump at +7.87 h. Epoch -1 (BTJD 3995.554; 5.22-h gap; dump 6.4 h away) is also removed by the gap rule. Epoch 6 has <70% in-transit coverage. Epochs 3, 12 and 15 have no clean data in the window. The dump rule removes no additional S98 or S32 event; it removes all 5 fittable S6 events (0.43-3.53 h from dumps). Removing epoch -1 is immaterial (+22.3 +- 42.9 -> +19.5 +- 48.6 ppm). s04 now masks A transits in the B local baseline, and SUMMARY labels that row 'unstable under drift'.",
+   "uncertainty": "",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_a_events_and_nulls.json keys S98_ffi.bookkeeping, S6_ffi.bookkeeping ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_s98_rule_sensitivity.json keys v3_8, plus_epoch_-1 ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/logs_epoch8.txt ; addenda/tic4206066_pixel_recheck/scripts/s03_after_decorrelated.py L26-L28 ; addenda/tic4206066_pixel_recheck/scripts/s04_b_s32_events.py L19, L26",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_a_events_and_nulls.py ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_s98_rule_sensitivity.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_a_events_and_nulls.json",
+   "supersedes": "REVIEW_2 table row C4 'Not fixed' (it described v2)",
+   "manuscript_form": "not in Note",
+   "notes": ""
+  },
+  {
+   "id": "PIX.B_S32_offtarget",
+   "group": "SIGNAL_B",
+   "quantity": "Signal B, S32 2-min TPF: apparent off-target (depth grows with aperture) pattern of the first pass",
+   "value": "Methodological false positive (confirmed). Per-event quadratic-in-time fits give flat depths with or without centroid terms. Epoch -164: r1 951 raw / 924 +- 209 corrected; r3 895 raw / 949 +- 151 corrected. Epoch -162: r1 1071 / 1061 +- 256; r3 1016 / 999 +- 176 ppm. Combined r1-r3 = +8 +- 120 ppm (white errors). The on-target PRF prediction is r1/r3 = 1.02; a source at TIC 4206077 (43'') predicts r1/r3 = 0.12.",
+   "uncertainty": "white errors are lower bounds (S98 red-noise factor ~1.6 in verif T5); only 2 events",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_pixel_recheck/out/after_decorrelated.json B.S32_tpf2min.events[*].raw / .corrected ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_b_and_paired.json key B_diff_1.0-3.0_combined_white ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_prf_offtarget_signature.json S32_tpf2min.*.depth_ratio_vs_r2 ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_b_drift.json (epoch -164: core range 3.2% in 30-min bins, y centroid range 38 mpix; -162: 0.8%, 4 mpix)",
+   "code": "addenda/tic4206066_pixel_recheck/scripts/s03_after_decorrelated.py ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_b_and_paired.py ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_prf_offtarget_signature.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_b_and_paired.json",
+   "supersedes": "first-pass 'B missing from the core' (P/out/before_global_detrend.json)",
+   "manuscript_form": "not in Note",
+   "notes": "The first-pass pattern comes from the global 0.75-d running median (s02), and from a constant local-median baseline (s04), neither of which follows the ~38-mpix y drift in epoch -164. Because the time-only (raw) fit also flattens the pattern, the flattening is not an artefact of centroid regressors absorbing a real blend signal (REVIEW_1 C6)."
+  },
+  {
+   "id": "PIX.B_S32_firstpass",
+   "group": "SIGNAL_B",
+   "quantity": "First-pass (flawed) B depths vs aperture, S32 2-min, global detrend",
+   "value": "r0.5 -1619 +- 580; r1 336 +- 239; r2 740 +- 165; r3 1075 +- 155 ppm; r1-r3 -739 +- 159 (4.6 sigma); r2-r3 -336 +- 75 (4.5 sigma); r0.5-r2 -2358 +- 472 (5.0 sigma)",
+   "uncertainty": "random-phase null SD (400 trials, seed 1)",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_pixel_recheck/out/before_global_detrend.json S32_tpf2min.apertures.*.B and .diffs.*.B ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_b_and_paired.json first_pass_*",
+   "code": "addenda/tic4206066_pixel_recheck/scripts/s02_before_global_detrend.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/out/before_global_detrend.json (identical)",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "SUMMARY's 'core' in the first pass is r = 0.5 px (single pixel); its per-event table compares r = 1 px (5 pixels) with r = 3 px. These are different apertures."
+  },
+  {
+   "id": "PIX.B_S32_perevent_depths",
+   "group": "SIGNAL_B",
+   "quantity": "B per-event corrected depths r=1 / r=3 px, S32 2-min",
+   "value": "epoch -164: 924 +- 209 / 949 +- 151; epoch -162: 1061 +- 256 / 999 +- 176",
+   "uncertainty": "formal white errors",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_pixel_recheck/out/after_decorrelated.json B.S32_tpf2min.events[0,1].corrected['1.0','3.0']",
+   "code": "addenda/tic4206066_pixel_recheck/scripts/s03_after_decorrelated.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/out/after_decorrelated.json",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "Matches SUMMARY and the user's numbers exactly."
+  },
+  {
+   "id": "PIX.B_S32_r2_minus_r3",
+   "group": "SIGNAL_B",
+   "quantity": "B r2-r3 aperture difference, S32 2-min, per-event method",
+   "value": "-81 +- 59 ppm (white error of the difference light curve; 1.4 sigma); per event -61 +- 81, -103 +- 85",
+   "uncertainty": "the JSON's +-21 (err_empirical) is the scatter of N = 2 values and is not a usable error",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_b_and_paired.json key B_diff_2.0-3.0_combined_white ; addenda/tic4206066_pixel_recheck/out/after_decorrelated.json B.S32_tpf2min.summary.corrected.diff_2.0-3.0 = -82.0 +- 20.6",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_b_and_paired.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_b_and_paired.json",
+   "supersedes": "addenda/tic4206066_pixel_recheck/out/after_decorrelated.json diff_2.0-3.0 err_empirical 20.6 (nominal 4 sigma)",
+   "manuscript_form": "not in Note",
+   "notes": "On-target PRF prediction +15 ppm; a 43'' source predicts -728 ppm. No off-target signature."
+  },
+  {
+   "id": "PIX.A_S98_T9method",
+   "group": "SIGNAL_A",
+   "quantity": "T9 S98 r<=1 minus r<=2 px extra depth, T9's own 11x11 cut-out and QUALITY==0 selection (published T9 value)",
+   "value": "226.6 ppm (reproduced exactly); leave-epoch-8-out: +4.0 +- 70.7 ppm",
+   "uncertainty": "random-phase null SD 60.1 ppm (3.77 sigma)",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/independent_verification_tic4206066_SEALED/out/t9_aperture_diff.json S98.A_r1.0_minus_r2.0 ; addenda/tic4206066_pixel_recheck/out/t9_method_replay.json S98_T9_own_11x11_cutout.A_r1.0_minus_r2.0 ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_s6_and_clipping.json S98.own11x11_T9sel, S98.own11x11_leave_one_out['8']",
+   "code": "addenda/independent_verification_tic4206066_SEALED/scripts/t9_aperture_diff.py ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_s6_and_clipping.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_s6_and_clipping.json",
+   "supersedes": "verif T9 'unexplained, open' and M C092 UNRESOLVED",
+   "manuscript_form": "not in Note",
+   "notes": "The whole excess comes from epoch 8: 29 in-transit points at +3819 ppm (8x the transit depth) out of 497. Every other leave-one-out value lies between 175 and 315 ppm. Mechanism (not proven): the epoch-8 transit ends 1.6 h before a 5.4-h data gap that contains a momentum dump, so T9's 1-d running median, segmented at gaps > 0.1 d, is one-sided there."
+  },
+  {
+   "id": "PIX.A_S98_T9method_clean",
+   "group": "SIGNAL_A",
+   "quantity": "T9 method, S98 21x21, clean cadence selection (P s03b)",
+   "value": "199.8 ppm over 10 events (epochs -1,0,1,4,5,8,9,10,13,14); epoch 8 contributes +336 ppm of it",
+   "uncertainty": "null SD 73.5 (2.72 sigma); white 51.0; event scatter 405",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_pixel_recheck/out/t9_method_replay.json S98_ffi_clean_selection.A_r1.0_minus_r2.0 ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_t9_decomposition.json S98_clean_T9eph.baseline_fullT14",
+   "code": "addenda/tic4206066_pixel_recheck/scripts/s03b_t9_method_replay.py ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_t9_decomposition.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_t9_decomposition.json",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "SUMMARY calls this 'the same clean data' as the per-event method. It shares the cadences but not the events: it includes epochs 8 and -1."
+  },
+  {
+   "id": "PIX.A_S98_T9method_same8",
+   "group": "SIGNAL_A",
+   "quantity": "T9 method restricted to the 8 events used by the per-event method",
+   "value": "-73.9 ppm",
+   "uncertainty": "null SD 105.7; event scatter 54.2; white 56.6",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_t9_decomposition.json S98_clean_T9eph.restricted_to_clean8_events (audit ephemeris: -74.9 +- 105.1)",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_t9_decomposition.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_t9_decomposition.json",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": ""
+  },
+  {
+   "id": "PIX.A_S98_perevent",
+   "group": "SIGNAL_A",
+   "quantity": "Per-event local-correction method, S98 r<=1 minus r<=2 px, 8 clean events",
+   "value": "+19.5 ppm (median +6.2)",
+   "uncertainty": "event scatter 48.6; white 56.8; random-phase null 75.4 (null mean +7.0; 41% of null trials >= observed)",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_pixel_recheck/out/after_decorrelated.json A.S98_ffi.summary.corrected.diff_1.0-2.0 ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_a_events_and_nulls.json S98_ffi.summary_diff_1.0-2.0, S98_ffi.random_phase_null",
+   "code": "addenda/tic4206066_pixel_recheck/scripts/s03_after_decorrelated.py ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_a_events_and_nulls.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_a_events_and_nulls.json",
+   "supersedes": "v2 value +230 +- 211 (N=10, epoch 8 +2098 ppm included) in REVIEW_2",
+   "manuscript_form": "not in Note",
+   "notes": "With the T9-like full-T14 in-transit window the value is -1.8 +- 50.3 ppm, so the in-transit window does not drive the difference."
+  },
+  {
+   "id": "PIX.A_S98_method_difference",
+   "group": "SIGNAL_A",
+   "quantity": "Difference between the T9 method and the per-event method in S98",
+   "value": "Not a method effect. On their own selections: 199.8 - 19.5 = 180 ppm (about 2.0 sigma if the errors 73.5 and 48.6 are treated as independent). On identical events (same 8): paired difference -93 +- 63 ppm (1.5 sigma).",
+   "uncertainty": "paired error from event scatter",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_b_and_paired.json S98_paired_T9method_minus_perevent_same8 ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_t9_decomposition.json S98_clean_T9eph",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_t9_decomposition.py ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_b_and_paired.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_b_and_paired.json",
+   "supersedes": "SUMMARY/REVIEW_2 'two methods differ by ~180 ppm (~2 sigma), cause not identified'; user (d)",
+   "manuscript_form": "not in Note",
+   "notes": "The ~180 ppm comes from including epoch 8 (and, with the opposite sign, epoch -1) in the T9 cadence selection."
+  },
+  {
+   "id": "PIX.A_S98_error_models",
+   "group": "SIGNAL_A",
+   "quantity": "Significance of the S98 core excess under different error models",
+   "value": "T9 published 226.6: null 3.77 sigma (3.0 sigma after subtracting the null mean +45.5), white 5.0 sigma, event scatter 0.80 sigma (283 ppm), without epoch 8 0.06 sigma. T9 clean 199.8: null 2.72, white 3.92, event scatter 0.49 sigma. Per-event 19.5: event scatter 0.40, white 0.34, null 0.26 sigma.",
+   "uncertainty": "",
+   "units": "sigma",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_s6_and_clipping.json S98.* ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_t9_decomposition.json ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_a_events_and_nulls.json S98_ffi",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_t9_decomposition.py ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_a_events_and_nulls.py ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_s6_and_clipping.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "The error model matters only for the epoch-8-contaminated statistic. The white and random-phase errors assume no single-event outlier."
+  },
+  {
+   "id": "PIX.A_S32",
+   "group": "SIGNAL_A",
+   "quantity": "S32 A aperture difference r<=1 minus r<=2 px",
+   "value": "per-event TPF -61.9 (event scatter 60.5; white 49.0; null 85.9); per-event FFI -36.2 +- 65.2; T9 method FFI QUALITY==0 +84.7 +- 135.1, FFI clean +81.9 +- 163.3, TPF +108.9 +- 117.9 (null SD)",
+   "uncertainty": "",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_pixel_recheck/out/after_decorrelated.json A.S32_tpf2min / A.S32_ffi summary.corrected.diff_1.0-2.0 ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_a_events_and_nulls.json S32_tpf2min.random_phase_null ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_t9_decomposition.json S32_*_T9method",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_t9_decomposition.py ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_a_events_and_nulls.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_t9_decomposition.json",
+   "supersedes": "REVIEW_2 scratch numbers +85 +- 135, +82 +- 163, +109 +- 118 (now reproduced exactly)",
+   "manuscript_form": "not in Note",
+   "notes": "No significant aperture dependence under any method (all < 1.1 sigma). With a full-T14 window the per-event TPF value is -87 +- 46 (event scatter)."
+  },
+  {
+   "id": "PIX.A_S6",
+   "group": "SIGNAL_A",
+   "quantity": "S6 A aperture difference r<=1 minus r<=2 px",
+   "value": "T9 method: 149.5 +- 64.8 (11x11, re-seeded null; T9 json 65.5); 232.4 +- 52.4 (21x21, T9 selection); 228.8 +- 50.3 (21x21, clean). Leave-epoch-(-794)-out on 11x11: 25.5 +- 64.3; on 21x21 clean without -794: ~101 ppm (from the stored per-event values). Per-event method: no usable event (all 0.43-3.53 h from dumps); without the dump rule +102 +- 127 (4 events).",
+   "uncertainty": "event-scatter errors for the T9 method about 129-130 ppm",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_s6_and_clipping.json S06.* ; addenda/tic4206066_pixel_recheck/out/t9_method_replay.json S6_ffi_* / S06_T9_own_11x11_cutout ; addenda/tic4206066_pixel_recheck/out/after_decorrelated.json A_sensitivity_no_dump_rule.S6_ffi",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_s6_and_clipping.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_s6_and_clipping.json",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "REVIEW_2's annulus-clipping explanation is reproduced exactly: a 21x21 cube with the annulus clipped to the 11x11 stamp gives 149.5 +- 64.8 (S6) and 226.6 +- 60.1 (S98). S6 transits all lie near momentum dumps and cannot test the effect."
+  },
+  {
+   "id": "PIX.A_combined_S32_S98",
+   "group": "SIGNAL_A",
+   "quantity": "Per-event r<=1 minus r<=2 px, S32 TPF + S98 combined (independent photons)",
+   "value": "-12.4 +- 37.9 ppm (package, event-scatter weights); -15.9 +- 56.7 ppm with random-phase-null errors (my combination of 19.5 +- 75.4 and -61.9 +- 85.9)",
+   "uncertainty": "",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_pixel_recheck/out/after_decorrelated.json A_combined.corrected.diff_1.0-2.0 ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_a_events_and_nulls.json *.random_phase_null.std_of_trial_means",
+   "code": "addenda/tic4206066_pixel_recheck/scripts/s03_after_decorrelated.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_a_events_and_nulls.json",
+   "supersedes": "REVIEW_2 v2 combined -15 +- 53",
+   "manuscript_form": "not in Note",
+   "notes": "A 200 ppm core excess is 3.8 sigma above the conservative combination."
+  },
+  {
+   "id": "PIX.A_aperture_status",
+   "group": "SIGNAL_A",
+   "quantity": "Status of the Signal A central/aperture effect",
+   "value": "Not confirmed. The only >3 sigma evidence (T9 S98, 3.77 sigma) comes from one event (epoch 8, next to a 5.4-h gap with a momentum dump). Without it, S98 gives +4 +- 71 (T9 method) or +20 +- 75 (per-event method). A T9-sized excess (~200 ppm) is disfavoured at about 3.8 sigma by S98+S32 (-16 +- 57 ppm); effects below ~100 ppm are not excluded. S6 (dump-affected) retains 100-230 ppm with the T9 method and cannot be tested cleanly.",
+   "uncertainty": "",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "see PIX.A_S98_T9method, PIX.A_S98_perevent, PIX.A_S32, PIX.A_S6, PIX.A_combined_S32_S98",
+   "code": "",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/",
+   "supersedes": "user summary (b) 'not confirmed and not excluded'; P SUMMARY conclusion 1",
+   "manuscript_form": "not in Note",
+   "notes": ""
+  },
+  {
+   "id": "PIX.PRF_offtarget_signature",
+   "group": "FALSE_POSITIVE",
+   "quantity": "Aperture signature of an off-target source in P's apertures (official TESS PRF, Gaia DR3/TIC 8.2 scene)",
+   "value": "Source at TIC 4206077 (42.8-43.3''): depth ratio r1/r2 = 0.43 (S98), 0.22 (S32 TPF), 0.31 (S6); r3/r2 = 1.31, 1.81, 1.77. Predicted r1-r2 for a 470-ppm r2 depth: -268 (S98), -364 (S32 TPF), -323 (S6) ppm. On-target signal: r1/r2 = 1.002-1.004 (+1 to +2 ppm).",
+   "uncertainty": "model; PRF at the nearest MAST grid position",
+   "units": "ppm",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_prf_offtarget_signature.json",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_prf_offtarget_signature.py (uses addenda/opus55_final_audit_tic4206066/03_pixels/common.py PRFModel read-only, PRF files addenda/opus55_final_audit_tic4206066/00_data/prf/start_s0004)",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_prf_offtarget_signature.json",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "Confirms that an off-target source makes the core SHALLOWER, so a 'core deeper' excess is not an off-target signature (also QLP DRN004 footnote, addenda/opus55_final_audit_tic4206066/referee/resolve_R-DIL/QLP_DRN004.txt L59). The measured per-event values disfavour the 43'' star independently: S98 +20 +- 75 vs -268; S32 -62 +- 86 vs -364."
+  },
+  {
+   "id": "PIX.U_localisation_epoch8",
+   "group": "PIXEL",
+   "quantity": "Effect of the anomalous S98 epoch 8 on U's S98 A localisation",
+   "value": "U's S98 clean29 set (9 events) includes epoch 8 (BTJD 4024.20). U's own jackknife without it gives (+7.0, +0.3)'' against the full-set (+5.6, -0.3)'' (S98 alone).",
+   "uncertainty": "S98-only errors about +-3.3, +-4.5''",
+   "units": "arcsec",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/03_pixels/diagnose_s98.json S98_clean29_A.jackknife (dropped_tc 4024.200) ; addenda/opus55_final_audit_tic4206066/03_pixels/real_results.json S98_clean29.A.event_tc, off_E, off_N",
+   "code": "addenda/opus55_final_audit_tic4206066/03_pixels/diagnose_s98.py",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "Not material: a 1.4'' shift, and in the direction away from the target-consistent solution, not towards it."
+  },
+  {
+   "id": "PIX.manuscript_impact",
+   "group": "MANUSCRIPT_META",
+   "quantity": "Does the pixel re-check change any claim in U/proposed_revision/manuscript.tex?",
+   "value": "No. The Note makes no aperture-dependence, core-pixel or T9 claim. Its localisation, S6-dump, B-offset and >=43'' neighbour statements are consistent with P and with the reruns here. Do not promote this into the Note.",
+   "uncertainty": "",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/proposed_revision/manuscript.tex L22, L37, L41 ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/*",
+   "code": "",
+   "rerun": "",
+   "supersedes": "P SUMMARY 'Manuscript impact' (assessed the pubprep manuscript, not U's revision)",
+   "manuscript_form": "no change",
+   "notes": "P used the audit ephemeris (not U's final one) and box depths, not model fits. Swapping T9's ephemeris for the audit one moves the T9-method S98 value by 7 ppm (199.8 -> 206.9), and the box windows are +-28 min, so this does not matter. An optional record for the Zenodo or limitations notes: the verif T9 3.8 sigma S98 aperture excess traces to one event (epoch 8)."
+  }
+ ],
+ "conflicts": [
+  {
+   "id": "X-T8-01",
+   "quantity": "S98 Signal A core (r<=1) minus r<=2 px aperture depth excess",
+   "master_ids": "C092",
+   "claims": [
+    {
+     "source": "verif",
+     "value": "226.6 +- 60.1 ppm (3.77 sigma), 'unexplained'",
+     "evidence": "addenda/independent_verification_tic4206066_SEALED/out/t9_aperture_diff.json S98.A_r1.0_minus_r2.0 ; addenda/independent_verification_tic4206066_SEALED/verification_report.md L30",
+     "method": "T9: 11x11 TESScut, annulus bkg, global 1-d running median, full-T14 box, random-phase null"
+    },
+    {
+     "source": "M",
+     "value": "C092 UNRESOLVED: T9 226.6 +- 60.1 vs deep S32 TPF 316 (r0.7) rising to 452 (r2.0) ppm",
+     "evidence": "addenda/tic4206066_MASTER_EVIDENCE/CONTRADICTIONS.md L711-L721",
+     "method": "compilation"
+    },
+    {
+     "source": "P",
+     "value": "per-event +20 +- 49 (8 events); T9 method on clean data 200 +- 73; 'not confirmed, not excluded'",
+     "evidence": "addenda/tic4206066_pixel_recheck/SUMMARY.md Results/Conclusions ; addenda/tic4206066_pixel_recheck/out/after_decorrelated.json ; addenda/tic4206066_pixel_recheck/out/t9_method_replay.json",
+     "method": "per-event local fit with centroid/background terms; T9 replay"
+    },
+    {
+     "source": "other",
+     "value": "T8 rerun: T9 published config without epoch 8 +4.0 +- 70.7; T9 method on the same 8 events -73.9 +- 105.7; per-event +19.5 +- 75.4 (null)",
+     "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_s6_and_clipping.json S98.own11x11_leave_one_out ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_t9_decomposition.json ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_a_events_and_nulls.json",
+     "method": "leave-one-out and event-restricted T9 replay; random-phase null for the per-event statistic"
+    }
+   ],
+   "trace": "T9 used QUALITY==0 11x11 cut-outs (15 S98 events incl. epoch 8 and the scattered-light epochs 2,3,11,12). P s03 used the pubprep a2 bitmask plus QLP 2^29 and the gap/dump rules (8 events). The deep follow-up numbers are single-fold aperture depths in the S32 2-min TPF with no errors quoted (deep_followup_report.md L116-L117).",
+   "diagnosis": "flawed statistic: one outlier event (epoch 8, next to a 5.4-h data gap with a momentum dump) produces the whole T9 excess; the deep S32 trend is a ~1 sigma, non-monotonic difference of a different quantity",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_s6_and_clipping.py -> addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_s6_and_clipping.json (LOO epoch 8: +4.0 +- 70.7); addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_t9_decomposition.py -> addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_t9_decomposition.json",
+   "resolution": "No significant Signal A aperture dependence in S98 or S32. The T9 3.77 sigma value is an artefact of S98 epoch 8. S32 TPF r1-r2 = -62 +- 60 ppm (the deep follow-up's 374 vs 452 ppm is the same ~1 sigma effect, and r3 < r2, so it is not an off-target pattern). S6 cannot test it.",
+   "reason": "A clean rerun from raw pixels with leave-one-out outranks the single aggregated T9 number. The excess vanishes when one event with a documented gap and dump is removed, and it is absent in T9's own method on the clean events.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T8-02",
+   "quantity": "Cause of the ~180 ppm S98 difference between the T9 method and the per-event method",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "P",
+     "value": "'In S98 the two methods differ by about 180 ppm, about 2 sigma, and the cause is not identified'",
+     "evidence": "addenda/tic4206066_pixel_recheck/SUMMARY.md Conclusions 1",
+     "method": "comparison of s03b clean-selection T9 value with the s03 per-event value"
+    },
+    {
+     "source": "P",
+     "value": "REVIEW_2: 'two methods differ by about 2 sigma (178 ppm) ... candidates: in-transit window, detrend'",
+     "evidence": "addenda/tic4206066_pixel_recheck/REVIEW_2.md section 4",
+     "method": "reviewer scratch"
+    },
+    {
+     "source": "other",
+     "value": "user summary (d): 'S98 retains a method-dependent ~200-230 ppm difference whose significance depends on the error model'",
+     "evidence": "task statement",
+     "method": "summary"
+    },
+    {
+     "source": "other",
+     "value": "T8: event selection, not method. Same 8 events: T9 -73.9 vs per-event +19.5, paired -93 +- 63 (1.5 sigma). A full-T14 window in the per-event method gives -1.8 +- 50.3.",
+     "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_b_and_paired.json S98_paired_T9method_minus_perevent_same8 ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_a_events_and_nulls.json S98_ffi.fullT14_window",
+     "method": "event-restricted T9 replay + paired differences"
+    }
+   ],
+   "trace": "s03b clean selection keeps all clean cadences, i.e. 10 A events including epoch 8 (+3822 ppm x 29 points) and epoch -1 (-761 ppm). s03 removes both by the gap rule.",
+   "diagnosis": "definition difference: the two numbers are computed over different event sets",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_t9_decomposition.py ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_b_and_paired.py",
+   "resolution": "The methods agree within 1.5 sigma on identical events. No method-dependent S98 excess remains; the 180 ppm is epoch 8.",
+   "reason": "Direct test on identical events. The candidate causes (window, background, ephemeris) were tested and each moves the value by <10-50 ppm.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T8-03",
+   "quantity": "Wording 'T9's own method still finds about 200 ppm on the same clean data'",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "P",
+     "value": "SUMMARY Conclusions 1; REVIEW_1 section C ('T9's own method on the same clean cadences still gives +207 +- 72')",
+     "evidence": "addenda/tic4206066_pixel_recheck/SUMMARY.md ; addenda/tic4206066_pixel_recheck/REVIEW_1.md L85-L87",
+     "method": "T9 replay on clean cadences"
+    },
+    {
+     "source": "other",
+     "value": "same cadences but 10 vs 8 events; on the same events -74 ppm",
+     "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_t9_decomposition.json S98_clean_T9eph",
+     "method": "event-restricted replay"
+    }
+   ],
+   "trace": "as X-T8-02",
+   "diagnosis": "overstatement",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_t9_decomposition.py",
+   "resolution": "Replace with: 'T9's method gives ~200 ppm on the clean cadences only because they still contain epoch 8; on the same 8 events it gives -74 +- 106 ppm.'",
+   "reason": "rerun",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T8-04",
+   "quantity": "S6 T9-method value and its error",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "verif",
+     "value": "149.5 +- 65.5 ppm (2.3 sigma)",
+     "evidence": "addenda/independent_verification_tic4206066_SEALED/out/t9_aperture_diff.json S06.A_r1.0_minus_r2.0",
+     "method": "T9, one rng stream across S98 then S06"
+    },
+    {
+     "source": "P",
+     "value": "149.5 +- 64.8 (11x11 replay); 232 +- 52 (21x21); 229 +- 50 clean",
+     "evidence": "addenda/tic4206066_pixel_recheck/out/t9_method_replay.json",
+     "method": "s03b re-seeded per sector"
+    },
+    {
+     "source": "other",
+     "value": "clipped-annulus 21x21 = 149.5 +- 64.8 exactly; LOO epoch -794: 25.5 +- 64.3",
+     "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_s6_and_clipping.json S06",
+     "method": "rerun"
+    }
+   ],
+   "trace": "Same pixels (the 11x11 cut-out is the centre of the 21x21). In the 11x11 stamp, T9's 4-5.5 px annulus is clipped by the edge (47 of 52 pixels in S6).",
+   "diagnosis": "rounding/rng seeding (65.5 vs 64.8); definition difference (annulus pixels) for 149.5 vs 232; the value is dominated by one dump-adjacent event",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_s6_and_clipping.py",
+   "resolution": "S6 T9-method 149.5-232 ppm depending on the background annulus; not a usable test (all transits 0.4-3.5 h from dumps).",
+   "reason": "exact reproduction of both numbers from one cube",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T8-05",
+   "quantity": "B S32 r2 minus r3 aperture difference",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "P",
+     "value": "-82.0 +- 20.6 ppm (nominal 4.0 sigma) in JSON; not quoted in SUMMARY",
+     "evidence": "addenda/tic4206066_pixel_recheck/out/after_decorrelated.json B.S32_tpf2min.summary.corrected.diff_2.0-3.0",
+     "method": "error = SD of N=2 event values / sqrt(2)"
+    },
+    {
+     "source": "other",
+     "value": "-80.9 +- 58.7 ppm (1.4 sigma)",
+     "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_b_and_paired.json B_diff_2.0-3.0_combined_white",
+     "method": "white error of each event's difference light curve, inverse-variance"
+    }
+   ],
+   "trace": "same fits; only the error differs",
+   "diagnosis": "flawed error estimate (N=2 scatter)",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_b_and_paired.py",
+   "resolution": "-81 +- 59 ppm; not significant; on-target PRF predicts +15 ppm, a 43'' source predicts -728 ppm",
+   "reason": "an error from N=2 scatter has 1 degree of freedom",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T8-06",
+   "quantity": "B in-transit centroid shifts quoted in SUMMARY",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "P",
+     "value": "SUMMARY: x -0.8 +- 0.8, y +1.4 +- 2.6 mpix (-164); x -0.1 +- 0.6, y -0.2 +- 0.8 (-162)",
+     "evidence": "addenda/tic4206066_pixel_recheck/SUMMARY.md Conclusions 2",
+     "method": "text"
+    },
+    {
+     "source": "P",
+     "value": "v3 JSON: -164 x -0.56 +- 0.88, y +0.35 +- 2.80; -162 x -0.08 +- 0.57, y -0.30 +- 0.79",
+     "evidence": "addenda/tic4206066_pixel_recheck/out/b_s32_events.json events.*.centroid_shift_mpix",
+     "method": "s04 with A masked"
+    }
+   ],
+   "trace": "SUMMARY numbers predate the v3 A-masking in s04",
+   "diagnosis": "stale data in SUMMARY text",
+   "rerun": "none needed (JSON reproduced byte-identically)",
+   "resolution": "use the JSON values; the conclusion (centroids not decisive, a 43.5'' source ~1 mpix) is unchanged",
+   "reason": "the JSON is produced by the current script",
+   "status": "COSMETIC"
+  },
+  {
+   "id": "X-T8-07",
+   "quantity": "REVIEW_1/REVIEW_2 numbers vs v3",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "P",
+     "value": "REVIEW_1: S98 15 events +105 +- 180, 9 clean +84 +- 60, T9 clean +207 +- 72, S6 5 events; REVIEW_2: S98 +230 +- 211 (n=10), combined -15 +- 53, 'without epoch 8 +22 +- 43 (N=9)', C4 'not fixed'",
+     "evidence": "addenda/tic4206066_pixel_recheck/REVIEW_1.md L78-L87 ; addenda/tic4206066_pixel_recheck/REVIEW_2.md sections 2-3",
+     "method": "v1/v2 reviews"
+    },
+    {
+     "source": "P",
+     "value": "v3: S98 +19.5 +- 48.6 (n=8); combined -12.4 +- 37.9; T9 clean 199.8 +- 73.5; S6 0 events (4 without dump rule, +102 +- 127); s04 masks A",
+     "evidence": "addenda/tic4206066_pixel_recheck/out/after_decorrelated.json ; addenda/tic4206066_pixel_recheck/out/t9_method_replay.json",
+     "method": "v3 scripts"
+    }
+   ],
+   "trace": "the reviews ran on v1/v2",
+   "diagnosis": "stale data (earlier versions)",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_s98_rule_sensitivity.py reproduces REVIEW_2's +22.3 +- 42.9 (N=9, epoch -1 kept) and v2 +229.9 +- 211.1 (N=10)",
+   "resolution": "Still valid in v3: S32 TPF -62 +- 60, S32 FFI -36 +- 65, S6 no-dump-rule +102 +- 127, all T9 replay numbers, the annulus-clipping explanation, and the T9-on-S32 scratch numbers. Superseded: S98 per-event values, combined values, C3/C4 status, 'cause not identified'.",
+   "reason": "v3 outputs reproduce byte-identically",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T8-08",
+   "quantity": "Manuscript used for P's impact assessment",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "P",
+     "value": "assessed pubprep manuscript.tex: A (+8+-5, -8+-7)'', B (+1+-3, +1+-4)''",
+     "evidence": "addenda/tic4206066_pixel_recheck/SUMMARY.md Manuscript impact ; addenda/tic4206066_pixel_recheck/REVIEW_1.md section E",
+     "method": "text review"
+    },
+    {
+     "source": "U",
+     "value": "proposed revision: A (+5+-3, 0+-3)'', B (+1+-3, -1+-3)''",
+     "evidence": "addenda/opus55_final_audit_tic4206066/proposed_revision/manuscript.tex L37, L41",
+     "method": "U 03_pixels"
+    }
+   ],
+   "trace": "P never opened U",
+   "diagnosis": "stale reference document",
+   "rerun": "impact re-assessed on U's revision (PIX.manuscript_impact)",
+   "resolution": "No change needed in U's revision either",
+   "reason": "the Note makes no aperture claim, and P does not constrain positions at the 3'' level",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T8-09",
+   "quantity": "Ephemeris used by P vs U final",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "P",
+     "value": "audit ephemeris P=3.182785293657263 d, T0=3998.7367930 BTJD",
+     "evidence": "addenda/tic4206066_pixel_recheck/out/inputs.json ephemeris_BTJD.A",
+     "method": "audit fit"
+    },
+    {
+     "source": "U",
+     "value": "P=3.182785+-0.000006 d, T0=2460998.736+-0.003 BJD_TDB",
+     "evidence": "addenda/opus55_final_audit_tic4206066/proposed_revision/manuscript.tex L33",
+     "method": "U timing"
+    }
+   ],
+   "trace": "the T0 values agree to 0.0003 d; P uses +-T14/4 boxes",
+   "diagnosis": "negligible difference",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_t9_decomposition.json S98_clean_auditEph vs S98_clean_T9eph: 206.9 vs 199.8 ppm (7 ppm)",
+   "resolution": "no effect on any conclusion",
+   "reason": "rerun",
+   "status": "NOT_A_CONFLICT"
+  },
+  {
+   "id": "X-T8-10",
+   "quantity": "User summary (b): A central/aperture effect 'NOT confirmed and NOT excluded'",
+   "master_ids": "C092",
+   "claims": [
+    {
+     "source": "other",
+     "value": "not confirmed, not excluded",
+     "evidence": "task statement",
+     "method": "summary"
+    },
+    {
+     "source": "other",
+     "value": "not confirmed; the only >3 sigma evidence is epoch 8; a ~200 ppm excess is disfavoured at ~3.8 sigma by S98+S32 (-16 +- 57 ppm); effects <~100 ppm are not excluded; S6 is untestable",
+     "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_s6_and_clipping.json ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_a_events_and_nulls.json",
+     "method": "reruns"
+    }
+   ],
+   "trace": "see X-T8-01",
+   "diagnosis": "the summary predates the event-level decomposition",
+   "rerun": "as X-T8-01",
+   "resolution": "'Not confirmed. The T9 3.8 sigma value is caused by one event; the T9-sized excess is disfavoured, and smaller effects are not tested.'",
+   "reason": "rerun evidence",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T8-11",
+   "quantity": "User summary (a), (c), (e)",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "other",
+     "value": "(a) B/S32 ~4 sigma off-target = methodological false positive; (c) S32 no significant aperture dependence; (e) do not promote to the Note",
+     "evidence": "task statement",
+     "method": "summary"
+    },
+    {
+     "source": "other",
+     "value": "(a) confirmed (first pass 4.5-5.0 sigma; per-event flat, also without centroid terms); (c) confirmed under every method (<1.1 sigma); (e) confirmed, no claim changes",
+     "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_b_and_paired.json ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_t9_decomposition.json ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_a_events_and_nulls.json",
+     "method": "reruns"
+    }
+   ],
+   "trace": "P outputs + T8 reruns",
+   "diagnosis": "no conflict",
+   "rerun": "as cited",
+   "resolution": "confirmed as stated (the first-pass significance is 4.5-5.0 sigma, not ~4)",
+   "reason": "",
+   "status": "NOT_A_CONFLICT"
+  },
+  {
+   "id": "X-T8-12",
+   "quantity": "inputs.json byte difference on rerun",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "P",
+     "value": "interpreter '.../tic4206066_pixel_recheck/scripts/../../../.venv/bin/python'",
+     "evidence": "addenda/tic4206066_pixel_recheck/out/inputs.json software.interpreter",
+     "method": "s01"
+    },
+    {
+     "source": "other",
+     "value": "interpreter '/Users/paulsmith/space <3/tess-jev/.venv/bin/python'",
+     "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/out/inputs.json",
+     "method": "s01 in the copy"
+    }
+   ],
+   "trace": "the same interpreter called by a different path",
+   "diagnosis": "cosmetic",
+   "rerun": "none needed",
+   "resolution": "all science outputs are identical",
+   "reason": "",
+   "status": "COSMETIC"
+  }
+ ],
+ "manuscript_findings": [
+  {
+   "quote": "place the 3.18\\,d source at $(+5\\pm3, 0\\pm3)''$ from the target ($\\approx2\\sigma$)",
+   "problem": "None from the pixel re-check. U's S98 set includes S98 epoch 8, the event with the pixel-level anomaly, but U's own jackknife without it moves S98 only to (+7.0, +0.3)'' (diagnose_s98.json). P does not constrain positions at the 3'' level.",
+   "fix": "no change",
+   "severity": "NONE"
+  },
+  {
+   "quote": "All Gaia DR3 stars able to produce the depth lie $\\ge43''$ ($\\ge14\\sigma$) away.",
+   "problem": "None. The PRF shows that a source at 43'' would make the r<=1 px depth shallower by 268-364 ppm. The measured per-event values (+20 +- 75 ppm in S98, -62 +- 86 in S32) independently disfavour it.",
+   "fix": "no change",
+   "severity": "NONE"
+  },
+  {
+   "quote": "offset $(+1\\pm3, -1\\pm3)''$",
+   "problem": "None. B's per-event S32 depths are flat across apertures (r1/r3 ~ 1.0, against 0.12 for a 43'' source). The first-pass off-target pattern was a detrending artefact.",
+   "fix": "no change",
+   "severity": "NONE"
+  },
+  {
+   "quote": "Its Sector 6 difference images are unusable because every transit falls 0.4--3.5\\,h from a reaction-wheel desaturation.",
+   "problem": "None. Rerun dump distances are 0.43-3.53 h for the fittable S6 A events.",
+   "fix": "no change",
+   "severity": "NONE"
+  },
+  {
+   "quote": "Vetting, pixel-level localization, Gaia astrometry and photometry, radial velocities, and overluminosity",
+   "problem": "None. The pixel re-check leaves no open aperture anomaly that undermines 'pixel-level localization'.",
+   "fix": "no change",
+   "severity": "NONE"
+  }
+ ],
+ "unknowns": [
+  {
+   "item": "Physical cause of the S98 epoch-8 pixel anomaly (+3800 ppm r1-r2 in the T9 method, +2098 ppm per-event)",
+   "why": "It coincides with a 5.4-h data gap that contains a momentum dump 7.9 h after mid-transit. The one-sided detrend is a plausible mechanism, but it was not isolated.",
+   "would_resolve": "Inspect the epoch-8 pixel time series and the pointing/background around the gap. Not needed for the Note.",
+   "blocks_submission": false
+  },
+  {
+   "item": "Residual S6 T9-method aperture excess (~100 ppm without epoch -794; 150-230 ppm with it)",
+   "why": "All S6 transits lie 0.4-3.5 h from momentum dumps, and the per-event method has no usable S6 event.",
+   "would_resolve": "Future sectors without dumps near transits (e.g. S110) or a full pixel-level decorrelation of S6",
+   "blocks_submission": false
+  },
+  {
+   "item": "B aperture behaviour rests on 2 S32 events with white (lower-bound) errors",
+   "why": "Only two S32 2-min B events exist.",
+   "would_resolve": "S98/S110 B events at 2-min or 200-s cadence",
+   "blocks_submission": false
+  }
+ ],
+ "files_written": [
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/build_result.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/logs_epoch8.txt",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/logs_t8_a.txt",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/logs_t8_b.txt",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/logs_t8_prf.txt",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/logs_t8_rules.txt",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/logs_t8_s6.txt",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/logs_t8_t9.txt",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/orig_out_snapshot/after_decorrelated.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/orig_out_snapshot/b_s32_events.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/orig_out_snapshot/before_global_detrend.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/orig_out_snapshot/inputs.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/orig_out_snapshot/t9_method_replay.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_a_events_and_nulls.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_b_and_paired.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_b_drift.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_prf_offtarget_signature.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_s6_and_clipping.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_s98_rule_sensitivity.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/out/t8_t9_decomposition.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/REVIEW_1.md",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/REVIEW_2.md",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/SHA256SUMS",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/SUMMARY.md",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/env/pip_freeze.txt",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/out/after_decorrelated.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/out/b_s32_events.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/out/before_global_detrend.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/out/inputs.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/out/t9_method_replay.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/plots/A_depth_vs_aperture_before_after.png",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/plots/B_S32_before_vs_per_event.png",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/plots/B_S32_events_core_vs_wide.png",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/scripts/common.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/scripts/run_all.sh",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/scripts/s01_inputs.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/scripts/s02_before_global_detrend.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/scripts/s03_after_decorrelated.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/scripts/s03b_t9_method_replay.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/scripts/s04_b_s32_events.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/scripts/s05_plots.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/pkg_copy/scripts/s06_hashes.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/rerun_log.txt",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/result.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_a_events_and_nulls.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_b_and_paired.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_b_drift.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_prf_offtarget_signature.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_s6_and_clipping.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_s98_rule_sensitivity.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_t9_decomposition.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/t8_t9_decomposition_lib.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T8_pixel_recheck/verif_pycache_before.txt"
+ ]
+}

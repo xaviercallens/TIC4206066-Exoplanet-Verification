@@ -1,0 +1,190 @@
+Holoviews not imported. Some visualizations will not be available.
+PyMultiNest not imported.  MultiNest fits will not work.
+
+		#####################################
+		##             ARIADNE             ##
+		#####################################
+   spectrAl eneRgy dIstribution bAyesian moDel averagiNg fittEr
+
+			Author : Jose Vines
+			Contact : jose . vines at ug . uchile . cl
+			Star : TIC4206066
+		*** LOOKING UP ARCHIVAL INFORMATION ***
+INFO: Query finished. [astroquery.utils.tap.core]
+INFO: Query finished. [astroquery.utils.tap.core]
+INFO: Query finished. [astroquery.utils.tap.core]
+Query timed out after 60s
+Gaia TAP down, falling back to VizieR XMatch for: ['SDSS', 'TYCHO2', 'APASS', 'SkyMapper']
+INFO: Query finished. [astroquery.utils.tap.core]
+The SFD'98 dust map is not in the data directory:
+
+    /private/tmp/claude-501/-Users-paulsmith-space--3/dd0bfc95-6ba3-4d00-9d7d-2cefbff5ef29/scratchpad/ariadne_env/lib/python3.11/site-packages/dustmaps/data
+
+To change the data directory, call:
+
+    from dustmaps.config import config
+    config['data_dir'] = '/path/to/data/directory'
+
+To download the SFD'98 map to the data directory, call:
+
+    import dustmaps.sfd
+    dustmaps.sfd.fetch()
+
+SFD extinction query failed: [Errno 2] No such file or directory: '/private/tmp/claude-501/-Users-paulsmith-space--3/dd0bfc95-6ba3-4d00-9d7d-2cefbff5ef29/scratchpad/ariadne_env/lib/python3.11/site-packages/dustmaps/data/sfd/SFD_dust_4096_ngp.fits'
+		--- Retrieved photometry ---
+		       Filter       	Magnitude	Uncertainty
+		--------------------	---------	-----------
+		       SDSS_u       	 15.6560 	  0.0090   
+		    TYCHO_B_MvB     	 13.4240 	  0.4030   
+		       SDSS_g       	 12.2310 	  0.0010   
+		      Gaia_BP       	 11.3537 	  0.0029   
+		    TYCHO_V_MvB     	 11.2410 	  0.0950   
+		       SDSS_r       	 10.6240 	  0.0010   
+		       Gaia_G       	 10.5130 	  0.0028   
+		       SDSS_i       	 10.3220 	  0.0010   
+		      Gaia_RP       	 9.6142  	  0.0038   
+		        TESS        	 9.6817  	  0.0060   
+		       SDSS_z       	 10.0910 	  0.0010   
+		      2MASS_J       	 8.5270  	  0.0290   
+		      2MASS_H       	 7.9320  	  0.0340   
+		      2MASS_Ks      	 7.6940  	  0.0290   
+		    WISE_RSR_W1     	 7.6050  	  0.0310   
+		    WISE_RSR_W2     	 7.6260  	  0.0200   
+			Gaia DR3 ID : 3220388198192519424
+			TIC : 4206066
+			Gaia Parallax : 28.112 +/- 0.027
+			Bailer-Jones distance : 35.579 +/- 0.022
+
+
+		--- Retrieved photometry ---
+		       Filter       	Magnitude	Uncertainty
+		--------------------	---------	-----------
+		       SDSS_u       	 15.6560 	  0.0090   
+		    TYCHO_B_MvB     	 13.4240 	  0.4030   
+		       SDSS_g       	 12.2310 	  0.0010   
+		    GaiaDR2v2_BP    	 11.3537 	  0.0029   
+		    TYCHO_V_MvB     	 11.2410 	  0.0950   
+		       SDSS_r       	 10.6240 	  0.0010   
+		    GaiaDR2v2_G     	 10.5130 	  0.0028   
+		       SDSS_i       	 10.3220 	  0.0010   
+		    GaiaDR2v2_RP    	 9.6142  	  0.0038   
+		        TESS        	 9.6817  	  0.0060   
+		       SDSS_z       	 10.0910 	  0.0010   
+		      2MASS_J       	 8.5270  	  0.0290   
+		      2MASS_H       	 7.9320  	  0.0340   
+		      2MASS_Ks      	 7.6940  	  0.0290   
+		    WISE_RSR_W1     	 7.6050  	  0.0310   
+		    WISE_RSR_W2     	 7.6260  	  0.0200   
+
+			WARNING: SDSS_u is potentially problematic (>5.0σ from blackbody fit) — not removed
+			WARNING: SDSS_z is potentially problematic (>5.0σ from blackbody fit) — not removed
+			WARNING: WISE_RSR_W2 is potentially problematic (>5.0σ from blackbody fit) — not removed
+			Gaia DR3 ID : 3220388198192519424
+			TIC : 4206066
+			Gaia Effective temperature : 0.000 +/- 0.000
+			Gaia Stellar radius : 0.000 +/- 0.000
+			Gaia Stellar Luminosity : 0.000 +/- 0.000
+			Gaia Parallax : 28.112 +/- 0.027
+			Bailer-Jones distance : 35.579 +/- 0.022
+			Maximum Av : 0.000
+		       Filter       	Magnitude	Uncertainty
+		--------------------	---------	-----------
+		       SDSS_u       	 15.6560 	  0.0090   
+		    TYCHO_B_MvB     	 13.4240 	  0.4030   
+		       SDSS_g       	 12.2310 	  0.0010   
+		    GaiaDR2v2_BP    	 11.3537 	  0.0029   
+		    TYCHO_V_MvB     	 11.2410 	  0.0950   
+		       SDSS_r       	 10.6240 	  0.0010   
+		    GaiaDR2v2_G     	 10.5130 	  0.0028   
+		       SDSS_i       	 10.3220 	  0.0010   
+		    GaiaDR2v2_RP    	 9.6142  	  0.0038   
+		        TESS        	 9.6817  	  0.0060   
+		       SDSS_z       	 10.0910 	  0.0010   
+		      2MASS_J       	 8.5270  	  0.0290   
+		      2MASS_H       	 7.9320  	  0.0340   
+		      2MASS_Ks      	 7.6940  	  0.0290   
+		    WISE_RSR_W1     	 7.6050  	  0.0310   
+		    WISE_RSR_W2     	 7.6260  	  0.0200   
+
+			Removed SDSS_u!!
+			Removed SDSS_g!!
+			Removed SDSS_r!!
+			Removed SDSS_i!!
+			Removed SDSS_z!!
+			Removed TESS!!
+		       Filter       	Magnitude	Uncertainty
+		--------------------	---------	-----------
+		    TYCHO_B_MvB     	 13.4240 	  0.4030   
+		    GaiaDR2v2_BP    	 11.3537 	  0.0029   
+		    TYCHO_V_MvB     	 11.2410 	  0.0950   
+		    GaiaDR2v2_G     	 10.5130 	  0.0028   
+		    GaiaDR2v2_RP    	 9.6142  	  0.0038   
+		      2MASS_J       	 8.5270  	  0.0290   
+		      2MASS_H       	 7.9320  	  0.0340   
+		      2MASS_Ks      	 7.6940  	  0.0290   
+		    WISE_RSR_W1     	 7.6050  	  0.0310   
+		    WISE_RSR_W2     	 7.6260  	  0.0200   
+
+Creation of the directory /Users/paulsmith/space <3/tess-jev/addenda/companion_check_tic4206066/sed_out failed. It might already exist
+
+		*** EXECUTING MAIN FITTING ROUTINE ***
+			Selected engine : Bayesian Model Averaging
+			Live points : 500
+			log Evidence tolerance : 0.5
+			Free parameters : 15
+			Bounding : multi
+			Sampling : rwalk
+			N threads : 10
+
+			Parameter                 Prior
+			----------------------------------------------------
+			teff                      RAVE (population)
+			logg                      U(3.50, 6.00)
+			z                         N(-0.125, 0.234)
+			dist                      TN(35.58, 0.07, [0.00, inf])
+			rad                       U(0.05, 100.05)
+
+			FITTING MODEL : phoenix
+0it [00:00, ?it/s] 11%|█         | 486/4578 [00:00<00:00, 4814.59it/s, bound: 0 | nc: 4 | ncall: 1295 | eff(%): 37.529 | loglstar:   -inf | logz:   -inf +/- 27.752 | dlogz:    inf >  0.500] 20%|█▉        | 968/4842 [00:00<00:00, 4766.10it/s, bound: 0 | nc: 1 | ncall: 3503 | eff(%): 27.633 | loglstar:   -inf | logz:   -inf | dlogz:    inf >  0.500]            42%|████▏     | 1445/3481 [00:00<00:00, 4241.61it/s, bound: 0 | nc: 7 | ncall: 9114 | eff(%): 15.855 | loglstar:   -inf | logz:   -inf +/-  0.145 | dlogz:    inf >  0.500] 28%|██▊       | 1875/6781 [00:00<00:01, 2779.93it/s, bound: 1 | nc: 25 | ncall: 20823 | eff(%):  9.004 | loglstar:   -inf | logz:   -inf +/-  0.146 | dlogz:    inf >  0.500] 53%|█████▎    | 2257/4287 [00:00<00:00, 3009.30it/s, bound: 2 | nc: 25 | ncall: 30423 | eff(%):  7.419 | loglstar: -666155.318 | logz: -666166.735 +/-  0.150 | dlogz: 685119.838 >  0.500] 62%|██████▏   | 2600/4198 [00:00<00:00, 3033.73it/s, bound: 2 | nc: 25 | ncall: 39148 | eff(%):  6.641 | loglstar: -28652.661 | logz: -28664.764 +/-  0.154 | dlogz: 29077.861 >  0.500]    38%|███▊      | 2932/7721 [00:00<00:01, 2927.40it/s, bound: 3 | nc: 25 | ncall: 47548 | eff(%):  6.166 | loglstar: -3919.821 | logz: -3932.588 +/-  0.159 | dlogz: 4162.769 >  0.500]    51%|█████     | 3244/6351 [00:01<00:01, 2958.20it/s, bound: 4 | nc: 25 | ncall: 55423 | eff(%):  5.853 | loglstar: -1212.945 | logz: -1226.314 +/-  0.162 | dlogz: 1445.097 >  0.500] 38%|███▊      | 3565/9442 [00:01<00:01, 3026.97it/s, bound: 4 | nc: 25 | ncall: 63473 | eff(%):  5.617 | loglstar: -444.611 | logz: -457.977 +/-  0.159 | dlogz: 672.866 >  0.500]    48%|████▊     | 3878/8147 [00:01<00:01, 3022.66it/s, bound: 5 | nc: 25 | ncall: 71348 | eff(%):  5.435 | loglstar: -147.477 | logz: -160.685 +/-  0.158 | dlogz: 377.940 >  0.500] 55%|█████▌    | 4208/7590 [00:01<00:01, 3082.80it/s, bound: 5 | nc: 25 | ncall: 79698 | eff(%):  5.280 | loglstar: 14.476 | logz:  0.899 +/-  0.157 | dlogz: 215.412 >  0.500]     56%|█████▋    | 4522/8033 [00:01<00:01, 3078.13it/s, bound: 6 | nc: 25 | ncall: 87673 | eff(%):  5.158 | loglstar: 106.165 | logz: 92.657 +/-  0.158 | dlogz: 122.883 >  0.500] 55%|█████▍    | 4834/8791 [00:01<00:01, 3065.21it/s, bound: 7 | nc: 25 | ncall: 95548 | eff(%):  5.059 | loglstar: 153.266 | logz: 139.856 +/-  0.157 | dlogz: 77.588 >  0.500] 72%|███████▏  | 5169/7227 [00:01<00:00, 3147.36it/s, bound: 7 | nc: 25 | ncall: 104073 | eff(%):  4.967 | loglstar: 189.972 | logz: 175.785 +/-  0.160 | dlogz: 40.990 >  0.500] 65%|██████▍   | 5486/8472 [00:01<00:00, 3102.56it/s, bound: 8 | nc: 25 | ncall: 112073 | eff(%):  4.895 | loglstar: 205.232 | logz: 191.608 +/-  0.159 | dlogz: 25.565 >  0.500] 65%|██████▍   | 5798/8923 [00:01<00:01, 3083.31it/s, bound: 9 | nc: 25 | ncall: 119923 | eff(%):  4.835 | loglstar: 213.275 | logz: 199.399 +/-  0.159 | dlogz: 18.485 >  0.500] 63%|██████▎   | 6108/9758 [00:01<00:01, 3070.56it/s, bound: 10 | nc: 25 | ncall: 127723 | eff(%):  4.782 | loglstar: 217.710 | logz: 203.908 +/-  0.159 | dlogz: 13.346 >  0.500] 62%|██████▏   | 6447/10398 [00:02<00:01, 3157.70it/s, bound: 10 | nc: 25 | ncall: 136198 | eff(%):  4.734 | loglstar: 220.428 | logz: 206.489 +/-  0.159 | dlogz: 10.084 >  0.500] 65%|██████▌   | 6764/10384 [00:02<00:01, 3155.28it/s, bound: 11 | nc: 25 | ncall: 144123 | eff(%):  4.693 | loglstar: 222.263 | logz: 208.060 +/-  0.160 | dlogz:  7.878 >  0.500] 67%|██████▋   | 7080/10580 [00:02<00:01, 3103.76it/s, bound: 12 | nc: 25 | ncall: 152023 | eff(%):  4.657 | loglstar: 223.476 | logz: 209.066 +/-  0.161 | dlogz:  6.323 >  0.500] 69%|██████▉   | 7391/10744 [00:02<00:01, 3069.82it/s, bound: 13 | nc: 25 | ncall: 159873 | eff(%):  4.623 | loglstar: 224.581 | logz: 209.800 +/-  0.163 | dlogz:  5.575 >  0.500] 74%|███████▍  | 7699/10425 [00:02<00:00, 3057.05it/s, bound: 13 | nc: 25 | ncall: 167598 | eff(%):  4.594 | loglstar: 225.497 | logz: 210.368 +/-  0.164 | dlogz:  4.400 >  0.500] 69%|██████▉   | 8005/11566 [00:02<00:01, 3024.06it/s, bound: 14 | nc: 25 | ncall: 175373 | eff(%):  4.565 | loglstar: 226.258 | logz: 210.777 +/-  0.165 | dlogz:  4.921 >  0.500] 74%|███████▍  | 8312/11268 [00:02<00:00, 3036.78it/s, bound: 15 | nc: 25 | ncall: 183098 | eff(%):  4.540 | loglstar: 226.876 | logz: 211.092 +/-  0.167 | dlogz:  4.003 >  0.500] 79%|███████▉  | 8644/10874 [00:02<00:00, 3112.99it/s, bound: 15 | nc: 25 | ncall: 191448 | eff(%):  4.515 | loglstar: 227.547 | logz: 211.345 +/-  0.168 | dlogz:  3.114 >  0.500] 85%|████████▌ | 8956/10536 [00:02<00:00, 3104.50it/s, bound: 16 | nc: 25 | ncall: 199398 | eff(%):  4.492 | loglstar: 228.155 | logz: 211.537 +/-  0.169 | dlogz:  2.352 >  0.500] 90%|████████▉ | 9267/10303 [00:02<00:00, 3073.22it/s, bound: 17 | nc: 25 | ncall: 207273 | eff(%):  4.471 | loglstar: 228.673 | logz: 211.690 +/-  0.170 | dlogz:  1.684 >  0.500] 81%|████████▏ | 9579/11771 [00:03<00:00, 3035.20it/s, bound: 17 | nc: 25 | ncall: 215198 | eff(%):  4.451 | loglstar: 229.174 | logz: 211.810 +/-  0.171 | dlogz:  2.789 >  0.500] 86%|████████▌ | 9883/11462 [00:03<00:00, 2712.88it/s, bound: 18 | nc: 25 | ncall: 222923 | eff(%):  4.433 | loglstar: 229.597 | logz: 211.900 +/-  0.172 | dlogz:  2.151 >  0.500] 91%|█████████ | 10211/11218 [00:03<00:00, 2862.34it/s, bound: 18 | nc: 50 | ncall: 231198 | eff(%):  4.417 | loglstar: 230.068 | logz: 211.974 +/-  0.173 | dlogz:  1.540 >  0.500] 95%|█████████▍| 10521/11082 [00:03<00:00, 2927.77it/s, bound: 19 | nc: 25 | ncall: 238948 | eff(%):  4.403 | loglstar: 230.506 | logz: 212.029 +/-  0.173 | dlogz:  1.054 >  0.500] 98%|█████████▊| 10819/11029 [00:03<00:00, 2932.90it/s, bound: 20 | nc: 25 | ncall: 246473 | eff(%):  4.390 | loglstar: 230.821 | logz: 212.069 +/-  0.174 | dlogz:  0.688 >  0.500]100%|█████████▉| 11019/11020 [00:03<00:00, 3059.23it/s, +500 | bound: 20 | nc: 1 | ncall: 252048 | eff(%):  4.579 | loglstar: 233.673 | logz: 212.171 +/-  0.209 | dlogz:  0.001 >  0.500]
+			FITTING MODEL : btsettl
+0it [00:00, ?it/s] 25%|██▌       | 479/1879 [00:00<00:00, 4789.81it/s, bound: 0 | nc: 3 | ncall: 1375 | eff(%): 34.836 | loglstar:   -inf | logz:   -inf | dlogz:    inf >  0.500] 16%|█▋        | 958/5824 [00:00<00:01, 4622.16it/s, bound: 0 | nc: 14 | ncall: 3591 | eff(%): 26.678 | loglstar:   -inf | logz:   -inf | dlogz:    inf >  0.500] 23%|██▎       | 1421/6244 [00:00<00:01, 4028.28it/s, bound: 0 | nc: 12 | ncall: 9320 | eff(%): 15.247 | loglstar:   -inf | logz:   -inf | dlogz:    inf >  0.500] 26%|██▋       | 1832/6928 [00:00<00:01, 3503.15it/s, bound: 1 | nc: 25 | ncall: 19633 | eff(%):  9.331 | loglstar:   -inf | logz:   -inf | dlogz:    inf >  0.500] 47%|████▋     | 2226/4743 [00:00<00:00, 3626.37it/s, bound: 1 | nc: 25 | ncall: 29658 | eff(%):  7.506 | loglstar:   -inf | logz:   -inf | dlogz:    inf >  0.500] 55%|█████▍    | 2598/4724 [00:00<00:00, 3500.76it/s, bound: 2 | nc: 25 | ncall: 39008 | eff(%):  6.660 | loglstar: -143387.594 | logz: -143399.729 | dlogz: 143989.341 >  0.500] 35%|███▍      | 2954/8514 [00:00<00:01, 3448.67it/s, bound: 3 | nc: 25 | ncall: 47908 | eff(%):  6.166 | loglstar: -8895.279 | logz: -8907.811 | dlogz: 9118.546 >  0.500]       68%|██████▊   | 3303/4855 [00:00<00:00, 3405.68it/s, bound: 4 | nc: 25 | ncall: 56658 | eff(%):  5.830 | loglstar: -1741.045 | logz: -1754.589 | dlogz: 1980.324 >  0.500] 44%|████▍     | 3651/8249 [00:01<00:01, 3427.14it/s, bound: 4 | nc: 25 | ncall: 65458 | eff(%):  5.578 | loglstar: -524.033 | logz: -538.162 | dlogz: 758.918 >  0.500]    43%|████▎     | 3996/9190 [00:01<00:01, 3351.05it/s, bound: 5 | nc: 25 | ncall: 74083 | eff(%):  5.394 | loglstar: -102.798 | logz: -116.083 | dlogz: 333.544 >  0.500] 52%|█████▏    | 4333/8256 [00:01<00:01, 3259.54it/s, bound: 6 | nc: 25 | ncall: 82583 | eff(%):  5.247 | loglstar: 64.785 | logz: 50.776 | dlogz: 166.450 >  0.500]     59%|█████▉    | 4665/7855 [00:01<00:00, 3275.82it/s, bound: 6 | nc: 25 | ncall: 90958 | eff(%):  5.129 | loglstar: 139.222 | logz: 125.480 | dlogz: 90.886 >  0.500] 63%|██████▎   | 4994/7914 [00:01<00:00, 3201.81it/s, bound: 7 | nc: 25 | ncall: 99183 | eff(%):  5.035 | loglstar: 181.456 | logz: 167.718 | dlogz: 54.134 >  0.500] 62%|██████▏   | 5315/8566 [00:01<00:01, 3181.36it/s, bound: 8 | nc: 25 | ncall: 107333 | eff(%):  4.952 | loglstar: 201.855 | logz: 188.199 | dlogz: 32.969 >  0.500] 64%|██████▍   | 5657/8848 [00:01<00:00, 3250.06it/s, bound: 8 | nc: 25 | ncall: 115958 | eff(%):  4.878 | loglstar: 212.717 | logz: 198.931 | dlogz: 21.537 >  0.500] 60%|██████    | 5983/9957 [00:01<00:01, 3207.63it/s, bound: 9 | nc: 25 | ncall: 124158 | eff(%):  4.819 | loglstar: 217.906 | logz: 204.182 | dlogz: 15.622 >  0.500] 60%|██████    | 6305/10495 [00:01<00:01, 3153.06it/s, bound: 10 | nc: 25 | ncall: 132333 | eff(%):  4.764 | loglstar: 221.003 | logz: 207.105 | dlogz: 12.052 >  0.500] 59%|█████▊    | 6646/11332 [00:01<00:01, 3221.25it/s, bound: 10 | nc: 25 | ncall: 140908 | eff(%):  4.717 | loglstar: 222.926 | logz: 208.889 | dlogz:  9.583 >  0.500] 60%|█████▉    | 6969/11620 [00:02<00:01, 3204.70it/s, bound: 11 | nc: 25 | ncall: 149033 | eff(%):  4.676 | loglstar: 224.229 | logz: 209.988 | dlogz:  7.838 >  0.500] 64%|██████▎   | 7290/11443 [00:02<00:01, 3178.54it/s, bound: 12 | nc: 25 | ncall: 157108 | eff(%):  4.640 | loglstar: 225.333 | logz: 210.737 | dlogz:  6.448 >  0.500] 68%|██████▊   | 7628/11273 [00:02<00:01, 3220.72it/s, bound: 12 | nc: 25 | ncall: 165658 | eff(%):  4.605 | loglstar: 226.307 | logz: 211.330 | dlogz:  5.317 >  0.500] 73%|███████▎  | 7951/10887 [00:02<00:00, 3188.79it/s, bound: 13 | nc: 25 | ncall: 173833 | eff(%):  4.574 | loglstar: 227.126 | logz: 211.753 | dlogz:  4.258 >  0.500] 70%|██████▉   | 8271/11823 [00:02<00:01, 3160.17it/s, bound: 14 | nc: 25 | ncall: 181958 | eff(%):  4.546 | loglstar: 227.746 | logz: 212.071 | dlogz:  4.504 >  0.500] 75%|███████▌  | 8609/11432 [00:02<00:00, 3223.92it/s, bound: 14 | nc: 25 | ncall: 190508 | eff(%):  4.519 | loglstar: 228.356 | logz: 212.310 | dlogz:  3.607 >  0.500] 81%|████████  | 8932/11077 [00:02<00:00, 3127.36it/s, bound: 15 | nc: 25 | ncall: 198633 | eff(%):  4.497 | loglstar: 228.834 | logz: 212.476 | dlogz:  2.829 >  0.500] 86%|████████▌ | 9246/10779 [00:02<00:00, 2977.39it/s, bound: 16 | nc: 25 | ncall: 206508 | eff(%):  4.477 | loglstar: 229.267 | logz: 212.593 | dlogz:  2.148 >  0.500] 91%|█████████ | 9581/10546 [00:02<00:00, 3075.04it/s, bound: 16 | nc: 25 | ncall: 214908 | eff(%):  4.458 | loglstar: 229.712 | logz: 212.685 | dlogz:  1.511 >  0.500] 95%|█████████▍| 9898/10419 [00:02<00:00, 3089.48it/s, bound: 17 | nc: 25 | ncall: 222908 | eff(%):  4.440 | loglstar: 230.097 | logz: 212.748 | dlogz:  1.015 >  0.500] 98%|█████████▊| 10212/10372 [00:03<00:00, 3103.47it/s, bound: 18 | nc: 25 | ncall: 230808 | eff(%):  4.424 | loglstar: 230.415 | logz: 212.793 | dlogz:  0.641 >  0.500]100%|█████████▉| 10366/10367 [00:03<00:00, 3267.01it/s, +500 | bound: 18 | nc: 1 | ncall: 235208 | eff(%):  4.630 | loglstar: 233.124 | logz: 212.902 | dlogz:  0.001 >  0.500]
+			FITTING MODEL : btnextgen
+0it [00:00, ?it/s]  9%|▉         | 478/5223 [00:00<00:00, 4778.15it/s, bound: 0 | nc: 12 | ncall: 1376 | eff(%): 34.738 | loglstar:   -inf | logz:   -inf | dlogz:    inf >  0.500] 19%|█▉        | 956/5093 [00:00<00:00, 4663.91it/s, bound: 0 | nc: 5 | ncall: 3576 | eff(%): 26.734 | loglstar:   -inf | logz:   -inf | dlogz:    inf >  0.500]  32%|███▏      | 1423/4412 [00:00<00:00, 4203.24it/s, bound: 0 | nc: 45 | ncall: 8665 | eff(%): 16.422 | loglstar:   -inf | logz:   -inf | dlogz:    inf >  0.500] 41%|████▏     | 1848/4476 [00:00<00:00, 3413.74it/s, bound: 1 | nc: 25 | ncall: 19796 | eff(%):  9.335 | loglstar:   -inf | logz:   -inf | dlogz:    inf >  0.500] 42%|████▏     | 2243/5377 [00:00<00:00, 3561.84it/s, bound: 1 | nc: 25 | ncall: 29696 | eff(%):  7.553 | loglstar:   -inf | logz:   -inf | dlogz:    inf >  0.500] 64%|██████▍   | 2614/4077 [00:00<00:00, 3410.87it/s, bound: 2 | nc: 25 | ncall: 39046 | eff(%):  6.695 | loglstar: -83293.465 | logz: -83305.647 | dlogz: 83761.380 >  0.500] 60%|██████    | 2965/4903 [00:00<00:00, 3348.55it/s, bound: 3 | nc: 25 | ncall: 47871 | eff(%):  6.194 | loglstar: -6945.178 | logz: -6958.062 | dlogz: 7202.520 >  0.500]    61%|██████    | 3306/5445 [00:00<00:00, 3255.67it/s, bound: 4 | nc: 25 | ncall: 56471 | eff(%):  5.854 | loglstar: -1431.568 | logz: -1445.130 | dlogz: 1665.422 >  0.500] 52%|█████▏    | 3654/7044 [00:01<00:01, 3310.94it/s, bound: 4 | nc: 25 | ncall: 65196 | eff(%):  5.605 | loglstar: -386.672 | logz: -400.846 | dlogz: 621.720 >  0.500]    60%|██████    | 3989/6621 [00:01<00:00, 3236.92it/s, bound: 5 | nc: 25 | ncall: 73721 | eff(%):  5.411 | loglstar: -62.362 | logz: -75.776 | dlogz: 293.356 >  0.500]   54%|█████▍    | 4315/8025 [00:01<00:01, 3004.32it/s, bound: 6 | nc: 25 | ncall: 81946 | eff(%):  5.266 | loglstar: 70.805 | logz: 57.368 | dlogz: 160.155 >  0.500]   58%|█████▊    | 4621/7931 [00:01<00:01, 3014.61it/s, bound: 6 | nc: 25 | ncall: 89696 | eff(%):  5.152 | loglstar: 138.010 | logz: 124.542 | dlogz: 93.580 >  0.500] 67%|██████▋   | 4926/7336 [00:01<00:00, 2916.85it/s, bound: 7 | nc: 25 | ncall: 97396 | eff(%):  5.058 | loglstar: 175.071 | logz: 161.089 | dlogz: 56.417 >  0.500] 70%|██████▉   | 5233/7488 [00:01<00:00, 2895.73it/s, bound: 8 | nc: 25 | ncall: 105171 | eff(%):  4.976 | loglstar: 198.332 | logz: 184.524 | dlogz: 33.597 >  0.500] 74%|███████▍  | 5560/7503 [00:01<00:00, 2986.04it/s, bound: 8 | nc: 25 | ncall: 113446 | eff(%):  4.901 | loglstar: 211.832 | logz: 197.770 | dlogz: 19.680 >  0.500] 67%|██████▋   | 5861/8694 [00:01<00:00, 2919.00it/s, bound: 9 | nc: 25 | ncall: 121021 | eff(%):  4.843 | loglstar: 217.206 | logz: 203.546 | dlogz: 13.280 >  0.500] 66%|██████▌   | 6157/9305 [00:01<00:01, 2929.84it/s, bound: 9 | nc: 25 | ncall: 128471 | eff(%):  4.793 | loglstar: 220.235 | logz: 206.601 | dlogz:  9.757 >  0.500] 69%|██████▉   | 6463/9341 [00:02<00:00, 2967.17it/s, bound: 10 | nc: 25 | ncall: 136171 | eff(%):  4.746 | loglstar: 222.290 | logz: 208.460 | dlogz:  7.284 >  0.500] 64%|██████▍   | 6761/10508 [00:02<00:01, 2923.14it/s, bound: 11 | nc: 25 | ncall: 143671 | eff(%):  4.706 | loglstar: 223.564 | logz: 209.600 | dlogz:  7.086 >  0.500] 68%|██████▊   | 7080/10368 [00:02<00:01, 3000.12it/s, bound: 11 | nc: 25 | ncall: 151871 | eff(%):  4.662 | loglstar: 224.691 | logz: 210.401 | dlogz:  5.649 >  0.500] 70%|██████▉   | 7381/10600 [00:02<00:01, 2966.91it/s, bound: 12 | nc: 25 | ncall: 159446 | eff(%):  4.629 | loglstar: 225.582 | logz: 210.985 | dlogz:  5.037 >  0.500] 67%|██████▋   | 7679/11425 [00:02<00:01, 2921.27it/s, bound: 13 | nc: 25 | ncall: 166921 | eff(%):  4.600 | loglstar: 226.290 | logz: 211.397 | dlogz:  5.125 >  0.500] 72%|███████▏  | 7985/11074 [00:02<00:01, 2888.47it/s, bound: 14 | nc: 25 | ncall: 174671 | eff(%):  4.571 | loglstar: 226.975 | logz: 211.725 | dlogz:  4.194 >  0.500] 75%|███████▍  | 8284/11075 [00:02<00:00, 2900.78it/s, bound: 14 | nc: 25 | ncall: 182196 | eff(%):  4.547 | loglstar: 227.650 | logz: 211.980 | dlogz:  3.752 >  0.500] 80%|███████▉  | 8575/10737 [00:02<00:00, 2861.74it/s, bound: 15 | nc: 25 | ncall: 189596 | eff(%):  4.523 | loglstar: 228.197 | logz: 212.185 | dlogz:  2.994 >  0.500] 85%|████████▍ | 8869/10485 [00:02<00:00, 2884.09it/s, bound: 15 | nc: 25 | ncall: 197146 | eff(%):  4.499 | loglstar: 228.683 | logz: 212.345 | dlogz:  2.335 >  0.500] 83%|████████▎ | 9158/10986 [00:02<00:00, 2870.72it/s, bound: 16 | nc: 25 | ncall: 204421 | eff(%):  4.480 | loglstar: 229.125 | logz: 212.466 | dlogz:  2.472 >  0.500] 88%|████████▊ | 9454/10735 [00:03<00:00, 2896.76it/s, bound: 17 | nc: 25 | ncall: 211896 | eff(%):  4.462 | loglstar: 229.527 | logz: 212.560 | dlogz:  1.866 >  0.500] 93%|█████████▎| 9772/10553 [00:03<00:00, 2979.42it/s, bound: 17 | nc: 25 | ncall: 219946 | eff(%):  4.443 | loglstar: 229.936 | logz: 212.636 | dlogz:  1.303 >  0.500] 96%|█████████▋| 10074/10462 [00:03<00:00, 2991.28it/s, bound: 18 | nc: 25 | ncall: 227521 | eff(%):  4.428 | loglstar: 230.304 | logz: 212.690 | dlogz:  0.871 >  0.500] 99%|█████████▉| 10387/10484 [00:03<00:00, 3006.32it/s, bound: 19 | nc: 25 | ncall: 235421 | eff(%):  4.412 | loglstar: 230.694 | logz: 212.732 | dlogz:  0.584 >  0.500]100%|█████████▉| 10481/10482 [00:03<00:00, 3066.40it/s, +500 | bound: 21 | nc: 1 | ncall: 238321 | eff(%):  4.617 | loglstar: 233.303 | logz: 212.839 | dlogz:  0.001 >  0.500]
+			FITTING MODEL : btcond
+0it [00:00, ?it/s]  9%|▉         | 488/5422 [00:00<00:01, 4856.82it/s, bound: 0 | nc: 2 | ncall: 1440 | eff(%): 33.889 | loglstar:   -inf | logz:   -inf | dlogz:    inf >  0.500] 19%|█▉        | 983/5180 [00:00<00:00, 4909.54it/s, bound: 0 | nc: 20 | ncall: 3427 | eff(%): 28.684 | loglstar:   -inf | logz:   -inf | dlogz:    inf >  0.500] 26%|██▋       | 1474/5587 [00:00<00:00, 4266.12it/s, bound: 0 | nc: 8 | ncall: 9553 | eff(%): 15.430 | loglstar:   -inf | logz:   -inf | dlogz:    inf >  0.500] 42%|████▏     | 1910/4528 [00:00<00:00, 3657.67it/s, bound: 1 | nc: 25 | ncall: 20949 | eff(%):  9.117 | loglstar:   -inf | logz:   -inf | dlogz:    inf >  0.500]INFO: Query finished. [astroquery.utils.tap.core]
+ 54%|█████▍    | 2293/4241 [00:00<00:00, 3626.29it/s, bound: 2 | nc: 25 | ncall: 30574 | eff(%):  7.500 | loglstar:   -inf | logz:   -inf | dlogz:    inf >  0.500] 60%|█████▉    | 2664/4445 [00:00<00:00, 3623.19it/s, bound: 2 | nc: 25 | ncall: 39949 | eff(%):  6.669 | loglstar: -63253.847 | logz: -63266.119 | dlogz: 63878.857 >  0.500] 54%|█████▍    | 3032/5612 [00:00<00:00, 3524.26it/s, bound: 3 | nc: 25 | ncall: 49249 | eff(%):  6.156 | loglstar: -5915.420 | logz: -5928.427 | dlogz: 6153.555 >  0.500]    62%|██████▏   | 3388/5482 [00:00<00:00, 3445.70it/s, bound: 4 | nc: 25 | ncall: 58249 | eff(%):  5.816 | loglstar: -1331.985 | logz: -1345.034 | dlogz: 1561.447 >  0.500] 62%|██████▏   | 3738/6026 [00:01<00:00, 3443.37it/s, bound: 4 | nc: 25 | ncall: 67099 | eff(%):  5.571 | loglstar: -422.952 | logz: -436.621 | dlogz: 654.067 >  0.500]    54%|█████▎    | 4084/7632 [00:01<00:01, 3341.56it/s, bound: 5 | nc: 25 | ncall: 75799 | eff(%):  5.388 | loglstar: -44.349 | logz: -57.819 | dlogz: 276.340 >  0.500]   62%|██████▏   | 4420/7170 [00:01<00:00, 3233.74it/s, bound: 6 | nc: 25 | ncall: 84224 | eff(%):  5.248 | loglstar: 97.141 | logz: 83.351 | dlogz: 134.397 >  0.500]   62%|██████▏   | 4752/7636 [00:01<00:00, 3244.66it/s, bound: 6 | nc: 25 | ncall: 92599 | eff(%):  5.132 | loglstar: 158.719 | logz: 144.682 | dlogz: 72.690 >  0.500] 63%|██████▎   | 5078/8091 [00:01<00:00, 3188.05it/s, bound: 7 | nc: 25 | ncall: 100774 | eff(%):  5.039 | loglstar: 188.785 | logz: 175.195 | dlogz: 41.422 >  0.500] 65%|██████▍   | 5398/8324 [00:01<00:00, 3151.68it/s, bound: 8 | nc: 25 | ncall: 108824 | eff(%):  4.960 | loglstar: 204.128 | logz: 190.499 | dlogz: 25.454 >  0.500] 64%|██████▍   | 5714/8905 [00:01<00:01, 3133.01it/s, bound: 8 | nc: 25 | ncall: 116824 | eff(%):  4.891 | loglstar: 212.741 | logz: 198.850 | dlogz: 19.886 >  0.500] 67%|██████▋   | 6028/9005 [00:01<00:00, 3045.62it/s, bound: 9 | nc: 25 | ncall: 124699 | eff(%):  4.834 | loglstar: 218.265 | logz: 204.295 | dlogz: 13.805 >  0.500] 61%|██████    | 6333/10351 [00:01<00:01, 3007.50it/s, bound: 10 | nc: 25 | ncall: 132349 | eff(%):  4.785 | loglstar: 220.824 | logz: 207.069 | dlogz: 10.413 >  0.500] 64%|██████▍   | 6651/10409 [00:01<00:01, 3048.27it/s, bound: 10 | nc: 25 | ncall: 140349 | eff(%):  4.739 | loglstar: 222.726 | logz: 208.684 | dlogz:  8.161 >  0.500] 67%|██████▋   | 6957/10388 [00:02<00:01, 2471.01it/s, bound: 12 | nc: 25 | ncall: 148099 | eff(%):  4.698 | loglstar: 224.009 | logz: 209.702 | dlogz:  6.532 >  0.500] 70%|███████   | 7253/10352 [00:02<00:01, 2586.24it/s, bound: 12 | nc: 25 | ncall: 155599 | eff(%):  4.661 | loglstar: 224.959 | logz: 210.411 | dlogz:  5.235 >  0.500] 70%|███████   | 7550/10722 [00:02<00:01, 2679.90it/s, bound: 13 | nc: 25 | ncall: 163099 | eff(%):  4.629 | loglstar: 225.803 | logz: 210.930 | dlogz:  4.895 >  0.500] 76%|███████▌  | 7859/10339 [00:02<00:00, 2778.80it/s, bound: 14 | nc: 25 | ncall: 170849 | eff(%):  4.600 | loglstar: 226.638 | logz: 211.354 | dlogz:  3.867 >  0.500] 82%|████████▏ | 8195/10044 [00:02<00:00, 2928.72it/s, bound: 14 | nc: 25 | ncall: 179349 | eff(%):  4.569 | loglstar: 227.321 | logz: 211.711 | dlogz:  2.876 >  0.500] 84%|████████▍ | 8502/10127 [00:02<00:00, 2954.26it/s, bound: 15 | nc: 25 | ncall: 187099 | eff(%):  4.544 | loglstar: 227.899 | logz: 211.951 | dlogz:  2.483 >  0.500] 89%|████████▊ | 8803/9920 [00:02<00:00, 2825.94it/s, bound: 16 | nc: 25 | ncall: 194699 | eff(%):  4.521 | loglstar: 228.348 | logz: 212.125 | dlogz:  1.802 >  0.500]  90%|█████████ | 9090/10055 [00:02<00:00, 2752.05it/s, bound: 17 | nc: 25 | ncall: 201899 | eff(%):  4.502 | loglstar: 228.815 | logz: 212.250 | dlogz:  1.582 >  0.500] 95%|█████████▍| 9424/9968 [00:02<00:00, 2911.25it/s, bound: 17 | nc: 25 | ncall: 210349 | eff(%):  4.480 | loglstar: 229.304 | logz: 212.364 | dlogz:  1.070 >  0.500]  95%|█████████▍| 9723/10266 [00:03<00:00, 2932.66it/s, bound: 18 | nc: 25 | ncall: 217924 | eff(%):  4.462 | loglstar: 229.723 | logz: 212.441 | dlogz:  1.053 >  0.500] 94%|█████████▎| 10045/10741 [00:03<00:00, 3002.00it/s, bound: 18 | nc: 25 | ncall: 226099 | eff(%):  4.443 | loglstar: 230.144 | logz: 212.504 | dlogz:  1.200 >  0.500] 96%|█████████▌| 10359/10769 [00:03<00:00, 3031.04it/s, bound: 19 | nc: 25 | ncall: 234099 | eff(%):  4.425 | loglstar: 230.539 | logz: 212.551 | dlogz:  0.888 >  0.500]100%|█████████▉| 10684/10736 [00:03<00:00, 3085.60it/s, bound: 20 | nc: 25 | ncall: 242349 | eff(%):  4.409 | loglstar: 230.885 | logz: 212.586 | dlogz:  0.543 >  0.500]100%|█████████▉| 10735/10736 [00:03<00:00, 3127.16it/s, +500 | bound: 20 | nc: 1 | ncall: 244124 | eff(%):  4.612 | loglstar: 233.647 | logz: 212.666 | dlogz:  0.001 >  0.500]
+		*** AVERAGING POSTERIOR SAMPLES ***
+  0%|          | 0/20 [00:00<?, ?it/s] 35%|███▌      | 7/20 [00:00<00:00, 65.19it/s] 70%|███████   | 14/20 [00:00<00:00, 61.43it/s]100%|██████████| 20/20 [00:00<00:00, 64.36it/s]
+Traceback (most recent call last):
+  File "/Users/paulsmith/space <3/tess-jev/addenda/companion_check_tic4206066/sed_fit.py", line 42, in <module>
+    f.fit_bma()
+  File "/private/tmp/claude-501/-Users-paulsmith-space--3/dd0bfc95-6ba3-4d00-9d7d-2cefbff5ef29/scratchpad/ariadne_env/lib/python3.11/site-packages/astroARIADNE/fitter.py", line 911, in fit_bma
+    self.save_bma(avgd)
+  File "/private/tmp/claude-501/-Users-paulsmith-space--3/dd0bfc95-6ba3-4d00-9d7d-2cefbff5ef29/scratchpad/ariadne_env/lib/python3.11/site-packages/astroARIADNE/fitter.py", line 1561, in save_bma
+    self.to_netcdf(nc_file)
+  File "/private/tmp/claude-501/-Users-paulsmith-space--3/dd0bfc95-6ba3-4d00-9d7d-2cefbff5ef29/scratchpad/ariadne_env/lib/python3.11/site-packages/astroARIADNE/fitter.py", line 1990, in to_netcdf
+    dt.to_netcdf(path)
+  File "/private/tmp/claude-501/-Users-paulsmith-space--3/dd0bfc95-6ba3-4d00-9d7d-2cefbff5ef29/scratchpad/ariadne_env/lib/python3.11/site-packages/arviz/data/inference_data.py", line 520, in to_netcdf
+    data.to_netcdf(filename, mode=mode, group=f"{base_group}/{group}", **kwargs)
+  File "/private/tmp/claude-501/-Users-paulsmith-space--3/dd0bfc95-6ba3-4d00-9d7d-2cefbff5ef29/scratchpad/ariadne_env/lib/python3.11/site-packages/xarray/core/dataset.py", line 2187, in to_netcdf
+    return to_netcdf(  # type: ignore[return-value]  # mypy cannot resolve the overloads:(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/claude-501/-Users-paulsmith-space--3/dd0bfc95-6ba3-4d00-9d7d-2cefbff5ef29/scratchpad/ariadne_env/lib/python3.11/site-packages/xarray/backends/writers.py", line 441, in to_netcdf
+    dump_to_store(
+  File "/private/tmp/claude-501/-Users-paulsmith-space--3/dd0bfc95-6ba3-4d00-9d7d-2cefbff5ef29/scratchpad/ariadne_env/lib/python3.11/site-packages/xarray/backends/writers.py", line 491, in dump_to_store
+    store.store(variables, attrs, check_encoding, writer, unlimited_dims=unlimited_dims)
+  File "/private/tmp/claude-501/-Users-paulsmith-space--3/dd0bfc95-6ba3-4d00-9d7d-2cefbff5ef29/scratchpad/ariadne_env/lib/python3.11/site-packages/xarray/backends/common.py", line 533, in store
+    variables, attributes = self.encode(variables, attributes)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/claude-501/-Users-paulsmith-space--3/dd0bfc95-6ba3-4d00-9d7d-2cefbff5ef29/scratchpad/ariadne_env/lib/python3.11/site-packages/xarray/backends/common.py", line 722, in encode
+    variables = {
+                ^
+  File "/private/tmp/claude-501/-Users-paulsmith-space--3/dd0bfc95-6ba3-4d00-9d7d-2cefbff5ef29/scratchpad/ariadne_env/lib/python3.11/site-packages/xarray/backends/common.py", line 723, in <dictcomp>
+    k: ensure_dtype_not_object(v, name=k) for k, v in variables.items()
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/claude-501/-Users-paulsmith-space--3/dd0bfc95-6ba3-4d00-9d7d-2cefbff5ef29/scratchpad/ariadne_env/lib/python3.11/site-packages/xarray/backends/common.py", line 708, in ensure_dtype_not_object
+    data = _copy_with_dtype(data, dtype=_infer_dtype(data, name))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/claude-501/-Users-paulsmith-space--3/dd0bfc95-6ba3-4d00-9d7d-2cefbff5ef29/scratchpad/ariadne_env/lib/python3.11/site-packages/xarray/backends/common.py", line 649, in _infer_dtype
+    raise ValueError(
+ValueError: unable to infer dtype on variable 'posterior'; xarray cannot serialize arbitrary Python objects

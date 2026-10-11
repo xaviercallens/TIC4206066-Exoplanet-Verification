@@ -1,0 +1,90 @@
+{
+  "target_id": "TIC 4206066",
+  "host_star": "StKM 1-561 (Gaia DR3 3220388198192519424)",
+  "zenodo_prereg_doi": "10.5281/zenodo.23175179",
+  "sector_window": {
+    "sector": 110,
+    "start_bjd": 2461344.5,
+    "end_bjd": 2461370.5,
+    "dates_utc": "2026-10-30 to 2026-11-25",
+    "window_verified_against_tess_timeline": false
+  },
+  "signal_a_predictions": {
+    "period_days": 3.1827849535823756,
+    "ephemeris_source": "zenodo:part1/02_transits_A/ephemeris_A.json",
+    "t0_bjd_tdb": 2460998.735992321,
+    "expected_transits_count": 8,
+    "epochs": [
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116
+    ],
+    "predicted_mid_transit_bjd": [
+      2461345.6596,
+      2461348.8423,
+      2461352.0251,
+      2461355.2079,
+      2461358.3907,
+      2461361.5735,
+      2461364.7563,
+      2461367.939
+    ],
+    "sigma_min_per_transit": [
+      4.25,
+      4.25,
+      4.25,
+      4.25,
+      4.25,
+      4.25,
+      4.26,
+      4.26
+    ],
+    "nominal_depth_ppm": 498.0,
+    "uncertainty_mins": 4.25,
+    "catalogue_rms_oc_min": 9.038114955837749
+  },
+  "signal_b_predictions": {
+    "period_days": 11.132739168890842,
+    "ephemeris_source": "zenodo:part2/07_signal_B/ephemeris_B.json",
+    "t0_bjd_tdb": 2461000.865517985,
+    "expected_transits_count": 3,
+    "epochs": [
+      31,
+      32,
+      33
+    ],
+    "predicted_mid_transit_bjd": [
+      2461345.9804,
+      2461357.1132,
+      2461368.2459
+    ],
+    "sigma_min_per_transit": [
+      2.37,
+      2.37,
+      2.38
+    ],
+    "nominal_depth_ppm": 1099.0
+  },
+  "decision_rules": {
+    "RECOVERED": "Mean in-transit depth >= 60% of the published depth and Elenchus gates clean.",
+    "INCONSISTENT": "Depth between the exclusion and recovery thresholds, or refuted by a gate.",
+    "EXCLUDED": "Mean in-transit depth < 20% of the published depth.",
+    "INSUFFICIENT_DATA": "Fewer than 3 predicted transit windows adequately covered."
+  },
+  "overall_status": "PREREGISTERED_AWAITING_SECTOR_110_DATA__SELF_TEST_PASSED",
+  "provenance_hash": "5a23f5dcf0b1535820bfa1a0478756f74ee893f80fd2e944f0d1178bbf2ebccd",
+  "timestamp_utc": "2026-10-11 10:29:27 UTC",
+  "self_test": {
+    "injected_signal_outcome": "RECOVERED",
+    "flat_baseline_outcome": "EXCLUDED",
+    "injected_depth_ppm": 561.5,
+    "flat_depth_ppm": 8.3,
+    "logic_ok": true,
+    "data_kind": "SYNTHETIC (self-test of decision logic; not Sector 110 data)"
+  }
+}

@@ -1,0 +1,5 @@
+raw tc=4024.1991 window pts 411 gaps (start,end,h rel to tc): [(np.float64(2.55), np.float64(7.99))]
+  in-transit (T9 window) pts 29 first/last rel h -0.9 0.88
+clean tc=4024.1991 window pts 411 gaps (start,end,h rel to tc): [(np.float64(2.55), np.float64(7.99))]
+  in-transit (T9 window) pts 29 first/last rel h -0.9 0.88
+dumps near (h): [7.87]

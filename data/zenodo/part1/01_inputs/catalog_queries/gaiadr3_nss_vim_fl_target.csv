@@ -1,0 +1,1 @@
+solution_id,source_id,nss_solution_type,ra,ra_error,dec,dec_error,parallax,parallax_error,pmra,pmra_error,pmdec,pmdec_error,ref_flux_g,vim_d_ra,vim_d_ra_error,vim_d_dec,vim_d_dec_error,astrometric_n_obs_al,astrometric_n_good_obs_al,bit_index,corr_vec,obj_func,goodness_of_fit,efficiency,significance,flags

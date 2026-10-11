@@ -1,0 +1,45 @@
+{
+ "source_id": 3220388198192519424,
+ "measured_MG": 7.755,
+ "predicted_MG": 7.758,
+ "measured_G_RP": 0.899,
+ "predicted_G_RP": 0.896,
+ "O_obs_mag": 0.0030000000000001137,
+ "flag_overluminous": false,
+ "in_banyan_sigma": false,
+ "systems_catalog": {
+  "catalogs_1": "0",
+  "ol_1": "False",
+  "n_components": "1"
+ },
+ "local_bin": {
+  "n": 5205,
+  "median_O": 0.016000000000000014,
+  "robust_sigma": 0.06819960000000039,
+  "frac_with_larger_O": 0.5817483189241114,
+  "frac_flagged_ol": 0.09644572526416907
+ },
+ "paper_threshold_mag": 0.376,
+ "limits": {
+  "2sigma": {
+   "O_lim_mag": 0.1393992000000009,
+   "flux_ratio_G_max": 0.1369979456585677,
+   "companion_MG_min": 9.91621486305492,
+   "companion_mass_max_Msun": 0.38056198449566425,
+   "mass_ratio_max": 0.6279900734251885
+  },
+  "3sigma": {
+   "O_lim_mag": 0.20759880000000128,
+   "flux_ratio_G_max": 0.21070830076904823,
+   "companion_MG_min": 9.448795887994653,
+   "companion_mass_max_Msun": 0.4232846433689839,
+   "mass_ratio_max": 0.6984895105098745
+  },
+  "paper_threshold": {
+   "flux_ratio_G_max": 0.4138391390945648,
+   "companion_MG_min": 8.715921095141287,
+   "companion_mass_max_Msun": 0.510955674195654
+  }
+ },
+ "mamajek_primary_mass_at_MG1": 0.6181379310344828
+}

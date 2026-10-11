@@ -1,0 +1,55 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - name: source_id
+#   datatype: int64
+#   description: Unique source identifier. Note that this *cannot* be matched against the DR1 or DR2 source_ids.
+#   meta: !!omap
+#   - {ucd: meta.id;meta.main}
+# - name: r_med_geo
+#   unit: pc
+#   datatype: float32
+#   description: The median of the geometric distance posterior. The geometric distance estimate.
+#   meta: !!omap
+#   - {ucd: pos.distance}
+# - name: r_lo_geo
+#   unit: pc
+#   datatype: float32
+#   description: The 16th percentile of the geometric distance posterior. The lower 1-sigma-like bound on the confidence interval.
+#   meta: !!omap
+#   - {ucd: pos.distance;stat.min}
+# - name: r_hi_geo
+#   unit: pc
+#   datatype: float32
+#   description: The 84th percentile of the geometric distance posterior. The upper 1-sigma-like bound on the confidence interval.
+#   meta: !!omap
+#   - {ucd: pos.distance;stat.max}
+# - name: r_med_photogeo
+#   unit: pc
+#   datatype: float32
+#   description: The median of the photogeometric distance posterior. The photogeometric distance estimate.
+#   meta: !!omap
+#   - {ucd: pos.distance}
+# - name: r_lo_photogeo
+#   unit: pc
+#   datatype: float32
+#   description: The 16th percentile of the photogeometric distance posterior. The lower 1-sigma-like bound on the confidence interval.
+#   meta: !!omap
+#   - {ucd: pos.distance;stat.min}
+# - name: r_hi_photogeo
+#   unit: pc
+#   datatype: float32
+#   description: The 84th percentile of the photogeometric distance posterior. The upper 1-sigma-like bound on the confidence interval.
+#   meta: !!omap
+#   - {ucd: pos.distance;stat.max}
+# - name: flag
+#   datatype: string
+#   description: Additional information on the solution. Do not use for filtering (see table note in the reference URL).
+#   meta: !!omap
+#   - {ucd: meta.code}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: '*'}
+#   subtype: json
+# schema: astropy-2.0
+source_id r_med_geo r_lo_geo r_hi_geo r_med_photogeo r_lo_photogeo r_hi_photogeo flag
+3220388198192519424 35.578655 35.556877 35.59579 35.574215 35.551205 35.597523 """10033"""

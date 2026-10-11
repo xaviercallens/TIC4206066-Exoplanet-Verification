@@ -1,0 +1,25 @@
+{
+ "J/A+A/600/A30/tableab": {
+  "file": "claret/tableab.ecsv",
+  "constraints": {
+   "Teff": "3800..4200",
+   "logg": "4.0..5.0"
+  },
+  "n": 30,
+  "sha256": "31e2ade63db2628e5a6309f5e6f22e56fde4f0fdfc4092f006416f4c3ddc3dd1",
+  "utc": "2026-09-25T11:48:29.614948Z",
+  "url": "https://vizier.cds.unistra.fr/viz-bin/VizieR?-source=J/A+A/600/A30/tableab"
+ },
+ "J/A+A/600/A30/table25": {
+  "file": "claret/table25.ecsv",
+  "constraints": {
+   "Teff": "3750..4250",
+   "logg": "4.0..5.0",
+   "Z": "-0.5..0.5"
+  },
+  "n": 117,
+  "sha256": "ae5518b0b5893690de2157f9fef940de9ea6725150e28085e82f10d618a32c07",
+  "utc": "2026-09-25T11:48:30.822170Z",
+  "url": "https://vizier.cds.unistra.fr/viz-bin/VizieR?-source=J/A+A/600/A30/table25"
+ }
+}

@@ -1,0 +1,12 @@
+S6 {'depth_ppm': np.float64(513.7), 'sig_formal_ppm': np.float64(54.5), 'sig_emp_std_ppm': 60.7, 'sig_emp_mad_ppm': 51.8, 'emp_mean_ppm': 1.9, 'n_emp': 221}
+S32 {'depth_ppm': np.float64(445.0), 'sig_formal_ppm': np.float64(50.9), 'sig_emp_std_ppm': 73.9, 'sig_emp_mad_ppm': 74.5, 'emp_mean_ppm': 9.7, 'n_emp': 225}
+S98 {'depth_ppm': np.float64(468.4), 'sig_formal_ppm': np.float64(46.5), 'sig_emp_std_ppm': 46.3, 'sig_emp_mad_ppm': 45.3, 'emp_mean_ppm': -0.9, 'n_emp': 222}
+S98_excl-1 {'depth_ppm': np.float64(468.6), 'sig_formal_ppm': np.float64(47.9), 'sig_emp_std_ppm': 46.6, 'sig_emp_mad_ppm': 45.7, 'emp_mean_ppm': 6.2, 'n_emp': 220}
+all {'depth_ppm': np.float64(473.7), 'sig_formal_ppm': np.float64(29.0), 'sig_emp_std_ppm': 35.2, 'sig_emp_mad_ppm': 44.1, 'emp_mean_ppm': 2.9, 'n_emp': 212}
+all_excl98-1 {'depth_ppm': np.float64(473.9), 'sig_formal_ppm': np.float64(29.4), 'sig_emp_std_ppm': 35.3, 'sig_emp_mad_ppm': 41.8, 'emp_mean_ppm': -3.2, 'n_emp': 222}
+odd {'depth_ppm': np.float64(488.4), 'sig_formal_ppm': np.float64(39.2), 'sig_emp_std_ppm': 46.8, 'sig_emp_mad_ppm': 45.9, 'emp_mean_ppm': 3.5, 'n_emp': 222}
+even {'depth_ppm': np.float64(446.2), 'sig_formal_ppm': np.float64(42.5), 'sig_emp_std_ppm': 52.1, 'sig_emp_mad_ppm': 58.3, 'emp_mean_ppm': -2.4, 'n_emp': 224}
+odd_excl98-1 {'depth_ppm': np.float64(489.3), 'sig_formal_ppm': np.float64(40.1), 'sig_emp_std_ppm': 47.7, 'sig_emp_mad_ppm': 47.5, 'emp_mean_ppm': 2.4, 'n_emp': 222}
+even_excl98-1 {'depth_ppm': np.float64(446.2), 'sig_formal_ppm': np.float64(42.5), 'sig_emp_std_ppm': 53.7, 'sig_emp_mad_ppm': 55.0, 'emp_mean_ppm': -6.0, 'n_emp': 218}
+sector chi2 {'mean': np.float64(477.1234819182054), 'chi2': 0.58840288270552, 'dof': 2} odd-even nsig 0.6021366556364977 0.5994972571285895
+phase0.5 {'flux_ppm': np.float64(-9.460106535614717), 'sig_formal_ppm': np.float64(23.258627366943454), 'sig_emp_std_ppm': 34.648338026473894, 'emp_mean_ppm': 0.10216470749687454, 'n_random': 262, 'note': 'flux relative to baseline: negative = dip'}

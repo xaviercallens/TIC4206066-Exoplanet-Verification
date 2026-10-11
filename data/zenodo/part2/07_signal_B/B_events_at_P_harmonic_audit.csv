@@ -1,0 +1,12 @@
+sector,epoch,t_mid_BTJD,class_in_frozen_harmonic_audit,box_snr,present,contradicting
+6,-227,1473.73,observed,4.461888117117329,True,False
+6,-226,1484.863,observed,6.10025266898366,True,False
+32,-164,2175.114,observed,2.348426800600106,False,True
+32,-163,2186.247,gap,,False,False
+32,-162,2197.38,observed,2.574875358832666,False,True
+98,-1,3989.735,masked,,False,False
+98,0,4000.868,observed,6.990873815353183,True,False
+98,1,4012.001,observed,8.212982676492127,True,False
+98,2,4023.134,masked,,False,False
+98,3,4034.267,masked,,False,False
+98,4,4045.4,partial,6.8514588039081765,True,False

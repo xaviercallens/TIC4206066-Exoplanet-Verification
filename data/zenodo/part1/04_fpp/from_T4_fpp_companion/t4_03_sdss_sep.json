@@ -1,0 +1,74 @@
+{
+ "sdss_dr17_photo.json": {
+  "star_objid": 1237674284319113447,
+  "extra_objid": 1237674284319113448,
+  "sep_star_to_extra_arcsec": 1.96,
+  "query_distance_arcsec": [
+   0.719,
+   2.642
+  ],
+  "extra_psfMag_r_i": [
+   18.91987,
+   17.54031
+  ],
+  "keys": [
+   "objid",
+   "ra",
+   "dec",
+   "type",
+   "psfMag_u",
+   "psfMag_g",
+   "psfMag_r",
+   "psfMag_i",
+   "psfMag_z",
+   "clean",
+   "distance"
+  ]
+ },
+ "sdss_dr18_photo.json": {
+  "star_objid": 1237674284319113447,
+  "extra_objid": 1237674284319113448,
+  "sep_star_to_extra_arcsec": 1.96,
+  "query_distance_arcsec": [
+   0.719,
+   2.642
+  ],
+  "extra_psfMag_r_i": [
+   18.91987,
+   17.54031
+  ],
+  "keys": [
+   "objid",
+   "ra",
+   "dec",
+   "type",
+   "psfMag_u",
+   "psfMag_g",
+   "psfMag_r",
+   "psfMag_i",
+   "psfMag_z",
+   "clean",
+   "distance"
+  ]
+ },
+ "sdss_dr19_photo.json": {
+  "star_objid": 1237674284319113447,
+  "extra_objid": 1237674284319113448,
+  "sep_star_to_extra_arcsec": 1.96,
+  "query_distance_arcsec": [
+   0.719,
+   2.642
+  ],
+  "extra_psfMag_r_i": [
+   null,
+   null
+  ],
+  "keys": [
+   "objid",
+   "ra",
+   "dec",
+   "type",
+   "distance"
+  ]
+ }
+}

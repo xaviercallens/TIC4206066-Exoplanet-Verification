@@ -1,0 +1,35 @@
+target G 10.51 BP-RP 1.74 T(from G) 9.68
+Gaia sources <15": [(11.1, 18.75, 8.23), (14.2, 19.81, 9.3)]
+depth 400 max 1.0 c=0.50 dT<=8.49 dG<=7.93 sep50=3.2 sep90=3.5 sep99=3.6
+depth 400 max 1.0 c=1.74 dT<=8.49 dG<=8.50 sep50=3.7 sep90=4.0 sep99=4.2
+depth 400 max 1.0 c=3.00 dT<=8.49 dG<=8.88 sep50=4.2 sep90=4.5 sep99=4.7
+depth 400 max 0.5 c=0.50 dT<=7.74 dG<=7.18 sep50=2.7 sep90=3.0 sep99=3.1
+depth 400 max 0.5 c=1.74 dT<=7.74 dG<=7.74 sep50=3.0 sep90=3.3 sep99=3.4
+depth 400 max 0.5 c=3.00 dT<=7.74 dG<=8.12 sep50=3.3 sep90=3.6 sep99=3.7
+depth 500 max 1.0 c=0.50 dT<=8.25 dG<=7.69 sep50=3.0 sep90=3.3 sep99=3.4
+depth 500 max 1.0 c=1.74 dT<=8.25 dG<=8.25 sep50=3.5 sep90=3.8 sep99=3.9
+depth 500 max 1.0 c=3.00 dT<=8.25 dG<=8.63 sep50=3.9 sep90=4.2 sep99=4.4
+depth 500 max 0.5 c=0.50 dT<=7.50 dG<=6.93 sep50=2.6 sep90=2.9 sep99=3.0
+depth 500 max 0.5 c=1.74 dT<=7.50 dG<=7.50 sep50=2.9 sep90=3.2 sep99=3.3
+depth 500 max 0.5 c=3.00 dT<=7.50 dG<=7.88 sep50=3.1 sep90=3.4 sep99=3.5
+depth 575 max 1.0 c=0.50 dT<=8.10 dG<=7.54 sep50=2.9 sep90=3.2 sep99=3.3
+depth 575 max 1.0 c=1.74 dT<=8.10 dG<=8.10 sep50=3.3 sep90=3.6 sep99=3.7
+depth 575 max 1.0 c=3.00 dT<=8.10 dG<=8.48 sep50=3.7 sep90=4.0 sep99=4.2
+depth 575 max 0.5 c=0.50 dT<=7.35 dG<=6.78 sep50=2.5 sep90=2.7 sep99=2.8
+depth 575 max 0.5 c=1.74 dT<=7.35 dG<=7.35 sep50=2.8 sep90=3.1 sep99=3.2
+depth 575 max 0.5 c=3.00 dT<=7.35 dG<=7.73 sep50=3.0 sep90=3.3 sep99=3.4
+depth500_max1.0_0.0-2.2as {'n_all_gaia_stars': np.float64(0.0137), 'n_depth_capable': np.float64(0.0044), 'n_depth_capable_missed_by_gaia': np.float64(0.0036)}
+depth500_max1.0_2.2-4.0as {'n_all_gaia_stars': np.float64(0.0316), 'n_depth_capable': np.float64(0.0103), 'n_depth_capable_missed_by_gaia': np.float64(0.0018)}
+depth500_max1.0_2.2-11.0as {'n_all_gaia_stars': np.float64(0.3286), 'n_depth_capable': np.float64(0.1068), 'n_depth_capable_missed_by_gaia': np.float64(0.0018)}
+depth500_max1.0_4.0-11.0as {'n_all_gaia_stars': np.float64(0.297), 'n_depth_capable': np.float64(0.0965), 'n_depth_capable_missed_by_gaia': np.float64(0.0)}
+depth500_max1.0_11.0-14.0as {'n_all_gaia_stars': np.float64(0.2122), 'n_depth_capable': np.float64(0.069), 'n_depth_capable_missed_by_gaia': np.float64(0.0)}
+depth500_max0.5_0.0-2.2as {'n_all_gaia_stars': np.float64(0.0137), 'n_depth_capable': np.float64(0.0032), 'n_depth_capable_missed_by_gaia': np.float64(0.0023)}
+depth500_max0.5_2.2-4.0as {'n_all_gaia_stars': np.float64(0.0316), 'n_depth_capable': np.float64(0.0073), 'n_depth_capable_missed_by_gaia': np.float64(0.0006)}
+depth500_max0.5_2.2-11.0as {'n_all_gaia_stars': np.float64(0.3286), 'n_depth_capable': np.float64(0.076), 'n_depth_capable_missed_by_gaia': np.float64(0.0007)}
+depth500_max0.5_4.0-11.0as {'n_all_gaia_stars': np.float64(0.297), 'n_depth_capable': np.float64(0.0687), 'n_depth_capable_missed_by_gaia': np.float64(0.0)}
+depth500_max0.5_11.0-14.0as {'n_all_gaia_stars': np.float64(0.2122), 'n_depth_capable': np.float64(0.0491), 'n_depth_capable_missed_by_gaia': np.float64(0.0)}
+depth400_max1.0_0.0-2.2as {'n_all_gaia_stars': np.float64(0.0137), 'n_depth_capable': np.float64(0.005), 'n_depth_capable_missed_by_gaia': np.float64(0.0042)}
+depth400_max1.0_2.2-4.0as {'n_all_gaia_stars': np.float64(0.0316), 'n_depth_capable': np.float64(0.0116), 'n_depth_capable_missed_by_gaia': np.float64(0.0027)}
+depth400_max1.0_2.2-11.0as {'n_all_gaia_stars': np.float64(0.3286), 'n_depth_capable': np.float64(0.1212), 'n_depth_capable_missed_by_gaia': np.float64(0.0029)}
+depth400_max1.0_4.0-11.0as {'n_all_gaia_stars': np.float64(0.297), 'n_depth_capable': np.float64(0.1095), 'n_depth_capable_missed_by_gaia': np.float64(0.0001)}
+depth400_max1.0_11.0-14.0as {'n_all_gaia_stars': np.float64(0.2122), 'n_depth_capable': np.float64(0.0782), 'n_depth_capable_missed_by_gaia': np.float64(0.0)}

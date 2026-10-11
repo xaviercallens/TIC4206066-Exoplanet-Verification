@@ -1,0 +1,75 @@
+{
+ "method": "Step 7b: false-alarm probability of signal B in Sector 98 ALONE (open item U18).",
+ "P_B": 11.132745380039134,
+ "results": [
+  {
+   "name": "QLP S98 frozen mask",
+   "n_points": 11489,
+   "n_segments_null": 4,
+   "n_periods": 18985,
+   "P_range": [
+    1.0,
+    20.0
+   ],
+   "obs_SDE_B": 6.088746922543764,
+   "P_at_B": 11.136752677005322,
+   "depth_B_ppm": 967.7953009979038,
+   "obs_global_max_SDE": 6.088746922543764,
+   "P_at_global_max": 11.136752677005322,
+   "B_is_global_max": true,
+   "null_n": 500,
+   "null_median": 5.472191178566101,
+   "null_p95": 6.918168197929578,
+   "null_p99": 7.176108169758175,
+   "null_max": 7.6017931854618865,
+   "n_null_ge_obs": 165,
+   "fap": 0.3313373253493014
+  },
+  {
+   "name": "QLP S98 default mask",
+   "n_points": 17784,
+   "n_segments_null": 4,
+   "n_periods": 20000,
+   "P_range": [
+    1.0,
+    20.0
+   ],
+   "obs_SDE_B": 1.478773441046738,
+   "P_at_B": 11.132245535237258,
+   "depth_B_ppm": 1065.198923242026,
+   "obs_global_max_SDE": 5.196734874722433,
+   "P_at_global_max": 14.287693392607283,
+   "B_is_global_max": false,
+   "null_n": 500,
+   "null_median": 5.5507504539254935,
+   "null_p95": 7.9173718169056375,
+   "null_p99": 8.771458889701968,
+   "null_max": 9.655365963628649,
+   "n_null_ge_obs": 500,
+   "fap": 1.0
+  },
+  {
+   "name": "own S98 no straylight",
+   "n_points": 17327,
+   "n_segments_null": 4,
+   "n_periods": 19666,
+   "P_range": [
+    1.0,
+    20.0
+   ],
+   "obs_SDE_B": 10.358156381635466,
+   "P_at_B": 11.132940341592509,
+   "depth_B_ppm": 1064.375174507687,
+   "obs_global_max_SDE": 10.358156381635466,
+   "P_at_global_max": 11.132940341592509,
+   "B_is_global_max": true,
+   "null_n": 500,
+   "null_median": 5.75414885483206,
+   "null_p95": 9.509383451825009,
+   "null_p99": 10.158333391322518,
+   "null_max": 11.136920790829265,
+   "n_null_ge_obs": 3,
+   "fap": 0.007984031936127744
+  }
+ ]
+}

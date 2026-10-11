@@ -1,0 +1,68 @@
+BASE             S6   866±143  S32   766±164  S98  1136± 91 | arch   823±108 nsig W 2.68 K 2.22 | common 1005±70 dchi2 W 7.6 K 5.1 (p 0.077) ev98 [1112, 1275, 894] kap BASE
+MSLIKE           S6   880±137  S32   966±268  S98  1141±106 | arch   897±122 nsig W 1.75 K 1.51 | common 1036±80 dchi2 W 3.3 K 2.3 (p 0.309) ev98 [1114, 1276, 909] kap MSLIKE
+MSLIKE_fixeph    S6   866±143  S32   830±196  S98  1136± 91 | arch   854±115 nsig W 2.27 K 1.92 | common 1028±72 dchi2 W 5.2 K 3.7 (p 0.155) ev98 [1112, 1275, 894] kap BASE
+KEEP512          S6  1129±122  S32   766±178  S98  1136± 98 | arch  1013±101 nsig W 1.56 K 0.88 | common 1076±70 dchi2 W 8.2 K 3.6 (p 0.165) ev98 [1112, 1275, 894] kap KEEP512
+A_MODEL          S6   866±143  S32   724±165  S98  1136± 91 | arch   806±108 nsig W 2.86 K 2.34 | common 999±70 dchi2 W 9.0 K 5.9 (p 0.052) ev98 [1112, 1275, 894] kap BASE
+A_MASK06         S6   866±143  S32   710±166  S98  1136± 91 | arch   800±108 nsig W 2.92 K 2.38 | common 996±70 dchi2 W 9.5 K 6.2 (p 0.046) ev98 [1112, 1275, 894] kap BASE
+A_MASK10         S6   866±143  S32   830±196  S98  1136± 91 | arch   854±115 nsig W 2.27 K 1.92 | common 1028±72 dchi2 W 5.2 K 3.7 (p 0.155) ev98 [1112, 1275, 894] kap BASE
+BW050            S6   830±140  S32   785±163  S98  1153± 90 | arch   811±106 nsig W 2.90 K 2.46 | common 1009±69 dchi2 W 8.5 K 6.1 (p 0.048) ev98 [1095, 1323, 918] kap BASE
+BW100            S6   875±145  S32   781±165  S98  1162± 92 | arch   834±109 nsig W 2.77 K 2.30 | common 1025±70 dchi2 W 8.0 K 5.5 (p 0.065) ev98 [1130, 1316, 898] kap BASE
+BW150            S6   873±151  S32   824±167  S98  1183± 94 | arch   851±112 nsig W 2.69 K 2.27 | common 1045±72 dchi2 W 7.3 K 5.2 (p 0.075) ev98 [1122, 1375, 903] kap BASE
+Iteration: 1 Rejected outliers (total): 8
+Iteration: 2 Rejected outliers (total): 10
+Iteration: 1 Rejected outliers (total): 15
+Iteration: 2 Rejected outliers (total): 17
+Iteration: 1 Rejected outliers (total): 156
+Iteration: 2 Rejected outliers (total): 175
+Iteration: 3 Rejected outliers (total): 177
+Iteration: 4 Rejected outliers (total): 178
+Iteration: 1 Rejected outliers (total): 183
+Iteration: 2 Rejected outliers (total): 209
+Iteration: 3 Rejected outliers (total): 210
+Iteration: 1 Rejected outliers (total): 4
+Iteration: 2 Rejected outliers (total): 5
+Iteration: 1 Rejected outliers (total): 70
+Iteration: 2 Rejected outliers (total): 77
+Iteration: 3 Rejected outliers (total): 79
+Iteration: 1 Rejected outliers (total): 73
+Iteration: 2 Rejected outliers (total): 83
+Iteration: 3 Rejected outliers (total): 85
+Iteration: 1 Rejected outliers (total): 4
+Iteration: 2 Rejected outliers (total): 5
+Iteration: 1 Rejected outliers (total): 5
+Iteration: 2 Rejected outliers (total): 6
+Iteration: 1 Rejected outliers (total): 61
+Iteration: 2 Rejected outliers (total): 71
+Iteration: 3 Rejected outliers (total): 73
+Iteration: 1 Rejected outliers (total): 3
+Iteration: 1 Rejected outliers (total): 59
+Iteration: 2 Rejected outliers (total): 65
+Iteration: 3 Rejected outliers (total): 67
+COSINE           S6   873±146  S32   780±164  S98  1170± 90 | arch   832±109 nsig W 2.89 K 2.40 | common 1033±69 dchi2 W 8.7 K 5.9 (p 0.052) ev98 [1113, 1324, 962] kap BASE
+RSPLINE          S6   875±144  S32   787±164  S98  1171± 94 | arch   837±108 nsig W 2.79 K 2.34 | common 1027±71 dchi2 W 8.1 K 5.6 (p 0.060) ev98 [1121, 1324, 956] kap BASE
+HSPLINE          S6   875±141  S32   805±164  S98  1161± 96 | arch   845±107 nsig W 2.60 K 2.19 | common 1020±72 dchi2 W 6.9 K 4.9 (p 0.085) ev98 [1107, 1328, 922] kap BASE
+LOCALPOLY2       S6   918±151  S32   934±176  S98  1182±100 | arch   925±115 nsig W 1.95 K 1.69 | common 1071±75 dchi2 W 3.8 K 2.9 (p 0.238) ev98 [1176, 1254, 1043] kap BASE
+LOCALPOLY1       S6   883±141  S32   853±165  S98  1171± 94 | arch   870±107 nsig W 2.47 K 2.11 | common 1041±71 dchi2 W 6.1 K 4.5 (p 0.107) ev98 [1152, 1291, 956] kap BASE
+POLY0            S6   866±143  S32   766±164  S98  1137± 91 | arch   823±108 nsig W 2.69 K 2.22 | common 1006±70 dchi2 W 7.6 K 5.2 (p 0.076) ev98 [1112, 1275, 895] kap BASE
+DT_SECTOR        S6   867±142  S32   769±164  S98  1137± 91 | arch   825±107 nsig W 2.67 K 2.21 | common 1006±69 dchi2 W 7.5 K 5.1 (p 0.078) ev98 [1114, 1273, 894] kap BASE
+DT_EVENT         S6   880±142  S32   773±164  S98  1141± 91 | arch   834±108 nsig W 2.64 K 2.18 | common 1013±70 dchi2 W 7.4 K 5.0 (p 0.083) ev98 [1114, 1276, 909] kap BASE
+FREE_TPL         S6   849±141  S32   747±161  S98  1120± 90 | arch   805±106 nsig W 2.74 K 2.27 | common 989±68 dchi2 W 7.9 K 5.4 (p 0.068) ev98 [1105, 1241, 896] kap BASE
+NO_SUPERSAMPLE   S6   812±136  S32   766±164  S98  1135± 91 | arch   793±105 nsig W 2.90 K 2.47 | common 988±69 dchi2 W 8.5 K 6.1 (p 0.047) ev98 [1111, 1273, 894] kap BASE
+NO_PARTIAL       S6   909±180  S32   766±164  S98  1193±101 | arch   831±121 nsig W 2.83 K 2.29 | common 1044±78 dchi2 W 8.6 K 5.6 (p 0.061) ev98 [1112, 1275] kap BASE
+S98_KEEP_B30     S6   866±143  S32   766±164  S98  1104± 87 | arch   823±108 nsig W 2.48 K 2.03 | common 993±68 dchi2 W 6.5 K 4.3 (p 0.114) ev98 [1112, 1275, 926] kap BASE
+S98_WITH_EP2     S6   866±143  S32   766±164  S98  1210± 82 | arch   823±108 nsig W 3.47 K 2.85 | common 1067±65 dchi2 W 12.4 K 8.3 (p 0.015) ev98 [1112, 1275, 1417, 921] kap BASE
+S32_TESSSPOC10   S6   866±143  S32   768±178  S98  1136± 91 | arch   828±111 nsig W 2.59 K 2.14 | common 1012±71 dchi2 W 7.1 K 4.8 (p 0.091) ev98 [1112, 1275, 894] kap BASE
+S32_SAPCROWD     S6   866±143  S32   822±177  S98  1136± 91 | arch   849±111 nsig W 2.37 K 2.00 | common 1021±70 dchi2 W 5.7 K 4.0 (p 0.132) ev98 [1112, 1275, 894] kap BASE
+S6_SAPCROWD      S6   905±143  S32   766±164  S98  1136± 91 | arch   845±108 nsig W 2.54 K 2.06 | common 1015±70 dchi2 W 7.2 K 4.7 (p 0.097) ev98 [1112, 1275, 894] kap BASE
+S6_QLP           S6  1059±123  S32   766±164  S98  1136± 91 | arch   954± 98 nsig W 1.84 K 1.36 | common 1052±67 dchi2 W 7.3 K 3.9 (p 0.143) ev98 [1112, 1275, 894] kap BASE
+S6_TGLC          S6  1204±170  S32   766±164  S98  1136± 91 | arch   978±118 nsig W 1.68 K 1.06 | common 1077±72 dchi2 W 8.9 K 4.6 (p 0.102) ev98 [1112, 1275, 894] kap BASE
+S6_ELEANOR       S6  1077±168  S32   766±164  S98  1136± 91 | arch   918±117 nsig W 2.04 K 1.47 | common 1054±72 dchi2 W 7.2 K 3.9 (p 0.142) ev98 [1112, 1275, 894] kap BASE
+QLP_ALL          S6  1059±123  S32   602±170  S98  1136± 91 | arch   902±100 nsig W 2.42 K 1.73 | common 1030±67 dchi2 W 14.9 K 7.7 (p 0.021) ev98 [1112, 1275, 894] kap BASE
+QLP_ALL_SAP      S6  1053±124  S32   633±170  S98  1134± 92 | arch   907±100 nsig W 2.31 K 1.67 | common 1031±68 dchi2 W 12.9 K 6.7 (p 0.034) ev98 [1118, 1285, 847] kap BASE
+S98_DET          S6   866±143  S32   766±164  S98  1153± 90 | arch   823±108 nsig W 2.84 K 2.35 | common 1018±69 dchi2 W 8.5 K 5.8 (p 0.056) ev98 [1082, 1333, 923] kap BASE
+S98_SAP          S6   866±143  S32   766±164  S98  1134± 92 | arch   823±108 nsig W 2.65 K 2.20 | common 1003±70 dchi2 W 7.4 K 5.0 (p 0.081) ev98 [1118, 1285, 847] kap BASE
+S98_OWN_r2.0     S6   866±143  S32   766±164  S98  1309± 99 | arch   823±108 nsig W 3.90 K 3.31 | common 1085±73 dchi2 W 15.6 K 11.2 (p 0.004) ev98 [1262, 1550, 896] kap BASE
+OWN_r1.5         S6  1133±168  S32   558±256  S98  1308±106 | arch   960±140 nsig W 2.72 K 1.98 | common 1182±84 dchi2 W 14.3 K 7.4 (p 0.024) ev98 [1297, 1500, 921] kap BASE
+OWN_r2.0         S6  1091±141  S32   692±189  S98  1309± 99 | arch   948±113 nsig W 3.10 K 2.39 | common 1152±75 dchi2 W 15.1 K 8.6 (p 0.014) ev98 [1262, 1550, 896] kap BASE
+OWN_r2.5         S6  1137±134  S32   705±196  S98  1273± 98 | arch   999±111 nsig W 2.50 K 1.85 | common 1153±73 dchi2 W 12.6 K 6.7 (p 0.034) ev98 [1214, 1515, 885] kap BASE
+OWN_r3.0         S6  1130±149  S32   704±199  S98  1310±101 | arch   977±119 nsig W 2.83 K 2.13 | common 1172±77 dchi2 W 13.6 K 7.5 (p 0.024) ev98 [1245, 1536, 970] kap BASE

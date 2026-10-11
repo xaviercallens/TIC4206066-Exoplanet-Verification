@@ -1,0 +1,86 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - name: source_id
+#   datatype: int64
+#   description: Unique source identifier (unique within a particular Data Release)
+#   meta: !!omap
+#   - {ucd: meta.id}
+# - name: ra
+#   unit: deg
+#   datatype: float64
+#   description: Right ascension
+#   meta: !!omap
+#   - {ucd: pos.eq.ra;meta.main}
+#   - {utype: 'stc:AstroCoords.Position3D.Value3.C1'}
+# - name: dec
+#   unit: deg
+#   datatype: float64
+#   description: Declination
+#   meta: !!omap
+#   - {ucd: pos.eq.dec;meta.main}
+#   - {utype: 'stc:AstroCoords.Position3D.Value3.C2'}
+# - name: parallax
+#   unit: mas
+#   datatype: float64
+#   description: Parallax
+#   meta: !!omap
+#   - {ucd: pos.parallax.trig}
+# - name: parallax_error
+#   unit: mas
+#   datatype: float32
+#   description: Standard error of parallax
+#   meta: !!omap
+#   - {ucd: stat.error;pos.parallax.trig}
+# - name: pmra
+#   unit: mas / yr
+#   datatype: float64
+#   description: Proper motion in right ascension direction
+#   meta: !!omap
+#   - {ucd: pos.pm;pos.eq.ra}
+#   - {utype: 'stc:AstroCoords.Velocity3D.Value3.C1'}
+# - name: pmdec
+#   unit: mas / yr
+#   datatype: float64
+#   description: Proper motion in declination direction
+#   meta: !!omap
+#   - {ucd: pos.pm;pos.eq.dec}
+#   - {utype: 'stc:AstroCoords.Velocity3D.Value3.C2'}
+# - name: phot_g_mean_mag
+#   unit: mag
+#   datatype: float32
+#   description: G-band mean magnitude
+#   meta: !!omap
+#   - {ucd: phot.mag;em.opt}
+# - name: phot_bp_mean_mag
+#   unit: mag
+#   datatype: float32
+#   description: Integrated BP mean magnitude
+#   meta: !!omap
+#   - {ucd: phot.mag;em.opt.B}
+# - name: phot_rp_mean_mag
+#   unit: mag
+#   datatype: float32
+#   description: Integrated RP mean magnitude
+#   meta: !!omap
+#   - {ucd: phot.mag;em.opt.R}
+# - name: ruwe
+#   datatype: float32
+#   description: Renormalised unit weight error
+#   meta: !!omap
+#   - {ucd: stat.error}
+# - name: astrometric_params_solved
+#   datatype: int16
+#   description: Which parameters have been solved for?
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - {name: sep_arcsec, datatype: float64}
+# schema: astropy-2.0
+source_id ra dec parallax parallax_error pmra pmdec phot_g_mean_mag phot_bp_mean_mag phot_rp_mean_mag ruwe astrometric_params_solved sep_arcsec
+3220388198192519424 80.85982665567226 -1.3269640103386409 28.075018139930098 0.017568303 -3.4059944859312923 70.80569610380549 10.512974 11.353702 9.614222 1.2142985 31 0.018796463593206306
+3220388296975929984 80.85946599720577 -1.3239088191584922 0.21991412492452841 0.20520285 4.807799197530884 -1.8146709258943916 18.74555 19.18301 18.019613 1.0417807 31 11.062098644808483
+3220388228256452864 80.8626578877679 -1.3242279729878828 1.105619177392682 0.52071905 0.9413426896409721 1.07661948964378 19.810076 20.168232 19.01459 1.1770828 95 14.153376549159299
+3220388266910977280 80.85397919398962 -1.3267112903976104 "" "" "" "" 20.932945 19.84704 19.681429 "" 3 21.076280762022176
+3220388266910692096 80.8544987123508 -1.3220685965196546 -0.2700777098822258 0.51882637 -0.2914864205805757 -0.5364868571577515 19.833138 20.460573 19.016174 1.1072652 95 26.043025435588255
+3220388266910977408 80.85225173035636 -1.3251680777335113 "" "" "" "" 21.090591 21.496796 20.353794 "" 3 28.026965077451706
+3220388232551535744 80.86713435705619 -1.323297778048135 "" "" "" "" 21.10487 21.435741 20.805336 "" 3 29.40937103371131

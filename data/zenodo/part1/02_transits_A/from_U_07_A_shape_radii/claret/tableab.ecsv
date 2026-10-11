@@ -1,0 +1,131 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - name: recno
+#   datatype: int32
+#   description: Record number assigned by the VizieR team. Should Not be used for identification.
+#   meta: !!omap
+#   - {ucd: RECORD}
+#   - {width: 8}
+# - name: logg
+#   unit: log(cm.s**-2)
+#   datatype: float32
+#   format: '{:5.2f}'
+#   description: '[2.5/6.0] Surface gravity'
+#   meta: !!omap
+#   - {ucd: PHYS_GRAVITY_SURFACE}
+#   - {width: 5}
+#   - {precision: '2'}
+# - name: Teff
+#   unit: K
+#   datatype: float32
+#   format: '{!s:>6}'
+#   description: '[1500/12000] Effective temperature'
+#   meta: !!omap
+#   - {ucd: PHYS_TEMP_EFFEC}
+#   - {width: 6}
+# - name: Z
+#   unit: log(Sun)
+#   datatype: float32
+#   format: '{:4.1f}'
+#   description: '[0] Metallicity (log[M/H])'
+#   meta: !!omap
+#   - {ucd: PHYS_ABUND_Z}
+#   - {width: 4}
+#   - {precision: '1'}
+# - name: L/HP
+#   datatype: float32
+#   format: '{:4.1f}'
+#   description: '[2] Mixing-length parameter'
+#   meta: !!omap
+#   - {ucd: FIT_PARAM_VALUE}
+#   - {width: 4}
+#   - {precision: '1'}
+# - name: aLSM
+#   datatype: float64
+#   format: '{:8.4f}'
+#   description: Quadratic limb darkening coefficient a (TESS LSM) (G2)
+#   meta: !!omap
+#   - {ucd: PHYS_LIMB-DARK_COEFF}
+#   - {width: 8}
+#   - {precision: '4'}
+# - name: bLSM
+#   datatype: float64
+#   format: '{:8.4f}'
+#   description: Quadratic limb darkening coefficient b (TESS LSM) (G2)
+#   meta: !!omap
+#   - {ucd: PHYS_LIMB-DARK_COEFF}
+#   - {width: 8}
+#   - {precision: '4'}
+# - name: aPCM
+#   datatype: float64
+#   format: '{:8.4f}'
+#   description: Quadratic limb darkening coefficient a (TESS FCM) (G2)
+#   meta: !!omap
+#   - {ucd: PHYS_LIMB-DARK_COEFF}
+#   - {width: 8}
+#   - {precision: '4'}
+# - name: bPCM
+#   datatype: float64
+#   format: '{:8.4f}'
+#   description: Quadratic limb darkening coefficient b (TESS FCM) (G2)
+#   meta: !!omap
+#   - {ucd: PHYS_LIMB-DARK_COEFF}
+#   - {width: 8}
+#   - {precision: '4'}
+# - name: chi2
+#   datatype: float32
+#   format: '{:7.4f}'
+#   description: SQRT(CHI2Q) (TESS LSM)
+#   meta: !!omap
+#   - {ucd: FIT_CHI2}
+#   - {width: 7}
+#   - {precision: '4'}
+# - name: Type
+#   datatype: string
+#   description: '[qsr] PHOENIX type of model (G1)'
+#   meta: !!omap
+#   - {ucd: FIT_TYPE}
+#   - {_votable_string_dtype: char}
+# - name: Mod
+#   datatype: string
+#   description: '[PD PC A] Model name (G3)'
+#   meta: !!omap
+#   - {ucd: MODEL_ID}
+#   - {_votable_string_dtype: char}
+# meta: !!omap
+# - {ID: J_A_A_600_A30_tableab}
+# - {name: J/A+A/600/A30/tableab}
+# - {description: 'a,b quadratic LDCs PHOENIX (tables 4, 5, 15, 16'}
+# schema: astropy-2.0
+recno logg Teff Z L/HP aLSM bLSM aPCM bPCM chi2 Type Mod
+346 4.0 3800.0 0.0 2.0 0.3809 0.2823 0.2796 0.5145 0.1243 q PC
+347 4.5 3800.0 0.0 2.0 0.2581 0.3609 0.1785 0.5512 0.1484 q PC
+348 5.0 3800.0 0.0 2.0 0.1828 0.4015 0.1289 0.5416 0.1696 q PC
+354 4.0 3900.0 0.0 2.0 0.4293 0.2388 0.3257 0.4729 0.107 q PC
+355 4.5 3900.0 0.0 2.0 0.2946 0.3316 0.2141 0.5215 0.1346 q PC
+356 5.0 3900.0 0.0 2.0 0.1991 0.3902 0.1447 0.5307 0.163 q PC
+362 4.0 4000.0 0.0 2.0 0.4764 0.2025 0.3734 0.4329 0.0933 q PC
+363 4.5 4000.0 0.0 2.0 0.339 0.2994 0.2602 0.4841 0.1256 q PC
+364 5.0 4000.0 0.0 2.0 0.226 0.3679 0.1704 0.5091 0.1542 q PC
+370 4.0 4100.0 0.0 2.0 0.5164 0.1702 0.4128 0.399 0.0814 q PC
+371 4.5 4100.0 0.0 2.0 0.3955 0.2618 0.3189 0.4391 0.1094 q PC
+372 5.0 4100.0 0.0 2.0 0.2673 0.3371 0.211 0.4777 0.1415 q PC
+378 4.0 4200.0 0.0 2.0 0.5369 0.1494 0.4318 0.3802 0.0815 q PC
+379 4.5 4200.0 0.0 2.0 0.4429 0.2201 0.3648 0.3974 0.0964 q PC
+380 5.0 4200.0 0.0 2.0 0.3163 0.3025 0.2603 0.4401 0.1292 q PC
+920 4.0 3800.0 0.0 2.0 0.3653 0.2941 0.2796 0.5145 0.1657 r PC
+921 4.5 3800.0 0.0 2.0 0.2354 0.3904 0.1785 0.5512 0.2077 r PC
+922 5.0 3800.0 0.0 2.0 0.163 0.4298 0.1289 0.5416 0.2102 r PC
+928 4.0 3900.0 0.0 2.0 0.4137 0.2509 0.3257 0.4729 0.1565 r PC
+929 4.5 3900.0 0.0 2.0 0.278 0.3508 0.2141 0.5215 0.1722 r PC
+930 5.0 3900.0 0.0 2.0 0.1795 0.4182 0.1447 0.5307 0.2037 r PC
+936 4.0 4000.0 0.0 2.0 0.4608 0.215 0.3734 0.4329 0.1504 r PC
+937 4.5 4000.0 0.0 2.0 0.3232 0.3173 0.2602 0.4841 0.1643 r PC
+938 5.0 4000.0 0.0 2.0 0.2073 0.3943 0.1704 0.5091 0.1944 r PC
+944 4.0 4100.0 0.0 2.0 0.501 0.1827 0.4128 0.399 0.1485 r PC
+945 4.5 4100.0 0.0 2.0 0.3812 0.2772 0.3189 0.4391 0.1486 r PC
+946 5.0 4100.0 0.0 2.0 0.2495 0.3623 0.211 0.4777 0.1821 r PC
+952 4.0 4200.0 0.0 2.0 0.5251 0.1557 0.4318 0.3802 0.1249 r PC
+953 4.5 4200.0 0.0 2.0 0.4291 0.235 0.3648 0.3974 0.1414 r PC
+954 5.0 4200.0 0.0 2.0 0.2997 0.3257 0.2603 0.4401 0.1698 r PC

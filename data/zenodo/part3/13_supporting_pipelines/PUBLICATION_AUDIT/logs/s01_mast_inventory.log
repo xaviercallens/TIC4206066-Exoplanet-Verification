@@ -1,0 +1,32 @@
+WARNING: InputWarning: Coordinate string is being interpreted as an ICRS coordinate provided in degrees. [astroquery.utils.commons]
+observations near star: 19  of this star: 12
+HLSP  GSFC-ELEANOR-LITE  4206066                hlsp_gsfc-eleanor-lite_tess_ffi_s0006-0000000004206066_tess_v1.0_lc                        seq=6.0 exptime=1800.0 release=60065.32303244
+HLSP  QLP                4206066                hlsp_qlp_tess_ffi_s0006-0000000004206066_tess_v01_llc                                      seq=6.0 exptime=1800.0 release=59253.57341428
+HLSP  QLP                4206066                hlsp_qlp_tess_ffi_s0032-0000000004206066_tess_v01_llc                                      seq=32.0 exptime=600.0 release=59565.73175915
+HLSP  QLP                4206066                hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01_llc                                      seq=98.0 exptime=200.0 release=61069.46230328
+TESS  SPOC               4206066                tess2020324010417-s0032-0000000004206066-0200-s                                            seq=32.0 exptime=120.0 release=59239.0
+HLSP  T16                4206066                hlsp_t16_tess_ffi_s0006-cam1-ccd1-03220388198192519424_tess_v01                            seq=6.0 exptime=1800.0 release=60983.52837955
+HLSP  TARS               4206066                hlsp_tars_tess_ffi_s0006-0000000004206066_tess                                             seq=6.0 exptime=1800.0 release=61184.8074767
+HLSP  TARS               4206066                hlsp_tars_tess_ffi_s0032-0000000004206066_tess                                             seq=32.0 exptime=600.0 release=61202.86321754
+HLSP  TASOC              4206066                hlsp_tasoc_tess_ffi_tic00004206066-s0006-cam1-ccd1-c1800_tess_v05                          seq=6.0 exptime=1800.0 release=59824.66624997
+HLSP  TESS-SPOC          4206066                hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_tp                                 seq=6.0 exptime=1800.0 release=59310.67298604
+HLSP  TESS-SPOC          4206066                hlsp_tess-spoc_tess_phot_0000000004206066-s0032_tess_v1_tp                                 seq=32.0 exptime=600.0 release=59310.67298604
+HLSP  TGLC               4206066                hlsp_tglc_tess_ffi_gaiaid-3220388198192519424-s0006-cam1-ccd1_tess_v1_llc                  seq=6.0 exptime=1800.0 release=60169.93672442
+products: 19
+to download: 16
+hlsp_qlp_tess_ffi_s0006-0000000004206066_tess_v01_llc.fits                                      2b4dbd5c15bf old=2b4dbd5c15bf same=True
+hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_lc.fits                                 ac7736ea403e old=ac7736ea403e same=True
+hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_tp.fits                                 7a03d3baf07e old=7a03d3baf07e same=True
+hlsp_tess-spoc_tess_phot_0000000004206066-s0032_tess_v1_lc.fits                                 a7458cf7abbe old=a7458cf7abbe same=True
+hlsp_tess-spoc_tess_phot_0000000004206066-s0032_tess_v1_tp.fits                                 2f43d928dec0 old=2f43d928dec0 same=True
+hlsp_qlp_tess_ffi_s0032-0000000004206066_tess_v01_llc.fits                                      0fbd9e9af067 old=0fbd9e9af067 same=True
+hlsp_tasoc_tess_ffi_tic00004206066-s0006-cam1-ccd1-c1800_tess_v05_cbv-lc.fits                   6963a851dddf old=6963a851dddf same=True
+hlsp_tasoc_tess_ffi_tic00004206066-s0006-cam1-ccd1-c1800_tess_v05_ens-lc.fits                   82e60fbf64cf old=82e60fbf64cf same=True
+hlsp_gsfc-eleanor-lite_tess_ffi_s0006-0000000004206066_tess_v1.0_lc.fits                        82c0017b5817 old=82c0017b5817 same=True
+hlsp_tglc_tess_ffi_gaiaid-3220388198192519424-s0006-cam1-ccd1_tess_v1_llc.fits                  b14c284494e3 old=b14c284494e3 same=True
+hlsp_t16_tess_ffi_s0006-cam1-ccd1-03220388198192519424_tess_v01_llc.fits                        f739a2835a98 old=f739a2835a98 same=True
+hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01_llc.fits                                      a034136697b4 old=a034136697b4 same=True
+hlsp_tars_tess_ffi_s0006-0000000004206066_tess_v01_lc.fits                                      3572e0f2fc33 old=3572e0f2fc33 same=True
+hlsp_tars_tess_ffi_s0032-0000000004206066_tess_v01_lc.fits                                      068671f3894d old=068671f3894d same=True
+tess2020324010417-s0032-0000000004206066-0200-s_lc.fits                                         764dad34b3bb old=764dad34b3bb same=True
+tess2020324010417-s0032-0000000004206066-0200-s_tp.fits                                         f1f76576cc08 old=f1f76576cc08 same=True

@@ -1,0 +1,8 @@
+250 SDE obs 12.34 n>= 0 fap 0.0040 | snr obs 11.61 n>= 0 fap 0.0040 | 49s
+500 SDE obs 12.34 n>= 0 fap 0.0020 | snr obs 11.61 n>= 0 fap 0.0020 | 98s
+750 SDE obs 12.34 n>= 0 fap 0.0013 | snr obs 11.61 n>= 0 fap 0.0013 | 148s
+1000 SDE obs 12.34 n>= 0 fap 0.0010 | snr obs 11.61 n>= 0 fap 0.0010 | 197s
+1250 SDE obs 12.34 n>= 0 fap 0.0008 | snr obs 11.61 n>= 0 fap 0.0008 | 246s
+1500 SDE obs 12.34 n>= 0 fap 0.0007 | snr obs 11.61 n>= 0 fap 0.0007 | 296s
+1750 SDE obs 12.34 n>= 0 fap 0.0006 | snr obs 11.61 n>= 0 fap 0.0006 | 346s
+2000 SDE obs 12.34 n>= 0 fap 0.0005 | snr obs 11.61 n>= 0 fap 0.0005 | 397s

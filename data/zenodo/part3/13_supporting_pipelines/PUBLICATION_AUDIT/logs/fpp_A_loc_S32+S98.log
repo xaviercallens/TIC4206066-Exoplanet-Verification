@@ -1,0 +1,25 @@
+Getting TessCut for sector 6
+Getting TessCut for sector 32
+Getting TessCut for sector 98
+Estimated missing stellar parameters for 70 of 121 stars from photometry. See the 'params_estimated' column of the .stars dataframe. 2 appear evolved and were assigned a nominal 1 M_Sun.
+A_loc_S32+S98 0 FPP=0.02774 NFPP=0 (15s)
+A_loc_S32+S98 1 FPP=0.02888 NFPP=0 (11s)
+A_loc_S32+S98 2 FPP=0.02837 NFPP=0 (11s)
+A_loc_S32+S98 3 FPP=0.03649 NFPP=0 (11s)
+A_loc_S32+S98 4 FPP=0.03216 NFPP=0 (11s)
+A_loc_S32+S98 5 FPP=0.03602 NFPP=0 (11s)
+A_loc_S32+S98 6 FPP=0.02651 NFPP=0 (11s)
+A_loc_S32+S98 7 FPP=0.03039 NFPP=0 (11s)
+A_loc_S32+S98 8 FPP=0.02727 NFPP=0 (11s)
+A_loc_S32+S98 9 FPP=0.02952 NFPP=0 (11s)
+A_loc_S32+S98 10 FPP=0.02747 NFPP=0 (11s)
+A_loc_S32+S98 11 FPP=0.02896 NFPP=0 (11s)
+A_loc_S32+S98 12 FPP=0.03237 NFPP=0 (11s)
+A_loc_S32+S98 13 FPP=0.03259 NFPP=0 (11s)
+A_loc_S32+S98 14 FPP=0.02976 NFPP=0 (11s)
+A_loc_S32+S98 15 FPP=0.03227 NFPP=0 (11s)
+A_loc_S32+S98 16 FPP=0.03417 NFPP=0 (11s)
+A_loc_S32+S98 17 FPP=0.03358 NFPP=0 (11s)
+A_loc_S32+S98 18 FPP=0.03339 NFPP=0 (11s)
+A_loc_S32+S98 19 FPP=0.03582 NFPP=0 (11s)
+DONE A_loc_S32+S98 FPP 0.03119 ± 0.0031 (sd), sem 0.0007; range 0.0265-0.0365; NFPP mean 0

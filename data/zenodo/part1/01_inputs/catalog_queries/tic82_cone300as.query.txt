@@ -1,0 +1,1 @@
+Catalogs.query_region((80.85983,-1.32696), radius=300 arcsec, catalog='TIC')

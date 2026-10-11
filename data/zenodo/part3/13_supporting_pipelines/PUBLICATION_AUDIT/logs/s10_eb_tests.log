@@ -1,0 +1,28 @@
+A pipe: primary 470 ppm, err white 23 emp 32 -> S/N emp 14.8 (white 20.3); random >= primary: 0.0000
+    secondary(0.5): -20 ± 32 ppm (z=-0.65), 3sigma upper 95
+    phase scan: max|z| 2.22 at 0.870 (-70 ppm); ~37 independent phases
+    P/3 phases: [('0.3333333333333333', -41, np.float64(-1.31)), ('0.6666666666666666', -7, np.float64(-0.21))]
+    odd 534±48 even 388±44 -> 2.23 sigma
+    mod3 chi2 1.69/2: [('0', np.float64(413.1464605822144)), ('1', np.float64(486.66175370848384)), ('2', np.float64(500.2823125981326))]
+    shape: U {'depth_ppm': np.float64(471.1843461751139), 'T14_h': np.float64(1.8787894611885074), 'ingress_frac': np.float64(0.05743093851549119)} ; V {'depth_ppm': np.float64(637.1138812657671), 'T14_h': np.float64(2.5570868772367144)} ; dchi2(V-U) = 31.84; ingress frac <= 0.18 (2 sigma)
+A own: primary 431 ppm, err white 24 emp 39 -> S/N emp 11.2 (white 18.3); random >= primary: 0.0000
+    secondary(0.5): 10 ± 39 ppm (z=0.26), 3sigma upper 126
+    phase scan: max|z| 3.82 at 0.270 (147 ppm); ~37 independent phases
+    P/3 phases: [('0.3333333333333333', -38, np.float64(-0.99)), ('0.6666666666666666', -8, np.float64(-0.22))]
+    odd 364±48 even 502±43 -> -2.14 sigma
+    mod3 chi2 10.58/2: [('0', np.float64(269.1767651256116)), ('1', np.float64(519.3574464040785)), ('2', np.float64(505.4786105707087))]
+    shape: U {'depth_ppm': np.float64(464.84877168148216), 'T14_h': np.float64(1.8810993065809725), 'ingress_frac': np.float64(0.043660762499650355)} ; V {'depth_ppm': np.float64(616.226692838455), 'T14_h': np.float64(2.659864773420699)} ; dchi2(V-U) = 31.44; ingress frac <= 0.12000000000000001 (2 sigma)
+B pipe: primary 800 ppm, err white 48 emp 62 -> S/N emp 12.9 (white 16.6); random >= primary: 0.0000
+    secondary(0.5): 61 ± 62 ppm (z=0.99), 3sigma upper 247
+    phase scan: max|z| 3.64 at 0.240 (225 ppm); ~145 independent phases
+    P/3 phases: [('0.3333333333333333', -37, np.float64(-0.59)), ('0.6666666666666666', -4, np.float64(-0.07))]
+    odd 823±88 even 785±92 -> 0.30 sigma
+    mod3 chi2 0.22/1: [('0', np.float64(878.0102780574506)), ('1', np.float64(801.6555998672237)), ('2', nan)]
+    shape: U {'depth_ppm': np.float64(1010.8655598043831), 'T14_h': np.float64(1.741118252587269), 'ingress_frac': np.float64(0.23418369722955126)} ; V {'depth_ppm': np.float64(1321.3911515535915), 'T14_h': np.float64(2.041001734246567)} ; dchi2(V-U) = 14.55; ingress frac <= 0.34 (2 sigma)
+B own: primary 865 ppm, err white 48 emp 57 -> S/N emp 15.1 (white 17.9); random >= primary: 0.0000
+    secondary(0.5): -45 ± 57 ppm (z=-0.78), 3sigma upper 172
+    phase scan: max|z| 7.67 at 0.925 (440 ppm); ~145 independent phases
+    P/3 phases: [('0.3333333333333333', -1, np.float64(-0.02)), ('0.6666666666666666', 10, np.float64(0.17))]
+    odd 880±84 even 859±81 -> 0.18 sigma
+    mod3 chi2 2.37/2: [('0', np.float64(996.7546516793657)), ('1', np.float64(790.0747907007011)), ('2', np.float64(919.5207563007513))]
+    shape: U {'depth_ppm': np.float64(1087.4611317540891), 'T14_h': np.float64(1.7494442466378002), 'ingress_frac': np.float64(0.24728698336925034)} ; V {'depth_ppm': np.float64(1404.3788213326), 'T14_h': np.float64(2.0510435012594224)} ; dchi2(V-U) = 7.40; ingress frac <= 0.38 (2 sigma)

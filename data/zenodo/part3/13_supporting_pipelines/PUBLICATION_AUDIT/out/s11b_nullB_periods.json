@@ -1,0 +1,178 @@
+{
+ "method": "Step 11b: Signal B cross-sector link \u2014 null test with (nearly) independent trials.",
+ "P98": 11.132975671662091,
+ "T98": 4000.8681717061445,
+ "dur_h": 1.6,
+ "results": [
+  {
+   "name": "pipe S6+S32",
+   "n_points": 17127,
+   "n_points_null": 16999,
+   "obs_max_snr": 10.3836138457369,
+   "null_n": 20000,
+   "P_range": [
+    9.0,
+    13.5
+   ],
+   "null_median": 3.2258149985036004,
+   "null_p95": 5.771783235870461,
+   "null_p99": 7.315066566760518,
+   "null_p999": 10.676931553143959,
+   "null_max": 10.80763907447992,
+   "n_null_ge_obs": 24,
+   "fap_empirical": 0.0012499375031248437,
+   "n_distinct_argmax_configurations": 18411,
+   "fap_floor_from_distinct": 5.431240495329133e-05,
+   "single_position_snr": {
+    "mean": -0.04852916053933817,
+    "sd": 1.3816958328801958,
+    "frac_gt3": 0.0177,
+    "frac_gt4": 0.00625,
+    "max": 10.02826857323277,
+    "gauss_expect_gt3": 0.001349898031630093,
+    "gauss_expect_gt4": 3.167124183311986e-05
+   },
+   "K_independent_positions_per_window": 27.240000000000002,
+   "fap_gaussian_unit_sd": 0.0,
+   "fap_gaussian_measured_sd_union": 7.74399732498003e-13,
+   "brute_validation_maxdiff": 1.2164211304899197e-10,
+   "n_brute_checked": 12
+  },
+  {
+   "name": "pipe S6 only",
+   "n_points": 933,
+   "n_points_null": 921,
+   "obs_max_snr": 7.555871697349324,
+   "null_n": 18652,
+   "P_range": [
+    9.0,
+    13.5
+   ],
+   "null_median": 2.5242741591010827,
+   "null_p95": 3.5785992353765907,
+   "null_p99": 3.9767179092426637,
+   "null_p999": 4.976513369050733,
+   "null_max": 5.2551886581456975,
+   "n_null_ge_obs": 0,
+   "fap_empirical": 5.361067924730606e-05,
+   "n_distinct_argmax_configurations": 2623,
+   "fap_floor_from_distinct": 0.00038109756097560977,
+   "single_position_snr": {
+    "mean": 0.003931565780942936,
+    "sd": 1.019824417446698,
+    "frac_gt3": 0.0021981556937593822,
+    "frac_gt4": 0.0,
+    "max": 3.9767179092453566,
+    "gauss_expect_gt3": 0.001349898031630093,
+    "gauss_expect_gt4": 3.167124183311986e-05
+   },
+   "K_independent_positions_per_window": 27.240000000000002,
+   "fap_gaussian_unit_sd": 5.655476087440547e-13,
+   "fap_gaussian_measured_sd_union": 1.7333122394283019e-12,
+   "brute_validation_maxdiff": 2.0860424498891916e-11,
+   "n_brute_checked": 12
+  },
+  {
+   "name": "pipe S32 only",
+   "n_points": 16194,
+   "n_points_null": 16078,
+   "obs_max_snr": 7.975354724712871,
+   "null_n": 20000,
+   "P_range": [
+    9.0,
+    13.5
+   ],
+   "null_median": 3.539904275050155,
+   "null_p95": 7.348327738293908,
+   "null_p99": 10.785631802641419,
+   "null_p999": 10.785631802657669,
+   "null_max": 10.971862346260023,
+   "n_null_ge_obs": 651,
+   "fap_empirical": 0.03259837008149592,
+   "n_distinct_argmax_configurations": 4008,
+   "fap_floor_from_distinct": 0.0002494387627837366,
+   "single_position_snr": {
+    "mean": -0.1295359737305225,
+    "sd": 1.6691481264229222,
+    "frac_gt3": 0.03305,
+    "frac_gt4": 0.0143,
+    "max": 10.785631802636004,
+    "gauss_expect_gt3": 0.001349898031630093,
+    "gauss_expect_gt4": 3.167124183311986e-05
+   },
+   "K_independent_positions_per_window": 19.68,
+   "fap_gaussian_unit_sd": 1.532107773982716e-14,
+   "fap_gaussian_measured_sd_union": 1.7412902880476613e-05,
+   "brute_validation_maxdiff": 1.6082069009826228e-10,
+   "n_brute_checked": 12
+  },
+  {
+   "name": "own S6+S32",
+   "n_points": 4239,
+   "n_points_null": 4203,
+   "obs_max_snr": 10.082385423566448,
+   "null_n": 20000,
+   "P_range": [
+    9.0,
+    13.5
+   ],
+   "null_median": 3.043173068073636,
+   "null_p95": 16.36313941386428,
+   "null_p99": 19.651681129265796,
+   "null_p999": 23.482950361749204,
+   "null_max": 28.500124875318395,
+   "n_null_ge_obs": 2466,
+   "fap_empirical": 0.12334383280835959,
+   "n_distinct_argmax_configurations": 18587,
+   "fap_floor_from_distinct": 5.379814934366258e-05,
+   "single_position_snr": {
+    "mean": 0.17468349252353355,
+    "sd": 1.7624248606116437,
+    "frac_gt3": 0.02495,
+    "frac_gt4": 0.01585,
+    "max": 22.237728877002336,
+    "gauss_expect_gt3": 0.001349898031630093,
+    "gauss_expect_gt4": 3.167124183311986e-05
+   },
+   "K_independent_positions_per_window": 27.240000000000002,
+   "fap_gaussian_unit_sd": 0.0,
+   "fap_gaussian_measured_sd_union": 1.4444989043876068e-07,
+   "brute_validation_maxdiff": 1.0718137488652246e-10,
+   "n_brute_checked": 12
+  },
+  {
+   "name": "own S6 only",
+   "n_points": 940,
+   "n_points_null": 927,
+   "obs_max_snr": 8.791196666088519,
+   "null_n": 18741,
+   "P_range": [
+    9.0,
+    13.5
+   ],
+   "null_median": 2.6013386960750102,
+   "null_p95": 3.8281073109279244,
+   "null_p99": 4.434880131787701,
+   "null_p999": 4.741840694695583,
+   "null_max": 4.814690863392595,
+   "n_null_ge_obs": 0,
+   "fap_empirical": 5.3356098602070216e-05,
+   "n_distinct_argmax_configurations": 2629,
+   "fap_floor_from_distinct": 0.00038022813688212925,
+   "single_position_snr": {
+    "mean": -0.08798545064918506,
+    "sd": 1.2131195971056212,
+    "frac_gt3": 0.004375433541433221,
+    "frac_gt4": 0.0003735126193906408,
+    "max": 4.741840694694499,
+    "gauss_expect_gt3": 0.001349898031630093,
+    "gauss_expect_gt4": 3.167124183311986e-05
+   },
+   "K_independent_positions_per_window": 27.240000000000002,
+   "fap_gaussian_unit_sd": 0.0,
+   "fap_gaussian_measured_sd_union": 5.8134674224649156e-12,
+   "brute_validation_maxdiff": 1.7797208151648647e-11,
+   "n_brute_checked": 12
+  }
+ ]
+}

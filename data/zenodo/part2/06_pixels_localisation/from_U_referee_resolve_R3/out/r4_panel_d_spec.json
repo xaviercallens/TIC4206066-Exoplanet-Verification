@@ -1,0 +1,187 @@
+{
+ "note": "Errors per axis = max(injection SD, jackknife SE, robust bootstrap SD); positions from audit 03 (auditor code), reproduced by the verifier's independent code within 0.3 arcsec.",
+ "plot": [
+  {
+   "signal": "3.18 d",
+   "sector": 32,
+   "marker": "filled square",
+   "product": "SPOC 2-min TPF, POS_CORR-decorrelated, 8 transits",
+   "off": [
+    5.205502814737672,
+    0.39277564678379057
+   ],
+   "err": [
+    3.0811225512104263,
+    2.78263106998299
+   ]
+  },
+  {
+   "signal": "3.18 d",
+   "sector": 98,
+   "marker": "filled triangle",
+   "product": "TESScut 200 s, QLP flags 2048+2^29 removed, 9 transits (3995.555 excluded: no post-transit baseline)",
+   "off": [
+    5.648872469696406,
+    -0.316325772885769
+   ],
+   "err": [
+    5.268561182599604,
+    4.516583338542118
+   ]
+  },
+  {
+   "signal": "11.13 d",
+   "sector": 98,
+   "marker": "open triangle",
+   "product": "TESScut 200 s, 3 clean transits",
+   "off": [
+    1.190453709741945,
+    -1.0172989338488334
+   ],
+   "err": [
+    2.2946776277329697,
+    3.1164399217450205
+   ]
+  }
+ ],
+ "ellipses": {
+  "A_S32_S98": {
+   "mean": [
+    5.318494206006766,
+    0.19767621568235524
+   ],
+   "sig": [
+    2.6596943022874133,
+    2.369102506324969
+   ]
+  },
+  "B_S98": {
+   "mean": [
+    1.190453709741945,
+    -1.0172989338488334
+   ],
+   "sig": [
+    2.2946776277329697,
+    3.1164399217450205
+   ]
+  }
+ },
+ "do_not_plot": {
+  "S6_both_signals": "momentum dump within 0.4-3.5 h of every transit (inside the 1.4-4.7 h baseline window or in transit); position depends on recipe: package (+8.2,-2.4), raw (-8.6,-34.5), dump-excised (+6.3,-1.3), POS_CORR (+1.0,-1.9) with jackknife SE (10.6, 32.8) arcsec",
+  "S32_11d": "only one transit (BTJD 2197.361) passes baseline acceptance; 2175.096 lies 2.3 h after the 3.18 d transit at 2175.001"
+ },
+ "text_numbers": {
+  "A": {
+   "value": "(+5 +- 3, 0 +- 3) arcsec",
+   "exact": {
+    "mean": [
+     5.318494206006766,
+     0.19767621568235524
+    ],
+    "sig": [
+     2.6596943022874133,
+     2.369102506324969
+    ],
+    "cov": [
+     [
+      7.073973781620131,
+      0.0
+     ],
+     [
+      0.0,
+      5.612646685475249
+     ]
+    ],
+    "chi2_vs_target": 4.005617112276893,
+    "p": 0.1349557197582979,
+    "sigma_equiv_2d": 1.4948418560001402,
+    "z_E": 1.999663721290341,
+    "z_N": 0.08343928350698392,
+    "chi2_between": 0.023144136421213386,
+    "dof_between": 2
+   },
+   "z_E": 1.999663721290341,
+   "p_range_over_error_models": [
+    0.048583763026226245,
+    0.1662430392535077
+   ]
+  },
+  "B": {
+   "value": "(+1 +- 3, -1 +- 3) arcsec",
+   "exact_S98": {
+    "mean": [
+     1.190453709741945,
+     -1.0172989338488334
+    ],
+    "sig": [
+     2.2946776277329697,
+     3.1164399217450205
+    ],
+    "cov": [
+     [
+      5.2655454152182095,
+      0.0
+     ],
+     [
+      0.0,
+      9.71219778584611
+     ]
+    ],
+    "chi2_vs_target": 0.37569854573917283,
+    "p": 0.8287396113627044,
+    "sigma_equiv_2d": 0.21631834367819028,
+    "z_E": 0.5187890862552469,
+    "z_N": -0.3264298235786964,
+    "chi2_between": 0.0,
+    "dof_between": 0
+   },
+   "exact_S32PC_S98": {
+    "mean": [
+     1.1422708232314416,
+     -1.2228386593192246
+    ],
+    "sig": [
+     2.1982279920535635,
+     2.9289114571057673
+    ],
+    "cov": [
+     [
+      4.8322063050478405,
+      0.285957818187996
+     ],
+     [
+      0.28595781818799604,
+      8.578522323565428
+     ]
+    ],
+    "chi2_vs_target": 0.4645170840418519,
+    "p": 0.7927411399130309,
+    "sigma_equiv_2d": 0.26275277109561473,
+    "z_E": 0.5196325528383173,
+    "z_N": -0.4175061886396473,
+    "chi2_between": 0.06496551177778176,
+    "dof_between": 2
+   }
+  },
+  "capable_star_min_sigma_from_corrected": 14.275866232046376,
+  "gaia": {
+   "nearest_other_source": {
+    "source_id": 3220388296975929984,
+    "sep": 11.062098644808485,
+    "phot_g_mean_mag": 18.74555015563965,
+    "bp_rp": 1.1633968353271484,
+    "dG": 8.232576370239258
+   },
+   "depth_capable_dG_max_range": [
+    6.783086549169857,
+    8.87500545298398
+   ],
+   "sep90_range_BC2019": [
+    2.7481605844189,
+    4.462505998282379
+   ],
+   "expected_missed_chance_aligned_2p2_11as": 0.0018369207186718249,
+   "expected_missed_chance_aligned_0_2p2as": 0.0035543427410882405
+  }
+ }
+}

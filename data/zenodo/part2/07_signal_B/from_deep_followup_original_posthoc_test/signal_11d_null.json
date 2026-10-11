@@ -1,0 +1,10 @@
+{
+ "observed_max_snr": 9.896916714661781,
+ "null_n": 300,
+ "null_median": 3.3952593993404543,
+ "null_p95": 6.331568428677028,
+ "null_p99": 7.0673390011659745,
+ "null_max": 7.470545855265998,
+ "FAP": 0.0,
+ "note": "null: S98 epoch shifted by U(0.1,0.9) x P; same 1601-period scan over S6+S32 residual data (3.18-d transits masked)"
+}

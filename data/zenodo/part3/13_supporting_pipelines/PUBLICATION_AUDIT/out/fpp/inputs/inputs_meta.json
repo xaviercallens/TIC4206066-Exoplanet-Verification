@@ -1,0 +1,102 @@
+{
+ "ephemeris": {
+  "A": {
+   "P": 3.182785293657263,
+   "T0": 3998.7367930333035,
+   "T14": 0.07808669533785047,
+   "source": "fit_A_pipe_mann_frozen_w0.75 (this audit)"
+  },
+  "B": {
+   "P": 11.132745380039134,
+   "T0": 4000.8658739613074,
+   "T14": 0.06908750357336403,
+   "source": "fit_B_pipe_mann_frozen_w0.75 (this audit)"
+  }
+ },
+ "folds": {
+  "A_S32+S98": {
+   "file": "out/fpp/inputs/A_S32+S98_binned.csv",
+   "n_raw": 4521,
+   "n_bins": 120,
+   "bin_min": 6.0,
+   "mean_err_ppm": 119.85481427067417,
+   "in_transit_mean_depth_ppm": 515.3539508427896
+  },
+  "A_S32only": {
+   "file": "out/fpp/inputs/A_S32only_binned.csv",
+   "n_raw": 2679,
+   "n_bins": 120,
+   "bin_min": 6.0,
+   "mean_err_ppm": 181.31554098810284,
+   "in_transit_mean_depth_ppm": 504.59713463191224
+  },
+  "A_S98only": {
+   "file": "out/fpp/inputs/A_S98only_binned.csv",
+   "n_raw": 1842,
+   "n_bins": 120,
+   "bin_min": 6.0,
+   "mean_err_ppm": 160.4498373888014,
+   "in_transit_mean_depth_ppm": 522.8687772681484
+  },
+  "A_S6only": {
+   "file": "out/fpp/inputs/A_S6only_binned.csv",
+   "n_raw": 128,
+   "n_bins": 24,
+   "bin_min": 30.0,
+   "mean_err_ppm": 88.85416577951719,
+   "in_transit_mean_depth_ppm": 478.6097704596592
+  },
+  "B_S32+S98": {
+   "file": "out/fpp/inputs/B_S32+S98_binned.csv",
+   "n_raw": 1038,
+   "n_bins": 120,
+   "bin_min": 6.0,
+   "mean_err_ppm": 245.15567168512604,
+   "in_transit_mean_depth_ppm": 1065.011199595123
+  },
+  "B_S32only": {
+   "file": "out/fpp/inputs/B_S32only_binned.csv",
+   "n_raw": 496,
+   "n_bins": 86,
+   "bin_min": 6.0,
+   "mean_err_ppm": 358.61519013398964,
+   "in_transit_mean_depth_ppm": 1047.9701464939374
+  },
+  "B_S98only": {
+   "file": "out/fpp/inputs/B_S98only_binned.csv",
+   "n_raw": 542,
+   "n_bins": 120,
+   "bin_min": 6.0,
+   "mean_err_ppm": 294.75871149909915,
+   "in_transit_mean_depth_ppm": 1074.4108013202026
+  },
+  "B_S6only": {
+   "file": "out/fpp/inputs/B_S6only_binned.csv",
+   "n_raw": 47,
+   "n_bins": 0,
+   "bin_min": 30.0,
+   "mean_err_ppm": NaN,
+   "in_transit_mean_depth_ppm": NaN
+  }
+ },
+ "notes": "6-min bins; S98 = QLP SYS_RM_FLUX frozen mask (clean intervals)",
+ "apertures": {
+  "6": {
+   "n_pix": 18,
+   "source": "hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_tp.fits APERTURE ext, bit value 2 (optimal aperture); 1CRV4P=71, 2CRV4P=885"
+  },
+  "32": {
+   "n_pix": 18,
+   "source": "tess2020324010417-s0032-0000000004206066-0200-s_tp.fits APERTURE ext, bit value 2 (optimal aperture); 1CRV4P=1368, 2CRV4P=939"
+  },
+  "98": {
+   "n_pix": 9,
+   "source": "QLP BESTAP '3x3 square' centred on the target pixel (677,983) from TESScut WCS"
+  }
+ },
+ "apertures_identical_to_deep_followup": {
+  "6": true,
+  "32": true,
+  "98": true
+ }
+}

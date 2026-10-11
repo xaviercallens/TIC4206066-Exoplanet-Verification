@@ -1,0 +1,381 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - name: solution_id
+#   datatype: int64
+#   description: Solution Identifier
+#   meta: !!omap
+#   - {ucd: meta.version}
+# - name: source_id
+#   datatype: int64
+#   description: Unique source identifier
+#   meta: !!omap
+#   - {ucd: meta.id;meta.main}
+# - name: num_selected_g_fov
+#   datatype: int16
+#   description: Total number of G FOV transits selected for variability analysis
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - name: mean_obs_time_g_fov
+#   unit: d
+#   datatype: float64
+#   description: Mean observation time for G FoV transits
+#   meta: !!omap
+#   - {ucd: time.epoch;stat.mean}
+#   - {utype: 'stc:AstroCoords.Time.TimeInstant'}
+# - name: time_duration_g_fov
+#   unit: d
+#   datatype: float32
+#   description: Time duration of the time series for G FoV transits
+#   meta: !!omap
+#   - {ucd: time.duration}
+# - name: min_mag_g_fov
+#   unit: mag
+#   datatype: float32
+#   description: Minimum G FoV magnitude
+#   meta: !!omap
+#   - {ucd: phot.mag;stat.min}
+# - name: max_mag_g_fov
+#   unit: mag
+#   datatype: float32
+#   description: Maximum G FoV magnitude
+#   meta: !!omap
+#   - {ucd: phot.mag;stat.max}
+# - name: mean_mag_g_fov
+#   unit: mag
+#   datatype: float32
+#   description: Mean G FoV magnitude
+#   meta: !!omap
+#   - {ucd: phot.mag;stat.mean}
+# - name: median_mag_g_fov
+#   unit: mag
+#   datatype: float32
+#   description: Median G FoV magnitude
+#   meta: !!omap
+#   - {ucd: phot.mag;stat.median}
+# - name: range_mag_g_fov
+#   unit: mag
+#   datatype: float32
+#   description: Difference between the highest and lowest G FoV magnitudes
+#   meta: !!omap
+#   - {ucd: phot.mag;em.opt;arith.diff}
+# - name: trimmed_range_mag_g_fov
+#   unit: mag
+#   datatype: float32
+#   description: Trimmed difference between the highest and lowest G FoV magnitudes
+#   meta: !!omap
+#   - {ucd: phot.mag;em.opt;arith.diff}
+# - name: std_dev_mag_g_fov
+#   unit: mag
+#   datatype: float32
+#   description: Square root of the unweighted G FoV magnitude variance
+#   meta: !!omap
+#   - {ucd: stat.stdev;phot.mag;em.opt}
+# - name: skewness_mag_g_fov
+#   datatype: float32
+#   description: Standardized unweighted G FoV magnitude skewness
+#   meta: !!omap
+#   - {ucd: stat.value;phot.mag;em.opt}
+# - name: kurtosis_mag_g_fov
+#   datatype: float32
+#   description: Standardized unweighted G FoV magnitude kurtosis
+#   meta: !!omap
+#   - {ucd: stat.value;phot.mag;em.opt}
+# - name: mad_mag_g_fov
+#   unit: mag
+#   datatype: float32
+#   description: Median Absolute Deviation (MAD) for G FoV transits
+#   meta: !!omap
+#   - {ucd: stat.value;phot.mag;em.opt}
+# - name: abbe_mag_g_fov
+#   datatype: float32
+#   description: Abbe value for G FoV transits
+#   meta: !!omap
+#   - {ucd: stat.value;phot.mag;em.opt}
+# - name: iqr_mag_g_fov
+#   unit: mag
+#   datatype: float32
+#   description: Interquartile range for G FoV transits
+#   meta: !!omap
+#   - {ucd: stat.value;phot.mag;em.opt}
+# - name: stetson_mag_g_fov
+#   datatype: float32
+#   description: Stetson G FoV variability index
+#   meta: !!omap
+#   - {ucd: src.var.index}
+# - name: std_dev_over_rms_err_mag_g_fov
+#   datatype: float32
+#   description: Signal-to-Noise G FoV estimate
+#   meta: !!omap
+#   - {ucd: stat.snr}
+# - name: outlier_median_g_fov
+#   datatype: float32
+#   description: Greatest absolute deviation from the G FoV median normalized by the error
+#   meta: !!omap
+#   - {ucd: stat.fit.param}
+# - name: num_selected_bp
+#   datatype: int16
+#   description: Total number of BP observations selected for variability analysis
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - name: mean_obs_time_bp
+#   unit: d
+#   datatype: float64
+#   description: Mean observation time for BP observations
+#   meta: !!omap
+#   - {ucd: time.epoch;stat.mean}
+#   - {utype: 'stc:AstroCoords.Time.TimeInstant'}
+# - name: time_duration_bp
+#   unit: d
+#   datatype: float32
+#   description: Time duration of the BP time series
+#   meta: !!omap
+#   - {ucd: time.duration}
+# - name: min_mag_bp
+#   unit: mag
+#   datatype: float32
+#   description: Minimum BP magnitude
+#   meta: !!omap
+#   - {ucd: phot.mag;stat.min}
+# - name: max_mag_bp
+#   unit: mag
+#   datatype: float32
+#   description: Maximum BP magnitude
+#   meta: !!omap
+#   - {ucd: phot.mag;stat.max}
+# - name: mean_mag_bp
+#   unit: mag
+#   datatype: float32
+#   description: Mean BP magnitude
+#   meta: !!omap
+#   - {ucd: phot.mag;stat.mean}
+# - name: median_mag_bp
+#   unit: mag
+#   datatype: float32
+#   description: Median BP magnitude
+#   meta: !!omap
+#   - {ucd: phot.mag;stat.median}
+# - name: range_mag_bp
+#   unit: mag
+#   datatype: float32
+#   description: Difference between the highest and lowest BP magnitudes
+#   meta: !!omap
+#   - {ucd: phot.mag;em.opt.B;arith.diff}
+# - name: trimmed_range_mag_bp
+#   unit: mag
+#   datatype: float32
+#   description: Trimmed difference between the highest and lowest BP magnitudes
+#   meta: !!omap
+#   - {ucd: phot.mag;em.opt.B;arith.diff}
+# - name: std_dev_mag_bp
+#   unit: mag
+#   datatype: float32
+#   description: Square root of the unweighted BP magnitude variance
+#   meta: !!omap
+#   - {ucd: stat.stdev;phot.mag;em.opt.B}
+# - name: skewness_mag_bp
+#   datatype: float32
+#   description: Standardized unweighted BP magnitude skewness
+#   meta: !!omap
+#   - {ucd: stat.value;phot.mag;em.opt.B}
+# - name: kurtosis_mag_bp
+#   datatype: float32
+#   description: Standardized unweighted BP magnitude kurtosis
+#   meta: !!omap
+#   - {ucd: stat.value;phot.mag;em.opt.B}
+# - name: mad_mag_bp
+#   unit: mag
+#   datatype: float32
+#   description: Median Absolute Deviation (MAD) for BP observations
+#   meta: !!omap
+#   - {ucd: stat.value;phot.mag;em.opt.B}
+# - name: abbe_mag_bp
+#   datatype: float32
+#   description: Abbe value for BP observations
+#   meta: !!omap
+#   - {ucd: stat.value;phot.mag;em.opt.B}
+# - name: iqr_mag_bp
+#   unit: mag
+#   datatype: float32
+#   description: Interquartile BP magnitude range
+#   meta: !!omap
+#   - {ucd: stat.value;phot.mag;em.opt.B}
+# - name: stetson_mag_bp
+#   datatype: float32
+#   description: Stetson BP variability index
+#   meta: !!omap
+#   - {ucd: src.var.index}
+# - name: std_dev_over_rms_err_mag_bp
+#   datatype: float32
+#   description: Signal-to-Noise BP estimate
+#   meta: !!omap
+#   - {ucd: stat.snr}
+# - name: outlier_median_bp
+#   datatype: float32
+#   description: Greatest absolute deviation from the BP median normalized by the error
+#   meta: !!omap
+#   - {ucd: stat.fit.param}
+# - name: num_selected_rp
+#   datatype: int16
+#   description: Total number of RP observations selected for variability analysis
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - name: mean_obs_time_rp
+#   unit: d
+#   datatype: float64
+#   description: Mean observation time for RP observations
+#   meta: !!omap
+#   - {ucd: time.epoch;stat.mean}
+#   - {utype: 'stc:AstroCoords.Time.TimeInstant'}
+# - name: time_duration_rp
+#   unit: d
+#   datatype: float32
+#   description: Time duration of the RP time series
+#   meta: !!omap
+#   - {ucd: time.duration}
+# - name: min_mag_rp
+#   unit: mag
+#   datatype: float32
+#   description: Minimum RP magnitude
+#   meta: !!omap
+#   - {ucd: phot.mag;stat.min}
+# - name: max_mag_rp
+#   unit: mag
+#   datatype: float32
+#   description: Maximum RP magnitude
+#   meta: !!omap
+#   - {ucd: phot.mag;stat.max}
+# - name: mean_mag_rp
+#   unit: mag
+#   datatype: float32
+#   description: Mean RP magnitude
+#   meta: !!omap
+#   - {ucd: phot.mag;stat.mean}
+# - name: median_mag_rp
+#   unit: mag
+#   datatype: float32
+#   description: Median RP magnitude
+#   meta: !!omap
+#   - {ucd: phot.mag;stat.median}
+# - name: range_mag_rp
+#   unit: mag
+#   datatype: float32
+#   description: Difference between the highest and lowest RP magnitudes
+#   meta: !!omap
+#   - {ucd: phot.mag;em.opt.R;arith.diff}
+# - name: trimmed_range_mag_rp
+#   unit: mag
+#   datatype: float32
+#   description: Trimmed difference between the highest and lowest RP magnitudes
+#   meta: !!omap
+#   - {ucd: phot.mag;em.opt.R;arith.diff}
+# - name: std_dev_mag_rp
+#   unit: mag
+#   datatype: float32
+#   description: Square root of the unweighted RP magnitude variance
+#   meta: !!omap
+#   - {ucd: stat.stdev;phot.mag;em.opt.R}
+# - name: skewness_mag_rp
+#   datatype: float32
+#   description: Standardized unweighted RP magnitude skewness
+#   meta: !!omap
+#   - {ucd: stat.value;phot.mag;em.opt.R}
+# - name: kurtosis_mag_rp
+#   datatype: float32
+#   description: Standardized unweighted RP magnitude kurtosis
+#   meta: !!omap
+#   - {ucd: stat.value;phot.mag;em.opt.R}
+# - name: mad_mag_rp
+#   unit: mag
+#   datatype: float32
+#   description: Median Absolute Deviation (MAD) for RP observations
+#   meta: !!omap
+#   - {ucd: stat.value;phot.mag;em.opt.R}
+# - name: abbe_mag_rp
+#   datatype: float32
+#   description: Abbe value for RP observations
+#   meta: !!omap
+#   - {ucd: stat.value;phot.mag;em.opt.R}
+# - name: iqr_mag_rp
+#   unit: mag
+#   datatype: float32
+#   description: Interquartile RP magnitude range
+#   meta: !!omap
+#   - {ucd: stat.value;phot.mag;em.opt.R}
+# - name: stetson_mag_rp
+#   datatype: float32
+#   description: Stetson RP variability index
+#   meta: !!omap
+#   - {ucd: src.var.index}
+# - name: std_dev_over_rms_err_mag_rp
+#   datatype: float32
+#   description: Signal-to-Noise RP estimate
+#   meta: !!omap
+#   - {ucd: stat.snr}
+# - name: outlier_median_rp
+#   datatype: float32
+#   description: Greatest absolute deviation from the RP median normalized by the error
+#   meta: !!omap
+#   - {ucd: stat.fit.param}
+# - name: in_vari_classification_result
+#   datatype: bool
+#   description: Source is present in \texttt{VariClassifierResult}
+#   meta: !!omap
+#   - {ucd: meta.record}
+# - name: in_vari_rrlyrae
+#   datatype: bool
+#   description: Source is present in \texttt{VariRrlyrae}
+#   meta: !!omap
+#   - {ucd: meta.record}
+# - name: in_vari_cepheid
+#   datatype: bool
+#   description: Source is present in \texttt{VariCepheid}
+#   meta: !!omap
+#   - {ucd: meta.record}
+# - name: in_vari_planetary_transit
+#   datatype: bool
+#   description: Source is present in \texttt{VariPlanetaryTransit}
+#   meta: !!omap
+#   - {ucd: meta.record}
+# - name: in_vari_short_timescale
+#   datatype: bool
+#   description: Source is present in \texttt{VariShortTimescale}
+#   meta: !!omap
+#   - {ucd: meta.record}
+# - name: in_vari_long_period_variable
+#   datatype: bool
+#   description: Source is present in \texttt{VariLongPeriodVariable}
+#   meta: !!omap
+#   - {ucd: meta.record}
+# - name: in_vari_eclipsing_binary
+#   datatype: bool
+#   description: Source is present in \texttt{VariEclipsingBinary}
+#   meta: !!omap
+#   - {ucd: meta.record}
+# - name: in_vari_rotation_modulation
+#   datatype: bool
+#   description: Source is present in \texttt{VariRotationModulation}
+#   meta: !!omap
+#   - {ucd: meta.record}
+# - name: in_vari_ms_oscillator
+#   datatype: bool
+#   description: Source is present in \texttt{VariMsOscillator}
+#   meta: !!omap
+#   - {ucd: meta.record}
+# - name: in_vari_agn
+#   datatype: bool
+#   description: Source is present in \texttt{VariAgn}
+#   meta: !!omap
+#   - {ucd: meta.record}
+# - name: in_vari_microlensing
+#   datatype: bool
+#   description: Source is present in \texttt{VariMicrolensing}
+#   meta: !!omap
+#   - {ucd: meta.record}
+# - name: in_vari_compact_companion
+#   datatype: bool
+#   description: Source is present in \texttt{VariCompactCompanion}
+#   meta: !!omap
+#   - {ucd: meta.record}
+# schema: astropy-2.0
+solution_id source_id num_selected_g_fov mean_obs_time_g_fov time_duration_g_fov min_mag_g_fov max_mag_g_fov mean_mag_g_fov median_mag_g_fov range_mag_g_fov trimmed_range_mag_g_fov std_dev_mag_g_fov skewness_mag_g_fov kurtosis_mag_g_fov mad_mag_g_fov abbe_mag_g_fov iqr_mag_g_fov stetson_mag_g_fov std_dev_over_rms_err_mag_g_fov outlier_median_g_fov num_selected_bp mean_obs_time_bp time_duration_bp min_mag_bp max_mag_bp mean_mag_bp median_mag_bp range_mag_bp trimmed_range_mag_bp std_dev_mag_bp skewness_mag_bp kurtosis_mag_bp mad_mag_bp abbe_mag_bp iqr_mag_bp stetson_mag_bp std_dev_over_rms_err_mag_bp outlier_median_bp num_selected_rp mean_obs_time_rp time_duration_rp min_mag_rp max_mag_rp mean_mag_rp median_mag_rp range_mag_rp trimmed_range_mag_rp std_dev_mag_rp skewness_mag_rp kurtosis_mag_rp mad_mag_rp abbe_mag_rp iqr_mag_rp stetson_mag_rp std_dev_over_rms_err_mag_rp outlier_median_rp in_vari_classification_result in_vari_rrlyrae in_vari_cepheid in_vari_planetary_transit in_vari_short_timescale in_vari_long_period_variable in_vari_eclipsing_binary in_vari_rotation_modulation in_vari_ms_oscillator in_vari_agn in_vari_microlensing in_vari_compact_companion

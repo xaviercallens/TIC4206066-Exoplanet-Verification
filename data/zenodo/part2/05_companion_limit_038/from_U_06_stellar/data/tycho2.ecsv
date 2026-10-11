@@ -1,0 +1,320 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - name: _r
+#   datatype: float64
+#   format: '{:6.3f}'
+#   description: Distance from center ( 80.85983328 -1.32696906)[FK5/J2000], at Epoch of catalog (EpRA-1990)
+#   meta: !!omap
+#   - {ucd: POS_ANG_DIST_GENERAL}
+#   - {width: 6}
+#   - {precision: '3'}
+# - name: recno
+#   datatype: int32
+#   description: Record number assigned by the VizieR team. Should Not be used for identification.
+#   meta: !!omap
+#   - {ucd: RECORD}
+#   - {width: 8}
+# - name: TYC1
+#   datatype: int16
+#   description: '[1,9537]+= TYC1 from TYC or GSC (1)'
+#   meta: !!omap
+#   - {ucd: 'ID_MAIN:1'}
+#   - {width: 4}
+# - name: TYC2
+#   datatype: int16
+#   description: '[1,12121] TYC2 from TYC or GSC (1)'
+#   meta: !!omap
+#   - {ucd: 'ID_MAIN:2'}
+#   - {width: 5}
+# - name: TYC3
+#   datatype: uint8
+#   description: '[1,3] TYC3 from TYC (1)'
+#   meta: !!omap
+#   - {ucd: 'ID_MAIN:3'}
+#   - {width: 1}
+# - name: pflag
+#   datatype: string
+#   description: '[ PX] mean position flag (2)'
+#   meta: !!omap
+#   - {ucd: CODE_MISC}
+#   - {_votable_string_dtype: char}
+# - name: RAmdeg
+#   unit: deg
+#   datatype: float64
+#   format: '{:12.8f}'
+#   description: '[]? Mean Right Asc, ICRS, epoch=J2000 (3)'
+#   meta: !!omap
+#   - {ucd: POS_EQ_RA_OTHER}
+#   - {width: 12}
+#   - {precision: '8'}
+#   - values: {'null': .nan}
+# - name: DEmdeg
+#   unit: deg
+#   datatype: float64
+#   format: '{:12.8f}'
+#   description: '[]? Mean Decl, ICRS, at epoch=J2000 (3)'
+#   meta: !!omap
+#   - {ucd: POS_EQ_DEC_OTHER}
+#   - {width: 12}
+#   - {precision: '8'}
+#   - values: {'null': .nan}
+# - name: pmRA
+#   unit: mas / yr
+#   datatype: float32
+#   format: '{:7.1f}'
+#   description: '[-4418.0,6544.2]? prop. mot. in RA*cos(dec)'
+#   meta: !!omap
+#   - {ucd: POS_EQ_PMRA}
+#   - {width: 7}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: pmDE
+#   unit: mas / yr
+#   datatype: float32
+#   format: '{:7.1f}'
+#   description: '[-5774.3,10277.3]? prop. mot. in Dec'
+#   meta: !!omap
+#   - {ucd: POS_EQ_PMDEC}
+#   - {width: 7}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: e_RAmdeg
+#   unit: mas
+#   datatype: int16
+#   description: '[3,183]? s.e. RA*cos(dec),at mean epoch (5)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 3}
+#   - values: {'null': -32768}
+# - name: e_DEmdeg
+#   unit: mas
+#   datatype: int16
+#   description: '[1,184]? s.e. of Dec at mean epoch (5)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 3}
+#   - values: {'null': -32768}
+# - name: e_pmRA
+#   unit: mas / yr
+#   datatype: float32
+#   format: '{:4.1f}'
+#   description: '[0.2,11.5]? s.e. prop mot in RA*cos(dec)(5)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 4}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: e_pmDE
+#   unit: mas / yr
+#   datatype: float32
+#   format: '{:4.1f}'
+#   description: '[0.2,10.3]? s.e. of proper motion in Dec(5)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 4}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: EpRAm
+#   unit: yr
+#   datatype: float32
+#   format: '{:7.2f}'
+#   description: '[1915.95,1992.53]? mean epoch of RA (4)'
+#   meta: !!omap
+#   - {ucd: TIME_EPOCH}
+#   - {width: 7}
+#   - {precision: '2'}
+#   - values: {'null': .nan}
+# - name: EpDEm
+#   unit: yr
+#   datatype: float32
+#   format: '{:7.2f}'
+#   description: '[1911.94,1992.01]? mean epoch of Dec (4)'
+#   meta: !!omap
+#   - {ucd: TIME_EPOCH}
+#   - {width: 7}
+#   - {precision: '2'}
+#   - values: {'null': .nan}
+# - name: Num
+#   datatype: int16
+#   description: '[2,36]? Number of positions used'
+#   meta: !!omap
+#   - {ucd: ID_NUMBER}
+#   - {width: 2}
+#   - values: {'null': -32768}
+# - name: q_RAmdeg
+#   datatype: float32
+#   format: '{:4.1f}'
+#   description: '[0.0,9.9]? Goodness of fit for mean RA (6)'
+#   meta: !!omap
+#   - {ucd: CODE_QUALITY}
+#   - {width: 4}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: q_DEmdeg
+#   datatype: float32
+#   format: '{:4.1f}'
+#   description: '[0.0,9.9]? Goodness of fit for mean Dec (6)'
+#   meta: !!omap
+#   - {ucd: CODE_QUALITY}
+#   - {width: 4}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: q_pmRA
+#   datatype: float32
+#   format: '{:4.1f}'
+#   description: '[0.0,9.9]? Goodness of fit for pmRA (6)'
+#   meta: !!omap
+#   - {ucd: CODE_QUALITY}
+#   - {width: 4}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: q_pmDE
+#   datatype: float32
+#   format: '{:4.1f}'
+#   description: '[0.0,9.9]? Goodness of fit for pmDE (6)'
+#   meta: !!omap
+#   - {ucd: CODE_QUALITY}
+#   - {width: 4}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: BTmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[2.183,16.581]? Tycho-2 BT magnitude (7)'
+#   meta: !!omap
+#   - {ucd: PHOT_TYCHO_B}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_BTmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0.014,1.977]? s.e. of BT (7)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: VTmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[1.905,15.193]? Tycho-2 VT magnitude (7)'
+#   meta: !!omap
+#   - {ucd: PHOT_TYCHO_V}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_VTmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0.009,1.468]? s.e. of VT (7)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: prox
+#   datatype: int16
+#   description: '[3,999] proximity indicator (8)'
+#   meta: !!omap
+#   - {ucd: CODE_MISC}
+#   - {width: 3}
+# - name: TYC
+#   datatype: string
+#   description: '[T] Tycho-1 star (9)'
+#   meta: !!omap
+#   - {ucd: CODE_MISC}
+#   - {_votable_string_dtype: char}
+# - name: HIP
+#   datatype: int32
+#   description: '[1,120404]? Hipparcos number'
+#   meta: !!omap
+#   - {ucd: ID_ALTERNATIVE}
+#   - {width: 6}
+#   - values: {'null': -2147483648}
+# - name: CCDM
+#   datatype: string
+#   description: CCDM component identifier for HIP stars(10)
+#   meta: !!omap
+#   - {ucd: CODE_MULT_INDEX}
+#   - {_votable_string_dtype: char}
+# - name: RA(ICRS)
+#   unit: deg
+#   datatype: float64
+#   format: '{:12.8f}'
+#   description: Observed Tycho-2 Right Ascension, ICRS
+#   meta: !!omap
+#   - {ucd: POS_EQ_RA_MAIN}
+#   - {width: 12}
+#   - {precision: '8'}
+# - name: DE(ICRS)
+#   unit: deg
+#   datatype: float64
+#   format: '{:12.8f}'
+#   description: Observed Tycho-2 Declination, ICRS
+#   meta: !!omap
+#   - {ucd: POS_EQ_DEC_MAIN}
+#   - {width: 12}
+#   - {precision: '8'}
+# - name: EpRA-1990
+#   unit: yr
+#   datatype: float32
+#   format: '{:5.2f}'
+#   description: '[0.81,2.13] epoch-1990 of RAdeg'
+#   meta: !!omap
+#   - {ucd: TIME_EPOCH}
+#   - {width: 5}
+#   - {precision: '2'}
+# - name: EpDE-1990
+#   unit: yr
+#   datatype: float32
+#   format: '{:5.2f}'
+#   description: '[0.72,2.36] epoch-1990 of DEdeg'
+#   meta: !!omap
+#   - {ucd: TIME_EPOCH}
+#   - {width: 5}
+#   - {precision: '2'}
+# - name: e_RAdeg
+#   unit: mas
+#   datatype: float32
+#   format: '{:5.1f}'
+#   description: s.e.RA*cos(dec), of observed Tycho-2 RA (5)
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 5}
+#   - {precision: '1'}
+# - name: e_DEdeg
+#   unit: mas
+#   datatype: float32
+#   format: '{:5.1f}'
+#   description: s.e. of observed Tycho-2 Dec (5)
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 5}
+#   - {precision: '1'}
+# - name: posflg
+#   datatype: string
+#   description: '[ DP] type of Tycho-2 solution (11)'
+#   meta: !!omap
+#   - {ucd: FIT_TYPE}
+#   - {_votable_string_dtype: char}
+# - name: corr
+#   datatype: float32
+#   format: '{:4.1f}'
+#   description: '[-1,1] correlation (RAdeg,DEdeg)'
+#   meta: !!omap
+#   - {ucd: STAT_CORRELATION}
+#   - {width: 4}
+#   - {precision: '1'}
+# meta: !!omap
+# - {ID: I_259_tyc2}
+# - {name: I/259/tyc2}
+# - {description: '*The Tycho-2 main catalogue'}
+# schema: astropy-2.0
+_r recno TYC1 TYC2 TYC3 pflag RAmdeg DEmdeg pmRA pmDE e_RAmdeg e_DEmdeg e_pmRA e_pmDE EpRAm EpDEm Num q_RAmdeg q_DEmdeg q_pmRA q_pmDE BTmag e_BTmag VTmag e_VTmag prox TYC HIP CCDM RA(ICRS) DE(ICRS) EpRA-1990 EpDE-1990 e_RAdeg e_DEdeg posflg corr
+1.688 1225044 4753 1591 1 "" 80.85982279 -1.32727159 -5.4 69.8 46 57 1.5 1.5 1979.91 1973.02 4 2.4 1.4 2.5 1.4 13.424 0.403 11.241 0.095 999 "" "" "" 80.8597925 -1.32743611 1.92 1.96 66.6 84.2 "" 0.1

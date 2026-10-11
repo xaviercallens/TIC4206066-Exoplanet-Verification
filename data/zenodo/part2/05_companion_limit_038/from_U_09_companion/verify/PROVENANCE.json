@@ -1,0 +1,5 @@
+{"downloads":[
+ {"file":"gaia_source_dm.html","url":"https://gea.esac.esa.int/archive/documentation/GDR3/Gaia_archive/chap_datamodel/sec_dm_main_source_catalogue/ssec_dm_gaia_source.html","sha256":"800bf953fa4d5b63c4f7dabe024753eb4fc987833b6265e57ec5030d9d558c0c","utc":"2026-09-25T12:20Z"},
+ {"file":"v4_ruwe_sample.csv","url":"https://gea.esac.esa.int/tap-server/tap/sync","query_file":"v4_ruwe_query.txt","sha256":"e41f3cdcb6221104c12bb49d8b03c85f563418cb19789d426cb6e0975926a1f1","utc":"2026-09-25T12:2xZ"}],
+ "inputs_from_00_data":["mast/hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_lc.fits","mast/tess2020324010417-s0032-0000000004206066-0200-s_lc.fits","mast/hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01_llc.fits","catalogs/gaiadr3_gaia_source_cone240as.ecsv"],
+ "scripts":["v1_trice_prior.py (TRICE_PY)","v2_hosts.py (TRICE_PY)","v3_fit.py A|B (AUDIT_PY)"]}

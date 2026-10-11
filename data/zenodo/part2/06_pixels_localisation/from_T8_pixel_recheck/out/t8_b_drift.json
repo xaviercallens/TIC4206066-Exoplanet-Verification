@@ -1,0 +1,18 @@
+{
+ "-164": {
+  "core_range_pct_30min_bins": 3.1843809796085014,
+  "core_range_pct_unbinned": 4.764033874110495,
+  "centroid_range_mpix_30min_bins_x_y": [
+   11.265073312131445,
+   38.08831306632826
+  ]
+ },
+ "-162": {
+  "core_range_pct_30min_bins": 0.8404364484473715,
+  "core_range_pct_unbinned": 3.7736874249331724,
+  "centroid_range_mpix_30min_bins_x_y": [
+   1.504524065923385,
+   4.077399266681048
+  ]
+ }
+}

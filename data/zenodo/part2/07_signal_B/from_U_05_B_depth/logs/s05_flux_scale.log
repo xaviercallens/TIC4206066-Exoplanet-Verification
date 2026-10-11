@@ -1,0 +1,26 @@
+S6 S6_tessspoc_pdc        A depth    538 ±   57 (n= 6, sig   204 ppm/30.0 min)
+S6 S6_tessspoc_sap        A depth    687 ±   57 (n= 6, sig   204 ppm/30.0 min)  regress vs S6_tessspoc_pdc: 1.013..1.251 r=0.90
+S6 S6_qlp_ksp             A depth    501 ±   92 (n= 3, sig   199 ppm/30.0 min)  regress vs S6_tessspoc_pdc: 0.895..1.195 r=0.87
+S6 S6_qlp_sap             A depth    496 ±   93 (n= 3, sig   202 ppm/30.0 min)  regress vs S6_tessspoc_pdc: 0.897..1.228 r=0.85
+S6 S6_tglc_aper           A depth    974 ±   77 (n= 6, sig   275 ppm/30.0 min)  regress vs S6_tessspoc_pdc: 0.762..3.006 r=0.50
+S6 S6_eleanor_corr        A depth    728 ±   87 (n= 5, sig   272 ppm/30.0 min)  regress vs S6_tessspoc_pdc: 0.851..1.865 r=0.67
+S6 own6_r1.5              A depth    891 ±   76 (n= 6, sig   273 ppm/30.0 min)  regress vs S6_tessspoc_pdc: 0.707..3.340 r=0.46
+S6 own6_r2.0              A depth    772 ±   64 (n= 6, sig   229 ppm/30.0 min)  regress vs S6_tessspoc_pdc: 0.696..2.264 r=0.55
+S6 own6_r2.5              A depth    656 ±   61 (n= 6, sig   218 ppm/30.0 min)  regress vs S6_tessspoc_pdc: 0.688..2.017 r=0.58
+S6 own6_r3.0              A depth    632 ±   67 (n= 6, sig   242 ppm/30.0 min)  regress vs S6_tessspoc_pdc: 0.689..2.165 r=0.56
+S32 S32_spoc2m_pdc         A depth    454 ±   49 (n= 8, sig   852 ppm/2.0 min)
+S32 S32_spoc2m_sap         A depth    476 ±   52 (n= 8, sig   921 ppm/2.0 min)  regress vs S32_spoc2m_pdc: 0.788..1.220 r=0.80
+S32 S32_tessspoc10_pdc     A depth    459 ±   53 (n= 8, sig   411 ppm/10.0 min)  regress vs S32_spoc2m_pdc: 0.711..1.206 r=0.77
+S32 S32_qlp_ksp            A depth    350 ±   51 (n= 8, sig   392 ppm/10.0 min)  regress vs S32_spoc2m_pdc: 0.554..1.324 r=0.65
+S32 S32_qlp_sap            A depth    387 ±   51 (n= 8, sig   392 ppm/10.0 min)  regress vs S32_spoc2m_pdc: 0.648..1.265 r=0.72
+S32 own32_r1.5             A depth    491 ±   76 (n= 8, sig   590 ppm/10.0 min)  regress vs S32_spoc2m_pdc: 0.673..2.639 r=0.51
+S32 own32_r2.0             A depth    482 ±   56 (n= 8, sig   436 ppm/10.0 min)  regress vs S32_spoc2m_pdc: 0.524..1.966 r=0.52
+S32 own32_r2.5             A depth    470 ±   58 (n= 8, sig   452 ppm/10.0 min)  regress vs S32_spoc2m_pdc: 0.625..1.653 r=0.62
+S32 own32_r3.0             A depth    469 ±   59 (n= 8, sig   459 ppm/10.0 min)  regress vs S32_spoc2m_pdc: 0.624..1.693 r=0.61
+S98 S98_qlp_sysrm          A depth    511 ±   45 (n= 9, sig   620 ppm/3.3 min)
+S98 S98_qlp_det            A depth    472 ±   45 (n= 9, sig   612 ppm/3.3 min)  regress vs S98_qlp_sysrm: 0.829..1.128 r=0.86
+S98 S98_qlp_sap            A depth    502 ±   45 (n= 9, sig   625 ppm/3.3 min)  regress vs S98_qlp_sysrm: 0.750..1.289 r=0.76
+S98 own98_r1.5             A depth    565 ±   52 (n= 9, sig   719 ppm/3.3 min)  regress vs S98_qlp_sysrm: 0.759..1.701 r=0.67
+S98 own98_r2.0             A depth    514 ±   49 (n= 9, sig   677 ppm/3.3 min)  regress vs S98_qlp_sysrm: 0.645..1.413 r=0.67
+S98 own98_r2.5             A depth    538 ±   49 (n= 9, sig   667 ppm/3.3 min)  regress vs S98_qlp_sysrm: 0.623..1.371 r=0.67
+S98 own98_r3.0             A depth    531 ±   50 (n= 9, sig   686 ppm/3.3 min)  regress vs S98_qlp_sysrm: 0.597..1.506 r=0.63

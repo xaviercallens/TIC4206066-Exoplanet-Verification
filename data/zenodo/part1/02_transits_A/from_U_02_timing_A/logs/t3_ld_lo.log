@@ -1,0 +1,8 @@
+variant ld_lo: template T14 = 1.887 h, a/R* = 12.375
+ iteration 0: n=23 selected=20 -> T0=3998.73612 P=3.18278122
+ iteration 1: n=23 selected=20 -> T0=3998.73612 P=3.18278123
+Traceback (most recent call last):
+  File "/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/02_timing_A/t3_real_events.py", line 113, in <module>
+    json.dump(dict(variant=variant, template=dict(T14_h=T14 * 24, a_rs=tpl.pm.a, inc=tpl.pm.inc, **C.SHAPE, **tplkw),
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: dict() got multiple values for keyword argument 'u1'

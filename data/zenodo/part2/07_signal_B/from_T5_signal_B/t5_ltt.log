@@ -1,0 +1,23 @@
+{
+ "31": {
+  "bjd_tdb": 2461345.9799400005,
+  "utc_no_lighttime": "2026-11-01 11:29:57.634",
+  "barycentric_ltt_min": 5.609004062137125,
+  "audit_eph_utc_no_lighttime": "2026-11-01 11:31:27.554",
+  "pubprep_exact_eph_utc_no_lighttime": "2026-11-01 11:29:54.247"
+ },
+ "32": {
+  "bjd_tdb": 2461357.1126800003,
+  "utc_no_lighttime": "2026-11-12 14:41:06.369",
+  "barycentric_ltt_min": 6.4448791555608,
+  "audit_eph_utc_no_lighttime": "2026-11-12 14:42:36.754",
+  "pubprep_exact_eph_utc_no_lighttime": "2026-11-12 14:41:02.874"
+ },
+ "33": {
+  "bjd_tdb": 2461368.24542,
+  "utc_no_lighttime": "2026-11-23 17:52:15.105",
+  "barycentric_ltt_min": 7.0355056989964,
+  "audit_eph_utc_no_lighttime": "2026-11-23 17:53:45.955",
+  "pubprep_exact_eph_utc_no_lighttime": "2026-11-23 17:52:11.501"
+ }
+}

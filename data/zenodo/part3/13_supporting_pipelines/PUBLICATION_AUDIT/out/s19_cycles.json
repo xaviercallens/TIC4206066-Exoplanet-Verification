@@ -1,0 +1,56 @@
+{
+ "A": {
+  "S98_only_period_trapezoid": [
+   3.1822009419066926,
+   0.00030882543496323436
+  ],
+  "S98_only_epoch": 3998.739439263137,
+  "S32": {
+   "cycles": 569,
+   "alias_period_spacing_d": 0.005593647264775506,
+   "spacing_in_sigma_of_S98_period": 18.11265081012977,
+   "joint_minus_S98_period_sigma": 1.8921749454993355
+  },
+  "S6": {
+   "cycles": 792,
+   "alias_period_spacing_d": 0.004018668300072302,
+   "spacing_in_sigma_of_S98_period": 13.01275039263111,
+   "joint_minus_S98_period_sigma": 1.8921749454993355
+  },
+  "chi2_vs_cycle_offset": {
+   "-2": 821715.0979212141,
+   "-1": 206749.69633955834,
+   "0": 47.51368531059628,
+   "1": 205540.13410578904,
+   "2": 827196.6190782429
+  },
+  "n_events_used": 21
+ },
+ "B": {
+  "S98_only_period_trapezoid": [
+   11.133874365007639,
+   0.001101511300860871
+  ],
+  "S98_only_epoch": 4000.865724493904,
+  "S32": {
+   "cycles": 163,
+   "alias_period_spacing_d": 0.06829905141128303,
+   "spacing_in_sigma_of_S98_period": 62.00485765139663,
+   "joint_minus_S98_period_sigma": -1.0249417937176053
+  },
+  "S6": {
+   "cycles": 227,
+   "alias_period_spacing_d": 0.04904293118959971,
+   "spacing_in_sigma_of_S98_period": 44.52331188183987,
+   "joint_minus_S98_period_sigma": -1.0249417937176053
+  },
+  "chi2_vs_cycle_offset": {
+   "-2": 1717052.6059955915,
+   "-1": 431434.64587291266,
+   "0": 9.756329240016232,
+   "1": 448335.641302061,
+   "2": 1802726.3059361433
+  },
+  "n_events_used": 4
+ }
+}

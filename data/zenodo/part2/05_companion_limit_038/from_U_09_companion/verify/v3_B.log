@@ -1,0 +1,11 @@
+6 67 sigma ppm 128
+32 784 sigma ppm 800
+98 762 sigma ppm 641
+{'signal': 'B', 'target_free': {'chi2': np.float64(1750.9412900618204), 'k': 0.03390034835415611, 'b': 0.8877047135636718, 'rho': 2.3740357620574892}, 'target_rho_max_dchi2_4': 'f(a) and f(b) must have different signs'}
+{'M': 0.1, 'R': 0.124, 'rho': 51.877, 'fh': 0.008, 'dchi2_circ': np.float64(22.737), 'b_circ': 0.0, 'k_circ': 0.353, 'dchi2_free': np.float64(0.966), 'rho_app': 25.461}
+{'M': 0.14, 'R': 0.169, 'rho': 28.76, 'fh': 0.02, 'dchi2_circ': np.float64(1.476), 'b_circ': 0.0, 'k_circ': 0.208, 'dchi2_free': np.float64(-0.055), 'rho_app': 24.545}
+{'M': 0.17, 'R': 0.201, 'rho': 20.965, 'fh': 0.034, 'dchi2_circ': np.float64(-0.18), 'b_circ': 0.299, 'k_circ': 0.157, 'dchi2_free': np.float64(-0.201), 'rho_app': 22.775}
+{'M': 0.26, 'R': 0.285, 'rho': 11.2, 'fh': 0.095, 'dchi2_circ': np.float64(-0.109), 'b_circ': 0.632, 'k_circ': 0.098, 'dchi2_free': np.float64(-0.11), 'rho_app': 11.394}
+{'M': 0.37, 'R': 0.381, 'rho': 6.687, 'fh': 0.176, 'dchi2_circ': np.float64(-0.041), 'b_circ': 0.758, 'k_circ': 0.074, 'dchi2_free': np.float64(-0.074), 'rho_app': 7.46}
+{'M': 0.5, 'R': 0.502, 'rho': 3.952, 'fh': 0.301, 'dchi2_circ': np.float64(0.098), 'b_circ': 0.839, 'k_circ': 0.059, 'dchi2_free': np.float64(-0.034), 'rho_app': 5.198}
+{'M': 0.606, 'R': 0.623, 'rho': 2.51, 'fh': 0.5, 'dchi2_circ': np.float64(0.232), 'b_circ': 0.885, 'k_circ': 0.048, 'dchi2_free': np.float64(0.005), 'rho_app': 3.716}

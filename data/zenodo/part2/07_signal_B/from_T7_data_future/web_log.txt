@@ -1,0 +1,4 @@
+2026-09-25T15:29:31Z GET https://api.crossref.org/works/10.3847/2515-5172/ae5790 -> web/crossref_ae5790.json
+~2026-09-25T15:28Z (logged 15:29:31Z) WebFetch https://archive.stsci.edu/hlsp/qlp (TGLC as of Sector 94 statement confirmed; refs Huang 2020a,b, Kunimoto 2021, 2022; DOI 10.17909/t9-r086-e880) ; WebSearch 'QLP Data Release Notes 004' ; WebFetch https://iopscience.iop.org/article/10.3847/2515-5172/ae5790 (RNAAS 10, 69, 2026 March)
+2026-09-25T15:30:11Z GET https://tess.mit.edu/public/files/TESS_orbit_times.csv -> web/TESS_orbit_times.csv sha256 2c32836e384b342fa25cb62f0d11ed1de5fbd50e7ccea8f50b577682dca8a6e5
+(~15:31Z) WebFetch https://tess.mit.edu/observations/ : points to TESS_orbit_times.csv; 'science observations will stop 10 minutes before each contact begins and resume 5 minutes before the contact ends'

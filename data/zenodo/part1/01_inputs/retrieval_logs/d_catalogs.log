@@ -1,0 +1,18 @@
+In preparation for Gaia DR4, the Gaia archive is in evolution. Unfortunately, it may be unstable at times and particular types of queries may time out. Please consider registering for a user account (https://www.cosmos.esa.int/web/gaia-users/register). For questions or advice, please contact the Gaia helpdesk (https://www.cosmos.esa.int/web/gaia/gaia-helpdesk).
+gaiadr3_gaia_source_cone240as 167 rows 153 cols
+gaiadr3_nss_two_body_orbit_target 0 rows 77 cols
+gaiadr3_nss_acceleration_astro_target 0 rows 29 cols
+gaiadr3_nss_non_linear_spectro_target 0 rows 16 cols
+gaiadr3_nss_vim_fl_target 0 rows 27 cols
+gaiadr3_vari_summary_target 0 rows 68 cols
+WARNING: UnitsWarning: The unit 'angstrom' has been deprecated in the VOUnit standard. Suggested: 0.1nm. [astropy.units.format.base]
+gaiadr3_astrophysical_parameters_target 1 rows 226 cols
+bailerjones2021_I352 1 rows 10 cols
+2mass_psc_II246 1 rows 62 cols
+allwise_II328 1 rows 77 cols
+catwise2020_II365 2 rows 73 cols
+tycho2_I259 1 rows 37 cols
+apass_dr9_II336 1 rows 25 cols
+galex_gr67_ais_II335 NO ROWS
+tic82_cone300as 254 rows 125 cols
+DONE

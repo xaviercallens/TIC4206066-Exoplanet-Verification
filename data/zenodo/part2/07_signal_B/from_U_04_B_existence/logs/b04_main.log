@@ -1,0 +1,16 @@
+pipe      6+32     W1_manuscript        kept     obs 9.75 at P 11.132767  null med 3.08 p99 5.80 max 9.37  n>=obs 0/50000  FAP 2.00e-05  windows 8  beta [1.08 1.13]  (35s)
+    events: [(6, 1473.73, 646, 152), (6, 1484.863, 1096, 152), (32, 2175.094, 781, 215), (32, 2186.227, None, None), (32, 2197.36, 980, 238)]
+pipe      6        W1_manuscript        kept     obs 8.52 at P 11.132698  null med 2.92 p99 7.19 max 7.21  n>=obs 0/50000  FAP 2.00e-05  windows 8  beta [1.08]  (18s)
+    events: [(6, 1473.746, 755, 156), (6, 1484.878, 1095, 152)]
+pipe      32       W1_manuscript        kept     obs 5.54 at P 11.132783  null med 2.89 p99 6.41 max 6.75  n>=obs 975/50000  FAP 1.95e-02  windows 8  beta [1.13]  (22s)
+    events: [(32, 2175.092, 814, 218), (32, 2186.225, None, None), (32, 2197.357, 999, 241)]
+pipe      6+32     W1_manuscript        removed  obs 9.75 at P 11.132767  null med 2.86 p99 4.85 max 6.44  n>=obs 0/50000  FAP 2.00e-05  windows 8  beta [1.08 1.13]  (35s)
+    events: [(6, 1473.73, 646, 152), (6, 1484.863, 1096, 152), (32, 2175.094, 781, 215), (32, 2186.227, None, None), (32, 2197.36, 980, 238)]
+pipe      6        W1_manuscript        removed  obs 8.52 at P 11.132698  null med 2.71 p99 3.96 max 4.58  n>=obs 0/50000  FAP 2.00e-05  windows 8  beta [1.08]  (16s)
+    events: [(6, 1473.746, 755, 156), (6, 1484.878, 1095, 152)]
+pipe      32       W1_manuscript        removed  obs 5.54 at P 11.132783  null med 2.83 p99 6.44 max 6.95  n>=obs 923/50000  FAP 1.85e-02  windows 8  beta [1.13]  (21s)
+    events: [(32, 2175.092, 814, 218), (32, 2186.225, None, None), (32, 2197.357, 999, 241)]
+own       6+32     W1_manuscript        kept     obs 7.33 at P 11.132698  null med 3.05 p99 5.09 max 8.20  n>=obs 1/50000  FAP 4.00e-05  windows 8  beta [1.14 1.  ]  (35s)
+    events: [(6, 1473.746, 858, 194), (6, 1484.878, 908, 190), (32, 2175.106, 612, 228), (32, 2186.238, None, None), (32, 2197.371, 596, 248)]
+own       6        W1_manuscript        kept     obs 6.51 at P 11.132698  null med 3.21 p99 4.91 max 5.66  n>=obs 0/50000  FAP 2.00e-05  windows 8  beta [1.14]  (16s)
+    events: [(6, 1473.746, 858, 194), (6, 1484.878, 908, 190)]

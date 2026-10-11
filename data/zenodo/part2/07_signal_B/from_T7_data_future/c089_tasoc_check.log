@@ -1,0 +1,10 @@
+/Users/paulsmith/space <3/tess-jev/addenda/independent_verification_tic4206066_SEALED/scripts/lcio.py:63: RuntimeWarning: divide by zero encountered in divide
+  out = dict(t=t[ok], f=f[ok] / med, e=e[ok] / med, name=name, t_all=t, q_all=np.asarray(q))
+/Users/paulsmith/space <3/tess-jev/addenda/independent_verification_tic4206066_SEALED/scripts/lcio.py:63: RuntimeWarning: invalid value encountered in divide
+  out = dict(t=t[ok], f=f[ok] / med, e=e[ok] / med, name=name, t_all=t, q_all=np.asarray(q))
+/Users/paulsmith/space <3/tess-jev/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:132: RuntimeWarning: invalid value encountered in reduce
+  ret = umr_sum(arr, axis, dtype, out, keepdims, where=where)
+/Users/paulsmith/space <3/tess-jev/addenda/independent_verification_tic4206066_SEALED/scripts/lcio.py:107: RuntimeWarning: invalid value encountered in divide
+  return f / trend, np.isfinite(trend)
+TASOC_S06 good points: 987
+kept after fast_detrend: 0 finite fd: 0

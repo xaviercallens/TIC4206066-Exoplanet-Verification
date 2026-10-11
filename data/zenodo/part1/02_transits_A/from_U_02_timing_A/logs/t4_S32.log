@@ -1,0 +1,21 @@
+S32: 100 accepted / 149 tries, 7 s
+S32: 200 accepted / 300 tries, 14 s
+S32: 300 accepted / 454 tries, 21 s
+S32: 400 accepted / 597 tries, 28 s
+S32: 500 accepted / 761 tries, 34 s
+S32: 600 accepted / 907 tries, 42 s
+S32: 700 accepted / 1071 tries, 50 s
+S32: 800 accepted / 1230 tries, 57 s
+S32: 900 accepted / 1389 tries, 64 s
+S32: 1000 accepted / 1548 tries, 71 s
+S32: 1100 accepted / 1691 tries, 78 s
+S32: 1200 accepted / 1848 tries, 85 s
+S32: 1300 accepted / 2008 tries, 92 s
+S32: 1400 accepted / 2145 tries, 98 s
+S32: 1500 accepted / 2303 tries, 105 s
+S32: 1600 accepted / 2452 tries, 112 s
+S32: 1700 accepted / 2614 tries, 119 s
+S32: 1800 accepted / 2770 tries, 126 s
+S32: 1900 accepted / 2909 tries, 133 s
+S32: 2000 accepted / 3049 tries, 140 s
+done 32 2000 3049 Dinj 0.0005548680771535885

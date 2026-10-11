@@ -1,0 +1,1 @@
+SELECT * FROM gaiadr3.nss_non_linear_spectro WHERE source_id = 3220388198192519424

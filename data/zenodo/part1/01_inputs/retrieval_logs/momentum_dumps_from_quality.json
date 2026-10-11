@@ -1,0 +1,769 @@
+[
+ {
+  "product": "mast/hlsp_gsfc-eleanor-lite_tess_ffi_s0006-0000000004206066_tess_v1.0_lc.fits",
+  "sector": 6,
+  "quality_column": "QUALITY",
+  "n_cadences": 993,
+  "n_bit32_flagged": 6,
+  "n_bit32_flagged_nan_time": 0,
+  "bits_set_counts": {
+   "bit3_value4": 6,
+   "bit6_value32": 6,
+   "bit8_value128": 89,
+   "bit18_value131072": 49,
+   "bit19_value262144": 17
+  },
+  "events": [
+   {
+    "t_first_btjd": 1468.391139,
+    "t_last_btjd": 1468.391139,
+    "t_mid_btjd": 1468.391139,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1471.51611,
+    "t_last_btjd": 1471.51611,
+    "t_mid_btjd": 1471.51611,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1474.641066,
+    "t_last_btjd": 1474.641066,
+    "t_mid_btjd": 1474.641066,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1481.286753,
+    "t_last_btjd": 1481.286753,
+    "t_mid_btjd": 1481.286753,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1484.411661,
+    "t_last_btjd": 1484.411661,
+    "t_mid_btjd": 1484.411661,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1487.536555,
+    "t_last_btjd": 1487.536555,
+    "t_mid_btjd": 1487.536555,
+    "n_flagged_cadences": 1
+   }
+  ]
+ },
+ {
+  "product": "mast/hlsp_qlp_tess_ffi_s0006-0000000004206066_tess_v01_llc.fits",
+  "sector": 6,
+  "quality_column": "QUALITY",
+  "n_cadences": 993,
+  "n_bit32_flagged": 6,
+  "n_bit32_flagged_nan_time": 0,
+  "bits_set_counts": {
+   "bit6_value32": 6,
+   "bit13_value4096": 169
+  },
+  "events": [
+   {
+    "t_first_btjd": 1468.391193,
+    "t_last_btjd": 1468.391193,
+    "t_mid_btjd": 1468.391193,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1471.516165,
+    "t_last_btjd": 1471.516165,
+    "t_mid_btjd": 1471.516165,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1474.641115,
+    "t_last_btjd": 1474.641115,
+    "t_mid_btjd": 1474.641115,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1481.286809,
+    "t_last_btjd": 1481.286809,
+    "t_mid_btjd": 1481.286809,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1484.411719,
+    "t_last_btjd": 1484.411719,
+    "t_mid_btjd": 1484.411719,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1487.536607,
+    "t_last_btjd": 1487.536607,
+    "t_mid_btjd": 1487.536607,
+    "n_flagged_cadences": 1
+   }
+  ]
+ },
+ {
+  "product": "mast/hlsp_qlp_tess_ffi_s0032-0000000004206066_tess_v01_llc.fits",
+  "sector": 32,
+  "quality_column": "QUALITY",
+  "n_cadences": 3600,
+  "n_bit32_flagged": 8,
+  "n_bit32_flagged_nan_time": 0,
+  "bits_set_counts": {
+   "bit3_value4": 3,
+   "bit6_value32": 8,
+   "bit8_value128": 5,
+   "bit12_value2048": 130,
+   "bit13_value4096": 393
+  },
+  "events": [
+   {
+    "t_first_btjd": 2175.501678,
+    "t_last_btjd": 2175.501678,
+    "t_mid_btjd": 2175.501678,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 2179.647627,
+    "t_last_btjd": 2179.647627,
+    "t_mid_btjd": 2179.647627,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 2181.974064,
+    "t_last_btjd": 2181.974064,
+    "t_mid_btjd": 2181.974064,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 2184.119931,
+    "t_last_btjd": 2184.119931,
+    "t_mid_btjd": 2184.119931,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 2187.744978,
+    "t_last_btjd": 2187.744978,
+    "t_mid_btjd": 2187.744978,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 2192.863082,
+    "t_last_btjd": 2192.863082,
+    "t_mid_btjd": 2192.863082,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 2196.835299,
+    "t_last_btjd": 2196.835299,
+    "t_mid_btjd": 2196.835299,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 2197.932514,
+    "t_last_btjd": 2197.932514,
+    "t_mid_btjd": 2197.932514,
+    "n_flagged_cadences": 1
+   }
+  ]
+ },
+ {
+  "product": "mast/hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01_llc.fits",
+  "sector": 98,
+  "quality_column": "QUALITY",
+  "n_cadences": 24162,
+  "n_bit32_flagged": 24,
+  "n_bit32_flagged_nan_time": 0,
+  "bits_set_counts": {
+   "bit3_value4": 4,
+   "bit6_value32": 24,
+   "bit12_value2048": 5757
+  },
+  "events": [
+   {
+    "t_first_btjd": 3988.498867,
+    "t_last_btjd": 3988.503497,
+    "t_mid_btjd": 3988.501182,
+    "n_flagged_cadences": 3
+   },
+   {
+    "t_first_btjd": 3995.820939,
+    "t_last_btjd": 3995.823254,
+    "t_mid_btjd": 3995.822096,
+    "n_flagged_cadences": 2
+   },
+   {
+    "t_first_btjd": 4003.011003,
+    "t_last_btjd": 4003.015633,
+    "t_mid_btjd": 4003.013318,
+    "n_flagged_cadences": 3
+   },
+   {
+    "t_first_btjd": 4010.036617,
+    "t_last_btjd": 4010.038932,
+    "t_mid_btjd": 4010.037774,
+    "n_flagged_cadences": 2
+   },
+   {
+    "t_first_btjd": 4017.09921,
+    "t_last_btjd": 4017.101525,
+    "t_mid_btjd": 4017.100368,
+    "n_flagged_cadences": 2
+   },
+   {
+    "t_first_btjd": 4024.525128,
+    "t_last_btjd": 4024.529758,
+    "t_mid_btjd": 4024.527443,
+    "n_flagged_cadences": 3
+   },
+   {
+    "t_first_btjd": 4031.802831,
+    "t_last_btjd": 4031.80746,
+    "t_mid_btjd": 4031.805145,
+    "n_flagged_cadences": 3
+   },
+   {
+    "t_first_btjd": 4038.844327,
+    "t_last_btjd": 4038.855901,
+    "t_mid_btjd": 4038.850114,
+    "n_flagged_cadences": 6
+   }
+  ]
+ },
+ {
+  "product": "mast/hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_lc.fits",
+  "sector": 6,
+  "quality_column": "QUALITY",
+  "n_cadences": 1045,
+  "n_bit32_flagged": 6,
+  "n_bit32_flagged_nan_time": 0,
+  "bits_set_counts": {
+   "bit3_value4": 6,
+   "bit4_value8": 53,
+   "bit6_value32": 6,
+   "bit8_value128": 12,
+   "bit10_value512": 1,
+   "bit16_value32768": 4
+  },
+  "events": [
+   {
+    "t_first_btjd": 1468.391152,
+    "t_last_btjd": 1468.391152,
+    "t_mid_btjd": 1468.391152,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1471.516124,
+    "t_last_btjd": 1471.516124,
+    "t_mid_btjd": 1471.516124,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1474.641073,
+    "t_last_btjd": 1474.641073,
+    "t_mid_btjd": 1474.641073,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1481.286766,
+    "t_last_btjd": 1481.286766,
+    "t_mid_btjd": 1481.286766,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1484.411675,
+    "t_last_btjd": 1484.411675,
+    "t_mid_btjd": 1484.411675,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1487.536563,
+    "t_last_btjd": 1487.536563,
+    "t_mid_btjd": 1487.536563,
+    "n_flagged_cadences": 1
+   }
+  ]
+ },
+ {
+  "product": "mast/hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_tp.fits",
+  "sector": 6,
+  "quality_column": "QUALITY",
+  "n_cadences": 1045,
+  "n_bit32_flagged": 6,
+  "n_bit32_flagged_nan_time": 0,
+  "bits_set_counts": {
+   "bit3_value4": 6,
+   "bit4_value8": 53,
+   "bit6_value32": 6,
+   "bit8_value128": 12,
+   "bit10_value512": 1,
+   "bit16_value32768": 4
+  },
+  "events": [
+   {
+    "t_first_btjd": 1468.391152,
+    "t_last_btjd": 1468.391152,
+    "t_mid_btjd": 1468.391152,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1471.516124,
+    "t_last_btjd": 1471.516124,
+    "t_mid_btjd": 1471.516124,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1474.641073,
+    "t_last_btjd": 1474.641073,
+    "t_mid_btjd": 1474.641073,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1481.286766,
+    "t_last_btjd": 1481.286766,
+    "t_mid_btjd": 1481.286766,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1484.411675,
+    "t_last_btjd": 1484.411675,
+    "t_mid_btjd": 1484.411675,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1487.536563,
+    "t_last_btjd": 1487.536563,
+    "t_mid_btjd": 1487.536563,
+    "n_flagged_cadences": 1
+   }
+  ]
+ },
+ {
+  "product": "mast/hlsp_tess-spoc_tess_phot_0000000004206066-s0032_tess_v1_lc.fits",
+  "sector": 32,
+  "quality_column": "QUALITY",
+  "n_cadences": 3745,
+  "n_bit32_flagged": 8,
+  "n_bit32_flagged_nan_time": 0,
+  "bits_set_counts": {
+   "bit3_value4": 3,
+   "bit4_value8": 146,
+   "bit6_value32": 8,
+   "bit8_value128": 5,
+   "bit10_value512": 1,
+   "bit13_value4096": 163,
+   "bit16_value32768": 2
+  },
+  "events": [
+   {
+    "t_first_btjd": 2179.47399,
+    "t_last_btjd": 2179.494823,
+    "t_mid_btjd": 2179.484407,
+    "n_flagged_cadences": 4
+   },
+   {
+    "t_first_btjd": 2193.474172,
+    "t_last_btjd": 2193.495006,
+    "t_mid_btjd": 2193.484589,
+    "n_flagged_cadences": 4
+   }
+  ]
+ },
+ {
+  "product": "mast/hlsp_tess-spoc_tess_phot_0000000004206066-s0032_tess_v1_tp.fits",
+  "sector": 32,
+  "quality_column": "QUALITY",
+  "n_cadences": 3745,
+  "n_bit32_flagged": 8,
+  "n_bit32_flagged_nan_time": 0,
+  "bits_set_counts": {
+   "bit3_value4": 3,
+   "bit4_value8": 146,
+   "bit6_value32": 8,
+   "bit8_value128": 5,
+   "bit10_value512": 1,
+   "bit13_value4096": 163,
+   "bit16_value32768": 2
+  },
+  "events": [
+   {
+    "t_first_btjd": 2179.47399,
+    "t_last_btjd": 2179.494823,
+    "t_mid_btjd": 2179.484407,
+    "n_flagged_cadences": 4
+   },
+   {
+    "t_first_btjd": 2193.474172,
+    "t_last_btjd": 2193.495006,
+    "t_mid_btjd": 2193.484589,
+    "n_flagged_cadences": 4
+   }
+  ]
+ },
+ {
+  "product": "mast/tess2020324010417-s0032-0000000004206066-0200-s_lc.fits",
+  "sector": 32,
+  "quality_column": "QUALITY",
+  "n_cadences": 18730,
+  "n_bit32_flagged": 18,
+  "n_bit32_flagged_nan_time": 0,
+  "bits_set_counts": {
+   "bit3_value4": 13,
+   "bit4_value8": 720,
+   "bit5_value16": 76,
+   "bit6_value32": 18,
+   "bit8_value128": 23,
+   "bit10_value512": 1,
+   "bit13_value4096": 807,
+   "bit16_value32768": 6
+  },
+  "events": [
+   {
+    "t_first_btjd": 2179.48649,
+    "t_last_btjd": 2179.494823,
+    "t_mid_btjd": 2179.490657,
+    "n_flagged_cadences": 7
+   },
+   {
+    "t_first_btjd": 2186.944941,
+    "t_last_btjd": 2186.949108,
+    "t_mid_btjd": 2186.947024,
+    "n_flagged_cadences": 4
+   },
+   {
+    "t_first_btjd": 2193.486672,
+    "t_last_btjd": 2193.495006,
+    "t_mid_btjd": 2193.490839,
+    "n_flagged_cadences": 7
+   }
+  ]
+ },
+ {
+  "product": "mast/tess2020324010417-s0032-0000000004206066-0200-s_tp.fits",
+  "sector": 32,
+  "quality_column": "QUALITY",
+  "n_cadences": 18730,
+  "n_bit32_flagged": 18,
+  "n_bit32_flagged_nan_time": 0,
+  "bits_set_counts": {
+   "bit3_value4": 13,
+   "bit4_value8": 720,
+   "bit5_value16": 76,
+   "bit6_value32": 18,
+   "bit8_value128": 23,
+   "bit10_value512": 1,
+   "bit13_value4096": 807,
+   "bit16_value32768": 6
+  },
+  "events": [
+   {
+    "t_first_btjd": 2179.48649,
+    "t_last_btjd": 2179.494823,
+    "t_mid_btjd": 2179.490657,
+    "n_flagged_cadences": 7
+   },
+   {
+    "t_first_btjd": 2186.944941,
+    "t_last_btjd": 2186.949108,
+    "t_mid_btjd": 2186.947024,
+    "n_flagged_cadences": 4
+   },
+   {
+    "t_first_btjd": 2193.486672,
+    "t_last_btjd": 2193.495006,
+    "t_mid_btjd": 2193.490839,
+    "n_flagged_cadences": 7
+   }
+  ]
+ },
+ {
+  "product": "tesscut/21x21/tess-s0006-1-1_80.859830_-1.326960_21x21_astrocut.fits",
+  "sector": 6,
+  "quality_column": "QUALITY",
+  "n_cadences": 993,
+  "n_bit32_flagged": 6,
+  "n_bit32_flagged_nan_time": 0,
+  "bits_set_counts": {
+   "bit3_value4": 6,
+   "bit6_value32": 6,
+   "bit8_value128": 12,
+   "bit12_value2048": 22
+  },
+  "events": [
+   {
+    "t_first_btjd": 1468.391171,
+    "t_last_btjd": 1468.391171,
+    "t_mid_btjd": 1468.391171,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1471.516174,
+    "t_last_btjd": 1471.516174,
+    "t_mid_btjd": 1471.516174,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1474.641154,
+    "t_last_btjd": 1474.641154,
+    "t_mid_btjd": 1474.641154,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1481.286909,
+    "t_last_btjd": 1481.286909,
+    "t_mid_btjd": 1481.286909,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1484.411849,
+    "t_last_btjd": 1484.411849,
+    "t_mid_btjd": 1484.411849,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1487.536765,
+    "t_last_btjd": 1487.536765,
+    "t_mid_btjd": 1487.536765,
+    "n_flagged_cadences": 1
+   }
+  ]
+ },
+ {
+  "product": "tesscut/21x21/tess-s0032-1-2_80.859830_-1.326960_21x21_astrocut.fits",
+  "sector": 32,
+  "quality_column": "QUALITY",
+  "n_cadences": 3600,
+  "n_bit32_flagged": 8,
+  "n_bit32_flagged_nan_time": 0,
+  "bits_set_counts": {
+   "bit3_value4": 3,
+   "bit6_value32": 8,
+   "bit8_value128": 5,
+   "bit12_value2048": 130
+  },
+  "events": [
+   {
+    "t_first_btjd": 2179.474047,
+    "t_last_btjd": 2179.494881,
+    "t_mid_btjd": 2179.484464,
+    "n_flagged_cadences": 4
+   },
+   {
+    "t_first_btjd": 2193.474188,
+    "t_last_btjd": 2193.495021,
+    "t_mid_btjd": 2193.484604,
+    "n_flagged_cadences": 4
+   }
+  ]
+ },
+ {
+  "product": "tesscut/21x21/tess-s0098-1-2_80.859830_-1.326960_21x21_astrocut.fits",
+  "sector": 98,
+  "quality_column": "QUALITY",
+  "n_cadences": 24162,
+  "n_bit32_flagged": 24,
+  "n_bit32_flagged_nan_time": 0,
+  "bits_set_counts": {
+   "bit3_value4": 4,
+   "bit4_value8": 7,
+   "bit6_value32": 24,
+   "bit8_value128": 72,
+   "bit12_value2048": 5757
+  },
+  "events": [
+   {
+    "t_first_btjd": 3988.498729,
+    "t_last_btjd": 3988.503359,
+    "t_mid_btjd": 3988.501044,
+    "n_flagged_cadences": 3
+   },
+   {
+    "t_first_btjd": 3995.820826,
+    "t_last_btjd": 3995.823141,
+    "t_mid_btjd": 3995.821984,
+    "n_flagged_cadences": 2
+   },
+   {
+    "t_first_btjd": 4003.010918,
+    "t_last_btjd": 4003.015548,
+    "t_mid_btjd": 4003.013233,
+    "n_flagged_cadences": 3
+   },
+   {
+    "t_first_btjd": 4010.036558,
+    "t_last_btjd": 4010.038873,
+    "t_mid_btjd": 4010.037715,
+    "n_flagged_cadences": 2
+   },
+   {
+    "t_first_btjd": 4017.09918,
+    "t_last_btjd": 4017.101494,
+    "t_mid_btjd": 4017.100337,
+    "n_flagged_cadences": 2
+   },
+   {
+    "t_first_btjd": 4024.525126,
+    "t_last_btjd": 4024.529756,
+    "t_mid_btjd": 4024.527441,
+    "n_flagged_cadences": 3
+   },
+   {
+    "t_first_btjd": 4031.802858,
+    "t_last_btjd": 4031.807487,
+    "t_mid_btjd": 4031.805172,
+    "n_flagged_cadences": 3
+   },
+   {
+    "t_first_btjd": 4038.84438,
+    "t_last_btjd": 4038.855954,
+    "t_mid_btjd": 4038.850167,
+    "n_flagged_cadences": 6
+   }
+  ]
+ },
+ {
+  "product": "tesscut/31x31/tess-s0006-1-1_80.859830_-1.326960_31x31_astrocut.fits",
+  "sector": 6,
+  "quality_column": "QUALITY",
+  "n_cadences": 993,
+  "n_bit32_flagged": 6,
+  "n_bit32_flagged_nan_time": 0,
+  "bits_set_counts": {
+   "bit3_value4": 6,
+   "bit6_value32": 6,
+   "bit8_value128": 12,
+   "bit12_value2048": 22
+  },
+  "events": [
+   {
+    "t_first_btjd": 1468.391171,
+    "t_last_btjd": 1468.391171,
+    "t_mid_btjd": 1468.391171,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1471.516174,
+    "t_last_btjd": 1471.516174,
+    "t_mid_btjd": 1471.516174,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1474.641154,
+    "t_last_btjd": 1474.641154,
+    "t_mid_btjd": 1474.641154,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1481.286909,
+    "t_last_btjd": 1481.286909,
+    "t_mid_btjd": 1481.286909,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1484.411849,
+    "t_last_btjd": 1484.411849,
+    "t_mid_btjd": 1484.411849,
+    "n_flagged_cadences": 1
+   },
+   {
+    "t_first_btjd": 1487.536765,
+    "t_last_btjd": 1487.536765,
+    "t_mid_btjd": 1487.536765,
+    "n_flagged_cadences": 1
+   }
+  ]
+ },
+ {
+  "product": "tesscut/31x31/tess-s0032-1-2_80.859830_-1.326960_31x31_astrocut.fits",
+  "sector": 32,
+  "quality_column": "QUALITY",
+  "n_cadences": 3600,
+  "n_bit32_flagged": 8,
+  "n_bit32_flagged_nan_time": 0,
+  "bits_set_counts": {
+   "bit3_value4": 3,
+   "bit6_value32": 8,
+   "bit8_value128": 5,
+   "bit12_value2048": 130
+  },
+  "events": [
+   {
+    "t_first_btjd": 2179.474047,
+    "t_last_btjd": 2179.494881,
+    "t_mid_btjd": 2179.484464,
+    "n_flagged_cadences": 4
+   },
+   {
+    "t_first_btjd": 2193.474188,
+    "t_last_btjd": 2193.495021,
+    "t_mid_btjd": 2193.484604,
+    "n_flagged_cadences": 4
+   }
+  ]
+ },
+ {
+  "product": "tesscut/31x31/tess-s0098-1-2_80.859830_-1.326960_31x31_astrocut.fits",
+  "sector": 98,
+  "quality_column": "QUALITY",
+  "n_cadences": 24162,
+  "n_bit32_flagged": 24,
+  "n_bit32_flagged_nan_time": 0,
+  "bits_set_counts": {
+   "bit3_value4": 4,
+   "bit4_value8": 7,
+   "bit6_value32": 24,
+   "bit8_value128": 72,
+   "bit12_value2048": 5757
+  },
+  "events": [
+   {
+    "t_first_btjd": 3988.498729,
+    "t_last_btjd": 3988.503359,
+    "t_mid_btjd": 3988.501044,
+    "n_flagged_cadences": 3
+   },
+   {
+    "t_first_btjd": 3995.820826,
+    "t_last_btjd": 3995.823141,
+    "t_mid_btjd": 3995.821984,
+    "n_flagged_cadences": 2
+   },
+   {
+    "t_first_btjd": 4003.010918,
+    "t_last_btjd": 4003.015548,
+    "t_mid_btjd": 4003.013233,
+    "n_flagged_cadences": 3
+   },
+   {
+    "t_first_btjd": 4010.036558,
+    "t_last_btjd": 4010.038873,
+    "t_mid_btjd": 4010.037715,
+    "n_flagged_cadences": 2
+   },
+   {
+    "t_first_btjd": 4017.09918,
+    "t_last_btjd": 4017.101494,
+    "t_mid_btjd": 4017.100337,
+    "n_flagged_cadences": 2
+   },
+   {
+    "t_first_btjd": 4024.525126,
+    "t_last_btjd": 4024.529756,
+    "t_mid_btjd": 4024.527441,
+    "n_flagged_cadences": 3
+   },
+   {
+    "t_first_btjd": 4031.802858,
+    "t_last_btjd": 4031.807487,
+    "t_mid_btjd": 4031.805172,
+    "n_flagged_cadences": 3
+   },
+   {
+    "t_first_btjd": 4038.84438,
+    "t_last_btjd": 4038.855954,
+    "t_mid_btjd": 4038.850167,
+    "n_flagged_cadences": 6
+   }
+  ]
+ }
+]

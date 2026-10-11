@@ -1,0 +1,17 @@
+In preparation for Gaia DR4, the Gaia archive is in evolution. Unfortunately, it may be unstable at times and particular types of queries may time out. Please consider registering for a user account (https://www.cosmos.esa.int/web/gaia-users/register). For questions or advice, please contact the Gaia helpdesk (https://www.cosmos.esa.int/web/gaia/gaia-helpdesk).
+Getting TessCut for sector 32
+Getting TessCut for sector 98
+Estimated missing stellar parameters for 70 of 121 stars from photometry. See the 'params_estimated' column of the .stars dataframe. 2 appear evolved and were assigned a nominal 1 M_Sun.
+init 46 s; 121 stars; bkg=4206066_gaia_background.csv
+Could not get SPOC aperture for sector 98: No SPOC light curve found for TIC 4206066 in sector 98, so no aperture is available. This target may not have 2-minute cadence data in that sector.
+spoc apertures: [18, None]
+          ID     Tmag  sep (arcsec)      mass       rad         Teff        plx
+0    4206066   9.6817         0.000  0.630000  0.648133  4010.000000  28.048700
+1  712986249  18.1293        12.237  0.900000  0.501760  5271.000000   0.080648
+2  712986242  19.2760        14.933  1.036527  1.068703  5875.229421   0.868250
+3  712986248  20.4581        21.199  0.851378  0.793982  5154.911111        NaN
+4  712986247  19.0754        26.876  0.694997  0.684991  4369.959666  -0.313818
+5  712986244  20.7295        29.904       NaN       NaN          NaN        NaN
+6  712986246  20.2368        42.298  0.699680  0.699976  4435.520000        NaN
+7    4206077  17.0245        44.599  1.180000  0.757416  6167.000000   0.195391
+pix_coords: [[1372.47, 943.25], [676.78, 982.64]]

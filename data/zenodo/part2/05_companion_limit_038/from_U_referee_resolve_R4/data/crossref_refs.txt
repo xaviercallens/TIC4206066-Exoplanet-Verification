@@ -1,0 +1,8 @@
+10.1088/0067-0049/208/1/9 | INTRINSIC COLORS, TEMPERATURES, AND BOLOMETRIC CORRECTIONS OF PRE-MAIN-SEQUENCE STARS | The Astrophysical Journal Supplement Series | 208 9 | Pecaut, Mamajek
+10.1051/0004-6361/202039587 | <i>Gaia</i>
+                    Early Data Release 3 | Astronomy &amp; Astrophysics | 649 A3 | Riello, De Angeli, Evans
+10.3847/1538-3881/ab55e9 | SOAR TESS Survey. I. Sculpting of TESS Planetary Systems by Stellar Companions | The Astronomical Journal | 159 19 | Ziegler, Tokovinin, Briceño
+10.3847/1538-3881/ac17f6 | SOAR TESS Survey. II. The Impact of Stellar Companions on Planetary Populations | The Astronomical Journal | 162 192 | Ziegler, Tokovinin, Latiolais
+10.3389/fspas.2022.871163 | Speckle Interferometric Observations With the Gemini 8-m Telescopes: Signal-to-Noise Calcu | Frontiers in Astronomy and Space Sciences | 9 871163 | Howell, Furlan
+10.1051/0004-6361/202039834 | <i>Gaia</i>
+                    Early Data Release 3 | Astronomy &amp; Astrophysics | 649 A5 | Fabricius, Luri, Arenou

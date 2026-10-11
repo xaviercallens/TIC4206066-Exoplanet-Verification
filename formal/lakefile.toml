@@ -1,0 +1,21 @@
+name = "ANSE"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["ANSE"]
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+relaxedAutoImplicit = false
+# Disable Mathlib contribution-style linters (not a Mathlib PR)
+weak.linter.style.header = false
+weak.linter.style.whitespace = false
+weak.linter.mathlibStandardSet = false
+maxSynthPendingDepth = 3
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.34.0-rc2"
+
+[[lean_lib]]
+name = "ANSE"

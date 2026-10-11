@@ -1,0 +1,8 @@
+pipe      6+32     W2_S98timing_3sig    kept     obs 9.75 at P 11.132745  null med 3.16 p99 5.90 max 9.37  n>=obs 0/20000  FAP 5.00e-05  windows 7  beta [1.08 1.13]  (18s)
+    events: [(6, 1473.732, 646, 152), (6, 1484.864, 1096, 152), (32, 2175.094, 781, 215), (32, 2186.227, None, None), (32, 2197.36, 980, 238)]
+pipe      6        W2_S98timing_3sig    kept     obs 8.52 at P 11.132683  null med 2.97 p99 7.19 max 7.21  n>=obs 0/20000  FAP 5.00e-05  windows 7  beta [1.08]  (7s)
+    events: [(6, 1473.746, 755, 156), (6, 1484.878, 1095, 152)]
+pipe      6+32     W3_S98_2event_3sig   kept     obs 9.75 at P 11.132745  null med 3.83 p99 6.41 max 9.60  n>=obs 0/20000  FAP 5.00e-05  windows 4  beta [1.08 1.13]  (30s)
+    events: [(6, 1473.731, 646, 152), (6, 1484.864, 1096, 152), (32, 2175.094, 781, 215), (32, 2186.227, None, None), (32, 2197.36, 980, 238)]
+pipe      6        W3_S98_2event_3sig   kept     obs 8.52 at P 11.132682  null med 4.23 p99 7.19 max 7.21  n>=obs 0/20000  FAP 5.00e-05  windows 4  beta [1.08]  (14s)
+    events: [(6, 1473.746, 755, 156), (6, 1484.878, 1095, 152)]

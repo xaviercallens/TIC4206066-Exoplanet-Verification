@@ -1,0 +1,56 @@
+S98_clean29_A: 25/300 trials, 1s
+S98_clean29_A: 50/300 trials, 1s
+S98_clean29_A: 75/300 trials, 2s
+S98_clean29_A: 100/300 trials, 3s
+S98_clean29_A: 125/300 trials, 3s
+S98_clean29_A: 150/300 trials, 4s
+S98_clean29_A: 175/300 trials, 5s
+S98_clean29_A: 200/300 trials, 6s
+S98_clean29_A: 225/300 trials, 6s
+S98_clean29_A: 250/300 trials, 7s
+S98_clean29_A: 275/300 trials, 8s
+S98_clean29_A: 300/300 trials, 8s
+done S98_clean29_A
+S98_clean29_deg2_A: 25/300 trials, 1s
+S98_clean29_deg2_A: 50/300 trials, 1s
+S98_clean29_deg2_A: 75/300 trials, 2s
+S98_clean29_deg2_A: 100/300 trials, 3s
+S98_clean29_deg2_A: 125/300 trials, 4s
+S98_clean29_deg2_A: 150/300 trials, 4s
+S98_clean29_deg2_A: 175/300 trials, 5s
+S98_clean29_deg2_A: 200/300 trials, 6s
+S98_clean29_deg2_A: 225/300 trials, 7s
+S98_clean29_deg2_A: 250/300 trials, 7s
+S98_clean29_deg2_A: 275/300 trials, 8s
+S98_clean29_deg2_A: 300/300 trials, 9s
+done S98_clean29_deg2_A
+S98_clean29_W6_A: 25/300 trials, 1s
+S98_clean29_W6_A: 50/300 trials, 1s
+S98_clean29_W6_A: 75/300 trials, 2s
+S98_clean29_W6_A: 100/300 trials, 3s
+S98_clean29_W6_A: 125/300 trials, 3s
+S98_clean29_W6_A: 150/300 trials, 4s
+S98_clean29_W6_A: 175/300 trials, 4s
+S98_clean29_W6_A: 200/300 trials, 5s
+S98_clean29_W6_A: 225/300 trials, 6s
+S98_clean29_W6_A: 250/300 trials, 6s
+S98_clean29_W6_A: 275/300 trials, 7s
+S98_clean29_W6_A: 300/300 trials, 8s
+done S98_clean29_W6_A
+S32_tpf_W6_A: 25/300 trials, 1s
+S32_tpf_W6_A: 50/300 trials, 1s
+S32_tpf_W6_A: 75/300 trials, 2s
+S32_tpf_W6_A: 100/300 trials, 2s
+S32_tpf_W6_A: 125/300 trials, 3s
+S32_tpf_W6_A: 150/300 trials, 3s
+S32_tpf_W6_A: 175/300 trials, 4s
+S32_tpf_W6_A: 200/300 trials, 4s
+S32_tpf_W6_A: 225/300 trials, 5s
+S32_tpf_W6_A: 250/300 trials, 6s
+S32_tpf_W6_A: 275/300 trials, 6s
+S32_tpf_W6_A: 300/300 trials, 7s
+done S32_tpf_W6_A
+S98_clean29_A_shift+2+0: 25/80 trials, 1s
+S98_clean29_A_shift+2+0: 50/80 trials, 1s
+S98_clean29_A_shift+2+0: 75/80 trials, 2s
+done S98_clean29_A_shift+2+0

@@ -1,0 +1,67 @@
+S110 segments listed: [('2026-10-31 23:55:00.000', '2026-11-06 21:35:00.000', 231), ('2026-11-07 02:35:00.000', '2026-11-13 19:55:00.000', 231), ('2026-11-14 00:55:00.000', '2026-11-19 20:45:00.000', 232)]
+
+== A_U U/proposed_revision/manuscript.tex Sect.2
+108 2026-10-28 23:20:06 (naive 2026-10-28 23:25:24) 4.42 before_sector
+109 2026-11-01 03:43:02 (naive 2026-11-01 03:48:37) 4.42 in_listed_segment_orbit231
+110 2026-11-04 08:05:59 (naive 2026-11-04 08:11:49) 4.42 in_listed_segment_orbit231
+111 2026-11-07 12:28:57 (naive 2026-11-07 12:35:02) 4.43 in_listed_segment_orbit231
+112 2026-11-10 16:51:56 (naive 2026-11-10 16:58:15) 4.43 in_listed_segment_orbit231
+113 2026-11-13 21:14:56 (naive 2026-11-13 21:21:27) 4.43 in_gap_2026-11-13 19:55_2026-11-14 00:55
+114 2026-11-17 01:37:57 (naive 2026-11-17 01:44:40) 4.43 in_listed_segment_orbit232
+115 2026-11-20 06:01:00 (naive 2026-11-20 06:07:52) 4.43 after_listed_coverage (final segment unpublished)
+116 2026-11-23 10:24:04 (naive 2026-11-23 10:31:05) 4.43 after_listed_coverage (final segment unpublished)
+117 2026-11-26 14:47:09 (naive 2026-11-26 14:54:18) 4.44 after_listed_coverage (final segment unpublished)
+118 2026-11-29 19:10:16 (naive 2026-11-29 19:17:30) 4.44 after_listed_coverage (final segment unpublished)
+{'Oct31_00_Nov26_00_obs': 8, 'Oct31_00_Nov27_00_obs': 9, 'Oct31_2355_Nov26_24_obs': 9, 'in_listed_segments_full': 5, 'in_listed_gaps': 1}
+
+== A_pubprep U/01_ephemeris_A/a_common.py MS_PA/MS_T0A = pubprep manuscript
+108 2026-10-28 23:22:21 (naive 2026-10-28 23:27:39) 3.43 before_sector
+109 2026-11-01 03:45:17 (naive 2026-11-01 03:50:52) 3.43 in_listed_segment_orbit231
+110 2026-11-04 08:08:14 (naive 2026-11-04 08:14:05) 3.44 in_listed_segment_orbit231
+111 2026-11-07 12:31:12 (naive 2026-11-07 12:37:17) 3.44 in_listed_segment_orbit231
+112 2026-11-10 16:54:11 (naive 2026-11-10 17:00:30) 3.44 in_listed_segment_orbit231
+113 2026-11-13 21:17:11 (naive 2026-11-13 21:23:43) 3.44 in_gap_2026-11-13 19:55_2026-11-14 00:55
+114 2026-11-17 01:40:13 (naive 2026-11-17 01:46:55) 3.45 in_listed_segment_orbit232
+115 2026-11-20 06:03:15 (naive 2026-11-20 06:10:08) 3.45 after_listed_coverage (final segment unpublished)
+116 2026-11-23 10:26:19 (naive 2026-11-23 10:33:21) 3.45 after_listed_coverage (final segment unpublished)
+117 2026-11-26 14:49:25 (naive 2026-11-26 14:56:33) 3.45 after_listed_coverage (final segment unpublished)
+118 2026-11-29 19:12:31 (naive 2026-11-29 19:19:46) 3.46 after_listed_coverage (final segment unpublished)
+{'Oct31_00_Nov26_00_obs': 8, 'Oct31_00_Nov27_00_obs': 9, 'Oct31_2355_Nov26_24_obs': 9, 'in_listed_segments_full': 5, 'in_listed_gaps': 1}
+
+== A_audit audit/out/ephem_current.json A (sigma from audit/out/s16_s110.json)
+108 2026-10-28 23:21:17 (naive 2026-10-28 23:26:35) None before_sector
+109 2026-11-01 03:44:13 (naive 2026-11-01 03:49:48) None in_listed_segment_orbit231
+110 2026-11-04 08:07:10 (naive 2026-11-04 08:13:01) None in_listed_segment_orbit231
+111 2026-11-07 12:30:08 (naive 2026-11-07 12:36:13) None in_listed_segment_orbit231
+112 2026-11-10 16:53:07 (naive 2026-11-10 16:59:26) None in_listed_segment_orbit231
+113 2026-11-13 21:16:07 (naive 2026-11-13 21:22:39) None in_gap_2026-11-13 19:55_2026-11-14 00:55
+114 2026-11-17 01:39:09 (naive 2026-11-17 01:45:51) None in_listed_segment_orbit232
+115 2026-11-20 06:02:11 (naive 2026-11-20 06:09:04) None after_listed_coverage (final segment unpublished)
+116 2026-11-23 10:25:15 (naive 2026-11-23 10:32:17) None after_listed_coverage (final segment unpublished)
+117 2026-11-26 14:48:21 (naive 2026-11-26 14:55:29) None after_listed_coverage (final segment unpublished)
+118 2026-11-29 19:11:27 (naive 2026-11-29 19:18:42) None after_listed_coverage (final segment unpublished)
+{'Oct31_00_Nov26_00_obs': 8, 'Oct31_00_Nov27_00_obs': 9, 'Oct31_2355_Nov26_24_obs': 9, 'in_listed_segments_full': 5, 'in_listed_gaps': 1}
+
+== B_U U/proposed_revision/manuscript.tex Sect.3
+30 2026-10-21 08:14:15 (naive 2026-10-21 08:18:48) 4.51 before_sector
+31 2026-11-01 11:24:21 (naive 2026-11-01 11:29:57) 4.52 in_listed_segment_orbit231
+32 2026-11-12 14:34:39 (naive 2026-11-12 14:41:06) 4.54 in_listed_segment_orbit231
+33 2026-11-23 17:45:12 (naive 2026-11-23 17:52:15) 4.55 after_listed_coverage (final segment unpublished)
+34 2026-12-04 20:56:02 (naive 2026-12-04 21:03:23) 4.56 after_listed_coverage (final segment unpublished)
+{'Oct31_00_Nov26_00_obs': 3, 'Oct31_00_Nov27_00_obs': 3, 'Oct31_2355_Nov26_24_obs': 3, 'in_listed_segments_full': 2, 'in_listed_gaps': 0}
+
+== B_audit audit/out/ephem_current.json B (sigma from audit/out/s16_s110.json)
+30 2026-10-21 08:15:44 (naive 2026-10-21 08:20:18) None before_sector
+31 2026-11-01 11:25:51 (naive 2026-11-01 11:31:27) None in_listed_segment_orbit231
+32 2026-11-12 14:36:10 (naive 2026-11-12 14:42:36) None in_listed_segment_orbit231
+33 2026-11-23 17:46:43 (naive 2026-11-23 17:53:45) None after_listed_coverage (final segment unpublished)
+34 2026-12-04 20:57:33 (naive 2026-12-04 21:04:55) None after_listed_coverage (final segment unpublished)
+{'Oct31_00_Nov26_00_obs': 3, 'Oct31_00_Nov27_00_obs': 3, 'Oct31_2355_Nov26_24_obs': 3, 'in_listed_segments_full': 2, 'in_listed_gaps': 0}
+
+== B_pubprep pubprep/analysis/out/a1_results.json signals.B.B_mann__pipe.ephemeris.e_dt_inj_min (scaled errors)
+30 2026-10-21 08:14:11 (naive 2026-10-21 08:18:45) 4.62 before_sector
+31 2026-11-01 11:24:17 (naive 2026-11-01 11:29:54) 4.64 in_listed_segment_orbit231
+32 2026-11-12 14:34:36 (naive 2026-11-12 14:41:02) 4.65 in_listed_segment_orbit231
+33 2026-11-23 17:45:09 (naive 2026-11-23 17:52:11) 4.66 after_listed_coverage (final segment unpublished)
+34 2026-12-04 20:55:58 (naive 2026-12-04 21:03:20) 4.68 after_listed_coverage (final segment unpublished)
+{'Oct31_00_Nov26_00_obs': 3, 'Oct31_00_Nov27_00_obs': 3, 'Oct31_2355_Nov26_24_obs': 3, 'in_listed_segments_full': 2, 'in_listed_gaps': 0}

@@ -1,0 +1,165 @@
+{
+ "A": {
+  "sets": {
+   "S32_tpf_PC_A": {
+    "scale": 1.1193819735015629,
+    "dchi2_target": 6.477738392234301
+   },
+   "S98_clean29_A": {
+    "scale": 3.8929242765440866,
+    "dchi2_target": 5.636473482559097
+   }
+  },
+  "stars": [
+   {
+    "star": "target",
+    "TIC": "4206066",
+    "Tmag": 9.68,
+    "sep_arcsec": 0.0,
+    "required_eclipse_fraction": null,
+    "P_position_only": 0.9544929600436434,
+    "P_depth_feasible": 0.9999999999780632
+   },
+   {
+    "star": "3220388296975929984",
+    "TIC": "712986249.0",
+    "Tmag": 18.1293,
+    "sep_arcsec": 10.6,
+    "required_eclipse_fraction": 1.122,
+    "P_position_only": 0.03133095527362646,
+    "P_depth_feasible": 0.0
+   },
+   {
+    "star": "3220388228256452864",
+    "TIC": "712986242.0",
+    "Tmag": 19.276,
+    "sep_arcsec": 13.9,
+    "required_eclipse_fraction": 3.333,
+    "P_position_only": 0.014176084661791953,
+    "P_depth_feasible": 0.0
+   },
+   {
+    "star": "3220388296975320448",
+    "TIC": "4206077.0",
+    "Tmag": 17.0245,
+    "sep_arcsec": 43.1,
+    "required_eclipse_fraction": 0.508,
+    "P_position_only": 1.8474625352904762e-11,
+    "P_depth_feasible": 1.935543385427877e-11
+   },
+   {
+    "star": "3220385277614918912",
+    "TIC": "4206064.0",
+    "Tmag": 16.9926,
+    "sep_arcsec": 50.5,
+    "required_eclipse_fraction": 0.541,
+    "P_position_only": 6.071132326077238e-13,
+    "P_depth_feasible": 6.360583660739059e-13
+   },
+   {
+    "star": "3220385277614919040",
+    "TIC": "4206056.0",
+    "Tmag": 14.0745,
+    "sep_arcsec": 97.8,
+    "required_eclipse_fraction": 0.572,
+    "P_position_only": 5.558537904808801e-13,
+    "P_depth_feasible": 5.823550447593355e-13
+   },
+   {
+    "star": "3220385273320363520",
+    "TIC": "712986149.0",
+    "Tmag": 17.2863,
+    "sep_arcsec": 51.1,
+    "required_eclipse_fraction": 0.716,
+    "P_position_only": 4.473327497904504e-13,
+    "P_depth_feasible": 4.68660082899075e-13
+   },
+   {
+    "star": "3220385380694236672",
+    "TIC": "4206069.0",
+    "Tmag": 14.4786,
+    "sep_arcsec": 91.3,
+    "required_eclipse_fraction": 0.773,
+    "P_position_only": 2.7064276991828117e-13,
+    "P_depth_feasible": 2.835461142636078e-13
+   },
+   {
+    "star": "3220385243255181184",
+    "TIC": "4206057.0",
+    "Tmag": 13.0551,
+    "sep_arcsec": 84.1,
+    "required_eclipse_fraction": 0.096,
+    "P_position_only": 2.535829969763343e-13,
+    "P_depth_feasible": 2.656729882629796e-13
+   },
+   {
+    "star": "3220388262615571968",
+    "TIC": "4206073.0",
+    "Tmag": 17.0605,
+    "sep_arcsec": 53.9,
+    "required_eclipse_fraction": 0.9,
+    "P_position_only": 1.9531903261869022e-13,
+    "P_depth_feasible": 2.0463119246628573e-13
+   },
+   {
+    "star": "3220385243255181952",
+    "TIC": "4206059.0",
+    "Tmag": 16.3202,
+    "sep_arcsec": 56.3,
+    "required_eclipse_fraction": 0.607,
+    "P_position_only": 1.338767980515881e-13,
+    "P_depth_feasible": 1.4025959713996201e-13
+   }
+  ]
+ },
+ "B": {
+  "sets": {
+   "S32_tpf_PC_B": {
+    "scale": 1.7734043348367787,
+    "dchi2_target": 0.6639267518244623
+   },
+   "S98_clean29_B": {
+    "scale": 6.322391895008641,
+    "dchi2_target": 0.9558680556580725
+   }
+  },
+  "stars": [
+   {
+    "star": "target",
+    "TIC": "4206066",
+    "Tmag": 9.68,
+    "sep_arcsec": 0.0,
+    "required_eclipse_fraction": null,
+    "P_position_only": 0.9872568435833257,
+    "P_depth_feasible": 0.9999990154940217
+   },
+   {
+    "star": "3220388296975929984",
+    "TIC": "712986249.0",
+    "Tmag": 18.1293,
+    "sep_arcsec": 10.6,
+    "required_eclipse_fraction": 2.391,
+    "P_position_only": 0.010216516971644147,
+    "P_depth_feasible": 0.0
+   },
+   {
+    "star": "3220388228256452864",
+    "TIC": "712986242.0",
+    "Tmag": 19.276,
+    "sep_arcsec": 13.9,
+    "required_eclipse_fraction": 6.86,
+    "P_position_only": 0.0025256674838085276,
+    "P_depth_feasible": 0.0
+   },
+   {
+    "star": "3220385243255181184",
+    "TIC": "4206057.0",
+    "Tmag": 13.0551,
+    "sep_arcsec": 84.1,
+    "required_eclipse_fraction": 0.612,
+    "P_position_only": 9.71961221452373e-07,
+    "P_depth_feasible": 9.845059782244044e-07
+   }
+  ]
+ }
+}

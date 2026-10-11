@@ -1,0 +1,64 @@
+{
+  "claudeai_channel": {
+    "title": "How to audit agent-assisted exoplanet discovery when candidates look convincing but risk hallucination?",
+    "reward": {
+      "total_reward": 1.0,
+      "hook_score": 1.0,
+      "grounding_score": 1.0,
+      "modesty_score": 1.0,
+      "compliance_score": 1.0,
+      "resonance_score": 1.0,
+      "hype_violations": [],
+      "moderation_risk": 0.0,
+      "moderation_warnings": [],
+      "is_recommended": true
+    },
+    "risk": {
+      "moderation_risk": 0.0,
+      "is_ban_prone": false,
+      "moderation_warnings": []
+    }
+  },
+  "astrophysics_channel": {
+    "title": "Can we eliminate agent hallucination in exoplanet vetting? Independent replication of TIC 4206066 b",
+    "reward": {
+      "total_reward": 1.0,
+      "hook_score": 1.0,
+      "grounding_score": 1.0,
+      "modesty_score": 1.0,
+      "compliance_score": 1.0,
+      "resonance_score": 1.0,
+      "hype_violations": [],
+      "moderation_risk": 0.0,
+      "moderation_warnings": [],
+      "is_recommended": true
+    },
+    "risk": {
+      "moderation_risk": 0.0,
+      "is_ban_prone": false,
+      "moderation_warnings": []
+    }
+  },
+  "cognitive_shield": {
+    "q1": {
+      "input": "Isn't this just Claude hallucinating patterns in noisy TESS data?",
+      "assessment": {
+        "category": "honest_skepticism",
+        "hostility_score": 0.2,
+        "recommended_action": "reply_eli5",
+        "rationale": "General community inquiry or healthy skepticism. Provide intuitive ELI5 explanation with transparent limitations.",
+        "suggested_reply": "Good question! In brief: rather than relying on heuristic approximations, the approach enforces strict invariant bounds. The main limitation is that it requires verifiable boundary conditions, so it is not a drop-in silver bullet for unstructured problems."
+      }
+    },
+    "q2": {
+      "input": "Why should anyone trust an unconfirmed candidate from Reddit?",
+      "assessment": {
+        "category": "honest_skepticism",
+        "hostility_score": 0.2,
+        "recommended_action": "reply_eli5",
+        "rationale": "General community inquiry or healthy skepticism. Provide intuitive ELI5 explanation with transparent limitations.",
+        "suggested_reply": "Good question! In brief: rather than relying on heuristic approximations, the approach enforces strict invariant bounds. The main limitation is that it requires verifiable boundary conditions, so it is not a drop-in silver bullet for unstructured problems."
+      }
+    }
+  }
+}

@@ -1,0 +1,663 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - name: _r
+#   datatype: float64
+#   format: '{:6.3f}'
+#   description: Distance from center (080.8598333-01.3269691)[ICRS]
+#   meta: !!omap
+#   - {ucd: POS_ANG_DIST_GENERAL}
+#   - {width: 6}
+#   - {precision: '3'}
+# - name: objID
+#   datatype: string
+#   description: Tile name + processing code + wphot index (source_id)
+#   meta: !!omap
+#   - {ucd: ID_IDENTIFIER}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 18*}
+# - name: RA_ICRS
+#   unit: deg
+#   datatype: float64
+#   format: '{:11.7f}'
+#   description: Right ascension (ICRS) (1)
+#   meta: !!omap
+#   - {ucd: POS_EQ_RA_MAIN}
+#   - {width: 11}
+#   - {precision: '7'}
+# - name: e_RA_ICRS
+#   unit: arcsec
+#   datatype: float64
+#   format: '{:7.4f}'
+#   description: '[0/74.3] Uncertainty in ra (sigra)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 7}
+#   - {precision: '4'}
+# - name: DE_ICRS
+#   unit: deg
+#   datatype: float64
+#   format: '{:11.7f}'
+#   description: Declination (ICRS) (1)
+#   meta: !!omap
+#   - {ucd: POS_EQ_DEC_MAIN}
+#   - {width: 11}
+#   - {precision: '7'}
+# - name: e_DE_ICRS
+#   unit: arcsec
+#   datatype: float64
+#   format: '{:7.4f}'
+#   description: '[0/83.3] Uncertainty in dec (sigdec)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 7}
+#   - {precision: '4'}
+# - name: Name
+#   datatype: string
+#   description: Source name (JHHMMSS.ss+DDMMSS.s; <CWISE JHHMMSS.ss+DDMMSS.s> in Simbad) (source_name)
+#   meta: !!omap
+#   - {ucd: ID_MAIN}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 20*}
+# - name: ePos
+#   unit: arcsec
+#   datatype: float64
+#   format: '{:8.4f}'
+#   description: '[-25.7/44.2] Uncertainty cross-term (sigradec)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 8}
+#   - {precision: '4'}
+# - name: Xpos
+#   unit: pix
+#   datatype: float64
+#   format: '{:8.3f}'
+#   description: X-pixel coordinate in the unWISE full depth coadd (wx)
+#   meta: !!omap
+#   - {ucd: POS_CCD_X}
+#   - {width: 8}
+#   - {precision: '3'}
+# - name: Ypos
+#   unit: pix
+#   datatype: float64
+#   format: '{:8.3f}'
+#   description: Y-pixel coordinate in the unWISE full depth coadd (wy)
+#   meta: !!omap
+#   - {ucd: POS_CCD_Y}
+#   - {width: 8}
+#   - {precision: '3'}
+# - name: skyW1
+#   unit: ct
+#   datatype: float64
+#   format: '{:7.2f}'
+#   description: '[-98.2/4997]? Frame sky background value, band-1; in dn units (w1sky) (2)'
+#   meta: !!omap
+#   - {ucd: INST_BACKGROUND}
+#   - {width: 7}
+#   - {precision: '2'}
+#   - values: {'null': .nan}
+# - name: e_skyW1
+#   unit: ct
+#   datatype: float32
+#   format: '{:5.1f}'
+#   description: '[0.4/999]? Frame sky background value uncertainty; band-1 (w1sigsk) (2)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 5}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: confW1
+#   unit: ct
+#   datatype: float32
+#   format: '{:6.2f}'
+#   description: '[0/999]? Frame sky confusion based on the UNC images; in dn units (w1conf) (2)'
+#   meta: !!omap
+#   - {ucd: INST_SKY_SIGMA}
+#   - {width: 6}
+#   - {precision: '2'}
+#   - values: {'null': .nan}
+# - name: skyW2
+#   unit: ct
+#   datatype: float64
+#   format: '{:7.2f}'
+#   description: '[-99/5000]? Frame sky background value, band-2; in dn (w2sky) (2)'
+#   meta: !!omap
+#   - {ucd: INST_BACKGROUND}
+#   - {width: 7}
+#   - {precision: '2'}
+#   - values: {'null': .nan}
+# - name: e_skyW2
+#   unit: ct
+#   datatype: float32
+#   format: '{:5.1f}'
+#   description: '[0.7/999]? Frame sky background value uncertainty; band-2 (w2sigsk) (2)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 5}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: confW2
+#   unit: ct
+#   datatype: float32
+#   format: '{:6.2f}'
+#   description: '[0/999]? Frame sky confusion based on the UNC images; in dn units (w2conf) (2)'
+#   meta: !!omap
+#   - {ucd: INST_SKY_SIGMA}
+#   - {width: 6}
+#   - {precision: '2'}
+#   - values: {'null': .nan}
+# - name: nW1
+#   datatype: int16
+#   description: '[0/221]? Number of profile-fit flux measurements for source with SNR>=3, band 1 (w1NM)'
+#   meta: !!omap
+#   - {ucd: NUMBER}
+#   - {width: 3}
+#   - values: {'null': -32768}
+# - name: mW1
+#   datatype: int16
+#   description: '[0/221]? Number of profile-fit flux measurements for source, band-1 (w1M)'
+#   meta: !!omap
+#   - {ucd: NUMBER}
+#   - {width: 3}
+#   - values: {'null': -32768}
+# - name: nW2
+#   datatype: int16
+#   description: '[0/221]? Number of profile-fit flux measurements for source with SNR>=3, band-2 (w2NM)'
+#   meta: !!omap
+#   - {ucd: NUMBER}
+#   - {width: 3}
+#   - values: {'null': -32768}
+# - name: mW2
+#   datatype: int16
+#   description: '[0/221]? Number of profile-fit flux measurements for source, band-2 (w2M)'
+#   meta: !!omap
+#   - {ucd: NUMBER}
+#   - {width: 3}
+#   - values: {'null': -32768}
+# - name: MJD
+#   unit: d
+#   datatype: float64
+#   format: '{:12.6f}'
+#   description: '[55205/58465] Mean observation epoch (MeanObsMJD)'
+#   meta: !!omap
+#   - {ucd: TIME_EPOCH}
+#   - {width: 12}
+#   - {precision: '6'}
+# - name: RAPMdeg
+#   unit: deg
+#   datatype: float64
+#   format: '{:11.7f}'
+#   description: Right ascension (ICRS) at Ep=2015.4 (ra_pm) (3)
+#   meta: !!omap
+#   - {ucd: POS_EQ_RA_OTHER}
+#   - {width: 11}
+#   - {precision: '7'}
+# - name: e_RAPMdeg
+#   unit: arcsec
+#   datatype: float64
+#   format: '{:7.4f}'
+#   description: '[1e-4/99.94]? Uncertainty in ra_pm (sigra_pm)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 7}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: DEPMdeg
+#   unit: deg
+#   datatype: float64
+#   format: '{:11.7f}'
+#   description: Declination (ICRS) at Ep=2015.4 (dec_pm) (3)
+#   meta: !!omap
+#   - {ucd: POS_EQ_DEC_OTHER}
+#   - {width: 11}
+#   - {precision: '7'}
+# - name: e_DEPMdeg
+#   unit: arcsec
+#   datatype: float64
+#   format: '{:7.4f}'
+#   description: '[0/99.8]? Uncertainty in dec_pm (sigdec_pm)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 7}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: ePosPM
+#   unit: arcsec
+#   datatype: float64
+#   format: '{:8.4f}'
+#   description: '[-99.2/99.9]? Uncertainty cross-term (sigradec_pm)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 8}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: pmRA
+#   unit: arcsec / yr
+#   datatype: float64
+#   format: '{:10.5f}'
+#   description: '[-100/100] Motion in ra (PMRA) (1)'
+#   meta: !!omap
+#   - {ucd: POS_EQ_PMRA}
+#   - {width: 10}
+#   - {precision: '5'}
+# - name: e_pmRA
+#   unit: arcsec / yr
+#   datatype: float64
+#   format: '{:8.4f}'
+#   description: '[7e-4/1000] Uncertainty in PMRA (sigPMRA)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 8}
+#   - {precision: '4'}
+# - name: pmDE
+#   unit: arcsec / yr
+#   datatype: float64
+#   format: '{:10.5f}'
+#   description: '[-100/100] Proper motion in dec (PMDec) (1)'
+#   meta: !!omap
+#   - {ucd: POS_EQ_PMDEC}
+#   - {width: 10}
+#   - {precision: '5'}
+# - name: e_pmDE
+#   unit: arcsec / yr
+#   datatype: float64
+#   format: '{:8.4f}'
+#   description: '[7e-4/1000] Uncertainty in PMDec (sigPMDec)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 8}
+#   - {precision: '4'}
+# - name: snrW1pm
+#   datatype: float32
+#   format: '{:6.1f}'
+#   description: '[0/1000]? Flux S/N ratio; band-1 (w1snr_pm)'
+#   meta: !!omap
+#   - {ucd: INST_S/N}
+#   - {width: 6}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: snrW2pm
+#   datatype: float32
+#   format: '{:6.1f}'
+#   description: '[0/1000]? Flux S/N ratio; band-2 (w2snr_pm)'
+#   meta: !!omap
+#   - {ucd: INST_S/N}
+#   - {width: 6}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: FW1pm
+#   unit: ct
+#   datatype: float32
+#   format: '{:8.1g}'
+#   description: '[-1.2e8/2e14]? WPRO raw flux, band-1 (W1, 3.35um) in dn units (w1flux_pm)'
+#   meta: !!omap
+#   - {ucd: PHOT_IR_3.4}
+#   - {width: 8}
+#   - {precision: E1}
+#   - values: {'null': .nan}
+# - name: e_FW1pm
+#   unit: ct
+#   datatype: float32
+#   format: '{!s:>7}'
+#   description: '[3.7e-4/3.5e12]? WPRO raw flux uncertainty; band-1 (w1sigflux_pm)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 7}
+#   - values: {'null': .nan}
+# - name: FW2pm
+#   unit: ct
+#   datatype: float32
+#   format: '{:8.1g}'
+#   description: '[-4.8e8/2e10]? WPRO raw flux, band-2 (W2, 4.6um); in dn units (w2flux_pm)'
+#   meta: !!omap
+#   - {ucd: PHOT_IR_4.2}
+#   - {width: 8}
+#   - {precision: E1}
+#   - values: {'null': .nan}
+# - name: e_FW2pm
+#   unit: ct
+#   datatype: float32
+#   format: '{!s:>7}'
+#   description: '[1e-4/3.2e13]? Fit WPRO raw flux uncertainty; band-2 (w2sigflux_pm)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 7}
+#   - values: {'null': .nan}
+# - name: W1mproPM
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[-10/27]? WPRO magnitude in band-1 (W1: 3.35um) (w1mpro_pm) (4)'
+#   meta: !!omap
+#   - {ucd: PHOT_IR_3.4}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_W1mproPM
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0/0.6]? W1mproPM uncertainty (w1sigmpro_pm)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: chi2W1pm
+#   datatype: float32
+#   format: '{:10.3g}'
+#   description: '[8.3e-7/6.4e21]? WPRO reduced chi^2^; band-1 (w1rchi2_pm)'
+#   meta: !!omap
+#   - {ucd: FIT_CHI2}
+#   - {width: 10}
+#   - {precision: E3}
+#   - values: {'null': .nan}
+# - name: W2mproPM
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[-10/25.5]? WPRO magnitude in band-2 (W2: 4.6um) (w2mpro_pm) (4)'
+#   meta: !!omap
+#   - {ucd: PHOT_IR_4.2}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_W2mproPM
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0/0.6]? W2mproPM uncertainty (w2sigmpro_pm)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: chi2W2pm
+#   datatype: float32
+#   format: '{:10.3g}'
+#   description: '[2.6e-6/375600]? WPRO reduced chi^2^; band-2 (w2rchi2_pm)'
+#   meta: !!omap
+#   - {ucd: FIT_CHI2}
+#   - {width: 10}
+#   - {precision: E3}
+#   - values: {'null': .nan}
+# - name: chi2pm
+#   datatype: float32
+#   format: '{:10.3g}'
+#   description: '[8.3e-7/92260]? Reduced chi squared; total (rchi2_pm)'
+#   meta: !!omap
+#   - {ucd: FIT_CHI2}
+#   - {width: 10}
+#   - {precision: E3}
+#   - values: {'null': .nan}
+# - name: pmQual
+#   datatype: string
+#   description: Quality of the PM solution (pmcode) (5)
+#   meta: !!omap
+#   - {ucd: CODE_QUALITY}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 5*}
+# - name: Dist
+#   unit: arcsec
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0/20]? Radial distance between apparitions (dist)'
+#   meta: !!omap
+#   - {ucd: POS_ANG_DIST_GENERAL}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: dW1mpro
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[-9.2/9.3]? W1mpro difference (dw1mag)'
+#   meta: !!omap
+#   - {ucd: PHOT_DIFF_MAG}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: chi2dW1mpro
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0/100]? Chi-square for dw1mag (1 DF) (rch2w1)'
+#   meta: !!omap
+#   - {ucd: FIT_CHI2}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: dW2mpro
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[-9.4/10.2]? W2mpro difference (dw2mag)'
+#   meta: !!omap
+#   - {ucd: PHOT_DIFF_MAG}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: chi2dW2mpro
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0/100]? Chi-square for dw2mag (1 DF) (rch2w2)'
+#   meta: !!omap
+#   - {ucd: FIT_CHI2}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: ELONavg
+#   unit: deg
+#   datatype: float64
+#   format: '{:10.6f}'
+#   description: '? Averaged ecliptic longitude (elon_avg)'
+#   meta: !!omap
+#   - {ucd: POS_EC_LON}
+#   - {width: 10}
+#   - {precision: '6'}
+#   - values: {'null': .nan}
+# - name: e_ELONavg
+#   unit: arcsec
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0.001/1.6]? One-sigma uncertainty in elon (elonSig)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: ELATavg
+#   unit: deg
+#   datatype: float64
+#   format: '{:10.6f}'
+#   description: '? Averaged ecliptic latitude (elat_avg)'
+#   meta: !!omap
+#   - {ucd: POS_EC_LAT}
+#   - {width: 10}
+#   - {precision: '6'}
+#   - values: {'null': .nan}
+# - name: e_ELATavg
+#   unit: arcsec
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0.001/1.7]? One-sigma uncertainty in elat (elatSig)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: dELON
+#   unit: arcsec
+#   datatype: float64
+#   format: '{:7.3f}'
+#   description: '? Descending-ascending ecliptic longitude (Delon) (6)'
+#   meta: !!omap
+#   - {ucd: POS_OFFSET}
+#   - {width: 7}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_dELON
+#   unit: arcsec
+#   datatype: float64
+#   format: '{:7.3f}'
+#   description: '[0.001/101.5]? One-sigma uncertainty in Delon (DelonSig)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 7}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: dELAT
+#   unit: arcsec
+#   datatype: float64
+#   format: '{:7.3f}'
+#   description: '? Descending-ascending ecliptic latitude (Delat)'
+#   meta: !!omap
+#   - {ucd: POS_OFFSET}
+#   - {width: 7}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_dELAT
+#   unit: arcsec
+#   datatype: float64
+#   format: '{:7.3f}'
+#   description: '[0.001/105.8]? One-sigma uncertainty in Delat (DelatSig)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 7}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: snrdELON
+#   datatype: float64
+#   format: '{:8.3f}'
+#   description: '[0/1065]? |Delon|/DelonSig (DelonSNR)'
+#   meta: !!omap
+#   - {ucd: INST_S/N}
+#   - {width: 8}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: snrdELAT
+#   datatype: float64
+#   format: '{:7.3f}'
+#   description: '[0/475]? |Delat|/DelatSig (DelatSNR)'
+#   meta: !!omap
+#   - {ucd: INST_S/N}
+#   - {width: 7}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: chi2pmRA
+#   datatype: float32
+#   format: '{:9.2g}'
+#   description: '[0/7.3e7]? Chi-square for PMRA difference (1 DF) (chi2pmra)'
+#   meta: !!omap
+#   - {ucd: FIT_CHI2}
+#   - {width: 9}
+#   - {precision: E2}
+#   - values: {'null': .nan}
+# - name: chi2pmDE
+#   datatype: float32
+#   format: '{:9.2g}'
+#   description: '[0/2.2e8]? Chi-square for PMRA difference (1 DF) (chi2pmdec)'
+#   meta: !!omap
+#   - {ucd: FIT_CHI2}
+#   - {width: 9}
+#   - {precision: E2}
+#   - values: {'null': .nan}
+# - name: ka
+#   datatype: string
+#   description: '[0123n] Astrometry usage code (7)'
+#   meta: !!omap
+#   - {ucd: CODE_MISC}
+#   - {_votable_string_dtype: char}
+# - name: k1
+#   datatype: string
+#   description: '[0123n] W1 photometry usage code (7)'
+#   meta: !!omap
+#   - {ucd: CODE_MISC}
+#   - {_votable_string_dtype: char}
+# - name: k2
+#   datatype: string
+#   description: '[0123n] W2 photometry usage code (7)'
+#   meta: !!omap
+#   - {ucd: CODE_MISC}
+#   - {_votable_string_dtype: char}
+# - name: km
+#   datatype: string
+#   description: '[0123n] Proper motion usage code (7)'
+#   meta: !!omap
+#   - {ucd: CODE_MISC}
+#   - {_votable_string_dtype: char}
+# - name: plx1
+#   unit: arcsec
+#   datatype: float64
+#   format: '{:8.3f}'
+#   description: '[-831/569]? Parallax from PM desc-asce elon (par_pm)'
+#   meta: !!omap
+#   - {ucd: POS_PARLX_TRIG}
+#   - {width: 8}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_plx1
+#   unit: arcsec
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0.001/53]? One-sigma uncertainty in par_pm (par_pmSig)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: plx2
+#   unit: arcsec
+#   datatype: float64
+#   format: '{:8.3f}'
+#   description: '[-831/504]? Parallax estimate from stationary solution (par_stat)'
+#   meta: !!omap
+#   - {ucd: POS_PARLX_TRIG}
+#   - {width: 8}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_plx2
+#   unit: arcsec
+#   datatype: float64
+#   format: '{:7.3f}'
+#   description: '[0.001/189]? One-sigma uncertainty in par_stat (par_sigma)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 7}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: Sep
+#   unit: arcsec
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0/2.75]? Distance between CatWISE and AllWISE source (dist_x)'
+#   meta: !!omap
+#   - {ucd: POS_ANG_DIST_GENERAL}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: ccf
+#   datatype: string
+#   description: '[0DHOPdhop] Worst case 4 character cc_flag from AllWISE (cc_flags) (8)'
+#   meta: !!omap
+#   - {ucd: CODE_MISC}
+#   - {_votable_string_dtype: char}
+# - name: abf
+#   datatype: string
+#   description: '[0DHOP] Two character (W1 W2) artifact flag (ab_flags) (8)'
+#   meta: !!omap
+#   - {ucd: CODE_MISC}
+#   - {_votable_string_dtype: char}
+# - name: WISEA
+#   datatype: string
+#   description: Display the allWISE data (II/328) within 3"
+#   meta: !!omap
+#   - {ucd: DATA_LINK}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 5*}
+# meta: !!omap
+# - {ID: II_365_catwise}
+# - {name: II/365/catwise}
+# - {description: 'the CatWISE2020 catalog (among 1,890,715,640 sources)'}
+# schema: astropy-2.0
+_r objID RA_ICRS e_RA_ICRS DE_ICRS e_DE_ICRS Name ePos Xpos Ypos skyW1 e_skyW1 confW1 skyW2 e_skyW2 confW2 nW1 mW1 nW2 mW2 MJD RAPMdeg e_RAPMdeg DEPMdeg e_DEPMdeg ePosPM pmRA e_pmRA pmDE e_pmDE snrW1pm snrW2pm FW1pm e_FW1pm FW2pm e_FW2pm W1mproPM e_W1mproPM chi2W1pm W2mproPM e_W2mproPM chi2W2pm chi2pm pmQual Dist dW1mpro chi2dW1mpro dW2mpro chi2dW2mpro ELONavg e_ELONavg ELATavg e_ELATavg dELON e_dELON dELAT e_dELAT snrdELON snrdELAT chi2pmRA chi2pmDE ka k1 k2 km plx1 e_plx1 plx2 e_plx2 Sep ccf abf WISEA
+0.076 0801m016_b0-000018 80.8598152 0.023 -1.3269797 0.0242 J052326.35-011937.0 -0.0102 119.531 1269.797 6.91 5.8 0.14 6.8 16.6 2.87 12 12 12 12 57181.811108 80.8598134 0.022 -1.3269695 0.0231 -0.01 -0.00792 0.0043 0.07469 0.0045 79.3 110.3 870000.0 10000.0 880000.0 8000.0 7.65 0.014 3.627 7.64 0.01 0.7319 2.156 1N000 0.083 -0.041 1.733 -0.003 0.023 79.953365 0.023 -24.448041 0.025 0.038 0.045 0.006 0.049 0.83 0.126 0.661 4.19 3 3 3 3 0.018 0.022 0.02 0.022 0.316 0000 00 WISEA

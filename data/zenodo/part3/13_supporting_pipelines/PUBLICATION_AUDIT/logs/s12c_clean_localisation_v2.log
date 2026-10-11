@@ -1,0 +1,12 @@
+S98 clean A: n=9 [0, 1, 4, 5, 8, 9, 10, 13, 14] real [ 0.05 -0.45] inj [ 0.031 -0.039] z [ 0.07 -1.45] chi2(2) 2.1 frac_further 0.307 sky [ 1.2 -8.4]
+S32 2-min centroids A: MOM_CENTR1 -0.235 (null +0.002±0.143, z -1.66, p 0.081); MOM_CENTR2 +0.045 (null +0.029±0.133, z +0.12, p 0.891); POS_CORR1 -0.171 (null -0.017±0.138, z -1.11, p 0.208); POS_CORR2 +0.089 (null +0.050±0.133, z +0.30, p 0.731); RES1 -0.063 (null +0.020±0.096, z -0.87, p 0.290); RES2 -0.045 (null -0.021±0.072, z -0.33, p 0.676)
+S6_ffi A: real [ 0.3  -0.15] z [ 2.39 -0.64] chi2(2) 6.3 sky [ 7.3 -2.6]
+S32_tpf2min A: real [ 0.45 -0.15] z [ 0.75 -0.1 ] chi2(2) 0.6 sky [13.9 -0.1]
+COMBINED without S6 A: (+2.5, -7.5)" ± (5.7, 5.7); chi2 2.1
+COMBINED A: offset (dRA, dDec) = (+6.3, -3.9)" ± (2.7, 3.1); chi2 of mean (2 dof) 7.3; total chi2 9.0/6
+S98 clean B: n=3 [0, 1, 4] real [ 0.4  -0.05] inj [ 0.001 -0.011] z [ 2.14 -0.19] chi2(2) 4.6 frac_further 0.133 sky [8.3 0.1]
+S32 2-min centroids B: MOM_CENTR1 +0.041 (null +0.011±0.250, z +0.12, p 0.884); MOM_CENTR2 +0.008 (null +0.022±0.240, z -0.06, p 0.934); POS_CORR1 -0.033 (null -0.010±0.240, z -0.10, p 0.904); POS_CORR2 -0.178 (null +0.035±0.241, z -0.89, p 0.308); RES1 +0.074 (null +0.021±0.182, z +0.29, p 0.683); RES2 +0.187 (null -0.013±0.139, z +1.44, p 0.085)
+S6_ffi B: real [-0.15  0.05] z [-0.84  0.34] chi2(2) 0.8 sky [-2.6  1.7]
+S32_tpf2min B: real [-0.5   1.15] z [-0.77  1.5 ] chi2(2) 2.9 sky [-10.6  21.2]
+COMBINED without S6 B: (+6.1, +1.6)" ± (3.6, 4.0); chi2 3.0
+COMBINED B: offset (dRA, dDec) = (+1.0, +1.4)" ± (2.3, 3.0); chi2 of mean (2 dof) 0.4; total chi2 8.3/6

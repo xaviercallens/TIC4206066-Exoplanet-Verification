@@ -1,0 +1,25 @@
+Getting TessCut for sector 6
+Getting TessCut for sector 32
+Getting TessCut for sector 98
+Estimated missing stellar parameters for 70 of 121 stars from photometry. See the 'params_estimated' column of the .stars dataframe. 2 appear evolved and were assigned a nominal 1 M_Sun.
+B_repro_S32+S98 0 FPP=0.2154 NFPP=0 (14s)
+B_repro_S32+S98 1 FPP=0.18 NFPP=0 (10s)
+B_repro_S32+S98 2 FPP=0.1902 NFPP=0 (10s)
+B_repro_S32+S98 3 FPP=0.1775 NFPP=0 (10s)
+B_repro_S32+S98 4 FPP=0.1863 NFPP=0 (10s)
+B_repro_S32+S98 5 FPP=0.1765 NFPP=0 (10s)
+B_repro_S32+S98 6 FPP=0.1851 NFPP=0 (10s)
+B_repro_S32+S98 7 FPP=0.1854 NFPP=0 (10s)
+B_repro_S32+S98 8 FPP=0.1836 NFPP=0 (10s)
+B_repro_S32+S98 9 FPP=0.1697 NFPP=0 (10s)
+B_repro_S32+S98 10 FPP=0.1789 NFPP=0 (10s)
+B_repro_S32+S98 11 FPP=0.1826 NFPP=0 (10s)
+B_repro_S32+S98 12 FPP=0.1996 NFPP=0 (10s)
+B_repro_S32+S98 13 FPP=0.1841 NFPP=0 (10s)
+B_repro_S32+S98 14 FPP=0.164 NFPP=0 (10s)
+B_repro_S32+S98 15 FPP=0.1836 NFPP=0 (10s)
+B_repro_S32+S98 16 FPP=0.1817 NFPP=0 (10s)
+B_repro_S32+S98 17 FPP=0.1672 NFPP=0 (10s)
+B_repro_S32+S98 18 FPP=0.1857 NFPP=0 (10s)
+B_repro_S32+S98 19 FPP=0.1765 NFPP=0 (10s)
+DONE B_repro_S32+S98 FPP 0.1827 ± 0.011 (sd), sem 0.0025; range 0.164-0.215; NFPP mean 0

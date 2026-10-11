@@ -1,0 +1,371 @@
+{
+ "rule": "Step 1: the S98-only prediction for signal A, redone on Sector 98 QLP data alone.\n\nRule fixed before running (written here before the first execution):\n  * data: QLP SYS_RM_FLUX, QUALITY == 0; wotan biweight 0.75 d; masked in the trend: B (reconciled ephemeris,\n    +-(T14B/2 + 15 min)) and A at the DISCOVERY-record ephemeris (the only A information that existed before the\n    archival look), half-width T14 = 1.87 h. B in-transit cadences are dropped from the A fit.\n  * model: symmetric trapezoid (no limb darkening, no external shape prior), shape (depth, T14, T12/T14) fitted\n    on S98 alone; then the ephemeris (P, T_ref) is profiled with that shape fixed.\n  * uncertainty: the larger of (a) the beta-inflated likelihood width (beta = time-averaging red-noise factor)\n    and (b) the event bootstrap (resampling the S98 transits); correlation taken from (a).\n  * centre: the best (P, T_ref) of the joint S98 likelihood.\nThe discovery record (P = 3.182945, no stated error) is propagated as a cross-check with the same sigma.\nNothing from S6, S32 or the multi-sector ephemeris enters this step.",
+ "n_points": 2092,
+ "sig_pp_ppm": 632.2441455001771,
+ "beta": 1.2652371529668052,
+ "beta_bins": [
+  1.129336776493616,
+  1.174819875159588,
+  1.2652371529668052,
+  1.404059003732404,
+  1.5881635783346133
+ ],
+ "epochs_S98": [
+  -1,
+  0,
+  1,
+  4,
+  5,
+  9,
+  10,
+  13,
+  14
+ ],
+ "NREF": 6,
+ "global_fit": {
+  "Tref": 4017.8326544253473,
+  "P": 3.1821154092902453,
+  "depth_ppm": 377.25273218419034,
+  "T14_h": 1.7420984028880226,
+  "T12_over_T14": 0.050436145134757596,
+  "offset": 1.000007846513216,
+  "dchi2_vs_flat": 83.99474882170898
+ },
+ "likelihood": {
+  "P_best": 3.182112000000118,
+  "Tref_best": 4017.8326891475695,
+  "P_mean": 3.182090239848446,
+  "Tref_mean": 4017.8333279149974,
+  "sP": 0.0005694233682706916,
+  "sT": 0.0029471909827049887,
+  "corr": 0.34425246509012164,
+  "P_q16_50_84": [
+   3.1816167758624148,
+   3.182138148112705,
+   3.1826087484133985
+  ]
+ },
+ "bootstrap": {
+  "n": 1000,
+  "sP": 0.0012996081002522013,
+  "sT": 0.007941069077974193,
+  "P_q16_84": [
+   3.1806600000000764,
+   3.182384000000126
+  ],
+  "corr": -0.6644288757499455
+ },
+ "per_transit": {
+  "P": 3.180994078965199,
+  "Tref": 4017.8348514097056,
+  "sP": 0.0013413324435163501,
+  "sT": 0.007394886931363829,
+  "corr": 0.1905605103144837,
+  "chi2": 92.77377493968856,
+  "dof": 7,
+  "oc_min": {
+   "-1": 107.03,
+   "0": -10.85,
+   "1": -13.74,
+   "4": -5.39,
+   "5": -23.28,
+   "9": 11.68,
+   "10": -19.2,
+   "13": 8.64,
+   "14": 9.25
+  },
+  "etc_min": {
+   "-1": 12.5,
+   "0": 5.0,
+   "1": 8.0,
+   "4": 14.25,
+   "5": 13.5,
+   "9": 7.75,
+   "10": 8.75,
+   "13": 15.0,
+   "14": 8.25
+  }
+ },
+ "adopted": {
+  "P": 3.182112000000118,
+  "Tref": 4017.8326891475695,
+  "sP": 0.0012996081002522013,
+  "sT": 0.007941069077974193,
+  "corr": 0.34425246509012164,
+  "NREF": 6,
+  "T0_epoch0": 3998.740017147569
+ },
+ "discovery": {
+  "P": 3.182945191903069,
+  "T0": 3998.7348383728113
+ },
+ "S98_only_elsewhere": {
+  "pertransit_T1": [
+   3.18164,
+   3.18206
+  ],
+  "LEO": [
+   3.1822,
+   0.00031
+  ],
+  "audit_template_s11": [
+   3.1827602,
+   0.000235
+  ],
+  "audit_BLS_s12": 3.1827078
+ },
+ "propagation": {
+  "adopted": {
+   "S6": [
+    {
+     "epoch": -795,
+     "t_pred": 1468.96098,
+     "sigma_h": 24.92,
+     "sigma_over_T14": 13.33,
+     "final_minus_pred_h": -12.94,
+     "final_minus_pred_sigma": -0.52
+    },
+    {
+     "epoch": -794,
+     "t_pred": 1472.14309,
+     "sigma_h": 24.89,
+     "sigma_over_T14": 13.31,
+     "final_minus_pred_h": -12.92,
+     "final_minus_pred_sigma": -0.52
+    },
+    {
+     "epoch": -793,
+     "t_pred": 1475.3252,
+     "sigma_h": 24.86,
+     "sigma_over_T14": 13.29,
+     "final_minus_pred_h": -12.91,
+     "final_minus_pred_sigma": -0.52
+    },
+    {
+     "epoch": -792,
+     "t_pred": 1478.50731,
+     "sigma_h": 24.83,
+     "sigma_over_T14": 13.28,
+     "final_minus_pred_h": -12.89,
+     "final_minus_pred_sigma": -0.52
+    },
+    {
+     "epoch": -791,
+     "t_pred": 1481.68943,
+     "sigma_h": 24.79,
+     "sigma_over_T14": 13.26,
+     "final_minus_pred_h": -12.87,
+     "final_minus_pred_sigma": -0.52
+    },
+    {
+     "epoch": -790,
+     "t_pred": 1484.87154,
+     "sigma_h": 24.76,
+     "sigma_over_T14": 13.24,
+     "final_minus_pred_h": -12.86,
+     "final_minus_pred_sigma": -0.52
+    },
+    {
+     "epoch": -789,
+     "t_pred": 1488.05365,
+     "sigma_h": 24.73,
+     "sigma_over_T14": 13.23,
+     "final_minus_pred_h": -12.84,
+     "final_minus_pred_sigma": -0.52
+    }
+   ],
+   "S32": [
+    {
+     "epoch": -573,
+     "t_pred": 2175.38984,
+     "sigma_h": 17.99,
+     "sigma_over_T14": 9.62,
+     "final_minus_pred_h": -9.35,
+     "final_minus_pred_sigma": -0.52
+    },
+    {
+     "epoch": -572,
+     "t_pred": 2178.57195,
+     "sigma_h": 17.96,
+     "sigma_over_T14": 9.61,
+     "final_minus_pred_h": -9.34,
+     "final_minus_pred_sigma": -0.52
+    },
+    {
+     "epoch": -571,
+     "t_pred": 2181.75407,
+     "sigma_h": 17.93,
+     "sigma_over_T14": 9.59,
+     "final_minus_pred_h": -9.32,
+     "final_minus_pred_sigma": -0.52
+    },
+    {
+     "epoch": -570,
+     "t_pred": 2184.93618,
+     "sigma_h": 17.9,
+     "sigma_over_T14": 9.57,
+     "final_minus_pred_h": -9.3,
+     "final_minus_pred_sigma": -0.52
+    },
+    {
+     "epoch": -569,
+     "t_pred": 2188.11829,
+     "sigma_h": 17.87,
+     "sigma_over_T14": 9.56,
+     "final_minus_pred_h": -9.29,
+     "final_minus_pred_sigma": -0.52
+    },
+    {
+     "epoch": -568,
+     "t_pred": 2191.3004,
+     "sigma_h": 17.84,
+     "sigma_over_T14": 9.54,
+     "final_minus_pred_h": -9.27,
+     "final_minus_pred_sigma": -0.52
+    },
+    {
+     "epoch": -567,
+     "t_pred": 2194.48251,
+     "sigma_h": 17.81,
+     "sigma_over_T14": 9.52,
+     "final_minus_pred_h": -9.25,
+     "final_minus_pred_sigma": -0.52
+    },
+    {
+     "epoch": -566,
+     "t_pred": 2197.66463,
+     "sigma_h": 17.78,
+     "sigma_over_T14": 9.51,
+     "final_minus_pred_h": -9.24,
+     "final_minus_pred_sigma": -0.52
+    }
+   ]
+  },
+  "discovery_centre_adopted_sigma": {
+   "S6": [
+    {
+     "epoch": -795,
+     "t_pred": 1468.29341,
+     "sigma_h": 24.92,
+     "sigma_over_T14": 13.33,
+     "final_minus_pred_h": 3.08,
+     "final_minus_pred_sigma": 0.12
+    },
+    {
+     "epoch": -794,
+     "t_pred": 1471.47636,
+     "sigma_h": 24.89,
+     "sigma_over_T14": 13.31,
+     "final_minus_pred_h": 3.08,
+     "final_minus_pred_sigma": 0.12
+    },
+    {
+     "epoch": -793,
+     "t_pred": 1474.6593,
+     "sigma_h": 24.86,
+     "sigma_over_T14": 13.29,
+     "final_minus_pred_h": 3.08,
+     "final_minus_pred_sigma": 0.12
+    },
+    {
+     "epoch": -792,
+     "t_pred": 1477.84225,
+     "sigma_h": 24.83,
+     "sigma_over_T14": 13.28,
+     "final_minus_pred_h": 3.07,
+     "final_minus_pred_sigma": 0.12
+    },
+    {
+     "epoch": -791,
+     "t_pred": 1481.02519,
+     "sigma_h": 24.79,
+     "sigma_over_T14": 13.26,
+     "final_minus_pred_h": 3.07,
+     "final_minus_pred_sigma": 0.12
+    },
+    {
+     "epoch": -790,
+     "t_pred": 1484.20814,
+     "sigma_h": 24.76,
+     "sigma_over_T14": 13.24,
+     "final_minus_pred_h": 3.06,
+     "final_minus_pred_sigma": 0.12
+    },
+    {
+     "epoch": -789,
+     "t_pred": 1487.39108,
+     "sigma_h": 24.73,
+     "sigma_over_T14": 13.23,
+     "final_minus_pred_h": 3.06,
+     "final_minus_pred_sigma": 0.12
+    }
+   ],
+   "S32": [
+    {
+     "epoch": -573,
+     "t_pred": 2174.90724,
+     "sigma_h": 17.99,
+     "sigma_over_T14": 9.62,
+     "final_minus_pred_h": 2.23,
+     "final_minus_pred_sigma": 0.12
+    },
+    {
+     "epoch": -572,
+     "t_pred": 2178.09019,
+     "sigma_h": 17.96,
+     "sigma_over_T14": 9.61,
+     "final_minus_pred_h": 2.23,
+     "final_minus_pred_sigma": 0.12
+    },
+    {
+     "epoch": -571,
+     "t_pred": 2181.27313,
+     "sigma_h": 17.93,
+     "sigma_over_T14": 9.59,
+     "final_minus_pred_h": 2.22,
+     "final_minus_pred_sigma": 0.12
+    },
+    {
+     "epoch": -570,
+     "t_pred": 2184.45608,
+     "sigma_h": 17.9,
+     "sigma_over_T14": 9.57,
+     "final_minus_pred_h": 2.22,
+     "final_minus_pred_sigma": 0.12
+    },
+    {
+     "epoch": -569,
+     "t_pred": 2187.63902,
+     "sigma_h": 17.87,
+     "sigma_over_T14": 9.56,
+     "final_minus_pred_h": 2.22,
+     "final_minus_pred_sigma": 0.12
+    },
+    {
+     "epoch": -568,
+     "t_pred": 2190.82197,
+     "sigma_h": 17.84,
+     "sigma_over_T14": 9.54,
+     "final_minus_pred_h": 2.21,
+     "final_minus_pred_sigma": 0.12
+    },
+    {
+     "epoch": -567,
+     "t_pred": 2194.00491,
+     "sigma_h": 17.81,
+     "sigma_over_T14": 9.52,
+     "final_minus_pred_h": 2.21,
+     "final_minus_pred_sigma": 0.12
+    },
+    {
+     "epoch": -566,
+     "t_pred": 2197.18786,
+     "sigma_h": 17.78,
+     "sigma_over_T14": 9.51,
+     "final_minus_pred_h": 2.2,
+     "final_minus_pred_sigma": 0.12
+    }
+   ]
+  }
+ }
+}

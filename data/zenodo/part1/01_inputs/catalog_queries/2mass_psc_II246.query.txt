@@ -1,0 +1,1 @@
+VizieR II/246/out cone r=30 arcsec around (80.85983,-1.32696) J2000

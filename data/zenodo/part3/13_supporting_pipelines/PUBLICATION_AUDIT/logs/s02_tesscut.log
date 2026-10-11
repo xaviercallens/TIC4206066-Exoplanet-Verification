@@ -1,0 +1,25 @@
+{
+ "results": [
+  {
+   "sectorName": "tess-s0006-1-1",
+   "sector": "0006",
+   "camera": "1",
+   "ccd": "1"
+  },
+  {
+   "sectorName": "tess-s0032-1-2",
+   "sector": "0032",
+   "camera": "1",
+   "ccd": "2"
+  },
+  {
+   "sectorName": "tess-s0098-1-2",
+   "sector": "0098",
+   "camera": "1",
+   "ccd": "2"
+  }
+ ]
+}
+{"sector": 6, "file": "data/tesscut/tess-s0006-1-1_80.859827_-1.326964_21x21_astrocut.fits", "shape": [993, 21, 21], "camera": 1, "ccd": 1, "procver": "0.11.1", "date": "2021-08-12", "ffi_type": "SPOC", "n_cad": 993, "tstart": 1468.2870040465345, "tstop": 1490.0366816985775, "timedel": 0.020833333333333332, "exposure_d": 0.016499993356, "int_time": 1.98, "frametim": 2.0, "num_frm": 900, "timesys": "TDB", "bjdrefi": 2457000, "bjdreff": 0.0, "tunit": "d", "backapp": 0.0, "wcs_1crv": null, "old_file": "../deep_followup_tic4206066/pixels/tess-s0006-1-1_80.859830_-1.326960_21x21_astrocut.fits", "flux_identical": true, "time_identical": true}
+{"sector": 32, "file": "data/tesscut/tess-s0032-1-2_80.859827_-1.326964_21x21_astrocut.fits", "shape": [3600, 21, 21], "camera": 1, "ccd": 2, "procver": "0.11.1", "date": "2021-02-03", "ffi_type": "SPOC", "n_cad": 3600, "tstart": 2174.230850694494, "tstop": 2200.231070821137, "timedel": 0.006944444444444444, "exposure_d": 0.00549999756, "int_time": 1.98, "frametim": 2.0, "num_frm": 300, "timesys": "TDB", "bjdrefi": 2457000, "bjdreff": 0.0, "tunit": "d", "backapp": 0.0, "wcs_1crv": null, "old_file": "../deep_followup_tic4206066/pixels/tess-s0032-1-2_80.859830_-1.326960_21x21_astrocut.fits", "flux_identical": true, "time_identical": true}
+{"sector": 98, "file": "data/tesscut/tess-s0098-1-2_80.859827_-1.326964_21x21_astrocut.fits", "shape": [24162, 21, 21], "camera": 1, "ccd": 2, "procver": "0.11.1", "date": "2026-01-13", "ffi_type": "SPOC", "n_cad": 24162, "tstart": 3988.4987292108094, "tstop": 4045.9020492155196, "timedel": 0.0023148148148148, "exposure_d": 0.00183333247, "int_time": 1.98, "frametim": 2.0, "num_frm": 100, "timesys": "TDB", "bjdrefi": 2457000, "bjdreff": 0.0, "tunit": "d", "backapp": 0, "wcs_1crv": null, "old_file": "../deep_followup_tic4206066/pixels/tess-s0098-1-2_80.859830_-1.326960_21x21_astrocut.fits", "flux_identical": true, "time_identical": true}

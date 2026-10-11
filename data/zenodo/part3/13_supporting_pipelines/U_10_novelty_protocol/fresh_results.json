@@ -1,0 +1,1524 @@
+{
+ "_runs": [
+  {
+   "section": "exofop",
+   "start_utc": "2026-09-25T11:33:15.663597Z",
+   "end_utc": "2026-09-25T11:33:59.940714Z"
+  },
+  {
+   "section": "nea",
+   "start_utc": "2026-09-25T11:33:59.941374Z",
+   "end_utc": "2026-09-25T11:34:19.448200Z"
+  },
+  {
+   "section": "simbad",
+   "start_utc": "2026-09-25T11:34:19.448828Z",
+   "end_utc": "2026-09-25T11:34:28.763958Z"
+  },
+  {
+   "section": "tce",
+   "start_utc": "2026-09-25T11:34:28.764974Z",
+   "end_utc": "2026-09-25T11:35:11.425038Z"
+  },
+  {
+   "section": "vizier",
+   "start_utc": "2026-09-25T11:35:11.426132Z",
+   "end_utc": "2026-09-25T11:35:40.165480Z"
+  },
+  {
+   "section": "t16raven",
+   "start_utc": "2026-09-25T11:35:40.166252Z",
+   "end_utc": "2026-09-25T11:35:47.155946Z"
+  },
+  {
+   "section": "arxiv",
+   "start_utc": "2026-09-25T11:40:10.691773Z",
+   "end_utc": "2026-09-25T11:41:45.519778Z"
+  }
+ ],
+ "exofop": {
+  "toi": {
+   "http": 200,
+   "url": "https://exofop.ipac.caltech.edu/tess/download_toi.php?sort=toi&output=csv",
+   "sha256": "7fdff400d1fb62f83df01e0131051f611fa5812512b72e63732214cb578f2c7e",
+   "n_rows": 8148,
+   "tic_rows": [],
+   "within_2arcmin": [],
+   "nearest": {
+    "sep_arcmin": 43.03,
+    "id": "2451.01",
+    "tic": 4294779
+   },
+   "n_period_only_matches_0p1pct_anywhere": 34,
+   "period_matches_within_1deg": [],
+   "closest_period_only_matches": [
+    {
+     "TOI": "2521.01",
+     "tic": "72556406",
+     "period": "5.563087",
+     "sep_deg": 14.3,
+     "match": [
+      [
+       "B_ms",
+       "P/2",
+       0.00059
+      ],
+      [
+       "B_s98",
+       "P/2",
+       0.000611
+      ]
+     ]
+    },
+    {
+     "TOI": "4711.01",
+     "tic": "177718896",
+     "period": "3.7081082",
+     "sep_deg": 28.01,
+     "match": [
+      [
+       "B_ms",
+       "P/3",
+       0.000756
+      ],
+      [
+       "B_s98",
+       "P/3",
+       0.000777
+      ]
+     ]
+    },
+    {
+     "TOI": "3737.01",
+     "tic": "96074951",
+     "period": "5.5609997",
+     "sep_deg": 37.47,
+     "match": [
+      [
+       "B_ms",
+       "P/2",
+       0.000965
+      ],
+      [
+       "B_s98",
+       "P/2",
+       0.000986
+      ]
+     ]
+    },
+    {
+     "TOI": "6908.01",
+     "tic": "197039766",
+     "period": "3.71207760544966",
+     "sep_deg": 40.35,
+     "match": [
+      [
+       "B_ms",
+       "P/3",
+       0.000314
+      ],
+      [
+       "B_s98",
+       "P/3",
+       0.000293
+      ]
+     ]
+    },
+    {
+     "TOI": "6355.01",
+     "tic": "98613492",
+     "period": "1.0617107",
+     "sep_deg": 48.88,
+     "match": [
+      [
+       "A_ms",
+       "P/3",
+       0.000737
+      ],
+      [
+       "A_s98",
+       "P/3",
+       0.000687
+      ]
+     ]
+    }
+   ]
+  },
+  "ctoi": {
+   "http": 200,
+   "url": "https://exofop.ipac.caltech.edu/tess/download_ctoi.php?sort=ctoi&output=csv",
+   "sha256": "108e740f9abcca374181cf0125ec0d700ebb2f910f16647f6c30bea5ca589525",
+   "n_rows": 5137,
+   "tic_rows": [],
+   "within_2arcmin": [],
+   "nearest": {
+    "sep_arcmin": 120.06,
+    "id": "449197624.01",
+    "tic": 449197624
+   },
+   "n_period_only_matches_0p1pct_anywhere": 22,
+   "period_matches_within_1deg": [],
+   "closest_period_only_matches": [
+    {
+     "CTOI": "72556406.01",
+     "tic": "72556406",
+     "period": "5.56383",
+     "sep_deg": 14.3,
+     "match": [
+      [
+       "B_ms",
+       "P/2",
+       0.000456
+      ],
+      [
+       "B_s98",
+       "P/2",
+       0.000477
+      ]
+     ]
+    },
+    {
+     "CTOI": "408855775.01",
+     "tic": "408855775",
+     "period": "1.5898671601633072",
+     "sep_deg": 16.81,
+     "match": [
+      [
+       "A_ms",
+       "P/2",
+       0.000959
+      ]
+     ]
+    },
+    {
+     "CTOI": "197039766.01",
+     "tic": "197039766",
+     "period": "3.7101",
+     "sep_deg": 40.35,
+     "match": [
+      [
+       "B_ms",
+       "P/3",
+       0.000219
+      ],
+      [
+       "B_s98",
+       "P/3",
+       0.00024
+      ]
+     ]
+    },
+    {
+     "CTOI": "178076617.01",
+     "tic": "178076617",
+     "period": "11.12815550340112",
+     "sep_deg": 47.5,
+     "match": [
+      [
+       "B_ms",
+       "P",
+       0.000412
+      ],
+      [
+       "B_s98",
+       "P",
+       0.000433
+      ]
+     ]
+    },
+    {
+     "CTOI": "206468250.01",
+     "tic": "206468250",
+     "period": "5.5640589325628405",
+     "sep_deg": 53.41,
+     "match": [
+      [
+       "B_ms",
+       "P/2",
+       0.000415
+      ],
+      [
+       "B_s98",
+       "P/2",
+       0.000436
+      ]
+     ]
+    }
+   ]
+  },
+  "target_json": {
+   "http": 200,
+   "url": "https://exofop.ipac.caltech.edu/tess/target.php?id=4206066&json",
+   "sha256": "58a0a96349d3f964c0b6f798894e60b57c9ba0588f9e879e5aabf833c9449636",
+   "summary": {
+    "tois": 0,
+    "ctois": 0,
+    "planet_parameters": 0,
+    "stellar_companions": 0,
+    "imaging": 0,
+    "spectroscopy": 0,
+    "time_series": 0,
+    "files": 0,
+    "tois_content": [],
+    "ctois_content": [],
+    "star_names": "TIC 4206066, 2MASS J05232636-0119380, APASS 84146, Gaia DR2 3220388198192519424, Gaia DR3 3220388198192519424, TYC 4753-01591-1, UCAC4 444-009590, WISE J052326.35-011937.3",
+    "top_keys": [
+     "basic_info",
+     "coordinates",
+     "tois",
+     "ctois",
+     "planet_units",
+     "planet_parameters",
+     "stellar_units",
+     "stellar_parameters",
+     "stellar_companions_units",
+     "stellar_companions",
+     "magnitudes",
+     "imaging_units",
+     "imaging",
+     "spectroscopy_units",
+     "spectroscopy",
+     "time_series_units",
+     "time_series",
+     "files"
+    ]
+   }
+  }
+ },
+ "nasa_exoplanet_archive": [
+  {
+   "query": "select toi,tid,ra,dec,pl_orbper,tfopwg_disp from toi where tid=4206066",
+   "http": 200,
+   "sha256": "5a6de1184c53e6d510e653e56c308ef153602417bbba699e34b86cbf749a5d71",
+   "n_rows": 0,
+   "rows": []
+  },
+  {
+   "query": "select toi,tid,ra,dec,pl_orbper,tfopwg_disp from toi where ra between 80.82648 and 80.89317 and dec between -1.36030 and -1.29363",
+   "http": 200,
+   "sha256": "5a6de1184c53e6d510e653e56c308ef153602417bbba699e34b86cbf749a5d71",
+   "n_rows": 0,
+   "rows": []
+  },
+  {
+   "query": "select pl_name,hostname,tic_id,gaia_dr3_id,ra,dec,pl_orbper,disc_facility from ps where tic_id='TIC 4206066'",
+   "http": 200,
+   "sha256": "635d8e67d4437dc2365692ba5840756616e8003d250cebb4882e4e53c8d90474",
+   "n_rows": 0,
+   "rows": []
+  },
+  {
+   "query": "select pl_name,hostname,tic_id,ra,dec,pl_orbper from ps where ra between 80.82648 and 80.89317 and dec between -1.36030 and -1.29363",
+   "http": 200,
+   "sha256": "bb4eed90e9ec3d426907b5e523b256c632b00ef689a03daa72af151a8ad83e0f",
+   "n_rows": 0,
+   "rows": []
+  },
+  {
+   "query": "select pl_name,hostname,tic_id,gaia_dr3_id,ra,dec,pl_orbper from pscomppars where tic_id='TIC 4206066'",
+   "http": 200,
+   "sha256": "74d8903737ad3699a598085b8ddba6c1c60349084836237c552d06c34b7c99a7",
+   "n_rows": 0,
+   "rows": []
+  },
+  {
+   "query": "select pl_name,hostname,tic_id,ra,dec,pl_orbper from pscomppars where ra between 80.82648 and 80.89317 and dec between -1.36030 and -1.29363",
+   "http": 200,
+   "sha256": "bb4eed90e9ec3d426907b5e523b256c632b00ef689a03daa72af151a8ad83e0f",
+   "n_rows": 0,
+   "rows": []
+  },
+  {
+   "query": "select pl_name,hostname,gaia_dr3_id from pscomppars where gaia_dr3_id='Gaia DR3 3220388198192519424'",
+   "http": 200,
+   "sha256": "2efc64ba2a06c3ba727f31da652b940feee97738b4f86db7febe97b347100a81",
+   "n_rows": 0,
+   "rows": []
+  },
+  {
+   "query": "select toi,tid,pl_orbper from toi where tid=150428135",
+   "http": 200,
+   "sha256": "1814f2941ab25fa96e974b21845d18170c99664e9f848622e27699d9e96f8481",
+   "n_rows": 4,
+   "rows": [
+    {
+     "toi": "700.01",
+     "tid": "150428135",
+     "pl_orbper": "16.0511060"
+    },
+    {
+     "toi": "700.02",
+     "tid": "150428135",
+     "pl_orbper": "37.4236838"
+    },
+    {
+     "toi": "700.03",
+     "tid": "150428135",
+     "pl_orbper": "9.9772730"
+    },
+    {
+     "toi": "700.04",
+     "tid": "150428135",
+     "pl_orbper": "27.8096898"
+    }
+   ]
+  }
+ ],
+ "simbad": [
+  {
+   "query": "SELECT b.main_id, b.otype, b.ra, b.dec, b.oid FROM ident AS i JOIN basic AS b ON i.oidref=b.oid WHERE i.id='TIC 4206066'",
+   "http": 200,
+   "sha256": "55acc339c95ac00a2cdb6d2130567f906388fe76e6c01a0860429caf1c545ff2",
+   "n_rows": 1,
+   "rows": [
+    {
+     "main_id": "StKM 1-561",
+     "otype": "PM*",
+     "ra": "80.85984179756",
+     "dec": "-1.3272787038399998",
+     "oid": "786188"
+    }
+   ]
+  },
+  {
+   "query": "SELECT b.main_id, b.otype, b.ra, b.dec, b.oid FROM ident AS i JOIN basic AS b ON i.oidref=b.oid WHERE i.id='StKM 1-561'",
+   "http": 200,
+   "sha256": "55acc339c95ac00a2cdb6d2130567f906388fe76e6c01a0860429caf1c545ff2",
+   "n_rows": 1,
+   "rows": [
+    {
+     "main_id": "StKM 1-561",
+     "otype": "PM*",
+     "ra": "80.85984179756",
+     "dec": "-1.3272787038399998",
+     "oid": "786188"
+    }
+   ]
+  },
+  {
+   "query": "SELECT b.main_id, b.otype, b.ra, b.dec, b.oid FROM ident AS i JOIN basic AS b ON i.oidref=b.oid WHERE i.id='Gaia DR3 3220388198192519424'",
+   "http": 200,
+   "sha256": "55acc339c95ac00a2cdb6d2130567f906388fe76e6c01a0860429caf1c545ff2",
+   "n_rows": 1,
+   "rows": [
+    {
+     "main_id": "StKM 1-561",
+     "otype": "PM*",
+     "ra": "80.85984179756",
+     "dec": "-1.3272787038399998",
+     "oid": "786188"
+    }
+   ]
+  },
+  {
+   "query": "SELECT i.id FROM ident AS i JOIN basic AS b ON i.oidref=b.oid WHERE b.main_id='StKM 1-561'",
+   "http": 200,
+   "sha256": "351779729700f2e81d764eb06096aafbfa2e5ec01fcb50969f6f814566d443dd",
+   "n_rows": 8,
+   "rows": [
+    {
+     "id": "TIC 4206066"
+    },
+    {
+     "id": "StKM 1-561"
+    },
+    {
+     "id": "Gaia DR3 3220388198192519424"
+    },
+    {
+     "id": "TYC 4753-1591-1"
+    },
+    {
+     "id": "2MASS J05232636-0119380"
+    },
+    {
+     "id": "UCAC4 444-009590"
+    },
+    {
+     "id": "PM J05234-0119"
+    },
+    {
+     "id": "Gaia DR2 3220388198192519424"
+    }
+   ]
+  },
+  {
+   "query": "SELECT o.otype FROM otypes AS o JOIN basic AS b ON o.oidref=b.oid WHERE b.main_id='StKM 1-561'",
+   "http": 200,
+   "sha256": "500aa8594a4b621993cb08e04426704199174185cd7a3606e7212aef9cdd2f90",
+   "n_rows": 3,
+   "rows": [
+    {
+     "otype": "*"
+    },
+    {
+     "otype": "NIR"
+    },
+    {
+     "otype": "PM*"
+    }
+   ]
+  },
+  {
+   "query": "SELECT r.bibcode, r.\"year\", r.title FROM has_ref AS h JOIN ref AS r ON h.oidbibref=r.oidbib JOIN basic AS b ON h.oidref=b.oid WHERE b.main_id='StKM 1-561' ORDER BY 2",
+   "http": 200,
+   "sha256": "522f18c7b440c201e383990adfaf19e1fc45add0a206f7bba735a77817b94bd3",
+   "n_rows": 10,
+   "rows": [
+    {
+     "bibcode": "1986AJ.....91..144S",
+     "year": "1986",
+     "title": "Dwarf K and M stars of small proper motion found in a large spectroscopic survey."
+    },
+    {
+     "bibcode": "2011AJ....142..138L",
+     "year": "2011",
+     "title": "An all-sky catalog of bright M dwarfs."
+    },
+    {
+     "bibcode": "2013MNRAS.435.2161F",
+     "year": "2013",
+     "title": "A catalogue of bright (K < 9) M dwarfs."
+    },
+    {
+     "bibcode": "2014ASPC..485..223B",
+     "year": "2014",
+     "title": "The JMMC stellar diameters catalog v2 (JSDC): a new release based on SearchCal improvements"
+    },
+    {
+     "bibcode": "2019MNRAS.490.3158C",
+     "year": "2019",
+     "title": "A catalogue of stellar diameters and fluxes for mid-infrared interferometry."
+    },
+    {
+     "bibcode": "2021A&A...649A...6G",
+     "year": "2021",
+     "title": "Gaia Early Data Release 3. The Gaia Catalogue of Nearby Stars."
+    },
+    {
+     "bibcode": "2022A&A...661A..29M",
+     "year": "2022",
+     "title": "First eROSITA study of nearby M dwarfs and the rotation-activity relation in combination with TESS."
+    },
+    {
+     "bibcode": "2023AJ....165..267H",
+     "year": "2023",
+     "title": "Bioverse: A Comprehensive Assessment of the Capabilities of Extremely Large Telescopes to Probe Earth-like O_2_ Levels in Nearby Transiting Habitable-zone Exoplanets."
+    },
+    {
+     "bibcode": "2024AJ....167..139T",
+     "year": "2024",
+     "title": "HPIC: The Habitable Worlds Observatory Preliminary Input Catalog."
+    },
+    {
+     "bibcode": "2025PASP..137j4402T",
+     "year": "2025",
+     "title": "HWO Target Stars and Systems: A Prioritized Community List of Potential Stellar Targets for the Habitable Worlds Observatory's ExoEarth Survey."
+    }
+   ]
+  },
+  {
+   "query": "SELECT main_id, otype, ra, dec, DISTANCE(POINT('ICRS',ra,dec),POINT('ICRS',80.85982665567,-1.32696401034))*3600 AS sep_arcsec FROM basic WHERE CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',80.85982665567,-1.32696401034,0.008333))=1 ORDER BY sep_arcsec",
+   "http": 200,
+   "sha256": "13d2ad6fbf63cff1bb7359cc2baad9f5286d0d7f61997bb144c84c99c21032c3",
+   "n_rows": 1,
+   "rows": [
+    {
+     "main_id": "StKM 1-561",
+     "otype": "PM*",
+     "ra": "80.85984179756",
+     "dec": "-1.3272787038399998",
+     "sep_arcsec": "1.1342065685430953"
+    }
+   ]
+  }
+ ],
+ "tce": {
+  "exomast": {
+   "http": 200,
+   "url": "https://exo.mast.stsci.edu/api/v0.1/dvdata/tess/4206066/tces/",
+   "sha256": "7a25e31c170fc23257f1c8fbd25001573814c95e32f864ffc365856b6f9d15a4",
+   "response": "{\"TCE\":[]}"
+  },
+  "n_tic_within_2arcmin": 49,
+  "bulk": {
+   "tess2018349182737-s0006-s0006_dvr-tcestats.csv": {
+    "http": 200,
+    "sha256": "0b98ecc5b0ecfc9d67f406dc0ef5042cbd223bffdd8878f86464e2d24bf2027d",
+    "n_rows": 1114,
+    "target_rows": [],
+    "neighbour_rows_2arcmin": [],
+    "n_period_only_matches_other_stars": 1
+   },
+   "tess2020325171311-s0032-s0032_dvr-tcestats.csv": {
+    "http": 200,
+    "sha256": "a456db24286aa12e5b440f8bca26df6e5afc8c6ee71a3874737cd4d11f7233e7",
+    "n_rows": 1537,
+    "target_rows": [],
+    "neighbour_rows_2arcmin": [],
+    "n_period_only_matches_other_stars": 1
+   },
+   "tess2025312234920-s0098-s0098_dvr-tcestats.csv": {
+    "http": 200,
+    "sha256": "fed58c35f942b4b5982c94cf96281600f278235c9490be53a5de31adc9a842e1",
+    "n_rows": 1441,
+    "target_rows": [],
+    "neighbour_rows_2arcmin": [],
+    "n_period_only_matches_other_stars": 4
+   },
+   "tess2018206190142-s0001-s0036_dvr-tcestats.csv": {
+    "http": 200,
+    "sha256": "87324fd6b21813783e8c7abc6cb10b7a7f89d9b1d1bab9d03e40ac33546091b6",
+    "n_rows": 12466,
+    "target_rows": [],
+    "neighbour_rows_2arcmin": [],
+    "n_period_only_matches_other_stars": 13
+   },
+   "tess2018206190142-s0001-s0039_dvr-tcestats.csv": {
+    "http": 200,
+    "sha256": "106052c659860287197d79ee5a3ccf1a251ee6af2f4446589192f07378d2286f",
+    "n_rows": 9698,
+    "target_rows": [],
+    "neighbour_rows_2arcmin": [],
+    "n_period_only_matches_other_stars": 11
+   },
+   "tess2018206190142-s0001-s0069_dvr-tcestats.csv": {
+    "http": 200,
+    "sha256": "d2c80d6e89c6e3bcf6d20ac958c0335e8c56a74a715b327c5fb5329dd30db87d",
+    "n_rows": 11402,
+    "target_rows": [],
+    "neighbour_rows_2arcmin": [],
+    "n_period_only_matches_other_stars": 17
+   },
+   "tess2018206190142-s0001-s0096_dvr-tcestats.csv": {
+    "http": 200,
+    "sha256": "11d00cbd67e433f339ef42b60bc895362c918bfb342bc4e30f1a6cfa240f7b46",
+    "n_rows": 20207,
+    "target_rows": [],
+    "neighbour_rows_2arcmin": [],
+    "n_period_only_matches_other_stars": 32
+   }
+  }
+ },
+ "vizier": {
+  "n_tables": 166,
+  "flagged": [
+   {
+    "table": "I/312/sample",
+    "description": "PPMX Sample",
+    "nrows": 1,
+    "period_like_columns": [
+     "P"
+    ],
+    "period_values": [
+     [
+      ""
+     ]
+    ]
+   },
+   {
+    "table": "I/345/gaia2",
+    "description": "GaiaSource DR2 data",
+    "nrows": 3,
+    "period_like_columns": [
+     "Nper"
+    ],
+    "period_values": [
+     [
+      "10",
+      "12",
+      "12"
+     ]
+    ]
+   },
+   {
+    "table": "I/350/gaiaedr3",
+    "description": "GaiaSource EDR3 data",
+    "nrows": 3,
+    "period_like_columns": [
+     "Nper"
+    ],
+    "period_values": [
+     [
+      "21",
+      "19",
+      "21"
+     ]
+    ]
+   },
+   {
+    "table": "I/355/gaiadr3",
+    "description": "Gaia DR3 source catalog (1811709771 sources)",
+    "nrows": 3,
+    "period_like_columns": [
+     "Nper",
+     "RVNper"
+    ],
+    "period_values": [
+     [
+      "21",
+      "19",
+      "21"
+     ],
+     [
+      "15",
+      "--",
+      "--"
+     ]
+    ]
+   },
+   {
+    "table": "IV/38/tic",
+    "description": "Transiting Exoplanet Survey Satellite (TESS) Input Catalog - v8.0 (TIC-8), outpout (on a total of 1,727,987,580 sources)",
+    "nrows": 3,
+    "period_like_columns": []
+   },
+   {
+    "table": "IV/39/tic82",
+    "description": "Transiting Exoplanet Survey Satellite (TESS) Input Catalog - v8.2 (TIC-8.2), outpout (on a total of 1,727,987,580 sources)",
+    "nrows": 3,
+    "period_like_columns": []
+   },
+   {
+    "table": "J/ApJS/258/26/table4",
+    "description": "The 5 million binary probabilities and RVs obtained from the LAMOST MRS DR8 (v1.0)",
+    "nrows": 3,
+    "period_like_columns": []
+   },
+   {
+    "table": "J/ApJS/274/36/mdwarfs",
+    "description": "Stellar parameters of M dwarf stars from LAMOST DR9 spectra (Table 1) and calculation parameters (Table 2)",
+    "nrows": 1,
+    "period_like_columns": [
+     "Per"
+    ],
+    "period_values": [
+     [
+      "--"
+     ]
+    ]
+   },
+   {
+    "table": "J/ApJS/276/44/table1",
+    "description": "Parameters of stellar atmospheres and chromospheric activity quantified based on medium-resolution spectra from LAMOST DR10 for 51451 sources",
+    "nrows": 4,
+    "period_like_columns": [
+     "Prot"
+    ],
+    "period_values": [
+     [
+      "--",
+      "--",
+      "--",
+      "--"
+     ]
+    ]
+   },
+   {
+    "table": "J/ApJS/276/57/table5",
+    "description": "TESS periodic variable star catalog",
+    "nrows": 1,
+    "period_like_columns": [
+     "Per"
+    ],
+    "period_values": [
+     [
+      "8.183827"
+     ]
+    ]
+   },
+   {
+    "table": "J/ApJS/281/52/table1",
+    "description": "Star parameters of TESS objects",
+    "nrows": 1,
+    "period_like_columns": [
+     "Period"
+    ],
+    "period_values": [
+     [
+      "7.97639"
+     ]
+    ]
+   },
+   {
+    "table": "J/A+A/657/A7/tablea3",
+    "description": "CPM candidate companions for Gaia stars within 100 pc",
+    "nrows": 1,
+    "period_like_columns": []
+   },
+   {
+    "table": "J/A+A/661/A29/tables",
+    "description": "Stellar parameters and distances (table 2), X-ray parameters (table 3) and X-ray activity and rotation (table 5) (updated version, 23/12/2024)",
+    "nrows": 1,
+    "period_like_columns": [
+     "Prot",
+     "f_Prot"
+    ],
+    "period_values": [
+     [
+      "--"
+     ],
+     [
+      "--"
+     ]
+    ]
+   },
+   {
+    "table": "J/A+A/677/A137/catalog",
+    "description": "Gaia DR3 three-band photometric dispersions catalog",
+    "nrows": 1,
+    "period_like_columns": [
+     "SimPer"
+    ],
+    "period_values": [
+     [
+      ""
+     ]
+    ]
+   },
+   {
+    "table": "J/A+A/692/A150/allskytg",
+    "description": "Entire sample, classified into thin disk, thick disk candidate, thick disk, halo candidate, and halo",
+    "nrows": 1,
+    "period_like_columns": []
+   },
+   {
+    "table": "J/A+A/709/A180/table1",
+    "description": "Successful period determinations",
+    "nrows": 1,
+    "period_like_columns": [
+     "Period",
+     "e_Period"
+    ],
+    "period_values": [
+     [
+      "8.11056"
+     ],
+     [
+      "--"
+     ]
+    ]
+   },
+   {
+    "table": "J/AJ/155/39/table5",
+    "description": "Variability Upper Limits for Non-Variable Sources in the TESS Input Catalog",
+    "nrows": 1,
+    "period_like_columns": []
+   },
+   {
+    "table": "J/MNRAS/495/1252/table2",
+    "description": "The EWs of H{alpha} line for LAMOST DR6/DR7 medium-resolution spectra",
+    "nrows": 3,
+    "period_like_columns": [
+     "Prot"
+    ],
+    "period_values": [
+     [
+      "--",
+      "--",
+      "--"
+     ]
+    ]
+   },
+   {
+    "table": "J/MNRAS/522/29/table2",
+    "description": "Results for all TESS input targets",
+    "nrows": 1,
+    "period_like_columns": [
+     "Porb"
+    ],
+    "period_values": [
+     [
+      "4.570882"
+     ]
+    ]
+   }
+  ],
+  "all_tables": [
+   "I/154/f1",
+   "I/197A/tic",
+   "I/243/out",
+   "I/252/out",
+   "I/254/out",
+   "I/255/out",
+   "I/256/stars",
+   "I/259/tyc2",
+   "I/261/fonac",
+   "I/267/out",
+   "I/275/ac2002",
+   "I/280B/ascc",
+   "I/284/out",
+   "I/297/out",
+   "I/304/out",
+   "I/305/out",
+   "I/306A/stars",
+   "I/312/sample",
+   "I/317/sample",
+   "I/319/xpm",
+   "I/322A/out",
+   "I/324/igsl3",
+   "I/327/cmc15",
+   "I/329/urat1",
+   "I/337/gaia",
+   "I/339/hsoy",
+   "I/340/ucac5",
+   "I/342/f3",
+   "I/345/gaia2",
+   "I/346/fs",
+   "I/347/gaia2dis",
+   "I/348/catalog",
+   "I/349/starhorse",
+   "I/350/gaiaedr3",
+   "I/350/tyc2tdsc",
+   "I/351/gps1_p",
+   "I/352/gedr3dis",
+   "I/353/gsc242",
+   "I/354/starhorse2021",
+   "I/355/gaiadr3",
+   "I/355/paramp",
+   "I/355/paramsup",
+   "I/355/xpsummary",
+   "I/355/xpsample",
+   "I/355/xpcont",
+   "I/355/spectra",
+   "I/360/syntphot",
+   "I/363/gaia_rv_dr3",
+   "II/230/catalog",
+   "II/246/out",
+   "II/271A/patch2",
+   "II/287/skydot",
+   "II/311/wise",
+   "II/328/allwise",
+   "II/336/apass9",
+   "II/346/jsdc_v2",
+   "II/349/ps1",
+   "II/358/smss",
+   "II/359/vhs_dr4",
+   "II/360/catalog",
+   "II/361/mdfc-v10",
+   "II/363/unwise",
+   "II/365/catwise",
+   "II/367/vhs_dr5",
+   "II/369/vexassm",
+   "II/374/table2",
+   "II/379/smssdr4",
+   "II/381/hlsp_ps1_tm",
+   "II/389/ps1_dr2",
+   "III/123B/stkm1",
+   "III/123B/catalog",
+   "IV/30/stars",
+   "IV/38/tic",
+   "IV/39/tic82",
+   "V/136/tycall",
+   "V/139/sdss9",
+   "V/147/sdss12",
+   "V/153/dr4",
+   "V/154/sdss16",
+   "V/156/dr7lrs",
+   "V/156/dr7mslrs",
+   "V/156/dr7mrs",
+   "V/156/dr7smrs",
+   "V/160/shboost",
+   "V/162/dr11l",
+   "V/162/dr11ml",
+   "V/162/dr11il",
+   "V/162/dr11m",
+   "V/162/dr11sm",
+   "V/162/dr11im",
+   "V/164/dr5",
+   "VI/42/out",
+   "VI/135/table15",
+   "VI/135/table16",
+   "VI/145/attitude",
+   "VI/156/mdwarfp",
+   "B/denis/denis",
+   "B/mk/mktypes",
+   "B/assocdata/obscore",
+   "J/ApJ/867/105/refcat2",
+   "J/ApJ/891/23/catalog",
+   "J/ApJ/925/164/catalog",
+   "J/ApJ/984/58/table1",
+   "J/ApJS/235/16/targets",
+   "J/ApJS/244/8/table1",
+   "J/ApJS/244/27/lamostMRS",
+   "J/ApJS/245/34/catalog",
+   "J/ApJS/256/14/table4",
+   "J/ApJS/258/26/table4",
+   "J/ApJS/260/45/tableb1",
+   "J/ApJS/261/36/rrnetcat",
+   "J/ApJS/266/40/catalog",
+   "J/ApJS/274/36/mdwarfs",
+   "J/ApJS/276/44/table1",
+   "J/ApJS/276/57/table5",
+   "J/ApJS/281/52/table1",
+   "J/ApJS/281/58/table9",
+   "J/ApJS/282/29/table1",
+   "J/A+A/608/A148/origaia",
+   "J/A+A/608/A148/x2mass",
+   "J/A+A/629/A139/table3",
+   "J/A+A/638/A76/lamost",
+   "J/A+A/645/A100/40pclist",
+   "J/A+A/649/A6/table1c",
+   "J/A+A/653/A98/aspic1_1",
+   "J/A+A/657/A7/tablea3",
+   "J/A+A/659/A95/sos",
+   "J/A+A/661/A29/tables",
+   "J/A+A/665/A78/bkgev",
+   "J/A+A/669/A104/catalog",
+   "J/A+A/673/A155/lamostm7",
+   "J/A+A/677/A137/catalog",
+   "J/A+A/682/A34/erass1-m",
+   "J/A+A/684/A29/extend",
+   "J/A+A/684/A121/like_ctp",
+   "J/A+A/692/A115/pristine_ca",
+   "J/A+A/692/A150/allskytg",
+   "J/A+A/704/A237/80pcbpok",
+   "J/A+A/704/A274/table1",
+   "J/A+A/704/A344/dr1ls10",
+   "J/A+A/704/A344/dr1ge3",
+   "J/A+A/704/A344/dr1cw2020",
+   "J/A+A/709/A180/table1",
+   "J/A+A/711/A54/table1",
+   "J/A+A/712/A171/erass3-m",
+   "J/A+A/712/A171/dr2mc",
+   "J/A+A/712/A171/dr2mg",
+   "J/A+A/712/A171/dr2ml",
+   "J/AJ/142/138/Mdwarfs",
+   "J/AJ/155/39/table5",
+   "J/AJ/158/93/table2",
+   "J/AJ/159/84/table2",
+   "J/AJ/161/234/table2",
+   "J/AJ/161/234/table3",
+   "J/AJ/161/234/table4",
+   "J/AJ/161/234/table7",
+   "J/AJ/165/267/table1",
+   "J/AJ/167/139/t_hpic",
+   "J/AJ/171/17/mdw_dr1",
+   "J/PASP/137/J4402/list2025",
+   "J/MNRAS/435/2161/table3",
+   "J/MNRAS/463/4210/ucac4rpm",
+   "J/MNRAS/495/1252/table2",
+   "J/MNRAS/495/1252/table3",
+   "J/MNRAS/507/318/table2",
+   "J/MNRAS/522/29/table2"
+  ]
+ },
+ "t16_raven": {
+  "t16_version": [
+   3,
+   0,
+   "2026-03-17T13:42:37Z"
+  ],
+  "t16_files": [
+   [
+    13605255,
+    "candidate_table.tab",
+    3635022,
+    "candidate_table.csv"
+   ],
+   [
+    13605256,
+    "singleTransit_candidate_table.tab",
+    24997,
+    "singleTransit_candidate_table.csv"
+   ],
+   [
+    13404168,
+    "vetting_plots_00.zip",
+    929430271,
+    null
+   ],
+   [
+    13404189,
+    "vetting_plots_01.zip",
+    928388254,
+    null
+   ],
+   [
+    13404172,
+    "vetting_plots_02.zip",
+    934054394,
+    null
+   ],
+   [
+    13404183,
+    "vetting_plots_03.zip",
+    932104703,
+    null
+   ],
+   [
+    13404182,
+    "vetting_plots_04.zip",
+    927724328,
+    null
+   ],
+   [
+    13404158,
+    "vetting_plots_05.zip",
+    936396553,
+    null
+   ],
+   [
+    13404181,
+    "vetting_plots_06.zip",
+    927321602,
+    null
+   ],
+   [
+    13404173,
+    "vetting_plots_07.zip",
+    942871307,
+    null
+   ],
+   [
+    13404176,
+    "vetting_plots_08.zip",
+    944721319,
+    null
+   ],
+   [
+    13404188,
+    "vetting_plots_09.zip",
+    936938336,
+    null
+   ],
+   [
+    13404187,
+    "vetting_plots_10.zip",
+    918840245,
+    null
+   ],
+   [
+    13404169,
+    "vetting_plots_11.zip",
+    951877706,
+    null
+   ],
+   [
+    13404162,
+    "vetting_plots_12.zip",
+    946164180,
+    null
+   ],
+   [
+    13404184,
+    "vetting_plots_13.zip",
+    940037059,
+    null
+   ],
+   [
+    13404178,
+    "vetting_plots_14.zip",
+    942485766,
+    null
+   ],
+   [
+    13404165,
+    "vetting_plots_15.zip",
+    940904900,
+    null
+   ],
+   [
+    13404192,
+    "vetting_plots_16.zip",
+    931354947,
+    null
+   ],
+   [
+    13404167,
+    "vetting_plots_17.zip",
+    920275602,
+    null
+   ],
+   [
+    13404196,
+    "vetting_plots_18.zip",
+    931718099,
+    null
+   ],
+   [
+    13404194,
+    "vetting_plots_19.zip",
+    933601874,
+    null
+   ],
+   [
+    13404191,
+    "vetting_plots_20.zip",
+    936385976,
+    null
+   ],
+   [
+    13404164,
+    "vetting_plots_21.zip",
+    931797345,
+    null
+   ],
+   [
+    13404171,
+    "vetting_plots_22.zip",
+    927645396,
+    null
+   ],
+   [
+    13404186,
+    "vetting_plots_23.zip",
+    914756100,
+    null
+   ],
+   [
+    13404174,
+    "vetting_plots_24.zip",
+    925951375,
+    null
+   ],
+   [
+    13404195,
+    "vetting_plots_25.zip",
+    927757829,
+    null
+   ],
+   [
+    13404157,
+    "vetting_plots_26.zip",
+    906724794,
+    null
+   ],
+   [
+    13404161,
+    "vetting_plots_27.zip",
+    899981219,
+    null
+   ],
+   [
+    13404190,
+    "vetting_plots_28.zip",
+    922351509,
+    null
+   ],
+   [
+    13404179,
+    "vetting_plots_29.zip",
+    970382776,
+    null
+   ],
+   [
+    13404166,
+    "vetting_plots_30.zip",
+    974238734,
+    null
+   ],
+   [
+    13404160,
+    "vetting_plots_31.zip",
+    972319623,
+    null
+   ],
+   [
+    13404177,
+    "vetting_plots_32.zip",
+    975854691,
+    null
+   ],
+   [
+    13404159,
+    "vetting_plots_33.zip",
+    908406182,
+    null
+   ],
+   [
+    13404170,
+    "vetting_plots_34.zip",
+    916975875,
+    null
+   ],
+   [
+    13404180,
+    "vetting_plots_35.zip",
+    931426483,
+    null
+   ],
+   [
+    13404175,
+    "vetting_plots_36.zip",
+    954393047,
+    null
+   ],
+   [
+    13404193,
+    "vetting_plots_37.zip",
+    964454864,
+    null
+   ],
+   [
+    13404163,
+    "vetting_plots_38.zip",
+    965426883,
+    null
+   ],
+   [
+    13404185,
+    "vetting_plots_39.zip",
+    890443212,
+    null
+   ],
+   [
+    13390128,
+    "vetting_plots_singleTransits.zip",
+    1415857277,
+    null
+   ]
+  ],
+  "t16": [
+   {
+    "file": "candidate_table.tab",
+    "n_rows": 11143,
+    "target_rows": 0,
+    "within_2arcmin": [],
+    "nearest_arcmin": 30.2
+   },
+   {
+    "file": "singleTransit_candidate_table.tab",
+    "n_rows": 411,
+    "target_rows": 0,
+    "within_2arcmin": [],
+    "nearest_arcmin": 1.6666666666666665e+97
+   }
+  ],
+  "raven_record": {
+   "title": "Online material for article Automatic search for transiting planets in TESS-SPOC FFIs with RAVEN: over 100 newly validated planets and over 2000 vetted candidates",
+   "publication_date": "2026-03-25",
+   "version": null
+  },
+  "raven": [
+   {
+    "file": "nsfp09_table.csv",
+    "n_rows": 14815,
+    "target_rows": 0,
+    "within_2arcmin": [],
+    "nearest_deg": 1.95
+   },
+   {
+    "file": "vet_table.csv",
+    "n_rows": 2170,
+    "target_rows": 0,
+    "within_2arcmin": [],
+    "nearest_deg": 3.11
+   },
+   {
+    "file": "val_table.csv",
+    "n_rows": 143,
+    "target_rows": 0,
+    "within_2arcmin": [],
+    "nearest_deg": 3.11
+   },
+   {
+    "file": "val_rp8_table.csv",
+    "n_rows": 207,
+    "target_rows": 0,
+    "within_2arcmin": [],
+    "nearest_deg": 6.84
+   }
+  ]
+ },
+ "arxiv": [
+  {
+   "query": "all:\"TIC 4206066\"",
+   "http": 200,
+   "sha256": "f54a58911a8edd3bce41f657ac69fc1dca2f352e413e824afda876f6ad4dc4e6",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"4206066\"",
+   "http": 200,
+   "sha256": "398f76ec1b8be7d080ce10b9eda85e689f318c0b14c821c99dda9a6813d3eef9",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"StKM 1-561\"",
+   "http": 200,
+   "sha256": "373d83e815a5dd6948d7bdd6d7947df671b60be1ac5252ea26db9dd8720d8fd9",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"3220388198192519424\"",
+   "http": 200,
+   "sha256": "ab421b0becefdaac67542975483ec43abeb7a17f5404e9fea16ed2231862ff29",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"TYC 4753-1591-1\"",
+   "http": 200,
+   "sha256": "50b07696078fd23c524d27cb33834a909b9168354187013ce352fb961834f9e0",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"J05232636-0119380\"",
+   "http": 200,
+   "sha256": "f50d9c9730885d72e976e461649cd632c5026d65f7da088d50ae30f39e8706ff",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"3.1828\" AND all:TESS",
+   "http": 200,
+   "sha256": "1a908c1ec8d0622ec80851ddfbbc4f0c9b701e0dd03a0e1f6ce4631bba2262ab",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"3.183\" AND all:TESS",
+   "http": 200,
+   "sha256": "f64bbb62b43df9e453fdc8dbf056a570a770510ef76d8299dbdae637b6130091",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"3.18279\" AND all:TESS",
+   "http": 200,
+   "sha256": "3e630b5f2e0cc4bb63cbeb700367bbd5d940d110dfba84916ecd27841126d633",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"11.133\" AND all:TESS",
+   "http": 200,
+   "sha256": "9bd1d13606d55349434248e9eaf59e08d3bf81229c710c9bcd7c43412edc540e",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"11.13\" AND all:TESS",
+   "http": 200,
+   "sha256": "1a5dc348ae007d2acd17a13631820fc2a241385eae6db3f3f65d9a9baba73c1e",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"11.1327\" AND all:TESS",
+   "http": 200,
+   "sha256": "fd84cef7602c8f866df77b3d83fcad584f421d3ba30c74ce032f44bd2c93de45",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"5.566\" AND all:TESS",
+   "http": 200,
+   "sha256": "d142f0c19513f550e2a14d06477c8612bf2d9df6d2f98bca3a7319751a8ca0c0",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"22.27\" AND all:TESS",
+   "http": 200,
+   "sha256": "e4827b0ed102d53e59d091a9cb1ffc1ef42f2568133b4ff96092b51cf2c25690",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"22.265\" AND all:TESS",
+   "http": 200,
+   "sha256": "a5ec3c4fbe8b93ea8b694b262523d9417e868f4db76d06f0f993f72a7f8ee2e8",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"1.591\" AND all:TESS",
+   "http": 200,
+   "sha256": "0dc9293416123cb71022bbde856f37ad903879130bd1eadd8d2e7261c073bc3d",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"6.366\" AND all:TESS",
+   "http": 200,
+   "sha256": "f07606eb7f706422c2d4c6e4a1da23deb0515673d4405b3b40acccfda231cd1b",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"1.061\" AND all:TESS",
+   "http": 200,
+   "sha256": "8f72c394ff13dc5a560a186628f6e3e5147814c9ebbc9b49b93e3dcded1f5501",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"9.548\" AND all:TESS",
+   "http": 200,
+   "sha256": "85aec510d1881ddc4fc1b24ee9305dc7ca26e7a80115b1e21fbf5aed1ec3279f",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"3.711\" AND all:TESS",
+   "http": 200,
+   "sha256": "993a00cedc1adfe86f150ab72f8efa7a43e05b82fec533481ed499f5cca08c00",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"33.40\" AND all:TESS",
+   "http": 200,
+   "sha256": "1addb3f3feb49284bb187ed1a4c16cf706cfc565906997dad6a55f9caa3e2963",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  },
+  {
+   "query": "all:\"TOI-2768\"",
+   "http": 200,
+   "sha256": "cfe424710fc21d20afb3e828f40b6c985dac27d79a8578b690e0551c21b93d83",
+   "total_results": 0,
+   "n_returned": 0,
+   "target_identifier_hits": [],
+   "entries": []
+  }
+ ]
+}

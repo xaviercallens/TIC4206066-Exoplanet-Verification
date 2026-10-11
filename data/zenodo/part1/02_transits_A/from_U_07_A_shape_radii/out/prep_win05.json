@@ -1,0 +1,32 @@
+{
+ "6": {
+  "file": "hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_lc.fits",
+  "sha256": "ac7736ea403e33360c53f88b5f22bb4e41c8235fe17ff2cdb934ba474037882e",
+  "column": "PDCSAP_FLUX",
+  "n_total": 1045,
+  "n_kept": 975,
+  "n_after_detrend": 974,
+  "mad_ppm": 200.09399924989918,
+  "window_d": 0.5
+ },
+ "32": {
+  "file": "tess2020324010417-s0032-0000000004206066-0200-s_lc.fits",
+  "sha256": "764dad34b3bbd467eef973a1d09f640a97321824e6739ac6a0c69cf40c31b0e7",
+  "column": "PDCSAP_FLUX",
+  "n_total": 18730,
+  "n_kept": 17094,
+  "n_after_detrend": 17084,
+  "mad_ppm": 845.3771866240745,
+  "window_d": 0.5
+ },
+ "98": {
+  "file": "hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01_llc.fits",
+  "sha256": "a034136697b4f75765a91503107f55a455b365d19cd270ed633845efcdcb188e",
+  "column": "SYS_RM_FLUX",
+  "n_total": 24162,
+  "n_kept": 12067,
+  "n_after_detrend": 12063,
+  "mad_ppm": 615.7491001545874,
+  "window_d": 0.5
+ }
+}

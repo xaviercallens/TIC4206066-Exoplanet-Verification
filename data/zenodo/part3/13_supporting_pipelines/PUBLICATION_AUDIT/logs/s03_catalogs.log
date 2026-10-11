@@ -1,0 +1,36 @@
+WARNING: InputWarning: Coordinate string is being interpreted as an ICRS coordinate provided in degrees. [astroquery.utils.commons]
+gaia_dr3_source.csv 3817 447d9bb872d0
+gaia_dr3_ap.csv 4953 22c623fae2cb
+gaia_dr3_neighbours_180as.csv 23933 6b765e85a2d2
+gaia_dr3_nss_two_body.csv 1273 94624a15e17c
+gaia_dr3_nss_accel.csv 358 5a112ba17c03
+gaia_dr3_nss_vim.csv 306 0b163d5e37e8
+gaia_dr3_nss_nonlin.csv 261 ae782a1256c4
+gaia_dr3_vari_summary.csv 1173 541a3503e473
+gaia_dr3_vari_classifier.csv 71 47a46b8eaa3b
+gaia_dr3_vari_rotation.csv 1567 987037f794ee
+gaia_dr3_vari_eb.csv 1079 93cbc676ff20
+gaia_dr3_vari_planetary_transit.csv 106 fa1a9da5b110
+gaia_dr2_source.csv 2759 0d36f1e575db
+gaia_dr2_ruwe.csv 45 392b2f4981e5
+gaia_dr3_dr2_neighbourhood.csv 160 50534eca3487
+gaia_dr3_comoving_1deg.csv 277 d636e45e1582
+TIC rows 255
+2mass_psc.tsv II/246/out 3241 lines 4
+allwise.tsv II/328/allwise 4610 lines 4
+catwise2020.tsv II/365/catwise 6221 lines 4
+tycho2.tsv I/259/tyc2 2631 lines 4
+apass_dr9.tsv II/336/apass9 3674 lines 4
+lamost_dr5_lrs.tsv V/164/dr5 2798 lines 4
+lamost_dr7_mrs.tsv V/156/dr7mrs 6103 lines 11
+lamost_mrs_general.tsv V/156/dr7lrs 3362 lines 4
+tic82_vizier.tsv IV/39/tic82 7783 lines 4
+ctl_v8.tsv IV/38/tic 7668 lines 4
+lepine_gaidos2011.tsv J/AJ/142/138/Mdwarfs 3366 lines 4
+galex_gr6.tsv II/335/galex_ais 3161 lines 0
+rosat_2rxs.tsv J/A+A/588/A103/cat2rxs 4989 lines 0
+erosita_dr1_main.tsv J/A+A/682/A34/erass1-m 17869 lines 4
+vsx.tsv B/vsx/vsx 3413 lines 0
+wds.tsv B/wds/wds 2798 lines 0
+gaia_dr3_vizier.tsv I/355/gaiadr3 10063 lines 4
+bailer_jones2021.tsv I/352/gedr3dis 3152 lines 4

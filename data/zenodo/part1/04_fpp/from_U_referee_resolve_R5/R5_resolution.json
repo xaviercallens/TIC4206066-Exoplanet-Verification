@@ -1,0 +1,112 @@
+{
+ "id": "R5",
+ "status": "RESOLVED (by recomputation + text change; not yet applied to the manuscript)",
+ "residual_severity_after_fix": "MINOR",
+ "adopted_fold_direct_runs_TRICERATOPS_1.1.0": {
+  "note": "tic4206066_PUBLICATION_AUDIT A/B_S32+S98_binned.csv, 6-min, Teff 4030, N=1e6, seeds 1000+i; default reproduced per seed to 1e-4 relative",
+  "A_default_package_20runs": [
+   0.0312,
+   0.0031
+  ],
+  "A_gaia_RUWE_contrast_on_default_prior_20runs": [
+   0.003,
+   0.0008,
+   0.0019,
+   0.0046
+  ],
+  "A_gaia_plus_overlum0.38_blended_lt0.2as_8runs": [
+   0.0026,
+   0.0008
+  ],
+  "A_overlum0.38_blended_lt0.2as_only_5runs": [
+   0.0243,
+   0.0039
+  ],
+  "A_overlum0.38_all_separations_5runs": [
+   0.0024,
+   0.0006
+  ],
+  "B_default_package_20runs": [
+   0.179,
+   0.011
+  ],
+  "B_gaia_RUWE_contrast_on_default_prior_20runs": [
+   0.0667,
+   0.0081,
+   0.054,
+   0.09
+  ],
+  "B_overlum0.38_blended_only_10runs": [
+   0.183,
+   0.018
+  ],
+  "B_overlum0.38_all_separations_10runs": [
+   0.144,
+   0.016
+  ],
+  "Teff4012_vs_4030_paired_ratio": {
+   "A": [
+    0.9997,
+    0.0004
+   ],
+   "B": [
+    0.99996,
+    0.0001
+   ]
+  }
+ },
+ "verifier_fold_grid": {
+  "A_default": 0.0365,
+  "A_gaia": 0.0038,
+  "A_gaia_ruwe_obs1.4_2.0_3.0": [
+   0.0042,
+   0.0052,
+   0.0067
+  ],
+  "A_contrast_only": 0.029,
+  "A_overlum_blended_lt0.2": 0.028,
+  "A_overlum_all_sep_0.38_0.45_0.54": [
+   0.004,
+   0.0074,
+   0.017
+  ],
+  "B_default": 0.202,
+  "B_gaia": 0.081
+ },
+ "molusc_mode_decomposition_verifier_fold_A": {
+  "default": 0.0365,
+  "noGaia_noCut": 0.139,
+  "noGaia_peri10": 0.106,
+  "Gaia_noCut": 0.049,
+  "Gaia_peri10_as_coded": 0.0064,
+  "noGaia_defaultWindow": 0.075,
+  "Gaia_defaultWindow": 0.0081
+ },
+ "molusc_mode_decomposition_verifier_fold_B": {
+  "default": 0.202,
+  "noGaia_noCut": 0.446,
+  "noGaia_peri10": 0.372,
+  "Gaia_noCut": 0.267,
+  "Gaia_peri10_as_coded": 0.076,
+  "noGaia_defaultWindow": 0.295,
+  "Gaia_defaultWindow": 0.114
+ },
+ "default_ranges": {
+  "A_folds_and_bins": [
+   0.03,
+   0.044
+  ],
+  "B_folds_bins_TIC": [
+   0.128,
+   0.213
+  ]
+ },
+ "recommended_text": {
+  "sec4_par_l41": "TRICERATOPS 1.1.0 \\citep{Giacalone2021}, with Sector 32+98 folds (5--10\\,min bins) and companions unresolved within $2.2''$, gives FPP $=0.03$--0.04 for the 3.18\\,d signal ($0.031\\pm0.003$ for the adopted 6-min fold) and 0.13--0.21 for the 11.13\\,d signal. It tests only astrophysical scenarios; for the 3.18\\,d signal, an ephemeris coherent across sectors and pipelines argues against an instrumental origin. About 90\\% of its FPP comes from companions above $0.38\\,M_\\odot$; adding the Gaia RUWE and contrast limits of MOLUSC \\citep{Wood2021} to the default companion prior gives 0.002--0.004 and 0.06--0.08. \\citet{Giacalone2021} calibrated FPP $<0.015$ with NFPP $<10^{-3}$ for circular orbits, so I claim no validation. No multiplicity boost is applied because the 11.13\\,d signal is not secure.",
+  "abstract": "TRICERATOPS gives FPP $=0.03$--0.04 under its default assumptions.",
+  "caption_e": "(e) TRICERATOPS FPP (points, thick and thin bars: mean, standard deviation, and range of 20 runs; 10 for fold 1).",
+  "figure_e_changes": "x labels: fold 1 | fold 2 (adopted) | earlier inputs | TIC param. | Gaia limits; replace '+ MOLUSC' points by runs/gaia_only_{A,B}_adoptedfold.json (20 runs); in-panel line labels 'FPP = 0.015 (validation)' and '0.5 (likely planet)'",
+  "bibliography": "drop Guerrero2021 (no longer cited)",
+  "texcount_patched_copy": 1477
+ }
+}

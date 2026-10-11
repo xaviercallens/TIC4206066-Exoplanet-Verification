@@ -1,0 +1,103 @@
+S32_tpf_A: 25/300 trials, 1s
+S32_tpf_A: 50/300 trials, 1s
+S32_tpf_A: 75/300 trials, 1s
+S32_tpf_A: 100/300 trials, 2s
+S32_tpf_A: 125/300 trials, 2s
+S32_tpf_A: 150/300 trials, 3s
+S32_tpf_A: 175/300 trials, 3s
+S32_tpf_A: 200/300 trials, 4s
+S32_tpf_A: 225/300 trials, 4s
+S32_tpf_A: 250/300 trials, 5s
+S32_tpf_A: 275/300 trials, 5s
+S32_tpf_A: 300/300 trials, 6s
+done S32_tpf_A
+S98_clean_A: 25/300 trials, 1s
+S98_clean_A: 50/300 trials, 1s
+S98_clean_A: 75/300 trials, 2s
+S98_clean_A: 100/300 trials, 3s
+S98_clean_A: 125/300 trials, 3s
+S98_clean_A: 150/300 trials, 4s
+S98_clean_A: 175/300 trials, 4s
+S98_clean_A: 200/300 trials, 5s
+S98_clean_A: 225/300 trials, 5s
+S98_clean_A: 250/300 trials, 6s
+S98_clean_A: 275/300 trials, 6s
+S98_clean_A: 300/300 trials, 7s
+done S98_clean_A
+S32_ffi_A: 25/300 trials, 0s
+S32_ffi_A: 50/300 trials, 1s
+S32_ffi_A: 75/300 trials, 1s
+S32_ffi_A: 100/300 trials, 2s
+S32_ffi_A: 125/300 trials, 2s
+S32_ffi_A: 150/300 trials, 2s
+S32_ffi_A: 175/300 trials, 3s
+S32_ffi_A: 200/300 trials, 3s
+S32_ffi_A: 225/300 trials, 4s
+S32_ffi_A: 250/300 trials, 4s
+S32_ffi_A: 275/300 trials, 4s
+S32_ffi_A: 300/300 trials, 5s
+done S32_ffi_A
+S98_all_A: 25/300 trials, 1s
+S98_all_A: 50/300 trials, 1s
+S98_all_A: 75/300 trials, 2s
+S98_all_A: 100/300 trials, 3s
+S98_all_A: 125/300 trials, 3s
+S98_all_A: 150/300 trials, 4s
+S98_all_A: 175/300 trials, 5s
+S98_all_A: 200/300 trials, 6s
+S98_all_A: 225/300 trials, 6s
+S98_all_A: 250/300 trials, 7s
+S98_all_A: 275/300 trials, 8s
+S98_all_A: 300/300 trials, 8s
+done S98_all_A
+S6_ffi_A: 25/300 trials, 0s
+S6_ffi_A: 50/300 trials, 1s
+S6_ffi_A: 75/300 trials, 1s
+S6_ffi_A: 100/300 trials, 2s
+S6_ffi_A: 125/300 trials, 2s
+S6_ffi_A: 150/300 trials, 3s
+S6_ffi_A: 175/300 trials, 3s
+S6_ffi_A: 200/300 trials, 3s
+S6_ffi_A: 225/300 trials, 4s
+S6_ffi_A: 250/300 trials, 4s
+S6_ffi_A: 275/300 trials, 5s
+S6_ffi_A: 300/300 trials, 5s
+done S6_ffi_A
+S6_step_A: 25/300 trials, 0s
+S6_step_A: 50/300 trials, 1s
+S6_step_A: 75/300 trials, 1s
+S6_step_A: 100/300 trials, 2s
+S6_step_A: 125/300 trials, 2s
+S6_step_A: 150/300 trials, 3s
+S6_step_A: 175/300 trials, 3s
+S6_step_A: 200/300 trials, 4s
+S6_step_A: 225/300 trials, 4s
+S6_step_A: 250/300 trials, 5s
+S6_step_A: 275/300 trials, 5s
+S6_step_A: 300/300 trials, 6s
+done S6_step_A
+S32_tpf_deg2_A: 25/300 trials, 0s
+S32_tpf_deg2_A: 50/300 trials, 1s
+S32_tpf_deg2_A: 75/300 trials, 1s
+S32_tpf_deg2_A: 100/300 trials, 2s
+S32_tpf_deg2_A: 125/300 trials, 2s
+S32_tpf_deg2_A: 150/300 trials, 3s
+S32_tpf_deg2_A: 175/300 trials, 3s
+S32_tpf_deg2_A: 200/300 trials, 4s
+S32_tpf_deg2_A: 225/300 trials, 5s
+S32_tpf_deg2_A: 250/300 trials, 6s
+S32_tpf_deg2_A: 275/300 trials, 6s
+S32_tpf_deg2_A: 300/300 trials, 7s
+done S32_tpf_deg2_A
+S32_tpf_A_shift+2+0: 25/80 trials, 1s
+S32_tpf_A_shift+2+0: 50/80 trials, 1s
+S32_tpf_A_shift+2+0: 75/80 trials, 2s
+done S32_tpf_A_shift+2+0
+S98_clean_A_shift+2+0: 25/80 trials, 1s
+S98_clean_A_shift+2+0: 50/80 trials, 1s
+S98_clean_A_shift+2+0: 75/80 trials, 2s
+done S98_clean_A_shift+2+0
+S98_clean_A_shift+1+0: 25/80 trials, 1s
+S98_clean_A_shift+1+0: 50/80 trials, 2s
+S98_clean_A_shift+1+0: 75/80 trials, 2s
+done S98_clean_A_shift+1+0

@@ -1,0 +1,227 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - name: _r
+#   datatype: float64
+#   format: '{:6.3f}'
+#   description: Distance from center (080.859836-01.326965)[FK5/J2000]
+#   meta: !!omap
+#   - {ucd: POS_ANG_DIST_GENERAL}
+#   - {width: 6}
+#   - {precision: '3'}
+# - name: RAJ2000
+#   unit: deg
+#   datatype: float64
+#   format: '{:10.6f}'
+#   description: Right ascension in decimal degrees (J2000)
+#   meta: !!omap
+#   - {ucd: POS_EQ_RA_MAIN}
+#   - {width: 10}
+#   - {precision: '6'}
+# - name: DEJ2000
+#   unit: deg
+#   datatype: float64
+#   format: '{:10.6f}'
+#   description: Declination in decimal degrees (J2000)
+#   meta: !!omap
+#   - {ucd: POS_EQ_DEC_MAIN}
+#   - {width: 10}
+#   - {precision: '6'}
+# - name: e_RAJ2000
+#   unit: arcsec
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0/2.4] RA uncertainty'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+# - name: e_DEJ2000
+#   unit: arcsec
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0/2.4] DEC uncertainty'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+# - name: Field
+#   datatype: int64
+#   description: '[20110001/9999988888] Field name'
+#   meta: !!omap
+#   - {ucd: ID_FIELD}
+#   - {width: 10}
+# - name: nobs
+#   datatype: int16
+#   description: '[2/387] Number of observed nights'
+#   meta: !!omap
+#   - {ucd: NUMBER}
+#   - {width: 3}
+# - name: mobs
+#   datatype: int16
+#   description: '[2/3476] Number of images for this field, usually nobs*5'
+#   meta: !!omap
+#   - {ucd: NUMBER}
+#   - {width: 4}
+# - name: B-V
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[-7.5/13]? B-V color index'
+#   meta: !!omap
+#   - {ucd: PHOT_JHN_B-V}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_B-V
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0/10.1]? B-V uncertainty'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: Vmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[5.5/27.4]? Johnson V-band magnitude'
+#   meta: !!omap
+#   - {ucd: PHOT_JHN_V}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_Vmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0/7]? Vmag uncertainty'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: u_e_Vmag
+#   datatype: uint8
+#   description: '[0/1]? Uncertainty flag on e_Vmag (1)'
+#   meta: !!omap
+#   - {ucd: CODE_ERROR}
+#   - {width: 1}
+#   - values: {'null': 255}
+# - name: Bmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[5.4/27.3]? Johnson B-band magnitude'
+#   meta: !!omap
+#   - {ucd: PHOT_JHN_B}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_Bmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0/10]? Bmag uncertainty'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: u_e_Bmag
+#   datatype: uint8
+#   description: '[0/1]? Uncertainty flag on e_Bmag (1)'
+#   meta: !!omap
+#   - {ucd: CODE_ERROR}
+#   - {width: 1}
+#   - values: {'null': 255}
+# - name: g'mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[5.9/24.2]? g''-band AB magnitude, Sloan filter'
+#   meta: !!omap
+#   - {ucd: PHOT_SDSS_G}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_g'mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0/9.7]? g''mag uncertainty'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: u_e_g'mag
+#   datatype: uint8
+#   description: '[0/1]? Uncertainty flag on e_g''mag (1)'
+#   meta: !!omap
+#   - {ucd: CODE_ERROR}
+#   - {width: 1}
+#   - values: {'null': 255}
+# - name: r'mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[5.1/23.9]? r''-band AB magnitude, Sloan filter'
+#   meta: !!omap
+#   - {ucd: PHOT_SDSS_R}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_r'mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0/6.5]? r''mag uncertainty'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: u_e_r'mag
+#   datatype: uint8
+#   description: '[0/1]? Uncertainty flag on e_r''mag (1)'
+#   meta: !!omap
+#   - {ucd: CODE_ERROR}
+#   - {width: 1}
+#   - values: {'null': 255}
+# - name: i'mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[4.2/29.1]? i''-band AB magnitude, Sloan filter'
+#   meta: !!omap
+#   - {ucd: PHOT_SDSS_I}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_i'mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0/9.6]? i''mag uncertainty'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: u_e_i'mag
+#   datatype: uint8
+#   description: '[0/1]? Uncertainty flag on e_i''mag (1)'
+#   meta: !!omap
+#   - {ucd: CODE_ERROR}
+#   - {width: 1}
+#   - values: {'null': 255}
+# meta: !!omap
+# - {ID: II_336_apass9}
+# - {name: II/336/apass9}
+# - {description: 'The APASS catalog, output (on a total of 62 million sources)'}
+# schema: astropy-2.0
+_r RAJ2000 DEJ2000 e_RAJ2000 e_DEJ2000 Field nobs mobs B-V e_B-V Vmag e_Vmag u_e_Vmag Bmag e_Bmag u_e_Bmag g'mag e_g'mag u_e_g'mag r'mag e_r'mag u_e_r'mag i'mag e_i'mag u_e_i'mag
+0.161 80.859804 -1.326996 0.168 0.223 20110031 9 37 1.355 0.052 11.126 0.02 0 12.481 0.048 0 11.843 0.05 0 10.558 0.044 0 9.987 0.041 0

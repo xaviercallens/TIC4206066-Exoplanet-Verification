@@ -1,0 +1,55 @@
+{
+  "target_star": {
+    "tic_id": "TIC 4206066",
+    "name": "StKM 1-561",
+    "gaia_dr3_id": "Gaia DR3 3220388198192519424",
+    "spectral_type": "late-K dwarf",
+    "distance_ly": 116.0,
+    "teff_k": 4020.0,
+    "radius_solar": 0.623,
+    "mass_solar": 0.606,
+    "mean_density_cgs": 3.534,
+    "provenance": "Zenodo 10.5281/zenodo.22967099 part3/09_star FACTS: STAR.M 0.606+-0.015 (Mann+2019), STAR.R 0.623+-0.019 (Mann+2015), Teff 4020+-60 K; density = M/R^3 * 1.41 g/cc. An earlier revision used unsourced values (0.70 Msun, 0.68 Rsun, 4200 K)."
+  },
+  "signal_a": {
+    "candidate_name": "TIC 4206066.01",
+    "period_days": 3.182785,
+    "period_err_days": 6e-06,
+    "t0_bjd": 2460998.735992321,
+    "depth_ppm": 498.0,
+    "duration_hours": 1.87,
+    "radius_earth": 1.4,
+    "radius_err_earth": 0.1,
+    "observed_sectors": [
+      6,
+      32,
+      98
+    ],
+    "total_transits_observed": 23,
+    "fpp_triceratops": 0.035,
+    "preregistered_sector_110": {
+      "observing_window": "2026-10-31 to 2026-11-26",
+      "expected_transits": null,
+      "ephemeris_uncertainty_mins": null,
+      "note": "derived at runtime from the ephemeris and observing window; window dates unverified against the official TESS S110 timeline"
+    },
+    "ephemeris_source": "zenodo part1/02_transits_A/ephemeris_A.json (weighted LSQ, 19 events); anse.astrophysics.ephemeris is authoritative"
+  },
+  "signal_b": {
+    "candidate_name": "TIC 4206066.02",
+    "period_days": 11.13274,
+    "depth_ppm": 1099.0,
+    "duration_hours": 3.0,
+    "radius_earth": 2.2,
+    "status": "tentative (~3 sigma post hoc)",
+    "preregistered_sector_110": {
+      "expected_transits": null
+    },
+    "t0_bjd": 2461000.8655
+  },
+  "zenodo_records": {
+    "preprint_doi": "10.5281/zenodo.22967456",
+    "data_code_doi": "10.5281/zenodo.22967099",
+    "preregistration_doi": "10.5281/zenodo.23175179"
+  }
+}

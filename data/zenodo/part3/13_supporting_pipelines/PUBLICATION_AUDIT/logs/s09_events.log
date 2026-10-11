@@ -1,0 +1,38 @@
+/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_PUBLICATION_AUDIT/scripts/s09_events.py:124: RuntimeWarning: invalid value encountered in scalar divide
+  loo.append(float(np.sum(w[m] * d[m]) / np.sqrt(np.sum(w[m]))))
+A pipe             TESSSPOC_S6_PDC            n= 6 depth=   521±  53 S/N=  9.9 chi2=  5.0/5 top1=0.24 top2=0.46 LOO S/N 8.6-9.5
+A pipe             SPOC2min_S32_PDC           n= 8 depth=   476±  52 S/N=  9.1 chi2= 16.8/7 top1=0.39 top2=0.67 LOO S/N 7.2-9.2
+A pipe             QLP_S98_SYS                n= 9 depth=   511±  47 S/N= 10.9 chi2=  4.8/8 top1=0.16 top2=0.31 LOO S/N 9.9-10.5
+A pipe_s98default  QLP_S98_SYS                n=13 depth=   476±  44 S/N= 10.9 chi2= 24.9/12 top1=0.14 top2=0.28 LOO S/N 10.0-11.6
+A own              tesscut_s6_r2.5            n= 6 depth=   653±  56 S/N= 11.6 chi2=  9.7/5 top1=0.39 top2=0.58 LOO S/N 9.4-11.2
+A own              tesscut_s32_r2.0           n= 8 depth=   480±  52 S/N=  9.2 chi2= 12.8/7 top1=0.41 top2=0.57 LOO S/N 7.3-9.2
+A own              tesscut_s98_r2.0           n=17 depth=   465±  41 S/N= 11.5 chi2= 47.2/16 top1=0.14 top2=0.26 LOO S/N 10.6-12.2
+A own_nostray      tesscut_s98_r2.0_nostray   n=15 depth=   468±  41 S/N= 11.4 chi2= 45.3/14 top1=0.14 top2=0.26 LOO S/N 10.5-12.1
+A own2min          spoc_tpf_s32_r2.0          n= 8 depth=   514±  56 S/N=  9.2 chi2=  7.8/7 top1=0.30 top2=0.52 LOO S/N 7.7-9.2
+A others           QLP_S6                     n= 1 depth=   430± 145 S/N=  3.0 chi2=  0.0/0 top1=1.00 top2=1.00 LOO S/N nan-nan
+A others           QLP_S32                    n= 8 depth=   340±  49 S/N=  7.0 chi2= 18.6/7 top1=0.58 top2=0.80 LOO S/N 4.7-7.1
+A others           TESSSPOC_S32_PDC           n= 8 depth=   474±  50 S/N=  9.4 chi2= 11.7/7 top1=0.39 top2=0.57 LOO S/N 7.5-9.5
+A others           eleanor_S6                 n= 3 depth=   857±  99 S/N=  8.7 chi2=  3.6/2 top1=0.41 top2=0.75 LOO S/N 6.8-7.5
+A others           TGLC_S6                    n= 6 depth=   982± 101 S/N=  9.7 chi2= 10.8/5 top1=0.31 top2=0.62 LOO S/N 8.1-9.6
+A others           SPOC2min_S32_SAP           n= 8 depth=   473±  53 S/N=  9.0 chi2=  9.4/7 top1=0.31 top2=0.53 LOO S/N 7.5-9.0
+A others           TESSSPOC_S6_SAP            n= 6 depth=   700±  61 S/N= 11.6 chi2=  7.6/5 top1=0.36 top2=0.57 LOO S/N 9.3-11.0
+A ephem_pipe: n=21 P=3.1827793±0.0000031 T0=3998.73603±0.00131 chi2=47.5/19 rms O-C=9.5 min
+A ephem_own: n=24 P=3.1827827±0.0000032 T0=3998.73589±0.00122 chi2=42.6/22 rms O-C=10.5 min
+B pipe             TESSSPOC_S6_PDC            n= 2 depth=   851± 101 S/N=  8.4 chi2=  0.4/1 top1=0.51 top2=1.00 LOO S/N 5.9-6.0
+B pipe             SPOC2min_S32_PDC           n= 2 depth=   844± 124 S/N=  6.8 chi2=  1.7/1 top1=0.56 top2=1.00 LOO S/N 4.6-5.2
+B pipe             QLP_S98_SYS                n= 3 depth=  1139±  89 S/N= 12.8 chi2=  1.3/2 top1=0.49 top2=0.91 LOO S/N 9.2-12.2
+B pipe_s98default  QLP_S98_SYS                n= 4 depth=  1193±  82 S/N= 14.5 chi2=  2.9/3 top1=0.38 top2=0.70 LOO S/N 11.4-14.1
+B own              tesscut_s6_r2.5            n= 2 depth=  1089± 101 S/N= 10.8 chi2=  0.7/1 top1=0.72 top2=1.00 LOO S/N 5.8-9.2
+B own              tesscut_s32_r2.0           n= 2 depth=   759± 141 S/N=  5.4 chi2=  1.5/1 top1=0.61 top2=1.00 LOO S/N 3.4-4.3
+B own              tesscut_s98_r2.0           n= 6 depth=  1269±  81 S/N= 15.7 chi2=  5.7/5 top1=0.37 top2=0.65 LOO S/N 12.5-15.5
+B own_nostray      tesscut_s98_r2.0_nostray   n= 4 depth=  1250±  85 S/N= 14.8 chi2=  5.1/3 top1=0.41 top2=0.74 LOO S/N 11.3-14.1
+B own2min          spoc_tpf_s32_r2.0          n= 2 depth=   759± 144 S/N=  5.3 chi2=  1.9/1 top1=0.67 top2=1.00 LOO S/N 3.1-4.5
+B others           QLP_S6                     n= 2 depth=  1077±  97 S/N= 11.2 chi2=  0.7/1 top1=0.68 top2=1.00 LOO S/N 6.4-9.2
+B others           QLP_S32                    n= 2 depth=   690± 136 S/N=  5.1 chi2=  0.2/1 top1=0.56 top2=1.00 LOO S/N 3.4-3.8
+B others           TESSSPOC_S32_PDC           n= 2 depth=   975± 134 S/N=  7.3 chi2=  1.6/1 top1=0.59 top2=1.00 LOO S/N 4.7-5.7
+B others           eleanor_S6                 n= 2 depth=  1123± 116 S/N=  9.7 chi2=  1.3/1 top1=0.71 top2=1.00 LOO S/N 5.2-8.2
+B others           TGLC_S6                    n= 2 depth=  1252± 123 S/N= 10.2 chi2=  1.6/1 top1=0.67 top2=1.00 LOO S/N 5.9-8.4
+B others           SPOC2min_S32_SAP           n= 2 depth=   869± 130 S/N=  6.7 chi2=  0.9/1 top1=0.50 top2=1.00 LOO S/N 4.8-4.8
+B others           TESSSPOC_S6_SAP            n= 2 depth=   911± 101 S/N=  9.1 chi2=  0.1/1 top1=0.59 top2=1.00 LOO S/N 5.8-7.0
+B ephem_pipe: n=4 P=11.1327480±0.0000326 T0=4000.86526±0.00295 chi2=9.8/2 rms O-C=8.3 min
+B ephem_own: n=8 P=11.1327477±0.0000133 T0=4000.86445±0.00142 chi2=10.5/6 rms O-C=6.1 min

@@ -1,0 +1,12 @@
+6,32,98 raw jit
+32,98 raw jit
+6,32,98 raw jit SPLIT6=1
+6,32,98 raw jit SS6=1
+6,32,98 raw jit SPLIT6=1 SS6=1
+32,98 raw jit EXCL=98:-1
+6,32,98 raw jit EXCL=98:-1
+6,32,98 bw jit
+32,98 bw jit
+6,32,98 bw beta
+32,98 bw beta
+6,32,98 bw jit SPLIT6=1

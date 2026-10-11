@@ -1,0 +1,309 @@
+{
+ "topic": "T1_A_timing - Signal A ephemeris and timing (verification)",
+ "verdicts": [
+  {
+   "target_id": "A.P",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Own polyfit WLS on U verifier times (v2_real_events.csv) with v4 per-sector injection SDs gives 3.1827850 +- 5.66e-6 (R60), 3.1827852 +- 6.02e-6 (R144); v4_results.json ephem.drop_onesided_573_and_m1_R60 P=3.18278495, eP=5.66e-6, mc_sdP 5.77e-6. Alternative defensible selections (E-1 kept with the one-sided injection SD 16.8 min: 3.1827861; S98 E1 also dropped: 3.1827826) stay within 0.4 sigma. Superseding reasons checked: audit joint-fit and U 01 LSQ errors are formal (MC/injection sd 5.7-6.2e-6).",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/verify/v1_independent_ephem.json ver19_R60, ver19_R144, ver19+Em1_onesidedSD_R60, ver19_minusE1_R60; addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v4_results.json ephem.drop_onesided_573_and_m1_R60"
+  },
+  {
+   "target_id": "A.T0",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Reproduced 2460998.73599 +- 0.00288 (R60), .73592 +- .00292 (R144), corr(T0,P) 0.69; same epoch numbering as pubprep (pubprep E0 tc_pred 3998.73679, a1_per_transit.csv). Selection systematics: keeping E-1 with its one-sided injection SD gives .73683; additionally dropping S98 E1 (same ~20-min post-egress stretch, see missed) gives .73424; all within 0.6 sigma_T0, so 2460998.736 +- 0.003 is robust at the printed precision.",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/verify/v1_independent_ephem.json ver19_R60, ver19+Em1_onesidedSD_R60, ver19_minusE1_R60"
+  },
+  {
+   "target_id": "A.T0_decorr",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "3998.735992 - 351 x 3.18278495 = 2881.57847 BTJD = 2459881.5785; eT_dec 0.00209 in r1 table (U02ver_19_twosided_R60). Not for the Note.",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides_table.csv row U02ver_19_twosided_R60"
+  },
+  {
+   "target_id": "A.T0_shift_cause",
+   "verdict": "CORRECTED",
+   "corrected_value": "Event selection: S98 E-1 (post-egress data ~5 min contiguous plus 2 isolated points before a ~5.8 h gap) measures +18.6..+20.5 min in pubprep, the U verifier, audit s09 and two U 01 variants, but -3.0 min (U 01 base), -0.75 min (R-S6) and -75.7 min (U 02 auditor); adding it to the 19-set moves T0 by +2.24 min (0.5 sigma). Same reference epoch and time system.",
+   "reason": "Numbers verified (19 -> 19+E-1: .73599 -> .73755; pubprep minus E-1,E-573: .73601; time systems TDB/SOLARSYSTEM/TIMEPIXR 0.5). But the per-pipeline E-1 wording is inaccurate: E-1 is +18.6..+20.5 min in pubprep (+19.5), U verifier (+18.75), audit s09 (+20.5) and the U 01 quad/S98no30 variants (+19.1/+18.6), while the U 01 base variant gives -3.0 min, R-S6 -0.75 min and the U 02 auditor -75.7 min (anti-transit artefact per U verifier). So 'in 4 of 5 pipelines' should read 'in 3 of 5 base pipelines; the U 01 chi2 surface is bimodal (-3/+19 min)'.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s06_per_transit_all_variants.csv rows 19,52,316 (oc_min -2.98, 19.15, 18.56); addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/s1_timing_R60.json events S98 E-1 dt -0.00052 d; addenda/opus55_final_audit_tic4206066/02_timing_A/out/t3_events_base.csv S98 E-1 dt -75.70"
+  },
+  {
+   "target_id": "A.N_timing",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Event identities verified in v4_ephem.py (set 'two') and r1 events lists; pubprep 20 = 5/6/9 (no S6 E-795 row; U 01 verifier says its window touches a flagged cadence). E-567/E-566 fail S/N (dchi 2.68/2.27 -> S/N 1.6/1.5 in v2). Caveat: S98 E1 has only ~20 min contiguous post-egress data (v2 post = 0.177 T14, below the verifier's own one-sided cut post < 0.2 T14) before a 2^30-flagged interval, but data resume 126 min after egress; the 19-set keeps it. See missed.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v4_ephem.py L33-36; addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v2_real_events.csv rows S98 E1/E-1/S32 E-573 (post 0.177/0.118/0.035); addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/verify/v3_post_egress_detail.json"
+  },
+  {
+   "target_id": "A.N_all",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "23 = 6/8/9 in U 01 out_s03_epochs.csv (cov_clean >= 0.8 in S6, S32 E-573..E-566, S98 E-1,0,1,4,5,9,10,13,14), out_s05_globalfit_lsq.json raw_lin n_per_sector {6:6,32:8,98:9}, out_s09_emcee_long.json n_windows 23; audit s09 pipe rows give the same 23 with coverage >= 0.5. E2,E3,E6,E11 have frac_in_bit2^29 = 1 and cov_keepSL 1.01.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s03_epochs.csv; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s05_globalfit_lsq.json raw_lin.n_per_sector"
+  },
+  {
+   "target_id": "A.timing_chi2",
+   "verdict": "CORRECTED",
+   "corrected_value": "9.5/17 (U verifier, +-60 min); 8.5/17 (+-144 min); range 6.4-11.3/17 (p 0.84-0.99) across 3 U pipelines x 2 windows and the audit s09 times",
+   "reason": "Headline 9.5/17 (R60) and 8.5/17 (R144) reproduced. The cross-pipeline range omits the R-S6 +-144 min fit of the identical 19 events (URS6_19_twosided_R144 = 6.41/17, same event list), so the range is 6.4-11.3/17 and p = 0.84-0.99. Printed form unchanged.",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json results.URS6_19_twosided_R144 (chi2 6.409, 19 events identical to set19); addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/verify/v1_independent_ephem.log"
+  },
+  {
+   "target_id": "A.timing_error_model",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "v4_results.json injections: S6/S32/S98 R60 sd 12.91/16.44/11.97 (n 1356/1346/1310), R144 13.92/23.50/12.08; z_white_sd 1.33/4.26/2.63; kurtosis 2.3-12.3. Audit s09 e_dt is the Delta-chi2=1 half-width with chi2 normalised by var(resid)*beta^2 (s09_events.py fit_event), i.e. white x beta, beta 1.0-1.73; this cannot absorb z-SD 2.6-4.3. The MC with errors drawn from the injection pools reproduces sigma_P. Note the chi2 value itself depends on the Gaussian-equivalent SD (U 01 std_all 16-30 min, robust core 7-11 min); the calibrated test is the empirical MC (v4 mc_chi2_frac_below 0.195/0.222; t6 p_chi2_empirical 0.74).",
+   "evidence": "addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v4_results.json injections; addenda/tic4206066_PUBLICATION_AUDIT/scripts/s09_events.py fit_event; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s08_ephemeris_fits.json injection_sigma_min"
+  },
+  {
+   "target_id": "A.timing_excess",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Own fit of the audit's 21 s09 times: 47.51/19 with its own errors, 12.71/19 with pubprep injection SDs, 10.41/19 with U verifier SDs, 7.45/17 for the 19-set. Same times, only the error model changes the verdict.",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/verify/v1_independent_ephem.json audit21_own_errors, audit21_pubprepINJ, audit21_UverINJ_R60, audit19_UverINJ_R60"
+  },
+  {
+   "target_id": "A.rms_OC",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "9.04 min (v4 rms_oc uses np.std, 9.038; own sqrt-mean 9.04); 7.54 (R-S6) to 9.96 (U02 auditor) for the 19-set.",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/verify/v1_independent_ephem.log ver19_R60 rms=9.04; r1_ephemerides_table.csv"
+  },
+  {
+   "target_id": "A.TTV",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "t6_results.json: FAP_permutation 0.2115 (R60)/0.188 (R144); median A95 9.9/13.0 min for P_TTV<64 d, 16.1/22.5 min for 64-640 d; run on the 20-event U 02 auditor set. Correction to the notes only: 1/|7/P_B - 2/P_A| with P_A 3.182785, P_B 11.13274 is 2528 d (6.9 yr), not ~2480 d; still in the unconstrained regime.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/02_timing_A/out/t6_results.json ttv.R60/R144; own arithmetic 1/|7/11.13274-2/3.182785| = 2528.2 d"
+  },
+  {
+   "target_id": "A.cycle_count",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "out_s10_bls_aliases.json combined: best 3.182784 (256.8), next local max 157.0 lower, S98<->S32 aliases 180.6/186.4 lower; S32+S98 next alias 3.17725 57.7 lower; s1b_alias j=+1 61.0, others >= 127.3 lower; R-S6 aliases j=+1 -9.39 sigma, j=-1 +12.28 sigma vs S98-only; cycle_count_mc frac_wrong_cycle 0.0; a1 chi2_vs_cycle_offset 13203/13445 vs 12.63; U 01 global alternatives 264-292 worse (report 265-349). audit '569/792' use T98 = LEO trap_epo 3998.7394 (= E0). The notes' 'dchi2 ~34-61 without S6' has no source: available S6-free light-curve margins are 57.7 (BLS) and 61.0 (template).",
+   "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s10_bls_aliases.json; addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/s1b_alias.json; addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json cycle_count, cycle_count_mc; candidates/tic4206066_p3.182945/candidate.json trap_epo 3998.739439"
+  },
+  {
+   "target_id": "A.S6_timing",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "R-S6_summary S6_OC_vs_S32S98_eph mean_oc 0.300, e 5.66, z 0.031; s6_checks.S6_timing dt_best 0.5, lo -3.0, hi 3.5. U 01 out_s11 shift +1.0 (lo 2.5, hi 3.25) is at the all-sector ephemeris (not out-of-sample); U 01 report also gives S6 at -0.96 sigma of an S32+S98 prediction (+-2.2 min). All consistent with zero.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s11_cycle_count.json sector_shift_at_ms_ephemeris"
+  },
+  {
+   "target_id": "A.S6_use",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "t9_results.json near_dump sd 12.46 (R60 13.69), mean +0.05 min vs control 13.22 (13.83), mean +1.02: no bias or broadening; S6_sel P 3.182556 +- 0.001819, (3.18256-3.1249)/0.00182 = 32 sigma; dump spacing vs P drift 0.058 d = 1.4 h/cycle. Localization excluded (manuscript L41).",
+   "evidence": "addenda/opus55_final_audit_tic4206066/02_timing_A/out/t9_results.json; addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json timing_R60.S6_sel; addenda/opus55_final_audit_tic4206066/REFEREE_PASS_1.md R-S6 block"
+  },
+  {
+   "target_id": "A.S6_drop_effect",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Own fit: ver19_noS6_R60 P 3.1827813 (dP -3.7e-6 = -0.65 sigma), R144 -0.68 sigma; r1 U02aud -1.01/-0.95, R-S6 -0.14; T0 moves <= 0.43 min. In nested units (sqrt(sigma_noS6^2 - sigma_S6^2)) the shifts are -0.43 (verifier) to -0.75 (U02 auditor), i.e. consistent with noise, but in units of the quoted sigma_P the verifier shift exceeds 0.5.",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/verify/v1_independent_ephem.json ver19_noS6_R60/R144; r1_ephemerides.json extra.dropS6:*"
+  },
+  {
+   "target_id": "A.P_S98only",
+   "verdict": "CORRECTED",
+   "corrected_value": "per-transit linear fits 3.18164-3.18206 (+-0.00044-0.00060) d, 1.4-2.6 sigma below the adopted P; light-curve fits 3.18220 +- 0.00031 (LEO trapezoid) to 3.18276 +- 0.00024 (U 01 template); BLS 3.18271-3.18298; bootstrap 3.18264 +- 0.0016 (verif)",
+   "reason": "The per-transit range omits the R-S6 per-transit S98 fit the fact itself cites (3.182055 +- 0.000509, -1.4 sigma) and the LEO trapezoid 3.18220 +- 0.00031 (M C045). Other numbers verified (pubprep 3.1816438 +- 0.00044; U 01 3.1827602 +- 0.000235; r3 -2.60/-1.91/-2.13/-1.53 sigma).",
+   "evidence": "addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json timing_R60.S98_sel; addenda/tic4206066_PUBLICATION_AUDIT/FINAL_PARAMETERS.json signal_A.ephemeris.cross_checks.cycle_count.S98_only_period_trapezoid"
+  },
+  {
+   "target_id": "A.P_discovery",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "candidate.json/harmonic.json original_period 3.182945191903069; offset 1.60e-4 d = 0.36 (pubprep S98 sigma) to 0.87 (U 01 bootstrap sigma) S98-only sigma.",
+   "evidence": "candidates/tic4206066_p3.182945/harmonic.json original_period"
+  },
+  {
+   "target_id": "A.P_jointfit_formal",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "U 01 raw_lin P 3.18278577 +- 2.01e-6; s09_emcee_long P median 3.18278337 (-3.95e-6/+3.56e-6); audit 3.1827853 +- 0.0000027 (PUBLICATION_TRUTH L90); t6 global_fit_20 eP 3.20e-6/3.59e-6. Ratio to injection/MC sd ~1.6-2.9x.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s05_globalfit_lsq.json raw_lin.params.P; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s09_emcee_long.json P"
+  },
+  {
+   "target_id": "A.time_system",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "out_s01_time_systems.json: TIMESYS TDB, TIMEREF SOLARSYSTEM, BJDREFI 2457000, TIMEPIXR 0.5 (SPOC/TESS-SPOC); out_s01b: TIMECORR minus target Roemer -0.2..+1.3 s, QLP S98 +1.1..+2.5 s, TESScut up to 19.3 s.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s01_time_systems.json; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s01b_bary_validation.json"
+  },
+  {
+   "target_id": "A.template_T14",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "a1_results template_T14_h 1.88832; own closed form with k 0.0212, b 0.35, rho 2.51 rho_sun, P 3.182785 gives a/R* 12.375, T14 1.8876 h (difference 0.04 min from exposure/LD handling). U verifier template uses T14A = 1.887 h.",
+   "evidence": "addenda/rnaas_tic4206066_pubprep/analysis/out/a1_results.json signals.A.A__pipe.template_T14_h; addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v1_common.py T14A"
+  },
+  {
+   "target_id": "A.harmonic",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "harmonic.json: odd 331.4 vs even 296.0 ppm, 0.40 sigma; P hypothesis supported False with 1 contradicting epoch; 2P secondary 309 +- 48 ppm at phase 0.5 = odd-epoch transits. Nuance: A03 fitted per-sector shifts; S32 shift 0.0885 d equals the expected period-error drift (573 x 1.6e-4 = 0.092 d), but the S6 shift 0.666 d is far from the expected 0.127 d, so the S6 mis-placement produced the contradicting epoch.",
+   "evidence": "candidates/tic4206066_p3.182945/harmonic.json hypotheses.P.sector_shifts_d, n_contradicting, odd_even_sigma, secondary_max"
+  },
+  {
+   "target_id": "A.pixel_recheck_ephem",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "ephem_current.json A P 3.182785293657263, T0 3998.7367930333035 (used by pixel_recheck scripts/common.py L10-12); offset vs 3998.73599 = +1.15 min at S98.",
+   "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/out/ephem_current.json; addenda/tic4206066_pixel_recheck/scripts/common.py L10-12"
+  },
+  {
+   "target_id": "X-T1-01",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "All four claims traced; pubprep value reproduced exactly (3.1827856, .73754, 12.63/18); 19-set reproduced independently; P spread across all selections and pipelines < 0.6 sigma; the adopted T0 is not the more favourable one (larger error). Selection is a convention with a +-2.5 min T0 systematic (see missed).",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/verify/v1_independent_ephem.log"
+  },
+  {
+   "target_id": "X-T1-02",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Row-by-row identities verified. Refinement: pubprep lacks E-795 because its window touches a flagged cadence (U 01 verify VERIFY_REPORT.md L9), not an arbitrary omission. S98 E1 is a borderline case of the same rule.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/verify/VERIFY_REPORT.md L9; addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/verify/v3_post_egress_detail.json"
+  },
+  {
+   "target_id": "X-T1-03",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Code of s09 read (white x beta Delta-chi2=1 widths); 47.51/19 reproduced; same times give 10.4-12.7/19 with injection SDs.",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/verify/v1_independent_ephem.json audit21_*"
+  },
+  {
+   "target_id": "X-T1-04",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Definition difference; values verified (a1 rms 9.03, s09 9.56 own recompute, 19-set 9.04).",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/verify/v1_independent_ephem.log"
+  },
+  {
+   "target_id": "X-T1-05",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "NOT_A_CONFLICT holds: s19 uses T98 = trap_epo 3998.7394 (E0), round((T98-2187)/P)=569, round((T98-1479)/P)=792.",
+   "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/scripts/s19_cycles_and_figures.py L25-31; candidates/tic4206066_p3.182945/candidate.json trap_epo"
+  },
+  {
+   "target_id": "X-T1-06",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "verif caveat (S6 dumps) concerns S6 as independent confirmation/localization; for timing S6 passes an out-of-sample test (z 0.03) and dump-mirrored injections show no bias. verif's 'dump-matched injections are impossible' is superseded by U t9.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/02_timing_A/out/t9_results.json; addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json S6_OC_vs_S32S98_eph"
+  },
+  {
+   "target_id": "X-T1-07",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "COSMETIC: SUMMARY.md L29 3.18281; multisector_results.json results[4].P_refined 3.182758289.",
+   "evidence": "addenda/pool_multisector/multisector_results.json results[4]"
+  },
+  {
+   "target_id": "X-T1-08",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Resolution range 3.1816-3.1830 covers R-S6 3.18206 and LEO 3.18220; only the A.P_S98only per-transit sub-range needed widening.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json timing_R60.S98_sel"
+  },
+  {
+   "target_id": "X-T1-09",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Definition difference; template T14 1.888 h reproduced (1.8876).",
+   "evidence": "own arithmetic in verify.json"
+  },
+  {
+   "target_id": "X-T1-10",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Stale-input diagnosis supported (see A.harmonic nuance on the S6 shift).",
+   "evidence": "candidates/tic4206066_p3.182945/harmonic.json"
+  },
+  {
+   "target_id": "X-T1-11",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "U 01 REPORT 'Recommended wording' keeps 20 transits/3.1827856; later U 02 verify + REQUIRED_CHANGES B3 adopt 19/.736/9-17; reproduced here.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/REPORT.md L194; addenda/opus55_final_audit_tic4206066/REQUIRED_CHANGES.md L28"
+  },
+  {
+   "target_id": "X-T1-12",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "NUMERIC_RECHECK row 80 and REQUIRED_CHANGES C6 rest on R-S6 only; own rerun on verifier times gives -0.65 sigma for P.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/NUMERIC_RECHECK.csv L80; addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/verify/v1_independent_ephem.json ver19_noS6_R60"
+  },
+  {
+   "target_id": "X-T1-13",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "COSMETIC: offset 0.77-1.16 min vs T14 113 min.",
+   "evidence": "addenda/tic4206066_pixel_recheck/scripts/common.py L10-12"
+  },
+  {
+   "target_id": "X-T1-14",
+   "verdict": "CORRECTED",
+   "corrected_value": "Cycle count unique with S6 (dchi2 >= 157) and strongly preferred without S6 (nearest alias dchi2 57.7-61.0 lower; j=+-1 at 9.4-12.3 sigma of the S98-only per-transit P; wrong-alias rate <= 1% in verif bootstrap)",
+   "reason": "The lower bound '34' in 'dchi2 ~34-61 without S6' is not in any cited file; the S6-free light-curve margins for the nearest alias are 57.7 (S32+S98 BLS, 3.17725 d) and 61.0 (R-S6 template alias test, j=+1); per-transit S98-only timing puts j=+1/-1 at 9.4/12.3 sigma; verif block bootstrap: true alias loses in 0-1%.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s10_bls_aliases.json S32+S98.top_local_maxima; addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/s1b_alias.json aliases j=1"
+  }
+ ],
+ "missed": [
+  {
+   "what": "S98 E1 is a borderline one-sided event kept in the 19-set; T0 depends on selection at the +-2.5 min level",
+   "why_it_matters": "E1 has only ~20 min of contiguous post-egress data (v2 post = 0.177 T14, below the U verifier's own one-sided cut post < 0.2 T14 used in v4_ephem.py) before a 2^30-flagged interval; data resume 126 min after egress. Dropping it gives T0 = 2460998.73424 +- 0.00307 (-2.5 min), P = 3.1827826 (-0.4 sigma), chi2 6.8/16; keeping E-1 with the one-sided injection SD gives T0 .73683. The adopted .736 +- .003 covers all of these, but the 'baselines on both sides' rule is not a unique numeric rule.",
+   "suggested_value": "Keep T0 = 2460998.736 +- 0.003; record selection systematic -2.5/+2.2 min (2460998.7342-2460998.7375) in the supplementary record; name the two excluded events in the Note's rule",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/verify/v1_independent_ephem.json ver19_minusE1_R60, ver19+Em1_onesidedSD_R60; addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/verify/v3_post_egress_detail.json (E1 segments [2.8,19.5] and [126.2,429.5] min; E-1 [2.2,18.9] then [348.9,...]); addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v2_real_events.csv post column; addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v4_ephem.py sel3 definition"
+  },
+  {
+   "what": "Near-7:2 super-period arithmetic",
+   "why_it_matters": "Reconciler notes and manuscript finding quote ~2480 d / ~6.8 yr; the correct value is 1/|7/11.13274 - 2/3.182785| = 2528 d (6.9 yr). Conclusion (unconstrained regime) unchanged.",
+   "suggested_value": "~2530 d (6.9 yr)",
+   "evidence": "own arithmetic (P_B from manuscript.tex L37, P_A adopted)"
+  },
+  {
+   "what": "Unsourced 'dchi2 ~34' S6-free cycle-count margin",
+   "why_it_matters": "Appears in A.cycle_count notes, X-T1-14 and the summary; no file gives it. Should not propagate to the final record.",
+   "suggested_value": "57.7-61.0",
+   "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s10_bls_aliases.json; addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/s1b_alias.json"
+  },
+  {
+   "what": "chi2 range for the 19-set omits the R-S6 +-144 min fit",
+   "why_it_matters": "URS6_19_twosided_R144 uses the identical 19 events and gives 6.41/17; the full range is 6.4-11.3/17 (p 0.84-0.99). Printed 'chi2 ~ 9 for 17 dof' is unaffected.",
+   "suggested_value": "6.4-11.3/17",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json results.URS6_19_twosided_R144"
+  }
+ ],
+ "manuscript_findings": [
+  {
+   "quote": "from the 19 transits with $\\ge$70\\% coverage, ${\\rm S/N}\\ge2$, and baselines on both sides",
+   "problem": "Confirmed MINOR as the reconciler says, with one addition: the reconciler's replacement ('excluding two whose post-egress baseline is cut by a data gap or an 11.13 d transit') also describes S98 E1, whose contiguous post-egress data end after ~20 min at a flagged interval (it is kept because data resume 2.1 h after egress). Naming the degree of truncation makes the rule reproducible from v2_real_events.csv (post-egress data: E-573 4 min, E-1 13 min, E1 20 min, all others >= 30 min).",
+   "fix": "from the 19 transits with $\\ge$70\\% coverage and ${\\rm S/N}\\ge2$, excluding two with $<$15\\,min of post-egress data (one before a data gap, one abutting an 11.13\\,d transit)",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "($\\chi^2\\approx9$ for 17 degrees of freedom; no timing variations)",
+   "problem": "Agree with reconciler: overstated; only TTVs above ~10-13 min (95%, P_TTV < 64 d) are excluded, periods > 640 d (including the ~6.9 yr near-7:2 super-period) are unconstrained. chi2 range 6.4-11.3/17.",
+   "fix": "($\\chi^2\\approx9$ for 17 degrees of freedom; no evidence of timing variations)",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "Without Sector 6 all these values change by $<0.5\\sigma$.",
+   "problem": "Agree with reconciler for P: in the adopted (U verifier) timing pipeline P shifts by -0.65 sigma, up to -1.0 sigma in the U 02 auditor pipeline; T0 < 0.1 sigma. The shape-value part belongs to the shape topic and must be confirmed there before using the reconciler's replacement.",
+   "fix": "Without Sector 6, $P$ changes by $\\lesssim1\\sigma$ and the other values by $<0.5\\sigma$.",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "give $P=3.182785\\pm0.000006$\\,d and $T_0=2460998.736\\pm0.003$ BJD$_{\\rm TDB}$ from the 19 transits",
+   "problem": "Verified independently (3.1827850 +- 0.0000057; 2460998.73599 +- 0.00288); robust to the E-1/E1 selection choices within 0.6 sigma.",
+   "fix": "no change",
+   "severity": "NONE"
+  }
+ ]
+}

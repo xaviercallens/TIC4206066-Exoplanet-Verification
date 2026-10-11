@@ -1,0 +1,35 @@
+{
+ "default_f_comp_within_2.2arcsec": 0.14129542932514916,
+ "default_2.2arcsec_in_AU": 78.36153161175423,
+ "default_q_prior": {
+  "frac_mass_gt_0.38": 0.32256,
+  "frac_mass_gt_0.54": 0.108614,
+  "m_min": 0.10000011264395599,
+  "m_max": 0.6059998015924806
+ },
+ "default_effective_prior_mass_gt_0.38": 0.04557625368312011,
+ "prev_age5 (tic4206066_PUBLICATION_AUDIT, reused)": {
+  "n_survivors": 429613,
+  "n_periastron_gt_10AU": 129878,
+  "effective_prior_at_N1e6": 0.129878,
+  "effective_prior_at_N5e5": 0.259756,
+  "frac_kept_q_below_0.1Msun_clamped": 0.6266573245661313,
+  "frac_kept_mass_gt_0.38": 0.06396002402254423,
+  "frac_kept_mass_gt_0.54": 0.013920756402162029,
+  "effective_prior_mass_gt_0.38_at_N1e6": 0.008307,
+  "frac_kept_projsep_gt_2.2arcsec": 0.46582177120066526,
+  "frac_survivors_mass_gt_0.38": 0.19568774687916798
+ },
+ "fresh_age5 (this audit)": {
+  "n_survivors": 429797,
+  "n_periastron_gt_10AU": 129548,
+  "effective_prior_at_N1e6": 0.129548,
+  "effective_prior_at_N5e5": 0.259096,
+  "frac_kept_q_below_0.1Msun_clamped": 0.625721740204403,
+  "frac_kept_mass_gt_0.38": 0.06412295056658536,
+  "frac_kept_mass_gt_0.54": 0.01412603822521382,
+  "effective_prior_mass_gt_0.38_at_N1e6": 0.008307,
+  "frac_kept_projsep_gt_2.2arcsec": 0.46365053879643064,
+  "frac_survivors_mass_gt_0.38": 0.19690458518789103
+ }
+}

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/CKWxiGxwmpUa2opSjwsKLXHgtaA</id>
+  <title>arXiv Query: search_query=&amp;id_list=2603.22597&amp;start=0&amp;max_results=10</title>
+  <updated>2026-09-25T11:47:24Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2603.22597" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2603.22597v2</id>
+    <title>Automatic search for transiting planets in TESS-SPOC FFIs with RAVEN: over 100 newly validated planets and over 2000 vetted candidates</title>
+    <updated>2026-04-24T10:26:28Z</updated>
+    <link href="https://arxiv.org/abs/2603.22597v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.22597v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Space-based missions such as TESS are identifying a wealth of short-period ($\lesssim30$ d) transiting planets. Despite the growing number of confirmed and candidate planets, the sample is still incomplete and highly biased, challenging demographic studies. Moreover, there are still a large number of unconfirmed candidates that can end up being false positives. We use the new pipeline RAVEN to perform a uniform search and validation of transiting planet candidates in TESS data. We focus on a magnitude-limited sample of over 2.2 million main sequence stars well characterised by Gaia and observed by TESS in its Full Frame Images during its first 4 years of operations (sectors 1 to 55). We aim to detect candidates with periods within $0.5-16$ days. RAVEN detects candidates with a box least squares algorithm, classifies them into transiting planets and false positives using machine learning models trained with realistic simulations, and performs statistical validation. We present several samples of candidates with different levels of vetting and validation. We newly validate 118 planets, including 31 newly detected here. We also present a sample of over 2000 candidates not validated but with high probability of being planets, including $\sim1000$ new candidates, a small sample of newly identified mono- and duo-transiting candidates, and a sample of large radii ($&gt;8~\mathrm{R_{\oplus}}$) candidates with high planet probability suited for further follow-up. Our samples of vetted and validated transiting planet candidates represent a major effort towards improving the candidate sample from TESS.</summary>
+    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-23T21:47:43Z</published>
+    <arxiv:comment>27 pages, 13 figures, accepted for publication in MNRAS. Online material available at https://zenodo.org/records/19661443</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.EP"/>
+    <author>
+      <name>M. Lafarga</name>
+    </author>
+    <author>
+      <name>D. J. Armstrong</name>
+    </author>
+    <author>
+      <name>K. Cui</name>
+    </author>
+    <author>
+      <name>A. Hadjigeorghiou</name>
+    </author>
+    <author>
+      <name>V. Kunovac</name>
+    </author>
+    <author>
+      <name>L. Doyle</name>
+    </author>
+    <author>
+      <name>E. M. Bryant</name>
+    </author>
+    <author>
+      <name>R. F. Díaz</name>
+    </author>
+    <author>
+      <name>L. A. Nieto</name>
+    </author>
+    <author>
+      <name>A. Osborn</name>
+    </author>
+  </entry>
+</feed>

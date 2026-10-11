@@ -1,0 +1,62 @@
+{
+ "QLP_DET_clean": {
+  "n": 2000,
+  "sd_emp": 0.00014311460964849094,
+  "sd_std": 0.00014100681772038766,
+  "med_white": 0.00013680067866789008,
+  "beta": 1.0461542372602488,
+  "mean": 3.5560700244684705e-06
+ },
+ "QLP_DET_relaxed": {
+  "n": 2000,
+  "sd_emp": 0.00014140650534456668,
+  "sd_std": 0.00014656237134450951,
+  "med_white": 0.00013921005239980695,
+  "beta": 1.0157779765677524,
+  "mean": 1.4640812427076052e-06
+ },
+ "SYSRM_bw075_relaxed": {
+  "n": 2000,
+  "sd_emp": 0.00014167936793402236,
+  "sd_std": 0.00014738544265134978,
+  "med_white": 0.0001397737175994561,
+  "beta": 1.0136338244935803,
+  "mean": -1.941634774626456e-07
+ },
+ "SYSRM_bw075_clean": {
+  "n": 2000,
+  "sd_emp": 0.00014056846123372365,
+  "sd_std": 0.00014167958785641128,
+  "med_white": 0.0001372453141244622,
+  "beta": 1.0242131917614894,
+  "mean": -6.858088216687845e-07
+ }
+}
+-1 3989.735 cov_any 1.01 clean 0.00 b29 1.0 b2048 1.0 b30 1.0 bkg 317508.09375 dump 29.7h seg [0] edge 29.7h
+0 4000.868 cov_any 1.01 clean 1.01 b29 0.0 b2048 0.0 b30 0.0 bkg 21271.251953125 dump 51.4h seg [1] edge 46.3h
+    QLP_DET_clean          D=  1085 +-  138 (white  132) S/N 7.9 n_in 24 free dt -3.0
+    QLP_DET_relaxed        D=  1085 +-  134 (white  132) S/N 8.1 n_in 24 free dt -3.0
+    SYSRM_bw075_relaxed    D=  1100 +-  133 (white  131) S/N 8.2 n_in 24 free dt -3.0
+    SYSRM_bw075_clean      D=  1100 +-  135 (white  131) S/N 8.2 n_in 24 free dt -3.0
+1 4012.001 cov_any 1.01 clean 1.01 b29 0.0 b2048 0.0 b30 0.0 bkg 21591.701171875 dump 47.1h seg [3] edge 47.1h
+    QLP_DET_clean          D=  1189 +-  154 (white  147) S/N 7.7 n_in 24 free dt -5.0
+    QLP_DET_relaxed        D=  1189 +-  150 (white  147) S/N 7.9 n_in 24 free dt -5.0
+    SYSRM_bw075_relaxed    D=  1176 +-  150 (white  148) S/N 7.8 n_in 24 free dt -4.5
+    SYSRM_bw075_clean      D=  1176 +-  152 (white  148) S/N 7.8 n_in 24 free dt -4.5
+2 4023.134 cov_any 1.01 clean 0.00 b29 1.0 b2048 0.0 b30 0.1724137931034483 bkg 40166.37109375 dump 33.4h seg [4] edge 28.3h
+    QLP_DET_relaxed        D=  1212 +-  200 (white  196) S/N 6.1 n_in 21 free dt -5.0
+    SYSRM_bw075_relaxed    D=  1260 +-  200 (white  197) S/N 6.3 n_in 21 free dt -5.0
+3 4034.267 cov_any 0.97 clean 0.00 b29 1.0 b2048 1.0 b30 0.7142857142857143 bkg 153449.2734375 dump 59.1h seg [6] edge 59.1h
+4 4045.400 cov_any 1.01 clean 0.45 b29 0.0 b2048 0.0 b30 0.5517241379310345 bkg 20757.986328125 dump 157.3h seg [7] edge 12.0h
+    QLP_DET_clean          D=   951 +-  243 (white  232) S/N 3.9 n_in 12 free dt 10.5
+    QLP_DET_relaxed        D=   951 +-  236 (white  232) S/N 4.0 n_in 12 free dt 10.5
+    SYSRM_bw075_relaxed    D=   926 +-  234 (white  231) S/N 4.0 n_in 12 free dt 10.0
+    SYSRM_bw075_clean      D=   926 +-  236 (white  231) S/N 3.9 n_in 12 free dt 10.0
+injection timing full: {'n': 400, 'sd_dt_min': 3.815107919508962, 'rsd_dt_min': 3.7064999999999997, 'p16_84': [-3.0799999999999983, 4.0], 'mean_dt': 0.32875, 'sd_D_ppm': 134.90920724509166, 'mean_D_ppm': 1018.6599498121078, 'frac_gt30': 0.0}
+injection timing 55%-dropped (epoch-4-like): {'n': 400, 'sd_dt_min': 7.817995167400655, 'rsd_dt_min': 5.1891, 'p16_84': [-6.0, 5.5], 'mean_dt': -0.59125, 'sd_D_ppm': 199.71761254391436, 'mean_D_ppm': 1026.2881427552798, 'frac_gt30': 0.0125}
+injection timing full, 900 ppm: {'n': 400, 'sd_dt_min': 4.501854478989742, 'rsd_dt_min': 2.9652, 'p16_84': [-3.5, 3.5], 'mean_dt': 0.0575, 'sd_D_ppm': 133.35775736756074, 'mean_D_ppm': 919.8017445343784, 'frac_gt30': 0.0025}
+injection timing, 2^29 (scattered-light) data: {'n': 200, 'sd_dt_min': 4.5998342361437325, 'rsd_dt_min': 3.3358499999999998, 'p16_84': [-4.0, 3.5], 'mean_dt': -0.095, 'sd_D_ppm': 152.1077656549911, 'mean_D_ppm': 1034.6446861134905, 'frac_gt30': 0.0}
+S98-only ephemeris clean_0_1_4 P = 11.13508 +- 0.00150  T0 = 4000.8646 +- 0.0022 chi2 1.04 dof 1 O-C [ 2.2 -2.9  3. ]
+S98-only ephemeris relaxed_0_1_4(b30 kept) P = 11.13551 +- 0.00090  T0 = 4000.8644 +- 0.0021 chi2 1.17 dof 1 O-C [ 2.4 -3.2  0.8]
+S98-only ephemeris clean_0_1_4 + SL_2 P = 11.13444 +- 0.00136  T0 = 4000.8644 +- 0.0022 chi2 2.08 dof 2 O-C [ 2.5 -1.6 -3.7  7.1]
+S98-only ephemeris clean_0_1_only P = 11.13159 +- 0.00375  T0 = 4000.8661 +- 0.0026 chi2 0.00 dof 0 O-C [0. 0.]

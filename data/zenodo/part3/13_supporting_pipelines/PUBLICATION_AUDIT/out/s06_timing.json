@@ -1,0 +1,729 @@
+{
+ "declared": {
+  "SPOC_2min_S32": {
+   "TIMESYS": "TDB",
+   "TIMEREF": "SOLARSYSTEM",
+   "TASSIGN": "SPACECRAFT",
+   "BJDREFI": "2457000",
+   "BJDREFF": "0.0",
+   "TIMEUNIT": "d",
+   "TIMEPIXR": "0.5",
+   "TELAPSE": "25.997520244522",
+   "TSTART": "2174.232861554896",
+   "TSTOP": "2200.230381567936",
+   "TIMEDEL": "0.001388888888888889",
+   "CALIB": null,
+   "PROCVER": "spoc-5.0.20-20201120",
+   "DATA_REL": "48",
+   "TICVER": "8.1",
+   "CROWDSAP": "0.99695194",
+   "FLFRCSAP": "0.9217971",
+   "BESTAP": null,
+   "DETMET": null,
+   "CAMERA": "1",
+   "CCD": "2",
+   "columns": [
+    "TIME",
+    "TIMECORR",
+    "CADENCENO",
+    "SAP_FLUX",
+    "SAP_FLUX_ERR",
+    "SAP_BKG",
+    "SAP_BKG_ERR",
+    "PDCSAP_FLUX",
+    "PDCSAP_FLUX_ERR",
+    "QUALITY",
+    "PSF_CENTR1",
+    "PSF_CENTR1_ERR",
+    "PSF_CENTR2",
+    "PSF_CENTR2_ERR",
+    "MOM_CENTR1",
+    "MOM_CENTR1_ERR",
+    "MOM_CENTR2",
+    "MOM_CENTR2_ERR",
+    "POS_CORR1",
+    "POS_CORR2"
+   ],
+   "TIME_unit": "BJD - 2457000, days"
+  },
+  "TESS-SPOC_S6": {
+   "TIMESYS": "TDB",
+   "TIMEREF": "SOLARSYSTEM",
+   "TASSIGN": "SPACECRAFT",
+   "BJDREFI": "2457000",
+   "BJDREFF": "0.0",
+   "TIMEUNIT": "d",
+   "TIMEPIXR": "0.5",
+   "TELAPSE": "21.770304561797",
+   "TSTART": "1468.276569147741",
+   "TSTOP": "1490.046873478056",
+   "TIMEDEL": "0.020833333333333332",
+   "CALIB": null,
+   "PROCVER": "spoc-5.0.20-20201120",
+   "DATA_REL": "42",
+   "TICVER": "8.1",
+   "CROWDSAP": "0.99504185",
+   "FLFRCSAP": "0.92497361",
+   "BESTAP": null,
+   "DETMET": null,
+   "CAMERA": "1",
+   "CCD": "1",
+   "columns": [
+    "TIME",
+    "TIMECORR",
+    "CADENCENO",
+    "SAP_FLUX",
+    "SAP_FLUX_ERR",
+    "SAP_BKG",
+    "SAP_BKG_ERR",
+    "PDCSAP_FLUX",
+    "PDCSAP_FLUX_ERR",
+    "QUALITY",
+    "PSF_CENTR1",
+    "PSF_CENTR1_ERR",
+    "PSF_CENTR2",
+    "PSF_CENTR2_ERR",
+    "MOM_CENTR1",
+    "MOM_CENTR1_ERR",
+    "MOM_CENTR2",
+    "MOM_CENTR2_ERR",
+    "POS_CORR1",
+    "POS_CORR2"
+   ],
+   "TIME_unit": "BJD - 2457000, days"
+  },
+  "TESS-SPOC_S32": {
+   "TIMESYS": "TDB",
+   "TIMEREF": "SOLARSYSTEM",
+   "TASSIGN": "SPACECRAFT",
+   "BJDREFI": "2457000",
+   "BJDREFF": "0.0",
+   "TIMEUNIT": "d",
+   "TIMEPIXR": "0.5",
+   "TELAPSE": "26.007242613304",
+   "TSTART": "2174.227305795983",
+   "TSTOP": "2200.234548177806",
+   "TIMEDEL": "0.006944444444444444",
+   "CALIB": null,
+   "PROCVER": "spoc-5.0.21-20210107",
+   "DATA_REL": "48",
+   "TICVER": "8.1",
+   "CROWDSAP": "0.99290729",
+   "FLFRCSAP": "0.92179704",
+   "BESTAP": null,
+   "DETMET": null,
+   "CAMERA": "1",
+   "CCD": "2",
+   "columns": [
+    "TIME",
+    "TIMECORR",
+    "CADENCENO",
+    "SAP_FLUX",
+    "SAP_FLUX_ERR",
+    "SAP_BKG",
+    "SAP_BKG_ERR",
+    "PDCSAP_FLUX",
+    "PDCSAP_FLUX_ERR",
+    "QUALITY",
+    "PSF_CENTR1",
+    "PSF_CENTR1_ERR",
+    "PSF_CENTR2",
+    "PSF_CENTR2_ERR",
+    "MOM_CENTR1",
+    "MOM_CENTR1_ERR",
+    "MOM_CENTR2",
+    "MOM_CENTR2_ERR",
+    "POS_CORR1",
+    "POS_CORR2"
+   ],
+   "TIME_unit": "BJD - 2457000, days"
+  },
+  "QLP_S6": {
+   "TIMESYS": "TDB",
+   "TIMEREF": "SOLARSYSTEM",
+   "TASSIGN": "SPACECRAFT",
+   "BJDREFI": "2457000",
+   "BJDREFF": null,
+   "TIMEUNIT": "d",
+   "TIMEPIXR": null,
+   "TELAPSE": null,
+   "TSTART": "1468.2870266146",
+   "TSTOP": "1490.036501937537",
+   "TIMEDEL": "0.02083333333333333",
+   "CALIB": "TICA",
+   "PROCVER": null,
+   "DATA_REL": null,
+   "TICVER": "8",
+   "CROWDSAP": null,
+   "FLFRCSAP": null,
+   "BESTAP": "3.0:4.0:3.0",
+   "DETMET": null,
+   "CAMERA": "1",
+   "CCD": "1",
+   "columns": [
+    "TIME",
+    "CADENCENO",
+    "SAP_FLUX",
+    "KSPSAP_FLUX",
+    "KSPSAP_FLUX_ERR",
+    "QUALITY",
+    "ORBITID",
+    "SAP_X",
+    "SAP_Y",
+    "SAP_BKG",
+    "SAP_BKG_ERR",
+    "KSPSAP_FLUX_SML",
+    "KSPSAP_FLUX_LAG"
+   ],
+   "TIME_unit": "BJD-2457000, days"
+  },
+  "QLP_S32": {
+   "TIMESYS": "TDB",
+   "TIMEREF": "SOLARSYSTEM",
+   "TASSIGN": "SPACECRAFT",
+   "BJDREFI": "2457000",
+   "BJDREFF": null,
+   "TIMEUNIT": "d",
+   "TIMEPIXR": null,
+   "TELAPSE": null,
+   "TSTART": "2174.230800721365",
+   "TSTOP": "2200.231098765759",
+   "TIMEDEL": "0.006944444444444444",
+   "CALIB": "TICA v0.2.1",
+   "PROCVER": null,
+   "DATA_REL": null,
+   "TICVER": "8.1",
+   "CROWDSAP": null,
+   "FLFRCSAP": null,
+   "BESTAP": "3.0:4.0:3.0",
+   "DETMET": null,
+   "CAMERA": "1",
+   "CCD": "2",
+   "columns": [
+    "TIME",
+    "CADENCENO",
+    "SAP_FLUX",
+    "KSPSAP_FLUX",
+    "KSPSAP_FLUX_ERR",
+    "QUALITY",
+    "ORBITID",
+    "SAP_X",
+    "SAP_Y",
+    "SAP_BKG",
+    "SAP_BKG_ERR",
+    "KSPSAP_FLUX_SML",
+    "KSPSAP_FLUX_LAG"
+   ],
+   "TIME_unit": "BJD-2457000, days"
+  },
+  "QLP_S98": {
+   "TIMESYS": "TDB",
+   "TIMEREF": "SOLARSYSTEM",
+   "TASSIGN": "SPACECRAFT",
+   "BJDREFI": "2457000",
+   "BJDREFF": null,
+   "TIMEUNIT": "d",
+   "TIMEPIXR": null,
+   "TELAPSE": null,
+   "TSTART": "3988.4988670462",
+   "TSTOP": "4045.9019701137427",
+   "TIMEDEL": "0.002314814814814814",
+   "CALIB": "TICA v1.4.0",
+   "PROCVER": null,
+   "DATA_REL": null,
+   "TICVER": "8.2",
+   "CROWDSAP": null,
+   "FLFRCSAP": null,
+   "BESTAP": "3x3 square",
+   "DETMET": "QSP",
+   "CAMERA": "1",
+   "CCD": "2",
+   "columns": [
+    "TIME",
+    "CADENCENO",
+    "SAP_FLUX",
+    "DET_FLUX",
+    "DET_FLUX_ERR",
+    "QUALITY",
+    "ORBITID",
+    "SAP_X",
+    "SAP_Y",
+    "SAP_BKG",
+    "SAP_BKG_ERR",
+    "DET_FLUX_SML",
+    "DET_FLUX_LAG",
+    "SYS_RM_FLUX"
+   ],
+   "TIME_unit": "BJD-2457000, days"
+  },
+  "eleanor_S6": {
+   "TIMESYS": "TDB",
+   "TIMEREF": "SOLARSYSTEM",
+   "TASSIGN": "SPACECRAFT",
+   "BJDREFI": "2457000",
+   "BJDREFF": "0.0",
+   "TIMEUNIT": "d",
+   "TIMEPIXR": "0.5",
+   "TELAPSE": "0.020833324714",
+   "TSTART": "1468.27658749992",
+   "TSTOP": "1490.04709824531",
+   "TIMEDEL": "0.0208333333333333",
+   "CALIB": null,
+   "PROCVER": null,
+   "DATA_REL": null,
+   "TICVER": null,
+   "CROWDSAP": null,
+   "FLFRCSAP": null,
+   "BESTAP": null,
+   "DETMET": null,
+   "CAMERA": "1",
+   "CCD": "1",
+   "columns": [
+    "TIME",
+    "BARYCORR",
+    "RAW_FLUX",
+    "CORR_FLUX",
+    "FLUX_ERR",
+    "QUALITY",
+    "X_CENTROID",
+    "Y_CENTROID",
+    "X_COM",
+    "Y_COM",
+    "FLUX_BKG",
+    "FFIINDEX",
+    "PCA_FLUX"
+   ],
+   "TIME_unit": "None"
+  },
+  "TGLC_S6": {
+   "TIMESYS": "TDB",
+   "TIMEREF": "SOLARSYSTEM",
+   "TASSIGN": "SPACECRAFT",
+   "BJDREFI": "2457000",
+   "BJDREFF": null,
+   "TIMEUNIT": "d",
+   "TIMEPIXR": null,
+   "TELAPSE": null,
+   "TSTART": "1468.287004046535",
+   "TSTOP": "1490.036681698577",
+   "TIMEDEL": "0.0219029986425407",
+   "CALIB": "TGLC",
+   "PROCVER": null,
+   "DATA_REL": null,
+   "TICVER": null,
+   "CROWDSAP": null,
+   "FLFRCSAP": null,
+   "BESTAP": null,
+   "DETMET": null,
+   "CAMERA": "1",
+   "CCD": "1",
+   "columns": [
+    "time",
+    "psf_flux",
+    "aperture_flux",
+    "cal_psf_flux",
+    "cal_aper_flux",
+    "background",
+    "cadence_num",
+    "TESS_flags",
+    "TGLC_flags"
+   ],
+   "TIME_unit": "None"
+  },
+  "T16_S6": {
+   "TIMESYS": "BJD",
+   "TIMEREF": null,
+   "TASSIGN": null,
+   "BJDREFI": null,
+   "BJDREFF": null,
+   "TIMEUNIT": null,
+   "TIMEPIXR": null,
+   "TELAPSE": null,
+   "TSTART": null,
+   "TSTOP": null,
+   "TIMEDEL": "21.7291611353357",
+   "CALIB": null,
+   "PROCVER": null,
+   "DATA_REL": null,
+   "TICVER": null,
+   "CROWDSAP": null,
+   "FLFRCSAP": null,
+   "BESTAP": null,
+   "DETMET": null,
+   "CAMERA": "1",
+   "CCD": "1",
+   "columns": [
+    "RSTFC",
+    "TMID_UTC",
+    "TMID_BJD",
+    "BGV",
+    "BGE",
+    "FSV",
+    "FDV",
+    "FKV",
+    "IFL1",
+    "IFL2",
+    "IFL3",
+    "IFE1",
+    "IFE2",
+    "IFE3",
+    "IRM1",
+    "IRM2",
+    "IRM3",
+    "IRE1",
+    "IRE2",
+    "IRE3",
+    "EPD1",
+    "EPD2",
+    "EPD3",
+    "TFA1",
+    "TFA2",
+    "TFA3",
+    "XPOS",
+    "YPOS",
+    "TEMP",
+    "NTEMPS"
+   ],
+   "TIME_unit": "None"
+  },
+  "TASOC_S6": {
+   "TIMESYS": "TDB",
+   "TIMEREF": "SOLARSYSTEM",
+   "TASSIGN": null,
+   "BJDREFI": "2457000",
+   "BJDREFF": "0.0",
+   "TIMEUNIT": "d",
+   "TIMEPIXR": "0.5",
+   "TELAPSE": "21.77030865599727",
+   "TSTART": "1468.276587055841",
+   "TSTOP": "1490.046895711838",
+   "TIMEDEL": "0.02083333333333333",
+   "CALIB": null,
+   "PROCVER": "master-v5.0",
+   "DATA_REL": "8",
+   "TICVER": "8",
+   "CROWDSAP": null,
+   "FLFRCSAP": null,
+   "BESTAP": null,
+   "DETMET": null,
+   "CAMERA": "1",
+   "CCD": "1",
+   "columns": [
+    "TIME",
+    "TIMECORR",
+    "CADENCENO",
+    "FLUX_RAW",
+    "FLUX_RAW_ERR",
+    "FLUX_BKG",
+    "FLUX_CORR",
+    "FLUX_CORR_ERR",
+    "QUALITY",
+    "PIXEL_QUALITY",
+    "MOM_CENTR1",
+    "MOM_CENTR2",
+    "POS_CORR1",
+    "POS_CORR2"
+   ],
+   "TIME_unit": "BJD - 2457000, days"
+  },
+  "TARS_S6": {
+   "TIMESYS": "TDB",
+   "TIMEREF": null,
+   "TASSIGN": null,
+   "BJDREFI": "2457000",
+   "BJDREFF": "0.0",
+   "TIMEUNIT": null,
+   "TIMEPIXR": null,
+   "TELAPSE": "21.749677652043374",
+   "TSTART": "1468.2870040465343",
+   "TSTOP": "1490.0366816985777",
+   "TIMEDEL": null,
+   "CALIB": null,
+   "PROCVER": null,
+   "DATA_REL": null,
+   "TICVER": null,
+   "CROWDSAP": null,
+   "FLFRCSAP": null,
+   "BESTAP": null,
+   "DETMET": null,
+   "CAMERA": "1",
+   "CCD": "1",
+   "columns": [
+    "TIME",
+    "FLUX"
+   ],
+   "TIME_unit": "d"
+  },
+  "TARS_S32": {
+   "TIMESYS": "TDB",
+   "TIMEREF": null,
+   "TASSIGN": null,
+   "BJDREFI": "2457000",
+   "BJDREFF": "0.0",
+   "TIMEUNIT": null,
+   "TIMEPIXR": null,
+   "TELAPSE": "25.98633076801252",
+   "TSTART": "2174.2447400531246",
+   "TSTOP": "2200.231070821137",
+   "TIMEDEL": null,
+   "CALIB": null,
+   "PROCVER": null,
+   "DATA_REL": null,
+   "TICVER": null,
+   "CROWDSAP": null,
+   "FLFRCSAP": null,
+   "BESTAP": null,
+   "DETMET": null,
+   "CAMERA": "1",
+   "CCD": "2",
+   "columns": [
+    "TIME",
+    "FLUX"
+   ],
+   "TIME_unit": "d"
+  }
+ },
+ "compare": {
+  "S6": {
+   "tesscut": {
+    "n": 993,
+    "timecorr_applied_s": [
+     425.11384785175323,
+     452.7086690068245
+    ],
+    "target_minus_applied_corr_s": {
+     "min": -19.28632147809187,
+     "max": -2.682691787575184,
+     "median": -11.775865355681415
+    }
+   },
+   "products": {
+    "TESS-SPOC_S6": {
+     "n_matched": 993,
+     "product_minus_tesscut_s": {
+      "median": -11.07622234048904,
+      "std": 5.270717572643207,
+      "min": -19.380019664095016,
+      "max": -1.5897318917268422
+     },
+     "expected_if_target_specific_s": -11.775865355681415,
+     "residual_s": {
+      "median": 0.9921227997284401,
+      "p01": -0.1268075410768946,
+      "p99": 1.2426896414357615
+     },
+     "residual_by_quarter_s": [
+      1.1778791036224896,
+      0.4279214599085881,
+      1.1900566867787115,
+      0.7648744249610093
+     ]
+    },
+    "QLP_S6": {
+     "n_matched": 993,
+     "product_minus_tesscut_s": {
+      "median": -7.370319533947622,
+      "std": 5.1794764298017775,
+      "min": -15.531353899132228,
+      "max": 1.949880884058075
+     },
+     "expected_if_target_specific_s": -11.775865355681415,
+     "residual_s": {
+      "median": 4.674488902115211,
+      "p01": 3.538591995384442,
+      "p99": 5.0025840279170835
+     },
+     "residual_by_quarter_s": [
+      4.749736470311847,
+      4.09241807859145,
+      4.937585830086585,
+      4.578002662340724
+     ]
+    },
+    "eleanor_S6": {
+     "n_matched": 993,
+     "product_minus_tesscut_s": {
+      "median": -11.77808445354458,
+      "std": 5.191947828567547,
+      "min": -19.301214719598647,
+      "max": -2.6812545911525376
+     },
+     "expected_if_target_specific_s": -11.775865355681415,
+     "residual_s": {
+      "median": -0.0029655996690856057,
+      "p01": -0.017074732042783296,
+      "p99": 0.010919806045985185
+     },
+     "residual_by_quarter_s": [
+      -0.0015303896865024313,
+      -0.001257535492388051,
+      -0.003931710476427597,
+      -0.00478968432855531
+     ]
+    },
+    "TASOC_S6": {
+     "n_matched": 993,
+     "product_minus_tesscut_s": {
+      "median": -9.348150856385473,
+      "std": 5.179474718148276,
+      "min": -17.5092542936909,
+      "max": -0.027995936397928745
+     },
+     "expected_if_target_specific_s": -11.775865355681415,
+     "residual_s": {
+      "median": 2.696673256455636,
+      "p01": 1.5607291111521333,
+      "p99": 3.024771409958095
+     },
+     "residual_by_quarter_s": [
+      2.771927877237987,
+      2.1146118920405717,
+      2.959779358681965,
+      2.600214775187043
+     ]
+    },
+    "TARS_S6": {
+     "n_matched": 959,
+     "product_minus_tesscut_s": {
+      "median": 0.0,
+      "std": 7.368440894300948e-09,
+      "min": -1.964508555829525e-08,
+      "max": 1.964508555829525e-08
+     },
+     "expected_if_target_specific_s": -12.108491247141476,
+     "residual_s": {
+      "median": 12.108491247141476,
+      "p01": 2.90178718833532,
+      "p99": 19.217811342809373
+     },
+     "residual_by_quarter_s": [
+      4.962433997392157,
+      8.26772909724338,
+      14.628186751485533,
+      18.220830262227928
+     ]
+    }
+   }
+  },
+  "S32": {
+   "tesscut": {
+    "n": 3600,
+    "timecorr_applied_s": [
+     426.95020884275436,
+     452.03307420015335
+    ],
+    "target_minus_applied_corr_s": {
+     "min": -6.891934309331981,
+     "max": 0.5787044782185502,
+     "median": -3.2825160821882653
+    }
+   },
+   "products": {
+    "TESS-SPOC_S32": {
+     "n_matched": 3600,
+     "product_minus_tesscut_s": {
+      "median": -2.873913159419317,
+      "std": 1.9867167685007738,
+      "min": -6.27821985835908,
+      "max": 0.45769214630126953
+     },
+     "expected_if_target_specific_s": -3.2825160821882653,
+     "residual_s": {
+      "median": 1.0412972722655665,
+      "p01": -0.11553863560601874,
+      "p99": 1.3446265523342154
+     },
+     "residual_by_quarter_s": [
+      1.2519481213807082,
+      0.7059678335425064,
+      1.1718226701341927,
+      0.9134634685615276
+     ]
+    },
+    "QLP_S32": {
+     "n_matched": 3600,
+     "product_minus_tesscut_s": {
+      "median": -0.9115808075875975,
+      "std": 1.9868504831540736,
+      "min": -4.317678391817026,
+      "max": 2.414415354724042
+     },
+     "expected_if_target_specific_s": -3.2825160821882653,
+     "residual_s": {
+      "median": 2.9991490625292823,
+      "p01": 1.8411585071834626,
+      "p99": 3.30350595486663
+     },
+     "residual_by_quarter_s": [
+      3.209916199585139,
+      2.661112775436611,
+      3.131626326197934,
+      2.8709933041973237
+     ]
+    },
+    "TARS_S32": {
+     "n_matched": 3459,
+     "product_minus_tesscut_s": {
+      "median": 0.0,
+      "std": 1.2880365147846149e-08,
+      "min": -3.92901711165905e-08,
+      "max": 3.92901711165905e-08
+     },
+     "expected_if_target_specific_s": -3.273973416994369,
+     "residual_s": {
+      "median": 3.273973416994369,
+      "p01": -0.42023759553105233,
+      "p99": 6.891166570820848
+     },
+     "residual_by_quarter_s": [
+      6.770060799781846,
+      4.778764727735537,
+      3.1740947144861393,
+      1.2142741506104477
+     ]
+    }
+   }
+  },
+  "S98": {
+   "tesscut": {
+    "n": 24162,
+    "timecorr_applied_s": [
+     362.87934333086014,
+     445.049849152565
+    ],
+    "target_minus_applied_corr_s": {
+     "min": -9.073507557423602,
+     "max": 9.877903380740097,
+     "median": 0.4865123686801323
+    }
+   },
+   "products": {
+    "QLP_S98": {
+     "n_matched": 24162,
+     "product_minus_tesscut_s": {
+      "median": 2.5854337414784823,
+      "std": 5.520355547911952,
+      "min": -6.8343935257871635,
+      "max": 11.908977733401116
+     },
+     "expected_if_target_specific_s": 0.4865123686801323,
+     "residual_s": {
+      "median": 1.6336811051108557,
+      "p01": 1.116337800028992,
+      "p99": 2.4735236017837114
+     },
+     "residual_by_quarter_s": [
+      1.6690471928759747,
+      1.6388211179850707,
+      1.6272598278844128,
+      1.6002097468088614
+     ]
+    }
+   }
+  },
+  "S32_2min_vs_tesscut": {
+   "min_abs_offset_s": 0.0007242357241921127,
+   "note": "2-min grid vs 10-min FFI grid; offsets are k*120 s + const"
+  }
+ }
+}

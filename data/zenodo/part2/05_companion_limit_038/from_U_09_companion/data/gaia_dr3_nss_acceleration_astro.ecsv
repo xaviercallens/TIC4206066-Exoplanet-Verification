@@ -1,0 +1,180 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - name: solution_id
+#   datatype: int64
+#   description: Solution Identifier
+#   meta: !!omap
+#   - {ucd: meta.version}
+# - name: source_id
+#   datatype: int64
+#   description: Source Identifier
+#   meta: !!omap
+#   - {ucd: meta.id;meta.main}
+# - name: nss_solution_type
+#   datatype: string
+#   description: NSS model adopted
+#   meta: !!omap
+#   - {ucd: meta.record}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: '*'}
+#   subtype: json
+# - name: ra
+#   unit: deg
+#   datatype: float64
+#   description: Right ascension
+#   meta: !!omap
+#   - {ucd: pos.eq.ra;meta.main}
+#   - {utype: 'stc:AstroCoords.Position3D.Value3.C1'}
+# - name: ra_error
+#   unit: mas
+#   datatype: float32
+#   description: Standard error of right ascension
+#   meta: !!omap
+#   - {ucd: stat.error;pos.eq.ra}
+#   - {utype: 'stc:AstroCoords.Position3D.Error3.C1'}
+# - name: dec
+#   unit: deg
+#   datatype: float64
+#   description: Declination
+#   meta: !!omap
+#   - {ucd: pos.eq.dec;meta.main}
+#   - {utype: 'stc:AstroCoords.Position3D.Value3.C2'}
+# - name: dec_error
+#   unit: mas
+#   datatype: float32
+#   description: Standard error of declination
+#   meta: !!omap
+#   - {ucd: stat.error;pos.eq.dec}
+#   - {utype: 'stc:AstroCoords.Position3D.Error3.C2'}
+# - name: parallax
+#   unit: mas
+#   datatype: float64
+#   description: Parallax
+#   meta: !!omap
+#   - {ucd: pos.parallax}
+# - name: parallax_error
+#   unit: mas
+#   datatype: float32
+#   description: Standard error of parallax
+#   meta: !!omap
+#   - {ucd: stat.error;pos.parallax}
+# - name: pmra
+#   unit: mas / yr
+#   datatype: float64
+#   description: Proper motion in right ascension direction
+#   meta: !!omap
+#   - {ucd: pos.pm;pos.eq.ra}
+#   - {utype: 'stc:AstroCoords.Velocity3D.Value3.C1'}
+# - name: pmra_error
+#   unit: mas / yr
+#   datatype: float32
+#   description: Standard error of proper motion in right ascension direction
+#   meta: !!omap
+#   - {ucd: stat.error;pos.pm;pos.eq.ra}
+#   - {utype: 'stc:AstroCoords.Velocity3D.Error3.C1'}
+# - name: pmdec
+#   unit: mas / yr
+#   datatype: float64
+#   description: Proper motion in declination direction
+#   meta: !!omap
+#   - {ucd: pos.pm;pos.eq.dec}
+#   - {utype: 'stc:AstroCoords.Velocity3D.Value3.C2'}
+# - name: pmdec_error
+#   unit: mas / yr
+#   datatype: float32
+#   description: Standard error of proper motion in declination direction
+#   meta: !!omap
+#   - {ucd: stat.error;pos.pm;pos.eq.dec}
+#   - {utype: 'stc:AstroCoords.Velocity3D.Error3.C2'}
+# - name: accel_ra
+#   unit: mas / yr2
+#   datatype: float64
+#   description: Acceleration in RA
+#   meta: !!omap
+#   - {ucd: phys.acceleration}
+# - name: accel_ra_error
+#   unit: mas / yr2
+#   datatype: float32
+#   description: Standard error of Acceleration in RA
+#   meta: !!omap
+#   - {ucd: stat.error;phys.acceleration}
+# - name: accel_dec
+#   unit: mas / yr2
+#   datatype: float64
+#   description: Acceleration in DEC
+#   meta: !!omap
+#   - {ucd: phys.acceleration}
+# - name: accel_dec_error
+#   unit: mas / yr2
+#   datatype: float32
+#   description: Standard error of Acceleration in DEC
+#   meta: !!omap
+#   - {ucd: stat.error;phys.acceleration}
+# - name: deriv_accel_ra
+#   unit: mas / yr3
+#   datatype: float64
+#   description: Time derivative of the accel. in RA
+#   meta: !!omap
+#   - {ucd: phys.acceleration}
+# - name: deriv_accel_ra_error
+#   unit: mas / yr3
+#   datatype: float32
+#   description: Standard error of Time derivative of the acceleration in RA
+#   meta: !!omap
+#   - {ucd: stat.error;phys.acceleration}
+# - name: deriv_accel_dec
+#   unit: mas / yr3
+#   datatype: float64
+#   description: Time derivative of the accel. in DEC
+#   meta: !!omap
+#   - {ucd: phys.acceleration}
+# - name: deriv_accel_dec_error
+#   unit: mas / yr3
+#   datatype: float32
+#   description: Standard error of Time derivative of the acceleration in DEC
+#   meta: !!omap
+#   - {ucd: stat.error;phys.acceleration}
+# - name: astrometric_n_obs_al
+#   datatype: int32
+#   description: Total astrometric CCD observations in AL considered
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - name: astrometric_n_good_obs_al
+#   datatype: int32
+#   description: Total astrometric CCD observations in AL actually used
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - name: bit_index
+#   datatype: int64
+#   description: Boolean mask for the fields above in the corrVec matrix
+#   meta: !!omap
+#   - {ucd: meta.code.status}
+# - name: corr_vec
+#   datatype: string
+#   description: Vector form of the upper triangle of the correlation matrix
+#   meta: !!omap
+#   - {ucd: stat.correlation}
+#   subtype: json
+# - name: obj_func
+#   datatype: float32
+#   description: Value of the objective function at the solution
+#   meta: !!omap
+#   - {ucd: stat.fit.param}
+# - name: goodness_of_fit
+#   datatype: float32
+#   description: Goodness of fit in the Hipparcos sense
+#   meta: !!omap
+#   - {ucd: stat.fit.goodness}
+# - name: significance
+#   datatype: float32
+#   description: The significance of the solution (i.e. how worth keeping a model is)
+#   meta: !!omap
+#   - {ucd: stat.fit.param}
+# - name: flags
+#   datatype: int64
+#   description: Quality flag for the achieved NSS solution
+#   meta: !!omap
+#   - {ucd: meta.code.qual}
+# schema: astropy-2.0
+solution_id source_id nss_solution_type ra ra_error dec dec_error parallax parallax_error pmra pmra_error pmdec pmdec_error accel_ra accel_ra_error accel_dec accel_dec_error deriv_accel_ra deriv_accel_ra_error deriv_accel_dec deriv_accel_dec_error astrometric_n_obs_al astrometric_n_good_obs_al bit_index corr_vec obj_func goodness_of_fit significance flags

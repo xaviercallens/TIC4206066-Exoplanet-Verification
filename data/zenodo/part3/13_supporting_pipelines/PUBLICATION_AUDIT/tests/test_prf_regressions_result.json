@@ -1,0 +1,71 @@
+{
+ "R1": {
+  "max_centroid_tracking_error_TESS_PRF_px": 0.027830108311165003,
+  "max_error_unreversed_interleave_px": 0.888686561501969,
+  "passed": true
+ },
+ "R2": {
+  "n_targets": 1,
+  "n_nontarget_within_2arcsec": 0,
+  "passed": true
+ },
+ "R3": {
+  "signature": "(cube, bkg, t, tc, dur, depth, x0, y0, radius=3.0)",
+  "has_prf_argument": false,
+  "max_abs_diff": 0.0,
+  "passed": true
+ },
+ "R4": {
+  "examples": [
+   {
+    "source_id": "3220388296975929984",
+    "sep": 11.075017255327092,
+    "req_aperture": 1.2600507034832833,
+    "req_full_inclusion": 1.2199505548858731,
+    "frac_target_in_ap": 0.8579812087933603,
+    "frac_neighbour_in_ap": 0.8306657749078866
+   },
+   {
+    "source_id": "3220388296975320448",
+    "sep": 43.48072880087099,
+    "req_aperture": 1.3329770738470308,
+    "req_full_inclusion": 0.46931137530808303,
+    "frac_target_in_ap": 0.8579812087933603,
+    "frac_neighbour_in_ap": 0.3018673704618524
+   },
+   {
+    "source_id": "3220385277614918912",
+    "sep": 50.311070518918434,
+    "req_aperture": 1.9875997686033986,
+    "req_full_inclusion": 0.41630983797779475,
+    "frac_target_in_ap": 0.8579812087933603,
+    "frac_neighbour_in_ap": 0.17953654519677217
+   },
+   {
+    "source_id": "3220385273320363520",
+    "sep": 50.92653470966575,
+    "req_aperture": 2.623087552014932,
+    "req_full_inclusion": 0.5357806393626644,
+    "frac_target_in_ap": 0.8579812087933603,
+    "frac_neighbour_in_ap": 0.1751174063383363
+   },
+   {
+    "source_id": "3220388262615571968",
+    "sep": 54.042900104684115,
+    "req_aperture": 2.277965413534415,
+    "req_full_inclusion": 0.4416307496022178,
+    "frac_target_in_ap": 0.8579812087933603,
+    "frac_neighbour_in_ap": 0.16618557258011799
+   },
+   {
+    "source_id": "3220385243255181952",
+    "sep": 55.97891391067359,
+    "req_aperture": 1.3818899449028754,
+    "req_full_inclusion": 0.22792341516265535,
+    "frac_target_in_ap": 0.8579812087933603,
+    "frac_neighbour_in_ap": 0.14125266900135744
+   }
+  ],
+  "passed": true
+ }
+}

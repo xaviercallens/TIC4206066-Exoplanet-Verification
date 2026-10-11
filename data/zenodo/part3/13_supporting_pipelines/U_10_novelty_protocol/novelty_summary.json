@@ -1,0 +1,372 @@
+{
+ "exofop_toi": {
+  "n_rows": 8148,
+  "tic_rows": [],
+  "within_2arcmin": [],
+  "nearest": {
+   "sep_arcmin": 43.03,
+   "id": "2451.01",
+   "tic": 4294779
+  },
+  "n_period_only_matches_0p1pct_anywhere": 34,
+  "period_matches_within_1deg": []
+ },
+ "exofop_ctoi": {
+  "n_rows": 5137,
+  "tic_rows": [],
+  "within_2arcmin": [],
+  "nearest": {
+   "sep_arcmin": 120.06,
+   "id": "449197624.01",
+   "tic": 449197624
+  },
+  "n_period_only_matches_0p1pct_anywhere": 22,
+  "period_matches_within_1deg": []
+ },
+ "exofop_target_json": {
+  "tois": 0,
+  "ctois": 0,
+  "planet_parameters": 0,
+  "imaging": 0,
+  "spectroscopy": 0,
+  "time_series": 0,
+  "files": 0
+ },
+ "exomast_tces": "{\"TCE\":[]}",
+ "spoc_tce_bulk": {
+  "tess2018349182737-s0006-s0006_dvr-tcestats.csv": {
+   "rows": 1114,
+   "target_rows": 0,
+   "tic_within_2arcmin_rows": 0
+  },
+  "tess2020325171311-s0032-s0032_dvr-tcestats.csv": {
+   "rows": 1537,
+   "target_rows": 0,
+   "tic_within_2arcmin_rows": 0
+  },
+  "tess2025312234920-s0098-s0098_dvr-tcestats.csv": {
+   "rows": 1441,
+   "target_rows": 0,
+   "tic_within_2arcmin_rows": 0
+  },
+  "tess2018206190142-s0001-s0036_dvr-tcestats.csv": {
+   "rows": 12466,
+   "target_rows": 0,
+   "tic_within_2arcmin_rows": 0
+  },
+  "tess2018206190142-s0001-s0039_dvr-tcestats.csv": {
+   "rows": 9698,
+   "target_rows": 0,
+   "tic_within_2arcmin_rows": 0
+  },
+  "tess2018206190142-s0001-s0069_dvr-tcestats.csv": {
+   "rows": 11402,
+   "target_rows": 0,
+   "tic_within_2arcmin_rows": 0
+  },
+  "tess2018206190142-s0001-s0096_dvr-tcestats.csv": {
+   "rows": 20207,
+   "target_rows": 0,
+   "tic_within_2arcmin_rows": 0
+  }
+ },
+ "n_tic_within_2arcmin": 49,
+ "nasa_exoplanet_archive": [
+  [
+   "select toi,tid,ra,dec,pl_orbper,tfopwg_disp from toi where tid=4206066",
+   0
+  ],
+  [
+   "select toi,tid,ra,dec,pl_orbper,tfopwg_disp from toi where ra between 80.82648 and 80.89317 and dec between -1.36030 and -1.29363",
+   0
+  ],
+  [
+   "select pl_name,hostname,tic_id,gaia_dr3_id,ra,dec,pl_orbper,disc_facility from ps where tic_id='TIC 4206066'",
+   0
+  ],
+  [
+   "select pl_name,hostname,tic_id,ra,dec,pl_orbper from ps where ra between 80.82648 and 80.89317 and dec between -1.36030 and -1.29363",
+   0
+  ],
+  [
+   "select pl_name,hostname,tic_id,gaia_dr3_id,ra,dec,pl_orbper from pscomppars where tic_id='TIC 4206066'",
+   0
+  ],
+  [
+   "select pl_name,hostname,tic_id,ra,dec,pl_orbper from pscomppars where ra between 80.82648 and 80.89317 and dec between -1.36030 and -1.29363",
+   0
+  ],
+  [
+   "select pl_name,hostname,gaia_dr3_id from pscomppars where gaia_dr3_id='Gaia DR3 3220388198192519424'",
+   0
+  ],
+  [
+   "select toi,tid,pl_orbper from toi where tid=150428135",
+   4
+  ]
+ ],
+ "simbad": [
+  [
+   "SELECT b.main_id, b.otype, b.ra, b.dec, b.oid FROM ident AS i JOIN basic AS b ON i.oidref=",
+   1
+  ],
+  [
+   "SELECT b.main_id, b.otype, b.ra, b.dec, b.oid FROM ident AS i JOIN basic AS b ON i.oidref=",
+   1
+  ],
+  [
+   "SELECT b.main_id, b.otype, b.ra, b.dec, b.oid FROM ident AS i JOIN basic AS b ON i.oidref=",
+   1
+  ],
+  [
+   "SELECT i.id FROM ident AS i JOIN basic AS b ON i.oidref=b.oid WHERE b.main_id='StKM 1-561'",
+   8
+  ],
+  [
+   "SELECT o.otype FROM otypes AS o JOIN basic AS b ON o.oidref=b.oid WHERE b.main_id='StKM 1-",
+   3
+  ],
+  [
+   "SELECT r.bibcode, r.\"year\", r.title FROM has_ref AS h JOIN ref AS r ON h.oidbibref=r.oidbi",
+   10
+  ],
+  [
+   "SELECT main_id, otype, ra, dec, DISTANCE(POINT('ICRS',ra,dec),POINT('ICRS',80.85982665567,",
+   1
+  ]
+ ],
+ "vizier": {
+  "n_tables": 166,
+  "period_bearing": [
+   [
+    "J/ApJS/276/57/table5",
+    "TESS periodic variable star catalog",
+    [
+     [
+      "8.183827"
+     ]
+    ]
+   ],
+   [
+    "J/ApJS/281/52/table1",
+    "Star parameters of TESS objects",
+    [
+     [
+      "7.97639"
+     ]
+    ]
+   ],
+   [
+    "J/A+A/709/A180/table1",
+    "Successful period determinations",
+    [
+     [
+      "8.11056"
+     ],
+     [
+      "--"
+     ]
+    ]
+   ],
+   [
+    "J/MNRAS/522/29/table2",
+    "Results for all TESS input targets",
+    [
+     [
+      "4.570882"
+     ]
+    ]
+   ]
+  ]
+ },
+ "t16": [
+  {
+   "file": "candidate_table.tab",
+   "n_rows": 11143,
+   "target_rows": 0,
+   "within_2arcmin": [],
+   "nearest_arcmin": 30.2
+  },
+  {
+   "file": "singleTransit_candidate_table.tab",
+   "n_rows": 411,
+   "target_rows": 0,
+   "within_2arcmin": [],
+   "nearest_arcmin": 1.6666666666666665e+97
+  }
+ ],
+ "t16_version": [
+  3,
+  0,
+  "2026-03-17T13:42:37Z"
+ ],
+ "raven": [
+  {
+   "file": "nsfp09_table.csv",
+   "n_rows": 14815,
+   "target_rows": 0,
+   "within_2arcmin": [],
+   "nearest_deg": 1.95
+  },
+  {
+   "file": "vet_table.csv",
+   "n_rows": 2170,
+   "target_rows": 0,
+   "within_2arcmin": [],
+   "nearest_deg": 3.11
+  },
+  {
+   "file": "val_table.csv",
+   "n_rows": 143,
+   "target_rows": 0,
+   "within_2arcmin": [],
+   "nearest_deg": 3.11
+  },
+  {
+   "file": "val_rp8_table.csv",
+   "n_rows": 207,
+   "target_rows": 0,
+   "within_2arcmin": [],
+   "nearest_deg": 6.84
+  }
+ ],
+ "raven_record": {
+  "title": "Online material for article Automatic search for transiting planets in TESS-SPOC FFIs with RAVEN: over 100 newly validated planets and over 2000 vetted candidates",
+  "publication_date": "2026-03-25",
+  "version": null
+ },
+ "arxiv_api": [
+  [
+   "all:\"TIC 4206066\"",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"4206066\"",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"StKM 1-561\"",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"3220388198192519424\"",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"TYC 4753-1591-1\"",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"J05232636-0119380\"",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"3.1828\" AND all:TESS",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"3.183\" AND all:TESS",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"3.18279\" AND all:TESS",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"11.133\" AND all:TESS",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"11.13\" AND all:TESS",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"11.1327\" AND all:TESS",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"5.566\" AND all:TESS",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"22.27\" AND all:TESS",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"22.265\" AND all:TESS",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"1.591\" AND all:TESS",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"6.366\" AND all:TESS",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"1.061\" AND all:TESS",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"9.548\" AND all:TESS",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"3.711\" AND all:TESS",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"33.40\" AND all:TESS",
+   200,
+   0,
+   []
+  ],
+  [
+   "all:\"TOI-2768\"",
+   200,
+   0,
+   []
+  ]
+ ]
+}

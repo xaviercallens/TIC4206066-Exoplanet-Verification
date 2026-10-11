@@ -1,0 +1,32 @@
+/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/lib/python3.11/site-packages/triceratops/priors.py:779: RuntimeWarning: divide by zero encountered in log
+  lnprior_bound = np.log(f_act)
+{
+ "recovered_scale_median": 1.6940809017478464,
+ "check_p_recomputed_vs_molusc_at_obs": 3.3306690738754696e-16,
+ "FPP": {
+  "A": {
+   "default": 0.036527315965964396,
+   "RUWE_obs1.21+contrast": 0.003777045773564495,
+   "RUWE_obs1.21+contrast+overlum0.38<0.2\"": 0.0028566683646178564,
+   "RUWE_obs1.40+contrast": 0.004151786396942072,
+   "RUWE_obs1.40+contrast+overlum0.38<0.2\"": 0.0031554192638969447,
+   "RUWE_obs2.00+contrast": 0.005230681302402739,
+   "RUWE_obs2.00+contrast+overlum0.38<0.2\"": 0.004016772418049642,
+   "RUWE_obs3.00+contrast": 0.006676348122366955,
+   "RUWE_obs3.00+contrast+overlum0.38<0.2\"": 0.005154852877746692,
+   "contrast_only": 0.028555764053573608
+  },
+  "B": {
+   "default": 0.20191680582775628,
+   "RUWE_obs1.21+contrast": 0.08060519358045738,
+   "RUWE_obs1.21+contrast+overlum0.38<0.2\"": 0.07869312479831779,
+   "RUWE_obs1.40+contrast": 0.0865906792960196,
+   "RUWE_obs1.40+contrast+overlum0.38<0.2\"": 0.08454841177871485,
+   "RUWE_obs2.00+contrast": 0.10259996686097114,
+   "RUWE_obs2.00+contrast+overlum0.38<0.2\"": 0.10020413347298952,
+   "RUWE_obs3.00+contrast": 0.12077307280795611,
+   "RUWE_obs3.00+contrast+overlum0.38<0.2\"": 0.11786427329234378,
+   "contrast_only": 0.17899063297721138
+  }
+ }
+}

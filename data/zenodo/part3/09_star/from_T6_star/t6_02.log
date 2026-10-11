@@ -1,0 +1,83 @@
+In preparation for Gaia DR4, the Gaia archive is in evolution. Unfortunately, it may be unstable at times and particular types of queries may time out. Please consider registering for a user account (https://www.cosmos.esa.int/web/gaia-users/register). For questions or advice, please contact the Gaia helpdesk (https://www.cosmos.esa.int/web/gaia/gaia-helpdesk).
+{
+ "target_ruwe": 1.2142985,
+ "samples": [
+  {
+   "sample": "audit s14: G10-11, BP-RP 1.60-1.90, plx>15, 5p only (stored, target not removed)",
+   "n": 828,
+   "median": 1.11639545,
+   "pct_strictly_below": 63.76811594202898,
+   "pct_le": 63.888888888888886,
+   "frac_gt_1p4": 0.2644927536231884,
+   "pct_among_ruwe_lt_1p4": 86.69950738916256,
+   "n_lt_1p4": 609
+  },
+  {
+   "sample": "U v4: G10.3-10.7, BP-RP 1.6-1.9, plx>15 (stored, target not removed)",
+   "n": 383,
+   "median": 1.1380475,
+   "pct_strictly_below": 60.574412532637076,
+   "pct_le": 60.835509138381205,
+   "frac_gt_1p4": 0.3133159268929504,
+   "pct_among_ruwe_lt_1p4": 88.212927756654,
+   "n_lt_1p4": 263
+  },
+  {
+   "sample": "fresh: G10-11, BP-RP 1.60-1.90, plx>15, all solutions, target removed",
+   "n": 988,
+   "median": 1.1287463903427124,
+   "pct_strictly_below": 61.53846153846154,
+   "pct_le": 61.53846153846154,
+   "frac_gt_1p4": 0.28846153846153844,
+   "pct_among_ruwe_lt_1p4": 86.48648648648648,
+   "n_lt_1p4": 703
+  },
+  {
+   "sample": "fresh: as above, 5p only",
+   "n": 827,
+   "median": 1.1160626411437988,
+   "pct_strictly_below": 63.845223700120926,
+   "pct_le": 63.845223700120926,
+   "frac_gt_1p4": 0.26481257557436516,
+   "pct_among_ruwe_lt_1p4": 86.8421052631579,
+   "n_lt_1p4": 608
+  },
+  {
+   "sample": "fresh: apparently single (non_single_star=0, ipd_frac_multi_peak=0, not duplicated)",
+   "n": 626,
+   "median": 1.077060580253601,
+   "pct_strictly_below": 74.4408945686901,
+   "pct_le": 74.4408945686901,
+   "frac_gt_1p4": 0.14536741214057508,
+   "pct_among_ruwe_lt_1p4": 87.10280373831776,
+   "n_lt_1p4": 535
+  },
+  {
+   "sample": "fresh: narrow box G 10.31-10.71, BP-RP 1.64-1.84",
+   "n": 254,
+   "median": 1.1479397416114807,
+   "pct_strictly_below": 60.23622047244095,
+   "pct_le": 60.23622047244095,
+   "frac_gt_1p4": 0.33070866141732286,
+   "pct_among_ruwe_lt_1p4": 90.0,
+   "n_lt_1p4": 170
+  }
+ ],
+ "audit_contains_target_value": true,
+ "U_contains_target_value": true,
+ "fresh_query": {
+  "url": "https://gea.esac.esa.int/tap-server/tap",
+  "adql": "SELECT source_id, phot_g_mean_mag, bp_rp, parallax, ruwe, astrometric_params_solved, non_single_star, ipd_frac_multi_peak, ipd_gof_harmonic_amplitude, duplicated_source, rv_renormalised_gof, rv_chisq_pvalue, rv_nb_transits FROM gaiadr3.gaia_source WHERE phot_g_mean_mag BETWEEN 10.0 AND 11.0 AND bp_rp BETWEEN 1.60 AND 1.90 AND parallax > 15 AND ruwe IS NOT NULL",
+  "nrows": 989,
+  "sha256": "eff81f617b44745b6e1374d4b3763df366f29882b473d46dc56cfed751d528d4",
+  "utc": "2026-09-25T15:32:42+00:00"
+ },
+ "fresh_target_found": true,
+ "rv_context": {
+  "n": 772,
+  "pct_gof_below_2p9986": 84.19689119170984,
+  "frac_p_lt_0p01": 0.22409326424870465,
+  "frac_katz_variable": 0.13860103626943004,
+  "pct_p_below_target": 15.155440414507773
+ }
+}

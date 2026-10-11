@@ -1,0 +1,5 @@
+pipe S6+S32            obs 10.38; null(P,T0 random) median 3.23 p99 7.32 p99.9 10.68 max 10.81; N>=obs 24/20000 FAP_emp 1.2e-03; distinct windows 18411; single-pos S/N sd 1.38 (>3: 0.0177); K 27.2; Gaussian FAP 7.7e-13
+pipe S6 only           obs 7.56; null(P,T0 random) median 2.52 p99 3.98 p99.9 4.98 max 5.26; N>=obs 0/18652 FAP_emp 5.4e-05; distinct windows 2623; single-pos S/N sd 1.02 (>3: 0.0022); K 27.2; Gaussian FAP 1.7e-12
+pipe S32 only          obs 7.98; null(P,T0 random) median 3.54 p99 10.79 p99.9 10.79 max 10.97; N>=obs 651/20000 FAP_emp 3.3e-02; distinct windows 4008; single-pos S/N sd 1.67 (>3: 0.0331); K 19.7; Gaussian FAP 1.7e-05
+own S6+S32             obs 10.08; null(P,T0 random) median 3.04 p99 19.65 p99.9 23.48 max 28.50; N>=obs 2466/20000 FAP_emp 1.2e-01; distinct windows 18587; single-pos S/N sd 1.76 (>3: 0.0249); K 27.2; Gaussian FAP 1.4e-07
+own S6 only            obs 8.79; null(P,T0 random) median 2.60 p99 4.43 p99.9 4.74 max 4.81; N>=obs 0/18741 FAP_emp 5.3e-05; distinct windows 2629; single-pos S/N sd 1.21 (>3: 0.0044); K 27.2; Gaussian FAP 5.8e-12

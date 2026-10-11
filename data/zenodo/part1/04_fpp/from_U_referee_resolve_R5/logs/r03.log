@@ -1,0 +1,122 @@
+/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/lib/python3.11/site-packages/triceratops/priors.py:779: RuntimeWarning: divide by zero encountered in log
+  lnprior_bound = np.log(f_act)
+{
+ "molusc_all_file": "/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/r5_cache/r5_all.csv",
+ "n_generated": 1000000,
+ "n_survivors": 429363,
+ "f_comp_2p2": 0.14129542932514916,
+ "cells_min_count": 279,
+ "cells_median_count": 389.0,
+ "survival_M_gt_0.38_by_projected_sep": {
+  "0.1-0.2\"": {
+   "n": 23597,
+   "surv_all": 0.00021189134211976098,
+   "surv_ruwe": 0.00021189134211976098,
+   "surv_gaia": 1.0
+  },
+  "0.2-0.3\"": {
+   "n": 15238,
+   "surv_all": 0.0,
+   "surv_ruwe": 0.0,
+   "surv_gaia": 0.997178107363171
+  },
+  "0.3-0.5\"": {
+   "n": 20208,
+   "surv_all": 0.0,
+   "surv_ruwe": 0.0,
+   "surv_gaia": 0.9789192399049881
+  },
+  "0.5-0.7\"": {
+   "n": 13189,
+   "surv_all": 0.007278792933505193,
+   "surv_ruwe": 0.007278792933505193,
+   "surv_gaia": 0.9415421942527864
+  },
+  "0.7-1.0\"": {
+   "n": 13600,
+   "surv_all": 0.1200735294117647,
+   "surv_ruwe": 0.18352941176470589,
+   "surv_gaia": 0.6777941176470588
+  },
+  "1.0-1.5\"": {
+   "n": 13835,
+   "surv_all": 0.19342247921937117,
+   "surv_ruwe": 0.6369353089989158,
+   "surv_gaia": 0.3081315504156126
+  },
+  "1.5-2.2\"": {
+   "n": 9239,
+   "surv_all": 0.2205866435761446,
+   "surv_ruwe": 0.9100552007793051,
+   "surv_gaia": 0.24429050763069596
+  }
+ }
+}
+A runs=0.0364 default(binned prior)=0.0365 STP share M>0.38 after pessimistic constraint: 0.61
+   molusc_only(RUWE+Gaia)                       0.0038
+   molusc_RUWE_only                             0.0094
+   molusc_Gaia_contrast_only                    0.0286
+   Mlim0.38_blended<0.2"_+molusc                0.0028
+   Mlim0.38_blended<0.2"_no_molusc              0.0284
+   Mlim0.38_blended<0.3"_+molusc                0.0028
+   Mlim0.38_blended<0.3"_no_molusc              0.0246
+   Mlim0.38_blended<0.5"_+molusc                0.0028
+   Mlim0.38_blended<0.5"_no_molusc              0.0194
+   Mlim0.38_blended<1.0"_+molusc                0.0026
+   Mlim0.38_blended<1.0"_no_molusc              0.0120
+   Mlim0.38_blended<2.2"_+molusc                0.0013
+   Mlim0.38_blended<2.2"_no_molusc              0.0053
+   Mlim0.45_blended<0.2"_+molusc                0.0030
+   Mlim0.45_blended<0.2"_no_molusc              0.0292
+   Mlim0.45_blended<0.3"_+molusc                0.0030
+   Mlim0.45_blended<0.3"_no_molusc              0.0257
+   Mlim0.45_blended<0.5"_+molusc                0.0030
+   Mlim0.45_blended<0.5"_no_molusc              0.0211
+   Mlim0.45_blended<1.0"_+molusc                0.0028
+   Mlim0.45_blended<1.0"_no_molusc              0.0145
+   Mlim0.45_blended<2.2"_+molusc                0.0017
+   Mlim0.45_blended<2.2"_no_molusc              0.0086
+   Mlim0.54_blended<0.2"_+molusc                0.0032
+   Mlim0.54_blended<0.2"_no_molusc              0.0316
+   Mlim0.54_blended<0.3"_+molusc                0.0032
+   Mlim0.54_blended<0.3"_no_molusc              0.0293
+   Mlim0.54_blended<0.5"_+molusc                0.0032
+   Mlim0.54_blended<0.5"_no_molusc              0.0262
+   Mlim0.54_blended<1.0"_+molusc                0.0032
+   Mlim0.54_blended<1.0"_no_molusc              0.0218
+   Mlim0.54_blended<2.2"_+molusc                0.0025
+   Mlim0.54_blended<2.2"_no_molusc              0.0180
+B runs=0.2127 default(binned prior)=0.2019 STP share M>0.38 after pessimistic constraint: 0.06
+   molusc_only(RUWE+Gaia)                       0.0807
+   molusc_RUWE_only                             0.1093
+   molusc_Gaia_contrast_only                    0.1790
+   Mlim0.38_blended<0.2"_+molusc                0.0788
+   Mlim0.38_blended<0.2"_no_molusc              0.1914
+   Mlim0.38_blended<0.3"_+molusc                0.0788
+   Mlim0.38_blended<0.3"_no_molusc              0.1864
+   Mlim0.38_blended<0.5"_+molusc                0.0788
+   Mlim0.38_blended<0.5"_no_molusc              0.1795
+   Mlim0.38_blended<1.0"_+molusc                0.0777
+   Mlim0.38_blended<1.0"_no_molusc              0.1699
+   Mlim0.38_blended<2.2"_+molusc                0.0750
+   Mlim0.38_blended<2.2"_no_molusc              0.1609
+   Mlim0.45_blended<0.2"_+molusc                0.0798
+   Mlim0.45_blended<0.2"_no_molusc              0.1961
+   Mlim0.45_blended<0.3"_+molusc                0.0798
+   Mlim0.45_blended<0.3"_no_molusc              0.1934
+   Mlim0.45_blended<0.5"_+molusc                0.0798
+   Mlim0.45_blended<0.5"_no_molusc              0.1896
+   Mlim0.45_blended<1.0"_+molusc                0.0795
+   Mlim0.45_blended<1.0"_no_molusc              0.1844
+   Mlim0.45_blended<2.2"_+molusc                0.0782
+   Mlim0.45_blended<2.2"_no_molusc              0.1797
+   Mlim0.54_blended<0.2"_+molusc                0.0803
+   Mlim0.54_blended<0.2"_no_molusc              0.1993
+   Mlim0.54_blended<0.3"_+molusc                0.0803
+   Mlim0.54_blended<0.3"_no_molusc              0.1981
+   Mlim0.54_blended<0.5"_+molusc                0.0803
+   Mlim0.54_blended<0.5"_no_molusc              0.1965
+   Mlim0.54_blended<1.0"_+molusc                0.0803
+   Mlim0.54_blended<1.0"_no_molusc              0.1943
+   Mlim0.54_blended<2.2"_+molusc                0.0797
+   Mlim0.54_blended<2.2"_no_molusc              0.1923

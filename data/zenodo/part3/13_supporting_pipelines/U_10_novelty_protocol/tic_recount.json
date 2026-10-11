@@ -1,0 +1,13 @@
+{
+ "qlp_list_url": "https://archive.stsci.edu/hlsps/qlp/target_lists/s0098.csv",
+ "qlp_list_sha256": "b6c63e9afdee6903ec2fe77b0c3c60c01f6744dcea5ee10d438e169e956225dc",
+ "n_unique_tic_in_list": 628730,
+ "n_tic_rows_returned": 628730,
+ "n_missing_in_tic": 0,
+ "n_tmag_nan": 0,
+ "n_tmag_le_11p5": 126246,
+ "target_4206066_Tmag": 9.6817,
+ "n_batches": 126,
+ "n_batches_done": 126,
+ "finished_utc": "2026-09-25T11:47:28.130365Z"
+}

@@ -1,0 +1,52 @@
+{
+ "started_utc": "2026-09-25T06:29:58.829487+00:00",
+ "exofop_toi": {
+  "n_rows": 8149,
+  "tic_4206066_present": false,
+  "any_string_4206066": false
+ },
+ "exofop_ctoi": {
+  "n_rows": 5138,
+  "any_string_4206066": false
+ },
+ "exofop_target": {
+  "tois": [],
+  "ctois": [],
+  "n_files": 0,
+  "n_imaging": 0,
+  "n_spectroscopy": 0,
+  "n_tseries": 0,
+  "n_obsnotes": 0
+ },
+ "nasa_toi_by_tic_rows": 0,
+ "nasa_pscomppars_cone5arcmin_rows": "FETCH_FAILED RuntimeError(\"fetch failed https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select%20pl_name%2Chostname%2Cra%2Cdec%2Cpl_orbper%20from%20pscomppars%20where%20contains%28point%28%27icrs%27%2Cra%2Cdec%29%2Ccircle%28%27icrs%27%2C80.85983%2C-1.32696%2C0.0833%29%29%3D1&format=csv: <HTTPError 403: 'Forbidden'>\")",
+ "exomast_tces": "{\"TCE\":[]}",
+ "arxiv_tic": {
+  "n_entries": "FETCH_FAILED RuntimeError(\"fetch failed https://export.arxiv.org/api/query?search_query=all%3A%22TIC+4206066%22&max_resu"
+ },
+ "arxiv_stkm": {
+  "n_entries": "FETCH_FAILED RuntimeError(\"fetch failed https://export.arxiv.org/api/query?search_query=all%3A%22StKM+1-561%22&max_resul"
+ },
+ "arxiv_tyc": {
+  "n_entries": "FETCH_FAILED RuntimeError(\"fetch failed https://export.arxiv.org/api/query?search_query=all%3A%22TYC+4753-1591-1%22&max_"
+ },
+ "arxiv_gaia": {
+  "n_entries": "FETCH_FAILED RuntimeError(\"fetch failed https://export.arxiv.org/api/query?search_query=all%3A3220388198192519424&max_re"
+ },
+ "arxiv_2mass": {
+  "n_entries": "FETCH_FAILED RuntimeError(\"fetch failed https://export.arxiv.org/api/query?search_query=all%3AJ05232636-0119380&max_resu"
+ },
+ "simbad_refs": "FETCH_FAILED RuntimeError(\"fetch failed https://simbad.cds.unistra.fr/simbad/sim-tap/sync?request=doQuery&lang=adql&format=csv&query=SELECT+b.bibcode%2C+b.year+FROM+ident+AS+i+JOIN+has_ref+AS+h+ON+h.o",
+ "tess_2min_S110": {
+  "available": false,
+  "tic_4206066_listed": null,
+  "head": "FETCH_FAILED RuntimeError(\"fetch failed https://heasarc.gsfc.nasa.gov/docs/tess/data/target_lists/sector110_targets.csv:"
+ },
+ "sealed_package": {
+  "n_source_groups": 36,
+  "n_matches_examined": 13,
+  "identifiers_note": "TIC, StKM 1-561, Gaia DR2/DR3, TYC (both spellings), 2MASS, PM J/PM I, UCAC4, APASS, WISE, LAMOST, Sp0523-0119",
+  "harmonics_note": "P/3, P/2, P, 2P, 3P for both periods (1% near star, 0.1% catalogue-wide)"
+ },
+ "finished_utc": "2026-09-25T06:34:02.616924+00:00"
+}

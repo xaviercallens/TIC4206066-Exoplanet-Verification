@@ -1,0 +1,24 @@
+A pipe: primary 471 ppm, err white 23 emp 32 -> S/N emp 14.7 (white 20.2); random >= primary: 0.0000
+    secondary(0.5): -20 ± 32 ppm (z=-0.63), 3sigma upper 96
+    phase scan: max|z| 2.25 at 0.875 (-72 ppm); ~37 independent phases
+    P/3 phases: [('0.3333333333333333', -41, np.float64(-1.26)), ('0.6666666666666666', -10, np.float64(-0.3))]
+    odd 536±48 even 390±45 -> 2.22 sigma
+    mod3 chi2 1.56/2: [('0', 416), ('1', 486), ('2', 501)]
+    shape: U {'depth_ppm': np.float64(470.68859320797884), 'T14_h': np.float64(1.9058437106614625), 'ingress_frac': np.float64(0.07083508176023173)} ; V {'depth_ppm': np.float64(635.3136639102225), 'T14_h': np.float64(2.5419304333269954)} ; dchi2(V-U) = 30.60; ingress frac <= 0.18 (2 sigma)
+A own: primary 436 ppm, err white 24 emp 39 -> S/N emp 11.3 (white 18.3); random >= primary: 0.0000
+    secondary(0.5): 13 ± 39 ppm (z=0.34), 3sigma upper 129
+    phase scan: max|z| 3.79 at 0.270 (147 ppm); ~37 independent phases
+    P/3 phases: [('0.3333333333333333', -39, np.float64(-1.01)), ('0.6666666666666666', -13, np.float64(-0.34))]
+    odd 371±48 even 504±44 -> -2.04 sigma
+    mod3 chi2 10.50/2: [('0', 275), ('1', 517), ('2', 513)]
+    shape: U {'depth_ppm': np.float64(461.8159529341863), 'T14_h': np.float64(1.9055708290377955), 'ingress_frac': np.float64(0.04775387741483278)} ; V {'depth_ppm': np.float64(613.7367233768838), 'T14_h': np.float64(2.656899646565297)} ; dchi2(V-U) = 29.82; ingress frac <= 0.16 (2 sigma)
+B pipe: primary 799 ppm, err white 48 emp 63 -> S/N emp 12.7 (white 16.6); random >= primary: 0.0000
+    secondary(0.5): 66 ± 63 ppm (z=1.05), 3sigma upper 254
+    phase scan: max|z| 3.48 at 0.240 (219 ppm); ~141 independent phases
+    P/3 phases: [('0.3333333333333333', -38, np.float64(-0.61)), ('0.6666666666666666', -9, np.float64(-0.14))]
+    odd 825±87 even 782±90 -> 0.34 sigma
+Traceback (most recent call last):
+  File "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_PUBLICATION_AUDIT/scripts/s10_eb_tests.py", line 184, in <module>
+    print(f"    mod3 chi2 {r['mod3']['chi2_const']:.2f}/2: {[(k, round(v['depth_ppm'])) for k, v in r['mod3']['groups'].items()]}")
+                                                                 ^^^^^^^^^^^^^^^^^^^^^
+ValueError: cannot convert float NaN to integer

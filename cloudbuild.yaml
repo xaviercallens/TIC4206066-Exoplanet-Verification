@@ -1,0 +1,31 @@
+steps:
+  # 1. Build Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/tic4206066-portal:$COMMIT_SHA', '-t', 'gcr.io/$PROJECT_ID/tic4206066-portal:latest', '.']
+
+  # 2. Push image to Container Registry / Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/tic4206066-portal:$COMMIT_SHA']
+
+  # 3. Deploy to Google Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'tic4206066-portal'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/tic4206066-portal:$COMMIT_SHA'
+      - '--region'
+      - 'us-central1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      - '--memory'
+      - '1Gi'
+      - '--cpu'
+      - '1'
+
+images:
+  - 'gcr.io/$PROJECT_ID/tic4206066-portal:$COMMIT_SHA'
+  - 'gcr.io/$PROJECT_ID/tic4206066-portal:latest'

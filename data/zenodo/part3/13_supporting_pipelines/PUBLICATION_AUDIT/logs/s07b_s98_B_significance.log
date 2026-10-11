@@ -1,0 +1,6 @@
+  QLP S98 frozen mask: one null BLS takes 0.9 s
+QLP S98 frozen mask    B SDE 6.09 at 11.1368 d (global max 6.09 at 11.137 d); null max-SDE median 5.47 p95 6.92 p99 7.18 max 7.60; N>=obs 165/500 -> FAP 0.331
+  QLP S98 default mask: one null BLS takes 1.2 s
+QLP S98 default mask   B SDE 1.48 at 11.1322 d (global max 5.20 at 14.288 d); null max-SDE median 5.55 p95 7.92 p99 8.77 max 9.66; N>=obs 500/500 -> FAP 1.000
+  own S98 no straylight: one null BLS takes 1.2 s
+own S98 no straylight  B SDE 10.36 at 11.1329 d (global max 10.36 at 11.133 d); null max-SDE median 5.75 p95 9.51 p99 10.16 max 11.14; N>=obs 3/500 -> FAP 0.008

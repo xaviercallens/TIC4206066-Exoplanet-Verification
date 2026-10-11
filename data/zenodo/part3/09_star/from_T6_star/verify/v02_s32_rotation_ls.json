@@ -1,0 +1,29 @@
+{
+ "file": "/Users/paulsmith/space <3/tess-jev/addenda/deep_followup_tic4206066/lc/tess2020324010417-s0032-0000000004206066-0200-s_lc.fits",
+ "PDCSAP_FLUX": {
+  "n": 1090,
+  "span_d": 25.791272467866747,
+  "rms_ppm": 621.7399389739855,
+  "top_period_d": 7.970110590813988,
+  "top_power": 0.3641396997572866,
+  "top_fap_baluev": 6.876865048218927e-103,
+  "top_semi_amp_ppm": 554.0693207825693,
+  "best_7p8_8p4_period": 7.970110590813988,
+  "best_7p8_8p4_power": 0.3641396997572866,
+  "best_7p8_8p4_fap": 6.876865048218927e-103,
+  "semi_amp_at_that_ppm": 554.0693207825693
+ },
+ "SAP_FLUX": {
+  "n": 1090,
+  "span_d": 25.791272467866747,
+  "rms_ppm": 2432.336237224491,
+  "top_period_d": 14.634663934726134,
+  "top_power": 0.707559633536276,
+  "top_fap_baluev": 6.523627861343676e-286,
+  "top_semi_amp_ppm": 2730.470299451573,
+  "best_7p8_8p4_period": 8.394123819517313,
+  "best_7p8_8p4_power": 0.24313114573661698,
+  "best_7p8_8p4_fap": 6.799468403564542e-62,
+  "semi_amp_at_that_ppm": 1697.3936305801717
+ }
+}

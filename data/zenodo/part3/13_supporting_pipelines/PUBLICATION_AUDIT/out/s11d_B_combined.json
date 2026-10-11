@@ -1,0 +1,37 @@
+{
+ "inputs": {
+  "S98_alone": {
+   "QLP S98 frozen mask": 0.3313373253493014,
+   "QLP S98 default mask": 1.0,
+   "own S98 no straylight": 0.007984031936127744
+  },
+  "S6_rank": 0.0015521367521367522,
+  "S32_period_epoch_null": 0.03259837008149592
+ },
+ "combos": {
+  "QLP S98 frozen mask | S98+S6": {
+   "p": 0.004408796473866223,
+   "sigma_one_sided": 2.6190464908685613
+  },
+  "QLP S98 frozen mask | S98+S6+S32": {
+   "p": 0.0012146844910926804,
+   "sigma_one_sided": 3.0320028648410315
+  },
+  "QLP S98 default mask | S98+S6": {
+   "p": 0.01159154778603818,
+   "sigma_one_sided": 2.2704037764001845
+  },
+  "QLP S98 default mask | S98+S6+S32": {
+   "p": 0.003026398753007454,
+   "sigma_one_sided": 2.7449073948027487
+  },
+  "own S98 no straylight | S98+S6": {
+   "p": 0.00015240600528475395,
+   "sigma_one_sided": 3.611175747366513
+  },
+  "own S98 no straylight | S98+S6+S32": {
+   "p": 5.012832286184128e-05,
+   "sigma_one_sided": 3.8899699267509913
+  }
+ }
+}

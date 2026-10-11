@@ -1,0 +1,356 @@
+{
+  "schedule_name": "NASA TESS Sector 110 Automated Ingestion & Elenchus Vetting",
+  "target_id": "TIC 4206066",
+  "target_release_utc": "2026-11-28T18:00:00+00:00",
+  "status": "DRY_RUN_VERIFIED",
+  "last_checked_utc": "2026-10-10T11:51:32.163718+00:00",
+  "time_counter": {
+    "target_date_utc": "2026-11-28T18:00:00+00:00",
+    "current_time_utc": "2026-10-10T11:51:32.163511+00:00",
+    "time_remaining_seconds": 4255707.8,
+    "days": 49,
+    "hours": 6,
+    "minutes": 8,
+    "seconds": 27,
+    "is_reached": false,
+    "formatted_countdown": "49d 06h 08m 27s"
+  },
+  "latest_workflow_summary": {
+    "workflow_name": "ExoElenchus-TIC4206066",
+    "target": "TIC 4206066 (StKM 1-561)",
+    "all_passed": true,
+    "total_duration_ms": 28918.58,
+    "seed": 42,
+    "git_hash": "57b008afa2e3dbaab189fca21f7327a28acbcd8a",
+    "steps": [
+      {
+        "step_id": 1,
+        "name": "Ingestion & Real Observational Data Audit",
+        "passed": true,
+        "duration_ms": 85.44,
+        "details": {
+          "zenodo_files_sha256_match": true,
+          "metadata_period_within_3sigma_of_ephemeris": true,
+          "metadata_t0_matches_ephemeris": true,
+          "metadata_depth_within_3sigma_of_event_mean": true,
+          "event_weighted_mean_depth_ppm": 492.3,
+          "event_weighted_mean_depth_err_ppm": 31.5,
+          "gaia_id_present": true,
+          "transits_count_in_catalogue": 23,
+          "transits_count_matches_metadata": true,
+          "real_mast_valid_cadences": 16465,
+          "real_mast_cadences_clean": true,
+          "real_data_sources_verified": true
+        }
+      },
+      {
+        "step_id": 2,
+        "name": "Keplerian Dynamics & Transit Modeling",
+        "passed": true,
+        "duration_ms": 0.7,
+        "details": {
+          "semi_major_axis_au": 0.0358,
+          "a_over_r_star": 12.368,
+          "derived_rho_cgs": 3.533,
+          "derived_rho_rho_sun": 2.506,
+          "t14_hours_b0": 2.008,
+          "t14_hours_b0.35": 1.887,
+          "t14_hours_b0.62": 1.596,
+          "model_central_depth_ppm": 494.4,
+          "a_au_matches_published_0.0358": true,
+          "a_over_r_matches_published_12.37": true,
+          "published_t14_inside_b_range": true,
+          "t14_matches_published_1.87h": true,
+          "model_depth_matches_published_498ppm": true,
+          "density_below_free_fit_upper_limit": true
+        }
+      },
+      {
+        "step_id": 3,
+        "name": "Socratic Elenchus Falsification Battery & Real Vetting",
+        "passed": true,
+        "duration_ms": 104.63,
+        "details": {
+          "synthetic_selftest_candidate_valid": true,
+          "synthetic_selftest_energy": 1.5441,
+          "positive_control_recovered": true,
+          "negative_controls_rejected": true,
+          "real_photometry_depth_by_sector": {
+            "6": {
+              "n_in_transit": 19,
+              "depth_ppm": 467.9,
+              "depth_err_ppm": 63.6,
+              "snr": 7.35,
+              "control_phase_0.5_depth_ppm": 78.1
+            },
+            "32": {
+              "n_in_transit": 81,
+              "depth_ppm": 373.0,
+              "depth_err_ppm": 121.7,
+              "snr": 3.07,
+              "control_phase_0.5_depth_ppm": -400.4
+            },
+            "98": {
+              "n_in_transit": 269,
+              "depth_ppm": 836.2,
+              "depth_err_ppm": 117.0,
+              "snr": 7.15,
+              "control_phase_0.5_depth_ppm": 285.6
+            }
+          },
+          "real_photometry_combined_depth_ppm": 520.8,
+          "real_photometry_combined_snr": 10.25,
+          "real_photometry_note": "unsmoothed boxes, no detrending: phase-0.5 controls show red noise at ~2-3 sigma in S32/S98, so only the combined S/N is gated",
+          "real_centroid_by_sector": {
+            "6": {
+              "in_transit_cadences": 26,
+              "out_of_transit_cadences": 306,
+              "centroid_shift_pixels": 0.00387,
+              "uncertainty_pixels": 0.00887,
+              "significance_sigma": 0.44,
+              "is_stable": true
+            },
+            "32": {
+              "in_transit_cadences": 115,
+              "out_of_transit_cadences": 1292,
+              "centroid_shift_pixels": 0.00136,
+              "uncertainty_pixels": 0.0057,
+              "significance_sigma": 0.24,
+              "is_stable": true
+            }
+          },
+          "real_centroid_stable": true,
+          "real_odd_even": {
+            "n_odd": 13,
+            "n_even": 10,
+            "odd_ppm": 517.7,
+            "odd_err_ppm": 42.9,
+            "even_ppm": 462.4,
+            "even_err_ppm": 46.6,
+            "disparity_sigma": 0.87,
+            "eclipsing_binary_ruled_out": true
+          },
+          "real_eb_ruled_out": true,
+          "real_ephemeris_reduced_chi2": 0.559,
+          "real_ephemeris_linear": true
+        }
+      },
+      {
+        "step_id": 4,
+        "name": "Leave-One-Sector-Out Timing Hold-Out",
+        "passed": true,
+        "duration_ms": 2.04,
+        "details": {
+          "S6": {
+            "n_train": 13,
+            "n_test": 6,
+            "residual_min": [
+              2.23,
+              -2.76,
+              -23.75,
+              -1.99,
+              -1.74,
+              -1.73
+            ],
+            "rms_residual_min": 9.89,
+            "chi2": 2.15,
+            "chi2_per_event": 0.36
+          },
+          "S32": {
+            "n_train": 14,
+            "n_test": 5,
+            "residual_min": [
+              3.4,
+              16.15,
+              2.4,
+              -1.35,
+              -3.85
+            ],
+            "rms_residual_min": 7.68,
+            "chi2": 1.03,
+            "chi2_per_event": 0.21
+          },
+          "S98": {
+            "n_train": 11,
+            "n_test": 8,
+            "residual_min": [
+              -5.14,
+              6.59,
+              -13.95,
+              -12.97,
+              -8.28,
+              -31.04,
+              -11.84,
+              -20.35
+            ],
+            "rms_residual_min": 15.89,
+            "chi2": 1.95,
+            "chi2_per_event": 0.24
+          },
+          "max_chi2_per_event": 0.36,
+          "passed": true
+        }
+      },
+      {
+        "step_id": 5,
+        "name": "Pre-Registered Sector 110 Predictions & Decision-Logic Self-Test",
+        "passed": true,
+        "duration_ms": 39.85,
+        "details": {
+          "target": "TIC 4206066",
+          "sector": 110,
+          "dates_utc": "2026-10-30 to 2026-11-25",
+          "window_verified_against_tess_timeline": false,
+          "signal_a_expected_transits": 8,
+          "signal_a_sigma_min": 4.25,
+          "signal_b_expected_transits": 3,
+          "status": "PREREGISTERED_AWAITING_SECTOR_110_DATA__SELF_TEST_PASSED",
+          "provenance_hash": "5a23f5dcf0b1535820bfa1a0478756f74ee893f80fd2e944f0d1178bbf2ebccd",
+          "selftest_injected_outcome": "RECOVERED",
+          "selftest_flat_outcome": "EXCLUDED",
+          "selftest_logic_ok": true,
+          "receipt_file_exists": true,
+          "note": "predictions + SYNTHETIC self-test only; no Sector 110 data evaluated"
+        }
+      },
+      {
+        "step_id": 6,
+        "name": "SMCCC Dissemination & Quality Audit",
+        "passed": true,
+        "duration_ms": 0.17,
+        "details": {
+          "total_reward": 0.85,
+          "grounding_score": 1.0,
+          "modesty_score": 1.0,
+          "moderation_risk": 0.0,
+          "is_recommended": true
+        }
+      },
+      {
+        "step_id": 7,
+        "name": "Automated Pytest Suite Execution",
+        "passed": true,
+        "duration_ms": 15360.05,
+        "details": {
+          "exit_code": 0,
+          "stdout": "...........                                                              [100%]\n11 passed in 9.52s",
+          "stderr": ""
+        }
+      },
+      {
+        "step_id": 8,
+        "name": "Lean 4 Formal Verification (Keplerian Invariants & Socratic Elenchus)",
+        "passed": true,
+        "duration_ms": 13325.7,
+        "details": {
+          "lean_file_exists": true,
+          "olean_compiled": true,
+          "zero_sorry_soundness": true,
+          "lean_elaboration_exit_code": 0,
+          "lean_elaboration_clean": true,
+          "formalized_theorems": [
+            "eclipsing_binary_odd_even_disparity",
+            "kepler_transit_stellar_density_invariant",
+            "odd_even_transit_depth_symmetric",
+            "stellar_density_pos",
+            "transit_depth_nonneg",
+            "transit_depth_pos"
+          ]
+        }
+      }
+    ],
+    "timestamp_utc": "2026-10-10 11:39:40 UTC"
+  },
+  "execution_receipt": {
+    "target_id": "TIC 4206066",
+    "host_star": "StKM 1-561 (Gaia DR3 3220388198192519424)",
+    "zenodo_prereg_doi": "10.5281/zenodo.23175179",
+    "sector_window": {
+      "sector": 110,
+      "start_bjd": 2461344.5,
+      "end_bjd": 2461370.5,
+      "dates_utc": "2026-10-30 to 2026-11-25",
+      "window_verified_against_tess_timeline": false
+    },
+    "signal_a_predictions": {
+      "period_days": 3.1827849535823756,
+      "ephemeris_source": "zenodo:part1/02_transits_A/ephemeris_A.json",
+      "t0_bjd_tdb": 2460998.735992321,
+      "expected_transits_count": 8,
+      "epochs": [
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "predicted_mid_transit_bjd": [
+        2461345.6596,
+        2461348.8423,
+        2461352.0251,
+        2461355.2079,
+        2461358.3907,
+        2461361.5735,
+        2461364.7563,
+        2461367.939
+      ],
+      "sigma_min_per_transit": [
+        4.25,
+        4.25,
+        4.25,
+        4.25,
+        4.25,
+        4.25,
+        4.26,
+        4.26
+      ],
+      "nominal_depth_ppm": 498.0,
+      "uncertainty_mins": 4.25,
+      "catalogue_rms_oc_min": 9.038114955837749
+    },
+    "signal_b_predictions": {
+      "period_days": 11.132739168890842,
+      "ephemeris_source": "zenodo:part2/07_signal_B/ephemeris_B.json",
+      "t0_bjd_tdb": 2461000.865517985,
+      "expected_transits_count": 3,
+      "epochs": [
+        31,
+        32,
+        33
+      ],
+      "predicted_mid_transit_bjd": [
+        2461345.9804,
+        2461357.1132,
+        2461368.2459
+      ],
+      "sigma_min_per_transit": [
+        2.37,
+        2.37,
+        2.38
+      ],
+      "nominal_depth_ppm": 1099.0
+    },
+    "decision_rules": {
+      "RECOVERED": "Mean in-transit depth >= 60% of the published depth and Elenchus gates clean.",
+      "INCONSISTENT": "Depth between the exclusion and recovery thresholds, or refuted by a gate.",
+      "EXCLUDED": "Mean in-transit depth < 20% of the published depth.",
+      "INSUFFICIENT_DATA": "Fewer than 3 predicted transit windows adequately covered."
+    },
+    "overall_status": "PREREGISTERED_AWAITING_SECTOR_110_DATA__SELF_TEST_PASSED",
+    "provenance_hash": "5a23f5dcf0b1535820bfa1a0478756f74ee893f80fd2e944f0d1178bbf2ebccd",
+    "timestamp_utc": "2026-10-10 11:39:41 UTC",
+    "self_test": {
+      "injected_signal_outcome": "RECOVERED",
+      "flat_baseline_outcome": "EXCLUDED",
+      "injected_depth_ppm": 561.5,
+      "flat_depth_ppm": 8.3,
+      "logic_ok": true,
+      "data_kind": "SYNTHETIC (self-test of decision logic; not Sector 110 data)"
+    }
+  },
+  "dry_run_last_passed_utc": "2026-10-10T11:39:41.063447+00:00",
+  "notes": "Dry run: pipeline executed on archived Sectors 6/32/98 and a SYNTHETIC Sector 110 self-test. No Sector 110 data were evaluated. workflow_all_passed=True."
+}

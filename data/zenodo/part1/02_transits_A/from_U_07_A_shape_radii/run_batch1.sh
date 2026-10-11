@@ -1,0 +1,3 @@
+/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python s03_jointfit.py mann claret jit base 30000 > logs/fit_mann_claret_jit_base.log 2>&1
+/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python s03_jointfit.py logu claret jit base 60000 > logs/fit_logu_claret_jit_base.log 2>&1
+/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python s03_jointfit.py mann free jit base 40000 > logs/fit_mann_free_jit_base.log 2>&1

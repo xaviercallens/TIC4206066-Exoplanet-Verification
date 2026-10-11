@@ -1,0 +1,52 @@
+{
+ "n_generated": 1000000,
+ "n_survivors": 429363,
+ "a_inner_default_AU": 3.604955067848691,
+ "a_outer_2p2_AU": 78.36153161175424,
+ "counts": {
+  "all_generated_noGaia|no_sep_cut": {
+   "n": 1000000,
+   "n_M_gt_0.38": 373282
+  },
+  "all_generated_noGaia|peri>10AU(as_coded)": {
+   "n": 553994,
+   "n_M_gt_0.38": 209527
+  },
+  "all_generated_noGaia|default_window_3.6-78AU": {
+   "n": 329873,
+   "n_M_gt_0.38": 122266
+  },
+  "survivors_RUWE+Gaia|no_sep_cut": {
+   "n": 429363,
+   "n_M_gt_0.38": 84072
+  },
+  "survivors_RUWE+Gaia|peri>10AU(as_coded)": {
+   "n": 129436,
+   "n_M_gt_0.38": 8213
+  },
+  "survivors_RUWE+Gaia|default_window_3.6-78AU": {
+   "n": 138050,
+   "n_M_gt_0.38": 10329
+  }
+ },
+ "FPP": {
+  "A": {
+   "default_TRICERATOPS_prior": 0.036527315965964396,
+   "all_generated_noGaia|no_sep_cut": 0.13915126246270929,
+   "all_generated_noGaia|peri>10AU(as_coded)": 0.10586502861211589,
+   "all_generated_noGaia|default_window_3.6-78AU": 0.07537567432398351,
+   "survivors_RUWE+Gaia|no_sep_cut": 0.04945007776430258,
+   "survivors_RUWE+Gaia|peri>10AU(as_coded)": 0.006387639348613377,
+   "survivors_RUWE+Gaia|default_window_3.6-78AU": 0.008094139651340773
+  },
+  "B": {
+   "default_TRICERATOPS_prior": 0.20191680582775628,
+   "all_generated_noGaia|no_sep_cut": 0.4462215146264448,
+   "all_generated_noGaia|peri>10AU(as_coded)": 0.3716493302155948,
+   "all_generated_noGaia|default_window_3.6-78AU": 0.29475846075283785,
+   "survivors_RUWE+Gaia|no_sep_cut": 0.26666792402608336,
+   "survivors_RUWE+Gaia|peri>10AU(as_coded)": 0.0758099930899287,
+   "survivors_RUWE+Gaia|default_window_3.6-78AU": 0.11431655169573668
+  }
+ }
+}

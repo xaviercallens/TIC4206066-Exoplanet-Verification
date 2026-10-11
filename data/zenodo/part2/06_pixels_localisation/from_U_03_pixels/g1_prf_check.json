@@ -1,0 +1,168 @@
+{
+ "file": "tess2019107181901-prf-1-2-row1025-col1069.fits",
+ "shape": [
+  117,
+  117
+ ],
+ "total": 81.00000000000001,
+ "hdr": {
+  "CCD_RREF": 1025.0,
+  "CCD_CREF": 1069.0,
+  "NSAMP": 9.0,
+  "CRPIX1P": 59.0,
+  "CRVAL1P": 1069.0,
+  "CDELT1P": 0.111111111111111,
+  "VERSION": "UPDATED_2.0"
+ },
+ "subprf_sum_min_max": [
+  0.9999999999999991,
+  1.000000000000001
+ ],
+ "own_unpack_centroid_slope_x": [
+  0.9726724290827775,
+  5.866187006632809
+ ],
+ "own_unpack_centroid_slope_y": [
+  0.9702610867815195,
+  6.080647461276858
+ ],
+ "own_unpack_centroid_resid_max_px": 0.018644824285967587,
+ "locate_tests": {
+  "S6_cam1ccd1": {
+   "colnum": 76.0,
+   "rownum": 889.0,
+   "grid_corners": [
+    513,
+    1025,
+    45,
+    557
+   ],
+   "max_abs_centroid_dev_px": 0.02521758400344576,
+   "rms_centroid_dev_px": 0.009076854323656644,
+   "large_shift_devs": [
+    [
+     1.3,
+     -2.7,
+     0.002422985536162825,
+     -0.010048696199860707
+    ],
+    [
+     -3.45,
+     0.2,
+     0.024967817463596553,
+     -0.0003752609129097917
+    ],
+    [
+     2.0,
+     2.0,
+     -3.552713678800501e-15,
+     -1.7763568394002505e-15
+    ],
+    [
+     -0.51,
+     0.49,
+     -0.001707720174932481,
+     -0.009612297034862882
+    ]
+   ],
+   "tessprf_vs_own_bilinear_maxreldiff": 2.4239446448473993e-16,
+   "corner_prf_maxreldiff": 0.10422978321091438,
+   "centroid_change_if_col_plus44_px": [
+    -0.0002590174176066995,
+    0.002163961028974981
+   ],
+   "image_maxreldiff_col_plus44": 0.004189689363685191
+  },
+  "S32_cam1ccd2": {
+   "colnum": 1372.0,
+   "rownum": 943.0,
+   "grid_corners": [
+    513,
+    1025,
+    1069,
+    1580
+   ],
+   "max_abs_centroid_dev_px": 0.024583368507515524,
+   "rms_centroid_dev_px": 0.010568806405574125,
+   "large_shift_devs": [
+    [
+     1.3,
+     -2.7,
+     -0.011040807888050397,
+     0.0041667841084267465
+    ],
+    [
+     -3.45,
+     0.2,
+     0.00909243600446974,
+     0.004524884592375489
+    ],
+    [
+     2.0,
+     2.0,
+     1.7763568394002505e-15,
+     0.0
+    ],
+    [
+     -0.51,
+     0.49,
+     -0.014473662477092253,
+     0.004625478686385742
+    ]
+   ],
+   "tessprf_vs_own_bilinear_maxreldiff": 2.0957162677742e-16,
+   "corner_prf_maxreldiff": 0.08182600386268962,
+   "centroid_change_if_col_plus44_px": [
+    -0.0031542667593029705,
+    -0.002961616253594812
+   ],
+   "image_maxreldiff_col_plus44": 0.009809277361517906
+  },
+  "S98_cam1ccd2": {
+   "colnum": 676.0,
+   "rownum": 982.0,
+   "grid_corners": [
+    513,
+    1025,
+    557,
+    1069
+   ],
+   "max_abs_centroid_dev_px": 0.035649170952277154,
+   "rms_centroid_dev_px": 0.014334545855916824,
+   "large_shift_devs": [
+    [
+     1.3,
+     -2.7,
+     -0.012568057844476899,
+     0.009424287785853913
+    ],
+    [
+     -3.45,
+     0.2,
+     0.01246745187635856,
+     0.008555566577327756
+    ],
+    [
+     2.0,
+     2.0,
+     0.0,
+     0.0
+    ],
+    [
+     -0.51,
+     0.49,
+     -0.009987834911219684,
+     0.0158365826405531
+    ]
+   ],
+   "tessprf_vs_own_bilinear_maxreldiff": 1.8353163378584108e-16,
+   "corner_prf_maxreldiff": 0.0961684000516696,
+   "centroid_change_if_col_plus44_px": [
+    -0.0049913906439105205,
+    0.002083947888218418
+   ],
+   "image_maxreldiff_col_plus44": 0.005941335821987733
+  }
+ },
+ "which_set": "start_s0004 for Sectors >= 4 (S6, S32, S98): MAST TESS Archive Manual 'Data Product Overview' https://outerspace.stsci.edu/spaces/TESS/pages/14563420 and start_s0004/00README.txt; VERSION='UPDATED_2.0' in the FITS header"
+}

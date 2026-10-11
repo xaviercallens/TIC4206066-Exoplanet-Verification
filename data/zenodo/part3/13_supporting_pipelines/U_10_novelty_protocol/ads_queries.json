@@ -1,0 +1,158 @@
+[
+ {
+  "utc": "2026-09-25T11:40:48Z",
+  "query": "full:\"TIC 4206066\"",
+  "url": "https://ui.adsabs.harvard.edu/search/q=full%3A%22TIC%204206066%22",
+  "n_results": 0,
+  "titles": [],
+  "note": "target id",
+  "method": "ADS UI (ui.adsabs.harvard.edu) rendered in the Claude Browser pane; no ADS API token in the environment; result count read from the rendered page"
+ },
+ {
+  "utc": "2026-09-25T11:40:54.308Z",
+  "query": "full:\"TIC 183374187\"",
+  "url": "https://ui.adsabs.harvard.edu/search/q=full%3A%22TIC%20183374187%22",
+  "n_results": 1,
+  "titles": [
+   "The T16 Planet Hunt: 10,000 New Planet Candidates from TESS Cycle 1 ... TIC 183374187"
+  ],
+  "note": "positive control (works)",
+  "method": "ADS UI (ui.adsabs.harvard.edu) rendered in the Claude Browser pane; no ADS API token in the environment; result count read from the rendered page"
+ },
+ {
+  "utc": "2026-09-25T11:41:10.587Z",
+  "query": "full:\"4206066\"",
+  "url": "https://ui.adsabs.harvard.edu/search/q=full%3A%224206066%22",
+  "n_results": 0,
+  "titles": [],
+  "note": "target id",
+  "method": "ADS UI (ui.adsabs.harvard.edu) rendered in the Claude Browser pane; no ADS API token in the environment; result count read from the rendered page"
+ },
+ {
+  "utc": "2026-09-25T11:41:16.649Z",
+  "query": "full:\"StKM 1-561\"",
+  "url": "https://ui.adsabs.harvard.edu/search/q=full%3A%22StKM%201-561%22",
+  "n_results": 0,
+  "titles": [],
+  "note": "target id",
+  "method": "ADS UI (ui.adsabs.harvard.edu) rendered in the Claude Browser pane; no ADS API token in the environment; result count read from the rendered page"
+ },
+ {
+  "utc": "2026-09-25T11:41:22.570Z",
+  "query": "full:\"3220388198192519424\"",
+  "url": "https://ui.adsabs.harvard.edu/search/q=full%3A%223220388198192519424%22",
+  "n_results": 0,
+  "titles": [],
+  "note": "target Gaia DR3 id",
+  "method": "ADS UI (ui.adsabs.harvard.edu) rendered in the Claude Browser pane; no ADS API token in the environment; result count read from the rendered page"
+ },
+ {
+  "utc": "2026-09-25T11:41:29.489Z",
+  "query": "object:\"StKM 1-561\" (expanded by ADS to abs/simbid:786188)",
+  "url": "https://ui.adsabs.harvard.edu/search/q=object%3A%22StKM%201-561%22",
+  "n_results": 10,
+  "titles": [
+   "HWO Target Stars and Systems (Tuchow+2025)",
+   "HPIC (Tuchow+2024)",
+   "Bioverse (Hardegree-Ullman+2023)",
+   "First eROSITA study of nearby M dwarfs ... with TESS (Magaudda+2022)",
+   "Gaia EDR3 GCNS",
+   "Catalogue of stellar diameters (Cruzalebes+2019)",
+   "JSDC v2",
+   "Catalogue of bright (K<9) M dwarfs (Frith+2013)",
+   "All-sky catalog of bright M dwarfs (Lepine&Gaidos 2011)",
+   "Dwarf K and M stars of small proper motion (Stephenson 1986)"
+  ],
+  "note": "SIMBAD-linked papers; all catalogue/target-list/rotation papers, none reports a transit",
+  "method": "ADS UI (ui.adsabs.harvard.edu) rendered in the Claude Browser pane; no ADS API token in the environment; result count read from the rendered page"
+ },
+ {
+  "utc": "2026-09-25T11:41:48.219Z",
+  "query": "full:\"StKM 1-1262\"",
+  "url": "https://ui.adsabs.harvard.edu/search/q=full%3A%22StKM%201-1262%22",
+  "n_results": 8,
+  "titles": [
+   "(8 radio/magnetic-activity papers on StKM 1-1262)"
+  ],
+  "note": "positive control for StKM designations (works)",
+  "method": "ADS UI (ui.adsabs.harvard.edu) rendered in the Claude Browser pane; no ADS API token in the environment; result count read from the rendered page"
+ },
+ {
+  "utc": "2026-09-25T11:41:55.173Z",
+  "query": "(full:\"3.1828\" OR \"3.18279\" OR \"3.182786\" OR \"3.182945\" OR \"3.18295\") AND full:\"TESS\"",
+  "url": "https://ui.adsabs.harvard.edu/search/q=(full%3A%223.1828%22%20OR%20full%3A%223.18279%22%20OR%20full%3A%223.182786%22%20OR%20full%3A%223.182945%22%20OR%20full%3A%223.18295%22)%20AND%20full%3A%22TESS%22",
+  "n_results": 5,
+  "titles": [
+   "Cloudy mornings and clear evenings on a gas giant exoplanet",
+   "Risk-Based Expansion Planning of Regional Energy Networks",
+   "New Beta Cephei stars with KELT",
+   "BEST II variable stars",
+   "Range and Stopping Power Tables"
+  ],
+  "note": "none about the target",
+  "method": "ADS UI (ui.adsabs.harvard.edu) rendered in the Claude Browser pane; no ADS API token in the environment; result count read from the rendered page"
+ },
+ {
+  "utc": "2026-09-25T11:42:02.174Z",
+  "query": "(full:\"11.1327\" OR \"11.13274\" OR \"11.13298\" OR \"11.1328\" OR \"11.1329\" OR \"11.1330\" OR \"11.1326\") AND full:\"TESS\"",
+  "url": "https://ui.adsabs.harvard.edu/search/q=(full%3A%2211.1327%22%20OR%20...)%20AND%20full%3A%22TESS%22",
+  "n_results": 7,
+  "titles": [
+   "OdysSim",
+   "Dark-Matter-Electron Detectors",
+   "Period-Luminosity calibrators",
+   "demand response programs",
+   "Lightcurves of Fifteen Asteroids",
+   "The rotation-activity relation of M dwarfs: From K2 to TESS and PLATO (Raetz+2020; K2 stars)",
+   "CMB"
+  ],
+  "note": "none about the target",
+  "method": "ADS UI (ui.adsabs.harvard.edu) rendered in the Claude Browser pane; no ADS API token in the environment; result count read from the rendered page"
+ },
+ {
+  "utc": "2026-09-25T11:42:19.519Z",
+  "query": "full:\"3.183\" AND full:\"11.133\"",
+  "url": "https://ui.adsabs.harvard.edu/search/q=full%3A%223.183%22%20AND%20full%3A%2211.133%22",
+  "n_results": 331,
+  "titles": [
+   "(first 25 titles: unrelated non-astronomy/generic papers)"
+  ],
+  "note": "too broad; narrowed below",
+  "method": "ADS UI (ui.adsabs.harvard.edu) rendered in the Claude Browser pane; no ADS API token in the environment; result count read from the rendered page"
+ },
+ {
+  "utc": "2026-09-25T11:42:56.225Z",
+  "query": "full:\"3.183\" AND full:\"11.133\" AND full:\"TESS\" AND full:\"transit\"",
+  "url": "https://ui.adsabs.harvard.edu/search/q=full%3A%223.183%22%20AND%20full%3A%2211.133%22%20AND%20full%3A%22TESS%22%20AND%20full%3A%22transit%22",
+  "n_results": 3,
+  "titles": [
+   "VizieR: CARMENES input cat. of M dwarfs VIII (Cortes-Contreras+2024)",
+   "SPIRou spectropolarimetry of TW Hydrae",
+   "Review of Particle Physics"
+  ],
+  "note": "none about the target",
+  "method": "ADS UI (ui.adsabs.harvard.edu) rendered in the Claude Browser pane; no ADS API token in the environment; result count read from the rendered page"
+ },
+ {
+  "utc": "2026-09-25T11:42:26.509Z",
+  "query": "full:\"TYC 4753-1591-1\" OR full:\"J05232636-0119380\" OR full:\"PM J05234-0119\" OR full:\"TIC4206066\"",
+  "url": "https://ui.adsabs.harvard.edu/search/q=full%3A%22TYC%204753-1591-1%22%20OR%20...",
+  "n_results": 0,
+  "titles": [],
+  "note": "target aliases",
+  "method": "ADS UI (ui.adsabs.harvard.edu) rendered in the Claude Browser pane; no ADS API token in the environment; result count read from the rendered page"
+ },
+ {
+  "utc": "2026-09-25T11:42:33.558Z",
+  "query": "(full:\"3.183\" OR full:\"3.1828\") AND full:\"TESS\" AND full:\"K dwarf\" AND year:2025-2026",
+  "url": "https://ui.adsabs.harvard.edu/search/q=(full%3A%223.183%22%20OR%20full%3A%223.1828%22)%20AND%20full%3A%22TESS%22%20AND%20full%3A%22K%20dwarf%22%20AND%20year%3A2025-2026",
+  "n_results": 3,
+  "titles": [
+   "What the Solar System Can Teach Us About Rocky Exoplanets",
+   "Open Clusters as Laboratories for Cool Star Evolution (CS23)",
+   "Multiplicity of stellar systems in the solar neighbourhood"
+  ],
+  "note": "none about the target",
+  "method": "ADS UI (ui.adsabs.harvard.edu) rendered in the Claude Browser pane; no ADS API token in the environment; result count read from the rendered page"
+ }
+]

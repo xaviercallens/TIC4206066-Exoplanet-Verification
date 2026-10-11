@@ -1,0 +1,156 @@
+{
+ "config/amendments_registry.jsonl": {
+  "birth_utc": "2026-09-25T00:19:47.251971+00:00",
+  "mtime_utc": "2026-09-25T03:17:54.877035+00:00"
+ },
+ "data/harmonic/qlp_downloads.jsonl": {
+  "birth_utc": "2026-09-25T02:45:46.252460+00:00",
+  "mtime_utc": "2026-09-25T02:48:42.463032+00:00"
+ },
+ "logs/harmonic_run.log": {
+  "birth_utc": "2026-09-25T03:00:44.121546+00:00",
+  "mtime_utc": "2026-09-25T03:08:23.200066+00:00"
+ },
+ "data/harmonic/per_candidate/tic4206066_p11.132976.json": {
+  "birth_utc": "2026-09-25T03:08:22.735545+00:00",
+  "mtime_utc": "2026-09-25T03:08:22.737700+00:00"
+ },
+ "data/harmonic/harmonic_audit.csv": {
+  "birth_utc": "2026-09-25T03:08:23.167354+00:00",
+  "mtime_utc": "2026-09-25T03:08:23.169227+00:00"
+ },
+ "candidates/tic4206066_p11.132976/harmonic.json": {
+  "birth_utc": "2026-09-25T03:42:41.575026+00:00",
+  "mtime_utc": "2026-09-25T03:42:41.576626+00:00"
+ },
+ "addenda/pool_multisector/multisector_results.json": {
+  "birth_utc": "2026-09-25T02:54:49.247233+00:00",
+  "mtime_utc": "2026-09-25T02:54:49.252775+00:00"
+ },
+ "addenda/pool_multisector/SUMMARY.md": {
+  "birth_utc": "2026-09-25T03:07:17.221992+00:00",
+  "mtime_utc": "2026-09-25T03:07:17.222307+00:00"
+ },
+ "addenda/deep_followup_tic4206066/signal_11d.py": {
+  "birth_utc": "2026-09-25T03:26:34.953613+00:00",
+  "mtime_utc": "2026-09-25T03:26:34.956964+00:00"
+ },
+ "addenda/deep_followup_tic4206066/out/signal_11d.json": {
+  "birth_utc": "2026-09-25T03:26:46.463351+00:00",
+  "mtime_utc": "2026-09-25T03:26:46.464178+00:00"
+ },
+ "A03_B_events_at_P": [
+  {
+   "sector": 6,
+   "k": -227,
+   "t_mid": 1473.73,
+   "cls": "observed",
+   "snr": 4.461888117117329,
+   "present": true,
+   "contradicting": false
+  },
+  {
+   "sector": 6,
+   "k": -226,
+   "t_mid": 1484.863,
+   "cls": "observed",
+   "snr": 6.10025266898366,
+   "present": true,
+   "contradicting": false
+  },
+  {
+   "sector": 32,
+   "k": -164,
+   "t_mid": 2175.114,
+   "cls": "observed",
+   "snr": 2.348426800600106,
+   "present": false,
+   "contradicting": true
+  },
+  {
+   "sector": 32,
+   "k": -163,
+   "t_mid": 2186.247,
+   "cls": "gap",
+   "snr": null,
+   "present": false,
+   "contradicting": false
+  },
+  {
+   "sector": 32,
+   "k": -162,
+   "t_mid": 2197.38,
+   "cls": "observed",
+   "snr": 2.574875358832666,
+   "present": false,
+   "contradicting": true
+  },
+  {
+   "sector": 98,
+   "k": -1,
+   "t_mid": 3989.735,
+   "cls": "masked",
+   "snr": null,
+   "present": false,
+   "contradicting": false
+  },
+  {
+   "sector": 98,
+   "k": 0,
+   "t_mid": 4000.868,
+   "cls": "observed",
+   "snr": 6.990873815353183,
+   "present": true,
+   "contradicting": false
+  },
+  {
+   "sector": 98,
+   "k": 1,
+   "t_mid": 4012.001,
+   "cls": "observed",
+   "snr": 8.212982676492127,
+   "present": true,
+   "contradicting": false
+  },
+  {
+   "sector": 98,
+   "k": 2,
+   "t_mid": 4023.134,
+   "cls": "masked",
+   "snr": null,
+   "present": false,
+   "contradicting": false
+  },
+  {
+   "sector": 98,
+   "k": 3,
+   "t_mid": 4034.267,
+   "cls": "masked",
+   "snr": null,
+   "present": false,
+   "contradicting": false
+  },
+  {
+   "sector": 98,
+   "k": 4,
+   "t_mid": 4045.4,
+   "cls": "partial",
+   "snr": 6.8514588039081765,
+   "present": true,
+   "contradicting": false
+  }
+ ],
+ "A03_B_status": {
+  "period_status": "AMBIGUOUS",
+  "supported": [
+   "3P",
+   "4P"
+  ],
+  "n_contra_P": 2,
+  "sector_shifts_d": {
+   "6": 0.04684549750241729,
+   "32": 0.05351216416908411,
+   "98": 0.0
+  }
+ }
+}

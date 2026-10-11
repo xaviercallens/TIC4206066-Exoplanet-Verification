@@ -1,0 +1,69 @@
+A_10min                                A    n=5 0.0431+-0.0024 [0.0411-0.0463] NFPPmax=4.9e-15 | N=1000000 fold=fold_A_S32+S98_10min exptime=10.0 Teff=4030.0 molusc=None stored_mean=0.04312 stored_sd=0.00240
+A_S32only                              A    n=5 0.0409+-0.0028 [0.0373-0.0441] NFPPmax=6.6e-08 | N=1000000 fold=fold_A_S32_6min exptime=6.0 Teff=4030.0 molusc=None stored_mean=0.04092 stored_sd=0.00281
+A_S98only                              A    n=5 0.0322+-0.0035 [0.0287-0.0370] NFPPmax=1.3e-09 | N=1000000 fold=fold_A_S98_6min exptime=6.0 Teff=4030.0 molusc=None stored_mean=0.03219 stored_sd=0.00348
+A_T0m                                  A    n=5 0.0327+-0.0047 [0.0281-0.0398] NFPPmax=8.2e-16 | N=1000000 fold=fold_A_S32+S98_6min_T0m exptime=6.0 Teff=4030.0 molusc=None stored_mean=0.03275 stored_sd=0.00469
+A_T0p                                  A    n=5 0.0366+-0.0042 [0.0320-0.0428] NFPPmax=5.6e-15 | N=1000000 fold=fold_A_S32+S98_6min_T0p exptime=6.0 Teff=4030.0 molusc=None stored_mean=0.03659 stored_sd=0.00418
+A_ap5x5                                A    n=5 0.0344+-0.0043 [0.0299-0.0400] NFPPmax=7.1e-10 | N=1000000 fold=fold_A_S32+S98_6min exptime=6.0 Teff=4030.0 molusc=None stored_mean=0.03441 stored_sd=0.00431
+A_base                                 A    n=20 0.0342+-0.0035 [0.0286-0.0401] NFPPmax=1.7e-16 | N=1000000 fold=fold_A_S32+S98_6min exptime=6.0 Teff=4030.0 molusc=None stored_mean=0.03421 stored_sd=0.00350
+A_moluscFresh5                         A    n=10 0.0055+-0.0036 [0.0002-0.0129] NFPPmax=1.8e-16 | N=1000000 fold=fold_A_S32+S98_6min exptime=6.0 Teff=4030.0 molusc=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratch
+A_moluscFresh5_N2e6                    A    n=2 0.0022+-0.0021 [0.0007-0.0037] NFPPmax=1.5e-16 | N=2000000 fold=fold_A_S32+S98_6min exptime=6.0 Teff=4030.0 molusc=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratch
+A_moluscFresh5_N5e5                    A    n=3 0.0125+-0.0135 [0.0034-0.0279] NFPPmax=1.7e-16 | N=500000 fold=fold_A_S32+S98_6min exptime=6.0 Teff=4030.0 molusc=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchp
+A_sigformal                            A    n=5 0.0367+-0.0026 [0.0332-0.0403] NFPPmax=3.8e-15 | N=1000000 fold=fold_A_S32+S98_6min exptime=6.0 Teff=4030.0 molusc=None stored_mean=0.03665 stored_sd=0.00264
+A_teff4012                             A    n=5 0.0335+-0.0028 [0.0292-0.0372] NFPPmax=1.5e-16 | N=1000000 fold=fold_A_S32+S98_6min exptime=6.0 Teff=4012.0 molusc=None stored_mean=0.03353 stored_sd=0.00284
+A_tic                                  A    n=5 0.0398+-0.0053 [0.0330-0.0456] NFPPmax=1.8e-16 | N=1000000 fold=fold_A_S32+S98_6min exptime=6.0 Teff=4010.0 molusc=None stored_mean=0.03978 stored_sd=0.00530
+B_10min                                B    n=5 0.1965+-0.0100 [0.1831-0.2067] NFPPmax=0.0e+00 | N=1000000 fold=fold_B_S32+S98_10min exptime=10.0 Teff=4030.0 molusc=None stored_mean=0.19647 stored_sd=0.00997
+B_S98only                              B    n=5 0.1822+-0.0160 [0.1641-0.2055] NFPPmax=0.0e+00 | N=1000000 fold=fold_B_S98_6min exptime=6.0 Teff=4030.0 molusc=None stored_mean=0.18220 stored_sd=0.01602
+B_T0m                                  B    n=5 0.2109+-0.0129 [0.1950-0.2218] NFPPmax=0.0e+00 | N=1000000 fold=fold_B_S32+S98_6min_T0m exptime=6.0 Teff=4030.0 molusc=None stored_mean=0.21086 stored_sd=0.01287
+B_T0p                                  B    n=5 0.1493+-0.0092 [0.1357-0.1615] NFPPmax=0.0e+00 | N=1000000 fold=fold_B_S32+S98_6min_T0p exptime=6.0 Teff=4030.0 molusc=None stored_mean=0.14927 stored_sd=0.00916
+B_ap5x5                                B    n=5 0.2133+-0.0206 [0.1965-0.2472] NFPPmax=1.5e-48 | N=1000000 fold=fold_B_S32+S98_6min exptime=6.0 Teff=4030.0 molusc=None stored_mean=0.21326 stored_sd=0.02055
+B_base                                 B    n=20 0.1995+-0.0118 [0.1717-0.2225] NFPPmax=0.0e+00 | N=1000000 fold=fold_B_S32+S98_6min exptime=6.0 Teff=4030.0 molusc=None stored_mean=0.19947 stored_sd=0.01184
+B_moluscFresh5                         B    n=10 0.0686+-0.0156 [0.0428-0.1012] NFPPmax=0.0e+00 | N=1000000 fold=fold_B_S32+S98_6min exptime=6.0 Teff=4030.0 molusc=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratch
+B_sigformal                            B    n=5 0.1934+-0.0111 [0.1837-0.2113] NFPPmax=0.0e+00 | N=1000000 fold=fold_B_S32+S98_6min exptime=6.0 Teff=4030.0 molusc=None stored_mean=0.19345 stored_sd=0.01115
+B_teff4012                             B    n=5 0.2066+-0.0122 [0.1925-0.2235] NFPPmax=0.0e+00 | N=1000000 fold=fold_B_S32+S98_6min exptime=6.0 Teff=4012.0 molusc=None stored_mean=0.20659 stored_sd=0.01223
+B_tic                                  B    n=5 0.1412+-0.0112 [0.1275-0.1568] NFPPmax=0.0e+00 | N=1000000 fold=fold_B_S32+S98_6min exptime=6.0 Teff=4010.0 molusc=None stored_mean=0.14121 stored_sd=0.01119
+default_A_v_A_S32+S98_10min            A    n=4 0.0437+-0.0037 [0.0397-0.0482] NFPPmax=1.4e-11 | N=1000000 mode=default exptime=10.0 Teff=4012.0
+default_A_v_A_S32+S98_5min             A    n=8 0.0364+-0.0036 [0.0323-0.0431] NFPPmax=4.1e-12 | N=1000000 mode=default exptime=5.0 Teff=4012.0
+default_B_v_B_S32+S98_5min             B    n=6 0.2127+-0.0185 [0.1904-0.2426] NFPPmax=0.0e+00 | N=1000000 mode=default exptime=5.0 Teff=4012.0
+molusc_coded_A_v_A_S32+S98_5min        A    n=3 0.0094+-0.0015 [0.0085-0.0112] NFPPmax=4.3e-12 | N=None mode=None exptime=None Teff=None
+molusc_coded_B_v_B_S32+S98_5min        B    n=2 0.0687+-0.0267 [0.0499-0.0876] NFPPmax=0.0e+00 | N=None mode=None exptime=None Teff=None
+molusc_gaiaonly_A_v_A_S32+S98_5min     A    n=3 0.0451+-0.0058 [0.0406-0.0516] NFPPmax=3.1e-12 | N=None mode=None exptime=None Teff=None
+molusc_gaiaonly_B_v_B_S32+S98_5min     B    n=2 0.2366+-0.0069 [0.2317-0.2416] NFPPmax=0.0e+00 | N=None mode=None exptime=None Teff=None
+trunc0.38_A_v_A_S32+S98_5min           A    n=8 0.0043+-0.0006 [0.0034-0.0051] NFPPmax=4.7e-12 | N=1000000 mode=trunc0.38 exptime=5.0 Teff=4012.0
+trunc0.38_B_v_B_S32+S98_5min           B    n=4 0.1580+-0.0064 [0.1514-0.1665] NFPPmax=0.0e+00 | N=1000000 mode=trunc0.38 exptime=5.0 Teff=4012.0
+trunc0.45_A_v_A_S32+S98_5min           A    n=4 0.0085+-0.0015 [0.0063-0.0095] NFPPmax=4.3e-12 | N=1000000 mode=trunc0.45 exptime=5.0 Teff=4012.0
+default_A_adoptedfold                  A    n=2 0.0283+-0.0008 [0.0277-0.0289] NFPPmax=1.1e-15 | N=1000000 mode=default exptime=6 star={'mass': 0.6062, 'rad': 0.6229, 'Teff': 4030.0, 'plx': 28.1083}
+default_B_adoptedfold                  B    n=2 0.1941+-0.0249 [0.1765-0.2117] NFPPmax=0.0e+00 | N=1000000 mode=default exptime=6 star={'mass': 0.6062, 'rad': 0.6229, 'Teff': 4030.0, 'plx': 28.1083}
+default_teff4012_A_adoptedfold         A    n=5 0.0307+-0.0037 [0.0277-0.0365] NFPPmax=1.2e-15 | N=1000000 mode=default_teff4012 exptime=6 star={'mass': 0.6062, 'rad': 0.6229, 'Teff': 4012.0, 'plx': 28.1083}
+default_teff4012_B_adoptedfold         B    n=5 0.1867+-0.0147 [0.1755-0.2117] NFPPmax=0.0e+00 | N=1000000 mode=default_teff4012 exptime=6 star={'mass': 0.6062, 'rad': 0.6229, 'Teff': 4012.0, 'plx': 28.1083}
+gaia_ol0.38_bl0.2_A_adoptedfold        A    n=8 0.0026+-0.0008 [0.0015-0.0040] NFPPmax=1.3e-15 | N=1000000 mode=gaia_ol0.38_bl0.2 exptime=6 star={'mass': 0.6062, 'rad': 0.6229, 'Teff': 4030.0, 'plx': 28.1083}
+gaia_ol0.38_bl0.2_B_adoptedfold        B    n=10 0.0651+-0.0077 [0.0536-0.0798] NFPPmax=0.0e+00 | N=1000000 mode=gaia_ol0.38_bl0.2 exptime=6 star={'mass': 0.6062, 'rad': 0.6229, 'Teff': 4030.0, 'plx': 28.1083}
+gaia_only_A_adoptedfold                A    n=20 0.0030+-0.0008 [0.0019-0.0046] NFPPmax=1.3e-15 | N=1000000 mode=gaia_only exptime=6 star={'mass': 0.6062, 'rad': 0.6229, 'Teff': 4030.0, 'plx': 28.1083}
+gaia_only_B_adoptedfold                B    n=20 0.0667+-0.0081 [0.0544-0.0899] NFPPmax=0.0e+00 | N=1000000 mode=gaia_only exptime=6 star={'mass': 0.6062, 'rad': 0.6229, 'Teff': 4030.0, 'plx': 28.1083}
+ol0.38_all_A_adoptedfold               A    n=5 0.0024+-0.0006 [0.0017-0.0032] NFPPmax=1.2e-15 | N=1000000 mode=ol0.38_all exptime=6 star={'mass': 0.6062, 'rad': 0.6229, 'Teff': 4030.0, 'plx': 28.1083}
+ol0.38_all_B_adoptedfold               B    n=10 0.1440+-0.0160 [0.1243-0.1707] NFPPmax=0.0e+00 | N=1000000 mode=ol0.38_all exptime=6 star={'mass': 0.6062, 'rad': 0.6229, 'Teff': 4030.0, 'plx': 28.1083}
+ol0.38_bl0.2_A_adoptedfold             A    n=5 0.0243+-0.0039 [0.0177-0.0281] NFPPmax=1.1e-15 | N=1000000 mode=ol0.38_bl0.2 exptime=6 star={'mass': 0.6062, 'rad': 0.6229, 'Teff': 4030.0, 'plx': 28.1083}
+ol0.38_bl0.2_B_adoptedfold             B    n=10 0.1830+-0.0180 [0.1657-0.2233] NFPPmax=0.0e+00 | N=1000000 mode=ol0.38_bl0.2 exptime=6 star={'mass': 0.6062, 'rad': 0.6229, 'Teff': 4030.0, 'plx': 28.1083}
+a08A.json                              None n=None  | flag-flip paired runs; keys=config,source,runs,triceratops,star,P,sigma,tdepth
+a08B.json                              None n=None  | flag-flip paired runs; keys=config,source,runs,triceratops,star,P,sigma,tdepth
+s13A.json                              None n=None  | flag-flip paired runs; keys=config,source,runs,triceratops,star,P,sigma,tdepth
+s13B.json                              None n=None  | flag-flip paired runs; keys=config,source,runs,triceratops,star,P,sigma,tdepth
+A_base_S32+S98                         A    n=20 0.0312+-0.0031 [0.0265-0.0365] NFPPmax=2.7e-12 | probs_run files=20
+A_base_S32only                         A    n=20 0.0388+-0.0019 [0.0360-0.0418] NFPPmax=4.6e-07 | probs_run files=20
+A_base_S6only                          A    n=20 0.0261+-0.0023 [0.0230-0.0311] NFPPmax=3.7e-07 | probs_run files=20
+A_base_S98only                         A    n=20 0.0290+-0.0024 [0.0250-0.0334] NFPPmax=6.5e-09 | probs_run files=20
+A_loc_S32+S98                          A    n=20 0.0312+-0.0031 [0.0265-0.0365] NFPPmax=0.0e+00 | probs_run files=20
+A_molusc1_S32+S98                      A    n=20 0.0054+-0.0032 [0.0012-0.0108] NFPPmax=0.0e+00 | probs_run files=20
+A_molusc5_S32+S98                      A    n=20 0.0047+-0.0027 [0.0009-0.0104] NFPPmax=0.0e+00 | probs_run files=20
+A_repro_S32+S98                        A    n=20 0.0304+-0.0031 [0.0259-0.0356] NFPPmax=1.7e-12 | probs_run files=20
+A_tic_S32+S98                          A    n=20 0.0354+-0.0044 [0.0274-0.0479] NFPPmax=0.0e+00 | probs_run files=20
+B_base_S32+S98                         B    n=20 0.1791+-0.0111 [0.1607-0.2117] NFPPmax=0.0e+00 | probs_run files=20
+B_base_S98only                         B    n=20 0.1697+-0.0127 [0.1507-0.2018] NFPPmax=0.0e+00 | probs_run files=20
+B_loc_S32+S98                          B    n=20 0.1791+-0.0111 [0.1607-0.2117] NFPPmax=0.0e+00 | probs_run files=20
+B_molusc1_S32+S98                      B    n=20 0.0594+-0.0222 [0.0173-0.1031] NFPPmax=0.0e+00 | probs_run files=20
+B_molusc5_S32+S98                      B    n=20 0.0638+-0.0200 [0.0309-0.1012] NFPPmax=0.0e+00 | probs_run files=20
+B_prevfold_base_S32+S98                B    n=20 0.1470+-0.0115 [0.1285-0.1626] NFPPmax=0.0e+00 | probs_run files=20
+B_prevfold_repro_S32+S98               B    n=20 0.1459+-0.0113 [0.1275-0.1613] NFPPmax=0.0e+00 | probs_run files=20
+B_repro_S32+S98                        B    n=20 0.1827+-0.0111 [0.1640-0.2154] NFPPmax=0.0e+00 | probs_run files=20
+B_tic_S32+S98                          B    n=20 0.1282+-0.0155 [0.0914-0.1556] NFPPmax=0.0e+00 | probs_run files=20
+pubprep_ownfold_A                      A    n=10 0.0343+-0.0054 [0.0286-0.0447] NFPPmax=2.6e-13 | N=1000000 star={'mass': 0.6062, 'rad': 0.6229, 'Teff': 4030.0, 'plx': 28.1083}
+pubprep_ownfold_B                      B    n=10 0.1949+-0.0209 [0.1445-0.2257] NFPPmax=0.0e+00 | N=1000000 star={'mass': 0.6062, 'rad': 0.6229, 'Teff': 4030.0, 'plx': 28.1083}

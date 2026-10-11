@@ -1,0 +1,1 @@
+SELECT *, DISTANCE(POINT(80.85983,-1.32696), POINT(ra,dec))*3600. AS dist_arcsec_j2016pos FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec), CIRCLE(80.85983,-1.32696,0.0666666667)) ORDER BY dist_arcsec_j2016pos

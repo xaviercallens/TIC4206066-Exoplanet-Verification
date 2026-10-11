@@ -1,0 +1,38 @@
+S32_tpf  A: n_ep=8 depth=355 ppm; offset 9.7" (dRA +9.1, dDec -1.5); inj sd (17.6, 22.4)" z=(+0.77, -0.19) maha 0.78 frac_further 0.57; dump dist h: [107.7, 31.3, 44.9, 57.5, 18.8, 61.7, 14.5, 90.8]
+     11.0" T=18.15 needs 89% ecl; real dchi2(N-T)=1.5; nb-inj dchi2 median -5.1 min -26.4
+     44.1" T=17.11 needs 69% ecl; real dchi2(N-T)=8.4; nb-inj dchi2 median -433.2 min -606.1
+     53.0" T=16.98 needs 80% ecl; real dchi2(N-T)=9.8; nb-inj dchi2 median -1143.1 min -1586.0
+     53.7" T=17.26 needs 105% ecl; real dchi2(N-T)=9.8; nb-inj dchi2 median -1133.5 min -1589.0
+     56.6" T=17.05 needs 204% ecl; real dchi2(N-T)=9.2; nb-inj dchi2 median -3934.4 min -5037.3
+     58.8" T=16.33 needs 88% ecl; real dchi2(N-T)=9.9; nb-inj dchi2 median -2441.3 min -3375.7
+S32_tpf  B: n_ep=2 depth=1570 ppm; offset 16.2" (dRA -8.6, dDec +12.9); inj sd (6.8, 11.9)" z=(-0.99, +1.22) maha 1.39 frac_further 0.05; dump dist h: [105.4, 92.8]
+     58.8" T=16.33 needs 391% ecl; real dchi2(N-T)=37.7; nb-inj dchi2 median -14419.8 min -16521.1
+     70.8" T=16.61 needs 2583% ecl; real dchi2(N-T)=50.4; nb-inj dchi2 median -423097.9 min -433348.6
+S32_ffi  A: n_ep=8 depth=410 ppm; offset 8.3" (dRA +7.9, dDec -0.5); inj sd (10.5, 17.8)" z=(+0.98, +0.07) maha 1.00 frac_further 0.52; dump dist h: [107.4, 31.0, 44.9, 121.3, 137.8, 61.4, 14.5, 90.8]
+     11.0" T=18.15 needs 102% ecl; real dchi2(N-T)=1.4; nb-inj dchi2 median -3.6 min -23.6
+     44.1" T=17.11 needs 79% ecl; real dchi2(N-T)=8.3; nb-inj dchi2 median -317.9 min -380.7
+     53.0" T=16.98 needs 92% ecl; real dchi2(N-T)=8.7; nb-inj dchi2 median -363.6 min -468.7
+     53.7" T=17.26 needs 121% ecl; real dchi2(N-T)=8.9; nb-inj dchi2 median -402.7 min -509.7
+     56.6" T=17.05 needs 236% ecl; real dchi2(N-T)=8.4; nb-inj dchi2 median -4844.8 min -5672.8
+     58.8" T=16.33 needs 102% ecl; real dchi2(N-T)=9.2; nb-inj dchi2 median -3459.5 min -3709.7
+S32_ffi  B: n_ep=2 depth=887 ppm; offset 17.0" (dRA -7.4, dDec +14.5); inj sd (6.3, 13.0)" z=(-1.01, +1.25) maha 1.46 frac_further 0.09; dump dist h: [105.1, 92.8]
+     44.1" T=17.11 needs 172% ecl; real dchi2(N-T)=-1.1; nb-inj dchi2 median -251.6 min -350.3
+     53.0" T=16.98 needs 200% ecl; real dchi2(N-T)=-7.0; nb-inj dchi2 median -376.7 min -426.2
+     53.7" T=17.26 needs 263% ecl; real dchi2(N-T)=-7.6; nb-inj dchi2 median -414.7 min -467.2
+     56.6" T=17.05 needs 511% ecl; real dchi2(N-T)=-1.9; nb-inj dchi2 median -5069.9 min -5625.7
+     58.8" T=16.33 needs 221% ecl; real dchi2(N-T)=-0.0; nb-inj dchi2 median -3223.9 min -3645.7
+     70.8" T=16.61 needs 1460% ecl; real dchi2(N-T)=5.6; nb-inj dchi2 median -89962.2 min -91514.0
+S6_ffi   A: n_ep=6 depth=647 ppm; offset 7.8" (dRA +6.6, dDec -3.4); inj sd (2.9, 3.8)" z=(+3.02, -0.58) maha 3.14 frac_further 0.08; dump dist h: [0.8, 2.1, 3.5, 3.2, 1.8, 0.4]
+     45.8" T=17.11 needs 248% ecl; real dchi2(N-T)=52.4; nb-inj dchi2 median -12617.7 min -13300.6
+     53.5" T=16.98 needs 277% ecl; real dchi2(N-T)=42.6; nb-inj dchi2 median -24106.9 min -25037.4
+     54.0" T=17.26 needs 415% ecl; real dchi2(N-T)=42.9; nb-inj dchi2 median -32654.6 min -33724.1
+     57.5" T=17.05 needs 456% ecl; real dchi2(N-T)=58.3; nb-inj dchi2 median -119050.3 min -120842.8
+     58.2" T=16.33 needs 305% ecl; real dchi2(N-T)=57.6; nb-inj dchi2 median -141319.7 min -142864.2
+     72.4" T=16.61 needs 852% ecl; real dchi2(N-T)=58.0; nb-inj dchi2 median -707950.7 min -713107.0
+S6_ffi   B: n_ep=2 depth=974 ppm; offset 2.8" (dRA -2.5, dDec +0.7); inj sd (3.4, 5.3)" z=(-0.55, +0.41) maha 0.63 frac_further 0.77; dump dist h: [21.8, 10.9]
+     45.8" T=17.11 needs 374% ecl; real dchi2(N-T)=43.6; nb-inj dchi2 median -10323.4 min -10947.9
+     53.5" T=16.98 needs 417% ecl; real dchi2(N-T)=44.6; nb-inj dchi2 median -16689.7 min -17328.8
+     57.5" T=17.05 needs 686% ecl; real dchi2(N-T)=45.2; nb-inj dchi2 median -87340.5 min -89195.1
+     58.2" T=16.33 needs 459% ecl; real dchi2(N-T)=45.5; nb-inj dchi2 median -99048.4 min -101337.7
+     72.4" T=16.61 needs 1283% ecl; real dchi2(N-T)=45.5; nb-inj dchi2 median -546504.7 min -550805.3
+done

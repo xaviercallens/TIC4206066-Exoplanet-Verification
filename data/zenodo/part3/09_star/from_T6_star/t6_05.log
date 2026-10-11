@@ -1,0 +1,14 @@
+{
+ "parallax_raw": 28.075018139930098,
+ "parallax_error": 0.017568303272128105,
+ "astrometric_params_solved": 31,
+ "zp": -0.033245,
+ "parallax_corrected": 28.1082631399301,
+ "parallax_corrected_err_stat": 0.017568303272128105,
+ "parallax_corrected_err_with_0p010_floor": 0.02021497662282762,
+ "d_corrected_pc": 35.576726851522096,
+ "d_err_stat": 0.022236262825834564,
+ "d_err_with_floor": 0.025586166531883097,
+ "d_raw_pc": 35.618854991147295,
+ "d_raw_err": 0.022288956095113943
+}

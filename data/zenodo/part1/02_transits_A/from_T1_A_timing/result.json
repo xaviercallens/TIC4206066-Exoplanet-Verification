@@ -1,0 +1,823 @@
+{
+ "topic": "T1_A_timing - Signal A ephemeris and timing",
+ "summary": "Signal A ephemeris is settled: P = 3.182785 +- 0.000006 d, T0 = 2460998.736 +- 0.003 BJD_TDB (epoch 0, mid-exposure) from 19 transits (S6 6, S32 5, S98 8), chi2 ~9/17 (7.5-11.3/17 across three U pipelines, two search windows and the audit's own times). The pubprep 20-transit values (3.1827856, 2460998.7375, 12.6/18) are reproduced exactly; the 2.2-min T0 difference comes entirely from the one-sided S98 E-1 (same epoch, same time system). The audit's 'timing excess' (47.5/19) is an error-model artefact: its own times give 12.7/19 with injection-calibrated errors, which are justified by injections (white/red-noise errors are 1.3-6.4x too small). No TTV evidence; 95% limits ~10-13 min for P_TTV < 64 d, longer periods unconstrained. The cycle count is unique (dchi2 >= 157 with S6; ~34-61 without). S6 is valid for timing (lands +0.3 +- 5.7 min from the S6-free prediction) but not needed. Dropping S6 moves P by up to 1.0 sigma in some pipelines, so the Note's '<0.5 sigma without Sector 6' is not robust for P. Manuscript: three MINOR wording fixes (selection rule, 'no evidence of timing variations', S6 sentence). C042/C045/C058/C071/C073/C074 and the ephemeris part of C087 are resolved.",
+ "facts": [
+  {
+   "id": "A.P",
+   "group": "SIGNAL_A",
+   "quantity": "Orbital period of signal A (weighted linear ephemeris, 19-transit set, injection-calibrated per-sector errors)",
+   "value": "3.1827850",
+   "uncertainty": "0.0000057 (formal WLS with per-sector injection SD; MC sd 5.8e-6); pipeline-to-pipeline spread of the 19-set P 3.1827821-3.1827852 (<=0.53 sigma)",
+   "units": "d",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v4_results.json ephem.drop_onesided_573_and_m1_R60 (P 3.18278495, eP 5.66e-6; R144 3.18278516 +- 6.02e-6) ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json results.U02ver_19_twosided_R60 (reproduced) ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json extra.19set_cross_pipeline",
+   "code": "addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v4_ephem.py (U verifier); addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.py (rerun over 5 stored per-transit tables)",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json",
+   "supersedes": "3.1827856 +- 0.0000058 (pubprep 20-set, pubprep/manuscript.tex L31; reproduced exactly: r1 pubprep_20_inj); 3.1827853 +- 0.0000027 (audit joint fit, formal error too small); 3.1827793 +- 0.0000031 (audit per-event, red-noise errors); 3.182945 (discovery grid)",
+   "manuscript_form": "$P=3.182785\\pm0.000006$\\,d",
+   "notes": "All values (20-set 3.1827856, 19-set 3.1827821-3.1827852, U 01 global/emcee 3.1827834-3.1827858) agree within 0.9 sigma; the printed value is the U verifier 19-set fit. Rounded error 0.000006 covers statistical (5.7e-6) plus pipeline spread (sd ~1.3e-6) in quadrature (5.8e-6)."
+  },
+  {
+   "id": "A.T0",
+   "group": "SIGNAL_A",
+   "quantity": "Mid-transit epoch of signal A at epoch 0 (the Sector 98 transit near BTJD 3998.736), 19-transit set",
+   "value": "2460998.73599",
+   "uncertainty": "0.00288",
+   "units": "BJD_TDB (mid-exposure; = BTJD 3998.73599)",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v4_results.json ephem.drop_onesided_573_and_m1_R60 (T0 2460998.735992, eT0 0.002883) ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json extra.19set_cross_pipeline.T0_range [2460998.73586, 2460998.73620]",
+   "code": "addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v4_ephem.py; addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json",
+   "supersedes": "2460998.7375 +- 0.0023 (pubprep 20-set; difference entirely due to S98 E-1, see A.T0_shift_cause); 2460998.73679 +- 0.00112 (audit joint fit, formal); 2460998.7361 +- 0.0029 (U 02 auditor 20-set R60)",
+   "manuscript_form": "$T_0=2460998.736\\pm0.003$ BJD$_{\\rm TDB}$",
+   "notes": "corr(T0,P) = 0.69 at epoch 0 (r1 U02ver_19_twosided_R60.corr_T0_P). sigma_T0 0.0029 vs pubprep 0.0023: U's S98 injection SD (12.0 min, 1310 selected injections) vs pubprep 10.1 min (150 injections, selection not mirrored); U 02 F2 + verify."
+  },
+  {
+   "id": "A.T0_decorr",
+   "group": "SIGNAL_A",
+   "quantity": "Mid-transit time at the covariance-minimising epoch (19-set, U verifier times)",
+   "value": "2459881.5785 (epoch -351)",
+   "uncertainty": "0.0021",
+   "units": "BJD_TDB",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json results.U02ver_19_twosided_R60.T_decorr_BJD / eT_decorr",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "Optional for a supplementary table only; the Note quotes T0 at epoch 0 with P (corr 0.69). Other pipelines: epoch -340..-359, sigma 0.0020-0.0021 d."
+  },
+  {
+   "id": "A.T0_shift_cause",
+   "group": "SIGNAL_A",
+   "quantity": "Cause of the 0.0015 d (2.2 min) difference between T0 = 2460998.7375 (pubprep) and 2460998.736 (U)",
+   "value": "Event selection: S98 E-1 (one-sided, measured +18.4..+20.5 min in 4 of 5 pipelines) pulls T0 later. Adding E-1 alone to the 19-set moves T0 from 2460998.73599 to 2460998.73755 (+2.24 min); removing E-1 and S32 E-573 from pubprep's own 20 gives 2460998.73601. Same reference epoch (epoch 0 = S98 transit at BTJD 3998.736-3998.738) and same time system (BJD_TDB, mid-exposure).",
+   "uncertainty": "difference = 0.5 sigma",
+   "units": "d",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r2_event_leverage.json R60:19 vs R60:19+E-1 ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json results.pubprep_18_twosided_inj.T0_BJD (2460998.73601) ; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s01_time_systems.json (TIMESYS=TDB, TIMEREF=SOLARSYSTEM, TIMEPIXR=0.5, BJDREFI=2457000 for SPOC/TESS-SPOC/TESScut; QLP TDB/SOLARSYSTEM) ; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/REPORT.md sec. 1 (QLP S98 times agree with SPOC time + barycentric delay to +1.1..+2.5 s)",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r2_event_leverage.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r2_event_leverage.json",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "Not a time-system or reference-epoch effect."
+  },
+  {
+   "id": "A.N_timing",
+   "group": "SIGNAL_A",
+   "quantity": "Number of transits in the timing (linear-ephemeris) fit and their identity",
+   "value": "19 = 6 (S6: E-795,-794,-793,-791,-790,-789) + 5 (S32: E-572,-571,-570,-569,-568) + 8 (S98: E0,1,4,5,9,10,13,14)",
+   "uncertainty": "",
+   "units": "transits",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v4_ephem.py L33-36 (set 'two') ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json results.U02aud_19_twosided_R60.events",
+   "code": "addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v4_ephem.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json",
+   "supersedes": "20 (pubprep: 5 S6 [no E-795 row in pubprep pipe table] + 6 S32 [incl. E-573] + 9 S98 [incl. E-1]); 20 (U 02 auditor: 6/6/8, excludes E-1); 21 (U 01: 6/6/9; audit s09 21); 21 (U R-S6 pipeline incl. E-1 and E-573)",
+   "manuscript_form": "19 transits",
+   "notes": "Differences vs pubprep: +S6 E-795 (clean, S/N 3.4-4.7, 2 h pre-ingress baseline); -S98 E-1 (clean data end ~5 min after egress, then 2 isolated points and the orbit-end gap; its time is method-dependent: +19.5 pubprep, +18.75 U verifier, +20.5 audit, -0.75 R-S6, -75.7 U auditor; chi2 surface bimodal -3/+19 min in U 01 s06c); -S32 E-573 (post-egress baseline truncated after ~4 min by the 11.13 d transit mask; time -4..-9.6 min at +-60 min search but -79..-88 min with +-144 min search). S32 E-567 (S/N 1.5-1.9) and E-566 (coverage 0.64-0.87 after B masking, abuts B) fail the S/N/coverage cuts in every pipeline."
+  },
+  {
+   "id": "A.N_all",
+   "group": "SIGNAL_A",
+   "quantity": "Number of transits in the joint shape fit and split by sector",
+   "value": "23 = 6 (S6) + 8 (S32) + 9 (S98), coverage >= 0.5 (in fact >= 0.64) after quality masking",
+   "uncertainty": "",
+   "units": "transits",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s03_epochs.csv rows 2-34 ; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s11_cycle_count.json single_sector_fits.S6+S32+S98.n_transits=23 ; addenda/tic4206066_PUBLICATION_AUDIT/out/s09_events.json A.pipe.rows",
+   "code": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/s03_epochs.py",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "23 transits",
+   "notes": "At least 27 transits were observed: 4 more fully covered S98 transits (E2, E3, E6, E11) lie in QLP-flagged scattered-light intervals and are excluded (out_s03_epochs.csv frac_in_bit2^29 = 1)."
+  },
+  {
+   "id": "A.timing_chi2",
+   "group": "SIGNAL_A",
+   "quantity": "chi2/dof of the linear ephemeris for the 19-transit set (injection-calibrated per-sector errors)",
+   "value": "9.5/17 (U verifier, +-60 min search); 8.5/17 (+-144 min); range 7.5-11.3/17 across 3 U pipelines x 2 windows and the audit's s09 times",
+   "uncertainty": "p(chi2 > obs) = 0.84-0.98",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v4_results.json ephem.drop_onesided_573_and_m1_R60.chi2=9.51, _R144.chi2=8.51 ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json extra.19set_cross_pipeline.chi2 ['11.32/17','8.66/17','9.51/17','8.51/17','7.47/17','8.62/17']",
+   "code": "addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v4_ephem.py; addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json",
+   "supersedes": "12.6/18 (pubprep 20-set; reproduced 12.63, r1 pubprep_20_inj) which becomes 21.9-26.6/18 with a +-144 min search because of S32 E-573; 47.5/19 (audit, red-noise-inflated errors; see A.timing_excess)",
+   "manuscript_form": "$\\chi^2\\approx9$ for 17 degrees of freedom",
+   "notes": "The 11.32/17 value (U 02 auditor times, +-60 min) is a new number from this rerun; no U file quotes it. MC: observed chi2 at 17-22nd percentile of the empirical-error distribution (v4 mc_chi2_frac_below 0.195/0.222), i.e. not suspiciously low."
+  },
+  {
+   "id": "A.timing_error_model",
+   "group": "SIGNAL_A",
+   "quantity": "Per-event timing error model adopted",
+   "value": "Per-sector constant SD of injection-recovery residuals (template injected into the real light curve, measured identically, same selection): S6 12.9, S32 16.4, S98 12.0 min (U verifier, +-60 min); 13.9/23.5/12.1 (+-144 min)",
+   "uncertainty": "",
+   "units": "min",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v4_results.json injections.S6_R60.sd / S32_R60.sd / S98_R60.sd ; addenda/opus55_final_audit_tic4206066/02_timing_A/out/t5_results.json injections, calibration ; addenda/opus55_final_audit_tic4206066/02_timing_A/out/t6_results.json ttv.R60.sigmas_min (12.9/14.7/12.0)",
+   "code": "addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v3_inj.py, v4_ephem.py; addenda/opus55_final_audit_tic4206066/02_timing_A/t4_injections.py, t5_calibration_ephemeris.py",
+   "rerun": "",
+   "supersedes": "Red-noise-inflated Delta-chi2=1 errors (audit s09: half-width of the chi2 interval scaled by sqrt(chi2_red)*beta, s09_events.py L57-79; median 2-10 min) are too small: injection z-scores have SD 1.3/4.3/2.6 (verifier) and 1.45/6.4/3.5 (auditor) in units of the white error while beta is only 1.0-1.4 (t5 betas; audit s09 beta 1.0-1.73), because the excess is non-Gaussian fit-failure tails (kurtosis 2.3-12), not correlated noise.",
+   "manuscript_form": "injection-calibrated errors",
+   "notes": "MC with errors drawn from the injection pools reproduces sigma_P (5.7-6.0e-6, v4 mc_sdP), prayer bead / event bootstrap / rescaled white give 5.2-7.1e-6 (U 02 report)."
+  },
+  {
+   "id": "A.timing_excess",
+   "group": "SIGNAL_A",
+   "quantity": "Is there a timing excess over the per-event errors?",
+   "value": "No. The audit's own s09 per-event times give chi2 = 47.51/19 with its red-noise errors but 12.71/19 with the pubprep per-sector injection SDs (8.62/17 for the 19-set); the excess is an error-model artefact.",
+   "uncertainty": "",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json results.audit_s09_21_rednoise.chi2=47.51 ; results.audit_s09_21_pubprepINJ.chi2=12.71 ; results.audit_s09_19_twosided_pubprepINJ.chi2=8.62 ; addenda/tic4206066_PUBLICATION_AUDIT/scripts/s09_events.py L57-79,L137",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json",
+   "supersedes": "audit 47.5/19 and 42.6/22 'timing excess ... TTVs cannot be claimed or excluded' (audit/UNRESOLVED_ISSUES.md L15, PUBLICATION_TRUTH.md L434-437)",
+   "manuscript_form": "not in Note (covered by 'chi2 ~ 9 for 17 dof')",
+   "notes": ""
+  },
+  {
+   "id": "A.rms_OC",
+   "group": "SIGNAL_A",
+   "quantity": "rms of O-C about the linear ephemeris",
+   "value": "9.0 (19-set, U verifier times); 7.5-10.0 across pipelines",
+   "uncertainty": "",
+   "units": "min",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v4_results.json ephem.drop_onesided_573_and_m1_R60.rms_oc=9.04 ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides_table.csv column rms (URS6 7.54, s09 8.33, U02ver 9.04, U02aud 9.95)",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides_table.csv",
+   "supersedes": "9.03 (pubprep 20), 9.55 (audit pipe 21), 10.50 (audit own 24), 11.83 (pubprep own 23), 19.4-21.1 (sets with E-573 at the +-144 min solution)",
+   "manuscript_form": "not in Note",
+   "notes": "Descriptive; depends on event set and photometry. Largest residuals: S6 E-793 (-20 min in 2 pipelines, ~0 in 2 others), S98 E1 (+17..+19), S98 E10 (-18..-21), S32 E-571 (+13..+15)."
+  },
+  {
+   "id": "A.TTV",
+   "group": "SIGNAL_A",
+   "quantity": "Transit-timing variations of signal A",
+   "value": "No evidence. Best sinusoid permutation FAP 0.19-0.21 (U 02, 20-set); 95% semi-amplitude upper limit median 9.9 min (+-60 min search) / 13.0 min (+-144 min) for P_TTV < 64 d; 16-23 min for 64-640 d; unconstrained for > 640 d.",
+   "uncertainty": "limits are medians over trial periods (p90 13.9-19.0 min for P_TTV<64 d)",
+   "units": "min",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/02_timing_A/out/t6_results.json ttv.R60 / ttv.R144 (FAP_permutation, upper_limits_summary) ; addenda/opus55_final_audit_tic4206066/02_timing_A/out/t6_ttv_upper_limits_R60.csv",
+   "code": "addenda/opus55_final_audit_tic4206066/02_timing_A/t6_global_ttv.py",
+   "rerun": "",
+   "supersedes": "audit 'TTVs cannot be claimed or excluded' (UNRESOLVED_ISSUES.md L15) - superseded (error model)",
+   "manuscript_form": "no evidence of timing variations",
+   "notes": "Periodogram was run on the U 02 auditor 20-set (includes S32 E-573); not rerun on the 19-set, whose chi2 (<=11.3/17) is lower, so the no-evidence conclusion holds a fortiori. The near-7:2 super-period with the 11.13 d signal, 1/|7/P_B - 2/P_A| ~ 2480 d (arithmetic from P_A 3.182785, P_B 11.13274), falls in the unconstrained regime."
+  },
+  {
+   "id": "A.cycle_count",
+   "group": "SIGNAL_A",
+   "quantity": "Uniqueness of the cycle count S6 <-> S32 <-> S98",
+   "value": "Unique. Epoch numbering: S6 E-795..E-789, S32 E-573..E-566, S98 E-1..E14 (E0 = BTJD 3998.736). With all sectors: 3-sector BLS best 3.182784 d, every other peak within +-0.02 d >= 157 lower, S98<->S32 aliases >= 180 lower; global template fit alternatives k=+-1..3 worse by 265-349; timing chi2 at cycle offset +-1: 13203/13445 vs 12.6. Without S6: S32+S98 BLS next alias (3.17725 d) 57.7 lower; light-curve alias test j=+1 61.0 lower, others >= 127 lower; per-transit S98-only P puts j=+-1 at 9.4-12.3 sigma, 0/200000 MC draws pick a wrong cycle; verif block-bootstrap: true alias loses in 0-1%.",
+   "uncertainty": "",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s10_bls_aliases.json combined.top_local_maxima, alias_positions, S32+S98.top_local_maxima ; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/REPORT.md sec. 6 (dchi2 265-349) ; addenda/rnaas_tic4206066_pubprep/analysis/out/a1_results.json signals.A.A__pipe.S98_only.chi2_vs_cycle_offset ; addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/s1b_alias.json aliases[j=1].dchi2_below_true=61.0 ; addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json cycle_count.aliases, cycle_count_mc.frac_wrong_cycle=0 ; addenda/independent_verification_tic4206066_SEALED/verification_report.md L15 and T11",
+   "code": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/s10_bls_aliases.py, s11_cycle_count.py; addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/s1b_alias.py, s1c_cycle_mc.py",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "not in Note (implicit in the ephemeris)",
+   "notes": "'569 (S98->S32) / 792 (S98->S6)' (audit FINAL_PARAMETERS.json signal_A.ephemeris.cross_checks.cycle_count) are counts from BTJD 2187.0 and 1479.0 to E0 (s19_cycles_and_figures.py L29-30), i.e. E-569->E0 and E-792->E0 in the same numbering; U's '571' (E-571->E0) and R-S6 'N0 = 577' (E-570->E7) are the same count with other reference epochs. Without S6 the preference is weaker (dchi2 ~34-61 at light-curve level) but still decisive."
+  },
+  {
+   "id": "A.S6_timing",
+   "group": "SIGNAL_A",
+   "quantity": "Sector 6 transit times vs the S32+S98-only ephemeris",
+   "value": "mean O-C +0.3 +- 5.7 min (6 events, z = 0.03); sector-level time shift +0.5 (-3.5/+3.0) min; U 01 sector shift +1.0 (+3.3/-2.5) min",
+   "uncertainty": "prediction sigma 7.8 min",
+   "units": "min",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json S6_OC_vs_S32S98_eph (mean_oc_min 0.30, e_mean 5.66, z 0.031) ; s6_checks.S6_timing (dt_best 0.5, lo -3.0, hi 3.5) ; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/REPORT.md sec. 6",
+   "code": "addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/s1_timing.py, s3_s6_checks.py",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "Out-of-sample test: the S32+S98 ephemeris (no S6) predicts the S6 transits and they occur there. Dump-mirrored injections in S6 give timing SD 12.5 min vs 13.2 min control, no bias (U 02 t9_results.json)."
+  },
+  {
+   "id": "A.S6_use",
+   "group": "SIGNAL_A",
+   "quantity": "May Sector 6 be used for the ephemeris and cycle count?",
+   "value": "Yes for photometric timing (ephemeris, cycle count): S6 times agree with the S32+S98 prediction (z = 0.03), dump proximity does not bias or broaden timing, and dumps recur every 3.125 d vs P 3.1828 d so a dump systematic drifts 1.4 h per cycle and cannot mimic a periodic dip; S6 alone gives P = 3.1826 +- 0.0018 d, 32 sigma from the dump spacing. No for localization (difference images). The cycle count does not require S6.",
+   "uncertainty": "",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/02_timing_A/out/t9_results.json ; addenda/opus55_final_audit_tic4206066/REFEREE_PASS_1.md L196-L202 ; addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json S6_OC_vs_S32S98_eph, timing_R60.S6_sel (P 3.18256 +- 0.00182)",
+   "code": "",
+   "rerun": "",
+   "supersedes": "verif 'Sector 6 is not a clean confirmation' (timing part) - see conflict X-T1-06",
+   "manuscript_form": "not in Note",
+   "notes": ""
+  },
+  {
+   "id": "A.S6_drop_effect",
+   "group": "SIGNAL_A",
+   "quantity": "Change of P and T0 when Sector 6 is dropped from the 19-set",
+   "value": "P shifts by -0.14 sigma (R-S6 pipeline), -0.64/-0.67 sigma (U verifier +-60/+-144 min), -1.01/-0.95 sigma (U 02 auditor) in units of the with-S6 sigma_P; sigma_P grows 1.5-2.3x; T0 shifts by <= 0.43 min (<= 0.10 sigma). S32+S98-only P = 3.182779-3.182787 d across pipelines.",
+   "uncertainty": "",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json extra.dropS6:* ; addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json timing_R60_compare (z_vs_manuscript_naive -0.28, z_nested 0.03), timing_R144_compare (-0.36)",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json",
+   "supersedes": "U REQUIRED_CHANGES C6 / NUMERIC_RECHECK row 80 'all headline A values within 0.5 sigma' (true only in the R-S6 pipeline for P)",
+   "manuscript_form": "see manuscript finding on 'Without Sector 6 ... <0.5 sigma'",
+   "notes": ""
+  },
+  {
+   "id": "A.P_S98only",
+   "group": "SIGNAL_A",
+   "quantity": "Period from Sector 98 alone",
+   "value": "per-transit linear fits 3.18164-3.18188 (+-0.00044-0.00060) d, 1.5-2.6 sigma below the adopted P; light-curve fits 3.18276 +- 0.00024 (U 01 template), BLS 3.18271-3.18298; bootstrap 3.18264 +- 0.0016 (verif)",
+   "uncertainty": "",
+   "units": "d",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r3_s98_only.json ; addenda/rnaas_tic4206066_pubprep/analysis/out/a1_results.json signals.A.A__pipe.S98_only (3.1816438 +- 0.00043959) ; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s11_cycle_count.json single_sector_fits.S98 (3.1827602 +- 0.000235) ; addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json timing_R60.S98_sel (3.182055 +- 0.000509)",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r3_s98_only.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r3_s98_only.json",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "The per-transit S98-only slope is pulled low by E-1 (+19 min at epoch -1) and E10 (-20 min): dropping E-1 moves pubprep from -2.60 to -1.91 sigma and the U verifier from -2.1 to -1.5 sigma. Single-sector precision only; no effect on the adopted P."
+  },
+  {
+   "id": "A.P_discovery",
+   "group": "SIGNAL_A",
+   "quantity": "Discovery search-grid period",
+   "value": "3.182945191903069",
+   "uncertainty": "grid step ~2e-4 d",
+   "units": "d",
+   "status": "FINAL",
+   "evidence": "candidates/tic4206066_p3.182945/candidate.json signal.period_d ; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s12_s98_frozen.json",
+   "code": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/s12_s98_frozen.py",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "Historical only: S98-only coarse-grid BLS peak, 1.6e-4 d = 0.37-0.87 sigma of the S98-only period uncertainty from the adopted P."
+  },
+  {
+   "id": "A.P_jointfit_formal",
+   "group": "SIGNAL_A",
+   "quantity": "Period from joint transit fits (formal errors)",
+   "value": "3.1827853 +- 0.0000027 (audit emcee); 3.1827858 +- 0.0000020 (U 01 LSQ); 3.1827834 +0.0000036/-0.0000040 (U 01 emcee with beta)",
+   "uncertainty": "formal errors ~1.7x too small",
+   "units": "d",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/PUBLICATION_TRUTH.md L90 ; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s05_globalfit_lsq.json ; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s09_emcee_long.json ; addenda/opus55_final_audit_tic4206066/02_timing_A/out/t6_results.json global_fit_20 (eP 3.2e-6 white, 3.6e-6 beta)",
+   "code": "",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "Values agree with A.P; their errors omit the non-Gaussian single-event timing tails (MC sd 5.6-6.3e-6), so they are not used for the quoted error."
+  },
+  {
+   "id": "A.time_system",
+   "group": "DATA",
+   "quantity": "Time system of all timing inputs",
+   "value": "BJD_TDB (BTJD = BJD_TDB - 2457000), mid-exposure time stamps",
+   "uncertainty": "target barycentric corrections validated to <= 2.5 s; TESScut CCD-reference offsets <= 20 s",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s01_time_systems.json (TIMESYS, TIMEREF, TIMEPIXR, BJDREFI per product) ; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s01b_bary_validation.json",
+   "code": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/s01_time_systems.py, s01b_bary_validation.py",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "BJD$_{\\rm TDB}$",
+   "notes": "S98 (orbits 205-208) is outside the QLP barycentric-bug sectors (U 01 REPORT sec. 1)."
+  },
+  {
+   "id": "A.template_T14",
+   "group": "SIGNAL_A",
+   "quantity": "T14 of the fixed timing template",
+   "value": "1.888",
+   "uncertainty": "",
+   "units": "h",
+   "status": "FINAL",
+   "evidence": "addenda/rnaas_tic4206066_pubprep/analysis/out/a1_results.json signals.A.A__pipe.template_T14_h (1.8883) ; own arithmetic: k=0.0212, b=0.35, rho=2.51 rho_sun, P=3.182785 d -> a/R*=12.37, T14=1.888 h",
+   "code": "",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "T14 evaluated at the template parameters, whereas 1.874 +0.048/-0.047 h (audit) is the posterior median of T14; a 0.8-min symmetric duration difference does not shift mid-times, and templates differing in LD/duration change P by <0.5 sigma (U 02 variants ld_lo/ld_hi; 3 U pipelines with different templates)."
+  },
+  {
+   "id": "A.harmonic",
+   "group": "SIGNAL_A",
+   "quantity": "Period harmonic status (P vs 2P/3P/4P, P/3)",
+   "value": "True period is P = 3.182785 d: consecutive integer epochs of both parities carry transits consistent with one linear ephemeris (19-set mixes odd/even epochs), odd/even depths agree (A03 itself: 331 vs 296 ppm, 0.40 sigma), flux at P/3 phases -41 +- 32 and -7 +- 32 ppm.",
+   "uncertainty": "",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "candidates/tic4206066_p3.182945/harmonic.json (odd_even_sigma 0.40; hypotheses.P.sector_shifts_d S6 0.666, S32 0.0885; original_period 3.182945) ; addenda/tic4206066_PUBLICATION_AUDIT/PUBLICATION_TRUTH.md L137-139, L451",
+   "code": "",
+   "rerun": "",
+   "supersedes": "A03 'AMBIGUOUS, best supported 2P' (harmonic.json period_status)",
+   "manuscript_form": "not in Note",
+   "notes": "A03 ran on the discovery-grid period 3.182945 d, which is off by 1.6e-4 d, i.e. 0.09 d at S32 and 0.13 d at S6, so it mispredicted archival events at P (P hypothesis 'supported: false', 1 contradicting epoch). Its '6.4 sigma secondary at phase 0.5 of 2P' (309 +- 48 ppm) is the transit at odd epochs, i.e. evidence for P."
+  },
+  {
+   "id": "A.pixel_recheck_ephem",
+   "group": "SIGNAL_A",
+   "quantity": "Offset of the pixel-recheck ephemeris (audit ephem_current.json) from the final ephemeris",
+   "value": "+0.77 (S6), +0.87 (S32), +1.16 (S98) min",
+   "uncertainty": "",
+   "units": "min",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json extra.pixel_recheck_ephem_minus_final_min ; addenda/tic4206066_PUBLICATION_AUDIT/out/ephem_current.json ; addenda/tic4206066_pixel_recheck/SUMMARY.md L30-31",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "Negligible for depth measurements (T14 = 113 min)."
+  },
+  {
+   "id": "A.S32_TCE",
+   "group": "SIGNAL_A",
+   "quantity": "Why SPOC issued no Sector 32 TCE",
+   "value": "",
+   "uncertainty": "",
+   "units": "",
+   "status": "NOT_AVAILABLE",
+   "evidence": "addenda/rnaas_tic4206066_pubprep/UNRESOLVED_LIMITATIONS.md L17 (S32-only S/N 6.7-9.1) ; addenda/independent_verification_tic4206066_SEALED/verification_report.md T1 (SPOC S32 2-min blind BLS does not recover 3.18 d, MES ~6.7)",
+   "code": "",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": "Most likely below/near the SPOC 7.1 MES threshold in S32 alone (estimator-dependent 6.7-9.1); SPOC DV internals not inspected. Does not affect timing."
+  }
+ ],
+ "conflicts": [
+  {
+   "id": "X-T1-01",
+   "quantity": "A.P and A.T0",
+   "master_ids": "CF 219, CF 220, CF 230, CF 231",
+   "claims": [
+    {
+     "source": "M",
+     "value": "P 3.1827856 +- 0.0000058 d, T0 2460998.7375 +- 0.0023 (20 transits, chi2 12.6/18)",
+     "evidence": "addenda/rnaas_tic4206066_pubprep/manuscript.tex L31; addenda/tic4206066_MASTER_EVIDENCE/CURRENT_FACTS.csv L219, L230",
+     "method": "WLS of pubprep per-transit times, 150-injection per-sector SDs"
+    },
+    {
+     "source": "audit",
+     "value": "P 3.1827853 +- 0.0000027, T0 2460998.73679 +- 0.00112 (joint emcee, formal)",
+     "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/PUBLICATION_TRUTH.md L90-91",
+     "method": "joint batman+emcee of 23 windows"
+    },
+    {
+     "source": "U",
+     "value": "P 3.182785 +- 0.000006, T0 2460998.736 +- 0.003 (19 transits, chi2 ~9/17)",
+     "evidence": "addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v4_results.json ephem.drop_onesided_573_and_m1_R60",
+     "method": "independent per-transit template fits on fresh MAST data, 1500 injections/sector"
+    },
+    {
+     "source": "P",
+     "value": "P 3.182785293657263, T0 BTJD 3998.7367930333035",
+     "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/out/ephem_current.json",
+     "method": "audit frozen-template fit (used only to place windows)"
+    }
+   ],
+   "trace": "pubprep: a1_timing_depths.py on pipeline LCs -> a1_per_transit.csv; reproduced exactly by r1 (3.1827856, 2460998.73754, 12.63/18). U: v2_real.py/v4_ephem.py on U/00_data (sha256-checked). audit: s08 joint fit (formal errors), s09 per-event.",
+   "diagnosis": "P: no real disagreement (all within 0.9 sigma). T0: different event set (S98 E-1 in/out) -> 2.2 min; sigma_T0: different injection sample (150 vs 1310 selected). Joint-fit errors are formal and too small.",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.py -> r1_ephemerides.json; addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r2_event_leverage.py -> r2_event_leverage.json (adding E-1 to 19-set moves T0 +2.24 min to 2460998.73755; pubprep minus E-1,E-573 gives 2460998.73601)",
+   "resolution": "P = 3.182785 +- 0.000006 d; T0 = 2460998.736 +- 0.003 BJD_TDB (epoch 0), 19-transit set",
+   "reason": "The 19-set excludes two events whose times are demonstrably method-dependent (E-1: -76..+20.5 min across 5 pipelines; E-573: -4..-88 min with search window); U injection SDs rest on ~9x more, selection-mirrored injections; the result is reproduced by 3 independent U pipelines plus the audit's own times (P 3.1827821-3.1827852, T0 .73586-.73620). The 19-set T0 error is larger (conservative), not more favorable.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T1-02",
+   "quantity": "A.N_timing (19 vs 20 vs 21)",
+   "master_ids": "CF 219, CF 323",
+   "claims": [
+    {
+     "source": "pubprep",
+     "value": "20 = 5/6/9",
+     "evidence": "addenda/rnaas_tic4206066_pubprep/analysis/out/a1_per_transit.csv (pipe rows; no S6 E-795 row)",
+     "method": "coverage>=0.7, S/N>=2, not at scan edge"
+    },
+    {
+     "source": "U",
+     "value": "19 = 6/5/8",
+     "evidence": "addenda/opus55_final_audit_tic4206066/02_timing_A/verify/VERIFY_REPORT.md 'Missed issues'; v4_ephem.py set 'two'",
+     "method": "+ two-sided baseline (drop E-1, E-573)"
+    },
+    {
+     "source": "U",
+     "value": "20 = 6/6/8 (U 02 auditor); 21 = 6/6/9 (U 01; audit s09; R-S6)",
+     "evidence": "addenda/opus55_final_audit_tic4206066/02_timing_A/out/t3_events_base.csv sel; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/REPORT.md sec. 3",
+     "method": "same rule, different pipelines"
+    }
+   ],
+   "trace": "Event tables compared row by row: pubprep a1_per_transit.csv, audit s09_events.json, U t3_events_base.csv, v2_real_events.csv, R-S6 s1_timing_R60.json.",
+   "diagnosis": "Implementation differences of an unstated rule, plus two one-sided events (S98 E-1: clean data end ~5 min after egress at an orbit end; S32 E-573: post-egress baseline cut after ~4 min by the 11.13 d mask).",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r2_event_leverage.json (E-795 changes P by 0.14 sigma; E-573 changes chi2 only; E-1 moves T0 by 0.55 sigma)",
+   "resolution": "19 transits (S6 6, S32 5, S98 8); listed in A.N_timing",
+   "reason": "Both excluded events have unstable, method-dependent times; the pubprep 20-set lacks S6 E-795 only because its S6 table has no row for it (U pipelines measure it at S/N 3.4-4.7 with baseline on both sides).",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T1-03",
+   "quantity": "A.timing_chi2 / existence of a timing excess",
+   "master_ids": "C073, CF 326, CF 329",
+   "claims": [
+    {
+     "source": "audit",
+     "value": "chi2 47.5/19 (pipe), 42.6/22 (own) with red-noise-inflated errors; 'TTVs cannot be claimed or excluded'",
+     "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/UNRESOLVED_ISSUES.md L15; addenda/tic4206066_PUBLICATION_AUDIT/out/s09_events.json A.ephem_pipe.chi2",
+     "method": "Delta-chi2=1 half-width x sqrt(chi2red) x beta"
+    },
+    {
+     "source": "pubprep",
+     "value": "12.6/18, 'no timing anomaly remains'",
+     "evidence": "addenda/rnaas_tic4206066_pubprep/METHOD_AUDIT.md L44-45; a1_results.json e_dt_inj_min.chi2",
+     "method": "150-injection per-sector SD"
+    },
+    {
+     "source": "U",
+     "value": "11.6-26.6/18 (20-set, window-dependent); 9.5/17 and 8.5/17 (19-set)",
+     "evidence": "addenda/opus55_final_audit_tic4206066/02_timing_A/out/t5_results.json; verify/v4_results.json",
+     "method": "1500-2000 injections/sector, MC"
+    }
+   ],
+   "trace": "audit s09_events.py L57-79 builds e_dt from the local chi2 curvature; pubprep a1 and U t4/v3 inject the template into real data and take the SD of recovered-injected.",
+   "diagnosis": "Flawed error model in the audit: local Delta-chi2 widths (even beta-inflated) miss the heavy non-Gaussian tails of single-event timing at S/N 3-6 (injection z SD 1.3-6.4, beta 1.0-1.4).",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json: audit s09 times with red-noise errors 47.51/19 (reproduced); same times with pubprep injection SDs 12.71/19; audit 19-set 8.62/17",
+   "resolution": "No timing excess. chi2 ~9/17 for the 19-set (range 7.5-11.3 across pipelines/windows).",
+   "reason": "Same times, only the error model changes the verdict; the injection model is validated by the injections themselves and by the MC reproduction of sigma_P; the red-noise model is contradicted by injection z-score SDs >> 1.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T1-04",
+   "quantity": "A.rms_OC",
+   "master_ids": "C074, CF 328",
+   "claims": [
+    {
+     "source": "pubprep",
+     "value": "9.03 min (20 events)",
+     "evidence": "addenda/rnaas_tic4206066_pubprep/analysis/out/a1_results.json signals.A.A__pipe.ephemeris.e_dt_inj_min.rms_oc_min",
+     "method": "WLS residuals"
+    },
+    {
+     "source": "audit",
+     "value": "9.55 (21, pipe), 10.50 (24, own)",
+     "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/out/s09_events.json A.ephem_pipe/own.rms_oc_min",
+     "method": "WLS residuals"
+    },
+    {
+     "source": "pubprep",
+     "value": "11.83 (own, 23)",
+     "evidence": "addenda/rnaas_tic4206066_pubprep/analysis/out/a1_results.json A__own",
+     "method": "WLS residuals"
+    },
+    {
+     "source": "U",
+     "value": "9.04 (19-set); 7.5-10.0 across pipelines",
+     "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides_table.csv",
+     "method": "WLS residuals"
+    }
+   ],
+   "trace": "All are rms of residuals of different event sets / photometries.",
+   "diagnosis": "definition difference (event set, photometry)",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides_table.csv",
+   "resolution": "rms O-C = 9.0 min for the adopted 19-set (U verifier), 7.5-10.0 min across pipelines; descriptive, not in Note",
+   "reason": "Values differ because they describe different event sets; none is wrong.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T1-05",
+   "quantity": "A.cycle_count numbers",
+   "master_ids": "CF 229",
+   "claims": [
+    {
+     "source": "audit",
+     "value": "569 (S98->S32), 792 (S98->S6)",
+     "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/FINAL_PARAMETERS.json signal_A.ephemeris.cross_checks.cycle_count",
+     "method": "round((T98 - 2187.0)/P), round((T98 - 1479.0)/P)"
+    },
+    {
+     "source": "U",
+     "value": "E-571 -> E0 = 571; E-791 -> E-571 = 220; R-S6 N0 = 577 (E-570 -> E7)",
+     "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/REPORT.md numeric rows; addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json cycle_count",
+     "method": "epoch numbering"
+    }
+   ],
+   "trace": "addenda/tic4206066_PUBLICATION_AUDIT/scripts/s19_cycles_and_figures.py L29-33",
+   "diagnosis": "definition difference (reference epochs)",
+   "rerun": "none needed (arithmetic)",
+   "resolution": "One consistent numbering: S6 E-795..E-789, S32 E-573..E-566, S98 E-1..E14; cycle count unique",
+   "reason": "All numbers map onto the same epoch numbering.",
+   "status": "NOT_A_CONFLICT"
+  },
+  {
+   "id": "X-T1-06",
+   "quantity": "Use of Sector 6 for timing (ephemeris part of C087)",
+   "master_ids": "C087, CF 299",
+   "claims": [
+    {
+     "source": "verif",
+     "value": "'Sector 6 is not a clean confirmation of the 3.18-d signal' (all transits 0.4-3.5 h from dumps)",
+     "evidence": "addenda/independent_verification_tic4206066_SEALED/verification_report.md L14",
+     "method": "dump timing census"
+    },
+    {
+     "source": "audit",
+     "value": "'a dump systematic cannot fold coherently at P_A'",
+     "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/PUBLICATION_TRUTH.md L420-421",
+     "method": "argument"
+    },
+    {
+     "source": "U",
+     "value": "S6 times vs S32+S98 ephemeris: +0.3 +- 5.7 min (z 0.03); dump-mirrored injections unbiased; dropping S6 changes P <0.5 sigma",
+     "evidence": "addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json; addenda/opus55_final_audit_tic4206066/02_timing_A/out/t9_results.json",
+     "method": "out-of-sample prediction, injections"
+    }
+   ],
+   "trace": "R-S6 s1_timing.py/s3_s6_checks.py on fresh data; U 02 t9_s6_dump_injections.py.",
+   "diagnosis": "Both valid for different questions: verif's caveat concerns S6 as an independent photometric/depth confirmation (raw-pixel depth ~2x PDCSAP); for timing S6 is an out-of-sample success.",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json extra.dropS6:* (dropping S6 from the 19-set: P -0.14..-1.01 sigma, T0 <= 0.43 min)",
+   "resolution": "S6 may be used for the ephemeris and cycle count; it is not needed for the cycle count; S6 difference images are unusable for localization. Dropping S6 moves P by up to 1.0 sigma (pipeline-dependent) and T0 by <= 0.1 sigma.",
+   "reason": "S6 times land where the S6-free ephemeris predicts; dump spacing (3.125 d) differs from P by 1.4 h/cycle so dumps cannot produce a P-periodic dip train.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T1-07",
+   "quantity": "Pool multisector period of A",
+   "master_ids": "C042, CF 225",
+   "claims": [
+    {
+     "source": "pool",
+     "value": "3.18281 (SUMMARY.md L29)",
+     "evidence": "addenda/pool_multisector/SUMMARY.md L29",
+     "method": "rounded pass-1 narrow BLS"
+    },
+    {
+     "source": "pool",
+     "value": "3.182758289005667 (pass 2)",
+     "evidence": "addenda/pool_multisector/multisector_results.json results[4].P_refined",
+     "method": "narrow BLS S6+S32"
+    }
+   ],
+   "trace": "3.182805458415842 (pass 1) rounds to 3.18281.",
+   "diagnosis": "stale data (pass 1 printed in a summary) at search-level precision",
+   "rerun": "none needed (rounding arithmetic)",
+   "resolution": "Search-level values, superseded by A.P; not used anywhere current",
+   "reason": "Both lie within the BLS grid resolution; they are not ephemeris measurements.",
+   "status": "COSMETIC"
+  },
+  {
+   "id": "X-T1-08",
+   "quantity": "S98-only period of A",
+   "master_ids": "C045, CF 226-228",
+   "claims": [
+    {
+     "source": "M",
+     "value": "3.18220 +- 0.00031 (LEO trapezoid); 3.18249 +- 0.00021 (LEO model); 3.18164 +- 0.00044 (pubprep, -2.6 sigma); 3.18264 +- 0.0016 (verif)",
+     "evidence": "addenda/tic4206066_MASTER_EVIDENCE/CONTRADICTIONS.md C045",
+     "method": "various"
+    },
+    {
+     "source": "U",
+     "value": "3.18276 +- 0.00024 (template); 3.18206 +- 0.00051 (R-S6 per-transit)",
+     "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s11_cycle_count.json; addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json timing_R60.S98_sel",
+     "method": "template fit; per-transit WLS"
+    }
+   ],
+   "trace": "per-transit fits (pubprep a1, U verifier, R-S6) vs light-curve fits (U 01, LEO).",
+   "diagnosis": "single-sector imprecision; per-transit slope pulled low by the one-sided E-1 (+19 min) and E10 (-20 min)",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r3_s98_only.json (pubprep 9 ev -2.60 sigma -> 8 ev w/o E-1 -1.91 sigma; U verifier -2.1 -> -1.5 sigma)",
+   "resolution": "S98-only P = 3.1816-3.1830 d depending on estimator (sigma 2-16e-4 d); consistent with the adopted P at <= 2.6 sigma; it only feeds the cycle count, which is unique for every estimator",
+   "reason": "Correlated estimators on the same 9 events; worst case explained partly by E-1; no effect on the 3-sector P.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T1-09",
+   "quantity": "T14 of the timing template",
+   "master_ids": "C058, CF 266",
+   "claims": [
+    {
+     "source": "pubprep",
+     "value": "template T14 1.888 h",
+     "evidence": "addenda/rnaas_tic4206066_pubprep/analysis/out/a1_results.json signals.A.A__pipe.template_T14_h",
+     "method": "T14 at fixed k=0.0212, b=0.35, rho=2.51"
+    },
+    {
+     "source": "audit",
+     "value": "T14 1.874 +0.048/-0.047 h",
+     "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/FINAL_PARAMETERS.json signal_A.shape_mann_prior.T14_h",
+     "method": "posterior median"
+    }
+   ],
+   "trace": "Own arithmetic: a/R* = 12.37 from rho = 2.51 rho_sun, P; T14 = 1.888 h at the template parameters.",
+   "diagnosis": "definition difference (T14 at posterior-median parameters vs posterior median of T14)",
+   "rerun": "none needed (closed-form arithmetic in A.template_T14 notes)",
+   "resolution": "Both correct for their definitions; 0.8 min difference (0.3 sigma) irrelevant for mid-times",
+   "reason": "Symmetric duration mismatch does not bias mid-times; different templates across 3 U pipelines give P within 0.5 sigma.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T1-10",
+   "quantity": "Period harmonic status",
+   "master_ids": "C071, CF 316",
+   "claims": [
+    {
+     "source": "M",
+     "value": "A03 'AMBIGUOUS', best supported 2P, 6.4 sigma secondary at phase 0.5 of 2P",
+     "evidence": "candidates/tic4206066_p3.182945/harmonic.json period_status, secondary_max",
+     "method": "pipeline harmonic audit"
+    },
+    {
+     "source": "audit",
+     "value": "'no P/3 or 2P signature'",
+     "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/PUBLICATION_TRUTH.md L451",
+     "method": "odd/even and P/3-phase tests"
+    }
+   ],
+   "trace": "harmonic.json uses original_period 3.182945 (discovery grid) and fitted sector shifts (S32 +0.0885 d, S6 +0.666 d) at P.",
+   "diagnosis": "stale input: A03 ran on the imprecise discovery period, so archival events at P were mispredicted; its 2P 'secondary' is the P transit at odd epochs; its own odd/even is 0.40 sigma",
+   "rerun": "none needed (read harmonic.json fields)",
+   "resolution": "P = 3.182785 d is the period; A03 flag superseded",
+   "reason": "Evidence against 2P (odd/even equal, timing of both parities on one ephemeris) and P/3 (flat P/3 phases) uses the correct ephemeris.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T1-11",
+   "quantity": "U internal: 01_ephemeris_A vs 02_timing_A/verify and proposed_revision",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "U",
+     "value": "01: 'The ephemeris numbers themselves need no change'; recommends '20 transits with >=70% coverage and S/N>=2'",
+     "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/REPORT.md 'Recommended wording'",
+     "method": "U 01 audit"
+    },
+    {
+     "source": "U",
+     "value": "02+verify/REQUIRED_CHANGES B3/manuscript: 19 transits, T0 .736 +- .003, chi2 ~9/17",
+     "evidence": "addenda/opus55_final_audit_tic4206066/REQUIRED_CHANGES.md B3; addenda/opus55_final_audit_tic4206066/proposed_revision/manuscript.tex L33",
+     "method": "later verifier"
+    }
+   ],
+   "trace": "01 used 16-84% injection half-widths and did not treat one-sided events; 02 verify found E-573 one-sided and E-1 one-sided.",
+   "diagnosis": "stale (01 predates the verifier's one-sided-event finding)",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json (19-set reproduced in 4 pipelines)",
+   "resolution": "02/verify and the proposed revision supersede 01's wording",
+   "reason": "Later, more complete analysis; reproduced here.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T1-12",
+   "quantity": "U internal: 'Without Sector 6 all these values change by <0.5 sigma' (for P)",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "U",
+     "value": "P shift -0.28/-0.36 sigma naive, 0.03 nested (R-S6 pipeline, 21/15-event sets)",
+     "evidence": "addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/R-S6_summary.json timing_R60_compare, timing_R144_compare; addenda/opus55_final_audit_tic4206066/NUMERIC_RECHECK.csv row 80",
+     "method": "R-S6 pipeline only"
+    },
+    {
+     "source": "U",
+     "value": "19-set without S6: P shift -0.64 sigma (verifier), -1.01 sigma (U 02 auditor), -0.14 sigma (R-S6)",
+     "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json extra.dropS6:*",
+     "method": "this rerun on U's own stored times"
+    }
+   ],
+   "trace": "R-S6 evaluated only its own pipeline and its own 21-event set, not the adopted 19-set.",
+   "diagnosis": "incomplete check (one pipeline, different event set)",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.py",
+   "resolution": "For P the S6 effect is <= 1.0 sigma (pipeline-dependent); T0 <= 0.1 sigma",
+   "reason": "Rerun on all stored U timing tables for the adopted 19-set.",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T1-13",
+   "quantity": "Ephemeris used by pixel_recheck vs final",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "P",
+     "value": "P 3.182785293657263, T0 BTJD 3998.7367930333035",
+     "evidence": "addenda/tic4206066_pixel_recheck/SUMMARY.md L30-31",
+     "method": "audit ephem_current.json"
+    },
+    {
+     "source": "U",
+     "value": "P 3.1827850, T0 BTJD 3998.73599",
+     "evidence": "addenda/opus55_final_audit_tic4206066/02_timing_A/verify/v4_results.json",
+     "method": "19-set"
+    }
+   ],
+   "trace": "pixel_recheck scripts/common.py L10-12 reads ephem_current.json",
+   "diagnosis": "stale but immaterial ephemeris",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json extra.pixel_recheck_ephem_minus_final_min (0.77-1.16 min)",
+   "resolution": "No effect on pixel-level depths",
+   "reason": "Offset <= 1.2 min vs T14 = 113 min.",
+   "status": "COSMETIC"
+  },
+  {
+   "id": "X-T1-14",
+   "quantity": "Cycle-count robustness without Sector 6",
+   "master_ids": "C087 (verif caveat 2)",
+   "claims": [
+    {
+     "source": "U",
+     "value": "aliases >= 180 lower (3-sector BLS)",
+     "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s10_bls_aliases.json",
+     "method": "all 3 sectors"
+    },
+    {
+     "source": "verif",
+     "value": "'exact period is not fixed by S32 alone'; S98 alone prefers 3.18279 by dS/N 2.0-2.3; true alias loses in 0-1%",
+     "evidence": "addenda/independent_verification_tic4206066_SEALED/verification_report.md L15, T11",
+     "method": "S98-only alias S/N, block bootstrap"
+    },
+    {
+     "source": "U",
+     "value": "S32+S98 only: next alias 57.7-61.0 lower",
+     "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s10_bls_aliases.json S32+S98; addenda/opus55_final_audit_tic4206066/referee/resolve_R-S6/out/s1b_alias.json",
+     "method": "light-curve alias search"
+    }
+   ],
+   "trace": "Different data subsets.",
+   "diagnosis": "both valid for different quantities (with vs without S6)",
+   "rerun": "none needed (stored outputs suffice)",
+   "resolution": "Cycle count unique with S6 (dchi2 >= 157) and strongly preferred without S6 (dchi2 ~34-61, wrong-alias rate <= 1%)",
+   "reason": "S6 is usable for timing (X-T1-06), so the with-S6 margin applies; the S6-free margin is still decisive.",
+   "status": "RESOLVED"
+  }
+ ],
+ "manuscript_findings": [
+  {
+   "quote": "from the 19 transits with $\\ge$70\\% coverage, ${\\rm S/N}\\ge2$, and baselines on both sides",
+   "problem": "The rule is not reproducible as written. Both excluded events have some post-egress data (S98 E-1 ~5 min contiguous plus two isolated points; S32 E-573 ~4 min before the 11.13 d mask), and the auditor's own '>= 0.5 T14 each side' version would also drop S6 E-794/-790/-789 (30-min cadence), S98 E1, E10 and E14. The actual reasons are a data gap and an adjacent 11.13 d transit.",
+   "fix": "from the 19 transits with $\\ge$70\\% coverage and ${\\rm S/N}\\ge2$, excluding two whose post-egress baseline is cut by a data gap or an 11.13\\,d transit",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "($\\chi^2\\approx9$ for 17 degrees of freedom; no timing variations)",
+   "problem": "'no timing variations' overstates: the data exclude only sinusoidal TTVs above ~10-13 min (95%, P_TTV < 64 d) and leave periods > 640 d (incl. the ~6.8 yr near-7:2 super-period) unconstrained. chi2 ~9/17 itself is verified (7.5-11.3/17 across pipelines).",
+   "fix": "($\\chi^2\\approx9$ for 17 degrees of freedom; no evidence of timing variations)",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "Without Sector 6 all these values change by $<0.5\\sigma$.",
+   "problem": "If 'all these values' includes P (same paragraph), it is not robust: dropping S6 from the adopted 19-set shifts P by -0.64 sigma (U verifier), -1.01 sigma (U 02 auditor) and -0.14 sigma (R-S6); T0 moves by <= 0.1 sigma. The <0.5 sigma check for P was done in one pipeline and a different event set. (The shape values in this sentence belong to the shape/depth topic.)",
+   "fix": "Without Sector 6, $P$ changes by $\\lesssim1\\sigma$ and the other values by $<0.5\\sigma$.",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "give $P=3.182785\\pm0.000006$\\,d and $T_0=2460998.736\\pm0.003$ BJD$_{\\rm TDB}$ from the 19 transits",
+   "problem": "Verified: matches the 19-set fit (3.1827850 +- 0.0000057, 2460998.73599 +- 0.00288) and all other U pipelines within 0.53 sigma; 19 events and time system correct.",
+   "fix": "no change",
+   "severity": "NONE"
+  },
+  {
+   "quote": "The 3.18\\,d signal (23 transits, $\\approx$500\\,ppm)",
+   "problem": "Verified: 23 = 6/8/9 (U 01 out_s03_epochs.csv); the joint fit uses these 23.",
+   "fix": "no change",
+   "severity": "NONE"
+  }
+ ],
+ "unknowns": [
+  {
+   "item": "TTV constraint on the 19-set specifically (periodogram rerun)",
+   "why": "U's TTV periodogram and limits were computed on the U 02 auditor 20-set (with S32 E-573), not on the adopted 19-set",
+   "would_resolve": "rerun U/02_timing_A/t6_global_ttv.py logic on the 19-set times (v2_real_events.csv)",
+   "blocks_submission": false
+  },
+  {
+   "item": "Long-period TTVs (> 640 d), including the ~6.8 yr near-7:2 super-period with the 11.13 d signal",
+   "why": "Three sector snapshots over ~7 yr are degenerate with a linear ephemeris at such periods",
+   "would_resolve": "Sector 110 and later TESS/ground timing",
+   "blocks_submission": false
+  },
+  {
+   "item": "Why SPOC produced no Sector 32 TCE",
+   "why": "SPOC DV/TPS internals not inspected; S32-only S/N 6.7-9.1 is near the 7.1 threshold",
+   "would_resolve": "SPOC S32 TPS/DV products or TCE bulk tables for TIC 4206066",
+   "blocks_submission": false
+  },
+  {
+   "item": "Exact threshold behind 'baselines on both sides'",
+   "why": "The 19-set was chosen by naming two events; no numeric threshold in U files reproduces it except a post hoc ~15 min / 0.15 T14 cut",
+   "would_resolve": "state the reasons explicitly in the Note (manuscript finding) or fix a numeric rule and rerun",
+   "blocks_submission": false
+  }
+ ],
+ "files_written": [
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides_table.csv",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r1_ephemerides.log",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r2_event_leverage.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r2_event_leverage.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r2_event_leverage.log",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r3_s98_only.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r3_s98_only.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r3_s98_only.log",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/r4_write_result.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T1_A_timing/result.json"
+ ]
+}

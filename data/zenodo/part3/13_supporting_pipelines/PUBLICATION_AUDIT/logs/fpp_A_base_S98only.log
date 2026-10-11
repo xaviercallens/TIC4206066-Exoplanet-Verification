@@ -1,0 +1,26 @@
+In preparation for Gaia DR4, the Gaia archive is in evolution. Unfortunately, it may be unstable at times and particular types of queries may time out. Please consider registering for a user account (https://www.cosmos.esa.int/web/gaia-users/register). For questions or advice, please contact the Gaia helpdesk (https://www.cosmos.esa.int/web/gaia/gaia-helpdesk).
+Getting TessCut for sector 6
+Getting TessCut for sector 32
+Getting TessCut for sector 98
+Estimated missing stellar parameters for 70 of 121 stars from photometry. See the 'params_estimated' column of the .stars dataframe. 2 appear evolved and were assigned a nominal 1 M_Sun.
+A_base_S98only 0 FPP=0.02608 NFPP=5.8e-09 (17s)
+A_base_S98only 1 FPP=0.02714 NFPP=6.14e-09 (13s)
+A_base_S98only 2 FPP=0.02846 NFPP=6.07e-09 (13s)
+A_base_S98only 3 FPP=0.03336 NFPP=6.1e-09 (13s)
+A_base_S98only 4 FPP=0.02856 NFPP=5.98e-09 (13s)
+A_base_S98only 5 FPP=0.03126 NFPP=5.72e-09 (14s)
+A_base_S98only 6 FPP=0.02652 NFPP=6.08e-09 (14s)
+A_base_S98only 7 FPP=0.02795 NFPP=5.91e-09 (14s)
+A_base_S98only 8 FPP=0.02499 NFPP=5.72e-09 (14s)
+A_base_S98only 9 FPP=0.02852 NFPP=5.67e-09 (14s)
+A_base_S98only 10 FPP=0.02625 NFPP=5.43e-09 (14s)
+A_base_S98only 11 FPP=0.02935 NFPP=5.43e-09 (14s)
+A_base_S98only 12 FPP=0.02979 NFPP=5.95e-09 (14s)
+A_base_S98only 13 FPP=0.03138 NFPP=5.21e-09 (14s)
+A_base_S98only 14 FPP=0.02691 NFPP=5.96e-09 (14s)
+A_base_S98only 15 FPP=0.03217 NFPP=5.78e-09 (13s)
+A_base_S98only 16 FPP=0.02799 NFPP=6.46e-09 (13s)
+A_base_S98only 17 FPP=0.03256 NFPP=5.91e-09 (13s)
+A_base_S98only 18 FPP=0.02925 NFPP=5.66e-09 (13s)
+A_base_S98only 19 FPP=0.03221 NFPP=5.69e-09 (13s)
+DONE A_base_S98only FPP 0.02903 ± 0.0024 (sd), sem 0.00054; range 0.025-0.0334; NFPP mean 5.8e-09

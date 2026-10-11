@@ -1,0 +1,24 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - name: id
+#   datatype: string
+#   description: Identifier
+#   meta: !!omap
+#   - {ucd: meta.id}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: '*'}
+#   subtype: json
+# meta: !!omap
+# - {ID: result_S1790338270629}
+# - {name: result_S1790338270629}
+# schema: astropy-2.0
+id
+"""TIC 4206066"""
+"""StKM 1-561"""
+"""Gaia DR3 3220388198192519424"""
+"""TYC 4753-1591-1"""
+"""2MASS J05232636-0119380"""
+"""UCAC4 444-009590"""
+"""PM J05234-0119"""
+"""Gaia DR2 3220388198192519424"""

@@ -1,0 +1,30 @@
+{
+ "n_cad": 24162,
+ "TIMEDEL_s": 199.99999999999991,
+ "bits_present_count": {
+  "bit2 (2^2=4)": 4,
+  "bit5 (2^5=32)": 24,
+  "bit11 (2^11=2048)": 5757,
+  "bit29 (2^29=536870912)": 10676,
+  "bit30 (2^30=1073741824)": 5474
+ },
+ "n_flagged_any": 12095,
+ "n_removed_by_frozen_mask": 12095,
+ "flagged_but_not_removed_by_frozen_mask": 0,
+ "mask_bits": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  7,
+  11,
+  12,
+  29,
+  30
+ ],
+ "n_good_q0_finite_sysrm": 12067,
+ "frac_finite_DET_FLUX_ERR_good": 1.0,
+ "median_dt_s": 200.00026791676646
+}

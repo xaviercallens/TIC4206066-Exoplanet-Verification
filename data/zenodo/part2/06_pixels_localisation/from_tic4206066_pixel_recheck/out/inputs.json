@@ -1,0 +1,109 @@
+{
+ "ephemeris_file": "addenda/tic4206066_PUBLICATION_AUDIT/out/ephem_current.json",
+ "ephemeris_sha256": "45c68f77bfb8fe486b032bc0273032da837efde6504225eca02985dada49e615",
+ "ephemeris_BTJD": {
+  "A": {
+   "P_d": 3.182785293657263,
+   "T0_BTJD": 3998.7367930333035,
+   "T14_d": 0.07808669533785047
+  },
+  "B": {
+   "P_d": 11.132745380039134,
+   "T0_BTJD": 4000.8658739613074,
+   "T14_d": 0.06908750357336403
+  }
+ },
+ "inputs": {
+  "S6_ffi": {
+   "path": "addenda/deep_followup_tic4206066/pixels/tess-s0006-1-1_80.859830_-1.326960_21x21_astrocut.fits",
+   "sha256": "18b829b6dd7b6af91842c8bb99eda29ac6cf02eff5fee178095659d262e6a3d3",
+   "sector": 6,
+   "camera": 1,
+   "ccd": 1,
+   "object": "",
+   "ticid": null,
+   "creator": "astrocut",
+   "procver": "0.11.1",
+   "data_rel": 42,
+   "timedel_d": 0.020833333333333332,
+   "n_cadences": 993,
+   "tstart": 1468.276587499918,
+   "tstop": 1490.047098245309
+  },
+  "S32_ffi": {
+   "path": "addenda/deep_followup_tic4206066/pixels/tess-s0032-1-2_80.859830_-1.326960_21x21_astrocut.fits",
+   "sha256": "9e959717b472f3182a343dbc3e4e4aef0d4729193e0ec5f4868e2c22e9f8bf7b",
+   "sector": 32,
+   "camera": 1,
+   "ccd": 2,
+   "object": "",
+   "ticid": null,
+   "creator": "astrocut",
+   "procver": "0.11.1",
+   "data_rel": 48,
+   "timedel_d": 0.006944444444444444,
+   "n_cadences": 3600,
+   "tstart": 2174.227378589553,
+   "tstop": 2200.234542926078
+  },
+  "S32_tpf2min": {
+   "path": "addenda/deep_followup_tic4206066/lc/tess2020324010417-s0032-0000000004206066-0200-s_tp.fits",
+   "sha256": "f1f76576cc088d134cd94b8b004cbd7af27be161a9a80578bbe96b7335f1b2d1",
+   "sector": 32,
+   "camera": 1,
+   "ccd": 2,
+   "object": "TIC 4206066",
+   "ticid": 4206066,
+   "creator": "33967 TargetPixelExporterPipelineModule",
+   "procver": "spoc-5.0.20-20201120",
+   "data_rel": 48,
+   "timedel_d": 0.001388888888888889,
+   "n_cadences": 18730,
+   "tstart": 2174.232861554896,
+   "tstop": 2200.230381567936
+  },
+  "S98_ffi": {
+   "path": "addenda/deep_followup_tic4206066/pixels/tess-s0098-1-2_80.859830_-1.326960_21x21_astrocut.fits",
+   "sha256": "25ef931cebbd0a8dd8b7d3d4eeb3615757b673ee3805a70bcbb1f02c93448736",
+   "sector": 98,
+   "camera": 1,
+   "ccd": 2,
+   "object": "",
+   "ticid": null,
+   "creator": "astrocut",
+   "procver": "0.11.1",
+   "data_rel": 134,
+   "timedel_d": 0.0023148148148148,
+   "n_cadences": 24162,
+   "tstart": 3988.497571919686,
+   "tstop": 4045.903206506657
+  }
+ },
+ "momentum_dumps_source": "addenda/independent_verification_tic4206066_SEALED/out/t7_momentum_dumps.json",
+ "momentum_dumps_sha256": "93387e1f4eb2c7146c450808801247d01ee376e52629cd2edb29c3c2579faf8c",
+ "old_T9_source": "addenda/independent_verification_tic4206066_SEALED/out/t9_aperture_diff.json",
+ "old_T9_sha256": "3bbe9d719c04d159b28c434a74936a3f751d49e116390ad253582ed32e80c213",
+ "t9_cutouts_11x11": {
+  "S98": {
+   "path": "addenda/independent_verification_tic4206066_SEALED/downloads/tesscut/tess-s0098-1-2_80.859827_-1.326964_11x11_astrocut.fits",
+   "sha256": "1e03e9bec76ef2950d6e3dbaa0e4bcdd5252ecc5b031787e6768030549ea3d05"
+  },
+  "S06": {
+   "path": "addenda/independent_verification_tic4206066_SEALED/downloads/tesscut/tess-s0006-1-1_80.859827_-1.326964_11x11_astrocut.fits",
+   "sha256": "5edaa55e647eeb1c4008e6a33527a0b0af9e66d90bf6c0b5ceae67503ad6f3ad"
+  }
+ },
+ "qlp_s98_for_scattered_light_flags": {
+  "path": "addenda/deep_followup_tic4206066/lc/hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01_llc.fits",
+  "sha256": "a034136697b4f75765a91503107f55a455b365d19cd270ed633845efcdcb188e"
+ },
+ "software": {
+  "python": "3.12.13",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "numpy": "2.5.3",
+  "astropy": "8.0.1",
+  "scipy": "1.18.1",
+  "matplotlib": "3.11.2",
+  "interpreter": "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_pixel_recheck/scripts/../../../.venv/bin/python"
+ }
+}

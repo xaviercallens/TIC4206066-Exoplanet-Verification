@@ -1,0 +1,15 @@
+S32_ffi  A: n_ep=8 depth=440 ppm; offset 7.8" (dRA +7.5, dDec -0.6); inj sd (9.4, 15.9)" z=(+0.80, +0.13) maha 0.81 frac_further 0.53; dump dist h: [None, None, None, None, None, None, None, None]
+     44.1" T=17.11 needs 85% ecl; real dchi2(N-T)=8.9; nb-inj dchi2 median -322.3 min -477.6
+     53.0" T=16.98 needs 99% ecl; real dchi2(N-T)=9.1; nb-inj dchi2 median -370.6 min -528.5
+     53.7" T=17.26 needs 130% ecl; real dchi2(N-T)=9.3; nb-inj dchi2 median -410.9 min -577.0
+     56.6" T=17.05 needs 253% ecl; real dchi2(N-T)=8.9; nb-inj dchi2 median -4772.7 min -5477.4
+     58.8" T=16.33 needs 109% ecl; real dchi2(N-T)=9.6; nb-inj dchi2 median -3696.9 min -3996.5
+     62.2" T=17.88 needs 740% ecl; real dchi2(N-T)=9.7; nb-inj dchi2 median -4162.8 min -4501.2
+S32_ffi  B: n_ep=1 depth=740 ppm; offset 20.7" (dRA -2.0, dDec +20.0); inj sd (11.3, 11.7)" z=(-0.05, +1.88) maha 1.89 frac_further 0.11; dump dist h: [None]
+     44.1" T=17.11 needs 143% ecl; real dchi2(N-T)=1.2; nb-inj dchi2 median -117.1 min -187.3
+     53.0" T=16.98 needs 167% ecl; real dchi2(N-T)=3.0; nb-inj dchi2 median -168.5 min -214.3
+     53.7" T=17.26 needs 219% ecl; real dchi2(N-T)=2.7; nb-inj dchi2 median -189.9 min -235.9
+     56.6" T=17.05 needs 426% ecl; real dchi2(N-T)=3.4; nb-inj dchi2 median -2154.6 min -2918.0
+     58.8" T=16.33 needs 184% ecl; real dchi2(N-T)=2.0; nb-inj dchi2 median -1827.1 min -1949.1
+     70.8" T=16.61 needs 1218% ecl; real dchi2(N-T)=3.6; nb-inj dchi2 median -35568.6 min -38068.3
+done

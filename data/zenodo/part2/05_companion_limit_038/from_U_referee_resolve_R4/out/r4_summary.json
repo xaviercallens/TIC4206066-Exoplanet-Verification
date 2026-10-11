@@ -1,0 +1,128 @@
+{
+ "a_attribution_and_mass_limit": {
+  "way2026_per_star_error": "none (paper + Zenodo catalogue); 0.07 is the author's own scatter",
+  "O_target": 0.0030000000000001137,
+  "limit_2sig_sigma0.068_PM": 0.3803000713342226,
+  "limit_2sig_sigma0.052": 0.34927902199251026,
+  "limit_2sig_sigma0.10": 0.420474767181561,
+  "limit_out_of_sample_ruwe1.2-1.3_MAD": 0.35467460305330095,
+  "way_flag_threshold_0.376_mass": 0.510955674195654,
+  "PM_table_header": "Version 2022.04.16; header asks to cite Pecaut & Mamajek (2013, ApJS 208, 9)"
+ },
+ "c_training_set": {
+  "target_ruwe": 1.2142984867095947,
+  "regression_sample_cut": "ruwe < 1.2 (Way+2026 App. A)",
+  "target_in_training": false,
+  "sigma_MAD_ruwe1.0-1.2_training_eligible": 0.05337359999999938,
+  "sigma_MAD_ruwe1.2-1.3_never_trained": 0.05411490000000029,
+  "n": [
+   2454,
+   616
+  ]
+ },
+ "b_gaia_indicator_calibration": {
+  "target_Cstar": -0.0025143867274834975,
+  "target_zC": -0.38529261561225314,
+  "base_rate_target_like": 0.37867078825347755,
+  "base_rate_n": 647,
+  "sep0.2-2_dI<=2": {
+   "n": 38,
+   "n_target_like": 0,
+   "frac_target_like_95UL": 0.07580765168296455
+  },
+  "sep0.2-2_dI<=1.76": {
+   "n": 32,
+   "n_target_like": 0,
+   "frac_target_like_95UL": 0.08936819898626475
+  },
+  "sep0.15-1.2_dI<=2": {
+   "n": 42,
+   "n_target_like": 0,
+   "frac": 0.0,
+   "UL95": 0.06884260784039488,
+   "LR_UL95_vs_base": 0.18180068274585914
+  },
+  "Cstar_only_3sig_sep0.2-2_dI<=2": {
+   "n": 38,
+   "n_target_like": 0,
+   "frac": 0.0,
+   "UL95": 0.07580765168296455,
+   "LR_UL95_vs_base": 0.07627923894071238
+  },
+  "ruwe_only_1.4_sep0.2-2_dI<=2": {
+   "n": 38,
+   "n_target_like": 19,
+   "frac": 0.5,
+   "UL95": 0.6426389317924452,
+   "LR_UL95_vs_base": 0.7573540780869072
+  }
+ },
+ "b_molusc_regimes_A": {
+  "STP_evidence_share_molusc_kept": {
+   "M>0.38_blended_lt0.15": 0.017397912720745763,
+   "M>0.38_partial_0.15-2": 0.6259452894604733,
+   "M>0.38_resolved_ge2": 0.19812811802897734,
+   "M<=0.38_all": 0.1585286797898037,
+   "M>0.38_total": 0.8414713202101964
+  },
+  "rho_quantiles_arcsec_M>0.38_kept": [
+   0.789210704980416,
+   1.1110805404219843,
+   1.4923435619846626,
+   1.9033021391419613,
+   2.8660103842398312
+  ],
+  "dG_range_M>0.38_kept": [
+   0.0,
+   1.936828833423106
+  ],
+  "FPP_molusc_as_coded": 0.006292752988158643,
+  "FPP_molusc_minus_M>0.38_blended_only": 0.006185611917812718,
+  "FPP_molusc_minus_M>0.38_all_regimes": 0.001044557750779585,
+  "FPP_molusc_partial_regime_LR_UL95_0.076": 0.0018352923019658023,
+  "FPP_molusc_partial_regime_LR_UL95_0.089_dI1.76": 0.0019768064976061492
+ },
+ "d_threshold": {
+  "undiluted": {
+   "rho_max_3.5": 0.5294561310315667,
+   "rho_max_3.6": 0.5226834222133798,
+   "rho_max_3.64": 0.520015654282621
+  },
+  "diluted_dchi2_4_verifier09": 0.5167728597037731
+ },
+ "e_ecc": {
+  "0.14": {
+   "e_min": 0.6056852282032174,
+   "prior_frac": 0.00539525
+  },
+  "0.17": {
+   "e_min": 0.5346998799759713,
+   "prior_frac": 0.010335
+  },
+  "0.20": {
+   "e_min": 0.4732006629363703,
+   "prior_frac": 0.017067
+  },
+  "0.25": {
+   "e_min": 0.38536376326984795,
+   "prior_frac": 0.03252025
+  },
+  "0.30": {
+   "e_min": 0.3090934235866964,
+   "prior_frac": 0.05448425
+  },
+  "0.35": {
+   "e_min": 0.2393468295231641,
+   "prior_frac": 0.0849235
+  },
+  "0.38": {
+   "e_min": 0.19921661028693335,
+   "prior_frac": 0.10897475
+  }
+ },
+ "e_tidal_tau_e_yr_range": [
+  490118.42689960584,
+  1799882123.0244238
+ ],
+ "f_speckle": "Gemini speckle FWHM~0.02 arcsec (0.7 au at 35.6 pc), ~5 mag at 0.1 arcsec (3.6 au); Howell & Furlan 2022, doi:10.3389/fspas.2022.871163"
+}

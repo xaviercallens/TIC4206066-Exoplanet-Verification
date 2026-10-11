@@ -1,0 +1,232 @@
+{
+ "topic": "T3_pixels_localisation (verification)",
+ "verdicts": [
+  {
+   "target_id": "A.offset",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Inverse-variance combination of S32 POS_CORR-decorrelated (+5.21,+0.39)+-(3.08,2.78) and S98 clean29 (+5.65,-0.32)+-(5.27,4.52) re-computed: (+5.318,+0.198)+-(2.660,2.369). Per-set errors are max(inj SD, jackknife SE, robust bootstrap SD) as stated. The decorrelation code fits pixel gradients on out-of-transit cadences only, so it cannot absorb the transit, and the verifier's per-event regressor method reproduces it (+5.13,+0.20). S32PC carries most of the Dec weight, so the S98 recipe moves the combined Dec by <=2.4\" (<1 sigma).",
+   "evidence": "addenda/opus55_final_audit_tic4206066/referee/resolve_R3/logs/r2_combine.log 'A_eventscatter_auditor_pos' and 'per-set errors'; addenda/opus55_final_audit_tic4206066/03_pixels/poscorr_decorr.py L20-35; addenda/opus55_final_audit_tic4206066/03_pixels/verify/v1_loc.json (usepc true); addenda/tic4206066_FINAL_RECONCILIATION/_work/T3_pixels_localisation/verify/v_combine.json A_headline_recomputed"
+  },
+  {
+   "target_id": "A.S32_per_set",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Values present as stated. The POS_CORR2 z is 1.996 (pointing.json z_vs_random), about 1.1 unweighted (v2_poscorr.json: 0.163 vs random 0.055 +- 0.097 mpx), and the audit's empirical-null z is 0.297. The raw-S32 jackknife without 2175.001 gives Dec -2.1.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/03_pixels/summary.json sets.S32_tpf_A.real_off [9.12,-8.31], sets.S32_tpf_poscorr_A.real_off [5.21,0.39]; 03_pixels/pointing.json S32_tpf.A.z_vs_random[3]; 03_pixels/verify/v2_poscorr.json; addenda/tic4206066_PUBLICATION_AUDIT/FINAL_PARAMETERS.json signal_A.localisation.spoc2min_centroids.columns.POS_CORR2.z; addenda/rnaas_tic4206066_pubprep/analysis/out/a5_summary.json localisation.A.per_set.S32_tpf"
+  },
+  {
+   "target_id": "A.S98_epochs",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "The event at 3995.555 ends at 3995.594. The data gap runs 3995.608-3995.821 and ends at a QUALITY=32 cadence, so pubprep's 0.75-2.5 T14 post window is empty. Pubprep's diff_images accepts one-sided events (a2_prf_localisation.py L134), while its fake_sets require both sides (L178-179 region), which confirms the event lies outside its own calibration.",
+   "evidence": "addenda/rnaas_tic4206066_pubprep/analysis/a2_prf_localisation.py L132-135, fake_sets; addenda/opus55_final_audit_tic4206066/referee/resolve_R3/logs/r5_s98_gap.log; addenda/tic4206066_FINAL_RECONCILIATION/_work/T3_pixels_localisation/t3_gap3995.json"
+  },
+  {
+   "target_id": "A.offset_significance",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "z_E = 1.9997, chi2 = 4.006, p = 0.135 are reproduced. Across error models p = 0.0486-0.166 (bootcov 0.0486), and across S98 recipes z_E reaches 2.58 (p = 0.020). 'Consistent within approx 2 sigma' is therefore fair, but the upper end of the variants is about 2.3-2.6 sigma.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/proposed_revision/figure_src/figure_values_v2.json panel_b.combined.A.exact; addenda/opus55_final_audit_tic4206066/referee/resolve_R3/logs/r2_combine.log; addenda/tic4206066_FINAL_RECONCILIATION/_work/T3_pixels_localisation/t3_combine.log; addenda/tic4206066_FINAL_RECONCILIATION/_work/T3_pixels_localisation/verify/v_combine.json"
+  },
+  {
+   "target_id": "A.capable_stars",
+   "verdict": "CORRECTED",
+   "corrected_value": "Same 5 stars (TIC 4206077, 4206064, 4206073, 4206059, 4206057), but the nearest one, TIC 4206077, lies at 42.78\" at the S98 epoch, 43.14\" at S32 and 43.27\" at S6 (43.48\" in candidate.json). The minimum is below 43\", so the printable form is '~43\"' or '>42\"', not '>=43\"'.",
+   "reason": "The per-product (sector-epoch) separations in U's census place TIC 4206077 at 42.78\" in all three QLP98 products. The reconciler's 43.1\" is the value in neighbours_vs_fitted_position.csv, not the minimum over sector epochs.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/03_pixels/neighbour_census_per_product.csv rows TIC 4206077 (QLP98_* sep 42.7849); addenda/opus55_final_audit_tic4206066/03_pixels/neighbours_vs_fitted_position.csv rows with dreqA_min<=1; addenda/tic4206066_FINAL_RECONCILIATION/_work/T3_pixels_localisation/verify/v_combine.json neighbour_sigma_by_product_epoch"
+  },
+  {
+   "target_id": "A.capable_sigma",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Recomputed: 14.18-14.35 sigma (+-3\") and 17.5-18.1 (exact) across sector epochs; minimum 14.18 for TIC 4206077 at the S98 epoch. Printing '>10 sigma' is a defensible conservative choice, given the heavy tails (audit-recipe jackknife -56\"; U S98 deg2 (+32.9,-16.5)).",
+   "evidence": "addenda/opus55_final_audit_tic4206066/referee/resolve_R3/logs/r2_combine.log 'corrected_rounded'; addenda/tic4206066_FINAL_RECONCILIATION/_work/T3_pixels_localisation/verify/v_combine.json neighbour_sigma_by_product_epoch"
+  },
+  {
+   "target_id": "A.nearest_gaia_neighbour",
+   "verdict": "CORRECTED",
+   "corrected_value": "Gaia DR3 3220388296975929984 (TIC 712986249), G 18.75, T 18.13: 11.06\" at J2016.0, and 10.35\" (S98) to 10.86\" (S6) at the TESS epochs. Required eclipse at delta = 500 ppm: 1.195-1.230 in the real S6/S32/S98 apertures (1.12 in the QLP 1x1 aperture), so the maximum depth it can produce is 406-418 ppm (445 ppm in 1x1). Distance from the fitted position: 4.0-4.2 sigma (+-3\"), 4.9-5.1 sigma (exact).",
+   "reason": "The reconciler's 10.6-10.9\" misses the S98 epoch (10.35\"), and its 'max ~409-410 ppm' covers only S6/S32. The QLP98 3x3 aperture needs 1.195 (max 418 ppm).",
+   "evidence": "addenda/opus55_final_audit_tic4206066/03_pixels/neighbour_census_per_product.csv rows TIC 712986249 (sep, dreq_A); addenda/opus55_final_audit_tic4206066/referee/resolve_R3/logs/r4_panel_d_spec.log nearest_other_source sep 11.062; addenda/tic4206066_FINAL_RECONCILIATION/_work/T3_pixels_localisation/verify/v_combine.json"
+  },
+  {
+   "target_id": "A.S6_diffimg",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "s6_dumps.json gives transit-dump distances of 0.76, 2.15, 3.54, 3.19, 1.80, 0.41 h. The 7th transit (1477.97) has 0 in-transit cadences, and the dump interval is 3.125 d. Raw, dump-excised and decorrelated values are as stated, with decorrelated jackknife SE (10.6, 32.8)\". Two dumps fall inside +-T14/2 = 0.94 h.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/03_pixels/s6_dumps.json S6_ffi.transits; addenda/opus55_final_audit_tic4206066/03_pixels/verify/v3_s6.json; addenda/opus55_final_audit_tic4206066/referee/resolve_R3/logs/r2_combine.log 'S6'"
+  },
+  {
+   "target_id": "A.centroids",
+   "verdict": "CORRECTED",
+   "corrected_value": "Values unchanged (MOM_CENTR1 z -1.66, MOM_CENTR2 z +0.12; verif S98 -0.52/-0.33 sigma, S6 -1.23/-0.93 sigma, null SD 0.16-0.23 mpix). The note is wrong: the '2.6 mpix' errors in pixel_recheck REVIEW_1 L111 refer to the 11.13 d (B) centroids. For A the null SD is 0.16-0.17 mpix in S98, and verif T10 estimates that a 43.5\" source would shift the centroid by ~1 mpix, i.e. it would be excluded at ~6 sigma. That is supporting evidence for the >=43\" exclusion, based on verif's shift estimate (not rerun here).",
+   "reason": "Misattributed citation: REVIEW_1 L109-111 is in section '(2) Signal B'.",
+   "evidence": "addenda/independent_verification_tic4206066_SEALED/out/t10_centroid.json S98.A_x/A_y null_std_mpix 0.167/0.161; verification_report.md T10 row; addenda/tic4206066_pixel_recheck/REVIEW_1.md L107-111"
+  },
+  {
+   "target_id": "A.aperture_anomaly_bearing",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "REVIEW_1 L104-106 states that the aperture test cannot tell a 0.5-px offset and that a deeper core is the opposite of an off-target signature. verification_report T9 says the same.",
+   "evidence": "addenda/tic4206066_pixel_recheck/REVIEW_1.md L104-106; addenda/independent_verification_tic4206066_SEALED/verification_report.md T9 row"
+  },
+  {
+   "target_id": "B.offset",
+   "verdict": "CORRECTED",
+   "corrected_value": "S98 clean29 alone (3 events): (+1.19 +- 2.29, -1.02 +- 3.12)\", z_E 0.52, p = 0.83; printed (+1+-3, -1+-3) unchanged. S32PC+S98 (+1.14, -1.22) +- (2.20, 2.93) is an alternative, not the adopted value.",
+   "reason": "The reconciler's own finding (X-T3-12) is that S32 has only one clean B event, yet its S32PC+S98 value uses the auditor's two S32 events, including the compromised 2175.096. U's final figure uses the S98 point alone and explicitly does not use the S32 11.13 d point.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/referee/resolve_R3/logs/r2_combine.log 'B S32 events' auditor_PC_events [2175.0956, 2197.3611] and 'B_S98only_auditor'; addenda/opus55_final_audit_tic4206066/proposed_revision/figure_src/figure_values_v2.json panel_b.combined.B (spec_key 'S32 11.13 d point not used', exact.mean [1.190,-1.017]); addenda/tic4206066_FINAL_RECONCILIATION/_work/T3_pixels_localisation/verify/v_combine.json B_S98only"
+  },
+  {
+   "target_id": "B.bright_neighbour_84as",
+   "verdict": "CORRECTED",
+   "corrected_value": "Required B eclipse 0.61 (real apertures, min) to 1.83 (max); 0.19 in the most favourable product. Distance from the B position: 27.5 sigma (+-3\"), about 33 sigma with S98-only errors (2.29, 3.12), and 36.9 sigma with S32PC+S98 injection covariance (not '>=37').",
+   "reason": "'>=37' overstates 36.9 and uses the S32PC+S98 B set that contains the compromised event. The capability and the exclusion stand.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/03_pixels/neighbours_vs_fitted_position.csv row TIC 4206057 (dreqB_min 0.6115, z_B_S32tpfPC+S98clean29_b0 36.898)"
+  },
+  {
+   "target_id": "PRF.method",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "TESS_PRF 0.1.3 source (PRF/prf.py L53-58) uses start_s0004 files for sector >= 4, which matches U common.py PRFDIR. The POS_CORR1/2 columns of all three TESScut cubes are identically 0 (rerun), so decorrelation is possible only for SPOC products. There are 300 injections per set (inject.py JOBS; poscorr_decorr.py), and the bib ascl IDs are 2207.008 and 1905.007. No known-planet control exists.",
+   "evidence": ".venv/lib/python3.12/site-packages/PRF/prf.py L53-58; addenda/opus55_final_audit_tic4206066/03_pixels/common.py L16, L124-128; addenda/tic4206066_FINAL_RECONCILIATION/_work/T3_pixels_localisation/verify/v_poscorr_tesscut.json; addenda/opus55_final_audit_tic4206066/proposed_revision/references.bib Bell2022, Brasseur2019"
+  },
+  {
+   "target_id": "verif.T3_neighbour_count",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "The JSON gives n_neighbours_used = 220 and the CSV has 220 data rows, while report L24 says 219.",
+   "evidence": "addenda/independent_verification_tic4206066_SEALED/out/t3_neighbours.json n_neighbours_used; out/t3_neighbours.csv"
+  },
+  {
+   "target_id": "X-T3-01",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "As for A.offset. The rerun t3_s98_driver reproduces the audit's stored real_px (0.05,-0.45); its stored sky (+1.17,-8.41) is bias-corrected and the raw sky is (+1.88,-9.14). Raw S32 has injection SD 13.8-21.6\", so the older combinations are S98-dominated.",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T3_pixels_localisation/t3_s98_driver.log; addenda/tic4206066_PUBLICATION_AUDIT/FINAL_PARAMETERS.json signal_A.localisation.S98_clean (real_px, inj_mean_px, real_sky_arcsec)"
+  },
+  {
+   "target_id": "X-T3-02",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "The raw z values are as quoted (PUBLICATION_TRUTH L148: 0.75,-0.10; a5: 0.774,-0.191). The decorrelated value is reproduced independently.",
+   "evidence": "addenda/tic4206066_PUBLICATION_AUDIT/PUBLICATION_TRUTH.md L148; a5_summary.json localisation.A.per_set.S32_tpf.z; addenda/opus55_final_audit_tic4206066/03_pixels/verify/v1_loc.json"
+  },
+  {
+   "target_id": "X-T3-04",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "All S6 values are recipe-dependent: raw (-8.7,-34.7), step (+3.6,+9.9), dump-excised (+6.3,-1.3), decorrelated (+1.0,-1.9) with jackknife SE (10.6,32.8).",
+   "evidence": "addenda/opus55_final_audit_tic4206066/03_pixels/summary.json sets.S6_*; addenda/opus55_final_audit_tic4206066/referee/resolve_R3/logs/r2_combine.log S6"
+  },
+  {
+   "target_id": "X-T3-05",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "The values are present: audit combined_all (+6.32,-3.93) chi2 7.34; pubprep (+8.34,-3.69) chi2 14.55; U with S6pc (+5.06,+0.19) p 0.145. S6 is excluded.",
+   "evidence": "FINAL_PARAMETERS.json signal_A.localisation.combined_all; a5_summary.json localisation.A.combined_all_independent; r2_combine.log A_with_S6pc_eventscatter"
+  },
+  {
+   "target_id": "X-T3-07",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Stale positions give 7.18 and 8.05; the current position gives 14.18-14.35 (sector epochs). The print choice '>10 sigma' is conservative.",
+   "evidence": "r2_combine.log capable-star distance rows; t3_combine.log; addenda/tic4206066_FINAL_RECONCILIATION/_work/T3_pixels_localisation/verify/v_combine.json"
+  },
+  {
+   "target_id": "X-T3-08",
+   "verdict": "CORRECTED",
+   "corrected_value": "Resolution (+1+-3, -1+-3)\" stands, but it is the S98-only value (+1.19+-2.29, -1.02+-3.12), not S32PC+S98.",
+   "reason": "See B.offset: the S32PC+S98 value includes compromised S32 event 2175.096.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/referee/resolve_R3/logs/r2_combine.log 'B S32 events'; figure_values_v2.json panel_b.combined.B"
+  },
+  {
+   "target_id": "X-T3-09",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "Audit (+0.96,+1.38)+-(2.32,3.03) and pubprep (-0.04,+0.38)+-(2.21,3.21) are present. S6 is excluded from the Note.",
+   "evidence": "FINAL_PARAMETERS.json signal_B.localisation.combined_all; a5_summary.json localisation.B.combined_all_independent"
+  },
+  {
+   "target_id": "X-T3-10",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "U's S98 B (+1.19,-1.02) equals its on-target injection mean (+1.07,-1.08) within 0.2\", so after bias correction it sits on the target. The audit's S98 B is mask/jackknife sensitive (t3_s98_B_driver.log).",
+   "evidence": "addenda/opus55_final_audit_tic4206066/03_pixels/summary.json sets.S98_clean29_B; t3_s98_B_driver.log; PUBLICATION_TRUTH.md L253"
+  },
+  {
+   "target_id": "X-T3-14",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "REQUIRED_CHANGES L60 '>=43\" / >=7 sigma' and figure_values_v2 manuscript_consistency.b_capable_stars.text '>= 43'' (>= 7 sigma)' are stale against manuscript L41 '>=14 sigma'.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/REQUIRED_CHANGES.md L60; figure_values_v2.json manuscript_consistency.b_capable_stars"
+  },
+  {
+   "target_id": "X-T3-15",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "The audit's 9-event S98 set already excludes 3995.555 and still gives Dec -8.4 (bias-corrected) / -9.1 (raw) with its recipe, so the gap-edge explanation covers only pubprep. The raw-S32 Dec is driven by 2175.001 (jackknife -2.1).",
+   "evidence": "t3_s98_driver.log AUD frozen; r5_s98_gap.log S32 raw jackknife; verify/VERIFY_REPORT.md L27, L121-123"
+  },
+  {
+   "target_id": "X-T3-16",
+   "verdict": "CONFIRMED",
+   "corrected_value": "",
+   "reason": "The U 03 table itself proposed 'unreliable', but no S6 treatment is stable (decorrelated jackknife swings up to 40\"), so 'unusable for localisation' is supported. Event-scatter errors (S98 E 5.27 vs inj 3.34) justify +-3.",
+   "evidence": "addenda/opus55_final_audit_tic4206066/03_pixels/REPORT.md L60; r2_combine.log per-set errors"
+  }
+ ],
+ "missed": [
+  {
+   "what": "Nearest depth-capable star is 42.8\" at the S98 epoch, below the printed '>=43\"'",
+   "why_it_matters": "Manuscript L41 states '>=43\"'. It holds at J2016 and in S6/S32, but fails by 0.2\" at the S98 epoch.",
+   "suggested_value": "'~43\"' (or '>42\"')",
+   "evidence": "addenda/opus55_final_audit_tic4206066/03_pixels/neighbour_census_per_product.csv TIC 4206077 QLP98_* sep 42.785"
+  },
+  {
+   "what": "The 11.13 d printed offset uses the S98 point alone, but the Note/caption imply S32+S98",
+   "why_it_matters": "Caption: 'squares, triangles: Sectors 32, 98 ... open: 11.13 d' and '1 sigma rings (3.18 d: Sectors 32+98 combined)'. No open square exists, and the dashed B ring is the S98 point with a rounded 3\" radius.",
+   "suggested_value": "Caption: '1 sigma rings (3.18 d: Sectors 32+98 combined; 11.13 d: Sector 98 only)'",
+   "evidence": "addenda/opus55_final_audit_tic4206066/proposed_revision/figure_src/figure_values_v2.json panel_b.points (no S32 B point), combined.B.spec_key"
+  },
+  {
+   "what": "The depth-based exclusion of the 11\" star (T 18.13) is only ~3 sigma and depth-definition dependent",
+   "why_it_matters": "It can produce at most 406-418 ppm in the real apertures (100% eclipse). Per-sector template depths are 476+-52 (S32), 511+-47 (S98) and 521+-53 (S6) ppm, and box depths are lower (346-470 ppm). The '>=43\"' sentence silently depends on the adopted depth (T8), and the star is otherwise excluded only by localisation at 4.0-5.1 sigma.",
+   "suggested_value": "Keep '>=43\"' only if the adopted mid-transit depth is >=~450 ppm; optionally add 'the 11\" star would need a >100% eclipse'",
+   "evidence": "addenda/opus55_final_audit_tic4206066/03_pixels/neighbour_census_per_product.csv TIC 712986249 dreq_A 1.195-1.230; addenda/tic4206066_MASTER_EVIDENCE/CURRENT_FACTS.csv L235-239, L254"
+  },
+  {
+   "what": "A centroid tests support the >=43\" exclusion; the reconciler dismissed them with B's error figure",
+   "why_it_matters": "Independent evidence: S98 null SD 0.16-0.17 mpix vs the ~1 mpix shift expected for a 43\" source (verif T10).",
+   "suggested_value": "Supporting: ~6 sigma exclusion (verif estimate, not rerun)",
+   "evidence": "addenda/independent_verification_tic4206066_SEALED/out/t10_centroid.json; verification_report.md T10"
+  }
+ ],
+ "manuscript_findings": [
+  {
+   "quote": "All Gaia DR3 stars able to produce the depth lie $\\ge43''$ ($\\ge14\\sigma$) away.",
+   "problem": "At the S98 epoch the nearest capable star (TIC 4206077) is 42.8\" away, so '>=43\"' is off by 0.2\". The sigma figure is a Gaussian extrapolation (see the reconciler's finding).",
+   "fix": "All Gaia DR3 stars able to produce the depth lie $\\gtrsim43''$ ($>10\\sigma$) away.",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "(b) Difference-image offsets (squares, triangles: Sectors 32, 98; filled: 3.18\\,d; open: 11.13\\,d; inset: central $22''$), $1\\sigma$ rings (3.18\\,d: Sectors 32+98 combined)",
+   "problem": "No 11.13 d Sector 32 point (open square) is plotted. The 11.13 d ring is the Sector 98 point alone, and the drawn radii are the rounded 3\", not the exact per-axis 1 sigma.",
+   "fix": "(b) Difference-image offsets (squares, triangles: Sectors 32, 98; filled: 3.18\\,d; open: 11.13\\,d; inset: central $22''$), $1\\sigma$ rings (3.18\\,d: Sectors 32+98 combined; 11.13\\,d: Sector 98)",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "place the 3.18\\,d source at $(+5\\pm3, 0\\pm3)''$ from the target ($\\approx2\\sigma$)",
+   "problem": "Agrees with the reconciler: ambiguous. z_E = 2.0 (p = 0.135 2-D); across variants z_E is 1.7-2.6.",
+   "fix": "place the 3.18\\,d source at $(+5\\pm3, 0\\pm3)''$ from the target, consistent with it within $\\approx2\\sigma$",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "no non-single-star solution or other source within $11''$",
+   "problem": "Agrees with the reconciler. The nearest source is 11.06\" at J2016 but 10.35\" at the S98 epoch (not 10.6\").",
+   "fix": "no non-single-star solution or other source within $10''$",
+   "severity": "MINOR"
+  }
+ ]
+}

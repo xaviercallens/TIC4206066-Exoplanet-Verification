@@ -1,0 +1,77 @@
+[
+ {
+  "test": "T1_A_windows_exclude_B_transits",
+  "passed": true,
+  "detail": "B in-transit cadences inside A windows: 0"
+ },
+ {
+  "test": "T2_detrend_masks_both_signals",
+  "passed": true,
+  "detail": "lcio.detrend masks A and B"
+ },
+ {
+  "test": "T3_fast_null_scan_equals_brute",
+  "passed": true,
+  "detail": "max |fast-brute| = 8.31e-12; 'isclose' absent from scan_stat: True"
+ },
+ {
+  "test": "T4_mann2015_feh_sign",
+  "passed": true,
+  "detail": "s04 uses +0.04458"
+ },
+ {
+  "test": "T5_times_consistent_after_ccd_centre_shift",
+  "passed": true,
+  "detail": "worst median residual SPOC/QLP vs shifted TESScut = 4.67 s"
+ },
+ {
+  "test": "T6_QLP_S98_no_timing_drift",
+  "passed": true,
+  "detail": "QLP S98 residual by quarter [1.67, 1.64, 1.63, 1.6] s"
+ },
+ {
+  "test": "T7_PM_table_mass_column",
+  "passed": true,
+  "detail": "parsed {'K8V': 0.62, 'M0V': 0.57}"
+ },
+ {
+  "test": "T8_Mbol_sun",
+  "passed": true,
+  "detail": "M_bol,sun used = 4.7554"
+ },
+ {
+  "test": "T9_lnrho_prior_jacobian",
+  "passed": true,
+  "detail": "implied mean rho 2.5070 (target 2.507)"
+ },
+ {
+  "test": "T10_S6_dump_coincidence_flagged",
+  "passed": true,
+  "detail": "transit-dump offsets (h) [0.75, 2.14, 3.53, -3.2, -1.81, -0.42]"
+ },
+ {
+  "test": "T11_fpp_exptime_equals_bin",
+  "passed": true,
+  "detail": "base/loc/molusc/tic variants use 6-min exptime"
+ },
+ {
+  "test": "T12_S98_clean_localisation",
+  "passed": true,
+  "detail": "clean flag set"
+ },
+ {
+  "test": "T13_injection_based_errors",
+  "passed": true,
+  "detail": "localise() uses real-pixel injections"
+ },
+ {
+  "test": "T14_null_trials_independent",
+  "passed": true,
+  "detail": "S6 epoch-only nulls: 16 distinct windows in 1500 trials (p99 = max: True); period+epoch nulls: 874; s11b distinct windows min 2623"
+ },
+ {
+  "test": "T15_random_box_phase_range",
+  "passed": true,
+  "detail": "sigma ratio (0.05-0.95 vs 0.1-0.9): B own 1.001, A own 0.974"
+ }
+]

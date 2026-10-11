@@ -1,0 +1,740 @@
+{
+ "topic": "T7_data_future - Data products, search facts, novelty and Sector 110",
+ "summary": "FINAL: search facts (126,246 stars; BLS after biweight; all 17 LEO-Vetter flux-level tests passed; LEO-Vetter MES 10.597 for 3.18 d and 10.982 for 11.13 d, not SPOC MES; threshold 15 from the ladder rule, examined post hoc; 'fixed before the search' untraceable and correctly absent). Products: TESS-SPOC S6 1800 s PDCSAP, SPOC S32 120 s PDCSAP, QLP S98 200 s SYS_RM_FLUX; every flagged S98 cadence (12,095/24,162) removed. The S98 QLP file is TGLC-era (square 1x1/3x3/5x5 apertures), confirmed live on MAST; the Note should also cite QLP DRN004 (Petitpas et al. 2026, RNAAS 10, 69). Sectors: only 6, 32, 98 and upcoming 110 (cam 1 CCD 2) in tess-point through S134. S110: official orbit table (created today) gives data from 2026-10-31 23:55 UTC and an orbit gap 2026-11-13 19:55-11-14 00:55; the final segment is not yet listed. Counts are ephemeris-independent: 8 or 9 A transit times (9th at 2026-11-26 14:47-14:49 UTC as seen by TESS, not 14:54-14:56; older lists omitted the light-time correction), one of them (Nov 13 ~21:15) inside the gap, and 3 B. The manuscript S110 sentence should add the gap clause. Novelty: all eight named sources logged on 2026-09-25 UTC (latest 11:48Z); sentence stands. M conflicts C031, C039, C042, C089, C093 resolved; C040 cosmetic. Open: final S110 segment times (non-blocking).",
+ "facts": [
+  {
+   "id": "DATA.search.n_stars",
+   "group": "DATA",
+   "quantity": "QLP Sector 98 stars in the search input set (TIC 8.2 Tmag <= 11.5)",
+   "value": "126,246 (126,070 searchable: 175 DATA_CORRUPT, 1 PROCESSING_ERROR)",
+   "uncertainty": "exact count",
+   "units": "stars",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/10_novelty_protocol/tic_recount.json n_tmag_le_11p5 ; addenda/opus55_final_audit_tic4206066/10_novelty_protocol/protocol_recount.json config.subset_v1.1.expected_count ; config/prejev_search.json subset",
+   "code": "addenda/opus55_final_audit_tic4206066/10_novelty_protocol/tic_recount.py",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "126,246 stars with $T\\le11.5$",
+   "notes": "Recount from a fresh QLP S98 target list (628,730 IDs) and fresh TIC 8.2 Tmag by U; 126,246 is the input set, 126,070 were searchable."
+  },
+  {
+   "id": "DATA.search.method",
+   "group": "DATA",
+   "quantity": "Search chain",
+   "value": "QLP S98 SYS_RM_FLUX (errors DET_FLUX_ERR), frozen quality mask 1610619071, wotan time-windowed biweight (1.0 d window, 0.1 d break tolerance, 0.25 d edge cut), astropy BoxLeastSquares (objective=likelihood) = BLS of Kovacs et al. 2002, pink-noise MES re-scoring, leo-vetter 1.2.0 flux-level metrics; config v1.1 (sha256 80e7ae48...)",
+   "uncertainty": "n/a",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "config/prejev_search.json keys flux.base_column, quality.bad_bits_mask, detrend, search, detection ; addenda/opus55_final_audit_tic4206066/10_novelty_protocol/protocol_recount.json config.*_v1.1 ; candidates/tic4206066_p3.182945/candidate.json columns_note",
+   "code": "pipeline/run_search.py (config v1.1)",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "box least squares \\citep{Kovacs2002} after biweight detrending",
+   "notes": "Hippke et al. 2019 (wotan) was removed from the Note for word budget (U REQUIRED_CHANGES C8); 'biweight detrending' is then uncited but generic."
+  },
+  {
+   "id": "DATA.search.MES_A",
+   "group": "DATA",
+   "quantity": "LEO-Vetter multiple-event statistic of the 3.18 d signal (signal-to-pink-noise, Pont et al. 2006 / Hartman & Bakos 2016 definition; S98 only)",
+   "value": "10.597 (independent re-run 10.602)",
+   "uncertainty": "n/a (not a calibrated significance)",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "candidates/tic4206066_p3.182945/candidate.json signal.mes and leo_vetter.MES ; addenda/opus55_final_audit_tic4206066/10_novelty_protocol/leo_rerun.json",
+   "code": "pipeline + addenda/opus55_final_audit_tic4206066/10_novelty_protocol/leo_rerun.py",
+   "rerun": "",
+   "supersedes": "none",
+   "manuscript_form": "10.6",
+   "notes": "This is LEO-Vetter MES, NOT SPOC TPS MES; there is no SPOC TCE for this star (U/10 novelty). SPOC S32 2-min MES ~6.7 quoted in verif is a different quantity."
+  },
+  {
+   "id": "DATA.search.MES_B",
+   "group": "DATA",
+   "quantity": "LEO-Vetter multiple-event statistic of the 11.13 d signal (S98 only)",
+   "value": "10.982 (independent re-run 10.975)",
+   "uncertainty": "n/a",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "candidates/tic4206066_p11.132976/candidate.json signal.mes and leo_vetter.MES ; addenda/opus55_final_audit_tic4206066/10_novelty_protocol/leo_rerun.json",
+   "code": "pipeline + leo_rerun.py",
+   "rerun": "",
+   "supersedes": "none",
+   "manuscript_form": "11.0",
+   "notes": "Order in the Note '(10.6 and 11.0)' is A then B."
+  },
+  {
+   "id": "DATA.search.LEO_flux_tests",
+   "group": "DATA",
+   "quantity": "LEO-Vetter flux-level tests (13 false-alarm + 4 false-positive)",
+   "value": "all 17 passed for both signals at the pipeline ephemerides",
+   "uncertainty": "B fails 'chases' (mean_chases 0.74-0.76 < 0.78) at U's own BLS ephemeris P=11.133407 d, so B's tier-A membership is ephemeris-sensitive",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "candidates/tic4206066_p3.182945/candidate.json leo_vetter._tests_failed (all false) ; candidates/tic4206066_p11.132976/candidate.json leo_vetter._tests_failed ; addenda/opus55_final_audit_tic4206066/10_novelty_protocol/leo_rerun.json",
+   "code": "pipeline + leo_rerun.py",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "Both signals passed all LEO-Vetter flux-level tests \\citep{Kunimoto2025}",
+   "notes": "Pixel-level (offset) test not run; the Note does not claim LEO 'PC' status."
+  },
+  {
+   "id": "DATA.search.shortlist",
+   "group": "DATA",
+   "quantity": "Shortlist threshold and cohort",
+   "value": "T* = 15 (lowest rung of mes_ladder [10,12,15,...] leaving <= 80 tier-A signals: 125/95/70 at 10/12/15); both signals in the post hoc EXPLORATORY cohort (amendment 01, 2026-09-25T00:19:47Z), reason SHORTLIST_MES_BELOW_15",
+   "uncertainty": "exact",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/10_novelty_protocol/protocol_recount.json (shortlist_v1.1, amendment_01) ; config/prejev_search.json shortlist, change_log ; config/amendments_registry.jsonl L1",
+   "code": "addenda/opus55_final_audit_tic4206066/10_novelty_protocol/protocol_recount.py",
+   "rerun": "",
+   "supersedes": "'preregistered shortlist' (pubprep); 'threshold (15) of a shortlist rule fixed before the search' (U REQUIRED_CHANGES C5, REFEREE_PASS_1 R14)",
+   "manuscript_form": "fell below the shortlist threshold (15), so I examined them post hoc",
+   "notes": "The ladder rule is traceable to config v1.1 (frozen 2026-09-24T20:28:11Z, before production run 2 started 20:28:20Z and before TIC 4206066 was searched 22:09Z). v1.0 (frozen 20:00:27Z; run 1 aborted at 3,397 stars) survives only as a change_log line, so its shortlist block cannot be checked; the value 15 itself was derived from the final data (amendment 01 statement 1). 'Fixed before the search' is therefore not provable and must not be printed; the current wording is correct."
+  },
+  {
+   "id": "DATA.products.S6",
+   "group": "DATA",
+   "quantity": "Sector 6 product",
+   "value": "TESS-SPOC FFI light curve, 1800 s, PDCSAP_FLUX, camera 1 CCD 1, spoc-5.0.20-20201120, DATA_REL 42",
+   "uncertainty": "n/a",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/00_data/README.md section 2 table ; addenda/opus55_final_audit_tic4206066/00_data/logs/fits_headers.json key mast/hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_lc.fits ; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/a_common.py L54 (PDCSAP_FLUX)",
+   "code": "",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "TESS-SPOC (Sector 6, 30\\,min; \\citealt{Caldwell2020})",
+   "notes": ""
+  },
+  {
+   "id": "DATA.products.S32",
+   "group": "DATA",
+   "quantity": "Sector 32 product",
+   "value": "SPOC 2-min (120 s) target light curve, PDCSAP_FLUX, camera 1 CCD 2, spoc-5.0.20-20201120, DATA_REL 48 (TESS-SPOC 600 s also used for pixels)",
+   "uncertainty": "n/a",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/00_data/README.md section 2 table ; addenda/opus55_final_audit_tic4206066/00_data/logs/fits_headers.json key mast/tess2020324010417-s0032-0000000004206066-0200-s_lc.fits",
+   "code": "",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "SPOC (Sector 32, 2\\,min PDCSAP; \\citealt{Jenkins2016})",
+   "notes": ""
+  },
+  {
+   "id": "DATA.products.S98",
+   "group": "DATA",
+   "quantity": "Sector 98 product and photometry",
+   "value": "QLP HLSP v01 LLC, TIMEDEL = 200.0 s, CALIB 'TICA v1.4.0', TICVER 8.2, camera 1 CCD 2, BESTAP '3x3 square', SMALLAP '1x1 square', LARGEAP '5x5 square', DETMET 'QSP', columns SAP_FLUX, DET_FLUX(_ERR), SYS_RM_FLUX, DET_FLUX_SML/LAG; photometry = TGLC-based (QLP adopted the TGLC method of Han & Brandt 2023 as of Sector 94, documented in QLP Data Release Notes 004 = Petitpas et al. 2026, RNAAS 10, 69, doi:10.3847/2515-5172/ae5790)",
+   "uncertainty": "n/a",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/00_data/logs/fits_headers.json key mast/hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01_llc.fits ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/qlp_headers_full.txt L98-L104 ; addenda/opus55_final_audit_tic4206066/00_data/docs/qlp/mast_hlsp_qlp.html.txt L66 ; addenda/opus55_final_audit_tic4206066/00_data/docs/qlp/mit_qlp.html.txt ('Improved photometry using TESS-Gaia Light Curves 09-03-25') ; addenda/opus55_final_audit_tic4206066/05_B_depth/docs/drn004.txt abstract + Sect. 2 ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/web/crossref_ae5790.json ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/web_log.txt",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/dump_qlp_headers.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/qlp_headers_full.txt",
+   "supersedes": "U 12_references F4 (cite Han & Brandt 2023 only)",
+   "manuscript_form": "QLP (Sector 98, 200\\,s, TGLC-based photometry; \\citealt{Han2023,Petitpas2026})",
+   "notes": "Header evidence: the square 1x1/3x3/5x5 apertures are exactly the TGLC-era QLP apertures described in DRN004 Sect. 2 (TGLC 3x3 plus added 1x1 and 5x5); the pre-TGLC S32 file has circular '3.0:4.0:3.0' apertures and KSPSAP columns. Official MAST statement re-read live 2026-09-25 ~15:29Z: 'As of Sector 94, QLP is now using the TESS-Gaia Light Curve (TGLC) methodology'. MAST asks users to cite Huang 2020a,b, Kunimoto 2021, 2022 and DOI 10.17909/t9-r086-e880. S98 is not affected by the QLP barycentric-timing error (Orbit 210-220 = second half of S99 to S104) nor by the S74-79 error."
+  },
+  {
+   "id": "DATA.products.flux_columns",
+   "group": "DATA",
+   "quantity": "Flux column used by each analysis",
+   "value": "Search: QLP SYS_RM_FLUX + DET_FLUX_ERR (DET_FLUX only as sensitivity variant; DET_FLUX_SML/LAG for aperture tests). U analyses: S98 SYS_RM_FLUX (DET_FLUX_ERR, fallback point-to-point scatter), S6/S32 PDCSAP_FLUX. SAP_FLUX not used for headline values.",
+   "uncertainty": "n/a",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "config/prejev_search.json flux.base_column/error_column/rationale ; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/a_common.py L40-L72",
+   "code": "",
+   "rerun": "",
+   "supersedes": "",
+   "manuscript_form": "not in Note",
+   "notes": ""
+  },
+  {
+   "id": "DATA.products.S98_quality",
+   "group": "DATA",
+   "quantity": "S98 QLP quality bits present and removed",
+   "value": "Present: 2^2 (4 cadences), 2^5=32 dumps (24), 2^11=2048 stray light (5757), 2^29 (10676; undocumented, first ~6 d of each orbit, scattered light), 2^30 QLP bad (5474). 12,095 of 24,162 cadences flagged; frozen search mask 1610619071 (bits 0,1,2,3,4,5,7,11,12,29,30) removes all 12,095 (0 flagged cadences kept); U 'clean' mask (QUALITY==0) is identical for this star. 12,067 good cadences with finite SYS_RM_FLUX.",
+   "uncertainty": "exact",
+   "units": "cadences",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s98_quality_bits.json ; config/prejev_search.json quality ; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s02_s98_quality_intervals.json ; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/a_common.py L58-L59",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s98_quality_bits.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s98_quality_bits.json",
+   "supersedes": "",
+   "manuscript_form": "removing all QLP-flagged Sector 98 cadences, including scattered light",
+   "notes": "Bit naming: 2^29 is called 'bit 30' and 2^30 'bit 31' in QLP 1-based docs; use powers of 2 to avoid confusion."
+  },
+  {
+   "id": "DATA.products.S98_cadence",
+   "group": "DATA",
+   "quantity": "S98 cadence",
+   "value": "200 s (TIMEDEL = 0.0023148148 d; median dt 200.0 s)",
+   "uncertainty": "exact",
+   "units": "s",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s98_quality_bits.json TIMEDEL_s, median_dt_s ; addenda/opus55_final_audit_tic4206066/00_data/logs/fits_headers.json TIMEDEL",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s98_quality_bits.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s98_quality_bits.json",
+   "supersedes": "",
+   "manuscript_form": "200\\,s",
+   "notes": ""
+  },
+  {
+   "id": "DATA.sectors",
+   "group": "DATA",
+   "quantity": "TESS sectors observing TIC 4206066",
+   "value": "S6 (cam 1, CCD 1), S32 (cam 1, CCD 2), S98 (cam 1, CCD 2), S110 upcoming (cam 1, CCD 2, col 702.8, row 1577.0); no other sector in the tess-point 0.9.5.post1 pointing table (Sectors 1-134, matching the HEASARC table through S134)",
+   "uncertainty": "n/a",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s13_s110.json tesspoint_internal ; addenda/opus55_final_audit_tic4206066/REFEREE_PASS_2.md L19 ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/tesspoint_check.log ; addenda/opus55_final_audit_tic4206066/00_data/README.md ('TESScut get_sectors lists only S6, S32, S98')",
+   "code": "tess_stars2px (tess-point 0.9.5.post1)",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/tesspoint_check.log",
+   "supersedes": "",
+   "manuscript_form": "Sectors 6 and 32 ... Sector 98 ... Sector 110",
+   "notes": "U's HEASARC-override run failed ('len() of unsized object') but the internal S110 pointing (106.0674, -23.7934, 238.6986) equals HEASARC (106.07, -23.79, 238.70) to rounding."
+  },
+  {
+   "id": "FUTURE.S110_dates",
+   "group": "FUTURE",
+   "quantity": "Official Sector 110 dates and data segments",
+   "value": "HEASARC: 2026 Oct 31 to Nov 26 (science days 'TBD'); pointing RA 106.07, Dec -23.79, roll 238.70; camera 1 at (75.88, -2.69, 321.51). MIT TESS_orbit_times.csv (file 'Created 2026-09-25', Last-Modified 2026-09-25 04:06:25 GMT): orbit 231 2026-10-31 23:55 - 11-06 21:35, 11-07 02:35 - 11-13 19:55; orbit 232 11-14 00:55 - 11-19 20:45; the final segment (orbit 232 second half) and the sector end time are not yet listed. Mid-sector orbit gap (orbit 231/232): 2026-11-13 19:55 - 11-14 00:55. S111 starts 2026 Nov 26 (HEASARC).",
+   "uncertainty": "schedule is a prediction; times assumed UTC (file header gives no scale); science stops 10 min before and resumes 5 min before the end of each contact (tess.mit.edu/observations/)",
+   "units": "UTC",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/web/TESS_orbit_times.csv L334-L336 ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/web/TESS_orbit_times.headers ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/web_log.txt ; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/docs/sector110_summary.html (HEASARC, fetched 2026-09-25T12:01:42Z) ; addenda/opus55_final_audit_tic4206066/00_data/docs/heasarc/sector.html.txt L254-L268",
+   "code": "curl GET (read-only)",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/web/TESS_orbit_times.csv",
+   "supersedes": "audit FINAL_PARAMETERS sector110.official_S110.dates_utc (dates only)",
+   "manuscript_form": "TESS Sector 110 (2026 October 31 to November 26)",
+   "notes": "Sources: https://tess.mit.edu/public/files/TESS_orbit_times.csv (GET 2026-09-25T15:30:11Z server time), https://tess.mit.edu/observations/ (WebFetch ~15:31Z), https://heasarc.gsfc.nasa.gov/docs/tess/sector110_summary.html (U snapshot 12:01:42Z)."
+  },
+  {
+   "id": "FUTURE.S110_A_times",
+   "group": "FUTURE",
+   "quantity": "Predicted 3.18 d transit mid-times in S110, as seen by TESS (geocentric UTC)",
+   "value": "U ephemeris: 11-01 03:43, 11-04 08:05, 11-07 12:28, 11-10 16:51, 11-13 21:14 (in orbit gap), 11-17 01:37, 11-20 06:01, 11-23 10:24, 11-26 14:47 UTC (all 2026). pubprep: +2.2 min (last 14:49); audit joint: +1.2 min (last 14:48).",
+   "uncertainty": "+-4.4 min (U), +-3.4 min (pubprep), +-2.0 min (audit chains)",
+   "units": "UTC",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s110_predict.json ephemerides.A_U/A_pubprep/A_audit ; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s13_s110.json A_transits_Oct30_Nov28 (pubprep ephemeris, same method, identical to 1 s)",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s110_predict.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s110_predict.json",
+   "supersedes": "audit PUBLICATION_TRUTH L399-L400 (03:49 ... 14:55); pubprep MANUSCRIPT_NUMBER_AUDIT.csv L66 (last 14:56); deep s110_predicted_transits.json (03:51 ...); U REFEREE_PASS_2 L70 (14:54)",
+   "manuscript_form": "not in Note (only counts)",
+   "notes": "Those older 'UTC' lists are BJD_TDB relabelled on the UTC scale without the barycentric light-travel correction; TESS sees each event 5.3-7.3 min earlier. The ephemeris choice moves times by <=2.3 min."
+  },
+  {
+   "id": "FUTURE.S110_B_times",
+   "group": "FUTURE",
+   "quantity": "Predicted 11.13 d transit mid-times in S110 (geocentric UTC)",
+   "value": "U ephemeris: 2026-11-01 11:24, 11-12 14:35, 11-23 17:45 UTC; audit +1.5 min; pubprep -0.1 min",
+   "uncertainty": "+-4.5 min (U), +-4.7 min (pubprep scaled), +-2.7 min (audit chains); valid only if the S6/S32 cycle link holds",
+   "units": "UTC",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s110_predict.json ephemerides.B_U/B_audit/B_pubprep ; addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s13_s110.json B_transits_Oct30_Nov28",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s110_predict.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s110_predict.json",
+   "supersedes": "audit 11:31/14:42/17:53 and pubprep 11:29/14:42/17:52 (naive BJD->UTC)",
+   "manuscript_form": "not in Note (only count)",
+   "notes": "First two fall in listed segments; the third falls in the not-yet-listed final segment."
+  },
+  {
+   "id": "FUTURE.S110_counts",
+   "group": "FUTURE",
+   "quantity": "Number of transit times inside S110",
+   "value": "A: 8 mid-times from sector start (2026-10-31 23:55) to 2026-11-26 00:00, 9 if data continue past 2026-11-26 ~14:48 UTC (+0.94 h egress); one of them (2026-11-13 ~21:15 UTC, full transit 20:19-22:11) lies in the orbit 231/232 downlink gap, so 7 or 8 are observable. 5 A transits fall in already-listed segments. B: 3 (2 in listed segments, 1 in the final segment); none in a gap.",
+   "uncertainty": "counts identical for all six ephemerides; only the 9th A event depends on the unpublished sector end",
+   "units": "transits",
+   "status": "FINAL",
+   "evidence": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s110_predict.json ephemerides.*.counts and events[].status ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s110_predict.log",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s110_predict.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s110_predict.json",
+   "supersedes": "'eight or nine ... and three' without gap caveat (U proposed_revision L47); 'nine and three' (attributed to draft by pubprep)",
+   "manuscript_form": "spans eight or nine 3.18\\,d transit times, one of them in a scheduled data gap, and three 11.13\\,d transit times",
+   "notes": ""
+  },
+  {
+   "id": "NOVELTY.sources_queried",
+   "group": "MANUSCRIPT_META",
+   "quantity": "Sources named in the novelty sentence and when they were queried (all 2026-09-25 UTC)",
+   "value": "ExoFOP TOI/CTOI lists + target page 11:33:48-11:33:59Z (8148 TOI / 5137 CTOI data rows; no match); SPOC TCE bulk tables S6, S32, S98 single-sector and s0001-s0036/0039/0069/0096 multi-sector 11:34:32-11:35:10Z + exo.MAST DV 11:34:29Z (0 rows); NASA Exoplanet Archive toi/ps/pscomppars 11:34:01-11:34:18Z (0 rows; positive control 4); published TESS candidate catalogs: T16 (Dataverse v3) and RAVEN (Zenodo 19661443) 11:35:41-11:35:47Z, plus DTARPS-S, DIAmante, Olmschenk+2021, Kunimoto+2022 QLP-faint, Salinas+2025 in the sealed re-check 04:46-05:25Z; SIMBAD TAP 11:34:19-11:34:27Z (only StKM 1-561, 10 catalogue refs); VizieR 15\" cone 11:35:11-11:35:40Z (166 tables; no transit/EB/planet table); ADS UI 11:40:48-11:48:45Z (0 hits); arXiv API 11:40:10-11:47:24Z (metadata only, 0 hits). General web search 11:45Z.",
+   "uncertainty": "each result valid only up to its query time (latest 11:48:45Z) and each catalogue's own release (T16 v3 2026-03-17; RAVEN Zenodo record; SPOC multi-sector TCE through S96, single-sector S98)",
+   "units": "",
+   "status": "FINAL",
+   "evidence": "addenda/opus55_final_audit_tic4206066/10_novelty_protocol/queries.log ; addenda/opus55_final_audit_tic4206066/10_novelty_protocol/novelty_summary.json ; addenda/opus55_final_audit_tic4206066/10_novelty_protocol/ads_queries.json ; priority_recheck_tic4206066_SEALED/priority_recheck.md L49-L63 ; rnaas_tic4206066_pubprep/novelty_refresh/refresh_result.json",
+   "code": "addenda/opus55_final_audit_tic4206066/10_novelty_protocol/fresh_queries.py",
+   "rerun": "",
+   "supersedes": "M/PRIORITY_SUMMARY.md L25 'Latest cutoff 2026-09-25T10:59:28Z' (M did not read U)",
+   "manuscript_form": "As of 2026 September 25 (UTC), I found no prior report of either signal in ExoFOP, SPOC TCE tables, the NASA Exoplanet Archive, published TESS candidate catalogs, SIMBAD, VizieR, ADS, and arXiv.",
+   "notes": "No re-query by T7 was needed: every listed source has logged evidence on 2026-09-25 UTC. Caveats: arXiv API searches metadata only; ADS counts read from rendered UI (HTML not archived). Re-run ExoFOP, NASA toi, exo.MAST and any new SPOC TCE tables on the submission day and update the date."
+  },
+  {
+   "id": "DATA.exofop_counts",
+   "group": "DATA",
+   "quantity": "ExoFOP TOI / CTOI list sizes",
+   "value": "8148 TOI / 5137 CTOI data rows at every check (04:42Z, 04:46Z, 06:30Z, 10:59Z, 11:33Z)",
+   "uncertainty": "exact",
+   "units": "rows",
+   "status": "FINAL",
+   "evidence": "tic4206066_PUBLICATION_AUDIT/scripts/s18_novelty_refresh.py L28, L31 (n_rows = count of newline characters, includes header) ; rnaas_tic4206066_pubprep/novelty_refresh/refresh_result.json ; addenda/opus55_final_audit_tic4206066/10_novelty_protocol/novelty_summary.json exofop_toi.n_rows",
+   "code": "",
+   "rerun": "",
+   "supersedes": "8149 / 5138 (audit FINAL_PARAMETERS novelty_refresh = line counts incl. header)",
+   "manuscript_form": "not in Note",
+   "notes": ""
+  },
+  {
+   "id": "DATA.verif_T1_count",
+   "group": "DATA",
+   "quantity": "Light curves in verif blind BLS (T1)",
+   "value": "12 attempted, 11 analysed; TASOC S06 ENS light curve dropped silently because its FLUX_CORR has median 0 (relative flux), so median-normalisation gives NaN and the 'too few points after detrend' branch skips it without writing a result",
+   "uncertainty": "exact",
+   "units": "light curves",
+   "status": "FINAL",
+   "evidence": "independent_verification_tic4206066_SEALED/scripts/t1_blind_bls.py L20-L31 ; independent_verification_tic4206066_SEALED/out/t1_blind_bls.json keys ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/c089_tasoc_check.log",
+   "code": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/c089_tasoc_check.py",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/c089_tasoc_check.log",
+   "supersedes": "'Blind BLS on 12 light curves' (verif report L22)",
+   "manuscript_form": "not in Note",
+   "notes": "No effect on any Note value."
+  },
+  {
+   "id": "DATA.pool_P_A",
+   "group": "DATA",
+   "quantity": "Pool multisector refined period of A (search-level)",
+   "value": "3.182758289 d (pass 2, valid); SUMMARY.md '3.18281' is the stale pass-1 value 3.182805458 (pass 1 had negative S6/S32 depths, i.e. wrong phase)",
+   "uncertainty": "grid refinement, no error",
+   "units": "d",
+   "status": "FINAL",
+   "evidence": "pool_multisector/multisector_results.json results[4].P_refined ; pool_multisector/multisector_results_pass1.json results[4].P_refined and sectors[].depth ; pool_multisector/SUMMARY.md L29",
+   "code": "",
+   "rerun": "",
+   "supersedes": "3.18281 d (pool SUMMARY.md L29)",
+   "manuscript_form": "not in Note",
+   "notes": "Superseded as an orbital period by the timing ephemeris 3.182785 +- 0.000006 d (T1 topic)."
+  }
+ ],
+ "conflicts": [
+  {
+   "id": "X-T7-01",
+   "quantity": "Number of light curves in verif T1 blind BLS",
+   "master_ids": "C089",
+   "claims": [
+    {
+     "source": "verif",
+     "value": "12 light curves, 8 pipelines",
+     "evidence": "independent_verification_tic4206066_SEALED/verification_report.md L22",
+     "method": "narrative"
+    },
+    {
+     "source": "verif",
+     "value": "11 entries (TASOC_S06 absent)",
+     "evidence": "independent_verification_tic4206066_SEALED/out/t1_blind_bls.json top-level keys",
+     "method": "script output"
+    }
+   ],
+   "trace": "t1_blind_bls.py loops over 12 names; lcio.load('TASOC_S06') normalises FLUX_CORR by its median (0) -> all NaN -> fast_detrend keeps 0 points -> 'continue' without res entry",
+   "diagnosis": "report counts attempted inputs, JSON holds analysed ones; silent drop in code",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/c089_tasoc_check.py -> good points 987, kept after detrend 0",
+   "resolution": "12 attempted, 11 analysed (TASOC S06 unusable with that loader)",
+   "reason": "Rerun reproduces the silent drop",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T7-02",
+   "quantity": "ExoFOP TOI/CTOI list sizes at 06:30Z",
+   "master_ids": "C031",
+   "claims": [
+    {
+     "source": "audit",
+     "value": "8149 / 5138",
+     "evidence": "tic4206066_PUBLICATION_AUDIT/FINAL_PARAMETERS.json novelty_refresh.exofop_toi.n_rows / exofop_ctoi.n_rows",
+     "method": "s18_novelty_refresh.py n_rows = text.count('\\n')"
+    },
+    {
+     "source": "audit",
+     "value": "8148 / 5137",
+     "evidence": "tic4206066_PUBLICATION_AUDIT/METHOD_AUDIT.md L175",
+     "method": "narrative (data rows)"
+    },
+    {
+     "source": "U",
+     "value": "8148 / 5137 at 11:33Z",
+     "evidence": "addenda/opus55_final_audit_tic4206066/10_novelty_protocol/queries.log L3-L4",
+     "method": "parsed CSV rows"
+    }
+   ],
+   "trace": "s18_novelty_refresh.py L28/L31 counts newline characters, which includes the header line",
+   "diagnosis": "definition difference (lines vs data rows)",
+   "rerun": "none needed: the code line shows the +1 header",
+   "resolution": "8148 TOI / 5137 CTOI data rows; no match for TIC 4206066",
+   "reason": "Header line explains exactly +1 in both lists; all other checks agree",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T7-03",
+   "quantity": "Pool multisector period of A",
+   "master_ids": "C042",
+   "claims": [
+    {
+     "source": "other",
+     "value": "3.18281 d",
+     "evidence": "pool_multisector/SUMMARY.md L29",
+     "method": "rounded table value"
+    },
+    {
+     "source": "other",
+     "value": "3.182758289 d (pass 2)",
+     "evidence": "pool_multisector/multisector_results.json results[4].P_refined",
+     "method": "pass 2 refinement"
+    },
+    {
+     "source": "other",
+     "value": "3.182805458 d (pass 1)",
+     "evidence": "pool_multisector/multisector_results_pass1.json results[4].P_refined",
+     "method": "pass 1 refinement"
+    }
+   ],
+   "trace": "pass 1 JSON gives S6/S32 depths -42 and -29 ppm (no signal at that phase); pass 2 gives 479 and 346 ppm",
+   "diagnosis": "stale data: SUMMARY table copied the flawed pass-1 period",
+   "rerun": "none needed (read stored outputs)",
+   "resolution": "Pool value = 3.182758 d (pass 2); neither pool value is used in the Note (adopted P = 3.182785 +- 0.000006 d from timing, T1 topic)",
+   "reason": "Pass 1 fails its own depth check; SUMMARY treats pass 2 as valid",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T7-04",
+   "quantity": "Predicted S110 times of A (and last-event time)",
+   "master_ids": "C039",
+   "claims": [
+    {
+     "source": "other",
+     "value": "03:51 ... 11-23 10:33 (8 events, +-1.77 min)",
+     "evidence": "deep_followup_tic4206066/archival_checks/out/s110_predicted_transits.json ['3.18 d'].transits",
+     "method": "BTJD -> UTC scale, no light-time; window ends Nov 26 00:00"
+    },
+    {
+     "source": "audit",
+     "value": "03:49 ... 11-26 14:55 (9 events, +-2.0 min)",
+     "evidence": "tic4206066_PUBLICATION_AUDIT/out/s16_s110.json predicted_S110.A.events",
+     "method": "BJD_TDB -> UTC scale, no light-time"
+    },
+    {
+     "source": "pubprep",
+     "value": "last 2026-11-26 14:56",
+     "evidence": "rnaas_tic4206066_pubprep/MANUSCRIPT_NUMBER_AUDIT.csv L66",
+     "method": "same naive conversion"
+    },
+    {
+     "source": "U",
+     "value": "last 2026-11-26 14:49:25 (pubprep ephemeris)",
+     "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s13_s110.json A_transits_Oct30_Nov28 n=117",
+     "method": "geocentric observed UTC with barycentric light-travel correction"
+    },
+    {
+     "source": "U",
+     "value": "9th at 14:54",
+     "evidence": "addenda/opus55_final_audit_tic4206066/REFEREE_PASS_2.md L70",
+     "method": "naive conversion of U ephemeris"
+    }
+   ],
+   "trace": "audit/pubprep/deep convert BJD_TDB to calendar time by TDB->UTC only (e.g. audit BTJD 4345.660393 -> 03:49:49 = 03:50:58 TDB - 69.2 s); U s13 and T7 iterate t + ltt_bary(t) = BJD_TDB at the geocentre",
+   "diagnosis": "flawed method (missing light-travel correction of 5.3-7.3 min) in all lists except U s13; ephemeris differences <= 2.3 min",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s110_predict.py -> addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s110_predict.json: last A event 14:47 (U), 14:48 (audit), 14:49 (pubprep) UTC; T7 reproduces U s13 to 1 s",
+   "resolution": "Observed (TESS/geocentric) times: 2026-11-01 03:43 ... 2026-11-26 14:47 UTC (U ephemeris, +-4.4 min); the '14:54-14:56 UTC' values are not observed times",
+   "reason": "Physical time of arrival at TESS requires the light-travel correction; the counts are unaffected",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T7-05",
+   "quantity": "S110 counts attributed to the draft ('nine and three')",
+   "master_ids": "C040",
+   "claims": [
+    {
+     "source": "pubprep",
+     "value": "draft said 'nine and three transits'",
+     "evidence": "rnaas_tic4206066_pubprep/CHANGES_FROM_CURRENT_DRAFT.md L40",
+     "method": "change log"
+    },
+    {
+     "source": "other",
+     "value": "draft gives only the sector dates",
+     "evidence": "rnaas_tic4206066_draft/manuscript.tex L52",
+     "method": "draft text"
+    }
+   ],
+   "trace": "grep of draft manuscript finds no 'nine'",
+   "diagnosis": "mis-attribution in a change log",
+   "rerun": "none needed",
+   "resolution": "History only; current counts are 'eight or nine' (A) and three (B), see X-T7-06/FUTURE.S110_counts",
+   "reason": "Draft text is the primary record",
+   "status": "COSMETIC"
+  },
+  {
+   "id": "X-T7-06",
+   "quantity": "Predicted S110 times of B",
+   "master_ids": "C093",
+   "claims": [
+    {
+     "source": "other",
+     "value": "11:32 / 14:43 / 17:55 (+-23 min)",
+     "evidence": "deep_followup_tic4206066/archival_checks/out/s110_predicted_transits.json ['11.13 d']",
+     "method": "naive"
+    },
+    {
+     "source": "audit",
+     "value": "11:31 / 14:42 / 17:53 (+-2.7 min)",
+     "evidence": "tic4206066_PUBLICATION_AUDIT/out/s16_s110.json predicted_S110.B.events",
+     "method": "naive"
+    },
+    {
+     "source": "pubprep",
+     "value": "11:29 / 14:42 / 17:52 (+-3 min)",
+     "evidence": "rnaas_tic4206066_pubprep/MANUSCRIPT_NUMBER_AUDIT.csv L66 ; UNRESOLVED_LIMITATIONS.md L8",
+     "method": "naive"
+    },
+    {
+     "source": "U",
+     "value": "11:24 / 14:34 / 17:45 (+-4.5 min)",
+     "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s13_s110.json B_transits_Oct30_Nov28",
+     "method": "observed UTC"
+    }
+   ],
+   "trace": "same conversion difference as X-T7-04; ephemeris spread <= 1.5 min",
+   "diagnosis": "flawed method (no light-travel correction) + small ephemeris differences",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s110_predict.json B_U/B_audit/B_pubprep",
+   "resolution": "Observed UTC 2026-11-01 11:24, 11-12 14:35, 11-23 17:45 (U ephemeris, +-4.5 min; conditional on the S6/S32 cycle link); count = 3 for every ephemeris",
+   "reason": "Same as X-T7-04",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T7-07",
+   "quantity": "S110 wording: gap caveat",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "U",
+     "value": "'eight or nine 3.18 d and three 11.13 d transit times, some possibly in gaps or scattered light'",
+     "evidence": "addenda/opus55_final_audit_tic4206066/REQUIRED_CHANGES.md L52 (C9)",
+     "method": "required change"
+    },
+    {
+     "source": "U",
+     "value": "'spans eight or nine 3.18\\,d and three 11.13\\,d transit times' (no caveat)",
+     "evidence": "addenda/opus55_final_audit_tic4206066/proposed_revision/manuscript.tex L47",
+     "method": "applied text"
+    }
+   ],
+   "trace": "U dropped the caveat when applying C9; the official orbit table (published 2026-09-25 04:06 GMT) puts A event n=113 fully inside the 2026-11-13 19:55 - 11-14 00:55 gap",
+   "diagnosis": "understatement in proposed_revision",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s110_predict.json event n=113 status in_gap",
+   "resolution": "Add 'one of them in a scheduled data gap'",
+   "reason": "Official schedule now shows the gap",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T7-08",
+   "quantity": "QLP S98 photometry citation",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "U",
+     "value": "cite Han & Brandt 2023 only ('TGLC photometry')",
+     "evidence": "addenda/opus55_final_audit_tic4206066/12_references/REPORT.md F4 ; addenda/opus55_final_audit_tic4206066/proposed_revision/manuscript.tex L29",
+     "method": "reference audit"
+    },
+    {
+     "source": "other",
+     "value": "QLP DRN004 (Petitpas et al. 2026, RNAAS 10, 69) documents the S94 switch to TGLC-based photometry; MAST asks to cite Huang 2020a,b, Kunimoto 2021, 2022 + DOI",
+     "evidence": "addenda/opus55_final_audit_tic4206066/05_B_depth/docs/drn004.txt ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/web/crossref_ae5790.json ; addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/web_log.txt (archive.stsci.edu/hlsp/qlp)",
+     "method": "official QLP documentation"
+    }
+   ],
+   "trace": "U had DRN004 locally (05_B_depth/docs) but 12_references did not consider it",
+   "diagnosis": "incomplete citation, content correct",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/dump_qlp_headers.py (header apertures 1x1/3x3/5x5 square) ; Crossref GET",
+   "resolution": "Keep 'TGLC-based photometry'; cite Han2023 and Petitpas2026; optionally add the QLP DOI 10.17909/t9-r086-e880",
+   "reason": "DRN004 is the official QLP description of the S98-era photometry",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T7-09",
+   "quantity": "Latest novelty cutoff",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "M",
+     "value": "2026-09-25T10:59:28Z-11:00:23Z (pubprep refresh)",
+     "evidence": "addenda/tic4206066_MASTER_EVIDENCE/PRIORITY_SUMMARY.md L25",
+     "method": "compiled without U"
+    },
+    {
+     "source": "U",
+     "value": "2026-09-25T11:33:48Z-11:48:45Z (all named sources)",
+     "evidence": "addenda/opus55_final_audit_tic4206066/10_novelty_protocol/queries.log",
+     "method": "fresh logged queries"
+    }
+   ],
+   "trace": "M did not read U by design",
+   "diagnosis": "stale data in M",
+   "rerun": "none needed",
+   "resolution": "Latest cutoff 11:48:45Z (U); still 2026-09-25 UTC, so the Note's date is correct",
+   "reason": "Later logged queries supersede",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T7-10",
+   "quantity": "'shortlist rule fixed before the search' wording",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "U",
+     "value": "'threshold (15) of a shortlist rule fixed before the search'",
+     "evidence": "addenda/opus55_final_audit_tic4206066/REQUIRED_CHANGES.md L48 (C5) ; addenda/opus55_final_audit_tic4206066/REFEREE_PASS_1.md L51 (R14)",
+     "method": "required change"
+    },
+    {
+     "source": "U",
+     "value": "UNTRACEABLE; removed",
+     "evidence": "addenda/opus55_final_audit_tic4206066/REFEREE_PASS_2.md L85, L89 ; addenda/opus55_final_audit_tic4206066/referee/pass2_number_provenance/provenance_rows.json L115-L119",
+     "method": "provenance pass"
+    },
+    {
+     "source": "U",
+     "value": "'fell below the shortlist threshold (15), so I examined them post hoc'",
+     "evidence": "addenda/opus55_final_audit_tic4206066/proposed_revision/manuscript.tex L29",
+     "method": "applied text"
+    }
+   ],
+   "trace": "config/prejev_search.json change_log: v1.0 20:00:27Z (run 1 aborted at 3,397 stars), v1.1 20:28:11Z; only v1.1 content survives (U protocol_recount.json v1.1_copy_sha256 80e7ae48...)",
+   "diagnosis": "REQUIRED_CHANGES C5 is stale relative to REFEREE_PASS_2",
+   "rerun": "none needed",
+   "resolution": "Keep the proposed_revision wording (no 'fixed before the search', no 'preregistered')",
+   "reason": "Rule is traceable only to v1.1, which was frozen after production run 1 began; T*=15 came from final data",
+   "status": "RESOLVED"
+  },
+  {
+   "id": "X-T7-11",
+   "quantity": "S110 time convention inside U",
+   "master_ids": "",
+   "claims": [
+    {
+     "source": "U",
+     "value": "9th A transit 2026-11-26 14:54 UTC",
+     "evidence": "addenda/opus55_final_audit_tic4206066/REFEREE_PASS_2.md L70",
+     "method": "naive"
+    },
+    {
+     "source": "U",
+     "value": "14:49:25 UTC (pubprep ephemeris), 14:48:15 (own global fit)",
+     "evidence": "addenda/opus55_final_audit_tic4206066/01_ephemeris_A/out_s13_s110.json",
+     "method": "light-time corrected"
+    }
+   ],
+   "trace": "see X-T7-04",
+   "diagnosis": "flawed method in referee summary",
+   "rerun": "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s110_predict.json (U ephemeris 14:47:09 observed, 14:54:18 naive)",
+   "resolution": "Observed 14:47 UTC (U ephemeris) +-4.4 min",
+   "reason": "Light-time corrected value is the physical arrival time",
+   "status": "RESOLVED"
+  }
+ ],
+ "manuscript_findings": [
+  {
+   "quote": "TESS Sector 110 (2026 October 31 to November 26) spans eight or nine 3.18\\,d and three 11.13\\,d transit times.",
+   "problem": "Understatement of a known limitation: the official TESS orbit table (tess.mit.edu TESS_orbit_times.csv, created 2026-09-25) places one of the predicted 3.18 d transits (2026-11-13 ~21:15 UTC, whole transit 20:19-22:11) inside the orbit 231/232 downlink gap (2026-11-13 19:55 - 11-14 00:55 UTC) for every candidate ephemeris, so at most 7-8 A transits can be observed. U's own REQUIRED_CHANGES C9 asked for a gap caveat that the revision dropped. Counts (8 or 9 A, 3 B) do not depend on the ephemeris; the 9th A event (2026-11-26 ~14:47-14:49 UTC as seen by TESS) depends on the unpublished sector end.",
+   "fix": "TESS Sector 110 (2026 October 31 to November 26) spans eight or nine 3.18\\,d transit times, one of them in a scheduled data gap, and three 11.13\\,d transit times.",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "QLP (Sector 98, 200\\,s, TGLC photometry; \\citealt{Han2023})",
+   "problem": "Substance correct (S98 header apertures 1x1/3x3/5x5 square; MAST: TGLC methodology as of Sector 94), but the official description of the QLP implementation is QLP Data Release Notes 004 (Petitpas et al. 2026, RNAAS 10, 69, doi:10.3847/2515-5172/ae5790); Han & Brandt 2023 describes stand-alone TGLC, not the QLP product.",
+   "fix": "QLP (Sector 98, 200\\,s, TGLC-based photometry; \\citealt{Han2023,Petitpas2026}) -- and add to references.bib: @article{Petitpas2026, author = {Petitpas, Glen and Haviland, Jack and Han, Te and others}, title = {\\relax}, journal = {RNAAS}, year = {2026}, volume = {10}, number = {3}, pages = {69}, doi = {10.3847/2515-5172/ae5790}}",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "their LEO-Vetter multiple-event statistics (10.6 and 11.0)",
+   "problem": "Values are correct (A 10.597, B 10.982) but the Note never says which belongs to which signal (flagged by U REFEREE_PASS_2 P2-09).",
+   "fix": "their LEO-Vetter multiple-event statistics (10.6 and 11.0 for the 3.18 and 11.13\\,d signals)",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "I use TESS \\citep{Ricker2015} light curves",
+   "problem": "The MAST QLP page asks users to cite the QLP HLSP DOI 10.17909/t9-r086-e880 (and Huang 2020a,b; Kunimoto 2021, 2022); the Note cites only Huang2020 (Part I). Provider request, not a correctness issue; U lists the DOI as optional (REQUIRED_CHANGES section E).",
+   "fix": "Optional if words allow: add after the acknowledgments '\\dataset[doi:10.17909/t9-r086-e880]{https://doi.org/10.17909/t9-r086-e880}' or append 'QLP HLSP DOI 10.17909/t9-r086-e880' to the data sentence.",
+   "severity": "MINOR"
+  },
+  {
+   "quote": "I searched Sector 98 Quick-Look Pipeline (QLP) light curves \\citep{Huang2020} of 126,246 stars with $T\\le11.5$ with box least squares \\citep{Kovacs2002} after biweight detrending. Both signals passed all LEO-Vetter flux-level tests \\citep{Kunimoto2025} but",
+   "problem": "Verified: 126,246 input stars (126,070 searchable); astropy BLS after wotan biweight; all 17 LEO-Vetter flux-level tests passed at the pipeline ephemerides.",
+   "fix": "No change required.",
+   "severity": "NONE"
+  },
+  {
+   "quote": "fell below the shortlist threshold (15), so I examined them post hoc.",
+   "problem": "Verified: T*=15 from the frozen ladder rule on the final tier-A pool; both signals EXPLORATORY. The earlier phrases 'preregistered' and 'fixed before the search' are correctly absent.",
+   "fix": "No change required.",
+   "severity": "NONE"
+  },
+  {
+   "quote": "removing all QLP-flagged Sector 98 cadences, including scattered light.",
+   "problem": "Verified: 12,095 of 24,162 cadences carry a flag (2^2, 2^5, 2^11, 2^29, 2^30); both the frozen search mask 1610619071 and U's QUALITY==0 remove all of them.",
+   "fix": "No change required.",
+   "severity": "NONE"
+  },
+  {
+   "quote": "As of 2026 September 25 (UTC), %% AUTHOR: re-run the novelty refresh and update this date on the submission day\nI found no prior report of either signal in ExoFOP, SPOC TCE tables, the NASA Exoplanet Archive, published TESS candidate catalogs, SIMBAD, VizieR, ADS, and arXiv.",
+   "problem": "Verified: every named source was queried and logged on 2026-09-25 UTC (U 11:33-11:49Z; candidate catalogues also in the sealed re-check 04:46-05:25Z); no report found.",
+   "fix": "No change; before submission re-run ExoFOP TOI/CTOI, NASA toi, exo.MAST and new SPOC TCE tables and update the date.",
+   "severity": "NONE"
+  }
+ ],
+ "unknowns": [
+  {
+   "item": "Start and end of the final S110 data segment (orbit 232, second half)",
+   "why": "The official orbit table published 2026-09-25 lists S110 only to 2026-11-19 20:45; whether data extend past 2026-11-26 ~15:45 UTC decides whether the 9th A transit is observed; the 2026-11-20 06:01 A and 2026-11-23 17:45 B events also rely on this segment.",
+   "would_resolve": "Updated https://tess.mit.edu/public/files/TESS_orbit_times.csv or the S110 DRN after the sector",
+   "blocks_submission": false
+  },
+  {
+   "item": "Time scale of TESS_orbit_times.csv and final downlink schedule",
+   "why": "File header states no time scale (UTC assumed) and the schedule is a prediction; the Nov 13/14 gap classification has >=24 min margin at ingress and ~2.7 h at egress, so only a large schedule change would alter it.",
+   "would_resolve": "TESS MOC/TSO confirmation or post-sector DRN110",
+   "blocks_submission": false
+  },
+  {
+   "item": "Content of search config v1.0 shortlist block",
+   "why": "Only v1.1 survives; whether the ladder rule existed at 20:00:27Z cannot be checked.",
+   "would_resolve": "An archived copy of config v1.0 (none found)",
+   "blocks_submission": false
+  },
+  {
+   "item": "Novelty after 2026-09-25T11:48:45Z",
+   "why": "Sources are live; a report posted later would not be covered.",
+   "would_resolve": "Re-run the refresh on the submission day and update the date",
+   "blocks_submission": false
+  }
+ ],
+ "files_written": [
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/dump_qlp_headers.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/qlp_headers_full.txt",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s110_predict.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s110_predict.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s110_predict.log",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s98_quality_bits.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/s98_quality_bits.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/c089_tasoc_check.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/c089_tasoc_check.log",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/tesspoint_check.log",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/web_log.txt",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/web/crossref_ae5790.json",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/web/TESS_orbit_times.csv",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/web/TESS_orbit_times.headers",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/build_result.py",
+  "addenda/tic4206066_FINAL_RECONCILIATION/_work/T7_data_future/result.json"
+ ]
+}

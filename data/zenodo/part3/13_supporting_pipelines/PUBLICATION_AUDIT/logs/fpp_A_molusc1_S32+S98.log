@@ -1,0 +1,25 @@
+Getting TessCut for sector 6
+Getting TessCut for sector 32
+Getting TessCut for sector 98
+Estimated missing stellar parameters for 70 of 121 stars from photometry. See the 'params_estimated' column of the .stars dataframe. 2 appear evolved and were assigned a nominal 1 M_Sun.
+A_molusc1_S32+S98 0 FPP=0.003423 NFPP=0 (14s)
+A_molusc1_S32+S98 1 FPP=0.006946 NFPP=0 (11s)
+A_molusc1_S32+S98 2 FPP=0.001191 NFPP=0 (11s)
+A_molusc1_S32+S98 3 FPP=0.001561 NFPP=0 (11s)
+A_molusc1_S32+S98 4 FPP=0.006819 NFPP=0 (11s)
+A_molusc1_S32+S98 5 FPP=0.007425 NFPP=0 (11s)
+A_molusc1_S32+S98 6 FPP=0.004557 NFPP=0 (11s)
+A_molusc1_S32+S98 7 FPP=0.004708 NFPP=0 (11s)
+A_molusc1_S32+S98 8 FPP=0.00455 NFPP=0 (11s)
+A_molusc1_S32+S98 9 FPP=0.00924 NFPP=0 (11s)
+A_molusc1_S32+S98 10 FPP=0.002904 NFPP=0 (11s)
+A_molusc1_S32+S98 11 FPP=0.0108 NFPP=0 (11s)
+A_molusc1_S32+S98 12 FPP=0.001839 NFPP=0 (11s)
+A_molusc1_S32+S98 13 FPP=0.008693 NFPP=0 (11s)
+A_molusc1_S32+S98 14 FPP=0.006774 NFPP=0 (11s)
+A_molusc1_S32+S98 15 FPP=0.009324 NFPP=0 (11s)
+A_molusc1_S32+S98 16 FPP=0.003352 NFPP=0 (11s)
+A_molusc1_S32+S98 17 FPP=0.001508 NFPP=0 (11s)
+A_molusc1_S32+S98 18 FPP=0.0022 NFPP=0 (11s)
+A_molusc1_S32+S98 19 FPP=0.01013 NFPP=0 (11s)
+DONE A_molusc1_S32+S98 FPP 0.005397 ± 0.0032 (sd), sem 0.00071; range 0.00119-0.0108; NFPP mean 0

@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/JV9kIfNkIlQ9Y0A/SIYnKFcmAWo</id>
+  <title>arXiv Query: search_query=abs:"3.18" AND abs:TESS&amp;id_list=&amp;start=0&amp;max_results=50</title>
+  <updated>2026-09-25T11:45:00Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%223.18%22+AND+abs:TESS&amp;start=0&amp;max_results=50&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>50</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2306.09758v1</id>
+    <title>TOI-908: a planet at the edge of the Neptune desert transiting a G-type star</title>
+    <updated>2023-06-16T10:42:34Z</updated>
+    <link href="https://arxiv.org/abs/2306.09758v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.09758v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present the discovery of an exoplanet transiting TOI-908 (TIC-350153977) using data from TESS sectors 1, 12, 13, 27, 28 and 39. TOI-908 is a T = 10.7 mag G-dwarf ($T_{eff}$ = 5626 $\pm$ 61 K) solar-like star with a mass of 0.950 $\pm$ 0.010 $M_{\odot}$ and a radius of 1.028 $\pm$ 0.030 $R_{\odot}$. The planet, TOI-908 b, is a 3.18 $\pm$ 0.16 $R_{\oplus}$ planet in a 3.18 day orbit. Radial velocity measurements from HARPS reveal TOI-908 b has a mass of approximately 16.1 $\pm$ 4.1 $M_{\oplus}$ , resulting in a bulk planetary density of 2.7+0.2-0.4 g cm-3. TOI-908 b lies in a sparsely-populated region of parameter space known as the Neptune desert. The planet likely began its life as a sub-Saturn planet before it experienced significant photoevaporation due to X-rays and extreme ultraviolet radiation from its host star, and is likely to continue evaporating, losing a significant fraction of its residual envelope mass.</summary>
+    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-16T10:42:34Z</published>
+    <arxiv:comment>17 pages, 17 figures</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.EP"/>
+    <author>
+      <name>Faith Hawthorn</name>
+    </author>
+    <author>
+      <name>Daniel Bayliss</name>
+    </author>
+    <author>
+      <name>David J. Armstrong</name>
+    </author>
+    <author>
+      <name>Jorge Fernández Fernández</name>
+    </author>
+    <author>
+      <name>Ares Osborn</name>
+    </author>
+    <author>
+      <name>Sérgio G. Sousa</name>
+    </author>
+    <author>
+      <name>Vardan Adibekyan</name>
+    </author>
+    <author>
+      <name>Jeanne Davoult</name>
+    </author>
+    <author>
+      <name>Karen A. Collins</name>
+    </author>
+    <author>
+      <name>Yann Alibert</name>
+    </author>
+    <author>
+      <name>Susana C. C. Barros</name>
+    </author>
+    <author>
+      <name>François Bouchy</name>
+    </author>
+    <author>
+      <name>Matteo Brogi</name>
+    </author>
+    <author>
+      <name>David R. Ciardi</name>
+    </author>
+    <author>
+      <name>Tansu Daylan</name>
+    </author>
+    <author>
+      <name>Elisa Delgado Mena</name>
+    </author>
+    <author>
+      <name>Olivier D. S. Demangeon</name>
+    </author>
+    <author>
+      <name>Rodrigo F. Díaz</name>
+    </author>
+    <author>
+      <name>Tianjun Gan</name>
+    </author>
+    <author>
+      <name>Keith Horne</name>
+    </author>
+    <author>
+      <name>Sergio Hoyer</name>
+    </author>
+    <author>
+      <name>Alan M. Levine</name>
+    </author>
+    <author>
+      <name>Jorge Lillo-Box</name>
+    </author>
+    <author>
+      <name>Louise D. Nielsen</name>
+    </author>
+    <author>
+      <name>Hugh P. Osborn</name>
+    </author>
+    <author>
+      <name>George R. Ricker</name>
+    </author>
+    <author>
+      <name>José Rodrigues</name>
+    </author>
+    <author>
+      <name>Nuno C. Santos</name>
+    </author>
+    <author>
+      <name>Richard P. Schwarz</name>
+    </author>
+    <author>
+      <name>Sara Seager</name>
+    </author>
+    <author>
+      <name>Juan Serrano Bell</name>
+    </author>
+    <author>
+      <name>Avi Shporer</name>
+    </author>
+    <author>
+      <name>Chris Stockdale</name>
+    </author>
+    <author>
+      <name>Paul A. Strøm</name>
+    </author>
+    <author>
+      <name>Peter Tenenbaum</name>
+    </author>
+    <author>
+      <name>Stéphane Udry</name>
+    </author>
+    <author>
+      <name>Peter J. Wheatley</name>
+    </author>
+    <author>
+      <name>Joshua N. Winn</name>
+    </author>
+    <author>
+      <name>Carl Ziegler</name>
+    </author>
+    <arxiv:doi>10.1093/mnras/stad1840</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1093/mnras/stad1840" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.22115v2</id>
+    <title>Densities of small planets around the M dwarfs TOI-4336 A and TOI-4342 with ESPRESSO: Three sub-Neptunes, one super-Earth, and a Neptune-mass candidate</title>
+    <updated>2026-02-16T14:31:51Z</updated>
+    <link href="https://arxiv.org/abs/2601.22115v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.22115v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present the characterization of two planetary systems orbiting the M dwarfs TOI-4336 A (M3.5V) and TOI-4342 (M0V), each hosting two transiting planets previously validated with TESS and ground-based observations. We refined the photometry of the TOI-4342 system using TESS and LCOGT data, and characterized the host stars with NIRPS and ESPRESSO spectroscopy. High-precision ESPRESSO radial velocities allowed us to constrain the planetary masses and investigate their potential compositions. The TOI-4336 A system is composed of a sub-Neptune with a period of 16.34 days, a radius of $2.14 \pm 0.08$ Re, and a mass of $3.33 \pm 0.36$ Me, along with an inner super-Earth on a 7.59-day orbit with a radius of $1.25 \pm 0.07$ Re and a mass of $1.55 \pm 0.13$ Me. The TOI-4342 system hosts two sub-Neptunes of similar sizes ($2.33 \pm 0.09$ Re and $2.35 \pm 0.09$ Re), with periods of 5.54 and 10.69 days. Their masses are measured to be $7.3 \pm 1.3$ Me and $4.8 \pm 1.4$ Me, respectively. The RVs also reveal a planet candidate around TOI-4342, likely non-transiting, with a period of 47.5 days and a minimum mass of $17.8 \pm 3.0$ Me. With precise radii and masses, we derived bulk densities and explored possible compositions. The TOI-4336 A sub-Neptune and super-Earth have densities of $1.87 \pm 0.30$ and $4.35 \pm 0.79$ g cm$^{-3}$, while the two similar-sized sub-Neptunes in TOI-4342 show distinct densities of $3.18 \pm 0.67$ and $2.01 \pm 0.63$ g cm$^{-3}$. All four planets are excellent targets for future atmospheric characterization with JWST, and their multi-planet nature makes them especially interesting for comparative planetology. Notably, TOI-4336 A b stands out as one of the best-known targets in its size and temperature regime, with a TSM of 138, comparable to benchmark planets such as K2-18 b and LHS 1140 b.</summary>
+    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-29T18:44:17Z</published>
+    <arxiv:comment>21 pages, 15 figures. Accepted for publication in A&amp;A, version with language corrections. Full abstract in the article. The data used in this study can be downloaded and visualized on the DACE platform: https://dace.unige.ch/openData/?record=10.82180/dace-pwgeam18</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.EP"/>
+    <arxiv:journal_ref>A&amp;A 708, A81 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Léna Parc</name>
+    </author>
+    <author>
+      <name>Charles Cadieux</name>
+    </author>
+    <author>
+      <name>Nolan Grieves</name>
+    </author>
+    <author>
+      <name>François Bouchy</name>
+    </author>
+    <author>
+      <name>Alexandrine L'Heureux</name>
+    </author>
+    <author>
+      <name>Caroline Dorn</name>
+    </author>
+    <author>
+      <name>Marie-Luise Steinmeyer</name>
+    </author>
+    <author>
+      <name>Elisa Delgado-Mena</name>
+    </author>
+    <author>
+      <name>René Doyon</name>
+    </author>
+    <author>
+      <name>Yolanda G. C. Frensch</name>
+    </author>
+    <author>
+      <name>Romain Allart</name>
+    </author>
+    <author>
+      <name>Etienne Artigau</name>
+    </author>
+    <author>
+      <name>Nicola Astudillo-Defru</name>
+    </author>
+    <author>
+      <name>Xavier Bonfils</name>
+    </author>
+    <author>
+      <name>Yann Carteret</name>
+    </author>
+    <author>
+      <name>Ryan Cloutier</name>
+    </author>
+    <author>
+      <name>Marion Cointepas</name>
+    </author>
+    <author>
+      <name>Karen A. Collins</name>
+    </author>
+    <author>
+      <name>Jose Renan De Medeiros</name>
+    </author>
+    <author>
+      <name>Xavier Delfosse</name>
+    </author>
+    <author>
+      <name>Xavier Dumusque</name>
+    </author>
+    <author>
+      <name>Tianjun Gan</name>
+    </author>
+    <author>
+      <name>Jonay I. González Hernández</name>
+    </author>
+    <author>
+      <name>Ravit Helled</name>
+    </author>
+    <author>
+      <name>Monika Lendl</name>
+    </author>
+    <author>
+      <name>Lucile Mignon</name>
+    </author>
+    <author>
+      <name>Angelica Psaridi</name>
+    </author>
+    <author>
+      <name>Nuno C. Santos</name>
+    </author>
+    <author>
+      <name>Richard P. Schwarz</name>
+    </author>
+    <author>
+      <name>Julia Venturini</name>
+    </author>
+    <arxiv:doi>10.1051/0004-6361/202558308</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1051/0004-6361/202558308" title="doi"/>
+  </entry>
+</feed>

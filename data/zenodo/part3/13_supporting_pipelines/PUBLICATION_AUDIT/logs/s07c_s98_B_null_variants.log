@@ -1,0 +1,4 @@
+circular_shift {'SDE': (6.09, 5.44, 6.88, 0.299), 'power': (73.55, 61.71, 76.95, 0.236), 'depth_snr': (12.1, 11.06, 12.34, 0.223)}
+block_bootstrap_0.5d {'SDE': (6.09, 5.66, 6.84, 0.369), 'power': (73.55, 62.8, 71.26, 0.037), 'depth_snr': (12.1, 11.14, 11.87, 0.033)}
+observed B: {'SDE': 6.089, 'power': 73.546, 'depth_snr': 12.096, 'P': 11.137, 'depth_ppm': 967.795}
+single realisations: {'B_free_unshifted': {'SDE': 6.48, 'power': 71.82, 'depth_snr': 11.93}, 'inverted_with_B': {'SDE': 4.13, 'power': 40.15, 'depth_snr': 8.95}}

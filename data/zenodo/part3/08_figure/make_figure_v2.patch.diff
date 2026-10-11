@@ -1,0 +1,37 @@
+26c26,31
+< REV = os.path.dirname(HERE)                                   # proposed_revision/
+---
+> REV = "/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/proposed_revision"   # FINAL_RECONCILIATION: inputs read from the original package (read-only)
+> SC_OUT = "/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/submission_candidate"   # FINAL_RECONCILIATION: figure output
+> # FINAL_RECONCILIATION: per-sector template depths drawn in panel (a) = FINAL_FACTS.csv A.depth_S6 / A.depth_S32 / A.depth_S98 (ppm);
+> # the previous build drew the package values 519.3 / 484.0 / 574.3, the last including the unmeasurable S98 segment-edge epoch -1 (superseded).
+> FINAL_DEPTH_PPM = {6: 521.0, 32: 476.0, 98: 496.0}
+> FINAL_DEPTH_FACT = {6: "A.depth_S6", 32: "A.depth_S32", 98: "A.depth_S98"}
+64c69
+<                                   note="template depths per sector (e_D_inj) and the 11.13 d masking are unchanged from the package"))
+---
+>                                   note="FINAL_RECONCILIATION: template depths per sector = FINAL_FACTS A.depth_S6/S32/S98; S98 epoch -1 omitted from the fold; 11.13 d masking unchanged from the package"))
+90a96,97
+>     if s == 98:   # FINAL_RECONCILIATION: omit the S98 segment-edge epoch -1 (BTJD 3995.555), as in the FINAL S98 depth (A.depth_S98)
+>         keep &= np.round((t - e["T0"]) / e["P"]) != -1
+94c101
+<     D = A1["signals"]["A"]["A__pipe"]["per_sector"][str(s)]["e_D_inj"][0]
+---
+>     D = FINAL_DEPTH_PPM[s] * 1e-6   # FINAL_RECONCILIATION (was: A1 ... per_sector[s].e_D_inj[0])
+99c106,107
+<                       depth_source=f"{src(A1_P, 'a depths')}: signals.A.A__pipe.per_sector.{s}.e_D_inj[0]")
+---
+>                       depth_source=f"FINAL_FACTS.csv {FINAL_DEPTH_FACT[s]} (package value {A1['signals']['A']['A__pipe']['per_sector'][str(s)]['e_D_inj'][0]*1e6:.1f} ppm not used)",
+>                       epoch_minus1_omitted=(s == 98))
+234c242
+<     b_capable_stars=dict(text=">= 43'' (>= 7 sigma)", nearest_sep=min(n["sep_arcsec"] for n in nb),
+---
+>     b_capable_stars=dict(text="\\gtrsim43'' (>10 sigma)", nearest_sep=min(n["sep_arcsec"] for n in nb),
+241c249
+< fig.savefig(os.path.join(REV, "figure.pdf")); fig.savefig(os.path.join(REV, "figure.png"), dpi=200)
+---
+> fig.savefig(os.path.join(SC_OUT, "figure.pdf")); fig.savefig(os.path.join(SC_OUT, "figure.png"), dpi=200)
+243c251
+< json.dump(vals, open(os.path.join(HERE, "figure_values_v2.json"), "w"), indent=1, default=float)
+---
+> json.dump(vals, open(os.path.join(HERE, "figure_values_final.json"), "w"), indent=1, default=float)

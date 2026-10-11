@@ -1,0 +1,23 @@
+{
+ "2187.167": {
+  "n": 132,
+  "bits": {},
+  "n_pass_manuscript_mask": 132,
+  "n_pass_verifier_mask": 132,
+  "last_time_finite": 2200.044967517454
+ },
+ "2193.284": {
+  "n": 288,
+  "bits": {},
+  "n_pass_manuscript_mask": 288,
+  "n_pass_verifier_mask": 288,
+  "last_time_finite": 2200.044967517454
+ },
+ "2200.0": {
+  "n": 177,
+  "bits": {},
+  "n_pass_manuscript_mask": 177,
+  "n_pass_verifier_mask": 177,
+  "last_time_finite": 2200.044967517454
+ }
+}

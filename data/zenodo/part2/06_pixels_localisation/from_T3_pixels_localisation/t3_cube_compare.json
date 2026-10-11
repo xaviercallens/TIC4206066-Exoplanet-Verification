@@ -1,0 +1,30 @@
+{
+ "TIME_equal": true,
+ "QUALITY_equal": true,
+ "flux_shape": [
+  [
+   24162,
+   21,
+   21
+  ],
+  [
+   24162,
+   21,
+   21
+  ]
+ ],
+ "flux_max_abs_diff": 0.0,
+ "flux_nan_pattern_equal": true,
+ "1CRV4P": [
+  666,
+  666
+ ],
+ "2CRV4P": [
+  972,
+  972
+ ],
+ "DATE": [
+  "2026-01-13",
+  "2026-01-13"
+ ]
+}

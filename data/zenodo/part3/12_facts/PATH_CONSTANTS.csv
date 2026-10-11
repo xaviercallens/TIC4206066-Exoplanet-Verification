@@ -1,0 +1,168 @@
+file,line,variable,snippet
+01_inputs/retrieval_scripts/common.py,5,ROOT,"ROOT = ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/00_data"""
+01_inputs/retrieval_scripts/h_compare.py,11,A,"A = ""/Users/paulsmith/space <3/tess-jev/addenda"""
+01_inputs/retrieval_scripts/i_manifest.py,6,A,"A = ""/Users/paulsmith/space <3/tess-jev/addenda"""
+02_transits_A/from_T1_A_timing/r1_ephemerides.py,17,ROOT,"ROOT = ""/Users/paulsmith/space <3/tess-jev"""
+02_transits_A/from_T1_A_timing/verify/v1_independent_ephem.py,5,ROOT,"ROOT = ""/Users/paulsmith/space <3/tess-jev"""
+02_transits_A/from_T1_A_timing/verify/v2_baseline_gaps.py,4,D,"D = ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/00_data/mast/"""
+02_transits_A/from_T1_A_timing/verify/v3_post_egress_detail.py,4,f,"f = ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/00_data/mast/hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01"
+02_transits_A/from_T2_A_shape/r01_depths_from_stored_rows.py,6,ROOT,"ROOT = ""/Users/paulsmith/space <3/tess-jev"""
+02_transits_A/from_T2_A_shape/r02_vshape_rednoise.py,14,ROOT,"ROOT = ""/Users/paulsmith/space <3/tess-jev"""
+02_transits_A/from_T2_A_shape/r03_derived.py,7,ROOT,"ROOT = ""/Users/paulsmith/space <3/tess-jev"""
+02_transits_A/from_T2_A_shape/verify/v01_checks.py,6,ROOT,"ROOT = ""/Users/paulsmith/space <3/tess-jev"""
+02_transits_A/from_U_01_ephemeris_A/verify/v01_qlp_bits.py,3,D,"D=""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/00_data/mast/"""
+02_transits_A/from_U_01_ephemeris_A/verify/v03_grid.py,4,D,"D=""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/00_data/mast/"""
+02_transits_A/from_U_02_timing_A/verify/v0_inspect.py,3,D,"D=""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/00_data/mast/"""
+02_transits_A/from_U_02_timing_A/verify/v1_common.py,7,D,"D = ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/00_data/"""
+02_transits_A/from_U_07_A_shape_radii/run_batch1.sh,1,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python s03_jointfit.py mann 
+02_transits_A/from_U_07_A_shape_radii/run_batch1.sh,2,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python s03_jointfit.py logu 
+02_transits_A/from_U_07_A_shape_radii/run_batch1.sh,3,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python s03_jointfit.py mann 
+02_transits_A/from_U_07_A_shape_radii/run_batch2.sh,1,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python s03_jointfit.py uni c
+02_transits_A/from_U_07_A_shape_radii/run_batch2.sh,2,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python s03_jointfit.py uni f
+02_transits_A/from_U_07_A_shape_radii/run_batch2.sh,3,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python s03_jointfit.py mann 
+02_transits_A/from_U_07_A_shape_radii/run_batch3.sh,2,OMP_NUM_THREADS,OMP_NUM_THREADS=1 /private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python s04
+02_transits_A/from_U_07_A_shape_radii/run_batch3.sh,3,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python s03_jointfit.py mann 
+02_transits_A/from_U_07_A_shape_radii/run_batch3.sh,4,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python s03_jointfit.py mann 
+02_transits_A/from_U_07_A_shape_radii/run_batch3.sh,5,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python s03_jointfit.py uni c
+02_transits_A/from_U_07_A_shape_radii/run_batch3.sh,6,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python s03_jointfit.py mann 
+02_transits_A/from_U_07_A_shape_radii/run_batch3.sh,7,OMP_NUM_THREADS,OMP_NUM_THREADS=1 /private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python s06
+02_transits_A/from_U_07_A_shape_radii/run_batch4.sh,2,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python s03_jointfit.py mann 
+02_transits_A/from_U_07_A_shape_radii/run_batch4.sh,3,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python s03_jointfit.py mann 
+02_transits_A/from_U_07_A_shape_radii/run_batch4.sh,4,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python s03_jointfit.py logu 
+02_transits_A/from_U_07_A_shape_radii/run_batch4.sh,5,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python s03_jointfit.py uni f
+02_transits_A/from_U_07_A_shape_radii/run_batch4.sh,6,EXCL_S98_EPOCHS,"EXCL_S98_EPOCHS=-1,8 /private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python "
+02_transits_A/from_U_07_A_shape_radii/run_batch4.sh,7,EXCL_S98_EPOCHS,"EXCL_S98_EPOCHS=-1,8 /private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python "
+02_transits_A/from_U_07_A_shape_radii/verify/run_fits.sh,4,PY,PY=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python
+02_transits_A/from_U_07_A_shape_radii/verify/run_fits2.sh,4,PY,PY=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python
+02_transits_A/from_U_07_A_shape_radii/verify/run_fits3.sh,3,PY,PY=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python
+02_transits_A/from_U_referee_resolve_R-S6/run_joint.sh,5,PY,PY=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/audit_env/bin/python
+02_transits_A/reproduce_ephemeris/v1_common.py,7,D,"D = ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/00_data/"""
+04_fpp/from_T4_fpp_companion/t4_01_count_fpp_runs.py,4,ROOT,"ROOT = ""/Users/paulsmith/space <3/tess-jev"""
+04_fpp/from_T4_fpp_companion/t4_02_checks.py,11,ROOT,"ROOT = ""/Users/paulsmith/space <3/tess-jev"""
+04_fpp/from_T4_fpp_companion/t4_03_sdss_sep.py,5,A,"A = ""/Users/paulsmith/space <3/tess-jev/addenda/archival_extra_tic4206066"""
+04_fpp/from_T4_fpp_companion/t4_04_gaia60_census.py,3,A,"A = ""/Users/paulsmith/space <3/tess-jev/addenda/archival_extra_tic4206066/highres_imaging/raw/gaia_dr3_cone_60arcsec.json"""
+04_fpp/from_T4_fpp_companion/t4_05_sed_colour_sign.py,3,C,"C = ""/Users/paulsmith/space <3/tess-jev/addenda/companion_check_tic4206066/out/sed_residuals.json"""
+04_fpp/from_T4_fpp_companion/t4_06_eb_totals.py,5,U,"U = ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066"""
+04_fpp/from_T4_fpp_companion/verify/v01_soar_ruwe.py,4,U,"U = ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066"""
+04_fpp/from_T4_fpp_companion/verify/v02_audit_scen.py,5,A,"A = ""/Users/paulsmith/space <3/tess-jev/addenda"""
+04_fpp/from_T4_fpp_companion/verify/v03_r5_teff_pairs.py,3,U,"U = ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/referee/resolve_R5/runs/"""
+04_fpp/from_T4_fpp_companion/verify/v04_write_verify.py,101,,"dict(what=""Volatile inputs behind cited/plotted numbers"", why_it_matters=""r5_all.csv (206 MB) and fresh5_kept.csv (78 MB) live only in /priv"
+04_fpp/from_U_08_fpp/f02_trice_run.py,9,SCR,"SCR = ""/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/a08_cache"""
+04_fpp/from_U_08_fpp/f03_priors.py,14,files,"files = {""prev_age5 (tic4206066_PUBLICATION_AUDIT, reused)"": ""/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbb"
+04_fpp/from_U_08_fpp/f03_priors.py,15,,"""fresh_age5 (this audit)"": ""/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/a08_cache/molu"
+04_fpp/from_U_08_fpp/run_queue1.sh,3,PY,PY=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python
+04_fpp/from_U_08_fpp/run_queue1.sh,4,,"cd ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/08_fpp"""
+04_fpp/from_U_08_fpp/run_queue2.sh,3,PY,PY=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python
+04_fpp/from_U_08_fpp/run_queue2.sh,4,M,M=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/a08_cache/molusc_prev/molusc_age5_kept.c
+04_fpp/from_U_08_fpp/run_queue2.sh,5,,"cd ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/08_fpp"""
+04_fpp/from_U_08_fpp/run_queue3.sh,4,H,"H=""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/08_fpp"""
+04_fpp/from_U_08_fpp/run_queue3.sh,6,T,T=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python
+04_fpp/from_U_08_fpp/run_queue3.sh,7,MR,MR=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/a08_cache/molusc_run
+04_fpp/from_U_08_fpp/run_queue3.sh,8,,date -u; cd /private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/a08_cache/MOLUSC/code
+04_fpp/from_U_08_fpp/run_queue3.sh,14,MP,MP=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/a08_cache/molusc_prev/molusc_age5_kept.
+04_fpp/from_U_08_fpp/run_queue4.sh,3,H,"H=""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/08_fpp"""
+04_fpp/from_U_08_fpp/run_queue4.sh,5,T,T=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python
+04_fpp/from_U_08_fpp/run_queue4.sh,6,MR,MR=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/a08_cache/molusc_run
+04_fpp/from_U_08_fpp/verify/q1.sh,1,,export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 XDG_CACHE_HOME=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-
+04_fpp/from_U_08_fpp/verify/q1.sh,2,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python v03_runs.py default A
+04_fpp/from_U_08_fpp/verify/q1.sh,3,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python v03_runs.py trunc0.38
+04_fpp/from_U_08_fpp/verify/q1.sh,4,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python v03_runs.py trunc0.45
+04_fpp/from_U_08_fpp/verify/q2.sh,1,,export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 XDG_CACHE_HOME=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-
+04_fpp/from_U_08_fpp/verify/q2.sh,2,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python v03_runs.py default B
+04_fpp/from_U_08_fpp/verify/q2.sh,3,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python v03_runs.py trunc0.38
+04_fpp/from_U_08_fpp/verify/q2.sh,4,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python v03_runs.py default A
+04_fpp/from_U_08_fpp/verify/q3.sh,1,,export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 XDG_CACHE_HOME=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-
+04_fpp/from_U_08_fpp/verify/q3.sh,3,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python v04_grid.py A v_A_S32
+04_fpp/from_U_08_fpp/verify/q4.sh,1,,export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 XDG_CACHE_HOME=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-
+04_fpp/from_U_08_fpp/verify/q4.sh,3,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python v04_grid.py B v_B_S32
+04_fpp/from_U_08_fpp/verify/q5.sh,2,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python v04_grid.py A v_A_S32
+04_fpp/from_U_08_fpp/verify/q5.sh,3,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python v04_grid.py B v_B_S32
+04_fpp/from_U_08_fpp/verify/q6.sh,2,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python v07_molusc_direct.py 
+04_fpp/from_U_08_fpp/verify/q6.sh,3,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python v07_molusc_direct.py 
+04_fpp/from_U_08_fpp/verify/q6.sh,4,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python v07_molusc_direct.py 
+04_fpp/from_U_08_fpp/verify/q6.sh,5,,/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python v07_molusc_direct.py 
+04_fpp/from_U_08_fpp/verify/v02_target.py,6,CACHE,"CACHE = os.path.join(""/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad"", ""v08_cache"")"
+04_fpp/from_U_08_fpp/verify/v05_molusc_dist.py,11,F,"F = ""/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/a08_cache/molusc_run/fresh5_kept.csv"""
+04_fpp/from_U_08_fpp/verify/v06_combine.py,14,F,"F = ""/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/a08_cache/molusc_run/fresh5_kept.csv"""
+04_fpp/from_U_08_fpp/verify/v07_molusc_direct.py,14,F,"F = ""/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/a08_cache/molusc_run/fresh5_kept.csv"""
+04_fpp/from_U_referee_resolve_R5/q_A.sh,3,,"cd ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/referee/resolve_R5"""
+04_fpp/from_U_referee_resolve_R5/q_A.sh,4,PY,PY=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python
+04_fpp/from_U_referee_resolve_R5/q_A2.sh,4,,"cd ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/referee/resolve_R5"""
+04_fpp/from_U_referee_resolve_R5/q_A2.sh,5,PY,PY=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python
+04_fpp/from_U_referee_resolve_R5/q_B.sh,3,,"cd ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/referee/resolve_R5"""
+04_fpp/from_U_referee_resolve_R5/q_B.sh,4,PY,PY=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python
+04_fpp/from_U_referee_resolve_R5/q_C.sh,4,,"cd ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/referee/resolve_R5"""
+04_fpp/from_U_referee_resolve_R5/q_C.sh,6,PY,PY=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python
+04_fpp/from_U_referee_resolve_R5/q_C2.sh,4,,"cd ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/referee/resolve_R5"""
+04_fpp/from_U_referee_resolve_R5/q_C2.sh,6,PY,PY=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python
+04_fpp/from_U_referee_resolve_R5/r01_molusc_all.sh,6,T,T=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/bin/python
+04_fpp/from_U_referee_resolve_R5/r01_molusc_all.sh,7,C,C=/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/r5_cache
+04_fpp/from_U_referee_resolve_R5/r01_molusc_all.sh,9,,cd /private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/a08_cache/MOLUSC/code
+04_fpp/from_U_referee_resolve_R5/r02_constrained_grid.py,24,SCR,"SCR = ""/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad"""
+04_fpp/from_U_referee_resolve_R5/r03_constrained_molusc.py,19,ALL,"ALL = ""/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/r5_cache/r5_all.csv"""
+04_fpp/from_U_referee_resolve_R5/r04_molusc_mode_decomposition.py,19,ALL,"ALL = ""/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/r5_cache/r5_all.csv"""
+04_fpp/from_U_referee_resolve_R5/r05_direct_runs.py,44,df,"df = pd.read_csv(""/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/r5_cache/r5_all.csv"","
+04_fpp/from_U_referee_resolve_R5/r07_ruwe_robustness.py,13,ALL,"ALL = ""/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/r5_cache/r5_all.csv"""
+05_companion_limit_038/from_U_06_stellar/verify/v01_ariadne.py,2,p,"p=""/Users/paulsmith/space <3/tess-jev/addenda/companion_check_tic4206066/sed_out/BMA.pkl"""
+05_companion_limit_038/from_U_06_stellar/verify/v02_overlum.py,2,D,"D=""/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/06_stellar_dl/overluminous_catalog.csv"""
+05_companion_limit_038/from_U_06_stellar/verify/v02_overlum.py,16,,"for line in open(""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/06_stellar/refs/EEM_dwarf_UBVIJHK_colors_Teff.txt"
+05_companion_limit_038/from_U_09_companion/c00_relations.py,13,EEM,"EEM = Path(""/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/c09docs/EEM_dwarf.txt"")"
+05_companion_limit_038/from_U_09_companion/c03_transit_model.py,69,_LD,"_LD = _pd.read_csv(""/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/lib/python3."
+05_companion_limit_038/from_U_09_companion/verify/v3_fit.py,9,D,"D=""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/00_data/mast/"""
+05_companion_limit_038/from_U_referee_resolve_R4/r4_01_way_oos.py,20,WAY,"WAY = ""/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/06_stellar_dl/overluminous_catalog."
+05_companion_limit_038/from_U_referee_resolve_R4/r4_03_molusc_regimes.py,22,F,"F = ""/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/a08_cache/molusc_run/fresh5_kept.csv"""
+06_pixels_localisation/from_T3_pixels_localisation/t3_combine.py,10,R,"R = ""/Users/paulsmith/space <3/tess-jev/addenda/"""
+06_pixels_localisation/from_T3_pixels_localisation/t3_cube_compare.py,4,R,"R = ""/Users/paulsmith/space <3/tess-jev/addenda/"""
+06_pixels_localisation/from_T3_pixels_localisation/t3_cube_compare.py,25,,"json.dump(out, open(""/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T3_pixels_localisation/t3_cube_compare"
+06_pixels_localisation/from_T3_pixels_localisation/t3_gap3995.py,4,R,"R = ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/00_data/"""
+06_pixels_localisation/from_T3_pixels_localisation/t3_gap3995.py,27,,"json.dump(out, open(""/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T3_pixels_localisation/t3_gap3995.json"
+06_pixels_localisation/from_T3_pixels_localisation/t3_s98_B_driver.py,6,W,"W = ""/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T3_pixels_localisation"""
+06_pixels_localisation/from_T3_pixels_localisation/t3_s98_B_driver.py,7,,"sys.path.insert(0, ""/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_PUBLICATION_AUDIT/scripts"")"
+06_pixels_localisation/from_T3_pixels_localisation/t3_s98_driver.py,18,W,"W = ""/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T3_pixels_localisation"""
+06_pixels_localisation/from_T3_pixels_localisation/t3_s98_driver.py,19,AS,"AS = ""/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_PUBLICATION_AUDIT/scripts"""
+06_pixels_localisation/from_T3_pixels_localisation/t3_s98_driver.py,20,US,"US = ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/03_pixels"""
+06_pixels_localisation/from_T3_pixels_localisation/t3_write_result.py,2,W,"W = ""/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T3_pixels_localisation/"""
+06_pixels_localisation/from_T3_pixels_localisation/verify/v_combine.py,3,U,"U=""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/"""
+06_pixels_localisation/from_T3_pixels_localisation/verify/v_poscorr_tesscut.py,3,D,"D=""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/00_data/tesscut/21x21/"""
+06_pixels_localisation/from_T3_pixels_localisation/verify/v_poscorr_tesscut.py,10,,"json.dump(out,open(""/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T3_pixels_localisation/verify/v_poscorr"
+06_pixels_localisation/from_T3_pixels_localisation/verify/v_write.py,44,,"json.dump(res,open(""/Users/paulsmith/space <3/tess-jev/""+V+""verify.json"",""w""),indent=1)"
+06_pixels_localisation/from_T8_pixel_recheck/build_result.py,196,,"dict(source=""other"", value=""interpreter '/Users/paulsmith/space <3/tess-jev/.venv/bin/python'"", evidence=f""{K}/pkg_copy/out/inputs.json"", me"
+06_pixels_localisation/from_T8_pixel_recheck/build_result.py,229,,"files.append(os.path.relpath(os.path.join(dp, f), ""/Users/paulsmith/space <3/tess-jev""))"
+06_pixels_localisation/from_T8_pixel_recheck/t8_prf_offtarget_signature.py,13,U3,"U3 = ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/03_pixels"""
+06_pixels_localisation/from_U_03_pixels/common.py,13,ROOT,"ROOT = ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066"""
+06_pixels_localisation/from_U_03_pixels/verify/v1_loc.py,12,D,"D = ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/00_data"""
+06_pixels_localisation/from_U_03_pixels/verify/v2_poscorr.py,4,d,"d = fits.getdata(""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/00_data/mast/tess2020324010417-s0032-000000000420"
+06_pixels_localisation/from_U_referee_resolve_R3/r1_boot.py,12,,"sys.path.insert(0, ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/03_pixels/verify"")"
+06_pixels_localisation/from_U_referee_resolve_R3/r2_combine.py,13,D,"D = ""/Users/paulsmith/space <3/tess-jev/addenda"""
+06_pixels_localisation/from_U_referee_resolve_R3/r3_gaia_contrast.py,15,D,"D = ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066"""
+06_pixels_localisation/from_U_referee_resolve_R3/r3_gaia_contrast.py,17,MOLUSC,"MOLUSC = ""/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/a08_cache/MOLUSC/code/gaia_contr"
+06_pixels_localisation/from_U_referee_resolve_R3/r4_panel_d_spec.py,8,A,"A = ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066"""
+06_pixels_localisation/host_probability_e3/e3_host_probability.py,10,U3,"U3 = ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/03_pixels"""
+07_signal_B/from_T5_signal_B/t5_rerun.py,12,ROOT,"ROOT = ""/Users/paulsmith/space <3/tess-jev"""
+07_signal_B/from_T5_signal_B/verify/build_verify.py,106,R,"R=""/Users/paulsmith/space <3/tess-jev/"""
+07_signal_B/from_T5_signal_B/verify/v_chron_a03.py,3,ROOT,"ROOT = ""/Users/paulsmith/space <3/tess-jev/"""
+07_signal_B/from_T5_signal_B/verify/v_ltt_check.py,7,OUT,"OUT = ""/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T5_signal_B/verify/v_ltt_check.json"""
+07_signal_B/from_T5_signal_B/verify/v_pool_epoch.py,14,,"json.dump(out, open(""/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/_work/T5_signal_B/verify/v_pool_epoch.json"","
+07_signal_B/from_T7_data_future/c089_tasoc_check.py,4,,"sys.path.insert(0, ""/Users/paulsmith/space <3/tess-jev/addenda/independent_verification_tic4206066_SEALED/scripts"")"
+07_signal_B/from_T7_data_future/c089_tasoc_check.py,6,V,"V = ""/Users/paulsmith/space <3/tess-jev/addenda/independent_verification_tic4206066_SEALED/downloads/"""
+07_signal_B/from_T7_data_future/dump_qlp_headers.py,4,U,"U=""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/00_data/mast/"""
+07_signal_B/from_T7_data_future/s98_quality_bits.py,4,f,"f = ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/00_data/mast/hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01"
+08_figure/make_figure_v2.py,26,REV,"REV = ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/proposed_revision""   # FINAL_RECONCILIATION: inputs read fro"
+08_figure/make_figure_v2.py,27,SC_OUT,"SC_OUT = ""/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_FINAL_RECONCILIATION/submission_candidate""   # FINAL_RECONCILIATION: figure "
+09_star/from_T6_star/t6_01_ariadne_bma.py,21,ROOT,"ROOT = Path(""/Users/paulsmith/space <3/tess-jev"")"
+09_star/from_T6_star/t6_02_ruwe_pct.py,13,ROOT,"ROOT = Path(""/Users/paulsmith/space <3/tess-jev"")"
+09_star/from_T6_star/t6_03_xray_rossby.py,20,ROOT,"ROOT = Path(""/Users/paulsmith/space <3/tess-jev"")"
+09_star/from_T6_star/t6_05_parallax_zp.py,9,g,"g = Table.read(""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/06_stellar/data/gaia_dr3_source.ecsv"")[0]"
+09_star/from_T6_star/verify/v02_s32_rotation_ls.py,9,f,"f = Path(""/Users/paulsmith/space <3/tess-jev/addenda/deep_followup_tic4206066/lc/tess2020324010417-s0032-0000000004206066-0200-s_lc.fits"")"
+09_star/from_T6_star/verify/v03_other_sectors_ls.py,9,L,"L = Path(""/Users/paulsmith/space <3/tess-jev/addenda/deep_followup_tic4206066/lc"")"
+09_star/from_T6_star/verify/v04_bma_exact_mixture.py,7,P,"P = Path(""/Users/paulsmith/space <3/tess-jev/addenda/companion_check_tic4206066/sed_out/BMA.pkl"")"
+13_supporting_pipelines/PUBLICATION_AUDIT/scripts/run_fpp_all.sh,3,PY,PY=/private/tmp/claude-501/-Users-paulsmith-space--3/21ae3b23-e2c8-49b9-927a-27d6e2d5b6a3/scratchpad/trice_env/bin/python
+13_supporting_pipelines/PUBLICATION_AUDIT/scripts/run_fpp_all.sh,4,,"cd ""/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_PUBLICATION_AUDIT/scripts"""
+13_supporting_pipelines/PUBLICATION_AUDIT/scripts/run_fpp_prevfold.sh,3,PY,PY=/private/tmp/claude-501/-Users-paulsmith-space--3/21ae3b23-e2c8-49b9-927a-27d6e2d5b6a3/scratchpad/trice_env/bin/python
+13_supporting_pipelines/PUBLICATION_AUDIT/scripts/run_fpp_prevfold.sh,4,,"cd ""/Users/paulsmith/space <3/tess-jev/addenda/tic4206066_PUBLICATION_AUDIT/scripts"""
+13_supporting_pipelines/PUBLICATION_AUDIT/scripts/s13_fpp_run.py,47,molusc,"molusc = {""molusc5"": ""/private/tmp/claude-501/-Users-paulsmith-space--3/21ae3b23-e2c8-49b9-927a-27d6e2d5b6a3/scratchpad/molusc_age5_kept.csv"
+13_supporting_pipelines/PUBLICATION_AUDIT/scripts/s13_fpp_run.py,48,,"""molusc1"": ""/private/tmp/claude-501/-Users-paulsmith-space--3/21ae3b23-e2c8-49b9-927a-27d6e2d5b6a3/scratchpad/molusc_age1_kept.csv""}.get(var"
+13_supporting_pipelines/PUBLICATION_AUDIT/scripts/s13_fpp_run.py,51,cache,"cache = ""/private/tmp/claude-501/-Users-paulsmith-space--3/21ae3b23-e2c8-49b9-927a-27d6e2d5b6a3/scratchpad/trice_lk_cache""  # large TESScut "
+13_supporting_pipelines/PUBLICATION_AUDIT/scripts/s13c_fpp_prevfold.py,42,cache,"cache = ""/private/tmp/claude-501/-Users-paulsmith-space--3/21ae3b23-e2c8-49b9-927a-27d6e2d5b6a3/scratchpad/trice_lk_cache"""
+13_supporting_pipelines/extra_science_e4_injection_recovery/e4_injection_recovery.py,16,F,"F = ""/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/00_data/mast/hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01"
+13_supporting_pipelines/pubprep/analysis/a4_fpp_ownfold.py,39,cache,"cache = ""/private/tmp/claude-501/-Users-paulsmith-space--3/21ae3b23-e2c8-49b9-927a-27d6e2d5b6a3/scratchpad/trice_lk_cache"""

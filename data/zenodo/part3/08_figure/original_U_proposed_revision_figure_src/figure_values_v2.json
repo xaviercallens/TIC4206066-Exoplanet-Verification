@@ -1,0 +1,986 @@
+{
+ "meta": {
+  "script": "opus55_final_audit_tic4206066/proposed_revision/figure_src/make_figure_v2.py",
+  "created_utc": "2026-09-25T14:58:12+00:00",
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "matplotlib": "3.11.2",
+  "variant": "2 (three panels)",
+  "based_on": "figure_src/make_figure_rev.py (variant 1; archived in variant1_fullB/) <- rnaas_tic4206066_pubprep/analysis/a6_figure.py",
+  "panel_map": {
+   "a": "old a",
+   "b": "old d",
+   "c": "old e (3.18 d only)"
+  },
+  "size_in": [
+   7.1,
+   4.35
+  ],
+  "png_dpi": 200
+ },
+ "ephemerides_used": {
+  "values": {
+   "A": {
+    "P": 3.1827849535823756,
+    "T0": 3998.7359923208132,
+    "T14": 0.0786799965112074
+   }
+  },
+  "source": "opus55_final_audit_tic4206066/02_timing_A/verify/v4_results.json",
+  "key": "ephem.drop_onesided_573_and_m1_R60 (T0 converted BJD_TDB -> BTJD)",
+  "n_transits": 19,
+  "eP": 5.662484117234625e-06,
+  "eT0_d": 0.002883224411453203,
+  "chi2": 9.508708500702566,
+  "dof": 17,
+  "template_T14_source": "rnaas_tic4206066_pubprep/analysis/out/a1_results.json: signals.A.A__pipe.template_T14_h",
+  "package_ephemeris_not_used": {
+   "P": 3.1827856059211252,
+   "T0_BTJD": 3998.7375446941755,
+   "source": "rnaas_tic4206066_pubprep/analysis/out/a1_results.json"
+  },
+  "note": "template depths per sector (e_D_inj) and the 11.13 d masking are unchanged from the package"
+ },
+ "panel_a": {
+  "signal": "A",
+  "P_d": 3.1827849535823756,
+  "T0_BTJD": 3998.7359923208132,
+  "other_signal_removed_within_T14": 1.0,
+  "template": "A shape of a1_timing_depths.SHAPE",
+  "per_sector": {
+   "6": {
+    "label": "S6, TESS-SPOC 30 min",
+    "offset_ppm": 0,
+    "bin_width_h": 0.5,
+    "template_depth_ppm": 519.3,
+    "point_scatter_ppm": 285.8,
+    "bin_centre_h": [
+     -5.75,
+     -5.25,
+     -4.75,
+     -4.25,
+     -3.75,
+     -3.25,
+     -2.75,
+     -2.25,
+     -1.75,
+     -1.25,
+     -0.75,
+     -0.25,
+     0.25,
+     0.75,
+     1.25,
+     1.75,
+     2.25,
+     2.75,
+     3.25,
+     3.75,
+     4.25,
+     4.75,
+     5.25,
+     5.75
+    ],
+    "bin_mean_ppm_without_offset": [
+     -135.0,
+     -84.0,
+     84.5,
+     102.7,
+     27.4,
+     -21.1,
+     -230.9,
+     83.6,
+     50.3,
+     -104.1,
+     -612.7,
+     -429.6,
+     -393.5,
+     -439.7,
+     50.5,
+     139.8,
+     -92.5,
+     8.7,
+     -120.8,
+     93.0,
+     23.2,
+     167.1,
+     -102.2,
+     73.6
+    ],
+    "bin_err_ppm": [
+     127.8,
+     127.8,
+     127.8,
+     127.8,
+     142.9,
+     142.9,
+     116.7,
+     142.9,
+     127.8,
+     116.7,
+     127.8,
+     116.7,
+     127.8,
+     116.7,
+     116.7,
+     142.9,
+     116.7,
+     116.7,
+     127.8,
+     127.8,
+     116.7,
+     116.7,
+     116.7,
+     108.0
+    ],
+    "depth_source": "rnaas_tic4206066_pubprep/analysis/out/a1_results.json: signals.A.A__pipe.per_sector.6.e_D_inj[0]"
+   },
+   "32": {
+    "label": "S32, SPOC 2 min",
+    "offset_ppm": -1500,
+    "bin_width_h": 0.3333333333333333,
+    "template_depth_ppm": 484.0,
+    "point_scatter_ppm": 845.0,
+    "bin_centre_h": [
+     -5.8333,
+     -5.5,
+     -5.1667,
+     -4.8333,
+     -4.5,
+     -4.1667,
+     -3.8333,
+     -3.5,
+     -3.1667,
+     -2.8333,
+     -2.5,
+     -2.1667,
+     -1.8333,
+     -1.5,
+     -1.1667,
+     -0.8333,
+     -0.5,
+     -0.1667,
+     0.1667,
+     0.5,
+     0.8333,
+     1.1667,
+     1.5,
+     1.8333,
+     2.1667,
+     2.5,
+     2.8333,
+     3.1667,
+     3.5,
+     3.8333,
+     4.1667,
+     4.5,
+     4.8333,
+     5.1667,
+     5.5,
+     5.8333
+    ],
+    "bin_mean_ppm_without_offset": [
+     -21.8,
+     -149.4,
+     -231.4,
+     -273.0,
+     -59.2,
+     -23.7,
+     -26.4,
+     21.4,
+     -184.6,
+     -29.3,
+     -44.4,
+     -186.3,
+     -200.6,
+     -86.0,
+     115.1,
+     -139.8,
+     -563.8,
+     -544.5,
+     -447.8,
+     -460.8,
+     -212.9,
+     -76.3,
+     73.4,
+     -239.5,
+     -128.4,
+     7.5,
+     -27.3,
+     100.5,
+     199.4,
+     52.3,
+     116.0,
+     7.0,
+     -168.7,
+     25.9,
+     126.5,
+     -15.7
+    ],
+    "bin_err_ppm": [
+     94.5,
+     94.5,
+     94.5,
+     94.5,
+     94.5,
+     94.5,
+     94.5,
+     94.5,
+     94.5,
+     94.5,
+     94.5,
+     94.5,
+     94.5,
+     95.1,
+     94.5,
+     94.5,
+     94.5,
+     94.5,
+     95.1,
+     101.7,
+     109.1,
+     109.1,
+     109.1,
+     109.1,
+     109.1,
+     109.1,
+     109.1,
+     109.1,
+     108.2,
+     100.3,
+     94.5,
+     94.5,
+     94.5,
+     94.5,
+     94.5,
+     94.5
+    ],
+    "depth_source": "rnaas_tic4206066_pubprep/analysis/out/a1_results.json: signals.A.A__pipe.per_sector.32.e_D_inj[0]"
+   },
+   "98": {
+    "label": "S98, QLP 200 s",
+    "offset_ppm": -3000,
+    "bin_width_h": 0.3333333333333333,
+    "template_depth_ppm": 574.3,
+    "point_scatter_ppm": 654.7,
+    "bin_centre_h": [
+     -5.8333,
+     -5.5,
+     -5.1667,
+     -4.8333,
+     -4.5,
+     -4.1667,
+     -3.8333,
+     -3.5,
+     -3.1667,
+     -2.8333,
+     -2.5,
+     -2.1667,
+     -1.8333,
+     -1.5,
+     -1.1667,
+     -0.8333,
+     -0.5,
+     -0.1667,
+     0.1667,
+     0.5,
+     0.8333,
+     1.1667,
+     1.5,
+     1.8333,
+     2.1667,
+     2.5,
+     2.8333,
+     3.1667,
+     3.5,
+     3.8333,
+     4.1667,
+     4.5,
+     4.8333,
+     5.1667,
+     5.5,
+     5.8333
+    ],
+    "bin_mean_ppm_without_offset": [
+     -76.2,
+     124.7,
+     43.2,
+     194.9,
+     -29.3,
+     -58.2,
+     -37.6,
+     -9.0,
+     31.8,
+     121.1,
+     24.2,
+     69.5,
+     -48.0,
+     13.7,
+     -111.3,
+     -246.1,
+     -455.5,
+     -479.4,
+     -580.3,
+     -498.3,
+     -461.6,
+     92.2,
+     -95.3,
+     140.9,
+     0.0,
+     9.3,
+     -96.8,
+     -188.6,
+     -55.6,
+     -122.3,
+     -170.3,
+     -241.8,
+     -68.4,
+     -34.4,
+     85.3,
+     -95.4
+    ],
+    "bin_err_ppm": [
+     83.1,
+     83.8,
+     82.5,
+     81.8,
+     82.5,
+     84.5,
+     83.1,
+     84.5,
+     86.7,
+     91.7,
+     87.5,
+     89.1,
+     88.3,
+     89.9,
+     88.3,
+     89.1,
+     89.9,
+     88.3,
+     89.9,
+     89.9,
+     89.9,
+     92.6,
+     102.2,
+     103.5,
+     106.2,
+     102.2,
+     104.8,
+     99.8,
+     97.6,
+     101.0,
+     95.5,
+     99.8,
+     96.5,
+     101.0,
+     95.5,
+     101.0
+    ],
+    "depth_source": "rnaas_tic4206066_pubprep/analysis/out/a1_results.json: signals.A.A__pipe.per_sector.98.e_D_inj[0]"
+   }
+  }
+ },
+ "panel_b": {
+  "points": [
+   {
+    "signal": "A",
+    "sector": 32,
+    "colour": "#b2182b",
+    "marker": "s",
+    "filled": true,
+    "product": "SPOC 2-min TPF, POS_CORR-decorrelated, 8 transits",
+    "offset_E_N_arcsec": [
+     5.205502814737672,
+     0.39277564678379057
+    ],
+    "sigma_E_N_arcsec": [
+     3.0811225512104263,
+     2.78263106998299
+    ],
+    "error_rule": "max(injection SD, jackknife SE, robust bootstrap SD) per axis (spec)",
+    "injection_sd_audit03": [
+     3.0811225512104263,
+     2.78263106998299
+    ],
+    "n_events_audit03": 8,
+    "audit03_set": "S32_tpf_poscorr_A",
+    "max_abs_diff_spec_vs_audit03_offset": 0.0,
+    "source": "opus55_final_audit_tic4206066/referee/resolve_R3/out/r4_panel_d_spec.json: plot[0]"
+   },
+   {
+    "signal": "A",
+    "sector": 98,
+    "colour": "#1b7837",
+    "marker": "^",
+    "filled": true,
+    "product": "TESScut 200 s, QLP flags 2048+2^29 removed, 9 transits (3995.555 excluded: no post-transit baseline)",
+    "offset_E_N_arcsec": [
+     5.648872469696406,
+     -0.316325772885769
+    ],
+    "sigma_E_N_arcsec": [
+     5.268561182599604,
+     4.516583338542118
+    ],
+    "error_rule": "max(injection SD, jackknife SE, robust bootstrap SD) per axis (spec)",
+    "injection_sd_audit03": [
+     3.335309954086866,
+     4.516583338542118
+    ],
+    "n_events_audit03": 9,
+    "audit03_set": "S98_clean29_A",
+    "max_abs_diff_spec_vs_audit03_offset": 0.0,
+    "source": "opus55_final_audit_tic4206066/referee/resolve_R3/out/r4_panel_d_spec.json: plot[1]"
+   },
+   {
+    "signal": "B",
+    "sector": 98,
+    "colour": "#1b7837",
+    "marker": "^",
+    "filled": false,
+    "product": "TESScut 200 s, 3 clean transits",
+    "offset_E_N_arcsec": [
+     1.190453709741945,
+     -1.0172989338488334
+    ],
+    "sigma_E_N_arcsec": [
+     2.2946776277329697,
+     3.1164399217450205
+    ],
+    "error_rule": "max(injection SD, jackknife SE, robust bootstrap SD) per axis (spec)",
+    "injection_sd_audit03": [
+     2.2946776277329697,
+     3.1164399217450205
+    ],
+    "n_events_audit03": 3,
+    "audit03_set": "S98_clean29_B",
+    "max_abs_diff_spec_vs_audit03_offset": 0.0,
+    "source": "opus55_final_audit_tic4206066/referee/resolve_R3/out/r4_panel_d_spec.json: plot[2]"
+   }
+  ],
+  "combined": {
+   "A": {
+    "mean_E_N_arcsec": [
+     5.318494206006766,
+     0.19767621568235524
+    ],
+    "drawn_radius_arcsec": 3.0,
+    "drawn_style": "solid",
+    "spec_key": "text_numbers.A.exact (= ellipses.A_S32_S98): S32 decorrelated + S98, event-scatter errors",
+    "text": "(+5 +- 3, 0 +- 3) arcsec",
+    "exact": {
+     "mean": [
+      5.318494206006766,
+      0.19767621568235524
+     ],
+     "sig": [
+      2.6596943022874133,
+      2.369102506324969
+     ],
+     "cov": [
+      [
+       7.073973781620131,
+       0.0
+      ],
+      [
+       0.0,
+       5.612646685475249
+      ]
+     ],
+     "chi2_vs_target": 4.005617112276893,
+     "p": 0.1349557197582979,
+     "sigma_equiv_2d": 1.4948418560001402,
+     "z_E": 1.999663721290341,
+     "z_N": 0.08343928350698392,
+     "chi2_between": 0.023144136421213386,
+     "dof_between": 2
+    },
+    "alternative_not_drawn": null,
+    "source": "opus55_final_audit_tic4206066/referee/resolve_R3/out/r4_panel_d_spec.json"
+   },
+   "B": {
+    "mean_E_N_arcsec": [
+     1.190453709741945,
+     -1.0172989338488334
+    ],
+    "drawn_radius_arcsec": 3.0,
+    "drawn_style": "dashed",
+    "spec_key": "ellipses.B_S98: the plotted S98 point itself (S32 11.13 d point not used)",
+    "text": "(+1 +- 3, -1 +- 3) arcsec",
+    "exact": {
+     "mean": [
+      1.190453709741945,
+      -1.0172989338488334
+     ],
+     "sig": [
+      2.2946776277329697,
+      3.1164399217450205
+     ],
+     "cov": [
+      [
+       5.2655454152182095,
+       0.0
+      ],
+      [
+       0.0,
+       9.71219778584611
+      ]
+     ],
+     "chi2_vs_target": 0.37569854573917283,
+     "p": 0.8287396113627044,
+     "sigma_equiv_2d": 0.21631834367819028,
+     "z_E": 0.5187890862552469,
+     "z_N": -0.3264298235786964,
+     "chi2_between": 0.0,
+     "dof_between": 0
+    },
+    "alternative_not_drawn": {
+     "key": "text_numbers.B.exact_S32PC_S98 (S32 decorrelated + S98; drawn in the previous build)",
+     "mean": [
+      1.1422708232314416,
+      -1.2228386593192246
+     ]
+    },
+    "source": "opus55_final_audit_tic4206066/referee/resolve_R3/out/r4_panel_d_spec.json"
+   }
+  },
+  "neighbours": [
+   {
+    "source_id": "3220388296975320448",
+    "TIC": 4206077,
+    "Tmag": 17.0245,
+    "sep_arcsec": 43.06405698825527,
+    "dE": 4.5308747087793515,
+    "dN": 42.825029264889885,
+    "required_eclipse_depth_min": 0.6741344082761196,
+    "mahalanobis_from_audit_position": 18.25519936190507,
+    "plotted": true,
+    "sigma_distance_drawn_3arcsec": 14.211542931536693
+   },
+   {
+    "source_id": "3220385277614918912",
+    "TIC": 4206064,
+    "Tmag": 16.9926,
+    "sep_arcsec": 50.48603900377122,
+    "dE": 46.80500240095262,
+    "dN": -18.92344755404045,
+    "required_eclipse_depth_min": 0.968041786884299,
+    "mahalanobis_from_audit_position": 21.048459826747777,
+    "plotted": true,
+    "sigma_distance_drawn_3arcsec": 15.226978019388143
+   },
+   {
+    "source_id": "3220388262615571968",
+    "TIC": 4206073,
+    "Tmag": 17.0605,
+    "sep_arcsec": 53.921629449270064,
+    "dE": -50.959629363069034,
+    "dN": 17.624571740347996,
+    "required_eclipse_depth_min": 0.9034257299513284,
+    "mahalanobis_from_audit_position": 27.176103692764688,
+    "plotted": true,
+    "sigma_distance_drawn_3arcsec": 19.638182423488114
+   },
+   {
+    "source_id": "3220385243255181952",
+    "TIC": 4206059,
+    "Tmag": 16.3202,
+    "sep_arcsec": 56.34852578552708,
+    "dE": 29.9832702057008,
+    "dN": -47.70900400079211,
+    "required_eclipse_depth_min": 0.7085975353897872,
+    "mahalanobis_from_audit_position": 24.17889378086156,
+    "plotted": true,
+    "sigma_distance_drawn_3arcsec": 17.96107267422346
+   },
+   {
+    "source_id": "3220385243255181184",
+    "TIC": 4206057,
+    "Tmag": 13.0551,
+    "sep_arcsec": 84.10401998702254,
+    "dE": 66.00657838777498,
+    "dN": -52.12089220421323,
+    "required_eclipse_depth_min": 0.3057695543888492,
+    "mahalanobis_from_audit_position": 36.91482600357332,
+    "plotted": false,
+    "sigma_distance_drawn_3arcsec": 26.708875268887017
+   }
+  ],
+  "pixel_circle_radius_arcsec": 21.0,
+  "target_marker": [
+   0.0,
+   0.0
+  ],
+  "not_plotted": {
+   "S6_both_signals": "momentum dump within 0.4-3.5 h of every transit (inside the 1.4-4.7 h baseline window or in transit); position depends on recipe: package (+8.2,-2.4), raw (-8.6,-34.5), dump-excised (+6.3,-1.3), POS_CORR (+1.0,-1.9) with jackknife SE (10.6, 32.8) arcsec",
+   "S32_11d": "only one transit (BTJD 2197.361) passes baseline acceptance; 2175.096 lies 2.3 h after the 3.18 d transit at 2175.001"
+  },
+  "spec_source": "opus55_final_audit_tic4206066/referee/resolve_R3/out/r4_panel_d_spec.json",
+  "neighbour_rule": "audit-03 G4 census, delta = 500 ppm: required eclipse depth <= 1 in at least one of the three light-curve apertures used (S6 TESS-SPOC, S32 SPOC, S98 QLP 3x3); positions = mean over those products' epochs; column dreqA_min",
+  "axis_limits": {
+   "x": [
+    62,
+    -108
+   ],
+   "y": [
+    -66,
+    52
+   ],
+   "east": "left",
+   "zoom_inset_x": [
+    11.0,
+    -11.0
+   ],
+   "zoom_inset_y": [
+    -11.0,
+    11.0
+   ],
+   "note": "offsets, error bars and rings are drawn in the zoom inset (central 22\"); the full field shows the target, 21\" circle, capable stars and the zoom window"
+  }
+ },
+ "panel_c": {
+  "signal": "A (3.18 d) only",
+  "x_labels": [
+   "fold 1",
+   "fold 2",
+   "fold 3",
+   "TIC params",
+   "$M_{\\rm c}\\leq0.38$"
+  ],
+  "markers": "mean; thick bar = SD (ddof=1) of the runs; thin bar = run-to-run min-max",
+  "lines": {
+   "dashed": 0.015,
+   "dotted": 0.5
+  },
+  "ylim": [
+   0.001,
+   2
+  ],
+  "points": {
+   "fold1": {
+    "x": 0,
+    "label": "fold 1",
+    "mean": 0.03427650270867494,
+    "sd": 0.005352611653089429,
+    "min": 0.028602283967528286,
+    "max": 0.04472908175506174,
+    "n_runs": 10,
+    "draws_per_run": 1000000,
+    "description": "package's own S32+S98 fold (a4_fpp_ownfold.py), stellar M 0.606 R 0.623 Teff 4030 (6-min bins)",
+    "source": "rnaas_tic4206066_pubprep/analysis/out/fpp/fpp_ownfold_A.json",
+    "per_run_FPP": [
+     0.0341369943519898,
+     0.02929682746095119,
+     0.040760062571763345,
+     0.04472908175506174,
+     0.031652798357110656,
+     0.028602283967528286,
+     0.03305431856850882,
+     0.038181287524835406,
+     0.029346384268548187,
+     0.03300498826045195
+    ]
+   },
+   "fold2": {
+    "x": 1,
+    "label": "fold 2",
+    "mean": 0.03118790086109662,
+    "sd": 0.003114113127566306,
+    "min": 0.02651479408986024,
+    "max": 0.036512822360095676,
+    "n_runs": 20,
+    "draws_per_run": 1000000,
+    "description": "publication-audit baseline S32+S98 fold (tic4206066_PUBLICATION_AUDIT, 6-min bins), stellar M 0.606 R 0.623 Teff 4030",
+    "source": "tic4206066_PUBLICATION_AUDIT/out/fpp/runs/A_base_S32+S98/summary.json",
+    "per_run_FPP": [
+     0.027736475491099588,
+     0.028884087015205506,
+     0.028372453443988088,
+     0.036512822360095676,
+     0.03217343558579855,
+     0.0360239578745678,
+     0.02651479408986024,
+     0.030387893886070216,
+     0.02726816461504933,
+     0.02952638289671361,
+     0.027468644323875524,
+     0.02898212086078089,
+     0.03237279044510044,
+     0.032554946409193875,
+     0.029787954360779967,
+     0.032262764118260234,
+     0.03414293734972362,
+     0.03357252608184147,
+     0.03339904963906426,
+     0.03581381637486347
+    ]
+   },
+   "fold3": {
+    "x": 2,
+    "label": "fold 3",
+    "mean": 0.034206726647414414,
+    "sd": 0.003495525864058394,
+    "min": 0.028584868183519463,
+    "max": 0.040104686844387394,
+    "n_runs": 20,
+    "draws_per_run": 1000000,
+    "description": "this audit's fold (08_fpp fold_A_S32+S98_6min, 6-min bins, empirical sigma), stellar M 0.606 R 0.623 Teff 4030",
+    "source": "opus55_final_audit_tic4206066/08_fpp/runs/A_base/runs.json",
+    "per_run_FPP": [
+     0.0316671527671345,
+     0.031212124789430584,
+     0.02928974007775864,
+     0.040104686844387394,
+     0.03672339602070318,
+     0.039483791541643165,
+     0.028584868183519463,
+     0.03373088481065489,
+     0.03141032038246905,
+     0.03325854977931908,
+     0.0298914366897034,
+     0.030995731594369302,
+     0.03568025399034269,
+     0.03422866257908774,
+     0.03336265047299147,
+     0.03391750822942352,
+     0.037357101996019826,
+     0.03645501524520811,
+     0.03762905931294247,
+     0.039151597641179814
+    ]
+   },
+   "tic": {
+    "x": 3,
+    "label": "TIC params",
+    "mean": 0.035358281515919784,
+    "sd": 0.004359214930264876,
+    "min": 0.02735609558932972,
+    "max": 0.04785021629122754,
+    "n_runs": 20,
+    "draws_per_run": 1000000,
+    "description": "publication-audit fold 2 with TIC 8.2 stellar parameters M 0.63 R 0.648133 Teff 4010.0",
+    "source": "tic4206066_PUBLICATION_AUDIT/out/fpp/runs/A_tic_S32+S98/summary.json",
+    "per_run_FPP": [
+     0.03576285236146559,
+     0.03454011435315274,
+     0.031377921697184785,
+     0.04785021629122754,
+     0.03660141732509925,
+     0.040060290326981995,
+     0.035142196508749945,
+     0.03255998195912124,
+     0.030841700466212374,
+     0.03822877241681455,
+     0.02735609558932972,
+     0.033609162986626306,
+     0.03154912606135951,
+     0.038580619206035616,
+     0.034110889946671774,
+     0.034996693672174506,
+     0.03139082864641529,
+     0.03678199020056583,
+     0.039266665565944936,
+     0.036558094737262126
+    ]
+   },
+   "cap038": {
+    "x": 4,
+    "label": "$M_{\\rm c}\\leq0.38$",
+    "mean": 0.004286430495369102,
+    "sd": 0.0006077356660932319,
+    "min": 0.0034080313227477926,
+    "max": 0.00514734418192224,
+    "n_runs": 8,
+    "draws_per_run": 1000000,
+    "description": "audit-08 VERIFIER direct TRICERATOPS runs with the companion-mass prior truncated at 0.38 Msun (trunc0.38), verifier's own fold v_A_S32+S98_5min (5-min bins, Teff 4012.0)",
+    "source": "opus55_final_audit_tic4206066/08_fpp/verify/runs_v/trunc0.38_A_v_A_S32+S98_5min.json",
+    "per_run_FPP": [
+     0.004134524448495534,
+     0.00514734418192224,
+     0.005073502112904295,
+     0.004591134872074104,
+     0.0037898637054193047,
+     0.004073786092412992,
+     0.0034080313227477926,
+     0.004073257226976549
+    ]
+   }
+  }
+ },
+ "manuscript_consistency": {
+  "note": "numbers quoted in proposed_revision/manuscript.tex (variant 2) vs the plotted values; the manuscript was not edited",
+  "a_fold_ephemeris": {
+   "plotted": {
+    "P": 3.1827849535823756,
+    "T0_BTJD": 3998.7359923208132
+   },
+   "text": {
+    "P": "3.182785 +- 0.000006",
+    "T0_BJD": "2460998.736 +- 0.003 (19 transits)"
+   },
+   "P_rounds_to_text": true,
+   "T0_rounds_to_text": true,
+   "eP_eT0": [
+    5.662484117234625e-06,
+    0.002883224411453203
+   ],
+   "dT0_vs_package_min": -2.235417641713866
+  },
+  "b_A_combined": {
+   "text": "(+5 +- 3, 0 +- 3)''",
+   "plotted_centre": [
+    5.318494206006766,
+    0.19767621568235524
+   ],
+   "drawn_sigma": 3.0,
+   "exact_sigma": [
+    2.6596943022874133,
+    2.369102506324969
+   ],
+   "sigma_distance_from_target_drawn": 1.7740555078868816,
+   "exact_p_vs_target": 0.1349557197582979
+  },
+  "b_B_combined": {
+   "text": "(+1 +- 3, -1 +- 3)''",
+   "plotted_centre": [
+    1.190453709741945,
+    -1.0172989338488334
+   ],
+   "drawn_sigma": 3.0,
+   "exact_sigma": [
+    2.2946776277329697,
+    3.1164399217450205
+   ]
+  },
+  "b_capable_stars": {
+   "text": ">= 43'' (>= 7 sigma)",
+   "nearest_sep": 43.06405698825527,
+   "min_sigma_distance_drawn_3arcsec": 14.211542931536693
+  },
+  "c_default_means": {
+   "text": "0.03-0.04 (10-20 runs, 5-10 min bins)",
+   "plotted": [
+    0.0343,
+    0.0312,
+    0.0342,
+    0.0354
+   ],
+   "runs": [
+    10,
+    20,
+    20,
+    20
+   ],
+   "run_range": [
+    0.02651479408986024,
+    0.04785021629122754
+   ]
+  },
+  "c_capped": {
+   "text": "excluding companions > 0.38 Msun: ~0.002-0.007",
+   "plotted": [
+    0.004286430495369102,
+    0.0006077356660932319,
+    0.0034080313227477926,
+    0.00514734418192224
+   ],
+   "runs": 8
+  }
+ },
+ "sources": {
+  "rnaas_tic4206066_pubprep/analysis/out/a1_results.json": {
+   "sha256": "a2a64cbe90b3155ca59a100e51ebadd4b8413b94d5ef465b989ba7b1a62ca172",
+   "used_for": [
+    "panel a ephemeris and template depths",
+    "template T14",
+    "a depths",
+    "a depths",
+    "a depths"
+   ]
+  },
+  "opus55_final_audit_tic4206066/02_timing_A/verify/v4_results.json": {
+   "sha256": "9419edb865d7a72fbfa32aaac771255438b1c59009ee6adfbd46bbafe03ed32a",
+   "used_for": [
+    "panel a fold ephemeris (19 transits)",
+    "panel a fold"
+   ]
+  },
+  "deep_followup_tic4206066/lc/hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_lc.fits": {
+   "sha256": "ac7736ea403e33360c53f88b5f22bb4e41c8235fe17ff2cdb934ba474037882e",
+   "used_for": [
+    "panel a light curve S6"
+   ]
+  },
+  "deep_followup_tic4206066/lc/tess2020324010417-s0032-0000000004206066-0200-s_lc.fits": {
+   "sha256": "764dad34b3bbd467eef973a1d09f640a97321824e6739ac6a0c69cf40c31b0e7",
+   "used_for": [
+    "panel a light curve S32"
+   ]
+  },
+  "deep_followup_tic4206066/lc/hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01_llc.fits": {
+   "sha256": "a034136697b4f75765a91503107f55a455b365d19cd270ed633845efcdcb188e",
+   "used_for": [
+    "panel a light curve S98"
+   ]
+  },
+  "opus55_final_audit_tic4206066/referee/resolve_R3/out/r4_panel_d_spec.json": {
+   "sha256": "dc2525851d8ed901762a49f25bffc1788205cefbc26387094b27795b40ed948f",
+   "used_for": [
+    "panel b points, errors, ring centres",
+    "b",
+    "b",
+    "b",
+    "b",
+    "b",
+    "b"
+   ]
+  },
+  "opus55_final_audit_tic4206066/03_pixels/summary.json": {
+   "sha256": "665855249cf9625a14db4e38a7cb8e5595963e98f85da6af37069ac633628a3e",
+   "used_for": [
+    "panel b cross-check of the spec positions"
+   ]
+  },
+  "opus55_final_audit_tic4206066/03_pixels/neighbours_vs_fitted_position.csv": {
+   "sha256": "fc3f47ac0c01b92f540c780564674b2a53a55b8ef14a766dbc897880d2bf61f5",
+   "used_for": [
+    "panel b capable Gaia DR3 stars (G4 flux basis, three light-curve apertures)"
+   ]
+  },
+  "rnaas_tic4206066_pubprep/analysis/out/fpp/fpp_ownfold_A.json": {
+   "sha256": "0e20982d76dd5727a61c01b36ba294ced9088a61f5171c9f9fd2301596e306e2",
+   "used_for": [
+    "panel e fold 1 A",
+    "e"
+   ]
+  },
+  "tic4206066_PUBLICATION_AUDIT/out/fpp/runs/A_base_S32+S98/summary.json": {
+   "sha256": "1ff13bf6d42cae81f9308f27634e0b40bdb725ccd8d9f4de0df6d3028787a054",
+   "used_for": [
+    "panel e A_base_S32+S98",
+    "e"
+   ]
+  },
+  "opus55_final_audit_tic4206066/08_fpp/runs/A_base/runs.json": {
+   "sha256": "d5ee88bf5408a3bd275b9d433022865e7b076e9146863bd93a7f35ce5e77504e",
+   "used_for": [
+    "panel e A_base",
+    "e"
+   ]
+  },
+  "tic4206066_PUBLICATION_AUDIT/out/fpp/runs/A_tic_S32+S98/summary.json": {
+   "sha256": "b08ea4dec953e2b28fa3508b0128dbe8e25dff62e072bb92e5499549b26872ce",
+   "used_for": [
+    "panel e A_tic_S32+S98",
+    "e"
+   ]
+  },
+  "opus55_final_audit_tic4206066/08_fpp/verify/runs_v/trunc0.38_A_v_A_S32+S98_5min.json": {
+   "sha256": "e53706e8b630653782f9e58380f52fbb6db2637219582aea821249fbe8f37fdd",
+   "used_for": [
+    "panel e trunc0.38_A_v_A_S32+S98_5min",
+    "e"
+   ]
+  }
+ }
+}

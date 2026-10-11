@@ -1,0 +1,144 @@
+{
+ "A_headline_recomputed": {
+  "mean": [
+   5.318,
+   0.198
+  ],
+  "sig": [
+   2.66,
+   2.369
+  ],
+  "zE": 2.0,
+  "chi2": 4.006,
+  "p": 0.135
+ },
+ "B_S98only": {
+  "mean": [
+   1.19,
+   -1.017
+  ],
+  "sig": [
+   2.295,
+   3.116
+  ],
+  "zE": 0.519,
+  "chi2": 0.376,
+  "p": 0.8287
+ },
+ "neighbour_sigma_by_product_epoch": {
+  "712986249": [
+   {
+    "product": "S6_tspoc_tp",
+    "sep": 10.86,
+    "sig_pm3": 4.16,
+    "sig_exact": 5.11
+   },
+   {
+    "product": "S32_tpf",
+    "sep": 10.72,
+    "sig_pm3": 4.11,
+    "sig_exact": 5.05
+   },
+   {
+    "product": "S32_tspoc_tp",
+    "sep": 10.72,
+    "sig_pm3": 4.11,
+    "sig_exact": 5.05
+   },
+   {
+    "product": "QLP98_3x3_best",
+    "sep": 10.35,
+    "sig_pm3": 4.0,
+    "sig_exact": 4.91
+   },
+   {
+    "product": "QLP98_1x1_small",
+    "sep": 10.35,
+    "sig_pm3": 4.0,
+    "sig_exact": 4.91
+   },
+   {
+    "product": "QLP98_5x5_large",
+    "sep": 10.35,
+    "sig_pm3": 4.0,
+    "sig_exact": 4.91
+   }
+  ],
+  "4206077": [
+   {
+    "product": "S6_tspoc_tp",
+    "sep": 43.27,
+    "sig_pm3": 14.35,
+    "sig_exact": 18.08
+   },
+   {
+    "product": "S32_tpf",
+    "sep": 43.14,
+    "sig_pm3": 14.3,
+    "sig_exact": 18.03
+   },
+   {
+    "product": "S32_tspoc_tp",
+    "sep": 43.14,
+    "sig_pm3": 14.3,
+    "sig_exact": 18.03
+   },
+   {
+    "product": "QLP98_3x3_best",
+    "sep": 42.78,
+    "sig_pm3": 14.18,
+    "sig_exact": 17.88
+   },
+   {
+    "product": "QLP98_1x1_small",
+    "sep": 42.78,
+    "sig_pm3": 14.18,
+    "sig_exact": 17.88
+   },
+   {
+    "product": "QLP98_5x5_large",
+    "sep": 42.78,
+    "sig_pm3": 14.18,
+    "sig_exact": 17.88
+   }
+  ],
+  "4206064": [
+   {
+    "product": "S6_tspoc_tp",
+    "sep": 50.4,
+    "sig_pm3": 15.26,
+    "sig_exact": 17.52
+   },
+   {
+    "product": "S32_tpf",
+    "sep": 50.46,
+    "sig_pm3": 15.29,
+    "sig_exact": 17.55
+   },
+   {
+    "product": "S32_tspoc_tp",
+    "sep": 50.46,
+    "sig_pm3": 15.29,
+    "sig_exact": 17.55
+   },
+   {
+    "product": "QLP98_3x3_best",
+    "sep": 50.6,
+    "sig_pm3": 15.34,
+    "sig_exact": 17.62
+   },
+   {
+    "product": "QLP98_1x1_small",
+    "sep": 50.6,
+    "sig_pm3": 15.34,
+    "sig_exact": 17.62
+   },
+   {
+    "product": "QLP98_5x5_large",
+    "sep": 50.6,
+    "sig_pm3": 15.34,
+    "sig_exact": 17.62
+   }
+  ]
+ }
+}

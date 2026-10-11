@@ -1,0 +1,93 @@
+Traceback (most recent call last):
+  File "/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/08_fpp/f02_trice_run.py", line 136, in <module>
+    target.calc_probs(time=lc[:, 0], flux_0=lc[:, 1], flux_err_0=float(sigma), P_orb=P, N=a.N, parallel=True,
+  File "/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/lib/python3.11/site-packages/triceratops/triceratops.py", line 1122, in calc_probs
+    res = lnZ_PTP(
+          ^^^^^^^^
+  File "/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/08_fpp/f02_trice_run.py", line 86, in w
+    try: return fn(*args, **kw)
+                ^^^^^^^^^^^^^^^
+  File "/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/lib/python3.11/site-packages/triceratops/marginal_likelihoods.py", line 468, in lnZ_PTP
+    qs_comp[qs_comp < 0.1/M_s] = 0.1/M_s
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+ValueError: assignment destination is read-only
+Traceback (most recent call last):
+  File "/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/08_fpp/f02_trice_run.py", line 136, in <module>
+    target.calc_probs(time=lc[:, 0], flux_0=lc[:, 1], flux_err_0=float(sigma), P_orb=P, N=a.N, parallel=True,
+  File "/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/lib/python3.11/site-packages/triceratops/triceratops.py", line 1122, in calc_probs
+    res = lnZ_PTP(
+          ^^^^^^^^
+  File "/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/08_fpp/f02_trice_run.py", line 86, in w
+    try: return fn(*args, **kw)
+                ^^^^^^^^^^^^^^^
+  File "/private/tmp/claude-501/-Users-paulsmith-space--3/327b8aec-95f9-4559-ac96-4dbbd1cede72/scratchpad/trice_env/lib/python3.11/site-packages/triceratops/marginal_likelihoods.py", line 468, in lnZ_PTP
+    qs_comp[qs_comp < 0.1/M_s] = 0.1/M_s
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+ValueError: assignment destination is read-only
+A_ap5x5 2300 FPP=0.0351 NFPP=7.06e-10 P_STP=0.0350  (211s) FPP(M<=0.38)=0.0013
+A_ap5x5 2301 FPP=0.0299 NFPP=6.61e-10 P_STP=0.0299  (203s) FPP(M<=0.38)=0.0020
+A_ap5x5 2302 FPP=0.0303 NFPP=6.40e-10 P_STP=0.0303  (163s) FPP(M<=0.38)=0.0026
+A_ap5x5 2303 FPP=0.0400 NFPP=6.76e-10 P_STP=0.0400  (152s) FPP(M<=0.38)=0.0051
+A_ap5x5 2304 FPP=0.0367 NFPP=6.75e-10 P_STP=0.0367  (163s) FPP(M<=0.38)=0.0017
+DONE A_ap5x5 FPP 0.0344 +- 0.0043
+B_ap5x5 2300 FPP=0.2109 NFPP=1.45e-48 P_STP=0.2108  (70s) FPP(M<=0.38)=0.1654
+B_ap5x5 2301 FPP=0.2142 NFPP=1.41e-48 P_STP=0.2141  (65s) FPP(M<=0.38)=0.1659
+B_ap5x5 2302 FPP=0.2472 NFPP=1.48e-48 P_STP=0.2471  (64s) FPP(M<=0.38)=0.2128
+B_ap5x5 2303 FPP=0.1965 NFPP=1.33e-48 P_STP=0.1965  (64s) FPP(M<=0.38)=0.1547
+B_ap5x5 2304 FPP=0.1974 NFPP=1.23e-48 P_STP=0.1974  (65s) FPP(M<=0.38)=0.1618
+DONE B_ap5x5 FPP 0.2133 +- 0.0206
+A_T0p 2400 FPP=0.0428 NFPP=5.13e-15 P_STP=0.0428  (41s) FPP(M<=0.38)=0.0033
+A_T0p 2401 FPP=0.0320 NFPP=5.14e-15 P_STP=0.0320  (37s) FPP(M<=0.38)=0.0032
+A_T0p 2402 FPP=0.0347 NFPP=5.65e-15 P_STP=0.0347  (37s) FPP(M<=0.38)=0.0033
+A_T0p 2403 FPP=0.0386 NFPP=5.03e-15 P_STP=0.0386  (37s) FPP(M<=0.38)=0.0049
+A_T0p 2404 FPP=0.0349 NFPP=4.94e-15 P_STP=0.0348  (37s) FPP(M<=0.38)=0.0036
+DONE A_T0p FPP 0.0366 +- 0.0042
+A_T0m 2400 FPP=0.0398 NFPP=7.58e-16 P_STP=0.0398  (41s) FPP(M<=0.38)=0.0026
+A_T0m 2401 FPP=0.0281 NFPP=7.50e-16 P_STP=0.0281  (37s) FPP(M<=0.38)=0.0024
+A_T0m 2402 FPP=0.0295 NFPP=8.24e-16 P_STP=0.0295  (37s) FPP(M<=0.38)=0.0023
+A_T0m 2403 FPP=0.0348 NFPP=7.35e-16 P_STP=0.0348  (37s) FPP(M<=0.38)=0.0038
+A_T0m 2404 FPP=0.0315 NFPP=7.20e-16 P_STP=0.0315  (37s) FPP(M<=0.38)=0.0030
+DONE A_T0m FPP 0.0327 +- 0.0047
+B_T0p 2400 FPP=0.1615 NFPP=0.00e+00 P_STP=0.1614  (27s) FPP(M<=0.38)=0.1205
+B_T0p 2401 FPP=0.1505 NFPP=0.00e+00 P_STP=0.1503  (23s) FPP(M<=0.38)=0.1078
+B_T0p 2402 FPP=0.1489 NFPP=0.00e+00 P_STP=0.1484  (23s) FPP(M<=0.38)=0.1074
+B_T0p 2403 FPP=0.1357 NFPP=0.00e+00 P_STP=0.1352  (23s) FPP(M<=0.38)=0.0964
+B_T0p 2404 FPP=0.1497 NFPP=0.00e+00 P_STP=0.1497  (23s) FPP(M<=0.38)=0.1067
+DONE B_T0p FPP 0.1493 +- 0.0092
+B_T0m 2400 FPP=0.1950 NFPP=0.00e+00 P_STP=0.1950  (27s) FPP(M<=0.38)=0.1551
+B_T0m 2401 FPP=0.1990 NFPP=0.00e+00 P_STP=0.1989  (23s) FPP(M<=0.38)=0.1641
+B_T0m 2402 FPP=0.2218 NFPP=0.00e+00 P_STP=0.2217  (23s) FPP(M<=0.38)=0.1687
+B_T0m 2403 FPP=0.2215 NFPP=0.00e+00 P_STP=0.2214  (23s) FPP(M<=0.38)=0.1716
+B_T0m 2404 FPP=0.2170 NFPP=0.00e+00 P_STP=0.2168  (23s) FPP(M<=0.38)=0.1792
+DONE B_T0m FPP 0.2109 +- 0.0129
+A_S32only 2500 FPP=0.0441 NFPP=6.55e-08 P_STP=0.0439  (42s) FPP(M<=0.38)=0.0087
+A_S32only 2501 FPP=0.0433 NFPP=6.46e-08 P_STP=0.0431  (37s) FPP(M<=0.38)=0.0069
+A_S32only 2502 FPP=0.0408 NFPP=6.49e-08 P_STP=0.0407  (38s) FPP(M<=0.38)=0.0077
+A_S32only 2503 FPP=0.0373 NFPP=6.18e-08 P_STP=0.0372  (37s) FPP(M<=0.38)=0.0047
+A_S32only 2504 FPP=0.0391 NFPP=6.33e-08 P_STP=0.0390  (37s) FPP(M<=0.38)=0.0053
+DONE A_S32only FPP 0.0409 +- 0.0028
+A_S98only 2500 FPP=0.0370 NFPP=1.30e-09 P_STP=0.0369  (41s) FPP(M<=0.38)=0.0048
+A_S98only 2501 FPP=0.0346 NFPP=1.11e-09 P_STP=0.0345  (37s) FPP(M<=0.38)=0.0031
+A_S98only 2502 FPP=0.0306 NFPP=1.18e-09 P_STP=0.0305  (37s) FPP(M<=0.38)=0.0025
+A_S98only 2503 FPP=0.0287 NFPP=9.92e-10 P_STP=0.0286  (37s) FPP(M<=0.38)=0.0018
+A_S98only 2504 FPP=0.0301 NFPP=1.06e-09 P_STP=0.0300  (38s) FPP(M<=0.38)=0.0021
+DONE A_S98only FPP 0.0322 +- 0.0035
+B_S98only 2500 FPP=0.2055 NFPP=0.00e+00 P_STP=0.2053  (27s) FPP(M<=0.38)=0.1660
+B_S98only 2501 FPP=0.1713 NFPP=0.00e+00 P_STP=0.1713  (24s) FPP(M<=0.38)=0.1280
+B_S98only 2502 FPP=0.1641 NFPP=0.00e+00 P_STP=0.1640  (23s) FPP(M<=0.38)=0.1263
+B_S98only 2503 FPP=0.1885 NFPP=0.00e+00 P_STP=0.1883  (23s) FPP(M<=0.38)=0.1400
+B_S98only 2504 FPP=0.1815 NFPP=0.00e+00 P_STP=0.1814  (23s) FPP(M<=0.38)=0.1436
+DONE B_S98only FPP 0.1822 +- 0.0160
+A_sigformal 2600 FPP=0.0366 NFPP=3.31e-15 P_STP=0.0366  (42s) FPP(M<=0.38)=0.0016
+A_sigformal 2601 FPP=0.0403 NFPP=3.75e-15 P_STP=0.0403  (38s) FPP(M<=0.38)=0.0026
+A_sigformal 2602 FPP=0.0355 NFPP=3.79e-15 P_STP=0.0355  (37s) FPP(M<=0.38)=0.0018
+A_sigformal 2603 FPP=0.0332 NFPP=3.78e-15 P_STP=0.0332  (37s) FPP(M<=0.38)=0.0033
+A_sigformal 2604 FPP=0.0377 NFPP=3.78e-15 P_STP=0.0377  (37s) FPP(M<=0.38)=0.0027
+DONE A_sigformal FPP 0.0367 +- 0.0026
+B_sigformal 2600 FPP=0.1847 NFPP=0.00e+00 P_STP=0.1846  (27s) FPP(M<=0.38)=0.1393
+B_sigformal 2601 FPP=0.1837 NFPP=0.00e+00 P_STP=0.1836  (23s) FPP(M<=0.38)=0.1332
+B_sigformal 2602 FPP=0.2113 NFPP=0.00e+00 P_STP=0.2111  (23s) FPP(M<=0.38)=0.1627
+B_sigformal 2603 FPP=0.1956 NFPP=0.00e+00 P_STP=0.1951  (23s) FPP(M<=0.38)=0.1513
+B_sigformal 2604 FPP=0.1920 NFPP=0.00e+00 P_STP=0.1919  (23s) FPP(M<=0.38)=0.1541
+DONE B_sigformal FPP 0.1934 +- 0.0111
+QUEUE2_DONE

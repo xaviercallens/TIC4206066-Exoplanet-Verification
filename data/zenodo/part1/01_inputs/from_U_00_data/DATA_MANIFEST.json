@@ -1,0 +1,3045 @@
+{
+ "created_utc": "2026-09-25T11:43:17+00:00",
+ "root": "/Users/paulsmith/space <3/tess-jev/addenda/opus55_final_audit_tic4206066/00_data",
+ "target": {
+  "tic": 4206066,
+  "gaia_dr3": 3220388198192519424,
+  "ra": 80.85983,
+  "dec": -1.32696
+ },
+ "n_files": 173,
+ "files": [
+  {
+   "relpath": "mast/hlsp_gsfc-eleanor-lite_tess_ffi_s0006-0000000004206066_tess_v1.0_lc.fits",
+   "bytes": 92160,
+   "sha256": "82c0017b581736319559999bef6f8b536e35ec85ae8a635d7830fd63551c30f0",
+   "url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast%3AHLSP%2Fgsfc-eleanor-lite%2Fs0006%2F0000%2F0000%2F0420%2F6066%2Fhlsp_gsfc-eleanor-lite_tess_ffi_s0006-0000000004206066_tess_v1.0_lc.fits",
+   "utc": "2026-09-25T11:31:06+00:00",
+   "utc_start": "2026-09-25T11:31:05+00:00",
+   "http_headers": {
+    "Content-Length": "92160",
+    "Content-Type": "application/octet-stream",
+    "ETag": "\"62e29b7b-16800\"",
+    "Last-Modified": "Thu, 28 Jul 2022 14:21:47 GMT",
+    "Content-Disposition": "attachment; filename=\"hlsp_gsfc-eleanor-lite_tess_ffi_s0006-0000000004206066_tess_v1.0_lc.fits\""
+   },
+   "note": "MAST product mast:HLSP/gsfc-eleanor-lite/s0006/0000/0000/0420/6066/hlsp_gsfc-eleanor-lite_tess_ffi_s0006-0000000004206066_tess_v1.0_lc.fits",
+   "header": {
+    "SECTOR": 6,
+    "CAMERA": 1,
+    "CCD": 1,
+    "TSTART": 1468.27658749992,
+    "TSTOP": 1490.04709824531,
+    "TIMESYS": "TDB",
+    "TIMEREF": "SOLARSYSTEM",
+    "TIMEUNIT": "d",
+    "TELAPSE": 0.020833324714,
+    "BJDREFI": 2457000,
+    "BJDREFF": 0.0,
+    "INT_TIME": 1.98,
+    "EXPOSURE": 0.016499993174,
+    "TIMEDEL": 0.0208333333333333,
+    "NUM_FRM": 900,
+    "VERSION": "2.0.3",
+    "n_rows": 993,
+    "columns": [
+     "TIME",
+     "BARYCORR",
+     "RAW_FLUX",
+     "CORR_FLUX",
+     "FLUX_ERR",
+     "QUALITY",
+     "X_CENTROID",
+     "Y_CENTROID",
+     "X_COM",
+     "Y_COM",
+     "FLUX_BKG",
+     "FFIINDEX",
+     "PCA_FLUX"
+    ],
+    "astrocut_version": null
+   },
+   "matches_existing": {
+    "deep_followup_tic4206066/lc/hlsp_gsfc-eleanor-lite_tess_ffi_s0006-0000000004206066_tess_v1.0_lc.fits": "identical",
+    "tic4206066_PUBLICATION_AUDIT/data/mast/hlsp_gsfc-eleanor-lite_tess_ffi_s0006-0000000004206066_tess_v1.0_lc.fits": "identical"
+   }
+  },
+  {
+   "relpath": "mast/hlsp_qlp_tess_ffi_s0006-0000000004206066_tess_v01_llc.fits",
+   "bytes": 66240,
+   "sha256": "2b4dbd5c15bf2365316ef07284a624bfe563e72a3d5e6354663aa425c873d5cc",
+   "url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast%3AHLSP%2Fqlp%2Fs0006%2F0000%2F0000%2F0420%2F6066%2Fhlsp_qlp_tess_ffi_s0006-0000000004206066_tess_v01_llc.fits",
+   "utc": "2026-09-25T11:30:58+00:00",
+   "utc_start": "2026-09-25T11:30:57+00:00",
+   "http_headers": {
+    "Content-Length": "66240",
+    "Content-Type": "application/octet-stream",
+    "ETag": "\"5f7cd63e-102c0\"",
+    "Last-Modified": "Tue, 06 Oct 2020 20:40:30 GMT",
+    "Content-Disposition": "attachment; filename=\"hlsp_qlp_tess_ffi_s0006-0000000004206066_tess_v01_llc.fits\""
+   },
+   "note": "MAST product mast:HLSP/qlp/s0006/0000/0000/0420/6066/hlsp_qlp_tess_ffi_s0006-0000000004206066_tess_v01_llc.fits",
+   "header": {
+    "SECTOR": 6,
+    "CAMERA": 1,
+    "CCD": 1,
+    "TSTART": 1468.2870266146,
+    "TSTOP": 1490.036501937537,
+    "TIMESYS": "TDB",
+    "TIMEREF": "SOLARSYSTEM",
+    "TIMEUNIT": "d",
+    "TELAPS": 21.74947532293663,
+    "BJDREFI": 2457000,
+    "BJDREFR": 0.0,
+    "TIMEDEL": 0.02083333333333333,
+    "ORIGIN": "MIT/QLP",
+    "CALIB": "TICA",
+    "BESTAP": "3.0:4.0:3.0",
+    "TICVER": 8,
+    "n_rows": 993,
+    "columns": [
+     "TIME",
+     "CADENCENO",
+     "SAP_FLUX",
+     "KSPSAP_FLUX",
+     "KSPSAP_FLUX_ERR",
+     "QUALITY",
+     "ORBITID",
+     "SAP_X",
+     "SAP_Y",
+     "SAP_BKG",
+     "SAP_BKG_ERR",
+     "KSPSAP_FLUX_SML",
+     "KSPSAP_FLUX_LAG"
+    ],
+    "astrocut_version": null
+   },
+   "matches_existing": {
+    "deep_followup_tic4206066/lc/hlsp_qlp_tess_ffi_s0006-0000000004206066_tess_v01_llc.fits": "identical",
+    "tic4206066_PUBLICATION_AUDIT/data/mast/hlsp_qlp_tess_ffi_s0006-0000000004206066_tess_v01_llc.fits": "identical"
+   }
+  },
+  {
+   "relpath": "mast/hlsp_qlp_tess_ffi_s0032-0000000004206066_tess_v01_llc.fits",
+   "bytes": 210240,
+   "sha256": "0fbd9e9af0674bbf7b52b595915065e8108d3c4e84fed51d39058325cd62b2b2",
+   "url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast%3AHLSP%2Fqlp%2Fs0032%2F0000%2F0000%2F0420%2F6066%2Fhlsp_qlp_tess_ffi_s0032-0000000004206066_tess_v01_llc.fits",
+   "utc": "2026-09-25T11:31:05+00:00",
+   "utc_start": "2026-09-25T11:31:04+00:00",
+   "http_headers": {
+    "Content-Length": "210240",
+    "Content-Type": "application/octet-stream",
+    "ETag": "\"6140d853-33540\"",
+    "Last-Modified": "Tue, 14 Sep 2021 17:13:55 GMT",
+    "Content-Disposition": "attachment; filename=\"hlsp_qlp_tess_ffi_s0032-0000000004206066_tess_v01_llc.fits\""
+   },
+   "note": "MAST product mast:HLSP/qlp/s0032/0000/0000/0420/6066/hlsp_qlp_tess_ffi_s0032-0000000004206066_tess_v01_llc.fits",
+   "header": {
+    "SECTOR": 32,
+    "CAMERA": 1,
+    "CCD": 2,
+    "TSTART": 2174.230800721365,
+    "TSTOP": 2200.231098765759,
+    "TIMESYS": "TDB",
+    "TIMEREF": "SOLARSYSTEM",
+    "TIMEUNIT": "d",
+    "TELAPS": 26.00029804439464,
+    "BJDREFI": 2457000,
+    "BJDREFR": 0.0,
+    "TIMEDEL": 0.006944444444444444,
+    "ORIGIN": "MIT/QLP",
+    "CALIB": "TICA v0.2.1",
+    "BESTAP": "3.0:4.0:3.0",
+    "TICVER": 8.1,
+    "n_rows": 3600,
+    "columns": [
+     "TIME",
+     "CADENCENO",
+     "SAP_FLUX",
+     "KSPSAP_FLUX",
+     "KSPSAP_FLUX_ERR",
+     "QUALITY",
+     "ORBITID",
+     "SAP_X",
+     "SAP_Y",
+     "SAP_BKG",
+     "SAP_BKG_ERR",
+     "KSPSAP_FLUX_SML",
+     "KSPSAP_FLUX_LAG"
+    ],
+    "astrocut_version": null
+   },
+   "matches_existing": {
+    "deep_followup_tic4206066/lc/hlsp_qlp_tess_ffi_s0032-0000000004206066_tess_v01_llc.fits": "identical",
+    "tic4206066_PUBLICATION_AUDIT/data/mast/hlsp_qlp_tess_ffi_s0032-0000000004206066_tess_v01_llc.fits": "identical"
+   }
+  },
+  {
+   "relpath": "mast/hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01_llc.fits",
+   "bytes": 1460160,
+   "sha256": "a034136697b4f75765a91503107f55a455b365d19cd270ed633845efcdcb188e",
+   "url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast%3AHLSP%2Fqlp%2Fs0098%2F0000%2F0000%2F0420%2F6066%2Fhlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01_llc.fits",
+   "utc": "2026-09-25T11:31:08+00:00",
+   "utc_start": "2026-09-25T11:31:06+00:00",
+   "http_headers": {
+    "Content-Length": "1460160",
+    "Content-Type": "application/octet-stream",
+    "ETag": "\"69692f41-1647c0\"",
+    "Last-Modified": "Thu, 15 Jan 2026 18:17:37 GMT",
+    "Content-Disposition": "attachment; filename=\"hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01_llc.fits\""
+   },
+   "note": "MAST product mast:HLSP/qlp/s0098/0000/0000/0420/6066/hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01_llc.fits",
+   "header": {
+    "SECTOR": 98,
+    "CAMERA": 1,
+    "CCD": 2,
+    "TSTART": 3988.4988670462,
+    "TSTOP": 4045.9019701137427,
+    "TIMESYS": "TDB",
+    "TIMEREF": "SOLARSYSTEM",
+    "TIMEUNIT": "d",
+    "TELAPS": 57.403103067542816,
+    "BJDREFI": 2457000,
+    "BJDREFR": 0.0,
+    "TIMEDEL": 0.002314814814814814,
+    "ORIGIN": "MIT/QLP",
+    "CALIB": "TICA v1.4.0",
+    "BESTAP": "3x3 square",
+    "TICVER": 8.2,
+    "n_rows": 24162,
+    "columns": [
+     "TIME",
+     "CADENCENO",
+     "SAP_FLUX",
+     "DET_FLUX",
+     "DET_FLUX_ERR",
+     "QUALITY",
+     "ORBITID",
+     "SAP_X",
+     "SAP_Y",
+     "SAP_BKG",
+     "SAP_BKG_ERR",
+     "DET_FLUX_SML",
+     "DET_FLUX_LAG",
+     "SYS_RM_FLUX"
+    ],
+    "astrocut_version": null
+   },
+   "matches_existing": {
+    "deep_followup_tic4206066/lc/hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01_llc.fits": "identical",
+    "tic4206066_PUBLICATION_AUDIT/data/mast/hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01_llc.fits": "identical"
+   }
+  },
+  {
+   "relpath": "mast/hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_lc.fits",
+   "bytes": 135360,
+   "sha256": "ac7736ea403e33360c53f88b5f22bb4e41c8235fe17ff2cdb934ba474037882e",
+   "url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast%3AHLSP%2Ftess-spoc%2Fs0006%2Ftarget%2F0000%2F0000%2F0420%2F6066%2Fhlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_lc.fits",
+   "utc": "2026-09-25T11:30:59+00:00",
+   "utc_start": "2026-09-25T11:30:58+00:00",
+   "http_headers": {
+    "Content-Length": "135360",
+    "Content-Type": "application/octet-stream",
+    "ETag": "\"5ffaa521-210c0\"",
+    "Last-Modified": "Sun, 10 Jan 2021 06:56:33 GMT",
+    "Content-Disposition": "attachment; filename=\"hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_lc.fits\""
+   },
+   "note": "MAST product mast:HLSP/tess-spoc/s0006/target/0000/0000/0420/6066/hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_lc.fits",
+   "header": {
+    "SECTOR": 6,
+    "CAMERA": 1,
+    "CCD": 1,
+    "TSTART": 1468.276569147741,
+    "TSTOP": 1490.046873478056,
+    "TIMESYS": "TDB",
+    "TIMEREF": "SOLARSYSTEM",
+    "TIMEUNIT": "d",
+    "TELAPSE": 21.770304561797,
+    "BJDREFI": 2457000,
+    "BJDREFF": 0.0,
+    "INT_TIME": 1.98,
+    "EXPOSURE": 17.242081212943,
+    "TIMEDEL": 0.020833333333333332,
+    "NUM_FRM": 900,
+    "CROWDSAP": 0.99504185,
+    "FLFRCSAP": 0.92497361,
+    "ORIGIN": "NASA/Ames",
+    "CREATOR": "42166 LightCurveExporterPipelineModule",
+    "PROCVER": "spoc-5.0.20-20201120",
+    "DATA_REL": 42,
+    "DATE": "2021-01-09",
+    "TICVER": "8.1",
+    "n_rows": 1045,
+    "columns": [
+     "TIME",
+     "TIMECORR",
+     "CADENCENO",
+     "SAP_FLUX",
+     "SAP_FLUX_ERR",
+     "SAP_BKG",
+     "SAP_BKG_ERR",
+     "PDCSAP_FLUX",
+     "PDCSAP_FLUX_ERR",
+     "QUALITY",
+     "PSF_CENTR1",
+     "PSF_CENTR1_ERR",
+     "PSF_CENTR2",
+     "PSF_CENTR2_ERR",
+     "MOM_CENTR1",
+     "MOM_CENTR1_ERR",
+     "MOM_CENTR2",
+     "MOM_CENTR2_ERR",
+     "POS_CORR1",
+     "POS_CORR2"
+    ],
+    "astrocut_version": null
+   },
+   "matches_existing": {
+    "deep_followup_tic4206066/lc/hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_lc.fits": "identical",
+    "tic4206066_PUBLICATION_AUDIT/data/mast/hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_lc.fits": "identical"
+   }
+  },
+  {
+   "relpath": "mast/hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_tp.fits",
+   "bytes": 2597760,
+   "sha256": "7a03d3baf07e30ac2a57160368077dc6bcc9ea6862085b336d7d7f1f8ef7003d",
+   "url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast%3AHLSP%2Ftess-spoc%2Fs0006%2Ftarget%2F0000%2F0000%2F0420%2F6066%2Fhlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_tp.fits",
+   "utc": "2026-09-25T11:31:00+00:00",
+   "utc_start": "2026-09-25T11:30:59+00:00",
+   "http_headers": {
+    "Content-Length": "2597760",
+    "Content-Type": "application/octet-stream",
+    "ETag": "\"5ffaa9f2-27a380\"",
+    "Last-Modified": "Sun, 10 Jan 2021 07:17:06 GMT",
+    "Content-Disposition": "attachment; filename=\"hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_tp.fits\""
+   },
+   "note": "MAST product mast:HLSP/tess-spoc/s0006/target/0000/0000/0420/6066/hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_tp.fits",
+   "header": {
+    "SECTOR": 6,
+    "CAMERA": 1,
+    "CCD": 1,
+    "TSTART": 1468.276569147741,
+    "TSTOP": 1490.046873478056,
+    "TIMESYS": "TDB",
+    "TIMEREF": "SOLARSYSTEM",
+    "TIMEUNIT": "d",
+    "TELAPSE": 21.770304561797,
+    "BJDREFI": 2457000,
+    "BJDREFF": 0.0,
+    "INT_TIME": 1.98,
+    "EXPOSURE": 16.384102052108,
+    "TIMEDEL": 0.020833333333333332,
+    "NUM_FRM": 900,
+    "CROWDSAP": 0.99504185,
+    "FLFRCSAP": 0.92497361,
+    "ORIGIN": "NASA/Ames",
+    "CREATOR": "42086 TargetPixelExporterPipelineModule",
+    "PROCVER": "spoc-5.0.20-20201120",
+    "DATA_REL": 42,
+    "DATE": "2021-01-08",
+    "TICVER": "8.1",
+    "1CRV4P": 71,
+    "2CRV4P": 885,
+    "n_rows": 1045,
+    "columns": [
+     "TIME",
+     "TIMECORR",
+     "CADENCENO",
+     "RAW_CNTS",
+     "FLUX",
+     "FLUX_ERR",
+     "FLUX_BKG",
+     "FLUX_BKG_ERR",
+     "QUALITY",
+     "POS_CORR1",
+     "POS_CORR2"
+    ],
+    "astrocut_version": null
+   },
+   "matches_existing": {
+    "deep_followup_tic4206066/lc/hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_tp.fits": "identical",
+    "tic4206066_PUBLICATION_AUDIT/data/mast/hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_tp.fits": "identical"
+   }
+  },
+  {
+   "relpath": "mast/hlsp_tess-spoc_tess_phot_0000000004206066-s0032_tess_v1_lc.fits",
+   "bytes": 406080,
+   "sha256": "a7458cf7abbeab9410a411406f8b455696b43b8b715d73f2c6a7bb760c4f7a94",
+   "url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast%3AHLSP%2Ftess-spoc%2Fs0032%2Ftarget%2F0000%2F0000%2F0420%2F6066%2Fhlsp_tess-spoc_tess_phot_0000000004206066-s0032_tess_v1_lc.fits",
+   "utc": "2026-09-25T11:31:01+00:00",
+   "utc_start": "2026-09-25T11:31:00+00:00",
+   "http_headers": {
+    "Content-Length": "406080",
+    "Content-Type": "application/octet-stream",
+    "ETag": "\"6005649d-63240\"",
+    "Last-Modified": "Mon, 18 Jan 2021 10:36:13 GMT",
+    "Content-Disposition": "attachment; filename=\"hlsp_tess-spoc_tess_phot_0000000004206066-s0032_tess_v1_lc.fits\""
+   },
+   "note": "MAST product mast:HLSP/tess-spoc/s0032/target/0000/0000/0420/6066/hlsp_tess-spoc_tess_phot_0000000004206066-s0032_tess_v1_lc.fits",
+   "header": {
+    "SECTOR": 32,
+    "CAMERA": 1,
+    "CCD": 2,
+    "TSTART": 2174.227305795983,
+    "TSTOP": 2200.234548177806,
+    "TIMESYS": "TDB",
+    "TIMEREF": "SOLARSYSTEM",
+    "TIMEUNIT": "d",
+    "TELAPSE": 26.007242613304,
+    "BJDREFI": 2457000,
+    "BJDREFF": 0.0,
+    "INT_TIME": 1.98,
+    "EXPOSURE": 20.597736149737,
+    "TIMEDEL": 0.006944444444444444,
+    "NUM_FRM": 300,
+    "CROWDSAP": 0.99290729,
+    "FLFRCSAP": 0.92179704,
+    "ORIGIN": "NASA/Ames",
+    "CREATOR": "42414 LightCurveExporterPipelineModule",
+    "PROCVER": "spoc-5.0.21-20210107",
+    "DATA_REL": 48,
+    "DATE": "2021-01-17",
+    "TICVER": "8.1",
+    "n_rows": 3745,
+    "columns": [
+     "TIME",
+     "TIMECORR",
+     "CADENCENO",
+     "SAP_FLUX",
+     "SAP_FLUX_ERR",
+     "SAP_BKG",
+     "SAP_BKG_ERR",
+     "PDCSAP_FLUX",
+     "PDCSAP_FLUX_ERR",
+     "QUALITY",
+     "PSF_CENTR1",
+     "PSF_CENTR1_ERR",
+     "PSF_CENTR2",
+     "PSF_CENTR2_ERR",
+     "MOM_CENTR1",
+     "MOM_CENTR1_ERR",
+     "MOM_CENTR2",
+     "MOM_CENTR2_ERR",
+     "POS_CORR1",
+     "POS_CORR2"
+    ],
+    "astrocut_version": null
+   },
+   "matches_existing": {
+    "deep_followup_tic4206066/lc/hlsp_tess-spoc_tess_phot_0000000004206066-s0032_tess_v1_lc.fits": "identical",
+    "tic4206066_PUBLICATION_AUDIT/data/mast/hlsp_tess-spoc_tess_phot_0000000004206066-s0032_tess_v1_lc.fits": "identical"
+   }
+  },
+  {
+   "relpath": "mast/hlsp_tess-spoc_tess_phot_0000000004206066-s0032_tess_v1_tp.fits",
+   "bytes": 9207360,
+   "sha256": "2f43d928dec0e2efb0ffe36201550584cc789bb806cdc66f567fdbd103d1a4eb",
+   "url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast%3AHLSP%2Ftess-spoc%2Fs0032%2Ftarget%2F0000%2F0000%2F0420%2F6066%2Fhlsp_tess-spoc_tess_phot_0000000004206066-s0032_tess_v1_tp.fits",
+   "utc": "2026-09-25T11:31:04+00:00",
+   "utc_start": "2026-09-25T11:31:01+00:00",
+   "http_headers": {
+    "Content-Length": "9207360",
+    "Content-Type": "application/octet-stream",
+    "ETag": "\"6005698b-8c7e40\"",
+    "Last-Modified": "Mon, 18 Jan 2021 10:57:15 GMT",
+    "Content-Disposition": "attachment; filename=\"hlsp_tess-spoc_tess_phot_0000000004206066-s0032_tess_v1_tp.fits\""
+   },
+   "note": "MAST product mast:HLSP/tess-spoc/s0032/target/0000/0000/0420/6066/hlsp_tess-spoc_tess_phot_0000000004206066-s0032_tess_v1_tp.fits",
+   "header": {
+    "SECTOR": 32,
+    "CAMERA": 1,
+    "CCD": 2,
+    "TSTART": 2174.227305795983,
+    "TSTOP": 2200.234548177806,
+    "TIMESYS": "TDB",
+    "TIMEREF": "SOLARSYSTEM",
+    "TIMEUNIT": "d",
+    "TELAPSE": 26.007242613304,
+    "BJDREFI": 2457000,
+    "BJDREFF": 0.0,
+    "INT_TIME": 1.98,
+    "EXPOSURE": 19.800227006422,
+    "TIMEDEL": 0.006944444444444444,
+    "NUM_FRM": 300,
+    "CROWDSAP": 0.99290729,
+    "FLFRCSAP": 0.92179704,
+    "ORIGIN": "NASA/Ames",
+    "CREATOR": "42334 TargetPixelExporterPipelineModule",
+    "PROCVER": "spoc-5.0.21-20210107",
+    "DATA_REL": 48,
+    "DATE": "2021-01-15",
+    "TICVER": "8.1",
+    "1CRV4P": 1367,
+    "2CRV4P": 938,
+    "n_rows": 3745,
+    "columns": [
+     "TIME",
+     "TIMECORR",
+     "CADENCENO",
+     "RAW_CNTS",
+     "FLUX",
+     "FLUX_ERR",
+     "FLUX_BKG",
+     "FLUX_BKG_ERR",
+     "QUALITY",
+     "POS_CORR1",
+     "POS_CORR2"
+    ],
+    "astrocut_version": null
+   },
+   "matches_existing": {
+    "deep_followup_tic4206066/lc/hlsp_tess-spoc_tess_phot_0000000004206066-s0032_tess_v1_tp.fits": "identical",
+    "tic4206066_PUBLICATION_AUDIT/data/mast/hlsp_tess-spoc_tess_phot_0000000004206066-s0032_tess_v1_tp.fits": "identical"
+   }
+  },
+  {
+   "relpath": "mast/hlsp_tglc_tess_ffi_gaiaid-3220388198192519424-s0006-cam1-ccd1_tess_v1_llc.fits",
+   "bytes": 46080,
+   "sha256": "b14c284494e37b36c12a1a007e7dd1a4f9fe8620661f3c612fb7eeb981995c68",
+   "url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast%3AHLSP%2Ftglc%2Fs0006%2Fcam1-ccd1%2F0032%2F2038%2F8198%2F1925%2Fhlsp_tglc_tess_ffi_gaiaid-3220388198192519424-s0006-cam1-ccd1_tess_v1_llc.fits",
+   "utc": "2026-09-25T11:31:06+00:00",
+   "utc_start": "2026-09-25T11:31:06+00:00",
+   "http_headers": {
+    "Content-Length": "46080",
+    "Content-Type": "application/octet-stream",
+    "ETag": "\"634f1186-b400\"",
+    "Last-Modified": "Tue, 18 Oct 2022 20:50:14 GMT",
+    "Content-Disposition": "attachment; filename=\"hlsp_tglc_tess_ffi_gaiaid-3220388198192519424-s0006-cam1-ccd1_tess_v1_llc.fits\""
+   },
+   "note": "MAST product mast:HLSP/tglc/s0006/cam1-ccd1/0032/2038/8198/1925/hlsp_tglc_tess_ffi_gaiaid-3220388198192519424-s0006-cam1-ccd1_tess_v1_llc.fits",
+   "header": {
+    "SECTOR": 6,
+    "CAMERA": 1,
+    "CCD": 1,
+    "TSTART": 1468.287004046535,
+    "TSTOP": 1490.036681698577,
+    "TIMESYS": "TDB",
+    "TIMEREF": "SOLARSYSTEM",
+    "TIMEUNIT": "d",
+    "TELAPS": 21.74967765204292,
+    "BJDREFI": 2457000,
+    "BJDREFR": 0.0,
+    "TIMEDEL": 0.0219029986425407,
+    "ORIGIN": "UCSB/TGLC",
+    "CALIB": "TGLC",
+    "n_rows": 993,
+    "columns": [
+     "time",
+     "psf_flux",
+     "aperture_flux",
+     "cal_psf_flux",
+     "cal_aper_flux",
+     "background",
+     "cadence_num",
+     "TESS_flags",
+     "TGLC_flags"
+    ],
+    "astrocut_version": null
+   },
+   "matches_existing": {
+    "deep_followup_tic4206066/lc/hlsp_tglc_tess_ffi_gaiaid-3220388198192519424-s0006-cam1-ccd1_tess_v1_llc.fits": "identical",
+    "tic4206066_PUBLICATION_AUDIT/data/mast/hlsp_tglc_tess_ffi_gaiaid-3220388198192519424-s0006-cam1-ccd1_tess_v1_llc.fits": "identical"
+   }
+  },
+  {
+   "relpath": "mast/mast_observations_all.csv",
+   "bytes": 6944,
+   "sha256": "eba616fb3b4f7002713997cc24164ceabb47bd16572d9cf1479e21323fe6a9c0",
+   "generated_by": "this provisioning step (00_data/scripts)",
+   "url": "https://mast.stsci.edu/api/v0/invoke (astroquery.mast.Observations.query_region r=10 arcsec + query_criteria(target_name=[TIC/Gaia ids]) + get_product_list)",
+   "utc": "2026-09-25T11:29:51+00:00"
+  },
+  {
+   "relpath": "mast/mast_products_all.csv",
+   "bytes": 4865,
+   "sha256": "85c15026834af5f48c89dab05b3df2bd000071e2e596e1dae8dda95ce9b89ded",
+   "generated_by": "this provisioning step (00_data/scripts)",
+   "url": "https://mast.stsci.edu/api/v0/invoke (astroquery.mast.Observations.query_region r=10 arcsec + query_criteria(target_name=[TIC/Gaia ids]) + get_product_list)",
+   "utc": "2026-09-25T11:29:51+00:00"
+  },
+  {
+   "relpath": "mast/mast_products_listing_urls.json",
+   "bytes": 9006,
+   "sha256": "618c1201e7cbdfc40de2e8db84394097b8c37d9f1d0bec7d4b5acc3e7f5c5556",
+   "generated_by": "this provisioning step (00_data/scripts)",
+   "url": "https://mast.stsci.edu/api/v0/invoke (astroquery.mast.Observations.query_region r=10 arcsec + query_criteria(target_name=[TIC/Gaia ids]) + get_product_list)",
+   "utc": "2026-09-25T11:29:51+00:00"
+  },
+  {
+   "relpath": "mast/mast_query_summary.json",
+   "bytes": 4756,
+   "sha256": "dfbfe1fcba9e6bc913aff27862ad62b691ac1f5880a77c894373c94adf1a8d56",
+   "generated_by": "this provisioning step (00_data/scripts)",
+   "url": "https://mast.stsci.edu/api/v0/invoke (astroquery.mast.Observations.query_region r=10 arcsec + query_criteria(target_name=[TIC/Gaia ids]) + get_product_list)",
+   "utc": "2026-09-25T11:29:51+00:00"
+  },
+  {
+   "relpath": "mast/tess2020324010417-s0032-0000000004206066-0200-s_lc.fits",
+   "bytes": 1903680,
+   "sha256": "764dad34b3bbd467eef973a1d09f640a97321824e6739ac6a0c69cf40c31b0e7",
+   "url": "https://stpubdata.s3.us-east-1.amazonaws.com/tess/public/tid/s0032/0000/0000/0420/6066/tess2020324010417-s0032-0000000004206066-0200-s_lc.fits",
+   "utc": "2026-09-25T11:31:10+00:00",
+   "utc_start": "2026-09-25T11:31:08+00:00",
+   "http_headers": {
+    "Content-Length": "1903680",
+    "Content-Type": "application/fits",
+    "ETag": "\"2402fe09805e7329cd29d26e0e5e0660\"",
+    "Last-Modified": "Tue, 26 Jan 2021 07:12:45 GMT"
+   },
+   "note": "MAST product mast:TESS/product/tess2020324010417-s0032-0000000004206066-0200-s_lc.fits",
+   "requested_url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:TESS/product/tess2020324010417-s0032-0000000004206066-0200-s_lc.fits",
+   "url_note": "MAST Download API redirected to the STScI public S3 bucket (final URL recorded in 'url')",
+   "header": {
+    "SECTOR": 32,
+    "CAMERA": 1,
+    "CCD": 2,
+    "TSTART": 2174.232861554896,
+    "TSTOP": 2200.230381567936,
+    "TIMESYS": "TDB",
+    "TIMEREF": "SOLARSYSTEM",
+    "TIMEUNIT": "d",
+    "TELAPSE": 25.997520244522,
+    "BJDREFI": 2457000,
+    "BJDREFF": 0.0,
+    "INT_TIME": 1.98,
+    "EXPOSURE": 20.590036033661,
+    "TIMEDEL": 0.001388888888888889,
+    "NUM_FRM": 60,
+    "CROWDSAP": 0.99695194,
+    "FLFRCSAP": 0.9217971,
+    "ORIGIN": "NASA/Ames",
+    "CREATOR": "34055 LightCurveExporterPipelineModule",
+    "PROCVER": "spoc-5.0.20-20201120",
+    "DATA_REL": 48,
+    "DATE": "2021-01-09",
+    "TICVER": "8.1",
+    "n_rows": 18730,
+    "columns": [
+     "TIME",
+     "TIMECORR",
+     "CADENCENO",
+     "SAP_FLUX",
+     "SAP_FLUX_ERR",
+     "SAP_BKG",
+     "SAP_BKG_ERR",
+     "PDCSAP_FLUX",
+     "PDCSAP_FLUX_ERR",
+     "QUALITY",
+     "PSF_CENTR1",
+     "PSF_CENTR1_ERR",
+     "PSF_CENTR2",
+     "PSF_CENTR2_ERR",
+     "MOM_CENTR1",
+     "MOM_CENTR1_ERR",
+     "MOM_CENTR2",
+     "MOM_CENTR2_ERR",
+     "POS_CORR1",
+     "POS_CORR2"
+    ],
+    "astrocut_version": null
+   },
+   "matches_existing": {
+    "deep_followup_tic4206066/lc/tess2020324010417-s0032-0000000004206066-0200-s_lc.fits": "identical",
+    "tic4206066_PUBLICATION_AUDIT/data/mast/tess2020324010417-s0032-0000000004206066-0200-s_lc.fits": "identical"
+   }
+  },
+  {
+   "relpath": "mast/tess2020324010417-s0032-0000000004206066-0200-s_tp.fits",
+   "bytes": 45889920,
+   "sha256": "f1f76576cc088d134cd94b8b004cbd7af27be161a9a80578bbe96b7335f1b2d1",
+   "url": "https://stpubdata.s3.us-east-1.amazonaws.com/tess/public/tid/s0032/0000/0000/0420/6066/tess2020324010417-s0032-0000000004206066-0200-s_tp.fits",
+   "utc": "2026-09-25T11:31:23+00:00",
+   "utc_start": "2026-09-25T11:31:10+00:00",
+   "http_headers": {
+    "Content-Length": "45889920",
+    "Content-Type": "application/fits",
+    "ETag": "\"8f5d1ecba6d899f01cced51fdf72ce87\"",
+    "Last-Modified": "Thu, 28 Jan 2021 01:01:02 GMT"
+   },
+   "note": "MAST product mast:TESS/product/tess2020324010417-s0032-0000000004206066-0200-s_tp.fits",
+   "requested_url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:TESS/product/tess2020324010417-s0032-0000000004206066-0200-s_tp.fits",
+   "url_note": "MAST Download API redirected to the STScI public S3 bucket (final URL recorded in 'url')",
+   "header": {
+    "SECTOR": 32,
+    "CAMERA": 1,
+    "CCD": 2,
+    "TSTART": 2174.232861554896,
+    "TSTOP": 2200.230381567936,
+    "TIMESYS": "TDB",
+    "TIMEREF": "SOLARSYSTEM",
+    "TIMEUNIT": "d",
+    "TELAPSE": 25.997520244522,
+    "BJDREFI": 2457000,
+    "BJDREFF": 0.0,
+    "INT_TIME": 1.98,
+    "EXPOSURE": 19.79963368939,
+    "TIMEDEL": 0.001388888888888889,
+    "NUM_FRM": 60,
+    "CROWDSAP": 0.99695194,
+    "FLFRCSAP": 0.9217971,
+    "ORIGIN": "NASA/Ames",
+    "CREATOR": "33967 TargetPixelExporterPipelineModule",
+    "PROCVER": "spoc-5.0.20-20201120",
+    "DATA_REL": 48,
+    "DATE": "2021-01-09",
+    "TICVER": "8.1",
+    "1CRV4P": 1368,
+    "2CRV4P": 939,
+    "n_rows": 18730,
+    "columns": [
+     "TIME",
+     "TIMECORR",
+     "CADENCENO",
+     "RAW_CNTS",
+     "FLUX",
+     "FLUX_ERR",
+     "FLUX_BKG",
+     "FLUX_BKG_ERR",
+     "QUALITY",
+     "POS_CORR1",
+     "POS_CORR2"
+    ],
+    "astrocut_version": null
+   },
+   "matches_existing": {
+    "deep_followup_tic4206066/lc/tess2020324010417-s0032-0000000004206066-0200-s_tp.fits": "identical",
+    "tic4206066_PUBLICATION_AUDIT/data/mast/tess2020324010417-s0032-0000000004206066-0200-s_tp.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/prf_download_log.json",
+   "bytes": 41652,
+   "sha256": "8b4b54fbd5dd2be73f3a55e4a24adceaf1657710202860280e0fb95ba79d350c",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0001-col0045.fits",
+   "bytes": 230400,
+   "sha256": "6bf1816c3ff88f789fb9d498bc9892ce107b1a4d9e41ccb3bf90e29bf6c6874b",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0001-col0045.fits",
+   "utc": "2026-09-25T11:32:19+00:00",
+   "utc_start": "2026-09-25T11:32:18+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row0001-col0045.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0001-col0557.fits",
+   "bytes": 230400,
+   "sha256": "a077e72645309a9e8fe805c05fdf5a25c4da5d09adb083b665cda22393f01da1",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0001-col0557.fits",
+   "utc": "2026-09-25T11:32:20+00:00",
+   "utc_start": "2026-09-25T11:32:19+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row0001-col0557.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0001-col1069.fits",
+   "bytes": 230400,
+   "sha256": "afc3f4d27fac454f2fcd97af3edfaaeaf3bd5965b6797840e14ec657f2ad5743",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0001-col1069.fits",
+   "utc": "2026-09-25T11:32:21+00:00",
+   "utc_start": "2026-09-25T11:32:20+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row0001-col1069.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0001-col1580.fits",
+   "bytes": 230400,
+   "sha256": "b01e213c944177237fd75501b7fb82bdc4b38aafab3fd57ae887d84d9d0696c4",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0001-col1580.fits",
+   "utc": "2026-09-25T11:32:22+00:00",
+   "utc_start": "2026-09-25T11:32:21+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row0001-col1580.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0001-col2092.fits",
+   "bytes": 230400,
+   "sha256": "7bbe4489b2f2cda7766db24ec758f4bcbfe0c0168b059386df8e85fabbfa12d4",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0001-col2092.fits",
+   "utc": "2026-09-25T11:32:23+00:00",
+   "utc_start": "2026-09-25T11:32:22+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row0001-col2092.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0513-col0045.fits",
+   "bytes": 230400,
+   "sha256": "556418e6c0641349401c1d5315f5499fbb129de22922468476c6b9fe8367cf4d",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0513-col0045.fits",
+   "utc": "2026-09-25T11:32:24+00:00",
+   "utc_start": "2026-09-25T11:32:23+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row0513-col0045.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0513-col0557.fits",
+   "bytes": 230400,
+   "sha256": "3528d87c50f56f1c8674d46bdabaad9eda2b004562c85a7b7b70eabf64214da3",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0513-col0557.fits",
+   "utc": "2026-09-25T11:32:26+00:00",
+   "utc_start": "2026-09-25T11:32:24+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row0513-col0557.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0513-col1069.fits",
+   "bytes": 230400,
+   "sha256": "b5a89b1b6d1c9889dab5b17f004cde2f6eefab6e9cd5ec0d7011118101f70d6a",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0513-col1069.fits",
+   "utc": "2026-09-25T11:32:27+00:00",
+   "utc_start": "2026-09-25T11:32:26+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row0513-col1069.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0513-col1580.fits",
+   "bytes": 230400,
+   "sha256": "0acc0ca3b16d20d35941705337016967a9abbfd26fcfe3bf27d955bb4b0c0371",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0513-col1580.fits",
+   "utc": "2026-09-25T11:32:28+00:00",
+   "utc_start": "2026-09-25T11:32:27+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row0513-col1580.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0513-col2092.fits",
+   "bytes": 230400,
+   "sha256": "704d4a21faf499b0898c54cb2892fdb5036fa195b64225ed52cdef68dbe326ad",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row0513-col2092.fits",
+   "utc": "2026-09-25T11:32:28+00:00",
+   "utc_start": "2026-09-25T11:32:28+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row0513-col2092.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1025-col0045.fits",
+   "bytes": 230400,
+   "sha256": "67cbd1d0dd97a0298b6b540218de7d0ecd07a5e639a2dbeb0f91fa5c2e582afc",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1025-col0045.fits",
+   "utc": "2026-09-25T11:32:29+00:00",
+   "utc_start": "2026-09-25T11:32:28+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row1025-col0045.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1025-col0557.fits",
+   "bytes": 230400,
+   "sha256": "ae3d0ba47f5d0b12fc556c0da8cef3ae1822deb812e590c9d36e7faafecbfa07",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1025-col0557.fits",
+   "utc": "2026-09-25T11:32:30+00:00",
+   "utc_start": "2026-09-25T11:32:29+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row1025-col0557.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1025-col1069.fits",
+   "bytes": 230400,
+   "sha256": "68ff652dd6c67c603d31de3cccee090101c3d542dab34e7acc346681d043aa2c",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1025-col1069.fits",
+   "utc": "2026-09-25T11:32:31+00:00",
+   "utc_start": "2026-09-25T11:32:30+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row1025-col1069.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1025-col1580.fits",
+   "bytes": 230400,
+   "sha256": "7d587404e6ac15703f27b73f9f346d5d34c63dc50f5919a009b54cf5fc4386a2",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1025-col1580.fits",
+   "utc": "2026-09-25T11:32:32+00:00",
+   "utc_start": "2026-09-25T11:32:31+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row1025-col1580.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1025-col2092.fits",
+   "bytes": 230400,
+   "sha256": "c313d421677cd44d8178600f7c4f2b58d0841bd112152c32208799dc5a7c6829",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1025-col2092.fits",
+   "utc": "2026-09-25T11:32:33+00:00",
+   "utc_start": "2026-09-25T11:32:32+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row1025-col2092.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1536-col0045.fits",
+   "bytes": 230400,
+   "sha256": "7f9cf3aa4773259213aff60d378fbe2c3b9a2d59fab110c846fbbcc24a0cd056",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1536-col0045.fits",
+   "utc": "2026-09-25T11:32:34+00:00",
+   "utc_start": "2026-09-25T11:32:33+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row1536-col0045.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1536-col0557.fits",
+   "bytes": 230400,
+   "sha256": "0de8db3be5c6d0c321283bb32e603b247d39af7cd50e3af3a423b308febb246e",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1536-col0557.fits",
+   "utc": "2026-09-25T11:32:36+00:00",
+   "utc_start": "2026-09-25T11:32:34+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851a4e500\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:56 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row1536-col0557.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1536-col1069.fits",
+   "bytes": 230400,
+   "sha256": "047685d87b89571cddbdca4883048a23da28639cd46a75a20bc97c7d1e25f95e",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1536-col1069.fits",
+   "utc": "2026-09-25T11:32:37+00:00",
+   "utc_start": "2026-09-25T11:32:36+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row1536-col1069.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1536-col1580.fits",
+   "bytes": 230400,
+   "sha256": "86829d56247f9a223bca4b863eb953e965716066f1bcbb57ccd75d78e821e3fd",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1536-col1580.fits",
+   "utc": "2026-09-25T11:32:38+00:00",
+   "utc_start": "2026-09-25T11:32:37+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row1536-col1580.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1536-col2092.fits",
+   "bytes": 230400,
+   "sha256": "e25838755d8af423b4e96d68e13d4f63e194c0f29de531a524040b91ad4600d4",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row1536-col2092.fits",
+   "utc": "2026-09-25T11:32:39+00:00",
+   "utc_start": "2026-09-25T11:32:38+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row1536-col2092.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row2048-col0045.fits",
+   "bytes": 230400,
+   "sha256": "900976ee1e2457e604f1e7e76f9e4c76abbb5df4a69fa69539043153a9b868cc",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row2048-col0045.fits",
+   "utc": "2026-09-25T11:32:40+00:00",
+   "utc_start": "2026-09-25T11:32:39+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row2048-col0045.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row2048-col0557.fits",
+   "bytes": 230400,
+   "sha256": "d3a0aa47d8642b88d2b50df6b2548c7ae534c5d8a5ee3651849015691473ed9a",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row2048-col0557.fits",
+   "utc": "2026-09-25T11:32:41+00:00",
+   "utc_start": "2026-09-25T11:32:40+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row2048-col0557.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row2048-col1069.fits",
+   "bytes": 230400,
+   "sha256": "8fd57cad34e360cca2b46991778f876abe7d05e0c6ec1b2a2587ba68f60b2f0b",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row2048-col1069.fits",
+   "utc": "2026-09-25T11:32:42+00:00",
+   "utc_start": "2026-09-25T11:32:41+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row2048-col1069.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row2048-col1580.fits",
+   "bytes": 230400,
+   "sha256": "e6272ac3d3736b3e586e3a76715de52154bddb49bd8f58d4312a93bfd6119e40",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row2048-col1580.fits",
+   "utc": "2026-09-25T11:32:43+00:00",
+   "utc_start": "2026-09-25T11:32:42+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row2048-col1580.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row2048-col2092.fits",
+   "bytes": 230400,
+   "sha256": "a65dfa5519c86165e1f93aca3555ee1ed3eb14bde6382f55f317a1622779be8b",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd2/tess2019107181901-prf-1-2-row2048-col2092.fits",
+   "utc": "2026-09-25T11:32:43+00:00",
+   "utc_start": "2026-09-25T11:32:43+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851b42740\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:57 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd2/tess2019107181901-prf-1-2-row2048-col2092.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0001-col0045.fits",
+   "bytes": 230400,
+   "sha256": "de888f145fdbee1d7061310c1c00c311113e21866a5a699e0ad2571a0ba1ab8a",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0001-col0045.fits",
+   "utc": "2026-09-25T11:31:54+00:00",
+   "utc_start": "2026-09-25T11:31:53+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d85195a2c0\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:55 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row0001-col0045.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0001-col0557.fits",
+   "bytes": 230400,
+   "sha256": "81fd98f35d7a1810e65c183a293db21d7aab58f92638c12301f4a3d17c8fba9b",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0001-col0557.fits",
+   "utc": "2026-09-25T11:31:55+00:00",
+   "utc_start": "2026-09-25T11:31:54+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d85195a2c0\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:55 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row0001-col0557.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0001-col1069.fits",
+   "bytes": 230400,
+   "sha256": "0ae238bdae915f5845a7638151375bd7ca8c37c1b8202cb94a22cf6cb0592ff8",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0001-col1069.fits",
+   "utc": "2026-09-25T11:31:56+00:00",
+   "utc_start": "2026-09-25T11:31:55+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d85195a2c0\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:55 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row0001-col1069.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0001-col1580.fits",
+   "bytes": 230400,
+   "sha256": "5ddc27d7543da73f66fe8044bd5fa992bd6a931cab2a63ff9cf508cb08f41026",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0001-col1580.fits",
+   "utc": "2026-09-25T11:31:57+00:00",
+   "utc_start": "2026-09-25T11:31:56+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d85195a2c0\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:55 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row0001-col1580.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0001-col2092.fits",
+   "bytes": 230400,
+   "sha256": "4750e644c909efaf07f2961b904dc6e2974a52a909a95cd553176384c3b9e92e",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0001-col2092.fits",
+   "utc": "2026-09-25T11:31:58+00:00",
+   "utc_start": "2026-09-25T11:31:57+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d85195a2c0\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:55 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row0001-col2092.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0513-col0045.fits",
+   "bytes": 230400,
+   "sha256": "9872624395b9895ae2dc11e3ec34ac939ea137ea996bc3dcd5e7b090e22b433c",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0513-col0045.fits",
+   "utc": "2026-09-25T11:31:59+00:00",
+   "utc_start": "2026-09-25T11:31:58+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851a4e500\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:56 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row0513-col0045.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0513-col0557.fits",
+   "bytes": 230400,
+   "sha256": "c2a58d28a9f5c25e7363f68b25d0fa51c7010d316f709060786b0bdefd43fef7",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0513-col0557.fits",
+   "utc": "2026-09-25T11:32:00+00:00",
+   "utc_start": "2026-09-25T11:31:59+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851a4e500\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:56 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row0513-col0557.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0513-col1069.fits",
+   "bytes": 230400,
+   "sha256": "e530143447f31f0ba57c7e7f1c02794d23aca81209f0d3550c699c643fd5e289",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0513-col1069.fits",
+   "utc": "2026-09-25T11:32:01+00:00",
+   "utc_start": "2026-09-25T11:32:00+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851a4e500\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:56 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row0513-col1069.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0513-col1580.fits",
+   "bytes": 230400,
+   "sha256": "6bcfa77726b8b97839b26e437b372f7911f1df634869f08f63116b79d23ad69f",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0513-col1580.fits",
+   "utc": "2026-09-25T11:32:02+00:00",
+   "utc_start": "2026-09-25T11:32:01+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851a4e500\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:56 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row0513-col1580.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0513-col2092.fits",
+   "bytes": 230400,
+   "sha256": "bb35c1e3f63e85aab289f5796e53d1e7b171906af7f552c066f2e1d708b66613",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row0513-col2092.fits",
+   "utc": "2026-09-25T11:32:03+00:00",
+   "utc_start": "2026-09-25T11:32:02+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851a4e500\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:56 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row0513-col2092.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1025-col0045.fits",
+   "bytes": 230400,
+   "sha256": "7edf3b0c7761ada90ca3d8918e9160f9227e9bcfe3b9676f70840a596aa3385d",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1025-col0045.fits",
+   "utc": "2026-09-25T11:32:04+00:00",
+   "utc_start": "2026-09-25T11:32:03+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851a4e500\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:56 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row1025-col0045.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1025-col0557.fits",
+   "bytes": 230400,
+   "sha256": "859f01a33c1fd76aaf37ef55ec22c5cf7bb7abff29b38e1e33fbb94ad091f84c",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1025-col0557.fits",
+   "utc": "2026-09-25T11:32:05+00:00",
+   "utc_start": "2026-09-25T11:32:04+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851a4e500\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:56 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row1025-col0557.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1025-col1069.fits",
+   "bytes": 230400,
+   "sha256": "d2274f9986966a10dfb4124253c286ae20d8e55500a6a13c27bb3fed29f9fc7a",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1025-col1069.fits",
+   "utc": "2026-09-25T11:32:06+00:00",
+   "utc_start": "2026-09-25T11:32:05+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851a4e500\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:56 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row1025-col1069.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1025-col1580.fits",
+   "bytes": 230400,
+   "sha256": "9ba0eb57544982990fda59ea12f18b02a5f9ec2b9bbf52a4de97a585003537a3",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1025-col1580.fits",
+   "utc": "2026-09-25T11:32:07+00:00",
+   "utc_start": "2026-09-25T11:32:06+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851a4e500\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:56 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row1025-col1580.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1025-col2092.fits",
+   "bytes": 230400,
+   "sha256": "584e37cf8534206036ea7400b3028f75b4b378eec4fc5cfe24c3b37870b78827",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1025-col2092.fits",
+   "utc": "2026-09-25T11:32:08+00:00",
+   "utc_start": "2026-09-25T11:32:07+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851a4e500\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:56 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row1025-col2092.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1536-col0045.fits",
+   "bytes": 230400,
+   "sha256": "ffcf6a1304b2081ad6a15f593575f083f159cc44464df161309dd416d1831fc4",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1536-col0045.fits",
+   "utc": "2026-09-25T11:32:09+00:00",
+   "utc_start": "2026-09-25T11:32:08+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d851a4e500\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:56 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row1536-col0045.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1536-col0557.fits",
+   "bytes": 230400,
+   "sha256": "0a61e445e6014700c8dfb83d0f89eb2b7dca44cf93d4884d90ea17dea2ebb6fd",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1536-col0557.fits",
+   "utc": "2026-09-25T11:32:10+00:00",
+   "utc_start": "2026-09-25T11:32:09+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d85195a2c0\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:55 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row1536-col0557.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1536-col1069.fits",
+   "bytes": 230400,
+   "sha256": "6609e6943c479f4c0a28689df716083f45feb398acbc130c9083f7b3b73fe83d",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1536-col1069.fits",
+   "utc": "2026-09-25T11:32:11+00:00",
+   "utc_start": "2026-09-25T11:32:10+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d85195a2c0\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:55 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row1536-col1069.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1536-col1580.fits",
+   "bytes": 230400,
+   "sha256": "a8bb5d213558f2fcdd32a625ad03d95fe80c8ab01e5df1fcbc4c15a86226fbb4",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1536-col1580.fits",
+   "utc": "2026-09-25T11:32:12+00:00",
+   "utc_start": "2026-09-25T11:32:11+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d85195a2c0\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:55 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row1536-col1580.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1536-col2092.fits",
+   "bytes": 230400,
+   "sha256": "da024befc388e27d4402e9fa6035bde4f2b821b1b64373a33f403515a3ab1127",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row1536-col2092.fits",
+   "utc": "2026-09-25T11:32:13+00:00",
+   "utc_start": "2026-09-25T11:32:12+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d85195a2c0\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:55 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row1536-col2092.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row2048-col0045.fits",
+   "bytes": 230400,
+   "sha256": "664bb15fdfa19bd391249fb3eb975a60e7d823674c880e39607a9a9b5d67021c",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row2048-col0045.fits",
+   "utc": "2026-09-25T11:32:14+00:00",
+   "utc_start": "2026-09-25T11:32:13+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d85195a2c0\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:55 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row2048-col0045.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row2048-col0557.fits",
+   "bytes": 230400,
+   "sha256": "2f29f150075a6a6c43cc9f25f3315e57a9daf774f91bbc90dbae2f27fabd1352",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row2048-col0557.fits",
+   "utc": "2026-09-25T11:32:15+00:00",
+   "utc_start": "2026-09-25T11:32:14+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d85195a2c0\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:55 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row2048-col0557.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row2048-col1069.fits",
+   "bytes": 230400,
+   "sha256": "4fedab3149de572c87ea4e9b6229c6862364321338f4587fb058ec85a044a195",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row2048-col1069.fits",
+   "utc": "2026-09-25T11:32:16+00:00",
+   "utc_start": "2026-09-25T11:32:15+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d85195a2c0\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:55 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row2048-col1069.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row2048-col1580.fits",
+   "bytes": 230400,
+   "sha256": "1650e7904365a315140c3056b06229ad205d3192b833faa3969b9f08731f334e",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row2048-col1580.fits",
+   "utc": "2026-09-25T11:32:17+00:00",
+   "utc_start": "2026-09-25T11:32:16+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d85195a2c0\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:55 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row2048-col1580.fits": "identical"
+   }
+  },
+  {
+   "relpath": "prf/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row2048-col2092.fits",
+   "bytes": 230400,
+   "sha256": "953f8ced8bf9c67dc20881ae40cc19c27d0d8c8a38d206bde1068521577f2093",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/cam1_ccd1/tess2019107181900-prf-1-1-row2048-col2092.fits",
+   "utc": "2026-09-25T11:32:18+00:00",
+   "utc_start": "2026-09-25T11:32:17+00:00",
+   "http_headers": {
+    "Content-Length": "230400",
+    "Content-Type": "image/fits",
+    "ETag": "\"38400-587d85195a2c0\"",
+    "Last-Modified": "Wed, 01 May 2019 19:13:55 GMT"
+   },
+   "note": "TESS PRF model FITS, start_s0004",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/prf/cam1_ccd1/tess2019107181900-prf-1-1-row2048-col2092.fits": "identical"
+   }
+  },
+  {
+   "relpath": "tesscut/tesscut_download_log.json",
+   "bytes": 3450,
+   "sha256": "b544f76a19d7af58103b20ee78f4ec365b9d2ddf18131ea2a4ed6a490ed81a44",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "tesscut/31x31/tess-s0006-1-1_80.859830_-1.326960_31x31_astrocut.fits",
+   "bytes": 19195200,
+   "sha256": "ec94d17abed6ff74138cf895292e46af2d2b4f272557c50e5f6c6281d685ec68",
+   "url": "https://mast.stsci.edu/tesscut/api/v0.1/astrocut?x=31&y=31&units=px&sector=6&ra=80.85983&dec=-1.32696",
+   "utc": "2026-09-25T11:31:48+00:00",
+   "utc_start": "2026-09-25T11:31:43+00:00",
+   "tool": "astroquery 0.4.11 Tesscut.download_cutouts",
+   "zip_sha256": "25e073afb98109ebc51e7b48faa593c87ca0024fc3be488e771c94734edcd627",
+   "zip_bytes": 19195458,
+   "header": {
+    "SECTOR": 6,
+    "CAMERA": 1,
+    "CCD": 1,
+    "TSTART": 1468.276587499918,
+    "TSTOP": 1490.047098245309,
+    "TIMESYS": "TDB",
+    "TIMEREF": "SOLARSYSTEM",
+    "TIMEUNIT": "d",
+    "TELAPSE": 21.770510745390993,
+    "BJDREFI": 2457000,
+    "BJDREFF": 0.0,
+    "INT_TIME": 1.98,
+    "EXPOSURE": 0.016499993356,
+    "TIMEDEL": 0.020833333333333332,
+    "NUM_FRM": 900,
+    "CROWDSAP": null,
+    "FLFRCSAP": null,
+    "ORIGIN": "STScI/MAST",
+    "CREATOR": "astrocut",
+    "PROCVER": "0.11.1",
+    "DATA_REL": 42,
+    "DATE": "2021-08-12",
+    "FFI_TYPE": "SPOC",
+    "TICVER": 0,
+    "1CRV4P": 61,
+    "2CRV4P": 874,
+    "n_rows": 993,
+    "columns": [
+     "TIME",
+     "TIMECORR",
+     "CADENCENO",
+     "RAW_CNTS",
+     "FLUX",
+     "FLUX_ERR",
+     "FLUX_BKG",
+     "FLUX_BKG_ERR",
+     "QUALITY",
+     "POS_CORR1",
+     "POS_CORR2",
+     "FFI_FILE"
+    ],
+    "astrocut_version": "0.11.1"
+   },
+   "matches_existing": {
+    "no earlier 31x31 copy": null,
+    "central 21x21 vs fresh 21x21": "identical"
+   }
+  },
+  {
+   "relpath": "tesscut/31x31/tess-s0032-1-2_80.859830_-1.326960_31x31_astrocut.fits",
+   "bytes": 69474240,
+   "sha256": "76731317d486e956841c4b3fe8f7b87ee52dbe76c0d2f0cf368668cd795159fc",
+   "url": "https://mast.stsci.edu/tesscut/api/v0.1/astrocut?x=31&y=31&units=px&sector=32&ra=80.85983&dec=-1.32696",
+   "utc": "2026-09-25T11:32:05+00:00",
+   "utc_start": "2026-09-25T11:31:48+00:00",
+   "tool": "astroquery 0.4.11 Tesscut.download_cutouts",
+   "zip_sha256": "7f274c6b812c5d0993d9ec3e7e52a9b62c8a6f85b64b95a4b4d2405eabb4e44a",
+   "zip_bytes": 69474498,
+   "header": {
+    "SECTOR": 32,
+    "CAMERA": 1,
+    "CCD": 2,
+    "TSTART": 2174.227378589553,
+    "TSTOP": 2200.234542926078,
+    "TIMESYS": "TDB",
+    "TIMEREF": "SOLARSYSTEM",
+    "TIMEUNIT": "d",
+    "TELAPSE": 26.007164336524966,
+    "BJDREFI": 2457000,
+    "BJDREFF": 0.0,
+    "INT_TIME": 1.98,
+    "EXPOSURE": 0.00549999756,
+    "TIMEDEL": 0.006944444444444444,
+    "NUM_FRM": 300,
+    "CROWDSAP": null,
+    "FLFRCSAP": null,
+    "ORIGIN": "STScI/MAST",
+    "CREATOR": "astrocut",
+    "PROCVER": "0.11.1",
+    "DATA_REL": 48,
+    "DATE": "2021-02-03",
+    "FFI_TYPE": "SPOC",
+    "TICVER": 0,
+    "1CRV4P": 1357,
+    "2CRV4P": 928,
+    "n_rows": 3600,
+    "columns": [
+     "TIME",
+     "TIMECORR",
+     "CADENCENO",
+     "RAW_CNTS",
+     "FLUX",
+     "FLUX_ERR",
+     "FLUX_BKG",
+     "FLUX_BKG_ERR",
+     "QUALITY",
+     "POS_CORR1",
+     "POS_CORR2",
+     "FFI_FILE"
+    ],
+    "astrocut_version": "0.11.1"
+   },
+   "matches_existing": {
+    "no earlier 31x31 copy": null,
+    "central 21x21 vs fresh 21x21": "identical"
+   }
+  },
+  {
+   "relpath": "tesscut/31x31/tess-s0098-1-2_80.859830_-1.326960_31x31_astrocut.fits",
+   "bytes": 466032960,
+   "sha256": "f717a382158f1c5cbcb5dde212f3661be9383f9c91a4e0cee458188ac08548e3",
+   "url": "https://mast.stsci.edu/tesscut/api/v0.1/astrocut?x=31&y=31&units=px&sector=98&ra=80.85983&dec=-1.32696",
+   "utc": "2026-09-25T11:33:55+00:00",
+   "utc_start": "2026-09-25T11:32:06+00:00",
+   "tool": "astroquery 0.4.11 Tesscut.download_cutouts",
+   "zip_sha256": "82826968bf7a5e18e6af8913a9381d3546bf5e75986512d2e2a2de2d0b7fbb5f",
+   "zip_bytes": 466033218,
+   "header": {
+    "SECTOR": 98,
+    "CAMERA": 1,
+    "CCD": 2,
+    "TSTART": 3988.497571919686,
+    "TSTOP": 4045.903206506657,
+    "TIMESYS": "TDB",
+    "TIMEREF": "SOLARSYSTEM",
+    "TIMEUNIT": "d",
+    "TELAPSE": 57.405634586971246,
+    "BJDREFI": 2457000,
+    "BJDREFF": 0.0,
+    "INT_TIME": 1.98,
+    "EXPOSURE": 0.00183333247,
+    "TIMEDEL": 0.0023148148148148,
+    "NUM_FRM": 100,
+    "CROWDSAP": null,
+    "FLFRCSAP": null,
+    "ORIGIN": "STScI/MAST",
+    "CREATOR": "astrocut",
+    "PROCVER": "0.11.1",
+    "DATA_REL": 134,
+    "DATE": "2026-01-13",
+    "FFI_TYPE": "SPOC",
+    "TICVER": 0,
+    "1CRV4P": 661,
+    "2CRV4P": 967,
+    "n_rows": 24162,
+    "columns": [
+     "TIME",
+     "TIMECORR",
+     "CADENCENO",
+     "RAW_CNTS",
+     "FLUX",
+     "FLUX_ERR",
+     "FLUX_BKG",
+     "FLUX_BKG_ERR",
+     "QUALITY",
+     "POS_CORR1",
+     "POS_CORR2",
+     "FFI_FILE"
+    ],
+    "astrocut_version": "0.11.1"
+   },
+   "matches_existing": {
+    "no earlier 31x31 copy": null,
+    "central 21x21 vs fresh 21x21": "identical"
+   }
+  },
+  {
+   "relpath": "tesscut/21x21/tess-s0006-1-1_80.859830_-1.326960_21x21_astrocut.fits",
+   "bytes": 8864640,
+   "sha256": "e56486a12ae0a929362d8c932ed06987945958c4d29cb78e2cadeb2e206ab2f1",
+   "url": "https://mast.stsci.edu/tesscut/api/v0.1/astrocut?x=21&y=21&units=px&sector=6&ra=80.85983&dec=-1.32696",
+   "utc": "2026-09-25T11:30:50+00:00",
+   "utc_start": "2026-09-25T11:30:46+00:00",
+   "tool": "astroquery 0.4.11 Tesscut.download_cutouts",
+   "zip_sha256": "31468a874c768efa24b6f2b3eb63a4bb7e40fbf6490801403b983202f9fb2383",
+   "zip_bytes": 8864898,
+   "header": {
+    "SECTOR": 6,
+    "CAMERA": 1,
+    "CCD": 1,
+    "TSTART": 1468.276587499918,
+    "TSTOP": 1490.047098245309,
+    "TIMESYS": "TDB",
+    "TIMEREF": "SOLARSYSTEM",
+    "TIMEUNIT": "d",
+    "TELAPSE": 21.770510745390993,
+    "BJDREFI": 2457000,
+    "BJDREFF": 0.0,
+    "INT_TIME": 1.98,
+    "EXPOSURE": 0.016499993356,
+    "TIMEDEL": 0.020833333333333332,
+    "NUM_FRM": 900,
+    "CROWDSAP": null,
+    "FLFRCSAP": null,
+    "ORIGIN": "STScI/MAST",
+    "CREATOR": "astrocut",
+    "PROCVER": "0.11.1",
+    "DATA_REL": 42,
+    "DATE": "2021-08-12",
+    "FFI_TYPE": "SPOC",
+    "TICVER": 0,
+    "1CRV4P": 66,
+    "2CRV4P": 879,
+    "n_rows": 993,
+    "columns": [
+     "TIME",
+     "TIMECORR",
+     "CADENCENO",
+     "RAW_CNTS",
+     "FLUX",
+     "FLUX_ERR",
+     "FLUX_BKG",
+     "FLUX_BKG_ERR",
+     "QUALITY",
+     "POS_CORR1",
+     "POS_CORR2",
+     "FFI_FILE"
+    ],
+    "astrocut_version": "0.11.1"
+   },
+   "matches_existing": {
+    "deep_followup_tic4206066/pixels/tess-s0006-1-1_80.859830_-1.326960_21x21_astrocut.fits": "arrays identical (TIME,TIMECORR,CADENCENO,RAW_CNTS,FLUX,FLUX_ERR,FLUX_BKG,FLUX_BKG_ERR,QUALITY,POS_CORR1/2)",
+    "tic4206066_PUBLICATION_AUDIT/data/tesscut/tess-s0006-1-1_80.859827_-1.326964_21x21_astrocut.fits": "arrays identical (TIME,TIMECORR,CADENCENO,RAW_CNTS,FLUX,FLUX_ERR,FLUX_BKG,FLUX_BKG_ERR,QUALITY,POS_CORR1/2)"
+   }
+  },
+  {
+   "relpath": "tesscut/21x21/tess-s0032-1-2_80.859830_-1.326960_21x21_astrocut.fits",
+   "bytes": 32031360,
+   "sha256": "b35061be5bc83fde8f6e2c51e5fc01e229da8c730c400012ed4a31d4e5a1acfa",
+   "url": "https://mast.stsci.edu/tesscut/api/v0.1/astrocut?x=21&y=21&units=px&sector=32&ra=80.85983&dec=-1.32696",
+   "utc": "2026-09-25T11:30:57+00:00",
+   "utc_start": "2026-09-25T11:30:50+00:00",
+   "tool": "astroquery 0.4.11 Tesscut.download_cutouts",
+   "zip_sha256": "cb03c42aaa31a1085a67a237714d5db40ceab19990be88913d9efd909545bda5",
+   "zip_bytes": 32031618,
+   "header": {
+    "SECTOR": 32,
+    "CAMERA": 1,
+    "CCD": 2,
+    "TSTART": 2174.227378589553,
+    "TSTOP": 2200.234542926078,
+    "TIMESYS": "TDB",
+    "TIMEREF": "SOLARSYSTEM",
+    "TIMEUNIT": "d",
+    "TELAPSE": 26.007164336524966,
+    "BJDREFI": 2457000,
+    "BJDREFF": 0.0,
+    "INT_TIME": 1.98,
+    "EXPOSURE": 0.00549999756,
+    "TIMEDEL": 0.006944444444444444,
+    "NUM_FRM": 300,
+    "CROWDSAP": null,
+    "FLFRCSAP": null,
+    "ORIGIN": "STScI/MAST",
+    "CREATOR": "astrocut",
+    "PROCVER": "0.11.1",
+    "DATA_REL": 48,
+    "DATE": "2021-02-03",
+    "FFI_TYPE": "SPOC",
+    "TICVER": 0,
+    "1CRV4P": 1362,
+    "2CRV4P": 933,
+    "n_rows": 3600,
+    "columns": [
+     "TIME",
+     "TIMECORR",
+     "CADENCENO",
+     "RAW_CNTS",
+     "FLUX",
+     "FLUX_ERR",
+     "FLUX_BKG",
+     "FLUX_BKG_ERR",
+     "QUALITY",
+     "POS_CORR1",
+     "POS_CORR2",
+     "FFI_FILE"
+    ],
+    "astrocut_version": "0.11.1"
+   },
+   "matches_existing": {
+    "deep_followup_tic4206066/pixels/tess-s0032-1-2_80.859830_-1.326960_21x21_astrocut.fits": "arrays identical (TIME,TIMECORR,CADENCENO,RAW_CNTS,FLUX,FLUX_ERR,FLUX_BKG,FLUX_BKG_ERR,QUALITY,POS_CORR1/2)",
+    "tic4206066_PUBLICATION_AUDIT/data/tesscut/tess-s0032-1-2_80.859827_-1.326964_21x21_astrocut.fits": "arrays identical (TIME,TIMECORR,CADENCENO,RAW_CNTS,FLUX,FLUX_ERR,FLUX_BKG,FLUX_BKG_ERR,QUALITY,POS_CORR1/2)"
+   }
+  },
+  {
+   "relpath": "tesscut/21x21/tess-s0098-1-2_80.859830_-1.326960_21x21_astrocut.fits",
+   "bytes": 214744320,
+   "sha256": "9dd42121ac16aa14b2d39275ab4e25d734b00f9b419c1ad7b8ad1eb211e7b56d",
+   "url": "https://mast.stsci.edu/tesscut/api/v0.1/astrocut?x=21&y=21&units=px&sector=98&ra=80.85983&dec=-1.32696",
+   "utc": "2026-09-25T11:31:42+00:00",
+   "utc_start": "2026-09-25T11:30:58+00:00",
+   "tool": "astroquery 0.4.11 Tesscut.download_cutouts",
+   "zip_sha256": "f1454524153ac62acd21b2b2a5d185062d558b6b1e23b01cf6a759b160995135",
+   "zip_bytes": 214744578,
+   "header": {
+    "SECTOR": 98,
+    "CAMERA": 1,
+    "CCD": 2,
+    "TSTART": 3988.497571919686,
+    "TSTOP": 4045.903206506657,
+    "TIMESYS": "TDB",
+    "TIMEREF": "SOLARSYSTEM",
+    "TIMEUNIT": "d",
+    "TELAPSE": 57.405634586971246,
+    "BJDREFI": 2457000,
+    "BJDREFF": 0.0,
+    "INT_TIME": 1.98,
+    "EXPOSURE": 0.00183333247,
+    "TIMEDEL": 0.0023148148148148,
+    "NUM_FRM": 100,
+    "CROWDSAP": null,
+    "FLFRCSAP": null,
+    "ORIGIN": "STScI/MAST",
+    "CREATOR": "astrocut",
+    "PROCVER": "0.11.1",
+    "DATA_REL": 134,
+    "DATE": "2026-01-13",
+    "FFI_TYPE": "SPOC",
+    "TICVER": 0,
+    "1CRV4P": 666,
+    "2CRV4P": 972,
+    "n_rows": 24162,
+    "columns": [
+     "TIME",
+     "TIMECORR",
+     "CADENCENO",
+     "RAW_CNTS",
+     "FLUX",
+     "FLUX_ERR",
+     "FLUX_BKG",
+     "FLUX_BKG_ERR",
+     "QUALITY",
+     "POS_CORR1",
+     "POS_CORR2",
+     "FFI_FILE"
+    ],
+    "astrocut_version": "0.11.1"
+   },
+   "matches_existing": {
+    "deep_followup_tic4206066/pixels/tess-s0098-1-2_80.859830_-1.326960_21x21_astrocut.fits": "arrays identical (TIME,TIMECORR,CADENCENO,RAW_CNTS,FLUX,FLUX_ERR,FLUX_BKG,FLUX_BKG_ERR,QUALITY,POS_CORR1/2)",
+    "tic4206066_PUBLICATION_AUDIT/data/tesscut/tess-s0098-1-2_80.859827_-1.326964_21x21_astrocut.fits": "arrays identical (TIME,TIMECORR,CADENCENO,RAW_CNTS,FLUX,FLUX_ERR,FLUX_BKG,FLUX_BKG_ERR,QUALITY,POS_CORR1/2)"
+   }
+  },
+  {
+   "relpath": "docs/docs_download_log.json",
+   "bytes": 11138,
+   "sha256": "88cc5f8275b38a23b77d48706f9ef42fe61d4f4dc38bd4dd19c4357ab11f5196",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "docs/prf/prf_index_root.html",
+   "bytes": 709,
+   "sha256": "6441b1e551507fab257c840c4eaa56bd8e7f432ec5a96d6a2373dfebb09100c4",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/",
+   "utc": "2026-09-25T11:31:51+00:00",
+   "utc_start": "2026-09-25T11:31:50+00:00",
+   "http_headers": {
+    "Content-Length": "709",
+    "Content-Type": "text/html;charset=ISO-8859-1"
+   },
+   "note": "PRF archive doc/index snapshot"
+  },
+  {
+   "relpath": "docs/prf/prf_index_start_s0001_.html",
+   "bytes": 3443,
+   "sha256": "b81473c2148c4acf2e602dd7b29f26e46619a1bb8cc5283c520ef512af56799a",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0001/",
+   "utc": "2026-09-25T11:31:51+00:00",
+   "utc_start": "2026-09-25T11:31:51+00:00",
+   "http_headers": {
+    "Content-Length": "3443",
+    "Content-Type": "text/html;charset=ISO-8859-1"
+   },
+   "note": "PRF archive doc/index snapshot"
+  },
+  {
+   "relpath": "docs/prf/prf_index_start_s0001_00README.txt",
+   "bytes": 3886,
+   "sha256": "c768d02cea91a88bc11465edb1c1416f56083b7b6a49681e32d673a6756400d1",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0001/00README.txt",
+   "utc": "2026-09-25T11:31:53+00:00",
+   "utc_start": "2026-09-25T11:31:52+00:00",
+   "http_headers": {
+    "Content-Length": "3886",
+    "Content-Type": "text/plain; charset=UTF-8",
+    "ETag": "\"f2e-5883d86698c40\"",
+    "Last-Modified": "Mon, 06 May 2019 19:58:33 GMT"
+   },
+   "note": "PRF archive doc/index snapshot"
+  },
+  {
+   "relpath": "docs/prf/prf_index_start_s0004_.html",
+   "bytes": 3443,
+   "sha256": "7d79ba26495ea0ee49add9d1680a9a5282b71172d5c51b1299b724af268ec2e3",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/",
+   "utc": "2026-09-25T11:31:52+00:00",
+   "utc_start": "2026-09-25T11:31:51+00:00",
+   "http_headers": {
+    "Content-Length": "3443",
+    "Content-Type": "text/html;charset=ISO-8859-1"
+   },
+   "note": "PRF archive doc/index snapshot"
+  },
+  {
+   "relpath": "docs/prf/prf_index_start_s0004_00README.txt",
+   "bytes": 4299,
+   "sha256": "572a56a32cc88332fca64be8d7d4df48a95b7a4687374824a33b82d4639871a1",
+   "url": "https://archive.stsci.edu/missions/tess/models/prf_fitsfiles/start_s0004/00README.txt",
+   "utc": "2026-09-25T11:31:52+00:00",
+   "utc_start": "2026-09-25T11:31:52+00:00",
+   "http_headers": {
+    "Content-Length": "4299",
+    "Content-Type": "text/plain; charset=UTF-8",
+    "ETag": "\"10cb-5883e11a61440\"",
+    "Last-Modified": "Mon, 06 May 2019 20:37:29 GMT"
+   },
+   "note": "PRF archive doc/index snapshot"
+  },
+  {
+   "relpath": "docs/tesscut/mast_tesscut_docs.html",
+   "bytes": 36334,
+   "sha256": "45e0085eaa42d3b14c2a7eea509a85f201bee58b4272655186f9d05974ae95fc",
+   "url": "https://mast.stsci.edu/tesscut/docs/getting_started.html",
+   "utc": "2026-09-25T11:36:00+00:00",
+   "utc_start": "2026-09-25T11:36:00+00:00",
+   "http_headers": {
+    "Content-Length": "36334",
+    "Content-Type": "text/html",
+    "ETag": "\"6a8342b2-8dee\"",
+    "Last-Modified": "Mon, 17 Aug 2026 17:19:46 GMT"
+   },
+   "note": "TESScut API docs"
+  },
+  {
+   "relpath": "docs/tesscut/mast_tesscut_docs.html.txt",
+   "bytes": 11045,
+   "sha256": "9de8a6cf2da4e88aa6aab56f0bb8ea870b68c97be29b7f347bd0deedd87bd254",
+   "generated_by": "text extraction (pdftotext -layout / HTML tag strip) by scripts/g_docs.py",
+   "derived_from": "docs/tesscut/mast_tesscut_docs.html"
+  },
+  {
+   "relpath": "docs/spoc/EXP-TESS-ARC-ICD-TM-0014-Rev-F-FINAL.pdf",
+   "bytes": 3521286,
+   "sha256": "b739e0c4b073767e7fda293d05f12743dcc1096821696caa06cf5bd344834587",
+   "url": "https://archive.stsci.edu/missions/tess/doc/EXP-TESS-ARC-ICD-TM-0014-Rev-F-FINAL.pdf",
+   "utc": "2026-09-25T11:35:04+00:00",
+   "utc_start": "2026-09-25T11:35:02+00:00",
+   "http_headers": {
+    "Content-Length": "3521286",
+    "Content-Type": "application/pdf",
+    "ETag": "\"35bb06-6266ac47a4440\"",
+    "Last-Modified": "Fri, 08 Nov 2024 18:17:45 GMT"
+   },
+   "note": "SDPDD Rev F (archive mission doc directory copy)"
+  },
+  {
+   "relpath": "docs/spoc/EXP-TESS-ARC-ICD-TM-0014-Rev-F-FINAL.pdf.txt",
+   "bytes": 452803,
+   "sha256": "339669f02056b5456bbace5fa0bcfbab829b2459e62be9ba5ae201c6ac230b88",
+   "generated_by": "text extraction (pdftotext -layout / HTML tag strip) by scripts/g_docs.py",
+   "derived_from": "docs/spoc/EXP-TESS-ARC-ICD-TM-0014-Rev-F-FINAL.pdf"
+  },
+  {
+   "relpath": "docs/spoc/EXP-TESS-ARC-ICD-TM-0014-Rev-F.pdf",
+   "bytes": 8122252,
+   "sha256": "e8eca77f16ec90f71d41224c7eaad81ebe1a7b4bf54c97e811bf8d863f61eca2",
+   "url": "https://archive.stsci.edu/files/live/sites/mast/files/home/missions-and-data/active-missions/tess/_documents/EXP-TESS-ARC-ICD-TM-0014-Rev-F.pdf",
+   "utc": "2026-09-25T11:35:01+00:00",
+   "utc_start": "2026-09-25T11:34:58+00:00",
+   "http_headers": {
+    "Content-Type": "application/pdf",
+    "ETag": "W/\"0c8fcea9-6d28-4081-ab01-bbf54a55e976-1714078010688\"",
+    "Last-Modified": "Thu, 25 Apr 2024 20:46:50 GMT"
+   },
+   "note": "TESS Science Data Products Description Document (SDPDD) Rev F: QUALITY bit definitions"
+  },
+  {
+   "relpath": "docs/spoc/EXP-TESS-ARC-ICD-TM-0014-Rev-F.pdf.txt",
+   "bytes": 441713,
+   "sha256": "a657c9e4ab58a56b37af2e471222acbe89d031eba2e5f16defffe622eef9c14d",
+   "generated_by": "text extraction (pdftotext -layout / HTML tag strip) by scripts/g_docs.py",
+   "derived_from": "docs/spoc/EXP-TESS-ARC-ICD-TM-0014-Rev-F.pdf"
+  },
+  {
+   "relpath": "docs/spoc/mast_tess_archive_manual_2.0_data_product_overview.html",
+   "bytes": 121532,
+   "sha256": "ff99d00bbcca0f8580e70df0a538dc6e477a704172d4270ed8fec3f80a9715c4",
+   "url": "https://outerspace.stsci.edu/spaces/TESS/pages/14563420/2.0+-+Data+Product+Overview",
+   "utc": "2026-09-25T11:35:05+00:00",
+   "utc_start": "2026-09-25T11:35:04+00:00",
+   "http_headers": {
+    "Content-Type": "text/html;charset=UTF-8"
+   },
+   "note": "MAST TESS Archive Manual 2.0 Data Product Overview (PRF start_s0001 vs start_s0004)"
+  },
+  {
+   "relpath": "docs/spoc/mast_tess_archive_manual_2.0_data_product_overview.html.txt",
+   "bytes": 16868,
+   "sha256": "08a16954591f35ffc259c97f96251688d29b9f018e460ec50b76d034ca409666",
+   "generated_by": "text extraction (pdftotext -layout / HTML tag strip) by scripts/g_docs.py",
+   "derived_from": "docs/spoc/mast_tess_archive_manual_2.0_data_product_overview.html"
+  },
+  {
+   "relpath": "docs/spoc/mast_tess_data_products.html",
+   "bytes": 91398,
+   "sha256": "3ea2f978d20c68a92ecb813ac114ff3a691ce2568f974d3292427a5b1485c130",
+   "url": "https://archive.stsci.edu/missions-and-data/tess/data-products",
+   "utc": "2026-09-25T11:35:07+00:00",
+   "utc_start": "2026-09-25T11:35:05+00:00",
+   "http_headers": {
+    "Content-Type": "text/html;charset=UTF-8"
+   },
+   "note": "MAST TESS data products page"
+  },
+  {
+   "relpath": "docs/spoc/mast_tess_data_products.html.txt",
+   "bytes": 15127,
+   "sha256": "b80ed144d425fe3a5391798a68ead44f09effa92b2564e62413cc10d81f99277",
+   "generated_by": "text extraction (pdftotext -layout / HTML tag strip) by scripts/g_docs.py",
+   "derived_from": "docs/spoc/mast_tess_data_products.html"
+  },
+  {
+   "relpath": "docs/heasarc/sector.html",
+   "bytes": 92657,
+   "sha256": "f6ecf07a3c2b7fb36b93cb58eda78258062fa2c891a8fed0cd1d3f1a6b668ca6",
+   "url": "https://heasarc.gsfc.nasa.gov/docs/tess/sector.html",
+   "utc": "2026-09-25T11:35:50+00:00",
+   "utc_start": "2026-09-25T11:35:49+00:00",
+   "http_headers": {
+    "Content-Length": "92657",
+    "Content-Type": "text/html; charset=utf-8"
+   },
+   "note": "HEASARC TESS sector table",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/refs/heasarc_tess_sector_table.html": "identical"
+   }
+  },
+  {
+   "relpath": "docs/heasarc/sector.html.txt",
+   "bytes": 15685,
+   "sha256": "c41c627979c19b8f54f366ec22fc21aa787aea240b4d52c9a80a754ed7a7f485",
+   "generated_by": "text extraction (pdftotext -layout / HTML tag strip) by scripts/g_docs.py",
+   "derived_from": "docs/heasarc/sector.html"
+  },
+  {
+   "relpath": "docs/heasarc/sector98_summary.html",
+   "bytes": 20028,
+   "sha256": "71aede0991759f9a59ca54a3415f338bcc9f23e86deb7e6038d1c7896a959b35",
+   "url": "https://heasarc.gsfc.nasa.gov/docs/tess/sector98_summary.html",
+   "utc": "2026-09-25T11:35:49+00:00",
+   "utc_start": "2026-09-25T11:35:49+00:00",
+   "http_headers": {
+    "Content-Length": "20028",
+    "Content-Type": "text/html; charset=utf-8"
+   },
+   "note": "HEASARC Sector 98 summary (scattered light notes)",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/refs/heasarc_sector98_summary.html": "identical"
+   }
+  },
+  {
+   "relpath": "docs/heasarc/sector98_summary.html.txt",
+   "bytes": 2484,
+   "sha256": "4e5c42e2c191b2472e2920f60443d2a32bdcdced40053ca0376d09297601b656",
+   "generated_by": "text extraction (pdftotext -layout / HTML tag strip) by scripts/g_docs.py",
+   "derived_from": "docs/heasarc/sector98_summary.html"
+  },
+  {
+   "relpath": "docs/drn/heasarc_condensed_data_release_notes.html",
+   "bytes": 519784,
+   "sha256": "b0b8b805bfeb82f2baa1baddf300d3917a7a1666afad10b79c49751bcdba6f44",
+   "url": "https://heasarc.gsfc.nasa.gov/docs/tess/data_release_notes.html",
+   "utc": "2026-09-25T11:35:49+00:00",
+   "utc_start": "2026-09-25T11:35:47+00:00",
+   "http_headers": {
+    "Content-Length": "519784",
+    "Content-Type": "text/html; charset=utf-8"
+   },
+   "note": "HEASARC condensed TESS DRN"
+  },
+  {
+   "relpath": "docs/drn/heasarc_condensed_data_release_notes.html.txt",
+   "bytes": 215326,
+   "sha256": "f541a296d5129a0bee1bb0fb84d140666abe650159ca8f6a991c6b62ef53d8f1",
+   "generated_by": "text extraction (pdftotext -layout / HTML tag strip) by scripts/g_docs.py",
+   "derived_from": "docs/drn/heasarc_condensed_data_release_notes.html"
+  },
+  {
+   "relpath": "docs/drn/tess_drn_index.html",
+   "bytes": 23712,
+   "sha256": "99113b0791977172877c17eed9584eb9e583e419f308e096f0de4894747da14f",
+   "url": "https://archive.stsci.edu/missions/tess/doc/tess_drn/",
+   "utc": "2026-09-25T11:35:47+00:00",
+   "utc_start": "2026-09-25T11:35:46+00:00",
+   "http_headers": {
+    "Content-Type": "text/html;charset=ISO-8859-1"
+   },
+   "note": "TESS DRN directory index"
+  },
+  {
+   "relpath": "docs/drn/tess_drn_index.html.txt",
+   "bytes": 10674,
+   "sha256": "773fe2087e90a60c5bbfe89326dbc877fba5e748ec0f915d447821fd83c6bdd0",
+   "generated_by": "text extraction (pdftotext -layout / HTML tag strip) by scripts/g_docs.py",
+   "derived_from": "docs/drn/tess_drn_index.html"
+  },
+  {
+   "relpath": "docs/drn/tess_sector_06_drn08_v02.pdf",
+   "bytes": 1674534,
+   "sha256": "a52605135fe666aef8356571ce7e3f54ad8d1dbe6e69ea6b82a2b614bdd77641",
+   "url": "https://archive.stsci.edu/missions/tess/doc/tess_drn/tess_sector_06_drn08_v02.pdf",
+   "utc": "2026-09-25T11:35:42+00:00",
+   "utc_start": "2026-09-25T11:35:40+00:00",
+   "http_headers": {
+    "Content-Length": "1674534",
+    "Content-Type": "application/pdf",
+    "ETag": "\"198d26-5858d40c3a5c0\"",
+    "Last-Modified": "Tue, 02 Apr 2019 14:50:07 GMT"
+   },
+   "note": "TESS DRN Sector 6"
+  },
+  {
+   "relpath": "docs/drn/tess_sector_06_drn08_v02.pdf.txt",
+   "bytes": 21146,
+   "sha256": "50e6957716663a754c9616e7aa4952d970367f22125b28291fd332063c663993",
+   "generated_by": "text extraction (pdftotext -layout / HTML tag strip) by scripts/g_docs.py",
+   "derived_from": "docs/drn/tess_sector_06_drn08_v02.pdf"
+  },
+  {
+   "relpath": "docs/drn/tess_sector_32_drn48_v02.pdf",
+   "bytes": 2054986,
+   "sha256": "cf7c381663d64f7443d67a97dc16b94e4718ff42e602ee2593e9e4009abefdca",
+   "url": "https://archive.stsci.edu/missions/tess/doc/tess_drn/tess_sector_32_drn48_v02.pdf",
+   "utc": "2026-09-25T11:35:44+00:00",
+   "utc_start": "2026-09-25T11:35:42+00:00",
+   "http_headers": {
+    "Content-Length": "2054986",
+    "Content-Type": "application/pdf",
+    "ETag": "\"1f5b4a-5bad45e364000\"",
+    "Last-Modified": "Mon, 08 Feb 2021 14:56:00 GMT"
+   },
+   "note": "TESS DRN Sector 32"
+  },
+  {
+   "relpath": "docs/drn/tess_sector_32_drn48_v02.pdf.txt",
+   "bytes": 25927,
+   "sha256": "7f09ee85a68d10c2d1ad08c5127ecb42eee1bf29fee9739b92cc3471f41efa02",
+   "generated_by": "text extraction (pdftotext -layout / HTML tag strip) by scripts/g_docs.py",
+   "derived_from": "docs/drn/tess_sector_32_drn48_v02.pdf"
+  },
+  {
+   "relpath": "docs/drn/tess_sector_98_drn134_v01.pdf",
+   "bytes": 2079003,
+   "sha256": "f41d674d426a5bb4d78427737b0eec90a518f2542fd4641bf90ea158950bf583",
+   "url": "https://archive.stsci.edu/missions/tess/doc/tess_drn/tess_sector_98_drn134_v01.pdf",
+   "utc": "2026-09-25T11:35:46+00:00",
+   "utc_start": "2026-09-25T11:35:44+00:00",
+   "http_headers": {
+    "Content-Length": "2079003",
+    "Content-Type": "application/pdf",
+    "ETag": "\"1fb91b-64d64b733afba\"",
+    "Last-Modified": "Thu, 19 Mar 2026 18:27:05 GMT"
+   },
+   "note": "TESS DRN Sector 98"
+  },
+  {
+   "relpath": "docs/drn/tess_sector_98_drn134_v01.pdf.txt",
+   "bytes": 29380,
+   "sha256": "f6da3b29d71f8c57c47814fa11310df1036f131415b90630d9f35d86a1e2c034",
+   "generated_by": "text extraction (pdftotext -layout / HTML tag strip) by scripts/g_docs.py",
+   "derived_from": "docs/drn/tess_sector_98_drn134_v01.pdf"
+  },
+  {
+   "relpath": "docs/qlp/hlsp_qlp_tess_ffi_all_tess_v1_data-prod-desc.pdf",
+   "bytes": 79880,
+   "sha256": "4a76c8cf27a04a34326fd088c9381b43b5e02998cbe9d45ab592391971f2047d",
+   "url": "https://archive.stsci.edu/hlsps/qlp/hlsp_qlp_tess_ffi_all_tess_v1_data-prod-desc.pdf",
+   "utc": "2026-09-25T11:35:58+00:00",
+   "utc_start": "2026-09-25T11:35:57+00:00",
+   "http_headers": {
+    "Content-Length": "79880",
+    "Content-Type": "application/pdf",
+    "ETag": "\"13808-5b3cc7e3a3f00\"",
+    "Last-Modified": "Wed, 11 Nov 2020 03:35:56 GMT"
+   },
+   "note": "QLP data product description (quality flags)",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/refs/qlp_data_prod_desc.pdf": "identical"
+   }
+  },
+  {
+   "relpath": "docs/qlp/hlsp_qlp_tess_ffi_all_tess_v1_data-prod-desc.pdf.txt",
+   "bytes": 18642,
+   "sha256": "d57f0b4f66ea49f75f52e10d55e9afd17737984c290ccce302808477a9950ae8",
+   "generated_by": "text extraction (pdftotext -layout / HTML tag strip) by scripts/g_docs.py",
+   "derived_from": "docs/qlp/hlsp_qlp_tess_ffi_all_tess_v1_data-prod-desc.pdf"
+  },
+  {
+   "relpath": "docs/qlp/hlsp_qlp_tess_ffi_all_tess_v1_readme.txt",
+   "bytes": 2564,
+   "sha256": "7d0704547d6e6de2b5bd14655d6654e30bf89e4e7f14918dc59bf5c69124b50d",
+   "url": "https://archive.stsci.edu/hlsps/qlp/hlsp_qlp_tess_ffi_all_tess_v1_readme.txt",
+   "utc": "2026-09-25T11:35:57+00:00",
+   "utc_start": "2026-09-25T11:35:57+00:00",
+   "http_headers": {
+    "Content-Length": "2564",
+    "Content-Type": "text/plain; charset=UTF-8",
+    "ETag": "\"a04-5db7120526b98\"",
+    "Last-Modified": "Wed, 30 Mar 2022 15:23:23 GMT"
+   },
+   "note": "QLP HLSP readme",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/refs/qlp_readme.txt": "identical"
+   }
+  },
+  {
+   "relpath": "docs/qlp/hlsp_qlp_tess_ffi_all_tess_v1_readme.txt.txt",
+   "bytes": 1184,
+   "sha256": "ef9102628a33fa0bc7b66a7978eeff715620802ef3fa546a7a2cf3b72dafee8a",
+   "generated_by": "text extraction (pdftotext -layout / HTML tag strip) by scripts/g_docs.py",
+   "derived_from": "docs/qlp/hlsp_qlp_tess_ffi_all_tess_v1_readme.txt"
+  },
+  {
+   "relpath": "docs/qlp/mast_hlsp_qlp.html",
+   "bytes": 140610,
+   "sha256": "3afea411ff9b6f329ea5e667de4389c3a79f69bb0cc67e75f3a0aa8e21b91416",
+   "url": "https://archive.stsci.edu/hlsp/qlp",
+   "utc": "2026-09-25T11:35:57+00:00",
+   "utc_start": "2026-09-25T11:35:50+00:00",
+   "http_headers": {
+    "Content-Type": "text/html;charset=UTF-8"
+   },
+   "note": "MAST QLP HLSP page",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/refs/qlp_hlsp_page.html": "identical"
+   }
+  },
+  {
+   "relpath": "docs/qlp/mast_hlsp_qlp.html.txt",
+   "bytes": 19323,
+   "sha256": "a478d3a8529b15c81130c0cd2f5291e756d0033a4c2c613e81adc1da400806b9",
+   "generated_by": "text extraction (pdftotext -layout / HTML tag strip) by scripts/g_docs.py",
+   "derived_from": "docs/qlp/mast_hlsp_qlp.html"
+  },
+  {
+   "relpath": "docs/qlp/mit_qlp.html",
+   "bytes": 151588,
+   "sha256": "d797638a2de433416240dfbc80ee229994086dfc0d2f7395909c55a2f9c1fa88",
+   "url": "https://tess.mit.edu/qlp/",
+   "utc": "2026-09-25T11:36:00+00:00",
+   "utc_start": "2026-09-25T11:35:58+00:00",
+   "http_headers": {
+    "Content-Type": "text/html; charset=UTF-8"
+   },
+   "note": "MIT QLP page",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/refs/qlp_mit_page.html": "identical"
+   }
+  },
+  {
+   "relpath": "docs/qlp/mit_qlp.html.txt",
+   "bytes": 19051,
+   "sha256": "652c98f80cb9aaca9686ccd9c7adf6d470beba0aacfdd3314bd7450525311e41",
+   "generated_by": "text extraction (pdftotext -layout / HTML tag strip) by scripts/g_docs.py",
+   "derived_from": "docs/qlp/mit_qlp.html"
+  },
+  {
+   "relpath": "logs/b_tesscut.log",
+   "bytes": 4819,
+   "sha256": "21f4075675b7fc005626088e8ab8be2ce816d41d0ad73079488a8d3b069ca32c",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "logs/comparison_with_existing.json",
+   "bytes": 22651,
+   "sha256": "c1cacdb81d7a0abf86af33c8b018d74881eb49853fbd6f07ce92556c48c0fd4d",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "logs/d_catalogs.log",
+   "bytes": 1095,
+   "sha256": "bc879b71f4fffeeaa05442629e964ff9f84d63508ed28da9c021fe5b8e416ea3",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "logs/fits_headers.json",
+   "bytes": 24718,
+   "sha256": "26bcc5ecf5e0c3718f8e1fadb080af86136a8b6aed5923a1c647778557971709",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "logs/h_compare.log",
+   "bytes": 9426,
+   "sha256": "1b3029a2ea67e3e5918795e3346da6e70c8b2568f696ef2b08198ef93f786972",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "logs/momentum_dumps_from_quality.csv",
+   "bytes": 10433,
+   "sha256": "e4ca159053cd50f27bcc12fea2ff5bd00c3f3f64376465397bf83f5ef7e40527",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "logs/momentum_dumps_from_quality.json",
+   "bytes": 17193,
+   "sha256": "fe733de147ea1f3640a546a81affb3dbf0297783268446a9ca8bc5ae200abffc",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "logs/provenance.jsonl",
+   "bytes": 66675,
+   "sha256": "d95f4c1da8f1753f3c8327dbf7f13a1476b044df99799d7f179920add9f9fefe",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "catalogs/2mass_psc_II246.csv",
+   "bytes": 691,
+   "sha256": "3d8a48dfec03659863c57b997cfd0a73d67c98103036e88e5b6926d481ffd3de",
+   "url": "https://vizier.cds.unistra.fr/viz-bin/votable (astroquery Vizier; table II/246/out)",
+   "utc": "2026-09-25T11:33:58+00:00",
+   "utc_start": null,
+   "query": "VizieR II/246/out cone r=30 arcsec around (80.85983,-1.32696) J2000",
+   "nrows": 1,
+   "ncols": 62,
+   "tool": "astroquery 0.4.11",
+   "vizier_table": "II/246/out",
+   "matches_existing": "not compared (earlier copies are VizieR TSV exports with a different query radius)"
+  },
+  {
+   "relpath": "catalogs/2mass_psc_II246.ecsv",
+   "bytes": 13882,
+   "sha256": "8aefa0a765fdac1cff552693708f556cd20ccaad188d4a8b480f96196d448fc6",
+   "url": "https://vizier.cds.unistra.fr/viz-bin/votable (astroquery Vizier; table II/246/out)",
+   "utc": "2026-09-25T11:33:58+00:00",
+   "utc_start": null,
+   "query": "VizieR II/246/out cone r=30 arcsec around (80.85983,-1.32696) J2000",
+   "nrows": 1,
+   "ncols": 62,
+   "tool": "astroquery 0.4.11",
+   "vizier_table": "II/246/out",
+   "matches_existing": "not compared (earlier copies are VizieR TSV exports with a different query radius)"
+  },
+  {
+   "relpath": "catalogs/2mass_psc_II246.query.txt",
+   "bytes": 68,
+   "sha256": "1390b14cdb2161d6e3c6707b767ca29038be88449a47be853033632c1ce0ab6b",
+   "matches_existing": "not compared (earlier copies are VizieR TSV exports with a different query radius)",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "catalogs/allwise_II328.csv",
+   "bytes": 887,
+   "sha256": "0b4ae6317a8befe51bbd6c7cdd25aeee19e6251dc82baa4f4b166d51f99f0f2e",
+   "url": "https://vizier.cds.unistra.fr/viz-bin/votable (astroquery Vizier; table II/328/allwise)",
+   "utc": "2026-09-25T11:33:59+00:00",
+   "utc_start": null,
+   "query": "VizieR II/328/allwise cone r=30 arcsec around (80.85983,-1.32696) J2000",
+   "nrows": 1,
+   "ncols": 77,
+   "tool": "astroquery 0.4.11",
+   "vizier_table": "II/328/allwise",
+   "matches_existing": "not compared (earlier copies are VizieR TSV exports with a different query radius)"
+  },
+  {
+   "relpath": "catalogs/allwise_II328.ecsv",
+   "bytes": 17670,
+   "sha256": "57aca1c8d11d00205590d6d5f91d582ec41a4a0fa837b56eab19b936c811eed5",
+   "url": "https://vizier.cds.unistra.fr/viz-bin/votable (astroquery Vizier; table II/328/allwise)",
+   "utc": "2026-09-25T11:33:59+00:00",
+   "utc_start": null,
+   "query": "VizieR II/328/allwise cone r=30 arcsec around (80.85983,-1.32696) J2000",
+   "nrows": 1,
+   "ncols": 77,
+   "tool": "astroquery 0.4.11",
+   "vizier_table": "II/328/allwise",
+   "matches_existing": "not compared (earlier copies are VizieR TSV exports with a different query radius)"
+  },
+  {
+   "relpath": "catalogs/allwise_II328.query.txt",
+   "bytes": 72,
+   "sha256": "addd12b5acaf592f02f530c4ceb080789dd1ac99798a613fbe2c213dd93d8541",
+   "matches_existing": "not compared (earlier copies are VizieR TSV exports with a different query radius)",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "catalogs/apass_dr9_II336.csv",
+   "bytes": 317,
+   "sha256": "5a5f3349b8539c36b80b0ad9272a97aa8c156ee6b7f547c48d400116620b4811",
+   "url": "https://vizier.cds.unistra.fr/viz-bin/votable (astroquery Vizier; table II/336/apass9)",
+   "utc": "2026-09-25T11:34:01+00:00",
+   "utc_start": null,
+   "query": "VizieR II/336/apass9 cone r=30 arcsec around (80.85983,-1.32696) J2000",
+   "nrows": 1,
+   "ncols": 25,
+   "tool": "astroquery 0.4.11",
+   "vizier_table": "II/336/apass9",
+   "matches_existing": "not compared (earlier copies are VizieR TSV exports with a different query radius)"
+  },
+  {
+   "relpath": "catalogs/apass_dr9_II336.ecsv",
+   "bytes": 5766,
+   "sha256": "70107cd92f14b4f1302ee4edc45b8bc50ad189ebb5e20af4e952bbd63dd871a4",
+   "url": "https://vizier.cds.unistra.fr/viz-bin/votable (astroquery Vizier; table II/336/apass9)",
+   "utc": "2026-09-25T11:34:01+00:00",
+   "utc_start": null,
+   "query": "VizieR II/336/apass9 cone r=30 arcsec around (80.85983,-1.32696) J2000",
+   "nrows": 1,
+   "ncols": 25,
+   "tool": "astroquery 0.4.11",
+   "vizier_table": "II/336/apass9",
+   "matches_existing": "not compared (earlier copies are VizieR TSV exports with a different query radius)"
+  },
+  {
+   "relpath": "catalogs/apass_dr9_II336.query.txt",
+   "bytes": 71,
+   "sha256": "4081d1d41ddedab4d9434690c4d9691ab40f8a1b73e06c9ec0eb7b6963040f80",
+   "matches_existing": "not compared (earlier copies are VizieR TSV exports with a different query radius)",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "catalogs/bailerjones2021_I352.csv",
+   "bytes": 197,
+   "sha256": "73f1960b99b17d790ed0b0025068946ad20b0396922d8f16606241aa029c3827",
+   "url": "https://vizier.cds.unistra.fr/viz-bin/votable (astroquery Vizier; table I/352/gedr3dis)",
+   "utc": "2026-09-25T11:33:57+00:00",
+   "utc_start": null,
+   "query": "VizieR I/352/gedr3dis source_id constraint {'Source': '3220388198192519424'}",
+   "nrows": 1,
+   "ncols": 10,
+   "tool": "astroquery 0.4.11",
+   "vizier_table": "I/352/gedr3dis",
+   "matches_existing": "not compared (earlier copies are VizieR TSV exports with a different query radius)"
+  },
+  {
+   "relpath": "catalogs/bailerjones2021_I352.ecsv",
+   "bytes": 2780,
+   "sha256": "60d5270623c1621f75885625f583c4343176dbf18a3491e8af73ccee4d5904eb",
+   "url": "https://vizier.cds.unistra.fr/viz-bin/votable (astroquery Vizier; table I/352/gedr3dis)",
+   "utc": "2026-09-25T11:33:57+00:00",
+   "utc_start": null,
+   "query": "VizieR I/352/gedr3dis source_id constraint {'Source': '3220388198192519424'}",
+   "nrows": 1,
+   "ncols": 10,
+   "tool": "astroquery 0.4.11",
+   "vizier_table": "I/352/gedr3dis",
+   "matches_existing": "not compared (earlier copies are VizieR TSV exports with a different query radius)"
+  },
+  {
+   "relpath": "catalogs/bailerjones2021_I352.query.txt",
+   "bytes": 77,
+   "sha256": "06f944472b8a19f68e7f860bdef6e96a489236cf4122279b44eb866f7c706307",
+   "matches_existing": "not compared (earlier copies are VizieR TSV exports with a different query radius)",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "catalogs/catalog_query_log.json",
+   "bytes": 12811,
+   "sha256": "af14995600fb23a84a44f79061fcfa6ac102ed5b8e78163372e7d69b3a4c4bae",
+   "matches_existing": "not compared (earlier copies are VizieR TSV exports with a different query radius)",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "catalogs/catwise2020_II365.csv",
+   "bytes": 1456,
+   "sha256": "cb3b71e41c1c9fa30b92fd9d94a879fc6999a18172ce6905e6af0e18470e2c21",
+   "url": "https://vizier.cds.unistra.fr/viz-bin/votable (astroquery Vizier; table II/365/catwise)",
+   "utc": "2026-09-25T11:34:00+00:00",
+   "utc_start": null,
+   "query": "VizieR II/365/catwise cone r=30 arcsec around (80.85983,-1.32696) J2000",
+   "nrows": 2,
+   "ncols": 73,
+   "tool": "astroquery 0.4.11",
+   "vizier_table": "II/365/catwise",
+   "matches_existing": "not compared (earlier copies are VizieR TSV exports with a different query radius)"
+  },
+  {
+   "relpath": "catalogs/catwise2020_II365.ecsv",
+   "bytes": 19028,
+   "sha256": "eee5e77fc575f34bdfeb231deb1ab4a66e8abc8a37acdcdc8556b09a8f29bdbb",
+   "url": "https://vizier.cds.unistra.fr/viz-bin/votable (astroquery Vizier; table II/365/catwise)",
+   "utc": "2026-09-25T11:34:00+00:00",
+   "utc_start": null,
+   "query": "VizieR II/365/catwise cone r=30 arcsec around (80.85983,-1.32696) J2000",
+   "nrows": 2,
+   "ncols": 73,
+   "tool": "astroquery 0.4.11",
+   "vizier_table": "II/365/catwise",
+   "matches_existing": "not compared (earlier copies are VizieR TSV exports with a different query radius)"
+  },
+  {
+   "relpath": "catalogs/catwise2020_II365.query.txt",
+   "bytes": 72,
+   "sha256": "017d34d5c8aeea2879a0f1a5bad1e5bd5b6210d150ee384c94335c116c1dead2",
+   "matches_existing": "not compared (earlier copies are VizieR TSV exports with a different query radius)",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "catalogs/gaiadr3_astrophysical_parameters_target.csv",
+   "bytes": 5380,
+   "sha256": "da7e8118a633bc59ed83ef43a82fa938ed36ad85acb2361152d9401aca637bee",
+   "url": "https://gea.esac.esa.int/tap-server/tap/sync (astroquery.gaia Gaia.launch_job, synchronous ADQL)",
+   "utc": "2026-09-25T11:33:56+00:00",
+   "utc_start": null,
+   "query": "SELECT * FROM gaiadr3.astrophysical_parameters WHERE source_id = 3220388198192519424",
+   "nrows": 1,
+   "ncols": 226,
+   "tool": "astroquery 0.4.11",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/gaia/gaia_dr3_ap.csv": "226 columns equal (46 only to float32 print precision), 0 different"
+   }
+  },
+  {
+   "relpath": "catalogs/gaiadr3_astrophysical_parameters_target.ecsv",
+   "bytes": 57409,
+   "sha256": "6016744f95c2b0bc5569c035404a7917288b33727f28de7e7c728bd021b15e29",
+   "url": "https://gea.esac.esa.int/tap-server/tap/sync (astroquery.gaia Gaia.launch_job, synchronous ADQL)",
+   "utc": "2026-09-25T11:33:56+00:00",
+   "utc_start": null,
+   "query": "SELECT * FROM gaiadr3.astrophysical_parameters WHERE source_id = 3220388198192519424",
+   "nrows": 1,
+   "ncols": 226,
+   "tool": "astroquery 0.4.11",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/gaia/gaia_dr3_ap.csv": "226 columns equal (46 only to float32 print precision), 0 different"
+   }
+  },
+  {
+   "relpath": "catalogs/gaiadr3_astrophysical_parameters_target.query.txt",
+   "bytes": 85,
+   "sha256": "af89535773316d005c2e8e862e48e3f4042fc420cc8ce05652f1d3e3c28f981a",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/gaia/gaia_dr3_ap.csv": "226 columns equal (46 only to float32 print precision), 0 different"
+   },
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "catalogs/gaiadr3_gaia_source_cone240as.csv",
+   "bytes": 265549,
+   "sha256": "0437def0d480add78620cfc9804cbe831661a3b25b14dcc1e12b586c22ec2ee0",
+   "url": "https://gea.esac.esa.int/tap-server/tap/sync (astroquery.gaia Gaia.launch_job, synchronous ADQL)",
+   "utc": "2026-09-25T11:33:26+00:00",
+   "utc_start": null,
+   "query": "SELECT *, DISTANCE(POINT(80.85983,-1.32696), POINT(ra,dec))*3600. AS dist_arcsec_j2016pos FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec), CIRCLE(80.85983,-1.32696,0.0666666667)) ORDER BY dist_arcsec_j2016pos",
+   "nrows": 167,
+   "ncols": 153,
+   "tool": "astroquery 0.4.11",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/gaia/gaia_dr3_source.csv (target row)": "152 common columns equal (51 only to float32 print precision), 0 different",
+    "tic4206066_PUBLICATION_AUDIT/data/gaia/gaia_dr3_neighbours_180as.csv": "same 96 source_ids within 180 arcsec"
+   }
+  },
+  {
+   "relpath": "catalogs/gaiadr3_gaia_source_cone240as.ecsv",
+   "bytes": 229269,
+   "sha256": "a45b10d88933d3f13dd3518b6b5d0d39542df53089e4979f7098ae33b9c612a8",
+   "url": "https://gea.esac.esa.int/tap-server/tap/sync (astroquery.gaia Gaia.launch_job, synchronous ADQL)",
+   "utc": "2026-09-25T11:33:26+00:00",
+   "utc_start": null,
+   "query": "SELECT *, DISTANCE(POINT(80.85983,-1.32696), POINT(ra,dec))*3600. AS dist_arcsec_j2016pos FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec), CIRCLE(80.85983,-1.32696,0.0666666667)) ORDER BY dist_arcsec_j2016pos",
+   "nrows": 167,
+   "ncols": 153,
+   "tool": "astroquery 0.4.11",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/gaia/gaia_dr3_source.csv (target row)": "152 common columns equal (51 only to float32 print precision), 0 different",
+    "tic4206066_PUBLICATION_AUDIT/data/gaia/gaia_dr3_neighbours_180as.csv": "same 96 source_ids within 180 arcsec"
+   }
+  },
+  {
+   "relpath": "catalogs/gaiadr3_gaia_source_cone240as.query.txt",
+   "bytes": 217,
+   "sha256": "227ba0ba0dcef1d74c77bc91365c3c7c767d31ef6ff524594cd935ae4a2666a2",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/gaia/gaia_dr3_source.csv (target row)": "152 common columns equal (51 only to float32 print precision), 0 different",
+    "tic4206066_PUBLICATION_AUDIT/data/gaia/gaia_dr3_neighbours_180as.csv": "same 96 source_ids within 180 arcsec"
+   },
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "catalogs/gaiadr3_nss_acceleration_astro_target.csv",
+   "bytes": 358,
+   "sha256": "5a112ba17c03623de52d7f3ad73dea7eefba9420d6163340b30d8e42b56d26d4",
+   "url": "https://gea.esac.esa.int/tap-server/tap/sync (astroquery.gaia Gaia.launch_job, synchronous ADQL)",
+   "utc": "2026-09-25T11:33:36+00:00",
+   "utc_start": null,
+   "query": "SELECT * FROM gaiadr3.nss_acceleration_astro WHERE source_id = 3220388198192519424",
+   "nrows": 0,
+   "ncols": 29,
+   "tool": "astroquery 0.4.11",
+   "matches_existing": {
+    "earlier gaia/ copy": "both empty: {'fresh_rows': 0, 'old_rows': 0}"
+   }
+  },
+  {
+   "relpath": "catalogs/gaiadr3_nss_acceleration_astro_target.ecsv",
+   "bytes": 5580,
+   "sha256": "b845684dd7cb196420ea54bffac85278391bcc475f16abca68a8b5228e4357ca",
+   "url": "https://gea.esac.esa.int/tap-server/tap/sync (astroquery.gaia Gaia.launch_job, synchronous ADQL)",
+   "utc": "2026-09-25T11:33:36+00:00",
+   "utc_start": null,
+   "query": "SELECT * FROM gaiadr3.nss_acceleration_astro WHERE source_id = 3220388198192519424",
+   "nrows": 0,
+   "ncols": 29,
+   "tool": "astroquery 0.4.11",
+   "matches_existing": {
+    "earlier gaia/ copy": "both empty: {'fresh_rows': 0, 'old_rows': 0}"
+   }
+  },
+  {
+   "relpath": "catalogs/gaiadr3_nss_acceleration_astro_target.query.txt",
+   "bytes": 83,
+   "sha256": "1840a66bc63ab5a154fec66a50fbc8b0e9ffb2786dcbd169d7345b487a46914e",
+   "matches_existing": {
+    "earlier gaia/ copy": "both empty: {'fresh_rows': 0, 'old_rows': 0}"
+   },
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "catalogs/gaiadr3_nss_non_linear_spectro_target.csv",
+   "bytes": 261,
+   "sha256": "ae782a1256c4e599730c3e9ede6b783c48446994640c50ace457607a6160b1a7",
+   "url": "https://gea.esac.esa.int/tap-server/tap/sync (astroquery.gaia Gaia.launch_job, synchronous ADQL)",
+   "utc": "2026-09-25T11:33:41+00:00",
+   "utc_start": null,
+   "query": "SELECT * FROM gaiadr3.nss_non_linear_spectro WHERE source_id = 3220388198192519424",
+   "nrows": 0,
+   "ncols": 16,
+   "tool": "astroquery 0.4.11",
+   "matches_existing": {
+    "earlier gaia/ copy": "both empty: {'fresh_rows': 0, 'old_rows': 0}"
+   }
+  },
+  {
+   "relpath": "catalogs/gaiadr3_nss_non_linear_spectro_target.ecsv",
+   "bytes": 2993,
+   "sha256": "9ba69731bd958810764fda26c74d49f855326d341d1780463762c666b5fb95d1",
+   "url": "https://gea.esac.esa.int/tap-server/tap/sync (astroquery.gaia Gaia.launch_job, synchronous ADQL)",
+   "utc": "2026-09-25T11:33:41+00:00",
+   "utc_start": null,
+   "query": "SELECT * FROM gaiadr3.nss_non_linear_spectro WHERE source_id = 3220388198192519424",
+   "nrows": 0,
+   "ncols": 16,
+   "tool": "astroquery 0.4.11",
+   "matches_existing": {
+    "earlier gaia/ copy": "both empty: {'fresh_rows': 0, 'old_rows': 0}"
+   }
+  },
+  {
+   "relpath": "catalogs/gaiadr3_nss_non_linear_spectro_target.query.txt",
+   "bytes": 83,
+   "sha256": "036f7603ad592fcef6897e426c56ad743a1310bc0c6460257177603321b35003",
+   "matches_existing": {
+    "earlier gaia/ copy": "both empty: {'fresh_rows': 0, 'old_rows': 0}"
+   },
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "catalogs/gaiadr3_nss_two_body_orbit_target.csv",
+   "bytes": 1273,
+   "sha256": "94624a15e17c05bdf5000d96375440e83eca594ad8fd6a175ca97630095c9aa2",
+   "url": "https://gea.esac.esa.int/tap-server/tap/sync (astroquery.gaia Gaia.launch_job, synchronous ADQL)",
+   "utc": "2026-09-25T11:33:31+00:00",
+   "utc_start": null,
+   "query": "SELECT * FROM gaiadr3.nss_two_body_orbit WHERE source_id = 3220388198192519424",
+   "nrows": 0,
+   "ncols": 77,
+   "tool": "astroquery 0.4.11",
+   "matches_existing": {
+    "earlier gaia/ copy": "both empty: {'fresh_rows': 0, 'old_rows': 0}"
+   }
+  },
+  {
+   "relpath": "catalogs/gaiadr3_nss_two_body_orbit_target.ecsv",
+   "bytes": 14712,
+   "sha256": "56c007eb2114437ff4fabdefe4170f7a3ee8d3746fe14ebe76d24d80b71eaec9",
+   "url": "https://gea.esac.esa.int/tap-server/tap/sync (astroquery.gaia Gaia.launch_job, synchronous ADQL)",
+   "utc": "2026-09-25T11:33:31+00:00",
+   "utc_start": null,
+   "query": "SELECT * FROM gaiadr3.nss_two_body_orbit WHERE source_id = 3220388198192519424",
+   "nrows": 0,
+   "ncols": 77,
+   "tool": "astroquery 0.4.11",
+   "matches_existing": {
+    "earlier gaia/ copy": "both empty: {'fresh_rows': 0, 'old_rows': 0}"
+   }
+  },
+  {
+   "relpath": "catalogs/gaiadr3_nss_two_body_orbit_target.query.txt",
+   "bytes": 79,
+   "sha256": "1c7acd16d1889f8e7f52e6d8c1d8fad343150d7129c19374be2e518f67aaef95",
+   "matches_existing": {
+    "earlier gaia/ copy": "both empty: {'fresh_rows': 0, 'old_rows': 0}"
+   },
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "catalogs/gaiadr3_nss_vim_fl_target.csv",
+   "bytes": 306,
+   "sha256": "0b163d5e37e8e3e236a30028265f700aa9aea611ff24cff194d82bbf0daba656",
+   "url": "https://gea.esac.esa.int/tap-server/tap/sync (astroquery.gaia Gaia.launch_job, synchronous ADQL)",
+   "utc": "2026-09-25T11:33:46+00:00",
+   "utc_start": null,
+   "query": "SELECT * FROM gaiadr3.nss_vim_fl WHERE source_id = 3220388198192519424",
+   "nrows": 0,
+   "ncols": 27,
+   "tool": "astroquery 0.4.11",
+   "matches_existing": {
+    "earlier gaia/ copy": "both empty: {'fresh_rows': 0, 'old_rows': 0}"
+   }
+  },
+  {
+   "relpath": "catalogs/gaiadr3_nss_vim_fl_target.ecsv",
+   "bytes": 5019,
+   "sha256": "4f4936f3db3cef4fb9b9295c9906812ae3bc1f0fa6550586d08d4996aadc2caf",
+   "url": "https://gea.esac.esa.int/tap-server/tap/sync (astroquery.gaia Gaia.launch_job, synchronous ADQL)",
+   "utc": "2026-09-25T11:33:46+00:00",
+   "utc_start": null,
+   "query": "SELECT * FROM gaiadr3.nss_vim_fl WHERE source_id = 3220388198192519424",
+   "nrows": 0,
+   "ncols": 27,
+   "tool": "astroquery 0.4.11",
+   "matches_existing": {
+    "earlier gaia/ copy": "both empty: {'fresh_rows': 0, 'old_rows': 0}"
+   }
+  },
+  {
+   "relpath": "catalogs/gaiadr3_nss_vim_fl_target.query.txt",
+   "bytes": 71,
+   "sha256": "d850def3899860a58167cadae273a92afc2c32fb0be3d2a6452ba15f4855d71a",
+   "matches_existing": {
+    "earlier gaia/ copy": "both empty: {'fresh_rows': 0, 'old_rows': 0}"
+   },
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "catalogs/gaiadr3_vari_summary_target.csv",
+   "bytes": 1173,
+   "sha256": "541a3503e473b547a20e01cabb5dd4892130e9960516bc17ebf57dad817cf555",
+   "url": "https://gea.esac.esa.int/tap-server/tap/sync (astroquery.gaia Gaia.launch_job, synchronous ADQL)",
+   "utc": "2026-09-25T11:33:51+00:00",
+   "utc_start": null,
+   "query": "SELECT * FROM gaiadr3.vari_summary WHERE source_id = 3220388198192519424",
+   "nrows": 0,
+   "ncols": 68,
+   "tool": "astroquery 0.4.11",
+   "matches_existing": {
+    "earlier gaia/ copy": "both empty: {'fresh_rows': 0, 'old_rows': 0}"
+   }
+  },
+  {
+   "relpath": "catalogs/gaiadr3_vari_summary_target.ecsv",
+   "bytes": 12531,
+   "sha256": "f85de800092317a962df70aee0df5f8088709688095cb792ce7135e56c9877c1",
+   "url": "https://gea.esac.esa.int/tap-server/tap/sync (astroquery.gaia Gaia.launch_job, synchronous ADQL)",
+   "utc": "2026-09-25T11:33:51+00:00",
+   "utc_start": null,
+   "query": "SELECT * FROM gaiadr3.vari_summary WHERE source_id = 3220388198192519424",
+   "nrows": 0,
+   "ncols": 68,
+   "tool": "astroquery 0.4.11",
+   "matches_existing": {
+    "earlier gaia/ copy": "both empty: {'fresh_rows': 0, 'old_rows': 0}"
+   }
+  },
+  {
+   "relpath": "catalogs/gaiadr3_vari_summary_target.query.txt",
+   "bytes": 73,
+   "sha256": "4a72d9c90ebee7e4dc27cd448dc7d9251a387dd44c74ed4090744dae8a2ed4fd",
+   "matches_existing": {
+    "earlier gaia/ copy": "both empty: {'fresh_rows': 0, 'old_rows': 0}"
+   },
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "catalogs/tic82_cone300as.csv",
+   "bytes": 223108,
+   "sha256": "0d75f4a554f8576473dc16e23b03914fa88ecfef21e3977dc3f014f477697dd4",
+   "url": "https://mast.stsci.edu/api/v0/invoke (astroquery.mast.Catalogs, catalog=TIC)",
+   "utc": "2026-09-25T11:34:04+00:00",
+   "utc_start": null,
+   "query": "Catalogs.query_region((80.85983,-1.32696), radius=300 arcsec, catalog='TIC')",
+   "nrows": 254,
+   "ncols": 125,
+   "tool": "astroquery 0.4.11",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/catalogs/tic82_cone5arcmin.csv": "target row: 124 columns equal, differs only in ['dstArcSec'] (query-centre dependent); cone: fresh 254 vs old 255 rows, only_old=[4206079] (at 300.09 arcsec, outside the 300 arcsec radius used here)"
+   }
+  },
+  {
+   "relpath": "catalogs/tic82_cone300as.ecsv",
+   "bytes": 235172,
+   "sha256": "a371edad5388d85845f105f92bb4df4731f6ab5866c760adef0e15c969b7e7a5",
+   "url": "https://mast.stsci.edu/api/v0/invoke (astroquery.mast.Catalogs, catalog=TIC)",
+   "utc": "2026-09-25T11:34:04+00:00",
+   "utc_start": null,
+   "query": "Catalogs.query_region((80.85983,-1.32696), radius=300 arcsec, catalog='TIC')",
+   "nrows": 254,
+   "ncols": 125,
+   "tool": "astroquery 0.4.11",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/catalogs/tic82_cone5arcmin.csv": "target row: 124 columns equal, differs only in ['dstArcSec'] (query-centre dependent); cone: fresh 254 vs old 255 rows, only_old=[4206079] (at 300.09 arcsec, outside the 300 arcsec radius used here)"
+   }
+  },
+  {
+   "relpath": "catalogs/tic82_cone300as.query.txt",
+   "bytes": 77,
+   "sha256": "42dbfe8a8376dc3e4e9f59a0a1ea869467fc084146915897febb944fd9064954",
+   "matches_existing": {
+    "tic4206066_PUBLICATION_AUDIT/data/catalogs/tic82_cone5arcmin.csv": "target row: 124 columns equal, differs only in ['dstArcSec'] (query-centre dependent); cone: fresh 254 vs old 255 rows, only_old=[4206079] (at 300.09 arcsec, outside the 300 arcsec radius used here)"
+   },
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "catalogs/tycho2_I259.csv",
+   "bytes": 437,
+   "sha256": "b9159a319d5cb47b2fa7d4c87e1784a2fb333ee447ca4dd66788e9e8267f07f9",
+   "url": "https://vizier.cds.unistra.fr/viz-bin/votable (astroquery Vizier; table I/259/tyc2)",
+   "utc": "2026-09-25T11:34:00+00:00",
+   "utc_start": null,
+   "query": "VizieR I/259/tyc2 cone r=30 arcsec around (80.85983,-1.32696) J2000",
+   "nrows": 1,
+   "ncols": 37,
+   "tool": "astroquery 0.4.11",
+   "vizier_table": "I/259/tyc2",
+   "matches_existing": "not compared (earlier copies are VizieR TSV exports with a different query radius)"
+  },
+  {
+   "relpath": "catalogs/tycho2_I259.ecsv",
+   "bytes": 8380,
+   "sha256": "175b0cdbce458d616f439d5a3a66cabab1d86b5c2e3e17524644aae04126a4c2",
+   "url": "https://vizier.cds.unistra.fr/viz-bin/votable (astroquery Vizier; table I/259/tyc2)",
+   "utc": "2026-09-25T11:34:00+00:00",
+   "utc_start": null,
+   "query": "VizieR I/259/tyc2 cone r=30 arcsec around (80.85983,-1.32696) J2000",
+   "nrows": 1,
+   "ncols": 37,
+   "tool": "astroquery 0.4.11",
+   "vizier_table": "I/259/tyc2",
+   "matches_existing": "not compared (earlier copies are VizieR TSV exports with a different query radius)"
+  },
+  {
+   "relpath": "catalogs/tycho2_I259.query.txt",
+   "bytes": 68,
+   "sha256": "f0a3859cd2da1e684524db35fa66630773834b68010db7593ce956d6d5345fcf",
+   "matches_existing": "not compared (earlier copies are VizieR TSV exports with a different query radius)",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "scripts/a2_mast_download.py",
+   "bytes": 1958,
+   "sha256": "cf63c4cd9d2e135c4e925dba690841941a494b3c00651d04328b4c64173b9cd6",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "scripts/a_mast_query.py",
+   "bytes": 3079,
+   "sha256": "574f686c550221a5f10ae9b880d50696b6e342d14805128cfd62a0bf8359f135",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "scripts/b_tesscut.py",
+   "bytes": 2136,
+   "sha256": "d71d3733fc5d0ad9070efdeaebbabae8f5252145c929b5ce5ea14f8dd70ae662",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "scripts/c_prf.py",
+   "bytes": 1622,
+   "sha256": "7adb350c0b3c8a1e40834dc6e1be09c9ec28a18001db97f8f43fdc2ed5e1f066",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "scripts/common.py",
+   "bytes": 2478,
+   "sha256": "939822446ee344f61d67f0cdfd97c63f478480999e94e8c444e68ecd659c0a8e",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "scripts/d_catalogs.py",
+   "bytes": 4286,
+   "sha256": "5575c767c4217007b0a3e2b3482d669410ed872eca55786cd1f957beaad616c3",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "scripts/f_headers.py",
+   "bytes": 4452,
+   "sha256": "3c3d8568c5e6512f1efb3b6c36c51692197c2ad9220acfcb2a3722e4eae6951d",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "scripts/g_docs.py",
+   "bytes": 3993,
+   "sha256": "062928a5acedaaec53e5e0292e4ef23c2d1f2bf405ab095be5810eaa8aaa8b3d",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "scripts/h_compare.py",
+   "bytes": 7877,
+   "sha256": "63be59e360d60b12c233259d04aa8df5d6d24ad5ee3050c0c6cec5bf892b9456",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "scripts/i_manifest.py",
+   "bytes": 8270,
+   "sha256": "23103f2a0510166f2ee94f606306bb1356ef37a16bf4ad5f4a8f109d8799d5c8",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  },
+  {
+   "relpath": "scripts/__pycache__/common.cpython-312.pyc",
+   "bytes": 4900,
+   "sha256": "03ede54cdfc64e824b9e0dcc60bd4555024f88eafc27cf899dd917d7a674219c",
+   "generated_by": "this provisioning step (00_data/scripts)"
+  }
+ ]
+}

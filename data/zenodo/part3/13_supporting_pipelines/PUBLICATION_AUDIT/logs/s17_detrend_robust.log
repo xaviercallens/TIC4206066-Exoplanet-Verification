@@ -1,0 +1,26 @@
+biweight_0.5   A: all 500±29 (S/N 17.0, chi2 29.7/22)  S6:509±52  S32:471±53  S98:515±49
+biweight_0.5   B: all 971±60 (S/N 16.2, chi2 8.2/6)  S6:861±99  S32:868±124  S98:1132±95
+biweight_0.75  A: all 503±29 (S/N 17.3, chi2 27.0/22)  S6:521±53  S32:476±52  S98:511±47
+biweight_0.75  B: all 975±59 (S/N 16.6, chi2 9.4/6)  S6:851±101  S32:844±124  S98:1139±89
+biweight_1.0   A: all 498±28 (S/N 17.5, chi2 26.4/22)  S6:505±52  S32:492±51  S98:498±45
+biweight_1.0   B: all 990±58 (S/N 17.2, chi2 11.5/6)  S6:866±95  S32:854±125  S98:1169±89
+biweight_1.5   A: all 490±29 (S/N 17.1, chi2 30.8/22)  S6:505±52  S32:486±52  S98:483±46
+biweight_1.5   B: all 1015±58 (S/N 17.4, chi2 14.7/6)  S6:874±98  S32:855±124  S98:1214±89
+Converged.
+Converged.
+Converged.
+Converged.
+Converged.
+Converged.
+Converged.
+Converged.
+Converged.
+Converged.
+Converged.
+Converged.
+Converged.
+Converged.
+cosine_1.0     A: all 511±28 (S/N 18.6, chi2 50.6/22)  S6:502±52  S32:457±49  S98:558±43
+cosine_1.0     B: all 1002±58 (S/N 17.3, chi2 10.8/6)  S6:868±97  S32:886±124  S98:1175±89
+none_None      A: all 501±29 (S/N 17.5, chi2 36.7/22)  S6:506±52  S32:481±52  S98:512±46
+none_None      B: all 1009±59 (S/N 17.2, chi2 9.1/6)  S6:866±97  S32:922±126  S98:1176±90

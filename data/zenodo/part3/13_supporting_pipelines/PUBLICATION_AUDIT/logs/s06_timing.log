@@ -1,0 +1,24 @@
+S6 TESScut target-minus-applied corr (s): {'min': -19.29, 'max': -2.68, 'median': -11.78}
+    TESS-SPOC_S6 n 993 prod-tesscut median -11.08 s; expected -11.78 ; residual median 0.99 [ -0.13 , 1.24 ] by quarter [1.18, 0.43, 1.19, 0.76]
+    QLP_S6 n 993 prod-tesscut median -7.37 s; expected -11.78 ; residual median 4.67 [ 3.54 , 5.0 ] by quarter [4.75, 4.09, 4.94, 4.58]
+    eleanor_S6 n 993 prod-tesscut median -11.78 s; expected -11.78 ; residual median -0.0 [ -0.02 , 0.01 ] by quarter [-0.0, -0.0, -0.0, -0.0]
+    TASOC_S6 n 993 prod-tesscut median -9.35 s; expected -11.78 ; residual median 2.7 [ 1.56 , 3.02 ] by quarter [2.77, 2.11, 2.96, 2.6]
+    TARS_S6 n 959 prod-tesscut median 0.0 s; expected -12.11 ; residual median 12.11 [ 2.9 , 19.22 ] by quarter [4.96, 8.27, 14.63, 18.22]
+S32 TESScut target-minus-applied corr (s): {'min': -6.89, 'max': 0.58, 'median': -3.28}
+    TESS-SPOC_S32 n 3600 prod-tesscut median -2.87 s; expected -3.28 ; residual median 1.04 [ -0.12 , 1.34 ] by quarter [1.25, 0.71, 1.17, 0.91]
+    QLP_S32 n 3600 prod-tesscut median -0.91 s; expected -3.28 ; residual median 3.0 [ 1.84 , 3.3 ] by quarter [3.21, 2.66, 3.13, 2.87]
+    TARS_S32 n 3459 prod-tesscut median 0.0 s; expected -3.27 ; residual median 3.27 [ -0.42 , 6.89 ] by quarter [6.77, 4.78, 3.17, 1.21]
+S98 TESScut target-minus-applied corr (s): {'min': -9.07, 'max': 9.88, 'median': 0.49}
+    QLP_S98 n 24162 prod-tesscut median 2.59 s; expected 0.49 ; residual median 1.63 [ 1.12 , 2.47 ] by quarter [1.67, 1.64, 1.63, 1.6]
+SPOC_2min_S32 {'TIMESYS': 'TDB', 'TIMEREF': 'SOLARSYSTEM', 'BJDREFI': '2457000', 'BJDREFF': '0.0', 'TIMEUNIT': 'd', 'CALIB': None, 'CROWDSAP': '0.99695194', 'FLFRCSAP': '0.9217971'}
+TESS-SPOC_S6 {'TIMESYS': 'TDB', 'TIMEREF': 'SOLARSYSTEM', 'BJDREFI': '2457000', 'BJDREFF': '0.0', 'TIMEUNIT': 'd', 'CALIB': None, 'CROWDSAP': '0.99504185', 'FLFRCSAP': '0.92497361'}
+TESS-SPOC_S32 {'TIMESYS': 'TDB', 'TIMEREF': 'SOLARSYSTEM', 'BJDREFI': '2457000', 'BJDREFF': '0.0', 'TIMEUNIT': 'd', 'CALIB': None, 'CROWDSAP': '0.99290729', 'FLFRCSAP': '0.92179704'}
+QLP_S6 {'TIMESYS': 'TDB', 'TIMEREF': 'SOLARSYSTEM', 'BJDREFI': '2457000', 'BJDREFF': None, 'TIMEUNIT': 'd', 'CALIB': 'TICA', 'CROWDSAP': None, 'FLFRCSAP': None}
+QLP_S32 {'TIMESYS': 'TDB', 'TIMEREF': 'SOLARSYSTEM', 'BJDREFI': '2457000', 'BJDREFF': None, 'TIMEUNIT': 'd', 'CALIB': 'TICA v0.2.1', 'CROWDSAP': None, 'FLFRCSAP': None}
+QLP_S98 {'TIMESYS': 'TDB', 'TIMEREF': 'SOLARSYSTEM', 'BJDREFI': '2457000', 'BJDREFF': None, 'TIMEUNIT': 'd', 'CALIB': 'TICA v1.4.0', 'CROWDSAP': None, 'FLFRCSAP': None}
+eleanor_S6 {'TIMESYS': 'TDB', 'TIMEREF': 'SOLARSYSTEM', 'BJDREFI': '2457000', 'BJDREFF': '0.0', 'TIMEUNIT': 'd', 'CALIB': None, 'CROWDSAP': None, 'FLFRCSAP': None}
+TGLC_S6 {'TIMESYS': 'TDB', 'TIMEREF': 'SOLARSYSTEM', 'BJDREFI': '2457000', 'BJDREFF': None, 'TIMEUNIT': 'd', 'CALIB': 'TGLC', 'CROWDSAP': None, 'FLFRCSAP': None}
+T16_S6 {'TIMESYS': 'BJD', 'TIMEREF': None, 'BJDREFI': None, 'BJDREFF': None, 'TIMEUNIT': None, 'CALIB': None, 'CROWDSAP': None, 'FLFRCSAP': None}
+TASOC_S6 {'TIMESYS': 'TDB', 'TIMEREF': 'SOLARSYSTEM', 'BJDREFI': '2457000', 'BJDREFF': '0.0', 'TIMEUNIT': 'd', 'CALIB': None, 'CROWDSAP': None, 'FLFRCSAP': None}
+TARS_S6 {'TIMESYS': 'TDB', 'TIMEREF': None, 'BJDREFI': '2457000', 'BJDREFF': '0.0', 'TIMEUNIT': None, 'CALIB': None, 'CROWDSAP': None, 'FLFRCSAP': None}
+TARS_S32 {'TIMESYS': 'TDB', 'TIMEREF': None, 'BJDREFI': '2457000', 'BJDREFF': '0.0', 'TIMEUNIT': None, 'CALIB': None, 'CROWDSAP': None, 'FLFRCSAP': None}

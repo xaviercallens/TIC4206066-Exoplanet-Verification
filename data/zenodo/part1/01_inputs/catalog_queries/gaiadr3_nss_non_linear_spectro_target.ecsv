@@ -1,0 +1,95 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - name: solution_id
+#   datatype: int64
+#   description: Solution Identifier
+#   meta: !!omap
+#   - {ucd: meta.version}
+# - name: source_id
+#   datatype: int64
+#   description: Source Identifier
+#   meta: !!omap
+#   - {ucd: meta.id;meta.main}
+# - name: nss_solution_type
+#   datatype: string
+#   description: NSS model adopted
+#   meta: !!omap
+#   - {ucd: meta.record}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: '*'}
+#   subtype: json
+# - name: mean_velocity
+#   unit: km / s
+#   datatype: float64
+#   description: Mean velocity
+#   meta: !!omap
+#   - {ucd: phys.veloc}
+# - name: mean_velocity_error
+#   unit: km / s
+#   datatype: float32
+#   description: Standard error of Mean velocity
+#   meta: !!omap
+#   - {ucd: stat.error;phys.veloc}
+# - name: first_deriv_velocity
+#   unit: km / (d s)
+#   datatype: float64
+#   description: First order derivative of the velocity
+#   meta: !!omap
+#   - {ucd: phys.acceleration}
+# - name: first_deriv_velocity_error
+#   unit: km / (d s)
+#   datatype: float32
+#   description: Standard error of First order derivative of the velocity
+#   meta: !!omap
+#   - {ucd: stat.error;phys.acceleration}
+# - name: second_deriv_velocity
+#   unit: km / (s d2)
+#   datatype: float64
+#   description: Second order derivative of the velocity
+#   meta: !!omap
+#   - {ucd: phys.acceleration}
+# - name: second_deriv_velocity_error
+#   unit: km / (s d2)
+#   datatype: float32
+#   description: Standard error of Second order derivative of the velocity
+#   meta: !!omap
+#   - {ucd: stat.error;phys.acceleration}
+# - name: rv_n_obs_primary
+#   datatype: int32
+#   description: Total number of radial velocities considered for the primary
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - name: rv_n_good_obs_primary
+#   datatype: int32
+#   description: Total number of radial velocities actually used for the primary
+#   meta: !!omap
+#   - {ucd: meta.number}
+# - name: bit_index
+#   datatype: int64
+#   description: Boolean mask for the fields above in the corrVec matrix
+#   meta: !!omap
+#   - {ucd: meta.code.status}
+# - name: corr_vec
+#   datatype: string
+#   description: Vector form of the upper triangle of the correlation matrix
+#   meta: !!omap
+#   - {ucd: stat.correlation}
+#   subtype: json
+# - name: obj_func
+#   datatype: float32
+#   description: Value of the objective function at the solution
+#   meta: !!omap
+#   - {ucd: stat.fit.param}
+# - name: goodness_of_fit
+#   datatype: float32
+#   description: Goodness of fit in the Hipparcos sense
+#   meta: !!omap
+#   - {ucd: stat.fit.goodness}
+# - name: flags
+#   datatype: int64
+#   description: Quality flag for the achieved NSS solution
+#   meta: !!omap
+#   - {ucd: meta.code.status}
+# schema: astropy-2.0
+solution_id source_id nss_solution_type mean_velocity mean_velocity_error first_deriv_velocity first_deriv_velocity_error second_deriv_velocity second_deriv_velocity_error rv_n_obs_primary rv_n_good_obs_primary bit_index corr_vec obj_func goodness_of_fit flags

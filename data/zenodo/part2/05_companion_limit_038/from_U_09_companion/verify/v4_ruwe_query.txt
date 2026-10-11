@@ -1,0 +1,2 @@
+Fri Sep 25 12:21:45 UTC 2026
+SELECT ruwe, astrometric_excess_noise, astrometric_excess_noise_sig, ipd_gof_harmonic_amplitude FROM gaiadr3.gaia_source WHERE phot_g_mean_mag BETWEEN 10.3 AND 10.7 AND bp_rp BETWEEN 1.6 AND 1.9 AND parallax > 15

@@ -1,0 +1,3 @@
+section,quantity,manuscript_value,recomputed_value,status,method,note
+2 (3.18 d signal),P_A (d),3.1827856 +- 0.0000058,route1 T1 3.1827826 +- 0.0000048; T3 3.1827789 +- 0.0000049; LSQ 3.1827858 +- 0.0000020; emcee 3.1827834 +- 0.0000039; BLS 3.182784,MATCH,own template timing + injection errors; global batman LSQ/emcee; BLS,all within 0.9 sigma
+2 (3.18 d signal),T0_A (BJD_TDB),2460998.7375 +- 0.0023,route1 T1 2460998.7338 +- 0.0022; T3 2460998.7344; Huber 2460998.7352; LSQ 2460998.73666 +- 0.00102; emcee 2460998.73559 +0.0017/-0.0021,MINOR_DIFF,same,recomputed T0 earlier by 1.2-5.3 min (<=1.5 sigma); method dependent

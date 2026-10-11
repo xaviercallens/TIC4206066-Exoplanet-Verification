@@ -1,0 +1,659 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - name: _r
+#   datatype: float64
+#   format: '{:6.3f}'
+#   description: Distance from center (080.8598363-01.3269651)[FK5/J2000]
+#   meta: !!omap
+#   - {ucd: POS_ANG_DIST_GENERAL}
+#   - {width: 6}
+#   - {precision: '3'}
+# - name: AllWISE
+#   datatype: string
+#   description: WISE All-Sky Release Catalog name, based on J2000 position, <WISEA JHHMMSS.ss+DDMMSS.s> (designation)
+#   meta: !!omap
+#   - {ucd: ID_MAIN}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 19*}
+# - name: RAJ2000
+#   unit: deg
+#   datatype: float64
+#   format: '{:11.7f}'
+#   description: Right ascension (J2000)
+#   meta: !!omap
+#   - {ucd: POS_EQ_RA_MAIN}
+#   - {width: 11}
+#   - {precision: '7'}
+# - name: DEJ2000
+#   unit: deg
+#   datatype: float64
+#   format: '{:11.7f}'
+#   description: Declination (J2000)
+#   meta: !!omap
+#   - {ucd: POS_EQ_DEC_MAIN}
+#   - {width: 11}
+#   - {precision: '7'}
+# - name: eeMaj
+#   unit: arcsec
+#   datatype: float64
+#   format: '{:7.4f}'
+#   description: Semi-major axis of the error ellipse (1)
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 7}
+#   - {precision: '4'}
+# - name: eeMin
+#   unit: arcsec
+#   datatype: float64
+#   format: '{:7.4f}'
+#   description: Semi-minor axis of the error ellipse (1)
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 7}
+#   - {precision: '4'}
+# - name: eePA
+#   unit: deg
+#   datatype: float32
+#   format: '{:5.1f}'
+#   description: Position angle of the error ellipse (1)
+#   meta: !!omap
+#   - {ucd: POS_POS-ANG}
+#   - {width: 5}
+#   - {precision: '1'}
+# - name: Im
+#   datatype: string
+#   description: Image of the 4 bands from the IRSA server (IPAC)
+#   meta: !!omap
+#   - {ucd: DATA_LINK}
+#   - {_votable_string_dtype: char}
+# - name: W1mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '? W1 magnitude (3.35um)'
+#   meta: !!omap
+#   - {ucd: PHOT_IR_3.4}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_W1mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '? Mean error on W1 magnitude'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: W2mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '? W2 magnitude (4.6um)'
+#   meta: !!omap
+#   - {ucd: PHOT_IR_4.2}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_W2mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '? Mean error on W2 magnitude'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: W3mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '? W3 magnitude (11.6um)'
+#   meta: !!omap
+#   - {ucd: PHOT_FLUX_IR_12}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_W3mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '? Mean error on W3 magnitude'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: W4mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '? W4 magnitude (22.1um)'
+#   meta: !!omap
+#   - {ucd: PHOT_FLUX_IR_25}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_W4mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '? Mean error on W4 magnitude'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: Jmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '? 2MASS J magnitude (1.25um)'
+#   meta: !!omap
+#   - {ucd: PHOT_JHN_J}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_Jmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '? Mean error on J magnitude'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: Hmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '? 2MASS H magnitude (1.65um)'
+#   meta: !!omap
+#   - {ucd: PHOT_JHN_H}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_Hmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '? Mean error on H magnitude'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: Kmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '? 2MASS Ks magnitude (2.17um)'
+#   meta: !!omap
+#   - {ucd: PHOT_JHN_K}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_Kmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '? Mean error on Ks magnitude'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: wx
+#   unit: pix
+#   datatype: float64
+#   format: '{:8.3f}'
+#   description: x-pixel coordinate on the Atlas Image
+#   meta: !!omap
+#   - {ucd: POS_CCD_X}
+#   - {width: 8}
+#   - {precision: '3'}
+# - name: wy
+#   unit: pix
+#   datatype: float64
+#   format: '{:8.3f}'
+#   description: y-pixel coordinate on the Atlas Image
+#   meta: !!omap
+#   - {ucd: POS_CCD_Y}
+#   - {width: 8}
+#   - {precision: '3'}
+# - name: ID
+#   datatype: int64
+#   description: Unique source ID
+#   meta: !!omap
+#   - {ucd: 'ID_MAIN:2'}
+#   - {width: 19}
+# - name: snr1
+#   datatype: float64
+#   format: '{:7.1f}'
+#   description: '? Signal to noise ratio for W1 filter'
+#   meta: !!omap
+#   - {ucd: INST_S/N}
+#   - {width: 7}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: chi2W1
+#   datatype: float32
+#   format: '{:9.2g}'
+#   description: '? Reduced {chi}^2^ of the W1 profile fit'
+#   meta: !!omap
+#   - {ucd: FIT_CHI2}
+#   - {width: 9}
+#   - {precision: E2}
+#   - values: {'null': .nan}
+# - name: snr2
+#   datatype: float64
+#   format: '{:7.1f}'
+#   description: '? Signal to noise ratio for W2 filter'
+#   meta: !!omap
+#   - {ucd: INST_S/N}
+#   - {width: 7}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: chi2W2
+#   datatype: float32
+#   format: '{:9.2g}'
+#   description: '? Reduced {chi}^2^ of the W2 profile fit'
+#   meta: !!omap
+#   - {ucd: FIT_CHI2}
+#   - {width: 9}
+#   - {precision: E2}
+#   - values: {'null': .nan}
+# - name: snr3
+#   datatype: float64
+#   format: '{:7.1f}'
+#   description: '? Signal to noise ratio for W3 filter'
+#   meta: !!omap
+#   - {ucd: INST_S/N}
+#   - {width: 7}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: chi2W3
+#   datatype: float32
+#   format: '{:9.2g}'
+#   description: '? Reduced {chi}^2^ of the W3 profile fit'
+#   meta: !!omap
+#   - {ucd: FIT_CHI2}
+#   - {width: 9}
+#   - {precision: E2}
+#   - values: {'null': .nan}
+# - name: snr4
+#   datatype: float64
+#   format: '{:8.1f}'
+#   description: '? Signal to noise ratio for W4 filter'
+#   meta: !!omap
+#   - {ucd: INST_S/N}
+#   - {width: 8}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: chi2W4
+#   datatype: float32
+#   format: '{:9.2g}'
+#   description: '? Reduced {chi}^2^ of the W4 profile fit'
+#   meta: !!omap
+#   - {ucd: FIT_CHI2}
+#   - {width: 9}
+#   - {precision: E2}
+#   - values: {'null': .nan}
+# - name: chi2
+#   datatype: float32
+#   format: '{:9.2g}'
+#   description: All-band combined reduced {chi}^2^
+#   meta: !!omap
+#   - {ucd: FIT_CHI2}
+#   - {width: 9}
+#   - {precision: E2}
+# - name: nb
+#   datatype: uint8
+#   description: '[1/4] Number of PSF components used simultaneously in the profile-fitting'
+#   meta: !!omap
+#   - {ucd: NUMBER}
+#   - {width: 1}
+# - name: na
+#   datatype: uint8
+#   description: '[0/1] Active deblending flag (1 if a detection was split into multiple sources)'
+#   meta: !!omap
+#   - {ucd: NUMBER}
+#   - {width: 1}
+# - name: sat1
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '? Saturated pixel fraction in W1 (w1sat)'
+#   meta: !!omap
+#   - {ucd: INST_DET_MISC}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: sat2
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '? Saturated pixel fraction in W2 (w2sat)'
+#   meta: !!omap
+#   - {ucd: INST_DET_MISC}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: sat3
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '? Saturated pixel fraction in W3 (w3sat)'
+#   meta: !!omap
+#   - {ucd: INST_DET_MISC}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: sat4
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '? Saturated pixel fraction in W4 (w4sat)'
+#   meta: !!omap
+#   - {ucd: INST_DET_MISC}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: ccf
+#   datatype: string
+#   description: '[0DHOPdhop] Contamination and confusion flag, one per band (cc_flags) (2)'
+#   meta: !!omap
+#   - {ucd: CODE_MISC}
+#   - {_votable_string_dtype: char}
+# - name: ex
+#   datatype: uint8
+#   description: '[0-5] Extended source flag (ext_flg) (3)'
+#   meta: !!omap
+#   - {ucd: CODE_MISC}
+#   - {width: 1}
+# - name: var
+#   datatype: string
+#   description: Variability flag, one per band (var_flg) (4)
+#   meta: !!omap
+#   - {ucd: CODE_VARIAB}
+#   - {_votable_string_dtype: char}
+# - name: nW1
+#   datatype: int16
+#   description: '? Frame detection count in W1 (w1nm) (5)'
+#   meta: !!omap
+#   - {ucd: NUMBER}
+#   - {width: 3}
+#   - values: {'null': -32768}
+# - name: mW1
+#   datatype: int16
+#   description: '? Integer frame coverage in W1 (w1m) (6)'
+#   meta: !!omap
+#   - {ucd: NUMBER}
+#   - {width: 3}
+#   - values: {'null': -32768}
+# - name: nW2
+#   datatype: int16
+#   description: '? Frame detection count in W2 (w2nm) (5)'
+#   meta: !!omap
+#   - {ucd: NUMBER}
+#   - {width: 3}
+#   - values: {'null': -32768}
+# - name: mW2
+#   datatype: int16
+#   description: '? Integer frame coverage in W2 (w2m) (6)'
+#   meta: !!omap
+#   - {ucd: NUMBER}
+#   - {width: 3}
+#   - values: {'null': -32768}
+# - name: nW3
+#   datatype: int16
+#   description: '? Frame detection count in W3 (w3nm) (5)'
+#   meta: !!omap
+#   - {ucd: NUMBER}
+#   - {width: 3}
+#   - values: {'null': -32768}
+# - name: mW3
+#   datatype: int16
+#   description: '? Integer frame coverage in W3 (w3m) (6)'
+#   meta: !!omap
+#   - {ucd: NUMBER}
+#   - {width: 3}
+#   - values: {'null': -32768}
+# - name: nW4
+#   datatype: int16
+#   description: '? Frame detection count in W4 (w4nm) (5)'
+#   meta: !!omap
+#   - {ucd: NUMBER}
+#   - {width: 3}
+#   - values: {'null': -32768}
+# - name: mW4
+#   datatype: int16
+#   description: '? Integer frame coverage in W4 (w4m) (6)'
+#   meta: !!omap
+#   - {ucd: NUMBER}
+#   - {width: 3}
+#   - values: {'null': -32768}
+# - name: satnum
+#   datatype: int16
+#   description: Minimum sample at which saturation occurs in each band
+#   meta: !!omap
+#   - {ucd: INST_DET_MISC}
+#   - {width: 4}
+# - name: RA_pm
+#   unit: deg
+#   datatype: float64
+#   format: '{:11.7f}'
+#   description: '? Right ascension at epoch MJD=55400.0 (2010.5589) from the profile-fitting measurement model that includes motion.'
+#   meta: !!omap
+#   - {ucd: POS_EQ_RA_OTHER}
+#   - {width: 11}
+#   - {precision: '7'}
+#   - values: {'null': .nan}
+# - name: e_RA_pm
+#   unit: arcsec
+#   datatype: float64
+#   format: '{:7.4f}'
+#   description: '? Error on RA_pm'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 7}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: DE_pm
+#   unit: deg
+#   datatype: float64
+#   format: '{:11.7f}'
+#   description: '? Declination at epoch MJD=55400.0 (2010.5589) from the profile-fitting measurement model that includes motion.'
+#   meta: !!omap
+#   - {ucd: POS_EQ_DEC_OTHER}
+#   - {width: 11}
+#   - {precision: '7'}
+#   - values: {'null': .nan}
+# - name: e_DE_pm
+#   unit: arcsec
+#   datatype: float64
+#   format: '{:7.4f}'
+#   description: '? Error on DE_pm'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 7}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: cosig_pm
+#   unit: arcsec
+#   datatype: float64
+#   format: '{:8.4f}'
+#   description: '? co-sigma of the equatorial position uncertainties'
+#   meta: !!omap
+#   - {ucd: POS_POS-ANG}
+#   - {width: 8}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: pmRA
+#   unit: mas / yr
+#   datatype: int32
+#   description: '? Apparent motion in RA (9)'
+#   meta: !!omap
+#   - {ucd: POS_PM_NON-EQ}
+#   - {width: 7}
+#   - values: {'null': -2147483648}
+# - name: e_pmRA
+#   unit: mas / yr
+#   datatype: int32
+#   description: '? Mean error on pmRA (9)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 7}
+#   - values: {'null': -2147483648}
+# - name: pmDE
+#   unit: mas / yr
+#   datatype: int32
+#   description: '? Apparent motion in DE (9)'
+#   meta: !!omap
+#   - {ucd: POS_PM_NON-EQ}
+#   - {width: 7}
+#   - values: {'null': -2147483648}
+# - name: e_pmDE
+#   unit: mas / yr
+#   datatype: int32
+#   description: '? Mean error on pmDE (9)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 7}
+#   - values: {'null': -2147483648}
+# - name: chi2W1_pm
+#   datatype: float32
+#   format: '{:9.2g}'
+#   description: '? Reduced {chi}^2^ of the W1 profile fit including motion estimation'
+#   meta: !!omap
+#   - {ucd: FIT_CHI2}
+#   - {width: 9}
+#   - {precision: E2}
+#   - values: {'null': .nan}
+# - name: chi2W2_pm
+#   datatype: float32
+#   format: '{:9.2g}'
+#   description: '? Reduced {chi}^2^ of the W2 profile fit including motion estimation'
+#   meta: !!omap
+#   - {ucd: FIT_CHI2}
+#   - {width: 9}
+#   - {precision: E2}
+#   - values: {'null': .nan}
+# - name: chi2W3_pm
+#   datatype: float32
+#   format: '{:9.2g}'
+#   description: '? Reduced {chi}^2^ of the W3 profile fit including motion estimation'
+#   meta: !!omap
+#   - {ucd: FIT_CHI2}
+#   - {width: 9}
+#   - {precision: E2}
+#   - values: {'null': .nan}
+# - name: chi2W4_pm
+#   datatype: float32
+#   format: '{:9.2g}'
+#   description: '? Reduced {chi}^2^ of the W4 profile fit including motion estimation'
+#   meta: !!omap
+#   - {ucd: FIT_CHI2}
+#   - {width: 9}
+#   - {precision: E2}
+#   - values: {'null': .nan}
+# - name: chi2pm
+#   datatype: float32
+#   format: '{:9.2g}'
+#   description: '? Combined reduced {chi}^2^ profile fit including motion estimation'
+#   meta: !!omap
+#   - {ucd: FIT_CHI2}
+#   - {width: 9}
+#   - {precision: E2}
+#   - values: {'null': .nan}
+# - name: qpm
+#   datatype: string
+#   description: '? Motion estimation quality (pmcode) (7)'
+#   meta: !!omap
+#   - {ucd: CODE_QUALITY}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 5*}
+# - name: qph
+#   datatype: string
+#   description: '[ABCUXZ] Photometric quality flag (8)'
+#   meta: !!omap
+#   - {ucd: CODE_QUALITY}
+#   - {_votable_string_dtype: char}
+# - name: fdet
+#   datatype: int16
+#   description: '[0/15] Bit-encoded integer indicating bands in which a source has a w?snr>2 detection'
+#   meta: !!omap
+#   - {ucd: CODE_MISC}
+#   - {width: 2}
+# - name: fmoon
+#   datatype: int16
+#   description: Scattered moonlight contamination flag
+#   meta: !!omap
+#   - {ucd: CODE_MISC}
+#   - {width: 4}
+# - name: covW1
+#   datatype: float64
+#   format: '{:7.3f}'
+#   description: '? Mean pixel coverage in W1'
+#   meta: !!omap
+#   - {ucd: STAT_MEAN}
+#   - {width: 7}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: covW2
+#   datatype: float64
+#   format: '{:7.3f}'
+#   description: '? Mean pixel coverage in W2'
+#   meta: !!omap
+#   - {ucd: STAT_MEAN}
+#   - {width: 7}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: covW3
+#   datatype: float64
+#   format: '{:7.3f}'
+#   description: '? Mean pixel coverage in W3'
+#   meta: !!omap
+#   - {ucd: STAT_MEAN}
+#   - {width: 7}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: covW4
+#   datatype: float64
+#   format: '{:7.3f}'
+#   description: '? Mean pixel coverage in W4'
+#   meta: !!omap
+#   - {ucd: STAT_MEAN}
+#   - {width: 7}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: 2Mkey
+#   datatype: int64
+#   description: '? 2MASS PSC association (not identification)'
+#   meta: !!omap
+#   - {ucd: ID_ASSOCIATED}
+#   - {width: 10}
+#   - values: {'null': -9223372036854775808}
+# - name: d2M
+#   unit: arcsec
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '? Distance separating the positions of the WISE source and associated 2MASS PSC source'
+#   meta: !!omap
+#   - {ucd: POS_OFFSET}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: 2M
+#   datatype: string
+#   description: Display the 2MASS data (Cutri et al. 2003, Cat. II/246)
+#   meta: !!omap
+#   - {ucd: DATA_LINK}
+#   - {_votable_string_dtype: char}
+# meta: !!omap
+# - {ID: II_328_allwise}
+# - {name: II/328/allwise}
+# - {description: '*the AllWISE data release (among 747,634,026 sources) (updated version, 16-Feb-2021)'}
+# schema: astropy-2.0
+_r AllWISE RAJ2000 DEJ2000 eeMaj eeMin eePA Im W1mag e_W1mag W2mag e_W2mag W3mag e_W3mag W4mag e_W4mag Jmag e_Jmag Hmag e_Hmag Kmag e_Kmag wx wy ID snr1 chi2W1 snr2 chi2W2 snr3 chi2W3 snr4 chi2W4 chi2 nb na sat1 sat2 sat3 sat4 ccf ex var nW1 mW1 nW2 mW2 nW3 mW3 nW4 mW4 satnum RA_pm e_RA_pm DE_pm e_DE_pm cosig_pm pmRA e_pmRA pmDE e_pmDE chi2W1_pm chi2W2_pm chi2W3_pm chi2W4_pm chi2pm qpm qph fdet fmoon covW1 covW2 covW3 covW4 2Mkey d2M 2M
+0.328 J052326.35-011937.3 80.8598231 -1.3270553 0.0336 0.0327 84.1 Im 7.605 0.031 7.626 0.02 7.56 0.019 7.451 0.133 8.527 0.029 7.932 0.034 7.694 0.029 238.177 2538.328 801001601351043264 34.7 0.788 53.2 0.833 57.1 0.984 8.2 0.948 0.843 1 0 0.066 0.0 0.0 0.0 0000 0 0000 27 27 27 27 13 13 5 13 7000 80.8598229 0.0382 -1.3270544 0.0365 0.0094 -10 37 26 36 0.786 0.833 0.985 0.948 0.843 1N000 AAAB 15 0 24.015 26.361 12.643 12.867 102644494 0.688 2M

@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/aZFZNzjhI2/0jq7G9f4jWPGogaQ</id>
+  <title>arXiv Query: search_query=all:"3.183"&amp;id_list=&amp;start=0&amp;max_results=50</title>
+  <updated>2026-09-25T11:44:56Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%223.183%22&amp;start=0&amp;max_results=50&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>50</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/hep-ex/0009029v1</id>
+    <title>Improved Measurement of the Positive Muon Anomalous Magnetic Moment</title>
+    <updated>2000-09-12T21:52:23Z</updated>
+    <link href="https://arxiv.org/abs/hep-ex/0009029v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/hep-ex/0009029v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  A new measurement of the positive muon's anomalous magnetic moment has been made at the Brookhaven Alternating Gradient Synchrotron using the direct injection of polarized muons into the superferric storage ring. The angular frequency difference omega_{a} between the angular spin precession frequency omega_{s} and the angular orbital frequency omega_{c} is measured as well as the free proton NMR frequency omega_{p}. These determine
+  R = omega_{a} / omega_{p} = 3.707~201(19) times 10^{-3}. With mu_{mu} / mu_{p} = 3.183~345~39(10) this gives a_{mu^+} = 11~659~191(59) times 10^{-10} (pm 5 ppm), in good agreement with the previous CERN and BNL measurements for mu^+ and mu^-, and with the standard model prediction.</summary>
+    <category term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2000-09-12T21:52:23Z</published>
+    <arxiv:comment>4 pages, 4 figures. accepted for publication in Phys. Rev. D62 Rapid Communications</arxiv:comment>
+    <arxiv:primary_category term="hep-ex"/>
+    <arxiv:journal_ref>Phys.Rev.D62:091101,2000</arxiv:journal_ref>
+    <author>
+      <name>H. N. Brown</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.62.091101</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.62.091101" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1101.1940v1</id>
+    <title>An Optical Readout TPC (O-TPC) for Studies in Nuclear Astrophysics With Gamma-Ray Beams at HIgS</title>
+    <updated>2011-01-10T20:13:32Z</updated>
+    <link href="https://arxiv.org/abs/1101.1940v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1101.1940v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We report on the construction, tests, calibrations and commissioning of an Optical Readout Time Projection Chamber (O-TPC) detector operating with a CO2(80%) + N2(20%) gas mixture at 100 and 150 Torr. It was designed to measure the cross sections of several key nuclear reactions involved in stellar evolution. In particular, a study of the rate of formation of oxygen and carbon during the process of helium burning will be performed by exposing the chamber gas to intense nearly mono-energetic gamma-ray beams at the High Intensity Gamma Source (HIgS) facility. The O-TPC has a sensitive target-drift volume of 30x30x21 cm^3. Ionization electrons drift towards a double parallel grid avalanche multiplier, yielding charge multiplication and light emission. Avalanche induced photons from N2 emission are collected, intensified and recorded with a Charge Coupled Device (CCD) camera, providing two-dimensional track images. The event's time projection (third coordinate) and the deposited energy are recorded by photomultipliers and by the TPC charge-signal, respectively. A dedicated VME-based data acquisition system and associated data analysis tools were developed to record and analyze these data. The O-TPC has been tested and calibrated with 3.183 MeV alpha-particles emitted by a 148Gd source placed within its volume with a measured energy resolution of 3.0%. Tracks of alpha and 12C particles from the dissociation of 16O and of three alpha-particles from the dissociation of 12C have been measured during initial in-beam test experiments performed at the HIgS facility at Duke University. The full detection system and its performance are described and the results of the preliminary in-beam test experiments are reported.</summary>
+    <category term="physics.ins-det" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nucl-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-01-10T20:13:32Z</published>
+    <arxiv:comment>Supported by the Richard F. Goodman Yale-Weizmann Exchange Program, ACWIS, NY, and USDOE grant Numbers: DE-FG02-94ER40870 and DE-FG02-97ER41033</arxiv:comment>
+    <arxiv:primary_category term="physics.ins-det"/>
+    <arxiv:journal_ref>Published in: JINST 5(2010)12004</arxiv:journal_ref>
+    <author>
+      <name>M. Gai</name>
+      <arxiv:affiliation>UConn-Yale-TUNL-Weizmann-PTB-UCL Collaboration</arxiv:affiliation>
+    </author>
+    <author>
+      <name>M. W. Ahmed</name>
+      <arxiv:affiliation>UConn-Yale-TUNL-Weizmann-PTB-UCL Collaboration</arxiv:affiliation>
+    </author>
+    <author>
+      <name>S. C. Stave</name>
+      <arxiv:affiliation>UConn-Yale-TUNL-Weizmann-PTB-UCL Collaboration</arxiv:affiliation>
+    </author>
+    <author>
+      <name>W. R. Zimmerman</name>
+      <arxiv:affiliation>UConn-Yale-TUNL-Weizmann-PTB-UCL Collaboration</arxiv:affiliation>
+    </author>
+    <author>
+      <name>A. Breskin</name>
+      <arxiv:affiliation>UConn-Yale-TUNL-Weizmann-PTB-UCL Collaboration</arxiv:affiliation>
+    </author>
+    <author>
+      <name>B. Bromberger</name>
+      <arxiv:affiliation>UConn-Yale-TUNL-Weizmann-PTB-UCL Collaboration</arxiv:affiliation>
+    </author>
+    <author>
+      <name>R. Chechik</name>
+      <arxiv:affiliation>UConn-Yale-TUNL-Weizmann-PTB-UCL Collaboration</arxiv:affiliation>
+    </author>
+    <author>
+      <name>V. Dangendorf</name>
+      <arxiv:affiliation>UConn-Yale-TUNL-Weizmann-PTB-UCL Collaboration</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Th. Delbar</name>
+      <arxiv:affiliation>UConn-Yale-TUNL-Weizmann-PTB-UCL Collaboration</arxiv:affiliation>
+    </author>
+    <author>
+      <name>R. H. France</name>
+      <arxiv:affiliation>UConn-Yale-TUNL-Weizmann-PTB-UCL Collaboration</arxiv:affiliation>
+    </author>
+    <author>
+      <name>S. S. Henshaw</name>
+      <arxiv:affiliation>UConn-Yale-TUNL-Weizmann-PTB-UCL Collaboration</arxiv:affiliation>
+    </author>
+    <author>
+      <name>T. J. Kading</name>
+      <arxiv:affiliation>UConn-Yale-TUNL-Weizmann-PTB-UCL Collaboration</arxiv:affiliation>
+    </author>
+    <author>
+      <name>P. P. Martel</name>
+      <arxiv:affiliation>UConn-Yale-TUNL-Weizmann-PTB-UCL Collaboration</arxiv:affiliation>
+    </author>
+    <author>
+      <name>J. E. R. McDonald</name>
+      <arxiv:affiliation>UConn-Yale-TUNL-Weizmann-PTB-UCL Collaboration</arxiv:affiliation>
+    </author>
+    <author>
+      <name>P. -N. Seo</name>
+      <arxiv:affiliation>UConn-Yale-TUNL-Weizmann-PTB-UCL Collaboration</arxiv:affiliation>
+    </author>
+    <author>
+      <name>K. Tittelmeier</name>
+      <arxiv:affiliation>UConn-Yale-TUNL-Weizmann-PTB-UCL Collaboration</arxiv:affiliation>
+    </author>
+    <author>
+      <name>H. R. Weller</name>
+      <arxiv:affiliation>UConn-Yale-TUNL-Weizmann-PTB-UCL Collaboration</arxiv:affiliation>
+    </author>
+    <author>
+      <name>A. H. Young</name>
+      <arxiv:affiliation>UConn-Yale-TUNL-Weizmann-PTB-UCL Collaboration</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1088/1748-0221/5/12/P12004</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1748-0221/5/12/P12004" title="doi"/>
+  </entry>
+</feed>
