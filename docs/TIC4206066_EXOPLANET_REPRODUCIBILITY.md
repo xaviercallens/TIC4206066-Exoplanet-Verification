@@ -24,10 +24,10 @@ We formulated and executed an automated falsification battery enforcing mandator
 Host Star Parameters:
 - Target:           TIC 4206066 (StKM 1-561)
 - Gaia DR3 ID:      3220388198192519424
-- Spectral Type:    Late-K dwarf (T_eff ≈ 4200 K)
-- Stellar Mass:     0.70 M_Sun
-- Stellar Radius:   0.68 R_Sun
-- Host Density:     3.12 g/cm^3
+- Spectral Type:    Late-K dwarf (T_eff ≈ 4020 K)
+- Stellar Mass:     0.606 M_Sun
+- Stellar Radius:   0.623 R_Sun
+- Host Density:     3.534 g/cm^3
 - Distance:         ~116 light-years
 
 Primary Candidate (Signal A / TIC 4206066.01):

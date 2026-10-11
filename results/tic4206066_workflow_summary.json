@@ -2,15 +2,15 @@
   "workflow_name": "ExoElenchus-TIC4206066",
   "target": "TIC 4206066 (StKM 1-561)",
   "all_passed": true,
-  "total_duration_ms": 18955.04,
+  "total_duration_ms": 36785.39,
   "seed": 42,
-  "git_hash": "571f9855a01c4241737e90da539f42477a851928",
+  "git_hash": "d71516fb4c11ae7ffc5862ecbcbbbcdfa27b84a1",
   "steps": [
     {
       "step_id": 1,
       "name": "Ingestion & Real Observational Data Audit",
       "passed": true,
-      "duration_ms": 119.55,
+      "duration_ms": 103.42,
       "details": {
         "zenodo_files_sha256_match": true,
         "metadata_period_within_3sigma_of_ephemeris": true,
@@ -30,7 +30,7 @@
       "step_id": 2,
       "name": "Keplerian Dynamics & Transit Modeling",
       "passed": true,
-      "duration_ms": 0.64,
+      "duration_ms": 0.74,
       "details": {
         "semi_major_axis_au": 0.0358,
         "a_over_r_star": 12.368,
@@ -52,7 +52,7 @@
       "step_id": 3,
       "name": "Socratic Elenchus Falsification Battery & Real Vetting",
       "passed": true,
-      "duration_ms": 141.19,
+      "duration_ms": 105.48,
       "details": {
         "synthetic_selftest_candidate_valid": true,
         "synthetic_selftest_energy": 1.5441,
@@ -122,7 +122,7 @@
       "step_id": 4,
       "name": "Leave-One-Sector-Out Timing Hold-Out",
       "passed": true,
-      "duration_ms": 3.07,
+      "duration_ms": 11.94,
       "details": {
         "S6": {
           "n_train": 13,
@@ -178,7 +178,7 @@
       "step_id": 5,
       "name": "Pre-Registered Sector 110 Predictions & Decision-Logic Self-Test",
       "passed": true,
-      "duration_ms": 54.07,
+      "duration_ms": 41.49,
       "details": {
         "target": "TIC 4206066",
         "sector": 110,
@@ -200,7 +200,7 @@
       "step_id": 6,
       "name": "SMCCC Dissemination & Quality Audit",
       "passed": true,
-      "duration_ms": 0.25,
+      "duration_ms": 0.36,
       "details": {
         "total_reward": 0.85,
         "grounding_score": 1.0,
@@ -213,10 +213,10 @@
       "step_id": 7,
       "name": "Automated Pytest Suite Execution",
       "passed": true,
-      "duration_ms": 5819.8,
+      "duration_ms": 5282.77,
       "details": {
         "exit_code": 0,
-        "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0\nrootdir: /home/xavkal/repos/TIC4206066-Exoplanet-Verification\nconfigfile: pyproject.toml\nplugins: typeguard-4.6.0, cov-7.1.0, hypothesis-6.168.0, langsmith-0.14.0, asyncio-1.4.0, anyio-4.15.1\nasyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function\ncollected 11 items\n\ntests/test_tic4206066_falsification.py ...........                       [100%]\n\n============================== 11 passed in 2.29s ==============================",
+        "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0\nrootdir: /home/xavkal/repos/TIC4206066-Exoplanet-Verification\nconfigfile: pyproject.toml\nplugins: typeguard-4.6.0, cov-7.1.0, hypothesis-6.168.0, langsmith-0.14.0, asyncio-1.4.0, anyio-4.15.1\nasyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function\ncollected 11 items\n\ntests/test_tic4206066_falsification.py ...........                       [100%]\n\n============================== 11 passed in 2.03s ==============================",
         "stderr": "",
         "test_target": "tests/test_tic4206066_falsification.py"
       }
@@ -225,7 +225,7 @@
       "step_id": 8,
       "name": "Lean 4 Formal Verification (Keplerian Invariants & Socratic Elenchus)",
       "passed": true,
-      "duration_ms": 12816.47,
+      "duration_ms": 31239.19,
       "details": {
         "lean_file_exists": true,
         "olean_compiled": true,
@@ -244,5 +244,5 @@
       }
     }
   ],
-  "timestamp_utc": "2026-10-11 10:40:12 UTC"
+  "timestamp_utc": "2026-10-11 13:44:40 UTC"
 }

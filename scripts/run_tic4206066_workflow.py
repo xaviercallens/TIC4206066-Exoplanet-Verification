@@ -350,7 +350,7 @@ class TIC4206066Workflow:
         import shutil
         lake_bin = shutil.which("lake")
         clean_elaboration = False
-        exit_code = 0
+        exit_code = -1  # fail closed: -1 means Lean never ran
         stderr = ""
 
         # Auto-link local lake cache if present in system
@@ -366,7 +366,7 @@ class TIC4206066Workflow:
         if lake_bin and has_mathlib and os.path.exists(os.path.join(formal_dir, "lakefile.toml")):
             try:
                 cmd = [lake_bin, "env", "lean", "ANSE/ExoplanetTransit.lean"]
-                proc = subprocess.run(cmd, cwd=formal_dir, capture_output=True, text=True, timeout=120)
+                proc = subprocess.run(cmd, cwd=formal_dir, capture_output=True, text=True, timeout=900)
                 exit_code = proc.returncode
                 stderr = proc.stderr.strip()
                 clean_elaboration = (proc.returncode == 0 and len(stderr) == 0)
@@ -378,7 +378,7 @@ class TIC4206066Workflow:
             "olean_compiled": os.path.exists(olean_file),
             "zero_sorry_soundness": not has_sorry,
             "lean_elaboration_exit_code": exit_code,
-            "lean_elaboration_clean": clean_elaboration or (not has_sorry and exit_code == 0),
+            "lean_elaboration_clean": clean_elaboration,
             "formalized_theorems": theorems,
             "theorem_count": len(theorems),
         }
@@ -386,6 +386,7 @@ class TIC4206066Workflow:
             checks["lean_file_exists"]
             and len(checks["formalized_theorems"]) >= 6
             and checks["zero_sorry_soundness"]
+            and checks["lean_elaboration_clean"]
         )
         dur = (time.perf_counter() - start) * 1000.0
         return StepResult(8, "Lean 4 Formal Verification (Keplerian Invariants & Socratic Elenchus)", passed, round(dur, 2), checks)

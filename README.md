@@ -83,7 +83,7 @@ TIC4206066-Exoplanet-Verification/
 │   ├── mast/                   # Authentic NASA MAST TESS FITS (Sectors 6, 32, 98)
 │   └── zenodo/                 # Zenodo research deposits (part1, part2, part3)
 ├── results/                    # Certified execution receipts & provenance hashes
-├── tests/                      # Automated test suite (17 passed tests)
+├── tests/                      # Automated test suite (28 tests)
 └── docs/                       # Technical & scientific documentation
 ```
 
@@ -166,7 +166,7 @@ OVERALL STATUS: ✅ ALL 8 STEPS PASSED
 ```bash
 PYTHONPATH=. pytest -v
 ```
-Runs all 17 unit, physical invariant, real-data ingestion, and backend API tests.
+Runs all unit, physical invariant, real-data ingestion, and backend API tests.
 
 ### 6.4 Sector 110 Scheduler CLI
 ```bash
