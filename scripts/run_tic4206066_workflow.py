@@ -353,10 +353,10 @@ class TIC4206066Workflow:
         exit_code = -1  # fail closed: -1 means Lean never ran
         stderr = ""
 
-        # Auto-link local lake cache if present in system
-        cache_source = "/mnt/data/xdev-cache/lake/xdev__AutoevolveAI__formal__.lake"
+        # Optional: reuse a prebuilt Lake/Mathlib cache (set LAKE_CACHE_DIR); no machine-specific default.
+        cache_source = os.environ.get("LAKE_CACHE_DIR", "")
         lake_dir = os.path.join(formal_dir, ".lake")
-        if not os.path.exists(lake_dir) and os.path.exists(cache_source):
+        if cache_source and not os.path.exists(lake_dir) and os.path.exists(cache_source):
             try:
                 os.symlink(cache_source, lake_dir)
             except OSError:

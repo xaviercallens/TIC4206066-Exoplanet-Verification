@@ -43,3 +43,8 @@ lake env lean ANSE/ExoplanetTransit.lean
 - **Lean Version:** `leanprover/lean4:v4.34.0-rc2` (specified in `lean-toolchain`)
 - **Package Manager:** Lake (`lakefile.toml`)
 - **Dependencies:** Mathlib v4.34.0-rc2
+
+## 4. Certification gate (fail-closed)
+Workflow step 8 passes only if Lean actually elaborates `ExoplanetTransit.lean` cleanly (exit 0, empty stderr) and the source has no `sorry`. If `lake` is missing, times out (900 s) or Mathlib is unavailable, the step reports `lean_elaboration_exit_code = -1` and **fails**. To reuse a prebuilt Mathlib cache set `LAKE_CACHE_DIR=/path/to/.lake`. Covered by `tests/test_certification_gate.py`.
+
+Scope: Lean checks the stated algebraic invariants only; it does not validate the observational data or the planet.
