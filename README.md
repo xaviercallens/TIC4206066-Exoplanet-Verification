@@ -221,3 +221,11 @@ See [`docs/GCP_DEPLOYMENT.md`](docs/GCP_DEPLOYMENT.md) for detailed deployment o
 
 This project is licensed under the [MIT License](LICENSE).
 Observational datasets retain their original open-access scientific licenses (CC-BY 4.0 / Public Domain NASA MAST).
+
+## 10. Sector 110 blind-test procedure
+```bash
+python scripts/fetch_sector110.py --list      # exit 2 = AWAITING_DATA (nothing published yet)
+python scripts/fetch_sector110.py --fetch     # downloads ONE file by frozen pipeline priority, records SHA-256
+python scripts/fetch_sector110.py --evaluate  # frozen rules on the hashed file -> results/sector110_outcome.json
+```
+Thresholds (`subprojects/tic4206066_sector110_runner.py`) and pipeline priority (`PIPELINE_PRIORITY`) are frozen before data exists; do not change them after viewing the data. Open items: the observing-window and release dates are unverified (`WINDOW_VERIFIED = False`), and the pipeline priority must be confirmed against the Zenodo pre-registration.
