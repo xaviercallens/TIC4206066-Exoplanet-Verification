@@ -26,9 +26,23 @@ MAST_DIR = "data/astrophysics/tic4206066/mast"
 ZENODO_DIR = "data/astrophysics/tic4206066/zenodo"
 
 
+def _find_data_dir(preferred: str, rel_check: str) -> str:
+    base = os.path.basename(preferred)
+    for candidate in [
+        preferred,
+        os.path.join("data", base),
+        os.path.join(os.path.dirname(__file__), "..", "..", "data", base),
+        os.path.join(os.path.dirname(__file__), "..", "..", "data", "astrophysics", "tic4206066", base),
+    ]:
+        if os.path.exists(os.path.join(candidate, rel_check)):
+            return candidate
+    return preferred
+
+
 def load_zenodo_per_transit_data() -> list[dict[str, Any]]:
     """Loads the 23 real per-transit measurements from Zenodo part1."""
-    csv_path = os.path.join(ZENODO_DIR, "part1/02_transits_A/per_transit_A.csv")
+    z_dir = _find_data_dir(ZENODO_DIR, "part1/02_transits_A/per_transit_A.csv")
+    csv_path = os.path.join(z_dir, "part1/02_transits_A/per_transit_A.csv")
     transits = []
     with open(csv_path) as f:
         reader = csv.DictReader(f)
@@ -49,7 +63,8 @@ def load_zenodo_per_transit_data() -> list[dict[str, Any]]:
 
 def load_zenodo_ephemeris() -> dict[str, Any]:
     """Loads the official ephemeris fit from Zenodo part1."""
-    json_path = os.path.join(ZENODO_DIR, "part1/02_transits_A/ephemeris_A.json")
+    z_dir = _find_data_dir(ZENODO_DIR, "part1/02_transits_A/ephemeris_A.json")
+    json_path = os.path.join(z_dir, "part1/02_transits_A/ephemeris_A.json")
     with open(json_path) as f:
         return json.load(f)
 
@@ -59,10 +74,11 @@ def load_real_mast_lightcurves() -> dict[int, dict[str, np.ndarray]]:
     Loads real photometric time-series from NASA MAST FITS files for Sectors 6, 32, 98.
     Cleans NaNs and normalizes flux to baseline 1.0.
     """
+    m_dir = _find_data_dir(MAST_DIR, "hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_lc.fits")
     files = {
-        6: os.path.join(MAST_DIR, "hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_lc.fits"),
-        32: os.path.join(MAST_DIR, "hlsp_tess-spoc_tess_phot_0000000004206066-s0032_tess_v1_lc.fits"),
-        98: os.path.join(MAST_DIR, "hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01_llc.fits"),
+        6: os.path.join(m_dir, "hlsp_tess-spoc_tess_phot_0000000004206066-s0006_tess_v1_lc.fits"),
+        32: os.path.join(m_dir, "hlsp_tess-spoc_tess_phot_0000000004206066-s0032_tess_v1_lc.fits"),
+        98: os.path.join(m_dir, "hlsp_qlp_tess_ffi_s0098-0000000004206066_tess_v01_llc.fits"),
     }
 
     sector_data = {}

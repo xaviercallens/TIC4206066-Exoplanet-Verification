@@ -40,8 +40,21 @@ def sha256_file(path: str) -> str:
     return h.hexdigest()
 
 
+def _find_part1_dir(preferred: str = ZENODO_PART1) -> str:
+    for candidate in [
+        preferred,
+        "data/zenodo/part1",
+        os.path.join(os.path.dirname(__file__), "..", "..", "data", "zenodo", "part1"),
+        os.path.join(os.path.dirname(__file__), "..", "..", "data", "astrophysics", "tic4206066", "zenodo", "part1"),
+    ]:
+        if os.path.exists(os.path.join(candidate, "SHA256SUMS")):
+            return candidate
+    return preferred
+
+
 def verify_consumed_zenodo_files(part1_dir: str = ZENODO_PART1) -> dict[str, Any]:
     """Compare the SHA-256 of each file this pipeline reads to the deposit's SHA256SUMS."""
+    part1_dir = _find_part1_dir(part1_dir)
     sums: dict[str, str] = {}
     with open(os.path.join(part1_dir, "SHA256SUMS")) as f:
         for line in f:

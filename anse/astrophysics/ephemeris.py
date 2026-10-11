@@ -53,12 +53,26 @@ class Ephemeris:
         return list(range(n_lo, n_hi + 1))
 
 
+def _find_zenodo_dir(preferred: str = ZENODO_DIR) -> str:
+    for candidate in [
+        preferred,
+        "data/zenodo",
+        os.path.join(os.path.dirname(__file__), "..", "..", "data", "zenodo"),
+        os.path.join(os.path.dirname(__file__), "..", "..", "data", "astrophysics", "tic4206066", "zenodo"),
+    ]:
+        if os.path.exists(os.path.join(candidate, EPHEMERIS_A_PATH)):
+            return candidate
+    return preferred
+
+
 def _read(rel: str, zenodo_dir: str) -> dict:
+    zenodo_dir = _find_zenodo_dir(zenodo_dir)
     with open(os.path.join(zenodo_dir, rel)) as f:
         return json.load(f)
 
 
 def load_ephemeris_a(zenodo_dir: str = ZENODO_DIR) -> Ephemeris:
+    zenodo_dir = _find_zenodo_dir(zenodo_dir)
     fit = _read(EPHEMERIS_A_PATH, zenodo_dir)["fit"]
     return Ephemeris(
         name="A",
@@ -74,6 +88,7 @@ def load_ephemeris_a(zenodo_dir: str = ZENODO_DIR) -> Ephemeris:
 
 def load_ephemeris_b(zenodo_dir: str = ZENODO_DIR) -> Ephemeris:
     """Signal B: tentative (~3 sigma post hoc). Fit of the 4 archival events."""
+    zenodo_dir = _find_zenodo_dir(zenodo_dir)
     fit = _read(EPHEMERIS_B_PATH, zenodo_dir)["fits_4_events_manuscript_like"]
     return Ephemeris(
         name="B",
@@ -85,3 +100,4 @@ def load_ephemeris_b(zenodo_dir: str = ZENODO_DIR) -> Ephemeris:
         rms_oc_min=None,
         source=f"zenodo:{EPHEMERIS_B_PATH}",
     )
+
