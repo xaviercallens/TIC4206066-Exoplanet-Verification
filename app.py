@@ -29,10 +29,10 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=os.environ.get("CORS_ORIGINS", "*").split(","),
+    allow_credentials=False,  # wildcard origin + credentials is unsafe; the API is read-only
+    allow_methods=["GET", "POST"],
+    allow_headers=["Content-Type"],
 )
 
 BASE_DIR = Path(__file__).resolve().parent
