@@ -76,9 +76,9 @@
     "EXCLUDED": "Mean in-transit depth < 20% of the published depth.",
     "INSUFFICIENT_DATA": "Fewer than 3 predicted transit windows adequately covered."
   },
-  "overall_status": "PREREGISTERED_AWAITING_SECTOR_110_DATA__SELF_TEST_PASSED",
+  "overall_status": "AWAITING_SECTOR_110_DATA__UNREGISTERED_SELF_TEST_PASSED",
   "provenance_hash": "5a23f5dcf0b1535820bfa1a0478756f74ee893f80fd2e944f0d1178bbf2ebccd",
-  "timestamp_utc": "2026-10-11 13:47:15 UTC",
+  "timestamp_utc": "2026-10-11 14:11:59 UTC",
   "self_test": {
     "injected_signal_outcome": "RECOVERED",
     "flat_baseline_outcome": "EXCLUDED",
