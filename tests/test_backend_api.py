@@ -72,3 +72,23 @@ def test_status_endpoint():
     assert response.status_code == 200
     data = response.json()
     assert "target_id" in data or "target" in data
+
+
+def test_lean_endpoint():
+    response = client.get("/api/astrophysics/tic4206066/lean")
+    assert response.status_code == 200
+    data = response.json()
+    assert "status" in data
+    assert "theorems" in data["status"]
+    assert len(data["status"]["theorems"]) >= 6
+    assert data["status"]["zero_sorry"] is True
+
+
+def test_reproduce_endpoint():
+    response = client.post("/api/astrophysics/tic4206066/reproduce")
+    assert response.status_code == 200
+    data = response.json()
+    assert data["status"] == "success"
+    assert data["target"] == "TIC 4206066"
+    assert "data_integrity" in data
+

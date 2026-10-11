@@ -269,7 +269,7 @@
 <!-- 3. HERO SECTION: CANDIDATE PLANET SPECIFICATIONS -->
 <section class="space-y-space-md" id="hero">
 <!-- Target Banner -->
-<div class="flex flex-col md:flex-row md:items-end justify-between border-b border-outline-variant pb-space-md gap-4">
+<div class="flex flex-col md:flex-row md:items-end justify-between border-b border-outline-variant pb-space-md gap-4" id="telemetry">
 <div>
 <div class="flex items-center gap-space-sm text-primary-container font-label-hud uppercase">
 <span class="material-symbols-outlined text-base" data-icon="satellite_alt">satellite_alt</span>
@@ -282,9 +282,9 @@
             </h1>
 <p class="font-body-md text-on-surface-variant mt-1">
               Host Star: <span class="text-on-surface font-telemetry-sm">TIC 4206066</span> • 
-              V_mag: <span class="text-primary font-telemetry-sm">11.42</span> • 
-              Teff: <span class="text-primary font-telemetry-sm">5420 ± 80 K</span> • 
-              Spectral Class: <span class="text-primary font-telemetry-sm">G5V Solar-Type Dwarf</span>
+              TESS_mag: <span class="text-primary font-telemetry-sm">11.42</span> • 
+              Teff: <span class="text-primary font-telemetry-sm">4020 ± 100 K</span> • 
+              Stellar Parameters: <span class="text-primary font-telemetry-sm">0.606 M☉, 0.623 R☉ (Early M / Late K Dwarf)</span>
 </p>
 </div>
 <!-- Quick Vetting Status Chip Cluster -->
@@ -317,8 +317,8 @@
 <!-- Card 3 -->
 <div class="bg-surface-container-low border border-outline-variant p-space-md rounded">
 <div class="text-on-surface-variant font-label-hud uppercase text-[10px]">Stellar Density (ρ*)</div>
-<div class="font-telemetry-lg text-telemetry-lg text-on-surface font-bold mt-1">1.41 g/cm³</div>
-<div class="font-telemetry-sm text-outline-variant text-[11px]">Consistent Solar Dwarf</div>
+<div class="font-telemetry-lg text-telemetry-lg text-on-surface font-bold mt-1">3.53 g/cm³</div>
+<div class="font-telemetry-sm text-outline-variant text-[11px]">Early M / K Dwarf</div>
 <div class="mt-2 text-right text-[10px] text-secondary font-label-hud">CONVERGED</div>
 </div>
 <!-- Card 4 -->
@@ -472,20 +472,23 @@
 </div>
 </div>
 <!-- Zenodo Open Access Card -->
-<div class="bg-surface-container-lowest border border-outline-variant p-space-md rounded flex flex-col justify-between">
+<div class="bg-surface-container-lowest border border-outline-variant p-space-md rounded flex flex-col justify-between" id="zenodo">
 <div>
 <div class="flex items-center justify-between pb-2 border-b border-outline-variant/60">
 <span class="font-label-hud text-secondary uppercase flex items-center gap-1">
 <span class="material-symbols-outlined text-sm" data-icon="lock_open">lock_open</span>
-                    Zenodo Open-Access Archive
+                    Zenodo Pre-Registration &amp; Data
                   </span>
 <span class="px-1.5 py-0.5 rounded bg-secondary/10 border border-secondary text-[10px] font-telemetry-sm text-secondary">CC-BY 4.0</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface mt-space-sm">
-                  DOI: 10.5281/zenodo.23175179
+                  <a href="https://doi.org/10.5281/zenodo.23175179" target="_blank" rel="noopener noreferrer" class="text-primary-container hover:underline flex items-center gap-1">
+                    DOI: 10.5281/zenodo.23175179
+                    <span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
+                  </a>
                 </h3>
 <p class="font-body-sm text-on-surface-variant mt-space-xs">
-                  "TIC 4206066 b: Empirical Photometric Vetting and Pre-Registered Blind Validation Protocol for TESS Sector 110". Complete open notebook repository.
+                  "A Pre-registered TESS Sector 110 Test of Two Transit-like Signals in TIC 4206066" (v1.1). Companion preprint: <a href="https://doi.org/10.5281/zenodo.22967456" target="_blank" class="underline text-primary">22967456</a> • Data/Code: <a href="https://doi.org/10.5281/zenodo.22967099" target="_blank" class="underline text-primary">22967099</a>.
                 </p>
 </div>
 <div class="pt-space-md mt-space-md border-t border-outline-variant/40 flex items-center gap-2">
@@ -672,12 +675,17 @@
 <span class="px-1.5 py-0.5 rounded bg-primary-container/15 text-primary-container border border-primary-container font-bold">FORMAL LEAN 4</span>
 </div>
 <h4 class="font-telemetry-md font-bold text-on-surface mt-2">Lean 4 Math Proof</h4>
-<p class="font-body-sm text-on-surface-variant mt-1">
-                Ephemeris consistency and orbital convergence formally verified in Lean 4 prover.
+<p class="font-body-sm text-on-surface-variant mt-1 text-xs">
+                6 theorems formally verified in Lean 4 (Lake v4.34.0-rc2, 0 sorry): Keplerian density invariant, odd-even symmetry, transit depth positivity.
               </p>
+<div class="mt-2 flex items-center gap-2">
+  <a href="/api/astrophysics/tic4206066/lean" target="_blank" class="text-[11px] text-primary-container underline font-telemetry-sm hover:text-primary">Inspect Proof JSON</a>
+  <span class="text-outline text-xs">•</span>
+  <a href="https://github.com/xaviercallens/TIC4206066-Exoplanet-Verification/blob/main/formal/ANSE/ExoplanetTransit.lean" target="_blank" class="text-[11px] text-secondary underline font-telemetry-sm hover:text-primary">View ExoplanetTransit.lean</a>
+</div>
 </div>
 <div class="mt-space-md pt-2 border-t border-outline-variant/40 flex items-center justify-between font-label-hud text-primary-container font-bold">
-<span>MATHEMATICALLY VERIFIED</span>
+<span>MATHEMATICALLY VERIFIED (0 SORRY)</span>
 <span class="material-symbols-outlined text-sm" data-icon="verified_user">verified_user</span>
 </div>
 </div>

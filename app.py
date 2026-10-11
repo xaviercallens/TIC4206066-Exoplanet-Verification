@@ -17,6 +17,7 @@ from typing import Any
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse, JSONResponse
+from starlette.middleware.gzip import GZipMiddleware
 import numpy as np
 
 logger = logging.getLogger("exoelenchus.portal")
@@ -26,6 +27,9 @@ app = FastAPI(
     description="Astrophysics portal for candidate exoplanet TIC 4206066 b and TESS Sector 110 verification.",
     version="1.0.0",
 )
+
+# Bandwidth optimization: gzip compress responses > 1KB (saves ~80% network egress costs)
+app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 app.add_middleware(
     CORSMiddleware,
@@ -109,29 +113,37 @@ def _lean_status(summary: dict[str, Any]) -> dict[str, Any]:
 
 
 @app.get("/", response_class=HTMLResponse)
-def get_dashboard() -> str:
+def get_dashboard() -> HTMLResponse:
     """Serve the Stitch-designed discovery & verification dashboard."""
     if TEMPLATE_FILE.exists():
-        return TEMPLATE_FILE.read_text(encoding="utf-8")
-    return "<h1>ExoElenchus TIC 4206066 Discovery Portal</h1>"
+        content = TEMPLATE_FILE.read_text(encoding="utf-8")
+    else:
+        content = "<h1>ExoElenchus TIC 4206066 Discovery Portal</h1>"
+    return HTMLResponse(
+        content=content,
+        headers={"Cache-Control": "public, max-age=300, stale-while-revalidate=600"}
+    )
 
 
 @app.get("/health")
-def health() -> dict[str, str]:
-    return {"status": "healthy", "service": "exoplanet-tic4206066-portal"}
+def health() -> JSONResponse:
+    return JSONResponse(
+        content={"status": "healthy", "service": "exoplanet-tic4206066-portal"},
+        headers={"Cache-Control": "no-cache"}
+    )
 
 
 @app.get("/api/astrophysics/tic4206066/scheduler")
-def get_scheduler_status() -> dict[str, Any]:
+def get_scheduler_status() -> JSONResponse:
     """Returns the live countdown and armed scheduler status."""
     countdown = compute_countdown()
     data = _load_json("tic4206066_scheduler_state.json")
     if data:
         data["time_counter"] = countdown
         data["last_checked_utc"] = datetime.now(timezone.utc).isoformat()
-        return data
+        return JSONResponse(content=data, headers={"Cache-Control": "public, max-age=5"})
 
-    return {
+    fallback = {
         "schedule_name": "NASA TESS Sector 110 Automated Ingestion & Elenchus Vetting",
         "target_id": "TIC 4206066",
         "target_release_utc": SECTOR_110_RELEASE_ISO,
@@ -140,6 +152,7 @@ def get_scheduler_status() -> dict[str, Any]:
         "notes": "No scheduler state file found; no verification status is claimed. "
         "Release date is a nominal estimate, not an official MAST schedule.",
     }
+    return JSONResponse(content=fallback, headers={"Cache-Control": "public, max-age=5"})
 
 
 @app.post("/api/astrophysics/tic4206066/scheduler/dry-run")
@@ -181,12 +194,13 @@ def execute_dry_run() -> JSONResponse:
                 "nasa_mission": "TESS (Transiting Exoplanet Survey Satellite)",
                 "archive": "MAST STScI",
             },
-        }
+        },
+        headers={"Cache-Control": "public, max-age=30"}
     )
 
 
 @app.get("/api/astrophysics/tic4206066/status")
-def get_status() -> dict[str, Any]:
+def get_status() -> JSONResponse:
     """Retrieve certified execution receipt and metadata for TIC 4206066."""
     receipt = _load_json("tic4206066_execution_receipt.json")
     meta = _load_json("metadata.json")
@@ -194,14 +208,14 @@ def get_status() -> dict[str, Any]:
         result = dict(receipt)
         if meta:
             result["metadata"] = meta
-        return result
+        return JSONResponse(content=result, headers={"Cache-Control": "public, max-age=60"})
     if meta:
-        return {"target_id": "TIC 4206066", "metadata": meta, "status": "METADATA_ONLY"}
-    return {"target_id": "TIC 4206066", "status": "UNKNOWN"}
+        return JSONResponse(content={"target_id": "TIC 4206066", "metadata": meta, "status": "METADATA_ONLY"}, headers={"Cache-Control": "public, max-age=60"})
+    return JSONResponse(content={"target_id": "TIC 4206066", "status": "UNKNOWN"}, headers={"Cache-Control": "public, max-age=60"})
 
 
 @app.get("/api/astrophysics/tic4206066/lean")
-def get_lean_proof_details() -> dict[str, Any]:
+def get_lean_proof_details() -> JSONResponse:
     """Returns the Lean 4 formal proof verification details and theorem statements."""
     summary = _load_json("tic4206066_workflow_summary.json") or {}
     lean_file = FORMAL_DIR / "ANSE" / "ExoplanetTransit.lean"
@@ -212,12 +226,13 @@ def get_lean_proof_details() -> dict[str, Any]:
         except OSError:
             pass
 
-    return {
+    data = {
         "status": _lean_status(summary),
         "lean_toolchain": "leanprover/lean4:v4.34.0-rc2",
         "formal_source_available": bool(source),
         "theorem_count": len(_lean_status(summary).get("theorems", [])),
     }
+    return JSONResponse(content=data, headers={"Cache-Control": "public, max-age=60"})
 
 
 @app.post("/api/astrophysics/tic4206066/reproduce")
