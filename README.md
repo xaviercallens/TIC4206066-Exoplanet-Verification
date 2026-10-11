@@ -130,7 +130,7 @@ The upcoming NASA TESS observation:
 - **Signal A Predictions:** 8 predicted transits (BJD 2461345.66 to 2461367.94), mid-transit uncertainty $\pm 4.25\text{ min}$.
 - **Signal B Predictions:** 3 predicted transits (BJD 2461345.98, 2461357.11, 2461368.25).
 - **Execution Receipt:** Certified with SHA-256 provenance hash: `5a23f5dcf0b1535820bfa1a0478756f74ee893f80fd2e944f0d1178bbf2ebccd`.
-- **Status:** `PREREGISTERED_AWAITING_SECTOR_110_DATA__SELF_TEST_PASSED` (Fails closed until authentic Sector 110 FITS are released).
+- **Status:** `AWAITING_SECTOR_110_DATA__UNREGISTERED_SELF_TEST_PASSED` (Fails closed until authentic Sector 110 FITS are released).
 
 ---
 

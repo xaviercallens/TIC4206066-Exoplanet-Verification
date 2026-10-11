@@ -83,7 +83,7 @@ Implemented in [`subprojects/tic4206066_sector110_runner.py`](file:///home/xavka
 - **Signal A Predictions:** 8 predicted transits (BJD 2461345.66 to 2461367.94), mid-transit uncertainty $\pm 4.25\text{ minutes}$.
 - **Signal B Predictions:** 3 predicted transits (BJD 2461345.98, 2461357.11, 2461368.25), tentative $\sim 3\sigma$.
 - **Execution Receipt:** Certified receipt generated at [`results/tic4206066_execution_receipt.json`](file:///home/xavkal/AutoevolveAI/results/tic4206066_execution_receipt.json) with SHA-256 provenance hash `5a23f5dcf0b1535820bfa1a0478756f74ee893f80fd2e944f0d1178bbf2ebccd`.
-- **Status:** `PREREGISTERED_AWAITING_SECTOR_110_DATA__SELF_TEST_PASSED` (Fails closed: reports awaiting data until authentic Sector 110 FITS are archived).
+- **Status:** `AWAITING_SECTOR_110_DATA__UNREGISTERED_SELF_TEST_PASSED` (Fails closed: reports awaiting data until authentic Sector 110 FITS are archived).
 
 ---
 

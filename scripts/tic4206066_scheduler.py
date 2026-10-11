@@ -72,7 +72,7 @@ def main():
             print(f"Receipt Provenance:   {result['receipt']['provenance_hash']}")
             print(f"State File Saved:     {result['state_file']}")
             print("=" * 65)
-            print("Scheduler is ARMED and verified for live release in late November 2026.\n")
+            print("Self-test passed. NOTE: this runner is NOT the pre-registered analysis (see docs/preregistration/PROVENANCE.md).\n")
         sys.exit(0 if result["success"] else 1)
 
     elif args.status:

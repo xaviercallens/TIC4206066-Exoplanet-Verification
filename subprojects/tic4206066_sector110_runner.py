@@ -223,9 +223,9 @@ def execute_preregistered_runner() -> Sector110PredictionReceipt:
     provenance = hashlib.sha256(payload).hexdigest()
 
     status = (
-        "PREREGISTERED_AWAITING_SECTOR_110_DATA__SELF_TEST_PASSED"
+        "AWAITING_SECTOR_110_DATA__UNREGISTERED_SELF_TEST_PASSED"
         if self_test["logic_ok"]
-        else "PREREGISTERED_AWAITING_SECTOR_110_DATA__SELF_TEST_FAILED"
+        else "AWAITING_SECTOR_110_DATA__UNREGISTERED_SELF_TEST_FAILED"
     )
     receipt = Sector110PredictionReceipt(
         target_id="TIC 4206066",

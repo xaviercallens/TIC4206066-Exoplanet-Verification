@@ -9,11 +9,13 @@ results/sector110_fetch_manifest.json BEFORE evaluation, so the exact input is o
 
   python scripts/fetch_sector110.py --list                 # what MAST has (no download)
   python scripts/fetch_sector110.py --fetch                # download + hash
-  python scripts/fetch_sector110.py --evaluate             # run frozen rules on downloaded file
+  python scripts/fetch_sector110.py --evaluate             # DISABLED: refuses (see below)
   python scripts/fetch_sector110.py --list --sector 6      # validate the query on a known sector
 
-Rules are NOT editable here: thresholds live in subprojects/tic4206066_sector110_runner.py
-and were frozen before the data existed. Do not change them after looking at the data.
+The REGISTERED analysis is the frozen code in the Zenodo deposit doi:10.5281/zenodo.23175179
+(s110_final.py, run in its pinned arm64-macOS environment). The thresholds in
+subprojects/tic4206066_sector110_runner.py are NOT the registered rules, so --evaluate refuses.
+This script only lists/downloads/hashes. Do NOT open the FITS before the registered primary run.
 """
 
 from __future__ import annotations
@@ -36,17 +38,17 @@ MANIFEST = "results/sector110_fetch_manifest.json"
 OUTCOME = "results/sector110_outcome.json"
 EXIT_AWAITING = 2
 
-# FROZEN BEFORE SECTOR 110 DATA EXISTS: the single pipeline used is the first of these that is
-# published. Choosing among pipelines after seeing the data is a researcher degree of freedom
-# and would invalidate the blind test. ASSUMPTION: this order was chosen by the repo maintainer,
-# not read from the Zenodo pre-registration (doi:10.5281/zenodo.23175179) -- confirm against it.
-PIPELINE_PRIORITY = ("hlsp_tess-spoc", "tess20", "hlsp_qlp")  # SPOC (HLSP), SPOC 2-min (MAST TESS), QLP
+# Per the pre-registration (Appendix G): the primary product is the first released SPOC 2-min light
+# curve (mast filename tess...-s0110-...-s_lc.fits). QLP/TESS-SPOC fallbacks apply only if no SPOC
+# 2-min product is public on 2027-02-28, so they are deliberately NOT selectable here.
+PIPELINE_PRIORITY = ("tess",)  # MAST SPOC 2-min files: tess<date>-s<sector>-<tic>-...-s_lc.fits
 
 
 def select_product(prods: list[dict[str, Any]]) -> dict[str, Any] | None:
     """Pick exactly one product by the frozen priority order; ignore all other pipelines."""
     for prefix in PIPELINE_PRIORITY:
-        hits = sorted((p for p in prods if p["filename"].lower().startswith(prefix)), key=lambda p: p["filename"])
+        hits = sorted((p for p in prods if p["filename"].lower().startswith(prefix)
+                       and p["filename"].lower().endswith("-s_lc.fits")), key=lambda p: p["filename"])
         if hits:
             return hits[0]
     return None
@@ -116,34 +118,9 @@ def fetch(sector: int) -> int:
 
 
 def evaluate() -> int:
-    from subprojects.tic4206066_sector110_runner import (
-        WINDOW_VERIFIED,
-        evaluate_sector_110_data,
-        load_sector110_fits,
-    )
-
-    if not os.path.exists(MANIFEST):
-        print("AWAITING_DATA: no fetch manifest; run --fetch first (input must be hashed before evaluation).")
-        return EXIT_AWAITING
-    manifest = json.load(open(MANIFEST))
-    for e in manifest["files"]:  # tamper check: file on disk must equal the hash on record
-        if not os.path.exists(e["path"]) or sha256_file(e["path"]) != e["sha256"]:
-            print(f"INTEGRITY_FAIL: {e['path']} does not match its recorded SHA-256.")
-            return 3
-    path = manifest["files"][0]["path"]  # the single frozen-priority file recorded at fetch time
-    d = load_sector110_fits(path)
-    res = evaluate_sector_110_data(d["times"], d["fluxes"], d["pixel_x"], d["pixel_y"])
-    res.update({
-        "input_file": os.path.basename(path),
-        "input_sha256": next(e["sha256"] for e in manifest["files"] if e["path"] == path),
-        "observing_window_verified": WINDOW_VERIFIED,
-        "rules": "frozen; see subprojects/tic4206066_sector110_runner.py",
-        "evaluated_utc": time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime()),
-    })
-    with open(OUTCOME, "w") as f:
-        json.dump(res, f, indent=2)
-    print(json.dumps(res, indent=2))
-    return 0
+    print("REFUSED: this runner's rules are not the pre-registered ones (doi:10.5281/zenodo.23175179). "
+          "Run the frozen s110_final.py in its pinned environment; results here would not count.")
+    return 4
 
 
 def main() -> int:

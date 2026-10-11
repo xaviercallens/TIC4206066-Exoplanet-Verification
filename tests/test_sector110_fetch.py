@@ -8,12 +8,12 @@ def _p(name):
     return {"filename": name, "uri": "mast:x/" + name, "size": 1, "collection": "HLSP"}
 
 
-def test_pipeline_choice_is_frozen_not_alphabetical():
-    prods = [_p("hlsp_tars_x_lc.fits"), _p("hlsp_qlp_x_llc.fits"), _p("hlsp_tess-spoc_x_lc.fits"),
-             _p("hlsp_eleanor-lite_x_lc.fits")]
-    assert f.select_product(prods)["filename"] == "hlsp_tess-spoc_x_lc.fits"
-    assert f.select_product(prods[:2])["filename"] == "hlsp_qlp_x_llc.fits"  # falls back by priority
-    assert f.select_product([_p("hlsp_tars_x_lc.fits"), _p("hlsp_eleanor-lite_x_lc.fits")]) is None
+def test_only_spoc_2min_primary_is_selectable():
+    spoc = "tess2026365000000-s0110-0000000004206066-0300-s_lc.fits"
+    prods = [_p("hlsp_tars_x_lc.fits"), _p("hlsp_qlp_x_llc.fits"), _p("hlsp_tess-spoc_x_lc.fits"), _p(spoc)]
+    assert f.select_product(prods)["filename"] == spoc
+    # QLP / TESS-SPOC fallbacks apply only after 2027-02-28 per the pre-registration: never selectable here
+    assert f.select_product(prods[:3]) is None
 
 
 def test_fetch_awaiting_when_nothing_published(monkeypatch):
@@ -21,16 +21,5 @@ def test_fetch_awaiting_when_nothing_published(monkeypatch):
     assert f.fetch(110) == f.EXIT_AWAITING
 
 
-def test_evaluate_requires_manifest(monkeypatch, tmp_path):
-    monkeypatch.setattr(f, "MANIFEST", str(tmp_path / "none.json"))
-    assert f.evaluate() == f.EXIT_AWAITING
-
-
-def test_evaluate_detects_tampered_input(monkeypatch, tmp_path):
-    fits = tmp_path / "s0110.fits"
-    fits.write_bytes(b"original")
-    man = tmp_path / "m.json"
-    man.write_text(json.dumps({"files": [{"path": str(fits), "sha256": f.sha256_file(str(fits))}]}))
-    fits.write_bytes(b"tampered")
-    monkeypatch.setattr(f, "MANIFEST", str(man))
-    assert f.evaluate() == 3
+def test_evaluate_refuses_unregistered_rules():
+    assert f.evaluate() == 4
