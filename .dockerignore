@@ -9,9 +9,6 @@ __pycache__
 .coverage
 htmlcov
 .DS_Store
-*.fits
-*.fits.gz
-data/mast
 formal/.lake
 formal/lake-packages
 docs/preregistration/PREREG_S110_FINAL.pdf
